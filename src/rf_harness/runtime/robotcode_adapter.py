@@ -141,11 +141,17 @@ def robotcode_command(python: str | None = None) -> list[str]:
     return [str(exe)] if exe.is_file() else [str(py), "-m", "robotcode"]
 
 
-def libdoc(args: Sequence[str], timeout: float = 60, python: str | None = None) -> subprocess.CompletedProcess:
+def libdoc(args: Sequence[str], timeout: float = 60, python: str | None = None,
+           root: str | os.PathLike | None = None) -> subprocess.CompletedProcess:
     """`robotcode libdoc <args>` in a subprocess without PYTHONPATH (docs come from the project environment as a plain
     run sees it), e.g. `libdoc(["--specdocformat", "raw", "Browser", "spec.json"])` or
-    `libdoc(["BuiltIn", "show", "Log"])`."""
+    `libdoc(["BuiltIn", "show", "Log"])`.
+
+    The project root is always passed explicitly (`--root`, default: the current directory): robotcode otherwise
+    derives it from the common base of its path arguments, which fails when they sit on different Windows drives and
+    can pick the wrong directory elsewhere (research trap G3)."""
     env = dict(os.environ)
     env.pop("PYTHONPATH", None)
-    return subprocess.run([*robotcode_command(python), "libdoc", *args], capture_output=True, text=True,
-                          timeout=timeout, env=env)
+    base = str(Path(root) if root is not None else Path.cwd())
+    return subprocess.run([*robotcode_command(python), "--root", base, "libdoc", *args], capture_output=True,
+                          text=True, timeout=timeout, env=env)

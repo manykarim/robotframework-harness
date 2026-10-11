@@ -54,6 +54,7 @@ class Lint:
         self.root = root
         self.lock = threading.Lock()
         self.ready = threading.Event()
+        self.cancel = threading.Event()   # set on shutdown: the warm-up stops spawning analyzer workers
         self.wa: Any = None
         self.cache: Dict[Tuple[str, str], List[Dict[str, Any]]] = {}
         self.warm_ms: Optional[float] = None
@@ -74,8 +75,11 @@ class Lint:
                 synth = self.root / ".rf" / "lint" / "__warm__.robot"
                 text = "*** Settings ***\n" + "".join(f"Library    {l}\n" for l in libs) + \
                        "\n*** Test Cases ***\nWarm\n    No Operation\n"
-                self._analyze(synth, text)
+                if not self.cancel.is_set():
+                    self._analyze(synth, text)
                 for f in self._rf_files()[:25]:
+                    if self.cancel.is_set():
+                        break
                     with contextlib.suppress(Exception):
                         self._analyze(f, f.read_text(errors="replace"))
             except Exception as e:
@@ -357,13 +361,14 @@ class Server(threading.Thread):
             self.path.unlink()
 
 
-def _kill_workers(token: str, settle: float = 3.0) -> set:
+def _kill_workers(token: str, settle: float = 3.0, busy=None) -> set:
     """SIGKILL robotcode's analyzer workers (multiprocessing spawn + resource_tracker ignore SIGTERM). Repeated until
     quiet: a stop during the warm-up can race with workers the warm-up thread is still spawning, which would otherwise
     outlive the daemon as orphans (they carry the daemon's token, so they are found after reparenting too)."""
     me, killed, quiet = os.getpid(), set(), 0
     t_end = time.monotonic() + settle
-    while quiet < 3 and time.monotonic() < t_end:
+    # quiet = no worker seen for 10 consecutive checks (1 s) while the warm-up thread (`busy`) is no longer running
+    while (quiet < 10 or (busy is not None and busy())) and time.monotonic() < t_end:
         kids = set(procs.descendants(me)) | ({p for p in procs.token_procs(token)} if token else set())
         kids.discard(me)
         quiet = 0 if kids else quiet + 1
@@ -395,7 +400,8 @@ def main(argv: Optional[List[str]] = None) -> int:
     srv.start()
     state["ready"] = True          # socket answers; gate readiness is reported per request
     proto.write_state(sd, state)
-    threading.Thread(target=lint.warm, daemon=True).start()
+    warm = threading.Thread(target=lint.warm, daemon=True)
+    warm.start()
     why = "stop"
     while not srv.stop.wait(0.5):
         if o.watch_pid and not proto.pid_alive(o.watch_pid):
@@ -405,7 +411,9 @@ def main(argv: Optional[List[str]] = None) -> int:
             why = "idle"
             break
     srv.close()
-    killed = _kill_workers(config.get("RFH_TOKEN"))
+    lint.cancel.set()                      # no new analyzer workers from the warm-up ...
+    warm.join(timeout=10.0)                # ... let a running analysis return (its workers are killed below)
+    killed = _kill_workers(config.get("RFH_TOKEN"), settle=15.0, busy=warm.is_alive)
     state.update(ready=False, stopped=time.time(), why=why, killed=len(killed))
     proto.write_state(sd, state)
     os._exit(0)

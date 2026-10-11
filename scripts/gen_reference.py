@@ -28,6 +28,25 @@ SCAN_DIRS = [ROOT / "src" / "rf_harness", ROOT / "plugins" / "rf-harness"]
 IGNORE_NAMES = {"RFH_", "RFH_X", "RFH_NAME"}
 
 
+def _action_rows(parser: argparse.ArgumentParser) -> list[str]:
+    """One table row per option, built from the parser structure (not format_help(), whose layout changes with the
+    Python version and the terminal width)."""
+    rows = ["| option | value | default | meaning |", "|---|---|---|---|"]
+    for a in parser._actions:  # noqa: SLF001
+        if isinstance(a, (argparse._HelpAction, argparse._SubParsersAction, argparse._VersionAction)):  # noqa: SLF001
+            continue
+        flags = ", ".join(f"`{o}`" for o in a.option_strings) or f"`{a.dest}`"
+        if a.choices:
+            value = " / ".join(f"`{c}`" for c in a.choices)
+        elif a.nargs == 0 or isinstance(a, (argparse._StoreTrueAction, argparse._StoreFalseAction)):  # noqa: SLF001
+            value = "(flag)"
+        else:
+            value = f"`{a.metavar or a.dest.upper()}`"
+        default = "" if a.default in (None, False, argparse.SUPPRESS) else f"`{a.default}`"
+        rows.append(f"| {flags} | {value} | {default} | {(a.help or '').replace('|', '/')} |")
+    return rows if len(rows) > 2 else ["No options."]
+
+
 def _cli_markdown() -> str:
     from rf_harness.installer.cli import build_parser
 
@@ -35,11 +54,16 @@ def _cli_markdown() -> str:
     out = ["# CLI reference", "",
            "Generated from the installer's argument parser (`scripts/gen_reference.py`); do not edit by hand.", "",
            "Run with zero install as `uvx robotframework-harness <command>`; installed, the commands are",
-           "`rf-harness` and `robotframework-harness`.", "", "```text", parser.format_help().rstrip(), "```", ""]
+           "`rf-harness` and `robotframework-harness`.", "", "| command | purpose |", "|---|---|"]
     subs = [a for a in parser._actions if isinstance(a, argparse._SubParsersAction)]  # noqa: SLF001
+    helps = {c.dest: c.help for a in subs for c in a._choices_actions}  # noqa: SLF001
+    for action in subs:
+        for name in action.choices:
+            out.append(f"| [`{name}`](#{name}) | {(helps.get(name) or '').replace('|', '/')} |")
+    out.append("")
     for action in subs:
         for name, sp in action.choices.items():
-            out += [f"## `{name}`", "", "```text", sp.format_help().rstrip(), "```", ""]
+            out += [f"## `{name}`", "", (helps.get(name) or "").rstrip(".") + ".", "", *_action_rows(sp), ""]
     return "\n".join(out)
 
 
