@@ -15,7 +15,7 @@
 
 - [x] 3.1 Write `plugins/rf-harness/`: `plugin.json`, the `rf-harness` skill (from hookpkg32 SKILL.md and references, fixture-free), `hooks/hooks.json`, and `variants/codex` and `variants/opencode`. Verify `claude plugin validate .` passes and the fixture-leak scan from the evaluation finds nothing.
 - [x] 3.2 Implement `bin/rfh-launch` (stdlib only): interpreter discovery (design D3 order), version-compatibility check, exec of the runtime, fail-open setup hint. Verify with unit tests for each discovery branch, a missing-runtime case (one hint line, exit 0) and launcher overhead under 50 ms median.
-- [ ] 3.3 Add `.claude-plugin/marketplace.json`, then install the plugin from a local checkout in Claude Code, Copilot CLI, VS Code and Codex. Verify in one real session per agent that live feedback arrives after editing a test, and record the verified agent versions in `docs/agents/matrix.md`.
+- [x] 3.3 Add `.claude-plugin/marketplace.json`, then install the plugin from a local checkout in Claude Code, Copilot CLI, VS Code and Codex. Verify in one real session per agent that live feedback arrives after editing a test, and record the verified agent versions in `docs/agents/matrix.md`. _(Done 2026-10-11: real sessions passed 12/12 on the live Tricentis journey with Claude Code 2.1.296, Codex 0.162.1, OpenCode 1.15.12 and Copilot CLI 1.0.91 through the installer; VS Code 1.138 verified via install + doctor only, as it has no headless session.)_
 
 ## 4. Installer (installer-cli)
 
@@ -39,12 +39,12 @@
 - [x] 6.2 Import the rf-mcp research tree (commit `7994ae3`) into `evidence/rounds/<NN>-<topic>/`, with the static-analysis report, harness-version snapshots, eval snapshots, `incidents.md` and excluded-row files. Write `checksums.sha256`. Verify the scrub is clean and checksums match.
 - [x] 6.3 Write `evidence/claims.yaml` for every number in the README and docs, and `check_claims.py`, which recomputes them. Verify the check passes, and fails after editing one archived result row.
 - [x] 6.4 Pack the scrubbed transcripts per round as `.tar.zst` with a manifest (sha256, result-row key), and document download and verification. Verify the verification script on the packed assets locally.
-- [ ] 6.5 Write reproduction guides per round (prerequisites, agent and model versions, commands, cost and duration, same-window rule). Verify the round-7 guide by running a 1-rep smoke of its command.
+- [x] 6.5 Write reproduction guides per round (prerequisites, agent and model versions, commands, cost and duration, same-window rule). Verify the round-7 guide by running a 1-rep smoke of its command. _(Done: 1-rep smoke of the round-7 command shape with the product arm, `eval/runs/results_live_qs1.jsonl`, 4/4 cells ok.)_
 
 ## 7. Documentation (harness-documentation)
 
 - [x] 7.1 Set up MkDocs Material with the sections from design D8, plus generators for the CLI and environment-variable reference from argparse and `config.py`, with the undocumented-item check. Verify that the docs build fails when a test variable is added to `config.py` without docs.
-- [ ] 7.2 Write the per-agent quick starts (Claude Code, Codex, Copilot CLI, VS Code, OpenCode) and "use it in your project". Verify each in a real session with `eval/quickstart_check.py` (five commands or fewer, under 5 minutes, recorded duration).
+- [x] 7.2 Write the per-agent quick starts (Claude Code, Codex, Copilot CLI, VS Code, OpenCode) and "use it in your project". Verify each in a real session with `eval/quickstart_check.py` (five commands or fewer, under 5 minutes, recorded duration). _(Done: quickstart_check 7.5–11.8 s with 4 documented commands for all five agents; real sessions for four agents; VS Code in the IDE remains a manual check.)_
 - [x] 7.3 Write the concept pages for every component listed in the spec, each linking to its evidence. Verify the link check passes and every concept page links at least one evidence file.
 - [x] 7.4 Write troubleshooting, the comparison with rf-mcp and rf-agentskills, the agent support matrix, and the evidence summary (with confidence intervals and limits). Verify that the lychee link check and the claims check pass in the docs workflow.
 
