@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8" /><title>Secure App</title></head>
+<body>
+  <h1>Secure App</h1>
+
+  <!-- The login form lives INSIDE an iframe. Interacting with it requires
+       frame-piercing (Playwright/Browser: the `>>>` combinator). -->
+  <iframe id="loginframe" title="login" width="360" height="220" srcdoc='
+    <!DOCTYPE html><html><head><meta charset=&quot;utf-8&quot;></head><body>
+      <form id="lf">
+        <label>User <input id="username" name="username"></label><br>
+        <label>Pass <input id="password" name="password" type="password"></label><br>
+        <button id="submit" type="submit">Sign in</button>
+        <p id="err" style="color:red"></p>
+      </form>
+      <script>
+        document.getElementById("lf").addEventListener("submit", function (e) {
+          e.preventDefault();
+          var u = document.getElementById("username").value;
+          var p = document.getElementById("password").value;
+          if (u === "demo" && p === "demo") {
+            parent.postMessage({ ok: true, user: u }, "*");
+          } else {
+            document.getElementById("err").textContent = "Invalid credentials";
+          }
+        });
+      </script>
+    </body></html>'></iframe>
+
+  <!-- On success the result is rendered inside a custom element's shadow DOM. -->
+  <result-box id="result" style="display:none"></result-box>
+
+  <script>
+    class ResultBox extends HTMLElement {
+      constructor() { super(); this.attachShadow({ mode: "open" }); }
+      show(user) {
+        this.style.display = "block";
+        this.shadowRoot.innerHTML =
+          '<div class="panel"><span id="msg">Welcome, ' + user + '</span></div>';
+      }
+    }
+    customElements.define("result-box", ResultBox);
+    window.addEventListener("message", function (e) {
+      if (e.data && e.data.ok) { document.getElementById("result").show(e.data.user); }
+    });
+  </script>
+</body>
+</html>

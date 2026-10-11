@@ -1,0 +1,11 @@
+# evaluation outputs (results, transcripts, budget state, logs, price cache): archived through evidence/, never committed here
+runs/
+__pycache__/
+*.pyc
+# scenario fixtures ship Robot Framework artefacts on purpose (results_complex parses data/output.xml)
+!fixtures/**/output.xml
+!fixtures/**/log.html
+!fixtures/**/report.html
+!fixtures/**/results/
+!fixtures_live/**/output.xml
+!fixtures_live/**/results/

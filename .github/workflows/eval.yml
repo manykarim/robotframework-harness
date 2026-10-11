@@ -1,0 +1,227 @@
+name: eval
+# Same-window A/B evaluation on real agents and live sites (eval/harness.py, design D10, task 5.4).
+# Manual only (optionally weekly, see the commented schedule). Never runs on pull requests: it needs repository
+# secrets and spends money. Secrets reach the harness only through the environment; the harness never writes them,
+# and every artifact directory is scanned for secrets before upload.
+on:
+  workflow_dispatch:
+    inputs:
+      arms:
+        description: "Arms (comma-separated; the first is the baseline of the report): neither, mcp, prototype-v32, rf-harness"
+        required: true
+        default: "prototype-v32,rf-harness"
+      agents:
+        description: "Agents: claude (ANTHROPIC_API_KEY), codex, opencode, copilot, cc-or:<short>, oc-or:<short> (OPENROUTER_API_KEY)"
+        required: true
+        default: "cc-or:qwen3.8-flash"
+      reps:
+        description: "Repetitions per agent x scenario x arm"
+        required: true
+        default: "1"
+      scenarios:
+        description: "Scenario ids or aliases: live, explore, debug, round1"
+        required: true
+        default: "live"
+      or_models:
+        description: "OpenRouter models for cc-or:/oc-or: agents (ids or short=id pairs)"
+        required: false
+        default: "qwen/qwen3.8-flash"
+      or_budget_usd:
+        description: "Per-run OpenRouter budget in USD (this run's own spend only)"
+        required: false
+        default: "10"
+      candidate:
+        description: "Release gate: candidate arm"
+        required: false
+        default: "rf-harness"
+      baseline:
+        description: "Release gate: baseline arm"
+        required: false
+        default: "prototype-v32"
+      main_agent:
+        description: "Release gate: main agent for the non-inferiority check"
+        required: false
+        default: "claude"
+      dry_run:
+        description: "Dry run: no agents, no live sites, no spend; exercises arm checks, reports, scrub and upload"
+        type: boolean
+        required: false
+        default: true
+  # schedule:
+  #   - cron: "0 3 * * 1"   # weekly, Monday 03:00 UTC. Disabled on purpose: enable only with a budget in mind.
+
+permissions:
+  contents: read
+
+concurrency:
+  group: eval
+  cancel-in-progress: false
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    env:
+      # secrets: environment only, never echoed (GitHub also masks them in logs)
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      # inputs: passed through env, never interpolated into shell code
+      ARMS: ${{ inputs.arms || 'prototype-v32,rf-harness' }}
+      AGENTS: ${{ inputs.agents || 'cc-or:qwen3.8-flash' }}
+      REPS: ${{ inputs.reps || '1' }}
+      SCENARIOS: ${{ inputs.scenarios || 'live' }}
+      OR_MODELS: ${{ inputs.or_models || 'qwen/qwen3.8-flash' }}
+      OR_BUDGET_USD: ${{ inputs.or_budget_usd || '10' }}
+      CANDIDATE: ${{ inputs.candidate || 'rf-harness' }}
+      BASELINE: ${{ inputs.baseline || 'prototype-v32' }}
+      MAIN_AGENT: ${{ inputs.main_agent || 'claude' }}
+      DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || false }}
+      TAG: gh${{ github.run_id }}
+      AB_OUT_DIR: ${{ github.workspace }}/eval/runs
+      AB_WORK_BASE: ${{ runner.temp }}/ab-eval
+      AB_VENV_BIN: ${{ github.workspace }}/.eval-venv/bin
+      AB_RF_MCP_CMD: ${{ github.workspace }}/.eval-venv/bin/python -m robotmcp.server
+      AB_CLAUDE_AUTH: api-key
+      AB_MIN_OR_BALANCE: "0.5"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v4
+        if: env.DRY_RUN != 'true'
+        with:
+          node-version: "22"
+
+      - name: Prototype arm source (research hookpkg32 snapshot from the evidence archive)
+        run: |
+          set -euo pipefail
+          proto=""
+          if [ -d evidence/harness-versions ]; then
+            proto=$(grep -rl --include=install.py "rfharness32" evidence/harness-versions 2>/dev/null | head -n 1 || true)
+          fi
+          if [ -n "$proto" ]; then
+            echo "AB_PROTOTYPE_DIR=$(cd "$(dirname "$proto")" && pwd)" >> "$GITHUB_ENV"
+            echo "prototype-v32 source: $(dirname "$proto")"
+          else
+            echo "::notice::no hookpkg32 snapshot under evidence/harness-versions - the prototype-v32 arm is unavailable"
+          fi
+
+      - name: Grading environment (Robot Framework, Browser, RequestsLibrary, robotcode, rf-mcp)
+        if: env.DRY_RUN != 'true'
+        run: |
+          set -euo pipefail
+          uv venv .eval-venv --python 3.12
+          uv pip install --python .eval-venv/bin/python robotframework robotframework-browser robotframework-requests \
+            "robotcode[repl,runner,analyze]>=2.7,<2.8" rf-mcp
+          PLAYWRIGHT_BROWSERS_PATH="$HOME/.cache/ms-playwright" .eval-venv/bin/rfbrowser init chromium
+
+      - name: Agent CLIs
+        if: env.DRY_RUN != 'true'
+        run: |
+          set -euo pipefail
+          case ",$AGENTS," in *,claude,*|*cc-or:*) npm install -g @anthropic-ai/claude-code ;; esac
+          case ",$AGENTS," in *,codex,*) npm install -g @openai/codex ;; esac
+          case ",$AGENTS," in *,opencode,*|*oc-or:*) npm install -g opencode-ai ;; esac
+          case ",$AGENTS," in *,copilot,*) npm install -g @github/copilot ;; esac
+
+      - name: Arm availability
+        id: arms
+        run: |
+          set -uo pipefail
+          mkdir -p "$AB_OUT_DIR"
+          python3 eval/harness.py check-arms --arms "$ARMS" | tee "$AB_OUT_DIR/arms_$TAG.json"
+          echo "rc=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+
+      - name: Dry run (plans and configuration only)
+        if: env.DRY_RUN == 'true'
+        run: |
+          set -euo pipefail
+          for a in claude codex opencode copilot vscode; do
+            python3 eval/quickstart_check.py --agent "$a" --dry-run > "$AB_OUT_DIR/quickstart_plan_$a.json"
+          done
+          python3 - <<'EOF'
+          import json, os
+          names = ["ARMS", "AGENTS", "REPS", "SCENARIOS", "OR_MODELS", "OR_BUDGET_USD", "CANDIDATE", "BASELINE",
+                   "MAIN_AGENT", "AB_CLAUDE_AUTH", "AB_MIN_OR_BALANCE"]
+          cfg = {n: os.environ.get(n) for n in names}
+          cfg["secrets_present"] = {n: bool(os.environ.get(n)) for n in ("OPENROUTER_API_KEY", "ANTHROPIC_API_KEY")}
+          out = os.path.join(os.environ["AB_OUT_DIR"], f"config_{os.environ['TAG']}.json")
+          with open(out, "w", encoding="utf-8") as f:
+              json.dump(cfg, f, indent=1)
+          print(f"wrote {out}")
+          EOF
+
+      - name: Run evaluation (self-healing runner)
+        id: run
+        if: env.DRY_RUN != 'true' && steps.arms.outputs.rc == '0'
+        run: |
+          set +e
+          bash eval/run_ab_resilient.sh "$TAG" "$ARMS" "$REPS" "$AGENTS" "$SCENARIOS" \
+            --or-models "$OR_MODELS" --or-budget-usd "$OR_BUDGET_USD" --claude-auth api-key
+          rc=$?
+          echo "rc=$rc" >> "$GITHUB_OUTPUT"
+          echo "runner exit code: $rc (0 complete, 1 incomplete, 2 auth, 4 budget, 5 balance, 6 arm unavailable)"
+          tail -n 30 "$AB_OUT_DIR/run_ab_$TAG.log" || true
+
+      - name: Reports and release gate
+        id: gate
+        if: always() && env.DRY_RUN != 'true'
+        run: |
+          set +e
+          res="$AB_OUT_DIR/results_live_$TAG.jsonl"
+          [ -f "$res" ] || res="$AB_OUT_DIR/results_rc_$TAG.jsonl"
+          if [ ! -f "$res" ]; then echo "no results file"; echo "rc=1" >> "$GITHUB_OUTPUT"; exit 0; fi
+          python3 eval/analyze_hooks.py "$res" --arms "$ARMS" --out "$AB_OUT_DIR/report_$TAG.md" \
+            --json "$AB_OUT_DIR/summary_$TAG.json"
+          rc=0
+          if [[ ",$ARMS," == *",$CANDIDATE,"* && ",$ARMS," == *",$BASELINE,"* ]]; then
+            python3 eval/gate.py "$res" --candidate "$CANDIDATE" --baseline "$BASELINE" --main-agent "$MAIN_AGENT" \
+              --out "$AB_OUT_DIR/gate_$TAG.md" --json "$AB_OUT_DIR/gate_$TAG.json"
+            rc=$?
+            cat "$AB_OUT_DIR/gate_$TAG.md" >> "$GITHUB_STEP_SUMMARY"
+          fi
+          echo "rc=$rc" >> "$GITHUB_OUTPUT"
+
+      - name: Secret scrub of the artifacts
+        id: scrub
+        if: always()
+        run: |
+          set -euo pipefail
+          mkdir -p "$AB_OUT_DIR"
+          upload="$AB_OUT_DIR"
+          if [ -f evidence/scrub.py ]; then
+            # scrubbed copy (secrets redacted, home paths and e-mails normalized), then the check must find nothing
+            rm -rf "$RUNNER_TEMP/eval-upload"
+            python evidence/scrub.py --apply "$AB_OUT_DIR" "$RUNNER_TEMP/eval-upload"
+            python evidence/scrub.py --check "$RUNNER_TEMP/eval-upload"
+            upload="$RUNNER_TEMP/eval-upload"
+          else
+            echo "::warning::evidence/scrub.py not present - only eval/secret_scan.py checks the artifacts"
+          fi
+          python3 eval/secret_scan.py "$upload"
+          echo "dir=$upload" >> "$GITHUB_OUTPUT"
+
+      - name: Upload results and reports (scrubbed)
+        if: always() && steps.scrub.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: eval-${{ github.run_id }}
+          path: ${{ steps.scrub.outputs.dir }}
+          retention-days: 30
+          if-no-files-found: warn
+
+      - name: Result
+        if: always()
+        run: |
+          echo "arms=${{ steps.arms.outputs.rc }} runner=${{ steps.run.outputs.rc }} gate=${{ steps.gate.outputs.rc }} scrub=${{ steps.scrub.outcome }}"
+          [ "${{ steps.scrub.outcome }}" = "success" ] || exit 1
+          if [ "$DRY_RUN" = "true" ]; then
+            [ "${{ steps.arms.outputs.rc }}" = "0" ] || echo "::warning::an arm is unavailable (see arms_$TAG.json); a real run would stop with exit 6"
+          else
+            [ "${{ steps.arms.outputs.rc }}" = "0" ] || { echo "::error::an arm is unavailable (see arms_$TAG.json)"; exit 1; }
+            [ "${{ steps.run.outputs.rc }}" = "0" ] || { echo "::error::runner did not complete"; exit 1; }
+            [ "${{ steps.gate.outputs.rc }}" = "0" ] || { echo "::error::release gate FAILED"; exit 1; }
+          fi

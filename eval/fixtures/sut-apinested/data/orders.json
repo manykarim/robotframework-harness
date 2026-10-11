@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "customer": "Alice",
+    "status": "paid",
+    "created": "2026-07-02T09:14:00Z",
+    "items": [
+      {"sku": "A-100", "name": "Notebook", "price": 10.0, "qty": 2},
+      {"sku": "B-200", "name": "Pen set", "price": 5.0, "qty": 1, "discount": 0.2}
+    ]
+  },
+  {
+    "id": 2,
+    "customer": "Bob",
+    "status": "cancelled",
+    "created": "2026-07-03T11:02:00Z",
+    "items": [
+      {"sku": "C-300", "name": "Desk lamp", "price": 50.0, "qty": 1, "discount": 0.1},
+      {"sku": "A-100", "name": "Notebook", "price": 10.0, "qty": 3}
+    ]
+  },
+  {
+    "id": 3,
+    "customer": "Alice",
+    "status": "paid",
+    "created": "2026-07-05T16:40:00Z",
+    "items": [
+      {"sku": "D-400", "name": "Backpack", "price": 20.0, "qty": 3}
+    ]
+  },
+  {
+    "id": 4,
+    "customer": "Carol",
+    "status": "paid",
+    "created": "2026-07-06T08:05:00Z",
+    "items": [
+      {"sku": "E-500", "name": "Water bottle", "price": 7.5, "qty": 4, "discount": 0.0}
+    ]
+  }
+]

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.11 on linux)" generated="2026-08-11T01:30:15.729864" rpa="false" schemaversion="5">
+<suite id="s1" name="Sample Run" source="/tmp/claude-1000/-home-many-workspace-rf-mcp/924ae1a5-f73e-484f-8ae4-f9e4389c3497/scratchpad/ab-eval/verify/gen">
+<suite id="s1-s1" name="Api" source="/tmp/claude-1000/-home-many-workspace-rf-mcp/924ae1a5-f73e-484f-8ae4-f9e4389c3497/scratchpad/ab-eval/verify/gen/api.robot">
+<test id="s1-s1-t1" name="Api Ping" line="2">
+<kw name="Skip" owner="BuiltIn">
+<msg time="2026-08-11T01:30:15.759100" level="SKIP">endpoint not available in this environment</msg>
+<arg>endpoint not available in this environment</arg>
+<doc>Skips the rest of the current test.</doc>
+<status status="SKIP" start="2026-08-11T01:30:15.758827" elapsed="0.000446">endpoint not available in this environment</status>
+</kw>
+<status status="SKIP" start="2026-08-11T01:30:15.758135" elapsed="0.001384">endpoint not available in this environment</status>
+</test>
+<status status="SKIP" start="2026-08-11T01:30:15.756789" elapsed="0.003146"/>
+</suite>
+<suite id="s1-s2" name="Checkout" source="/tmp/claude-1000/-home-many-workspace-rf-mcp/924ae1a5-f73e-484f-8ae4-f9e4389c3497/scratchpad/ab-eval/verify/gen/checkout.robot">
+<test id="s1-s2-t1" name="Checkout Cart" line="2">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-08-11T01:30:15.762108" level="INFO">ok</msg>
+<arg>ok</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-08-11T01:30:15.761931" elapsed="0.000243"/>
+</kw>
+<status status="PASS" start="2026-08-11T01:30:15.761536" elapsed="0.000762"/>
+</test>
+<test id="s1-s2-t2" name="Checkout Payment" line="4">
+<kw name="Should Be Equal" owner="BuiltIn">
+<msg time="2026-08-11T01:30:15.763356" level="FAIL">Payment total mismatch: 1 != 2</msg>
+<arg>${1}</arg>
+<arg>${2}</arg>
+<arg>Payment total mismatch</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="FAIL" start="2026-08-11T01:30:15.762710" elapsed="0.000756">Payment total mismatch: 1 != 2</status>
+</kw>
+<status status="FAIL" start="2026-08-11T01:30:15.762446" elapsed="0.001188">Payment total mismatch: 1 != 2</status>
+</test>
+<test id="s1-s2-t3" name="Checkout Confirm" line="6">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-08-11T01:30:15.764191" level="INFO">ok</msg>
+<arg>ok</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-08-11T01:30:15.764052" elapsed="0.000197"/>
+</kw>
+<status status="PASS" start="2026-08-11T01:30:15.763792" elapsed="0.000549"/>
+</test>
+<status status="FAIL" start="2026-08-11T01:30:15.760329" elapsed="0.004216"/>
+</suite>
+<suite id="s1-s3" name="Regression" source="/tmp/claude-1000/-home-many-workspace-rf-mcp/924ae1a5-f73e-484f-8ae4-f9e4389c3497/scratchpad/ab-eval/verify/gen/regression.robot">
+<test id="s1-s3-t1" name="Reg One" line="4">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-08-11T01:30:15.766899" level="INFO">ok</msg>
+<arg>ok</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-08-11T01:30:15.766780" elapsed="0.000176"/>
+</kw>
+<status status="PASS" start="2026-08-11T01:30:15.766518" elapsed="0.000532"/>
+</test>
+<test id="s1-s3-t2" name="Reg Two" line="6">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-08-11T01:30:15.767606" level="INFO">ok</msg>
+<arg>ok</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-08-11T01:30:15.767491" elapsed="0.000170"/>
+</kw>
+<status status="PASS" start="2026-08-11T01:30:15.767241" elapsed="0.000516"/>
+</test>
+<kw name="Fail" owner="BuiltIn" type="TEARDOWN">
+<msg time="2026-08-11T01:30:15.768294" level="FAIL">Regression environment cleanup failed</msg>
+<arg>Regression environment cleanup failed</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="FAIL" start="2026-08-11T01:30:15.768089" elapsed="0.000279">Regression environment cleanup failed</status>
+</kw>
+<status status="FAIL" start="2026-08-11T01:30:15.764967" elapsed="0.003503">Suite teardown failed:
+Regression environment cleanup failed</status>
+</suite>
+<suite id="s1-s4" name="Smoke" source="/tmp/claude-1000/-home-many-workspace-rf-mcp/924ae1a5-f73e-484f-8ae4-f9e4389c3497/scratchpad/ab-eval/verify/gen/smoke.robot">
+<test id="s1-s4-t1" name="Smoke A" line="2">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-08-11T01:30:15.770425" level="INFO">ok</msg>
+<arg>ok</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-08-11T01:30:15.770262" elapsed="0.000245"/>
+</kw>
+<status status="PASS" start="2026-08-11T01:30:15.769966" elapsed="0.000652"/>
+</test>
+<test id="s1-s4-t2" name="Smoke B" line="4">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-08-11T01:30:15.771122" level="INFO">ok</msg>
+<arg>ok</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-08-11T01:30:15.771008" elapsed="0.000163"/>
+</kw>
+<status status="PASS" start="2026-08-11T01:30:15.770759" elapsed="0.000498"/>
+</test>
+<status status="PASS" start="2026-08-11T01:30:15.768864" elapsed="0.002580"/>
+</suite>
+<status status="FAIL" start="2026-08-11T01:30:15.731096" elapsed="0.040835"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="3" skip="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Sample Run" id="s1" pass="4" fail="3" skip="1">Sample Run</stat>
+<stat name="Api" id="s1-s1" pass="0" fail="0" skip="1">Sample Run.Api</stat>
+<stat name="Checkout" id="s1-s2" pass="2" fail="1" skip="0">Sample Run.Checkout</stat>
+<stat name="Regression" id="s1-s3" pass="0" fail="2" skip="0">Sample Run.Regression</stat>
+<stat name="Smoke" id="s1-s4" pass="2" fail="0" skip="0">Sample Run.Smoke</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

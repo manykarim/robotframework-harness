@@ -28,10 +28,10 @@
 
 ## 5. Evaluation harness (harness-evaluation)
 
-- [ ] 5.1 Port `ab/harness` to `eval/` (scenarios, journey grader, analyzer, OpenRouter routes, resilient runner). Verify that `eval check-scenarios` reports IDENTICAL to the round-7 definitions and that the round-7 reports regenerate byte-identically from the archived results.
-- [ ] 5.2 Add the round-7 fixes: per-run budgets, account-balance pre-check, transcript scan for provider errors and backend outages, regex-tolerant value graders. Verify with unit tests on the recorded 402, outage and `916\.99` cases.
-- [ ] 5.3 Add the release-gate report (non-inferiority margin 0.05 for the main agent, significant per-agent regressions) and `eval/quickstart_check.py`. Verify that the gate verdicts on the round-6 and round-7 data match the findings files.
-- [ ] 5.4 Add the manual/nightly `eval.yml` workflow using repository secrets. Verify with a dry run that no secret appears in artifacts (scrub run on the workflow outputs).
+- [x] 5.1 Port `ab/harness` to `eval/` (scenarios, journey grader, analyzer, OpenRouter routes, resilient runner). Verify that `eval check-scenarios` reports IDENTICAL to the round-7 definitions and that the round-7 reports regenerate byte-identically from the archived results.
+- [x] 5.2 Add the round-7 fixes: per-run budgets, account-balance pre-check, transcript scan for provider errors and backend outages, regex-tolerant value graders. Verify with unit tests on the recorded 402, outage and `916\.99` cases.
+- [x] 5.3 Add the release-gate report (non-inferiority margin 0.05 for the main agent, significant per-agent regressions) and `eval/quickstart_check.py`. Verify that the gate verdicts on the round-6 and round-7 data match the findings files.
+- [x] 5.4 Add the manual/nightly `eval.yml` workflow using repository secrets. Verify with a dry run that no secret appears in artifacts (scrub run on the workflow outputs).
 
 ## 6. Evidence archive (experiment-evidence)
 
