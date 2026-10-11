@@ -24,5 +24,6 @@ jobs:
       - name: internal links
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --offline --no-progress --include-fragments "site/**/*.html"
+          # MkDocs' generated 404 page uses root-relative links (site root unknown offline): not part of the docs content
+          args: --offline --no-progress --include-fragments --exclude-path site/404.html "site/**/*.html"
           fail: true
