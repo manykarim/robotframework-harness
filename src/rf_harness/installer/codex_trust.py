@@ -19,7 +19,7 @@ import tempfile
 import threading
 import time
 from dataclasses import dataclass, field
-from pathlib import Path
+from pathlib import Path, PurePath
 from typing import Any
 
 from . import transforms as _x
@@ -116,11 +116,17 @@ def is_ours(hook: dict[str, Any], marker: str = "", plugin_id: str = "") -> bool
                                 (hook.get("source") == "plugin" and "rfh-launch" in command))
 
 
+def probe_config(project: PurePath) -> str:
+    """config.toml of the throwaway CODEX_HOME that trusts ``project`` (both path spellings: on Windows the hooks/list
+    cwd uses backslashes, the installer's own paths forward slashes)."""
+    forms = dict.fromkeys([str(project), project.as_posix()])
+    return "\n".join(f"[projects.{_x.toml_basic_string(form)}]\ntrust_level = \"trusted\"\n" for form in forms)
+
+
 def _project_hooks_untrusted(project: Path, marker: str, plugin_id: str) -> list[dict[str, Any]]:
     with tempfile.TemporaryDirectory(prefix="rf-harness-codex-") as tmp:
         config = Path(tmp) / "config.toml"
-        config.write_text(f"[projects.{_x.toml_basic_string(_x.native_path(project))}]\ntrust_level = \"trusted\"\n",
-                          encoding="utf-8")
+        config.write_text(probe_config(project), encoding="utf-8")
         hooks = list_hooks(project, Path(tmp)) or []
     return [h for h in hooks if h.get("source") == "project" and is_ours(h, marker, plugin_id)]
 

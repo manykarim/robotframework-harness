@@ -335,8 +335,8 @@ def _install_agents(args: argparse.Namespace, project: Path, interactive: bool) 
 def _provision_runtime(args: argparse.Namespace, project: Path, interactive: bool) -> int:
     choice = envfind.find_env(project, args.python)
     if choice.python is None:
-        print(f"error: {choice.detail}; create a project environment (e.g. `uv venv`) or pass --python",
-              file=sys.stderr)
+        hint = "" if choice.source == "--python" else "; create a project environment (e.g. `uv venv`) or pass --python"
+        print(f"error: {choice.detail}{hint}", file=sys.stderr)
         return 1
     print(f"Python environment: {choice.python} ({choice.detail})")
     info = envfind.inspect(choice.python)

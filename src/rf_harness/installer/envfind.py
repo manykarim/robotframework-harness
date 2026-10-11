@@ -137,7 +137,9 @@ def find_env(project: Path, explicit: str | None = None) -> EnvChoice:
         if path.is_file():
             return EnvChoice(path, "--python", explicit)
         which = shutil.which(explicit)
-        return EnvChoice(Path(which) if which else None, "--python", explicit)
+        if which:
+            return EnvChoice(Path(which), "--python", explicit)
+        return EnvChoice(None, "--python", f"--python {explicit} does not exist")
     for var in ("VIRTUAL_ENV", "CONDA_PREFIX"):
         value = os.environ.get(var)
         if value:

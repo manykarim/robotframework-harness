@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import importlib.util
 import json
 import os
 import sys
@@ -14,6 +15,9 @@ from rf_harness import __version__
 from rf_harness.installer import doctor
 
 FAKE_HOOK = "import sys; sys.stdin.read(); print('{}')\n"
+# The runtime port may not be in the checkout yet (CI before it lands): then the environment checks of doctor
+# legitimately fail for sys.executable, and only the agent-level assertions apply.
+RUNTIME_IN_CHECKOUT = importlib.util.find_spec("rf_harness.runtime.hook") is not None
 
 pytestmark = pytest.mark.skipif(IS_WINDOWS, reason="python3 symlink + venv layout")
 
@@ -77,7 +81,12 @@ def test_doctor_fails_on_untrusted_codex_hooks_and_passes_after_trust(sandbox: S
     run_cli(capsys, "install", "--agent", "codex", "--mode", "files", "--scope", "user", "--no-runtime")
     rc, out = run_cli(capsys, "doctor", "--agent", "codex", "--no-live", "--python", sys.executable)
     assert "PASS  codex: hooks trusted: 6 rf-harness hooks trusted" in out
-    assert "PASS  robot framework" in out and "PASS  robotcode" in out and "PASS  harness runtime" in out
+    assert "PASS  codex: installed" in out and "PASS  codex: probe event reaches the harness" in out
+    assert "PASS  robot framework" in out and "PASS  robotcode" in out
+    if not RUNTIME_IN_CHECKOUT:
+        pytest.skip("rf_harness.runtime.hook is not in this checkout yet: the harness-runtime check and the overall "
+                    "exit code need the runtime port (the codex trust assertions above passed)")
+    assert "PASS  harness runtime" in out
     assert rc == 0, out
 
 

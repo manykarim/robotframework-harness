@@ -432,7 +432,7 @@ def codex_project_trusted(config: Path, project: Path) -> bool:
         data = tomllib.loads(text)
         projects = data.get("projects") if isinstance(data, dict) else None
         if isinstance(projects, dict):
-            for path in (str(project), native_path(project)):
+            for path in dict.fromkeys([str(project), native_path(project), project.as_posix()]):
                 entry = projects.get(path)
                 if isinstance(entry, dict) and entry.get("trust_level") == "trusted":
                     return True
@@ -442,7 +442,7 @@ def codex_project_trusted(config: Path, project: Path) -> bool:
     except ValueError:
         return False
     pattern = r"^\s*\[projects\.(?:" + "|".join(
-        re.escape(toml_basic_string(p)) for p in {str(project), native_path(project)}) + r")\]\s*$"
+        re.escape(toml_basic_string(p)) for p in {str(project), native_path(project), project.as_posix()}) + r")\]\s*$"
     match = re.search(pattern + r"(.*?)(?=^\s*\[|\Z)", text, re.M | re.S)
     return bool(match and re.search(r'^\s*trust_level\s*=\s*"trusted"', match.group(1), re.M))
 

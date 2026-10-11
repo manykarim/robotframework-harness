@@ -147,11 +147,14 @@ def test_candidates_order(tmp_path, project):
 
 @pytest.mark.skipif(IS_WINDOWS, reason="poetry hashes the normcased (lower-case, backslash) path on Windows")
 @pytest.mark.parametrize(("name", "path", "expected"), [
-    ("Demo Project!", "/tmp/rfh-poetry-vector/demo", "demo_project_-14T4n4Fv"),
+    ("Demo Project!", "/opt/rfh-poetry-vector/demo", "demo_project_-SmeU_FRt"),
     ("rf-tests", "/srv/projects/rf-tests", "rf-tests-yPEX6IDY"),
 ])
 def test_poetry_env_name_matches_poetry(name, path, expected):
-    """Vectors from poetry 2.4.1 EnvManager.generate_env_name."""
+    """Vectors from poetry 2.4.1 EnvManager.generate_env_name. Poetry hashes os.path.realpath(path), so the vectors use
+    paths without symlinked parts (on macOS /tmp -> /private/tmp would change the hash, for poetry as well)."""
+    if os.path.realpath(path) != path:
+        pytest.skip(f"{path} resolves to {os.path.realpath(path)} on this machine")
     assert rfh_launch.poetry_env_name(name, path) == expected
 
 

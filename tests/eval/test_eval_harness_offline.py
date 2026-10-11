@@ -195,6 +195,7 @@ def test_install_rf_harness_adapter_runs_the_documented_command(tmp_path, monkey
 
 def test_adapter_command_is_accepted_by_the_real_installer(tmp_path):
     """The exact per-cell command, with the installer's own --dry-run: accepted for every agent, nothing written."""
+    venv_bin = Path(sys.executable).parent   # the default grading venv only exists on the research machine
     import harness as H
 
     ok, reason, help_text = H.rf_harness_available()
@@ -204,9 +205,9 @@ def test_adapter_command_is_accepted_by_the_real_installer(tmp_path):
     ws.mkdir()
     home.mkdir()
     for agent in ("claude", "codex", "opencode", "copilot"):
-        cmd = H.rf_harness_install_cmd(agent, ws, H.VENV_BIN, help_text) + ["--dry-run"]
+        cmd = H.rf_harness_install_cmd(agent, ws, venv_bin, help_text) + ["--dry-run"]
         p = subprocess.run(cmd, capture_output=True, text=True, timeout=120, cwd=str(ws),
-                           env=H._installer_env(agent, home, H.VENV_BIN))
+                           env=H._installer_env(agent, home, venv_bin))
         assert p.returncode == 0, (agent, (p.stdout + p.stderr)[-800:])
         assert str(ws) in p.stdout                       # it plans writes into the cell workspace
     assert not [f for f in tmp_path.rglob("*") if f.is_file()]

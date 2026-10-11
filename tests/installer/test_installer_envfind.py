@@ -220,3 +220,12 @@ def test_eval_harness_command_line(sandbox: Sandbox, capsys, fake_inspect, agent
     assert harness["python"] == str(venv_py) and harness["source"] == "--python"
     assert (ws / ".rf-harness/manifest.json").is_file()
     assert any(p.name == "rfh-launch" for p in ws.rglob("rfh-launch"))
+
+
+def test_missing_explicit_python_is_a_clear_error(sandbox: Sandbox, capsys):
+    rc, out = run_cli(capsys, "install", "--agent", "claude-code", "--no-runtime")
+    assert rc == 0
+    missing = sandbox.tmp / "nowhere" / "bin" / "python"
+    for extra in ([], ["--dry-run"]):
+        rc, out = run_cli(capsys, "install", "--runtime-only", "--yes", "--python", str(missing), *extra)
+        assert rc == 1 and f"error: --python {missing} does not exist" in out

@@ -110,6 +110,21 @@ def test_codex_trust_text_edits(tmp_path: Path):
     tomllib.loads(text)
 
 
+def test_probe_config_trusts_both_path_spellings():
+    from pathlib import PurePosixPath, PureWindowsPath
+
+    win = codex_trust.probe_config(PureWindowsPath(r"C:\Users\me\proj"))
+    assert '[projects."C:\\\\Users\\\\me\\\\proj"]' in win and '[projects."C:/Users/me/proj"]' in win
+    assert win.count('trust_level = "trusted"') == 2
+    posix = codex_trust.probe_config(PurePosixPath("/home/me/proj"))
+    assert posix == '[projects."/home/me/proj"]\ntrust_level = "trusted"\n'
+    try:
+        import tomllib
+    except ImportError:  # pragma: no cover - Python 3.10
+        return
+    assert set(tomllib.loads(win)["projects"]) == {"C:\\Users\\me\\proj", "C:/Users/me/proj"}
+
+
 def test_project_trust_detection(tmp_path: Path):
     config = tmp_path / "config.toml"
     project = tmp_path / "proj"
