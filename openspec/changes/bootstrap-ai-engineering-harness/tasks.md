@@ -14,17 +14,17 @@
 ## 3. Plugin and marketplace (marketplace-distribution)
 
 - [ ] 3.1 Write `plugins/rf-harness/`: `plugin.json`, the `rf-harness` skill (from hookpkg32 SKILL.md and references, fixture-free), `hooks/hooks.json`, and `variants/codex` and `variants/opencode`. Verify `claude plugin validate .` passes and the fixture-leak scan from the evaluation finds nothing.
-- [ ] 3.2 Implement `bin/rfh-launch` (stdlib only): interpreter discovery (design D3 order), version-compatibility check, exec of the runtime, fail-open setup hint. Verify with unit tests for each discovery branch, a missing-runtime case (one hint line, exit 0) and launcher overhead under 50 ms median.
+- [x] 3.2 Implement `bin/rfh-launch` (stdlib only): interpreter discovery (design D3 order), version-compatibility check, exec of the runtime, fail-open setup hint. Verify with unit tests for each discovery branch, a missing-runtime case (one hint line, exit 0) and launcher overhead under 50 ms median.
 - [ ] 3.3 Add `.claude-plugin/marketplace.json`, then install the plugin from a local checkout in Claude Code, Copilot CLI, VS Code and Codex. Verify in one real session per agent that live feedback arrives after editing a test, and record the verified agent versions in `docs/agents/matrix.md`.
 
 ## 4. Installer (installer-cli)
 
-- [ ] 4.1 Port the rf-agentskills installer core (`cli`, `manifest`, `transforms`, interactive multi-select, detection) into `rf_harness.installer`, with adapters for Claude Code, Codex, Copilot CLI, VS Code and OpenCode. Verify `rf-harness targets` lists all five with detection results, and `install --dry-run` prints planned changes without writing.
-- [ ] 4.2 Implement plugin and files modes at project and user scope, including OpenCode files fallback and VS Code user-settings guidance. Verify with installer tests per agent × mode × scope against temporary homes and projects.
-- [ ] 4.3 Implement `envfind` and consented runtime provisioning (`uv pip install` / `pip install "robotframework-harness[runtime]==<version>"`), `.rf/harness.json`, and the import verification. Verify against venv, uv-managed and poetry fixtures that the runtime lands in the right environment and that no other package changes.
-- [ ] 4.4 Implement Codex hook-trust provisioning (trusted hash) with a `/hooks` fallback, plus coexistence detection for rf-agentskills hooks, rf-mcp entries and research-prototype installs. Verify with fixtures that trust entries match exactly the installed hooks and that the other tools' entries stay byte-identical.
-- [ ] 4.5 Implement manifest-based upgrade and uninstall (remove obsolete files, keep and report modified files). Verify install twice reports no change, the upgrade test removes an obsolete file, and uninstall leaves only the user's entries.
-- [ ] 4.6 Implement `doctor`: per-agent install and trust checks, a synthetic hook event through the launcher per agent format, environment and library report, and a 10-second live smoke step against `demo/site`. Verify that doctor fails with untrusted Codex hooks and passes after trust.
+- [x] 4.1 Port the rf-agentskills installer core (`cli`, `manifest`, `transforms`, interactive multi-select, detection) into `rf_harness.installer`, with adapters for Claude Code, Codex, Copilot CLI, VS Code and OpenCode. Verify `rf-harness targets` lists all five with detection results, and `install --dry-run` prints planned changes without writing.
+- [x] 4.2 Implement plugin and files modes at project and user scope, including OpenCode files fallback and VS Code user-settings guidance. Verify with installer tests per agent × mode × scope against temporary homes and projects.
+- [x] 4.3 Implement `envfind` and consented runtime provisioning (`uv pip install` / `pip install "robotframework-harness[runtime]==<version>"`), `.rf/harness.json`, and the import verification. Verify against venv, uv-managed and poetry fixtures that the runtime lands in the right environment and that no other package changes.
+- [x] 4.4 Implement Codex hook-trust provisioning (trusted hash) with a `/hooks` fallback, plus coexistence detection for rf-agentskills hooks, rf-mcp entries and research-prototype installs. Verify with fixtures that trust entries match exactly the installed hooks and that the other tools' entries stay byte-identical.
+- [x] 4.5 Implement manifest-based upgrade and uninstall (remove obsolete files, keep and report modified files). Verify install twice reports no change, the upgrade test removes an obsolete file, and uninstall leaves only the user's entries.
+- [x] 4.6 Implement `doctor`: per-agent install and trust checks, a synthetic hook event through the launcher per agent format, environment and library report, and a 10-second live smoke step against `demo/site`. Verify that doctor fails with untrusted Codex hooks and passes after trust.
 
 ## 5. Evaluation harness (harness-evaluation)
 

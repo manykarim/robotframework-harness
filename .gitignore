@@ -7,7 +7,7 @@ build/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
-site/
+/site/
 # generated at build time from plugins/rf-harness (hatch_build.py)
 src/rf_harness/_assets/
 # Robot Framework / harness run artefacts

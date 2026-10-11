@@ -1,0 +1,60 @@
+#!/usr/bin/env python3
+"""rf-harness hook launcher entry point; the logic lives in rfh_launch.py next to this file.
+
+    python3 -S <dir>/bin/rfh-launch <Event> --agent <agent|auto>      (hook payload on stdin)
+
+The compiled module is cached in the user cache dir (never next to this file, so install dirs stay exactly as the
+installer recorded them); any problem falls back to a plain import, and any failure exits 0.
+"""
+import os
+import sys
+
+sys.dont_write_bytecode = True
+
+
+def _load(here):
+    import marshal
+
+    source = os.path.join(here, "rfh_launch.py")
+    home = os.path.expanduser("~")
+    if os.environ.get("RF_HARNESS_CACHE_DIR"):
+        cache = os.environ["RF_HARNESS_CACHE_DIR"]
+    elif os.name == "nt":
+        cache = os.path.join(os.environ.get("LOCALAPPDATA") or os.path.join(home, "AppData", "Local"), "rf-harness")
+    else:
+        cache = os.path.join(os.environ.get("XDG_CACHE_HOME") or os.path.join(home, ".cache"), "rf-harness")
+    st = os.stat(source)
+    cached = os.path.join(cache, "code", "rfh_launch-{}-{}-{}.marshal".format(
+        st.st_mtime_ns, st.st_size, sys.implementation.cache_tag))
+    try:
+        with open(cached, "rb") as fh:
+            code = marshal.loads(fh.read())
+    except (OSError, ValueError, EOFError, TypeError):
+        with open(source, "rb") as fh:
+            code = compile(fh.read(), source, "exec")
+        try:
+            os.makedirs(os.path.dirname(cached), exist_ok=True)
+            tmp = "{}.{}.tmp".format(cached, os.getpid())
+            with open(tmp, "wb") as fh:
+                fh.write(marshal.dumps(code))
+            os.replace(tmp, cached)
+        except OSError:
+            pass
+    module = type(sys)("rfh_launch")
+    module.__file__ = source
+    sys.modules["rfh_launch"] = module
+    exec(code, module.__dict__)
+    return module
+
+
+try:
+    _here = os.path.dirname(os.path.abspath(__file__))
+    try:
+        rfh_launch = _load(_here)
+    except Exception:
+        sys.modules.pop("rfh_launch", None)
+        sys.path.insert(0, _here)
+        import rfh_launch
+except BaseException:
+    os._exit(0)
+rfh_launch.main()

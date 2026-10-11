@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [
+      {
+        "type": "command",
+        "bash": "python3 -S \"${CLAUDE_PLUGIN_ROOT}/bin/rfh-launch\" sessionStart --agent auto",
+        "powershell": "& \"${CLAUDE_PLUGIN_ROOT}/bin/rfh-launch.cmd\" sessionStart --agent auto",
+        "timeoutSec": 30
+      }
+    ],
+    "userPromptSubmitted": [
+      {
+        "type": "command",
+        "bash": "python3 -S \"${CLAUDE_PLUGIN_ROOT}/bin/rfh-launch\" userPromptSubmitted --agent auto",
+        "powershell": "& \"${CLAUDE_PLUGIN_ROOT}/bin/rfh-launch.cmd\" userPromptSubmitted --agent auto",
+        "timeoutSec": 10
+      }
+    ],
+    "preToolUse": [
+      {
+        "type": "command",
+        "bash": "python3 -S \"${CLAUDE_PLUGIN_ROOT}/bin/rfh-launch\" preToolUse --agent auto",
+        "powershell": "& \"${CLAUDE_PLUGIN_ROOT}/bin/rfh-launch.cmd\" preToolUse --agent auto",
+        "timeoutSec": 20
+      }
+    ],
+    "postToolUse": [
+      {
+        "type": "command",
+        "bash": "python3 -S \"${CLAUDE_PLUGIN_ROOT}/bin/rfh-launch\" postToolUse --agent auto",
+        "powershell": "& \"${CLAUDE_PLUGIN_ROOT}/bin/rfh-launch.cmd\" postToolUse --agent auto",
+        "timeoutSec": 180
+      }
+    ],
+    "postToolUseFailure": [
+      {
+        "type": "command",
+        "bash": "python3 -S \"${CLAUDE_PLUGIN_ROOT}/bin/rfh-launch\" postToolUseFailure --agent auto",
+        "powershell": "& \"${CLAUDE_PLUGIN_ROOT}/bin/rfh-launch.cmd\" postToolUseFailure --agent auto",
+        "timeoutSec": 180
+      }
+    ],
+    "agentStop": [
+      {
+        "type": "command",
+        "bash": "python3 -S \"${CLAUDE_PLUGIN_ROOT}/bin/rfh-launch\" agentStop --agent auto",
+        "powershell": "& \"${CLAUDE_PLUGIN_ROOT}/bin/rfh-launch.cmd\" agentStop --agent auto",
+        "timeoutSec": 90
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>rf-harness demo</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 32rem; margin: 3rem auto; padding: 0 1rem; }
+    label, input, button { font-size: 1rem; }
+    #greeting { margin-top: 1rem; min-height: 1.5rem; }
+  </style>
+</head>
+<body>
+  <h1>rf-harness demo</h1>
+  <p>A static page for the rf-harness quick starts and the <code>rf-harness doctor</code> live smoke step.</p>
+  <form id="form" onsubmit="event.preventDefault(); greet();">
+    <label for="name">Name</label>
+    <input id="name" name="name" placeholder="Your name">
+    <button id="greet" type="submit">Greet</button>
+  </form>
+  <p id="greeting" role="status"></p>
+  <script>
+    function greet() {
+      const name = document.getElementById("name").value.trim() || "stranger";
+      setTimeout(() => { document.getElementById("greeting").textContent = "Hello, " + name + "!"; }, 300);
+    }
+  </script>
+</body>
+</html>
