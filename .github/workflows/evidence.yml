@@ -7,12 +7,14 @@ on:
     paths:
       - "evidence/**"
       - "README.md"
+      - "docs/**"
       - "tests/evidence/**"
       - ".github/workflows/evidence.yml"
   pull_request:
     paths:
       - "evidence/**"
       - "README.md"
+      - "docs/**"
       - "tests/evidence/**"
       - ".github/workflows/evidence.yml"
   workflow_dispatch:

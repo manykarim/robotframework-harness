@@ -41,4 +41,5 @@ export DISPLAY=:99 RFH_PLATYNUI_ISOLATED_DISPLAY=:99 RFH_PLATYNUI_ISOLATED_XPID=
 - rf-mcp's isolation bootstrap script is not shipped. Use the manual Xvfb/Xephyr steps above.
 
 The full variable list is in the [environment reference](../reference/environment.md). The parity tests are in
-`tests/desktop/`.
+`tests/desktop/`. The research's host-dependency map explains why these guards must run on the user's machine and
+cannot move into robotcode or a remote service: [capability spikes](../../evidence/rounds/01-capability-spikes/map/).

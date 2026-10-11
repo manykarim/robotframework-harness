@@ -1172,6 +1172,999 @@
     }
    ],
    "command": "python3 evidence/check_claims.py --only r3b-skillpkg-vs-rfmcp-sign --show"
+  },
+  {
+   "id": "docs-r7-claude-mcp",
+   "claim": "docs: round 7 Claude Code + Haiku 5.5 with mcp: 0.93",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "claude"
+     ],
+     "arms": [
+      "mcp"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 0.93,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "../docs/evidence.md",
+     "text": "| Claude Code + Haiku 5.5 | 0.93 | 0.80 | 0.93 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-r7-claude-mcp --show"
+  },
+  {
+   "id": "docs-r7-claude-hookpkg3",
+   "claim": "docs: round 7 Claude Code + Haiku 5.5 with hookpkg3: 0.80",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "claude"
+     ],
+     "arms": [
+      "hookpkg3"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 0.8,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "../docs/evidence.md",
+     "text": "| Claude Code + Haiku 5.5 | 0.93 | 0.80 | 0.93 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-r7-claude-hookpkg3 --show"
+  },
+  {
+   "id": "docs-r7-claude-hookpkg31",
+   "claim": "docs: round 7 Claude Code + Haiku 5.5 with hookpkg31: 0.93",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "claude"
+     ],
+     "arms": [
+      "hookpkg31"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 0.93,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "../docs/evidence.md",
+     "text": "| Claude Code + Haiku 5.5 | 0.93 | 0.80 | 0.93 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-r7-claude-hookpkg31 --show"
+  },
+  {
+   "id": "docs-r7-codex-mcp",
+   "claim": "docs: round 7 Codex (gpt-5.6-luna) with mcp: 0.87",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "codex"
+     ],
+     "arms": [
+      "mcp"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 0.87,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "../docs/evidence.md",
+     "text": "| Codex (gpt-5.6-luna) | 0.87 | 0.87 | 0.87 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-r7-codex-mcp --show"
+  },
+  {
+   "id": "docs-r7-codex-hookpkg3",
+   "claim": "docs: round 7 Codex (gpt-5.6-luna) with hookpkg3: 0.87",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "codex"
+     ],
+     "arms": [
+      "hookpkg3"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 0.87,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "../docs/evidence.md",
+     "text": "| Codex (gpt-5.6-luna) | 0.87 | 0.87 | 0.87 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-r7-codex-hookpkg3 --show"
+  },
+  {
+   "id": "docs-r7-codex-hookpkg31",
+   "claim": "docs: round 7 Codex (gpt-5.6-luna) with hookpkg31: 0.87",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "codex"
+     ],
+     "arms": [
+      "hookpkg31"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 0.87,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "../docs/evidence.md",
+     "text": "| Codex (gpt-5.6-luna) | 0.87 | 0.87 | 0.87 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-r7-codex-hookpkg31 --show"
+  },
+  {
+   "id": "docs-r7-opencode-mcp",
+   "claim": "docs: round 7 OpenCode + MiniMax-M2.5 with mcp: 0.27",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "opencode"
+     ],
+     "arms": [
+      "mcp"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 0.27,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "../docs/evidence.md",
+     "text": "| OpenCode + MiniMax-M2.5 | 0.27 | 0.47 | 0.53 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-r7-opencode-mcp --show"
+  },
+  {
+   "id": "docs-r7-opencode-hookpkg3",
+   "claim": "docs: round 7 OpenCode + MiniMax-M2.5 with hookpkg3: 0.47",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "opencode"
+     ],
+     "arms": [
+      "hookpkg3"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 0.47,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "../docs/evidence.md",
+     "text": "| OpenCode + MiniMax-M2.5 | 0.27 | 0.47 | 0.53 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-r7-opencode-hookpkg3 --show"
+  },
+  {
+   "id": "docs-r7-opencode-hookpkg31",
+   "claim": "docs: round 7 OpenCode + MiniMax-M2.5 with hookpkg31: 0.53",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "opencode"
+     ],
+     "arms": [
+      "hookpkg31"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 0.53,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "../docs/evidence.md",
+     "text": "| OpenCode + MiniMax-M2.5 | 0.27 | 0.47 | 0.53 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-r7-opencode-hookpkg31 --show"
+  },
+  {
+   "id": "docs-r7-deepseek-v4-1-flash-mcp",
+   "claim": "docs: round 7 DeepSeek V4.1 Flash with mcp: 1.00",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "cc-or:deepseek-v4.1-flash"
+     ],
+     "arms": [
+      "mcp"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 1.0,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "../docs/evidence.md",
+     "text": "| DeepSeek V4.1 Flash | 1.00 | 1.00 | 1.00 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-r7-deepseek-v4-1-flash-mcp --show"
+  },
+  {
+   "id": "docs-r7-deepseek-v4-1-flash-hookpkg3",
+   "claim": "docs: round 7 DeepSeek V4.1 Flash with hookpkg3: 1.00",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "cc-or:deepseek-v4.1-flash"
+     ],
+     "arms": [
+      "hookpkg3"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 1.0,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "../docs/evidence.md",
+     "text": "| DeepSeek V4.1 Flash | 1.00 | 1.00 | 1.00 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-r7-deepseek-v4-1-flash-hookpkg3 --show"
+  },
+  {
+   "id": "docs-r7-deepseek-v4-1-flash-hookpkg31",
+   "claim": "docs: round 7 DeepSeek V4.1 Flash with hookpkg31: 1.00",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "cc-or:deepseek-v4.1-flash"
+     ],
+     "arms": [
+      "hookpkg31"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 1.0,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "../docs/evidence.md",
+     "text": "| DeepSeek V4.1 Flash | 1.00 | 1.00 | 1.00 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-r7-deepseek-v4-1-flash-hookpkg31 --show"
+  },
+  {
+   "id": "docs-r7-glm-5-3-flash-mcp",
+   "claim": "docs: round 7 GLM 5.3 Flash with mcp: 0.71",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "cc-or:glm-5.3-flash"
+     ],
+     "arms": [
+      "mcp"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 0.71,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "../docs/evidence.md",
+     "text": "| GLM 5.3 Flash | 0.71 | 0.75 | 0.88 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-r7-glm-5-3-flash-mcp --show"
+  },
+  {
+   "id": "docs-r7-glm-5-3-flash-hookpkg3",
+   "claim": "docs: round 7 GLM 5.3 Flash with hookpkg3: 0.75",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "cc-or:glm-5.3-flash"
+     ],
+     "arms": [
+      "hookpkg3"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 0.75,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "../docs/evidence.md",
+     "text": "| GLM 5.3 Flash | 0.71 | 0.75 | 0.88 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-r7-glm-5-3-flash-hookpkg3 --show"
+  },
+  {
+   "id": "docs-r7-glm-5-3-flash-hookpkg31",
+   "claim": "docs: round 7 GLM 5.3 Flash with hookpkg31: 0.88",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "cc-or:glm-5.3-flash"
+     ],
+     "arms": [
+      "hookpkg31"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 0.88,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "../docs/evidence.md",
+     "text": "| GLM 5.3 Flash | 0.71 | 0.75 | 0.88 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-r7-glm-5-3-flash-hookpkg31 --show"
+  },
+  {
+   "id": "docs-r7-qwen3-8-flash-mcp",
+   "claim": "docs: round 7 Qwen 3.8 Flash with mcp: 0.38",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "cc-or:qwen3.8-flash"
+     ],
+     "arms": [
+      "mcp"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 0.38,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "../docs/evidence.md",
+     "text": "| Qwen 3.8 Flash | 0.38 | 0.75 | 0.88 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-r7-qwen3-8-flash-mcp --show"
+  },
+  {
+   "id": "docs-r7-qwen3-8-flash-hookpkg3",
+   "claim": "docs: round 7 Qwen 3.8 Flash with hookpkg3: 0.75",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "cc-or:qwen3.8-flash"
+     ],
+     "arms": [
+      "hookpkg3"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 0.75,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "../docs/evidence.md",
+     "text": "| Qwen 3.8 Flash | 0.38 | 0.75 | 0.88 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-r7-qwen3-8-flash-hookpkg3 --show"
+  },
+  {
+   "id": "docs-r7-qwen3-8-flash-hookpkg31",
+   "claim": "docs: round 7 Qwen 3.8 Flash with hookpkg31: 0.88",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "cc-or:qwen3.8-flash"
+     ],
+     "arms": [
+      "hookpkg31"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 0.88,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "../docs/evidence.md",
+     "text": "| Qwen 3.8 Flash | 0.38 | 0.75 | 0.88 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-r7-qwen3-8-flash-hookpkg31 --show"
+  },
+  {
+   "id": "docs-r7-v3-pooled",
+   "claim": "docs: round 7 pooled v3 (hookpkg3) pass rate 0.75",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "arms": [
+      "hookpkg3"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 0.75,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "../docs/evidence.md",
+     "text": "| 206 valid | **0.69 / 0.75 / 0.83**"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-r7-v3-pooled --show"
+  },
+  {
+   "id": "docs-r7-v31-pooled",
+   "claim": "docs: round 7 pooled v3.1 pass rate 0.83",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "arms": [
+      "hookpkg31"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 0.83,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "../docs/index.md",
+     "text": "agents with the harness passed **0.83** of sessions versus **0.69** with rf-mcp"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-r7-v31-pooled --show"
+  },
+  {
+   "id": "docs-r7-rfmcp-pooled",
+   "claim": "docs: round 7 pooled rf-mcp pass rate 0.69",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "arms": [
+      "mcp"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 0.69,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "../docs/index.md",
+     "text": "agents with the harness passed **0.83** of sessions versus **0.69** with rf-mcp"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-r7-rfmcp-pooled --show"
+  },
+  {
+   "id": "docs-r7-opencode-wall-rfmcp",
+   "claim": "docs: OpenCode wall with rf-mcp 1,237 s",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "mean",
+    "field": "wall_s",
+    "filter": {
+     "agents": [
+      "opencode"
+     ],
+     "arms": [
+      "mcp"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 1237,
+    "tolerance": 0.5
+   },
+   "sources": [
+    {
+     "file": "../docs/evidence.md",
+     "text": "OpenCode: 1,237 s → 436 s"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-r7-opencode-wall-rfmcp --show"
+  },
+  {
+   "id": "docs-r7-opencode-wall-harness",
+   "claim": "docs: OpenCode wall with v3.1 436 s",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "mean",
+    "field": "wall_s",
+    "filter": {
+     "agents": [
+      "opencode"
+     ],
+     "arms": [
+      "hookpkg31"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 436,
+    "tolerance": 0.5
+   },
+   "sources": [
+    {
+     "file": "../docs/evidence.md",
+     "text": "OpenCode: 1,237 s → 436 s"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-r7-opencode-wall-harness --show"
+  },
+  {
+   "id": "docs-r7-codex-wall-rfmcp",
+   "claim": "docs: Codex wall with rf-mcp 405 s",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "mean",
+    "field": "wall_s",
+    "filter": {
+     "agents": [
+      "codex"
+     ],
+     "arms": [
+      "mcp"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 405,
+    "tolerance": 0.5
+   },
+   "sources": [
+    {
+     "file": "../docs/evidence.md",
+     "text": "Codex wall time: 405 s with rf-mcp, 199 s with v3.1"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-r7-codex-wall-rfmcp --show"
+  },
+  {
+   "id": "docs-r7-codex-wall-harness",
+   "claim": "docs: Codex wall with v3.1 199 s",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "mean",
+    "field": "wall_s",
+    "filter": {
+     "agents": [
+      "codex"
+     ],
+     "arms": [
+      "hookpkg31"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 199,
+    "tolerance": 0.5
+   },
+   "sources": [
+    {
+     "file": "../docs/evidence.md",
+     "text": "Codex wall time: 405 s with rf-mcp, 199 s with v3.1"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-r7-codex-wall-harness --show"
+  },
+  {
+   "id": "docs-r7-deepseek-cost-rfmcp",
+   "claim": "docs: DeepSeek est. cost per session with rf-mcp $0.21",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "mean",
+    "field": "cost_usd",
+    "filter": {
+     "agents": [
+      "cc-or:deepseek-v4.1-flash"
+     ],
+     "arms": [
+      "mcp"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 0.21,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "../docs/evidence.md",
+     "text": "DeepSeek estimated cost per session: $0.21 → $0.05"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-r7-deepseek-cost-rfmcp --show"
+  },
+  {
+   "id": "docs-r7-deepseek-cost-harness",
+   "claim": "docs: DeepSeek est. cost per session with v3.1 $0.05",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "mean",
+    "field": "cost_usd",
+    "filter": {
+     "agents": [
+      "cc-or:deepseek-v4.1-flash"
+     ],
+     "arms": [
+      "hookpkg31"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 0.05,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "../docs/evidence.md",
+     "text": "DeepSeek estimated cost per session: $0.21 → $0.05"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-r7-deepseek-cost-harness --show"
+  },
+  {
+   "id": "docs-profiles-rich-v3",
+   "claim": "docs: rich-profile agents with v3 (lean output) pooled 0.68",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "opencode",
+      "cc-or:deepseek-v4.1-flash",
+      "cc-or:glm-5.3-flash",
+      "cc-or:qwen3.8-flash"
+     ],
+     "arms": [
+      "hookpkg3"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 0.68,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "../docs/concepts/output-profiles.md",
+     "text": "Pooled, that is 0.68 → 0.78"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-profiles-rich-v3 --show"
+  },
+  {
+   "id": "docs-profiles-rich-v31",
+   "claim": "docs: rich-profile agents with v3.1 (rich output) pooled 0.78",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "opencode",
+      "cc-or:deepseek-v4.1-flash",
+      "cc-or:glm-5.3-flash",
+      "cc-or:qwen3.8-flash"
+     ],
+     "arms": [
+      "hookpkg31"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 0.78,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "../docs/concepts/output-profiles.md",
+     "text": "Pooled, that is 0.68 → 0.78"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-profiles-rich-v31 --show"
+  },
+  {
+   "id": "docs-v32-codex-v31",
+   "claim": "docs: v3.1 vs v3.2 Codex: v3.1 14/15",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v32.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "codex"
+     ],
+     "arms": [
+      "hookpkg31"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 0.93,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "../docs/evidence.md",
+     "text": "| 30 | 14/15 vs **15/15** (n.s.) |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-v32-codex-v31 --show"
+  },
+  {
+   "id": "docs-v32-codex-v32",
+   "claim": "docs: v3.1 vs v3.2 Codex: v3.2 15/15",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v32.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "codex"
+     ],
+     "arms": [
+      "hookpkg32"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 1.0,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "../docs/evidence.md",
+     "text": "| 30 | 14/15 vs **15/15** (n.s.) |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-v32-codex-v32 --show"
   }
  ],
  "reports": [

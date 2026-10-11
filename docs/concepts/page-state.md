@@ -31,3 +31,5 @@ select  "Make"  id=make   => id=make   (native select [– please select –|Aud
 Some models page through `source.html` in small chunks. In round 7, Gemini 3.8 Flash made about 71 reads per session
 and hit the turn cap. After **8 reads in a row** without an edit or command (`RFH_READ_STREAK_AT`), the agent gets one
 non-blocking note: grep `controls.txt`, then write the next 2–4 lines. It repeats once at 16. Any edit resets the count.
+See [round 7](../../evidence/rounds/07-v31-v32/). The capture design (end of edit and failures only, no settle
+between steps) comes from the [round 6 diagnosis](../../evidence/rounds/06-v3-main/diag/).

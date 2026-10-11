@@ -23,7 +23,9 @@ DOCS = ROOT / "docs" / "reference"
 # vendored desktop package keeps its own table (`desktop/_env.py`) but must still be registered in config.py
 VAR_RE = re.compile(r"\bRFH_[A-Z][A-Z0-9_]*\b")
 SCAN_DIRS = [ROOT / "src" / "rf_harness", ROOT / "plugins" / "rf-harness"]
-IGNORE_NAMES = {"RFH_"}
+# doc placeholders (e.g. "ROBOTMCP_X -> RFH_X"); names ending in "_" are prefixes of f-string built names such as
+# RFH_MAX_CTX_{AGENT}, whose concrete variables are registered individually
+IGNORE_NAMES = {"RFH_", "RFH_X", "RFH_NAME"}
 
 
 def _cli_markdown() -> str:
@@ -50,7 +52,7 @@ def _used_names() -> set[str]:
                     names |= set(VAR_RE.findall(path.read_text(encoding="utf-8", errors="ignore")))
                 except OSError:
                     continue
-    return names - IGNORE_NAMES
+    return {n for n in names - IGNORE_NAMES if not n.endswith("_")}
 
 
 def _env_markdown() -> str:

@@ -19,7 +19,7 @@ Reproduced live: stopped at tests/truck.robot:41 (page captured in .rf/state/lat
 ## Why
 
 - Repairing an existing suite is half of real test work. In the live A/B rounds the hook arms did best on the debug
-  scenarios (round 6: v2 0.71 and v3 0.67 vs rf-mcp 0.50).
+  scenarios ([round 6](../../evidence/rounds/06-v3-main/): v2 0.71 and v3 0.67 vs rf-mcp 0.50).
 - Reproducing the failure live means the agent sees the actual page at the failing step, instead of guessing from a
   log line.
 

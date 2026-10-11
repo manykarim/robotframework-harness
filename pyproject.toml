@@ -61,6 +61,11 @@ browser = [
     "robotframework-browser==19.12.7",
     "robotframework-requests>=0.9.7",
 ]
+# Documentation site (mkdocs.yml). mkdocs 2.0 drops the plugin/theme system Material needs: stay on 1.x.
+docs = [
+    "mkdocs>=1.6,<2",
+    "mkdocs-material>=9.5,<10",
+]
 
 [tool.hatch.version]
 path = "src/rf_harness/__init__.py"

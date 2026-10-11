@@ -39,8 +39,9 @@
 ## Design choices and why
 
 - **Hooks, not a CLI or MCP server.** A helper CLI only helps when the agent decides to call it, and agents often don't.
-  Hooks deliver feedback after every edit unasked. Claude scored 0.53 with hooks vs 0.20 with a helper CLI in round 4;
-  the hook harness beat rf-mcp in rounds 6 and 7 ([evidence](../evidence.md)).
+  Hooks deliver feedback after every edit unasked. Claude scored 0.53 with hooks vs 0.20 with a helper CLI in
+  [round 4](../../evidence/rounds/04-hooks-matrix-and-hooks-ab/); the hook harness beat rf-mcp in
+  [round 6](../../evidence/rounds/06-v3-main/) and [round 7](../../evidence/rounds/07-v31-v32/).
 - **The edited file is the test.** The agent writes the real `.robot` file, and the hooks run its new lines. There is no
   journal-to-suite step that could change arguments, and no shell quoting of `${variables}`.
 - **The runtime lives in your project environment.** Library imports, keyword docs and execution must see exactly the

@@ -1,0 +1,28 @@
+name: docs
+on:
+  push:
+    branches: [main]
+    paths: ["docs/**", "mkdocs.yml", "scripts/gen_reference.py", "scripts/mkdocs_hooks.py", "src/rf_harness/**", "evidence/**"]
+  pull_request:
+    paths: ["docs/**", "mkdocs.yml", "scripts/gen_reference.py", "scripts/mkdocs_hooks.py", "src/rf_harness/**", "evidence/**"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+      - run: uv sync --group docs
+      - name: generated reference is current (CLI flags, RFH_* variables documented)
+        run: uv run python scripts/gen_reference.py --check
+      - name: strict build (evidence links must resolve to repository paths)
+        run: uv run mkdocs build --strict
+      - name: internal links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --offline --no-progress --include-fragments "site/**/*.html"
+          fail: true

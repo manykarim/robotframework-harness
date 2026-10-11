@@ -20,4 +20,5 @@ tests/shop.robot changed since its last green plain run. Run: robot -d results t
 
 In the research, plain runs that failed after live runs passed were a real failure mode, often a timing race. The
 journey graders re-run the final suite cleanly. A test that only passed live does not count. The gate makes the
-agent check this itself, and [plain-run reproduction](plain-run-reproduction.md) helps it fix the race.
+agent check this itself, and [plain-run reproduction](plain-run-reproduction.md) helps it fix the race. The
+live-pass/plain-fail divergence is analyzed in the [round 6 diagnosis](../../evidence/rounds/06-v3-main/diag/).

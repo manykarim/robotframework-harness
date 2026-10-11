@@ -49,5 +49,7 @@ The report gives:
 - Fisher and per-cell sign tests;
 - cost, wall time and turns.
 
-Live sites drift, so only same-window comparisons are valid. See [Evidence](../evidence.md) for all past rounds and
-`eval/` for the commands.
+Live sites drift, so only same-window comparisons are valid. See [Evidence](../evidence.md) for all past rounds, the
+harness code as used in the research ([eval snapshot](../../evidence/eval-snapshots/ab-7994ae3/)), and `eval/` for the
+commands. The method as used in the last two rounds: [round 6](../../evidence/rounds/06-v3-main/),
+[round 7](../../evidence/rounds/07-v31-v32/).

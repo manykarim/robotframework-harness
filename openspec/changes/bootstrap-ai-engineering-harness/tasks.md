@@ -43,10 +43,10 @@
 
 ## 7. Documentation (harness-documentation)
 
-- [ ] 7.1 Set up MkDocs Material with the sections from design D8, plus generators for the CLI and environment-variable reference from argparse and `config.py`, with the undocumented-item check. Verify that the docs build fails when a test variable is added to `config.py` without docs.
+- [x] 7.1 Set up MkDocs Material with the sections from design D8, plus generators for the CLI and environment-variable reference from argparse and `config.py`, with the undocumented-item check. Verify that the docs build fails when a test variable is added to `config.py` without docs.
 - [ ] 7.2 Write the per-agent quick starts (Claude Code, Codex, Copilot CLI, VS Code, OpenCode) and "use it in your project". Verify each in a real session with `eval/quickstart_check.py` (five commands or fewer, under 5 minutes, recorded duration).
-- [ ] 7.3 Write the concept pages for every component listed in the spec, each linking to its evidence. Verify the link check passes and every concept page links at least one evidence file.
-- [ ] 7.4 Write troubleshooting, the comparison with rf-mcp and rf-agentskills, the agent support matrix, and the evidence summary (with confidence intervals and limits). Verify that the lychee link check and the claims check pass in the docs workflow.
+- [x] 7.3 Write the concept pages for every component listed in the spec, each linking to its evidence. Verify the link check passes and every concept page links at least one evidence file.
+- [x] 7.4 Write troubleshooting, the comparison with rf-mcp and rf-agentskills, the agent support matrix, and the evidence summary (with confidence intervals and limits). Verify that the lychee link check and the claims check pass in the docs workflow.
 
 ## 8. Release v1.0.0
 
