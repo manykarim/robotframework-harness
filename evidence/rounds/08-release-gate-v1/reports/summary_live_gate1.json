@@ -1,0 +1,326 @@
+{
+  "rows": 90,
+  "contrasts": [
+    {
+      "a": "rf-harness",
+      "b": "prototype-v32",
+      "all": {
+        "cells": 15,
+        "rate_a": 0.8222222222222222,
+        "rate_b": 0.8222222222222222,
+        "n_a": 45,
+        "n_b": 45,
+        "pass_a": 37,
+        "pass_b": 37,
+        "delta_pooled": 0.0,
+        "delta_cellmean": -3.7007434154171884e-18,
+        "fisher_p": 1.0,
+        "cells_pos": 3,
+        "cells_neg": 2,
+        "sign_p": 1.0
+      },
+      "headroom": {
+        "cells": 0
+      },
+      "by_agent": {
+        "claude": {
+          "all": {
+            "cells": 5,
+            "rate_a": 1.0,
+            "rate_b": 1.0,
+            "n_a": 15,
+            "n_b": 15,
+            "pass_a": 15,
+            "pass_b": 15,
+            "delta_pooled": 0.0,
+            "delta_cellmean": 0.0,
+            "fisher_p": 1.0,
+            "cells_pos": 0,
+            "cells_neg": 0,
+            "sign_p": 1.0
+          },
+          "headroom": {
+            "cells": 0
+          }
+        },
+        "codex": {
+          "all": {
+            "cells": 5,
+            "rate_a": 0.9333333333333333,
+            "rate_b": 0.9333333333333333,
+            "n_a": 15,
+            "n_b": 15,
+            "pass_a": 14,
+            "pass_b": 14,
+            "delta_pooled": 0.0,
+            "delta_cellmean": 0.0,
+            "fisher_p": 1.0,
+            "cells_pos": 1,
+            "cells_neg": 1,
+            "sign_p": 1.0
+          },
+          "headroom": {
+            "cells": 0
+          }
+        },
+        "opencode": {
+          "all": {
+            "cells": 5,
+            "rate_a": 0.5333333333333333,
+            "rate_b": 0.5333333333333333,
+            "n_a": 15,
+            "n_b": 15,
+            "pass_a": 8,
+            "pass_b": 8,
+            "delta_pooled": 0.0,
+            "delta_cellmean": -1.1102230246251566e-17,
+            "fisher_p": 1.0,
+            "cells_pos": 2,
+            "cells_neg": 1,
+            "sign_p": 1.0
+          },
+          "headroom": {
+            "cells": 0
+          }
+        }
+      },
+      "by_scenario": {
+        "tricentis_quote": {
+          "cells": 3,
+          "rate_a": 1.0,
+          "rate_b": 0.8888888888888888,
+          "n_a": 9,
+          "n_b": 9,
+          "pass_a": 9,
+          "pass_b": 8,
+          "delta_pooled": 0.11111111111111116,
+          "delta_cellmean": 0.11111111111111112,
+          "fisher_p": 1.0,
+          "cells_pos": 1,
+          "cells_neg": 0,
+          "sign_p": 1.0
+        },
+        "carconfig_order": {
+          "cells": 3,
+          "rate_a": 0.7777777777777778,
+          "rate_b": 1.0,
+          "n_a": 9,
+          "n_b": 9,
+          "pass_a": 7,
+          "pass_b": 9,
+          "delta_pooled": -0.2222222222222222,
+          "delta_cellmean": -0.22222222222222224,
+          "fisher_p": 0.47058823529411764,
+          "cells_pos": 0,
+          "cells_neg": 1,
+          "sign_p": 1.0
+        },
+        "demoshop_order": {
+          "cells": 3,
+          "rate_a": 0.7777777777777778,
+          "rate_b": 0.6666666666666666,
+          "n_a": 9,
+          "n_b": 9,
+          "pass_a": 7,
+          "pass_b": 6,
+          "delta_pooled": 0.11111111111111116,
+          "delta_cellmean": 0.1111111111111111,
+          "fisher_p": 1.0,
+          "cells_pos": 1,
+          "cells_neg": 0,
+          "sign_p": 1.0
+        },
+        "demoshop_debug": {
+          "cells": 3,
+          "rate_a": 0.8888888888888888,
+          "rate_b": 1.0,
+          "n_a": 9,
+          "n_b": 9,
+          "pass_a": 8,
+          "pass_b": 9,
+          "delta_pooled": -0.11111111111111116,
+          "delta_cellmean": -0.11111111111111112,
+          "fisher_p": 1.0,
+          "cells_pos": 0,
+          "cells_neg": 1,
+          "sign_p": 1.0
+        },
+        "tricentis_debug": {
+          "cells": 3,
+          "rate_a": 0.6666666666666666,
+          "rate_b": 0.5555555555555556,
+          "n_a": 9,
+          "n_b": 9,
+          "pass_a": 6,
+          "pass_b": 5,
+          "delta_pooled": 0.11111111111111105,
+          "delta_cellmean": 0.11111111111111112,
+          "fisher_p": 1.0,
+          "cells_pos": 1,
+          "cells_neg": 0,
+          "sign_p": 1.0
+        }
+      },
+      "per_cell": {
+        "claude|tricentis_quote": {
+          "delta": 0.0,
+          "headroom": false,
+          "rate_a": 1.0,
+          "rate_b": 1.0,
+          "n_a": 3,
+          "n_b": 3
+        },
+        "claude|carconfig_order": {
+          "delta": 0.0,
+          "headroom": false,
+          "rate_a": 1.0,
+          "rate_b": 1.0,
+          "n_a": 3,
+          "n_b": 3
+        },
+        "claude|demoshop_order": {
+          "delta": 0.0,
+          "headroom": false,
+          "rate_a": 1.0,
+          "rate_b": 1.0,
+          "n_a": 3,
+          "n_b": 3
+        },
+        "claude|demoshop_debug": {
+          "delta": 0.0,
+          "headroom": false,
+          "rate_a": 1.0,
+          "rate_b": 1.0,
+          "n_a": 3,
+          "n_b": 3
+        },
+        "claude|tricentis_debug": {
+          "delta": 0.0,
+          "headroom": false,
+          "rate_a": 1.0,
+          "rate_b": 1.0,
+          "n_a": 3,
+          "n_b": 3
+        },
+        "codex|tricentis_quote": {
+          "delta": 0.0,
+          "headroom": false,
+          "rate_a": 1.0,
+          "rate_b": 1.0,
+          "n_a": 3,
+          "n_b": 3
+        },
+        "codex|carconfig_order": {
+          "delta": 0.0,
+          "headroom": false,
+          "rate_a": 1.0,
+          "rate_b": 1.0,
+          "n_a": 3,
+          "n_b": 3
+        },
+        "codex|demoshop_order": {
+          "delta": 0.0,
+          "headroom": false,
+          "rate_a": 1.0,
+          "rate_b": 1.0,
+          "n_a": 3,
+          "n_b": 3
+        },
+        "codex|demoshop_debug": {
+          "delta": -0.33333333333333337,
+          "headroom": false,
+          "rate_a": 0.6666666666666666,
+          "rate_b": 1.0,
+          "n_a": 3,
+          "n_b": 3
+        },
+        "codex|tricentis_debug": {
+          "delta": 0.33333333333333337,
+          "headroom": false,
+          "rate_a": 1.0,
+          "rate_b": 0.6666666666666666,
+          "n_a": 3,
+          "n_b": 3
+        },
+        "opencode|tricentis_quote": {
+          "delta": 0.33333333333333337,
+          "headroom": false,
+          "rate_a": 1.0,
+          "rate_b": 0.6666666666666666,
+          "n_a": 3,
+          "n_b": 3
+        },
+        "opencode|carconfig_order": {
+          "delta": -0.6666666666666667,
+          "headroom": false,
+          "rate_a": 0.3333333333333333,
+          "rate_b": 1.0,
+          "n_a": 3,
+          "n_b": 3
+        },
+        "opencode|demoshop_order": {
+          "delta": 0.3333333333333333,
+          "headroom": false,
+          "rate_a": 0.3333333333333333,
+          "rate_b": 0.0,
+          "n_a": 3,
+          "n_b": 3
+        },
+        "opencode|demoshop_debug": {
+          "delta": 0.0,
+          "headroom": false,
+          "rate_a": 1.0,
+          "rate_b": 1.0,
+          "n_a": 3,
+          "n_b": 3
+        },
+        "opencode|tricentis_debug": {
+          "delta": 0.0,
+          "headroom": false,
+          "rate_a": 0.0,
+          "rate_b": 0.0,
+          "n_a": 3,
+          "n_b": 3
+        }
+      }
+    }
+  ],
+  "live": {
+    "explore": {
+      "rf-harness": {
+        "n": 27,
+        "pass": 23,
+        "flaky": 0,
+        "stepwise_any": 0,
+        "steps": 0,
+        "inspect": 0
+      },
+      "prototype-v32": {
+        "n": 27,
+        "pass": 23,
+        "flaky": 3,
+        "stepwise_any": 0,
+        "steps": 0,
+        "inspect": 0
+      }
+    },
+    "debug": {
+      "prototype-v32": {
+        "n": 18,
+        "pass": 14,
+        "flaky": 1,
+        "stepwise_any": 0,
+        "steps": 0,
+        "inspect": 0
+      },
+      "rf-harness": {
+        "n": 18,
+        "pass": 14,
+        "flaky": 0,
+        "stepwise_any": 0,
+        "steps": 0,
+        "inspect": 0
+      }
+    }
+  }
+}

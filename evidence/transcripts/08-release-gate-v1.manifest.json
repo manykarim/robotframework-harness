@@ -1,0 +1,1215 @@
+{
+ "round": "08-release-gate-v1",
+ "asset_format": "tar.zst",
+ "transcript_dirs": [
+  "transcripts_live_gate1",
+  "transcripts_live_qs1",
+  "transcripts_live_qs2"
+ ],
+ "files": 95,
+ "status_counts": {
+  "not_scored_in_results_file": 3,
+  "scored": 92
+ },
+ "scrub_substitutions": {
+  "email": 267,
+  "home_path": 14245
+ },
+ "scrub_py_sha256": "4e9a9f3c9ba610bdd294ab4d6282da39075e5cc4130e867dc7aa93abe30f8bb6",
+ "entries": [
+  {
+   "file": "transcripts_live_gate1/claude/carconfig_order-prototype-v32-rep1-192b3b.jsonl",
+   "transcript": "transcripts_live_gate1/claude/carconfig_order-prototype-v32-rep1-192b3b.jsonl.gz",
+   "sha256": "918c48983cb7a07d933649d154127b227334cdbee57a6ad66b98def23ab41735",
+   "bytes": 262496,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|prototype-v32|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 81
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/claude/carconfig_order-prototype-v32-rep2-0610f2.jsonl",
+   "transcript": "transcripts_live_gate1/claude/carconfig_order-prototype-v32-rep2-0610f2.jsonl.gz",
+   "sha256": "055de3d4f5c399f50e69872dc83cc968bfe4ec2b75a45d5589d0280bcae32f32",
+   "bytes": 327759,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|prototype-v32|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 104
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/claude/carconfig_order-prototype-v32-rep3-77d09a.jsonl",
+   "transcript": "transcripts_live_gate1/claude/carconfig_order-prototype-v32-rep3-77d09a.jsonl.gz",
+   "sha256": "c8a6d0cd27d6583ed4797bd2b078995515ec94ae7410255cf9416d9ea0a371d7",
+   "bytes": 242248,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|prototype-v32|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 73
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/claude/carconfig_order-rf-harness-rep1-7d6c6a.jsonl",
+   "transcript": "transcripts_live_gate1/claude/carconfig_order-rf-harness-rep1-7d6c6a.jsonl.gz",
+   "sha256": "5655b975e31b945d501a9a2a2b7169cbbf9165f2cbf3d6b72de78663729aa009",
+   "bytes": 270336,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|rf-harness|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 108
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/claude/carconfig_order-rf-harness-rep2-bdcd9c.jsonl",
+   "transcript": "transcripts_live_gate1/claude/carconfig_order-rf-harness-rep2-bdcd9c.jsonl.gz",
+   "sha256": "fc0214006ff299e54885a1cb393a3a43c512a437f0df87be10cb977e0ed692b1",
+   "bytes": 312405,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|rf-harness|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 84
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/claude/carconfig_order-rf-harness-rep3-8bf9d9.jsonl",
+   "transcript": "transcripts_live_gate1/claude/carconfig_order-rf-harness-rep3-8bf9d9.jsonl.gz",
+   "sha256": "44926f71400bf4bc3bdd96ca287ae122199dbc9f258cb0716ef9b064885765b5",
+   "bytes": 221374,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|rf-harness|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 75
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/claude/demoshop_debug-prototype-v32-rep1-949af1.jsonl",
+   "transcript": "transcripts_live_gate1/claude/demoshop_debug-prototype-v32-rep1-949af1.jsonl.gz",
+   "sha256": "825cd4f1e0c04d217f7887f7849308206d85251d482c62d2285644b847507e09",
+   "bytes": 445802,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|prototype-v32|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 123
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/claude/demoshop_debug-prototype-v32-rep2-81fe6a.jsonl",
+   "transcript": "transcripts_live_gate1/claude/demoshop_debug-prototype-v32-rep2-81fe6a.jsonl.gz",
+   "sha256": "81183ea996908546338e329f35bb4898c9dc70014b57812d37c5851ccac2b03e",
+   "bytes": 333115,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|prototype-v32|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 102
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/claude/demoshop_debug-prototype-v32-rep3-ff202d.jsonl",
+   "transcript": "transcripts_live_gate1/claude/demoshop_debug-prototype-v32-rep3-ff202d.jsonl.gz",
+   "sha256": "6659a5cfd17f0a148e33c1696f9837d238fb137a7fc4e74a4f408d2553361d98",
+   "bytes": 264708,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|prototype-v32|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 73
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/claude/demoshop_debug-rf-harness-rep1-72a5e8.jsonl",
+   "transcript": "transcripts_live_gate1/claude/demoshop_debug-rf-harness-rep1-72a5e8.jsonl.gz",
+   "sha256": "0f0e36a48206f9d504697b8719683752dce9ac1d34cd720a07c5b1d40f5ed9a2",
+   "bytes": 293577,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|rf-harness|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 62
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/claude/demoshop_debug-rf-harness-rep2-0c9465.jsonl",
+   "transcript": "transcripts_live_gate1/claude/demoshop_debug-rf-harness-rep2-0c9465.jsonl.gz",
+   "sha256": "45492e9448d2a61157d1d9ac00e46341f466506efa7d3f4a9a06cf8299201772",
+   "bytes": 317349,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|rf-harness|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 138
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/claude/demoshop_debug-rf-harness-rep3-f57b7e.jsonl",
+   "transcript": "transcripts_live_gate1/claude/demoshop_debug-rf-harness-rep3-f57b7e.jsonl.gz",
+   "sha256": "bf4c29d43bc22551e879d8c5d7141eb97d6467ae600888d0b9edb4832ce9bad4",
+   "bytes": 340747,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|rf-harness|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 116
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/claude/demoshop_order-prototype-v32-rep1-a33be3.jsonl",
+   "transcript": "transcripts_live_gate1/claude/demoshop_order-prototype-v32-rep1-a33be3.jsonl.gz",
+   "sha256": "7c526cac397b1c767c46ec28a655c231ae2282e97e54d74c94d77e09c8870c5b",
+   "bytes": 395459,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|prototype-v32|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 10,
+    "home_path": 127
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/claude/demoshop_order-prototype-v32-rep2-745c5f.jsonl",
+   "transcript": "transcripts_live_gate1/claude/demoshop_order-prototype-v32-rep2-745c5f.jsonl.gz",
+   "sha256": "1c4d28e301ef221502be502edd5bcb72b0308e73d01c60c3851b7a919e74cace",
+   "bytes": 347627,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|prototype-v32|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 122
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/claude/demoshop_order-prototype-v32-rep3-095e14.jsonl",
+   "transcript": "transcripts_live_gate1/claude/demoshop_order-prototype-v32-rep3-095e14.jsonl.gz",
+   "sha256": "b3c0027bc3db06efbc3788409f7c1c765a2df852bde7e87ec1bf7c6dc9d38874",
+   "bytes": 375517,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|prototype-v32|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 127
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/claude/demoshop_order-rf-harness-rep1-2bd8a9.jsonl",
+   "transcript": "transcripts_live_gate1/claude/demoshop_order-rf-harness-rep1-2bd8a9.jsonl.gz",
+   "sha256": "02624f3488dcfe291a29f1249c0e095aea5e67f83f397ddc819fc7a3c316174a",
+   "bytes": 417576,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|rf-harness|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 8,
+    "home_path": 129
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/claude/demoshop_order-rf-harness-rep2-fdbdf1.jsonl",
+   "transcript": "transcripts_live_gate1/claude/demoshop_order-rf-harness-rep2-fdbdf1.jsonl.gz",
+   "sha256": "4c85ed5fdc1031171dc7ae6dce67323bc00cd0b26a3864243c5350a4bce53fcf",
+   "bytes": 355548,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|rf-harness|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 10,
+    "home_path": 110
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/claude/demoshop_order-rf-harness-rep3-2faf42.jsonl",
+   "transcript": "transcripts_live_gate1/claude/demoshop_order-rf-harness-rep3-2faf42.jsonl.gz",
+   "sha256": "c1d238da5d75f65b79a3862c783444573b359ab06370154703b900e5dd83099c",
+   "bytes": 484828,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|rf-harness|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 95
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/claude/tricentis_debug-prototype-v32-rep1-23332b.jsonl",
+   "transcript": "transcripts_live_gate1/claude/tricentis_debug-prototype-v32-rep1-23332b.jsonl.gz",
+   "sha256": "590aaa96105df75adf0ff7c5771e1b5c2118d937336ff30fd8be895f7fa101af",
+   "bytes": 269160,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|prototype-v32|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 79
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/claude/tricentis_debug-prototype-v32-rep2-69842f.jsonl",
+   "transcript": "transcripts_live_gate1/claude/tricentis_debug-prototype-v32-rep2-69842f.jsonl.gz",
+   "sha256": "173e6639171011a6fed7f422f772e027e916d072aabb2ad8a135a8d07c6f0226",
+   "bytes": 528473,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|prototype-v32|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 146
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/claude/tricentis_debug-prototype-v32-rep3-85e7ef.jsonl",
+   "transcript": "transcripts_live_gate1/claude/tricentis_debug-prototype-v32-rep3-85e7ef.jsonl.gz",
+   "sha256": "af0d032765a808c9a202a259cb8049078219b37606a400babd1a82c654e28a5c",
+   "bytes": 369122,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|prototype-v32|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 108
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/claude/tricentis_debug-rf-harness-rep1-a39836.jsonl",
+   "transcript": "transcripts_live_gate1/claude/tricentis_debug-rf-harness-rep1-a39836.jsonl.gz",
+   "sha256": "100030a8a911b0f02fd56ef19600f24f301af85c61fafae69e6a8164999bfa7f",
+   "bytes": 405494,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|rf-harness|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 121
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/claude/tricentis_debug-rf-harness-rep2-8e9544.jsonl",
+   "transcript": "transcripts_live_gate1/claude/tricentis_debug-rf-harness-rep2-8e9544.jsonl.gz",
+   "sha256": "e960b201e616e813d090ff36c2b68cb0114fdb769ef9ceea3939ad5f91ac6530",
+   "bytes": 463561,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|rf-harness|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 161
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/claude/tricentis_debug-rf-harness-rep3-5ad185.jsonl",
+   "transcript": "transcripts_live_gate1/claude/tricentis_debug-rf-harness-rep3-5ad185.jsonl.gz",
+   "sha256": "c199ef7b6375ac07e5e662ca3aaa334dad549312fa94fd8f0eb8ff13e7447095",
+   "bytes": 396361,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|rf-harness|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 124
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/claude/tricentis_quote-prototype-v32-rep1-291fd3.jsonl",
+   "transcript": "transcripts_live_gate1/claude/tricentis_quote-prototype-v32-rep1-291fd3.jsonl.gz",
+   "sha256": "d67204691d6afffa7c810a154a3a1999a19ed8608e4d1b70c6d373d46cdecf29",
+   "bytes": 336066,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|prototype-v32|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 114
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/claude/tricentis_quote-prototype-v32-rep2-eee0df.jsonl",
+   "transcript": "transcripts_live_gate1/claude/tricentis_quote-prototype-v32-rep2-eee0df.jsonl.gz",
+   "sha256": "69dc1b69e9638ce60df29709a8bbbe91956733bf5471f2761d27b55fa70983e1",
+   "bytes": 674805,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|prototype-v32|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 191
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/claude/tricentis_quote-prototype-v32-rep3-f6b5fa.jsonl",
+   "transcript": "transcripts_live_gate1/claude/tricentis_quote-prototype-v32-rep3-f6b5fa.jsonl.gz",
+   "sha256": "b30fcdba8393543531b5709b2cbcfa46b3aad77603912697eeb57fd050effd4b",
+   "bytes": 316102,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|prototype-v32|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 99
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/claude/tricentis_quote-rf-harness-rep1-751596.jsonl",
+   "transcript": "transcripts_live_gate1/claude/tricentis_quote-rf-harness-rep1-751596.jsonl.gz",
+   "sha256": "07d1d3efbcfcf085fea1054777ac4add8f20950c00921fe36b24bbce66b4ce92",
+   "bytes": 325090,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|rf-harness|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 98
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/claude/tricentis_quote-rf-harness-rep2-dd2114.jsonl",
+   "transcript": "transcripts_live_gate1/claude/tricentis_quote-rf-harness-rep2-dd2114.jsonl.gz",
+   "sha256": "7d827120804057e3cd615bfa2d0b20a40c003f48bb2584f41c26b74bff71b3d0",
+   "bytes": 268044,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|rf-harness|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 81
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/claude/tricentis_quote-rf-harness-rep3-ce7839.jsonl",
+   "transcript": "transcripts_live_gate1/claude/tricentis_quote-rf-harness-rep3-ce7839.jsonl.gz",
+   "sha256": "1f613cc8f9e3ed71beb0aa90dd56dde30cceb2ff47e8fab75380dc46423df4c0",
+   "bytes": 295672,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "claude|rf-harness|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 99
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/carconfig_order-prototype-v32-rep1-8e504b.jsonl",
+   "transcript": "transcripts_live_gate1/codex/carconfig_order-prototype-v32-rep1-8e504b.jsonl.gz",
+   "sha256": "10163af4dc3ecbdd8cdf64499455680724a19d12ed16f1297e2a589745b11886",
+   "bytes": 153910,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|prototype-v32|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 8,
+    "home_path": 42
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/carconfig_order-prototype-v32-rep2-6dec1d.jsonl",
+   "transcript": "transcripts_live_gate1/codex/carconfig_order-prototype-v32-rep2-6dec1d.jsonl.gz",
+   "sha256": "8ee36c56ae3ee2e46e852f12fdfddc7dfe91f1318e2be6693f6e63d1440af8f5",
+   "bytes": 139538,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|prototype-v32|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 7,
+    "home_path": 34
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/carconfig_order-prototype-v32-rep3-c7a776.jsonl",
+   "transcript": "transcripts_live_gate1/codex/carconfig_order-prototype-v32-rep3-c7a776.jsonl.gz",
+   "sha256": "8f4277fb975facfc7b780e0b4b4bf01044dea7e2c9029c897f612f9d8e22459e",
+   "bytes": 63779,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|prototype-v32|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 5,
+    "home_path": 38
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/carconfig_order-rf-harness-rep1-768c56.jsonl",
+   "transcript": "transcripts_live_gate1/codex/carconfig_order-rf-harness-rep1-768c56.jsonl.gz",
+   "sha256": "f9062fd5a3422e237fd70445782f10539afd44283cb6113c097bcddde38bf009",
+   "bytes": 134783,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|rf-harness|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 35
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/carconfig_order-rf-harness-rep2-1a8167.jsonl",
+   "transcript": "transcripts_live_gate1/codex/carconfig_order-rf-harness-rep2-1a8167.jsonl.gz",
+   "sha256": "49d2ccbeb8e1ba5326a669454b368d948a9f3bffb386efa671cddebadd1f41dd",
+   "bytes": 129385,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|rf-harness|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 37
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/carconfig_order-rf-harness-rep3-504f3a.jsonl",
+   "transcript": "transcripts_live_gate1/codex/carconfig_order-rf-harness-rep3-504f3a.jsonl.gz",
+   "sha256": "dd4397456c8e23dbf0dcee1232ab51ea2552eb0b2228977c74a227e446b160c3",
+   "bytes": 130278,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|rf-harness|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 7,
+    "home_path": 37
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/demoshop_debug-prototype-v32-rep1-798d10.jsonl",
+   "transcript": "transcripts_live_gate1/codex/demoshop_debug-prototype-v32-rep1-798d10.jsonl.gz",
+   "sha256": "b2a10397a14ebca03dadaad4f29f3215ce85094d68d80a9fd52c954decff9dc1",
+   "bytes": 65214,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|prototype-v32|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 30
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/demoshop_debug-prototype-v32-rep2-b27624.jsonl",
+   "transcript": "transcripts_live_gate1/codex/demoshop_debug-prototype-v32-rep2-b27624.jsonl.gz",
+   "sha256": "16d4df64f39ab03d8b92be2d07f45e49bdd4ec2e4086d9a9bb63a9c2c69c7925",
+   "bytes": 96793,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|prototype-v32|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "email": 3,
+    "home_path": 42
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/demoshop_debug-prototype-v32-rep3-ba8781.jsonl",
+   "transcript": "transcripts_live_gate1/codex/demoshop_debug-prototype-v32-rep3-ba8781.jsonl.gz",
+   "sha256": "18f640ed7ee5ba0def50d55cd11cbdf9e2eae1a17def51ac28b72a40a2879134",
+   "bytes": 149619,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|prototype-v32|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "email": 7,
+    "home_path": 63
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/demoshop_debug-rf-harness-rep1-c26ac6.jsonl",
+   "transcript": "transcripts_live_gate1/codex/demoshop_debug-rf-harness-rep1-c26ac6.jsonl.gz",
+   "sha256": "7a5a1f6f06c69c84a4c2ac44ee5b1a1a94de06f820387b9c05132664df96ee68",
+   "bytes": 92745,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|rf-harness|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 50
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/demoshop_debug-rf-harness-rep2-564a13.jsonl",
+   "transcript": "transcripts_live_gate1/codex/demoshop_debug-rf-harness-rep2-564a13.jsonl.gz",
+   "sha256": "7d5ebb105957f2a3a5ea51c64356fec294d9f4eba8c784f1acd9539b038da29d",
+   "bytes": 173083,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|rf-harness|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 55
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/demoshop_debug-rf-harness-rep3-58104d.jsonl",
+   "transcript": "transcripts_live_gate1/codex/demoshop_debug-rf-harness-rep3-58104d.jsonl.gz",
+   "sha256": "435c8bf65ab0a83f45bb947ad0849696b60232096223c87167322585f76dd2f1",
+   "bytes": 108893,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|rf-harness|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 34
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/demoshop_order-prototype-v32-rep1-f901d6.jsonl",
+   "transcript": "transcripts_live_gate1/codex/demoshop_order-prototype-v32-rep1-f901d6.jsonl.gz",
+   "sha256": "c9b77056e6290a7e9527452d9480f1a6cdafe27f295f62a17ef1bb6c2233e9bc",
+   "bytes": 80423,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|prototype-v32|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 47
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/demoshop_order-prototype-v32-rep2-925bc5.jsonl",
+   "transcript": "transcripts_live_gate1/codex/demoshop_order-prototype-v32-rep2-925bc5.jsonl.gz",
+   "sha256": "abeea46478f5fce6d45d3a85244232d11d7a041314f9a83d9af6b29401399dfc",
+   "bytes": 81317,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|prototype-v32|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 44
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/demoshop_order-prototype-v32-rep3-4b86a2.jsonl",
+   "transcript": "transcripts_live_gate1/codex/demoshop_order-prototype-v32-rep3-4b86a2.jsonl.gz",
+   "sha256": "6de62860de6898eb2509661e4a88917642fd12c0796e2c449c5fd765f57c7d0e",
+   "bytes": 106539,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|prototype-v32|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 38
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/demoshop_order-rf-harness-rep1-745ca3.jsonl",
+   "transcript": "transcripts_live_gate1/codex/demoshop_order-rf-harness-rep1-745ca3.jsonl.gz",
+   "sha256": "3f3d8b328044a040501a22674c1accd42b6f82a5d88c3030314be1bc34352624",
+   "bytes": 79386,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|rf-harness|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 5,
+    "home_path": 43
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/demoshop_order-rf-harness-rep2-ac60d3.jsonl",
+   "transcript": "transcripts_live_gate1/codex/demoshop_order-rf-harness-rep2-ac60d3.jsonl.gz",
+   "sha256": "96ea392f1e6851bdd51ac13ddb4d99a6413572e762b6342c227761489ed34fb7",
+   "bytes": 70389,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|rf-harness|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 44
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/demoshop_order-rf-harness-rep3-e86149.jsonl",
+   "transcript": "transcripts_live_gate1/codex/demoshop_order-rf-harness-rep3-e86149.jsonl.gz",
+   "sha256": "4dd7832b077f2a76be2338aa921a8547485ba27fdf09195ad8f2a3e7e9807601",
+   "bytes": 67062,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|rf-harness|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 3,
+    "home_path": 43
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/tricentis_debug-prototype-v32-rep1-7cfd55.jsonl",
+   "transcript": "transcripts_live_gate1/codex/tricentis_debug-prototype-v32-rep1-7cfd55.jsonl.gz",
+   "sha256": "f41a8a88a7ee05d2ab7ca8d9e8890951abc31cf16aa7d275269b30a81477960b",
+   "bytes": 130989,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|prototype-v32|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 90
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/tricentis_debug-prototype-v32-rep2-c2978f.jsonl",
+   "transcript": "transcripts_live_gate1/codex/tricentis_debug-prototype-v32-rep2-c2978f.jsonl.gz",
+   "sha256": "3b149e6e640dce801a0a1755864f48ae894c856184ebc9a5898421e278d37413",
+   "bytes": 103171,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|prototype-v32|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 127
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/tricentis_debug-prototype-v32-rep3-b21e93.jsonl",
+   "transcript": "transcripts_live_gate1/codex/tricentis_debug-prototype-v32-rep3-b21e93.jsonl.gz",
+   "sha256": "80b07eeb72fd6e5d140a7be1cdfd20b33c404ee89a457ddf3b1b381eca4c689a",
+   "bytes": 125332,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|prototype-v32|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 68
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/tricentis_debug-rf-harness-rep1-325fbf.jsonl",
+   "transcript": "transcripts_live_gate1/codex/tricentis_debug-rf-harness-rep1-325fbf.jsonl.gz",
+   "sha256": "177a2f6f3b95fc8b5517ce5400df91cb53f314a0b76eda71f11379562f1f9bd0",
+   "bytes": 108179,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|rf-harness|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 61
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/tricentis_debug-rf-harness-rep2-a5cbb5.jsonl",
+   "transcript": "transcripts_live_gate1/codex/tricentis_debug-rf-harness-rep2-a5cbb5.jsonl.gz",
+   "sha256": "a6d2941a6c936928b8cafb6565553c21fc20557f73c13e1462e69972ffc5fe78",
+   "bytes": 137026,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|rf-harness|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 78
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/tricentis_debug-rf-harness-rep3-87cd71.jsonl",
+   "transcript": "transcripts_live_gate1/codex/tricentis_debug-rf-harness-rep3-87cd71.jsonl.gz",
+   "sha256": "24fdd12e538101b1f70bab1ee4d7cb0b85e4c8d5f316eb497684542b4e9c3789",
+   "bytes": 108287,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|rf-harness|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 78
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/tricentis_quote-prototype-v32-rep1-807b51.jsonl",
+   "transcript": "transcripts_live_gate1/codex/tricentis_quote-prototype-v32-rep1-807b51.jsonl.gz",
+   "sha256": "d8fa4ff0a96cd157981b5294b2655773442aec728df78f5869a814f65749e640",
+   "bytes": 72298,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|prototype-v32|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 43
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/tricentis_quote-prototype-v32-rep2-544c0a.jsonl",
+   "transcript": "transcripts_live_gate1/codex/tricentis_quote-prototype-v32-rep2-544c0a.jsonl.gz",
+   "sha256": "0111fa0fb91e15fda6e739866b8a9d2fca12915cf9cdf080ba3a0c21393c1db7",
+   "bytes": 82275,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|prototype-v32|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 40
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/tricentis_quote-prototype-v32-rep3-21017f.jsonl",
+   "transcript": "transcripts_live_gate1/codex/tricentis_quote-prototype-v32-rep3-21017f.jsonl.gz",
+   "sha256": "2dc95ee1bf8f9d6717845e2d4e61cda117e07c9841e9a0cc6d301d1ba692e719",
+   "bytes": 88634,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|prototype-v32|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 47
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/tricentis_quote-rf-harness-rep1-8f26cb.jsonl",
+   "transcript": "transcripts_live_gate1/codex/tricentis_quote-rf-harness-rep1-8f26cb.jsonl.gz",
+   "sha256": "2e6c9cb42c767defaba65021189abb1b8dc168561d873c85011cbdada85c001e",
+   "bytes": 66771,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|rf-harness|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 47
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/tricentis_quote-rf-harness-rep2-f835e2.jsonl",
+   "transcript": "transcripts_live_gate1/codex/tricentis_quote-rf-harness-rep2-f835e2.jsonl.gz",
+   "sha256": "cc9cac6af0ebe55880053f10b6a8783fbc54a6e70ea45a81c31259a7ae32d359",
+   "bytes": 74432,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|rf-harness|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 87
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/codex/tricentis_quote-rf-harness-rep3-5859e3.jsonl",
+   "transcript": "transcripts_live_gate1/codex/tricentis_quote-rf-harness-rep3-5859e3.jsonl.gz",
+   "sha256": "dd28cf330eb4ee63d0eb2da8f316919f672d9b3cb905342184ccd9538b8b1ec7",
+   "bytes": 82692,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "codex|rf-harness|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 40
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/carconfig_order-prototype-v32-rep1-8becf2.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/carconfig_order-prototype-v32-rep1-8becf2.jsonl.gz",
+   "sha256": "7ec985a670dc76cf0d1d4cd6a2359aa5c6aaf35055af42038dce0454e0c86867",
+   "bytes": 179495,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|prototype-v32|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 8,
+    "home_path": 195
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/carconfig_order-prototype-v32-rep2-5607e6.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/carconfig_order-prototype-v32-rep2-5607e6.jsonl.gz",
+   "sha256": "3a9ef62c2bf4715bb20bb5a4e2348ad37196b95a474819e469f4689a27e2021b",
+   "bytes": 166412,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|prototype-v32|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 8,
+    "home_path": 183
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/carconfig_order-prototype-v32-rep3-783e0e.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/carconfig_order-prototype-v32-rep3-783e0e.jsonl.gz",
+   "sha256": "2afdb66ccce0e17f4153785ba29e68270960cde167e1633ea7c919c56adafcd2",
+   "bytes": 221406,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|prototype-v32|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 229
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/carconfig_order-rf-harness-rep1-cfb5ed.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/carconfig_order-rf-harness-rep1-cfb5ed.jsonl.gz",
+   "sha256": "9144c9258c1d5fa2892444b632d51dc7037791612664346fcc0a73f25aeea895",
+   "bytes": 194376,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|rf-harness|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 5,
+    "home_path": 273
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/carconfig_order-rf-harness-rep2-930efb.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/carconfig_order-rf-harness-rep2-930efb.jsonl.gz",
+   "sha256": "07ed8a5492d854218f8500126d65e8f9faf1b76686718efe1666d573826f487f",
+   "bytes": 199595,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|rf-harness|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 7,
+    "home_path": 198
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/carconfig_order-rf-harness-rep3-4a1f02.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/carconfig_order-rf-harness-rep3-4a1f02.jsonl.gz",
+   "sha256": "e3fed5d94728c458dc6e881a8b5502dc7f014bfedfa331e878053600ec131719",
+   "bytes": 222561,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|rf-harness|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 278
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/demoshop_debug-prototype-v32-rep1-0a62ad.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/demoshop_debug-prototype-v32-rep1-0a62ad.jsonl.gz",
+   "sha256": "31411d521d37380cac2c708e8da68fa97c3ff798662066b2a6f8e15d4aaf2db9",
+   "bytes": 140562,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|prototype-v32|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 3,
+    "home_path": 136
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/demoshop_debug-prototype-v32-rep2-3c19cb.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/demoshop_debug-prototype-v32-rep2-3c19cb.jsonl.gz",
+   "sha256": "577a76ed4fc5e9e53d2f5d48209f26c0acee2eec76941b4f0e4b552947bc58f9",
+   "bytes": 143668,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|prototype-v32|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "email": 5,
+    "home_path": 124
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/demoshop_debug-prototype-v32-rep3-849449.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/demoshop_debug-prototype-v32-rep3-849449.jsonl.gz",
+   "sha256": "71ddb71ebbbea0e8e47fa23642c7dc7eae29c84f2fcc78531912bb23201cb09f",
+   "bytes": 154897,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|prototype-v32|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 137
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/demoshop_debug-rf-harness-rep1-cce186.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/demoshop_debug-rf-harness-rep1-cce186.jsonl.gz",
+   "sha256": "6b1b50607ac3451ee09aff21fefb00542814c84238c181db99bb60a3217bc5a1",
+   "bytes": 166882,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|rf-harness|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 3,
+    "home_path": 180
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/demoshop_debug-rf-harness-rep2-47bb8d.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/demoshop_debug-rf-harness-rep2-47bb8d.jsonl.gz",
+   "sha256": "f32b43c1fe9541fe2fceb4bcc5c7fab9223bec3625ee1def3ff060c11195cb99",
+   "bytes": 152185,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|rf-harness|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "email": 3,
+    "home_path": 161
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/demoshop_debug-rf-harness-rep3-37d267.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/demoshop_debug-rf-harness-rep3-37d267.jsonl.gz",
+   "sha256": "c187a958d3d9cb14d9ffa255131a4d0da4bc443e030e44936a19c8359c18b62c",
+   "bytes": 122056,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|rf-harness|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "email": 3,
+    "home_path": 127
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/demoshop_order-prototype-v32-rep1-95fe96.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/demoshop_order-prototype-v32-rep1-95fe96.jsonl.gz",
+   "sha256": "92702b6f2f22e898777bc3a32c391fdbcf8d801407c83d3ec2e1f24f34848fad",
+   "bytes": 347510,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|prototype-v32|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 427
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/demoshop_order-prototype-v32-rep2-ba7f74.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/demoshop_order-prototype-v32-rep2-ba7f74.jsonl.gz",
+   "sha256": "45cd703f4dec4f8640de5fcae98ec2743ae3cb669a41589f8424b3060fbd7482",
+   "bytes": 392952,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|prototype-v32|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 497
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/demoshop_order-prototype-v32-rep3-fea9ca.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/demoshop_order-prototype-v32-rep3-fea9ca.jsonl.gz",
+   "sha256": "ef98dfef27e1b9802db49e4e2661cee51b514a8256fef7503305f1e451224847",
+   "bytes": 409278,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|prototype-v32|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 447
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/demoshop_order-rf-harness-rep1-ff4af3.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/demoshop_order-rf-harness-rep1-ff4af3.jsonl.gz",
+   "sha256": "68abaa0b6ae1b8da04c40585c7f80a8773d9f4eb2cd058504f29cd6cc579ce16",
+   "bytes": 195471,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|rf-harness|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 1,
+    "home_path": 242
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/demoshop_order-rf-harness-rep2-027107.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/demoshop_order-rf-harness-rep2-027107.jsonl.gz",
+   "sha256": "d95953fdbdbf81d40b7c5f8a5f492abdd966f57081b5d9778b116dc1f5135a17",
+   "bytes": 1298692,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|rf-harness|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 658
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/demoshop_order-rf-harness-rep3-073f19.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/demoshop_order-rf-harness-rep3-073f19.jsonl.gz",
+   "sha256": "a0635e1ee5fdf678f8112ca98b1f64068e8ebb7591a229edf9bef2214822f1a5",
+   "bytes": 183618,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|rf-harness|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 254
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/tricentis_debug-prototype-v32-rep1-253a9e.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/tricentis_debug-prototype-v32-rep1-253a9e.jsonl.gz",
+   "sha256": "939ba1e303b4c826d245e30b6d3b5f76c86c9d252b6b18b5b4a12395d4e29c12",
+   "bytes": 582366,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|prototype-v32|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 690
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/tricentis_debug-prototype-v32-rep2-5a88da.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/tricentis_debug-prototype-v32-rep2-5a88da.jsonl.gz",
+   "sha256": "693edc90ccba01adc3a349f7eebdb2b0e084b69c26c4d176b3dcd94d9fd3aefb",
+   "bytes": 280984,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|prototype-v32|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 282
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/tricentis_debug-prototype-v32-rep3-fbf484.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/tricentis_debug-prototype-v32-rep3-fbf484.jsonl.gz",
+   "sha256": "adb4c6d1498be5e78ee5ac110c2f210c690e118858bfc233b4ebd972374bfbd9",
+   "bytes": 455134,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|prototype-v32|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 619
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/tricentis_debug-rf-harness-rep1-5e62e3.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/tricentis_debug-rf-harness-rep1-5e62e3.jsonl.gz",
+   "sha256": "716250ffce61fcd850c8207397f83d3cc7e8c6bee03611e6bed40cf5d7ae92a1",
+   "bytes": 607284,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|rf-harness|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 779
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/tricentis_debug-rf-harness-rep2-a66d10.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/tricentis_debug-rf-harness-rep2-a66d10.jsonl.gz",
+   "sha256": "087a9fbce4c21a845cf3ad8ba302ec124ac4f1433b4030807bd5a36b3ccb63ba",
+   "bytes": 83905,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|rf-harness|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 108
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/tricentis_debug-rf-harness-rep3-a43f97.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/tricentis_debug-rf-harness-rep3-a43f97.jsonl.gz",
+   "sha256": "7a33c6b3fb42018474d1736a76686d28f187e3e4495bf3ac0077b19cebb23525",
+   "bytes": 147357,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|rf-harness|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 172
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/tricentis_quote-prototype-v32-rep1-622ea9.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/tricentis_quote-prototype-v32-rep1-622ea9.jsonl.gz",
+   "sha256": "c7f924c9b62b7d7850135234131cd2a601cbac532af2b9dce34a2bfb1f6056cc",
+   "bytes": 228167,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|prototype-v32|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 221
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/tricentis_quote-prototype-v32-rep2-c82f54.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/tricentis_quote-prototype-v32-rep2-c82f54.jsonl.gz",
+   "sha256": "41d9c67c08eacbbfca630d167fd05b30d0beac4c6bfbbddf2b91dba7a4eefb09",
+   "bytes": 163873,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|prototype-v32|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 156
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/tricentis_quote-prototype-v32-rep3-d6a859.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/tricentis_quote-prototype-v32-rep3-d6a859.jsonl.gz",
+   "sha256": "937453a34be176634886bfc50a9dde26208366b8d30e4ce6c2f9fce12ad30fc7",
+   "bytes": 152015,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|prototype-v32|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 184
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/tricentis_quote-rf-harness-rep1-123281.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/tricentis_quote-rf-harness-rep1-123281.jsonl.gz",
+   "sha256": "c2a5f7617da1d91996ac24b054d5cd5d336e4b3d408ab706ffae7273b1ec81bb",
+   "bytes": 163591,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|rf-harness|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 200
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/tricentis_quote-rf-harness-rep2-5b08bb.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/tricentis_quote-rf-harness-rep2-5b08bb.jsonl.gz",
+   "sha256": "6f6ccdac0116bf1823874eed9975f91428876a89bd06f9864b1241c206961955",
+   "bytes": 180091,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|rf-harness|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 204
+   }
+  },
+  {
+   "file": "transcripts_live_gate1/opencode/tricentis_quote-rf-harness-rep3-ec8b97.jsonl",
+   "transcript": "transcripts_live_gate1/opencode/tricentis_quote-rf-harness-rep3-ec8b97.jsonl.gz",
+   "sha256": "89127e331bc24d4d8a7849e72bed15dff52817402fd9cf7e90ee8b5c46bb5c48",
+   "bytes": 166821,
+   "results_file": "results/results_live_gate1.jsonl",
+   "key": "opencode|rf-harness|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 206
+   }
+  },
+  {
+   "file": "transcripts_live_qs1/claude/tricentis_quote-rf-harness-rep1-ce66fb.jsonl",
+   "transcript": "transcripts_live_qs1/claude/tricentis_quote-rf-harness-rep1-ce66fb.jsonl.gz",
+   "sha256": "ddc8ecd7438e2fd3f2bc5664d3ccf2ad39151120e3ec759803db2b0c993f6f31",
+   "bytes": 346677,
+   "results_file": "results/results_live_qs1.jsonl",
+   "key": "claude|rf-harness|tricentis_quote|1",
+   "status": "not_scored_in_results_file",
+   "scrub": {
+    "home_path": 113
+   }
+  },
+  {
+   "file": "transcripts_live_qs1/codex/tricentis_quote-rf-harness-rep1-5723b6.jsonl",
+   "transcript": "transcripts_live_qs1/codex/tricentis_quote-rf-harness-rep1-5723b6.jsonl.gz",
+   "sha256": "886f3508751c40b22b41a5667585799a6d20f861c58653505f816ec6ba2e0d8d",
+   "bytes": 75411,
+   "results_file": "results/results_live_qs1.jsonl",
+   "key": "codex|rf-harness|tricentis_quote|1",
+   "status": "not_scored_in_results_file",
+   "scrub": {
+    "home_path": 38
+   }
+  },
+  {
+   "file": "transcripts_live_qs1/copilot/tricentis_quote-rf-harness-rep1-628470.jsonl",
+   "transcript": "transcripts_live_qs1/copilot/tricentis_quote-rf-harness-rep1-628470.jsonl.gz",
+   "sha256": "4a16e76ae73b8d1077f78a52cd9a370ec9e9ebbd30b5daaa9f2ce98d5812a242",
+   "bytes": 5239309,
+   "results_file": "results/results_live_qs1.jsonl",
+   "key": "copilot|rf-harness|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 417
+   }
+  },
+  {
+   "file": "transcripts_live_qs1/opencode/tricentis_quote-rf-harness-rep1-d815aa.jsonl",
+   "transcript": "transcripts_live_qs1/opencode/tricentis_quote-rf-harness-rep1-d815aa.jsonl.gz",
+   "sha256": "aa80aa0a221f3c5eaf24f9c0bc2be1ac0f3dfe15257faec3f8a29e1929957f95",
+   "bytes": 113668,
+   "results_file": "results/results_live_qs1.jsonl",
+   "key": "opencode|rf-harness|tricentis_quote|1",
+   "status": "not_scored_in_results_file",
+   "scrub": {
+    "home_path": 114
+   }
+  },
+  {
+   "file": "transcripts_live_qs2/copilot/tricentis_quote-rf-harness-rep1-689b7f.jsonl",
+   "transcript": "transcripts_live_qs2/copilot/tricentis_quote-rf-harness-rep1-689b7f.jsonl.gz",
+   "sha256": "1a2daf74f0c9adb882b5c2b0d0b0d9f0efbb694672ca0e8bd57fb82c6736c0d6",
+   "bytes": 1575294,
+   "results_file": "results/results_live_qs2.jsonl",
+   "key": "copilot|rf-harness|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 164
+   }
+  }
+ ]
+}

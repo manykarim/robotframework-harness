@@ -54,6 +54,15 @@
    "files": 335,
    "tar_bytes": 176128000,
    "manifest": "transcripts/07-v31-v32.manifest.json"
+  },
+  {
+   "round": "08-release-gate-v1",
+   "asset": "evidence-transcripts-08-release-gate-v1.tar.zst",
+   "bytes": 3654577,
+   "sha256": "f3e3b1f2466ae6b2ae46f3db3ee072eca526710b0e46ddb1793bc335441cd4f6",
+   "files": 95,
+   "tar_bytes": 29337600,
+   "manifest": "transcripts/08-release-gate-v1.manifest.json"
   }
  ]
 }

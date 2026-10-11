@@ -1,0 +1,96 @@
+{
+ "round": "8",
+ "folder": "08-release-gate-v1",
+ "title": "v1 release gate: rf-harness (product) vs the v3.2 prototype, plus real-session checks per agent",
+ "kind": "ab",
+ "main_results": "results/results_live_gate1.jsonl",
+ "runs": [
+  {
+   "results_file": "results/results_live_gate1.jsonl",
+   "rows": 90,
+   "rows_ok": 90,
+   "agents": [
+    "claude",
+    "codex",
+    "opencode"
+   ],
+   "models": {
+    "claude": [
+     "claude-haiku-5-5"
+    ],
+    "codex": [
+     "gpt-5.6-luna"
+    ],
+    "opencode": [
+     "minimax-coding-plan/MiniMax-M2.5"
+    ]
+   },
+   "arms": [
+    "prototype-v32",
+    "rf-harness"
+   ],
+   "scenarios": [
+    "tricentis_quote",
+    "carconfig_order",
+    "demoshop_order",
+    "demoshop_debug",
+    "tricentis_debug"
+   ],
+   "reps": 3,
+   "dates": [
+    "2026-10-11T07:18:02Z",
+    "2026-10-11T11:20:41Z"
+   ],
+   "harness": "eval/ (robotframework-ai-engineering, release candidate 0.9.0), journey graders identical to round 7"
+  },
+  {
+   "results_file": "results/results_live_qs1.jsonl",
+   "rows": 4,
+   "rows_ok": 4,
+   "agents": [
+    "claude",
+    "codex",
+    "opencode",
+    "copilot"
+   ],
+   "arms": [
+    "rf-harness"
+   ],
+   "scenarios": [
+    "tricentis_quote"
+   ],
+   "reps": 1,
+   "note": "real-session check per agent; Copilot ran in an untrusted folder (no hook fired), see qs2"
+  },
+  {
+   "results_file": "results/results_live_qs2.jsonl",
+   "rows": 1,
+   "rows_ok": 1,
+   "agents": [
+    "copilot"
+   ],
+   "arms": [
+    "rf-harness"
+   ],
+   "scenarios": [
+    "tricentis_quote"
+   ],
+   "reps": 1,
+   "note": "Copilot rerun with the folder trusted: 83 hook events"
+  }
+ ],
+ "agent_versions": {
+  "claude": "2.1.296",
+  "codex": "0.162.1",
+  "opencode": "1.15.12",
+  "copilot": "1.0.91"
+ },
+ "excluded": {
+  "total": 0
+ },
+ "transcript_dirs": [
+  "transcripts_live_gate1",
+  "transcripts_live_qs1",
+  "transcripts_live_qs2"
+ ]
+}

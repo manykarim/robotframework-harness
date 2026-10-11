@@ -1,0 +1,13 @@
+[08:58:51] [config] models={'claude': 'claude-haiku-5-5', 'codex': 'gpt-5.6-luna', 'opencode': 'minimax-coding-plan/MiniMax-M2.5', 'copilot': 'auto'} codex_effort='medium' opencode_variant='' results=~/workspace/robotframework-ai-engineering/eval/runs/results_live_qs1.jsonl work=~/.cache/ab-eval/rfh/work_live_qs1 prune=True browser_concurrency=2 or_models={'deepseek-v4.1-flash': 'deepseek/deepseek-v4.1-flash', 'qwen3.8-flash': 'qwen/qwen3.8-flash', 'glm-5.3-flash': 'z-ai/glm-5.3-flash', 'gemini-3.8-flash': 'google/gemini-3.8-flash'} or_budget_usd=150 min_or_balance=0.5 prototype_dir=~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/ab/hookpkg32 rf_harness_source=~/workspace/robotframework-ai-engineering
+[08:58:51] disk before:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  234G  202G   20G  92% /
+[08:58:51] [batch] 4 cells to run (skipping 0 done), concurrency=3, browser<=2, per-agent<=2, prune=True
+[09:01:00] [1/4] codex|rf-harness|tricentis_quote|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=21 128.9s
+[09:03:30] [2/4] claude|rf-harness|tricentis_quote|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=31 278.4s
+[09:06:05] [3/4] opencode|rf-harness|tricentis_quote|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=20 155.4s
+[09:12:41] [4/4] copilot|rf-harness|tricentis_quote|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=77 701.1s
+[09:12:42] [batch] done: ran=4 skipped=0 reaper_kills_total=3 (final sweep 0)
+[09:12:42] disk after:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  234G  202G   20G  92% /

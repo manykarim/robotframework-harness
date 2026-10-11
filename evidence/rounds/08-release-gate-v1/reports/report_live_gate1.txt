@@ -1,0 +1,274 @@
+# rf-harness vs prototype-v32 — A/B
+
+Source: `results_live_gate1.jsonl` · agents: claude, codex, opencode · scenarios: tricentis_quote, carconfig_order, demoshop_order, demoshop_debug, tricentis_debug · rows: 90
+
+## 1. Data quality
+
+- rows in file: 90 · status: ok=90 · scored (ok, de-duplicated): **90**
+- timeouts: 1 · contaminated (MCP call outside mcp arm, or helper CLI outside skillpkg arm): 0
+- leak-marker hits (agent touched reference/old-eval paths): 0
+- models (agent, requested, seen-in-transcript): claude=claude-haiku-5-5 (seen claude-haiku-5-5) x30; codex=gpt-5.6-luna (seen n/a) x30; opencode=minimax-coding-plan/MiniMax-M2.5 (seen n/a) x30
+
+## 2. Per agent × scenario × arm
+
+`pass` = primary (all graders) pass rate · `chk` = mean fraction of graders passed · tokens are per-CLI accounting (in = uncached input + cache writes; cache = cache reads) — compare within an agent.
+
+| agent | scenario | arm | n | pass | chk | turns | tools | mcp | in_tok | out_tok | cache | cost $ | wall s | TO |
+|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| claude | tricentis_quote | prototype-v32 | 3 | 1.00 | 1.00 | 38.0 | 36.0 | 0.0 | 52.9k | 16.7k | 1636.8k | 0.035 | 241 | 0 |
+| claude | tricentis_quote | rf-harness | 3 | 1.00 | 1.00 | 26.7 | 24.7 | 0.0 | 41.1k | 11.6k | 930.5k | 0.023 | 144 | 0 |
+| claude | carconfig_order | prototype-v32 | 3 | 1.00 | 1.00 | 24.7 | 22.7 | 0.0 | 42.6k | 11.6k | 900.8k | 0.023 | 101 | 0 |
+| claude | carconfig_order | rf-harness | 3 | 1.00 | 1.00 | 26.0 | 24.0 | 0.0 | 42.1k | 11.7k | 809.0k | 0.022 | 116 | 0 |
+| claude | demoshop_order | prototype-v32 | 3 | 1.00 | 1.00 | 36.0 | 34.0 | 0.0 | 46.4k | 12.7k | 1403.1k | 0.030 | 160 | 0 |
+| claude | demoshop_order | rf-harness | 3 | 1.00 | 1.00 | 36.3 | 34.3 | 0.0 | 55.0k | 19.8k | 1487.2k | 0.036 | 230 | 0 |
+| claude | demoshop_debug | prototype-v32 | 3 | 1.00 | 1.00 | 28.0 | 26.0 | 0.0 | 47.4k | 16.0k | 982.2k | 0.027 | 345 | 0 |
+| claude | demoshop_debug | rf-harness | 3 | 1.00 | 1.00 | 25.0 | 23.0 | 0.0 | 43.8k | 12.1k | 818.2k | 0.023 | 367 | 0 |
+| claude | tricentis_debug | prototype-v32 | 3 | 1.00 | 1.00 | 34.3 | 32.3 | 0.0 | 51.3k | 17.7k | 1430.4k | 0.033 | 491 | 0 |
+| claude | tricentis_debug | rf-harness | 3 | 1.00 | 1.00 | 38.0 | 36.0 | 0.0 | 52.5k | 17.9k | 1115.1k | 0.031 | 551 | 0 |
+| codex | tricentis_quote | prototype-v32 | 3 | 1.00 | 1.00 | — | 26.3 | 0.0 | 47.2k | 4.9k | 605.8k | — | 151 | 0 |
+| codex | tricentis_quote | rf-harness | 3 | 1.00 | 1.00 | — | 25.3 | 0.0 | 51.3k | 5.8k | 638.6k | — | 217 | 0 |
+| codex | carconfig_order | prototype-v32 | 3 | 1.00 | 1.00 | — | 22.3 | 0.0 | 50.6k | 4.6k | 589.9k | — | 103 | 0 |
+| codex | carconfig_order | rf-harness | 3 | 1.00 | 1.00 | — | 19.3 | 0.0 | 49.5k | 4.1k | 567.8k | — | 98 | 0 |
+| codex | demoshop_order | prototype-v32 | 3 | 1.00 | 1.00 | — | 29.3 | 0.0 | 48.5k | 5.1k | 737.1k | — | 168 | 0 |
+| codex | demoshop_order | rf-harness | 3 | 1.00 | 1.00 | — | 25.0 | 0.0 | 41.9k | 4.3k | 584.2k | — | 140 | 0 |
+| codex | demoshop_debug | prototype-v32 | 3 | 1.00 | 1.00 | — | 26.3 | 0.0 | 48.0k | 5.8k | 843.6k | — | 272 | 0 |
+| codex | demoshop_debug | rf-harness | 3 | 0.67 | 0.94 | — | 22.7 | 0.0 | 54.2k | 6.1k | 759.6k | — | 284 | 0 |
+| codex | tricentis_debug | prototype-v32 | 3 | 0.67 | 0.98 | — | 48.7 | 0.0 | 74.9k | 12.5k | 1538.8k | — | 393 | 0 |
+| codex | tricentis_debug | rf-harness | 3 | 1.00 | 1.00 | — | 43.3 | 0.0 | 70.6k | 10.1k | 1584.6k | — | 279 | 0 |
+| opencode | tricentis_quote | prototype-v32 | 3 | 0.67 | 0.97 | 31.3 | 30.3 | 0.0 | 55.3k | 5.5k | 848.8k | — | 218 | 0 |
+| opencode | tricentis_quote | rf-harness | 3 | 1.00 | 1.00 | 33.7 | 32.7 | 0.0 | 50.1k | 5.3k | 820.5k | — | 183 | 0 |
+| opencode | carconfig_order | prototype-v32 | 3 | 1.00 | 1.00 | 36.7 | 35.7 | 0.0 | 64.0k | 11.0k | 1002.6k | — | 211 | 0 |
+| opencode | carconfig_order | rf-harness | 3 | 0.33 | 0.91 | 43.3 | 42.3 | 0.0 | 57.2k | 9.1k | 1179.1k | — | 204 | 0 |
+| opencode | demoshop_order | prototype-v32 | 3 | 0.00 | 0.89 | 76.0 | 75.3 | 0.0 | 97.9k | 17.5k | 2990.8k | — | 637 | 0 |
+| opencode | demoshop_order | rf-harness | 3 | 0.33 | 0.94 | 61.3 | 60.3 | 0.0 | 97.1k | 12.6k | 2588.7k | — | 468 | 0 |
+| opencode | demoshop_debug | prototype-v32 | 3 | 1.00 | 1.00 | 26.7 | 26.7 | 0.0 | 51.9k | 6.3k | 628.8k | — | 303 | 0 |
+| opencode | demoshop_debug | rf-harness | 3 | 1.00 | 1.00 | 29.3 | 29.3 | 0.0 | 52.1k | 8.7k | 716.7k | — | 322 | 0 |
+| opencode | tricentis_debug | prototype-v32 | 3 | 0.00 | 0.80 | 82.3 | 82.3 | 0.0 | 131.7k | 29.7k | 4205.1k | — | 1094 | 1 |
+| opencode | tricentis_debug | rf-harness | 3 | 0.00 | 0.93 | 54.3 | 54.3 | 0.0 | 70.6k | 13.0k | 2413.5k | — | 549 | 0 |
+
+Pooled pass rate per arm (all agents × scenarios), 95% Wilson CI:
+
+| arm | n | passes | rate | 95% CI |
+|---|---:|---:|---:|---|
+| prototype-v32 | 45 | 37 | 0.82 | 0.69–0.91 |
+| rf-harness | 45 | 37 | 0.82 | 0.69–0.91 |
+
+## 3. Effects on primary pass rate
+
+`Δcell` = equal-weight mean of per-(agent×scenario) rate differences; `Δpool` = difference of pooled rates; Fisher = two-sided exact test on pooled pass/fail counts (ignores strata); sign = exact sign test over cells (+/− cells, ties dropped). **Headroom** = cells where `neither` < 1.00.
+
+| contrast | subset | cells | rate A | rate B | Δcell | Δpool | Fisher p | cells +/− | sign p |
+|---|---|---:|---:|---:|---:|---:|---:|---|---:|
+| **rf-harness−prototype-v32** | all | 15 | 0.82 (37/45) | 0.82 (37/45) | -0.00 | +0.00 | 1.000 | 3/2 | 1.000 |
+| rf-harness−prototype-v32 | headroom | 0 | | | | | | | |
+
+### 3a. Per agent (pooled over scenarios)
+
+| agent | contrast | rate A | rate B | Δpool (all) | Fisher p | Δpool (headroom) | Fisher p (headroom) |
+|---|---|---:|---:|---:|---:|---:|---:|
+| claude | rf-harness−prototype-v32 | 1.00 | 1.00 | +0.00 | 1.000 | — | — |
+| codex | rf-harness−prototype-v32 | 0.93 | 0.93 | +0.00 | 1.000 | — | — |
+| opencode | rf-harness−prototype-v32 | 0.53 | 0.53 | +0.00 | 1.000 | — | — |
+
+### 3b. Per scenario (pooled over agents)
+
+| scenario | rf-harness−prototype-v32 Δpool (p) |
+|---|---:|
+| tricentis_quote | +0.11 (1.000) |
+| carconfig_order | -0.22 (0.471) |
+| demoshop_order | +0.11 (1.000) |
+| demoshop_debug | -0.11 (1.000) |
+| tricentis_debug | +0.11 (1.000) |
+
+### 3c. Per cell rates
+
+| agent | scenario | prototype-v32 | rf-harness | rf-harness−prototype-v32 |
+|---|---|---:|---:|---:|
+| claude | tricentis_quote | 1.00 | 1.00 | +0.00 |
+| claude | carconfig_order | 1.00 | 1.00 | +0.00 |
+| claude | demoshop_order | 1.00 | 1.00 | +0.00 |
+| claude | demoshop_debug | 1.00 | 1.00 | +0.00 |
+| claude | tricentis_debug | 1.00 | 1.00 | +0.00 |
+| codex | tricentis_quote | 1.00 | 1.00 | +0.00 |
+| codex | carconfig_order | 1.00 | 1.00 | +0.00 |
+| codex | demoshop_order | 1.00 | 1.00 | +0.00 |
+| codex | demoshop_debug | 1.00 | 0.67 | -0.33 |
+| codex | tricentis_debug | 0.67 | 1.00 | +0.33 |
+| opencode | tricentis_quote | 0.67 | 1.00 | +0.33 |
+| opencode | carconfig_order | 1.00 | 0.33 | -0.67 |
+| opencode | demoshop_order | 0.00 | 0.33 | +0.33 |
+| opencode | demoshop_debug | 1.00 | 1.00 | +0.00 |
+| opencode | tricentis_debug | 0.00 | 0.00 | +0.00 |
+
+## 4. Efficiency per agent × arm (all scenarios; means per session)
+
+| agent | arm | n | pass | turns | tool calls | in_tok | out_tok | cache | cost $ | wall s |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| claude | prototype-v32 | 15 | 1.00 | 32.2 | 30.2 | 48.1k | 14.9k | 1270.7k | 0.030 | 268 |
+| claude | rf-harness | 15 | 1.00 | 30.4 | 28.4 | 46.9k | 14.6k | 1032.0k | 0.027 | 282 |
+| codex | prototype-v32 | 15 | 0.93 | — | 30.6 | 53.8k | 6.6k | 863.0k | — | 218 |
+| codex | rf-harness | 15 | 0.93 | — | 27.1 | 53.5k | 6.1k | 827.0k | — | 204 |
+| opencode | prototype-v32 | 15 | 0.53 | 50.6 | 50.1 | 80.1k | 14.0k | 1935.2k | — | 492 |
+| opencode | rf-harness | 15 | 0.53 | 44.4 | 43.8 | 65.4k | 9.7k | 1543.7k | — | 345 |
+
+## 6. Live round: explore vs debug, and does the helper replace execute_step?
+
+`first` = robot passed on the grader's first attempt (no retry); `flaky` = passed only on the automatic retry. Stepwise columns are means per session: **steps** = rf-mcp execute_step + execute_batch + intent_action | `rfmcp step`; **inspect** = get_session_state | `rfmcp state`; **tool runs** = run_test_suite | `rfmcp run`; **kw lookup** = find_keywords + get_keyword_info | `rfmcp search` + `rfmcp doc`; **robot CLI** = plain `robot` shell runs (all arms); **ad-hoc browser** = shell calls driving playwright/chromium/robotcode repl directly.
+
+### 6a. Pass rate and stepwise usage per kind × arm (all agents)
+
+| kind | arm | n | pass | 95% CI | first | flaky | steps | inspect | tool runs | kw lookup | robot CLI | ad-hoc browser | ≥1 step/inspect | turns | tools | wall s |
+|---|---|---:|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| explore | prototype-v32 | 27 | 0.85 | 0.68–0.94 | 24/27 | 3 | 0.0 | 0.0 | 0.0 | 0.0 | 3.5 | 0.2 | 0/27 | 40.4 | 34.7 | 221 |
+| explore | rf-harness | 27 | 0.85 | 0.68–0.94 | 27/27 | 0 | 0.0 | 0.0 | 0.0 | 0.0 | 2.5 | 0.6 | 0/27 | 37.9 | 32.0 | 200 |
+| debug | prototype-v32 | 18 | 0.78 | 0.55–0.91 | 16/18 | 1 | 0.0 | 0.0 | 0.0 | 0.0 | 7.7 | 0.7 | 0/18 | 42.8 | 40.4 | 483 |
+| debug | rf-harness | 18 | 0.78 | 0.55–0.91 | 17/18 | 0 | 0.0 | 0.0 | 0.0 | 0.0 | 6.2 | 1.0 | 0/18 | 36.7 | 34.8 | 392 |
+
+### 6b. Arm contrasts per kind (pooled over agents × scenarios of that kind)
+
+| kind | contrast | rate A | rate B | Δpool | Fisher p | cells +/− |
+|---|---|---:|---:|---:|---:|---|
+| explore | rf-harness−prototype-v32 | 0.85 (23/27) | 0.85 (23/27) | +0.00 | 1.000 | 2/1 |
+| debug | rf-harness−prototype-v32 | 0.78 (14/18) | 0.78 (14/18) | +0.00 | 1.000 | 1/1 |
+
+### 6c. Stepwise use vs success (per kind × arm)
+
+Sessions split by whether they used live stepwise execution/inspection at all (steps + inspect > 0), and by tercile of `steps`. A treatment whose gain comes from stepwise execution should show higher pass with use than without (confounded: struggling sessions also step more).
+
+| kind | arm | pass with step/inspect (n) | pass without (n) | Fisher p | pass by steps tercile (low/mid/high) | mean steps: passed vs failed |
+|---|---|---|---|---:|---|---|
+| explore | prototype-v32 | — (0) | 0.85 (27) | — | 0.89 / 0.78 / 0.89 | 0.0 vs 0.0 |
+| explore | rf-harness | — (0) | 0.85 (27) | — | 0.89 / 0.89 / 0.78 | 0.0 vs 0.0 |
+| debug | prototype-v32 | — (0) | 0.78 (18) | — | 0.67 / 0.83 / 0.83 | 0.0 vs 0.0 |
+| debug | rf-harness | — (0) | 0.78 (18) | — | 0.67 / 0.83 / 0.83 | 0.0 vs 0.0 |
+
+### 6d. Per agent × kind × arm: pass and stepwise usage
+
+| agent | kind | arm | n | pass | flaky | steps | inspect | tool runs | robot CLI | mcp tools / rfmcp subcmds |
+|---|---|---|---:|---:|---:|---:|---:|---:|---:|---|
+| claude | explore | prototype-v32 | 9 | 1.00 | 0 | 0.0 | 0.0 | 0.0 | 2.4 |  |
+| claude | explore | rf-harness | 9 | 1.00 | 0 | 0.0 | 0.0 | 0.0 | 2.1 |  |
+| claude | debug | prototype-v32 | 6 | 1.00 | 1 | 0.0 | 0.0 | 0.0 | 8.0 |  |
+| claude | debug | rf-harness | 6 | 1.00 | 0 | 0.0 | 0.0 | 0.0 | 7.8 |  |
+| codex | explore | prototype-v32 | 9 | 1.00 | 1 | 0.0 | 0.0 | 0.0 | 1.2 |  |
+| codex | explore | rf-harness | 9 | 1.00 | 0 | 0.0 | 0.0 | 0.0 | 1.4 |  |
+| codex | debug | prototype-v32 | 6 | 0.83 | 0 | 0.0 | 0.0 | 0.0 | 5.0 |  |
+| codex | debug | rf-harness | 6 | 0.83 | 0 | 0.0 | 0.0 | 0.0 | 5.3 |  |
+| opencode | explore | prototype-v32 | 9 | 0.56 | 2 | 0.0 | 0.0 | 0.0 | 6.9 |  |
+| opencode | explore | rf-harness | 9 | 0.56 | 0 | 0.0 | 0.0 | 0.0 | 4.0 |  |
+| opencode | debug | prototype-v32 | 6 | 0.50 | 0 | 0.0 | 0.0 | 0.0 | 10.2 |  |
+| opencode | debug | rf-harness | 6 | 0.50 | 0 | 0.0 | 0.0 | 0.0 | 5.3 |  |
+
+### 6e. Failed graders per kind × arm (count of sessions)
+
+| kind | arm | failed graders |
+|---|---|---|
+| explore | prototype-v32 | journey: no shortcut (deep link/hard-coded)×3, start date computed at run time×1, journey: form fields driven×1 |
+| explore | rf-harness | journey: no shortcut (deep link/hard-coded)×2, journey: value read from page×2, journey: confirmation read from page×1 |
+| debug | prototype-v32 | start date computed at run time×3, product counter == 0 kept×2, robot_pass×1, journey: confirmation read from page×1, journey: value read from page×1, journey: form fields driven×1, files_not_contain×1 |
+| debug | rf-harness | start date computed at run time×3, robot_pass×1, journey: confirmation read from page×1, journey: value read from page×1 |
+
+### 6f. Journey evidence per scenario × arm (journey-evidence graders on the graded run's output.xml)
+
+`robot green` = robot_pass passed; the part columns count robot-green sessions that FAILED that journey part (green suite, incomplete journey / shortcut); `journey ok` = robot green and all four parts passed.
+
+| scenario | arm | n | robot green | confirm read | value read | fields driven | no shortcut | journey ok |
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+| carconfig_order | prototype-v32 | 9 | 9 | 0 | 0 | 0 | 0 | 9 |
+| carconfig_order | rf-harness | 9 | 9 | 1 | 1 | 0 | 1 | 7 |
+| demoshop_debug | prototype-v32 | 9 | 9 | 0 | 0 | 0 | 0 | 9 |
+| demoshop_debug | rf-harness | 9 | 8 | 0 | 0 | 0 | 0 | 8 |
+| demoshop_order | prototype-v32 | 9 | 9 | 0 | 0 | 1 | 3 | 6 |
+| demoshop_order | rf-harness | 9 | 9 | 0 | 1 | 0 | 1 | 7 |
+| tricentis_debug | prototype-v32 | 9 | 8 | 0 | 0 | 0 | 0 | 8 |
+| tricentis_debug | rf-harness | 9 | 9 | 0 | 0 | 0 | 0 | 9 |
+| tricentis_quote | prototype-v32 | 9 | 9 | 0 | 0 | 0 | 0 | 9 |
+| tricentis_quote | rf-harness | 9 | 9 | 0 | 0 | 0 | 0 | 9 |
+
+## 7. prototype-v32 engagement (hooks instead of a CLI)
+
+| agent | n | pass | firings | auto-executed lines | non-pass auto lines | gate denials | rewrites | Stop blocks | robot reproductions | still-running | .rf/state reads | .rf/docs reads | rfmcp CLI calls |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| claude | 15 | 1.00 | 61.2 | 75.3 | 6.9 | 0.0 | 0.3 | 0.0 | 2.9 | 0.0 | 9.5 | 0.3 | 0 |
+| codex | 15 | 0.93 | 60.9 | 55.6 | 7.9 | 0.0 | 0.1 | 0.0 | 1.1 | 0.0 | 9.4 | 1.5 | 0 |
+| opencode | 15 | 0.53 | 72.5 | 187.4 | 16.3 | 0.1 | 0.1 | 0.0 | 3.3 | 0.0 | 14.2 | 0.5 | 0 |
+
+Pass rate by hook activity (prototype-v32 sessions; confounded — struggling sessions trigger more hooks):
+
+| split | pass (n) high | pass (n) low |
+|---|---|---|
+| ≥1 gate denial vs none | 0.00 (1) | 0.84 (44) |
+| ≥1 Stop block vs none | — (0) | 0.82 (45) |
+| ≥1 robot-run reproduction vs none | 0.73 (26) | 0.95 (19) |
+
+Median hook latency per session, averaged (ms): post-tool 1458, pre-tool 24, prompt 3, session-end 304, session-start 10, stop 7
+
+## 8. prototype-v32: v2 hooks per session (means)
+
+| agent | n | docs files | kw docs | captures | rechecks | REPL rewrites | REPL denials | REPL cmds | loop hints | guard denials | suite | install | -P | big read | valve | .rf/docs/kw reads | .rf/state/latest reads | slow/missing | capture ms (median) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| claude | 15 | 1.5 | 0.0 | 9.5 | 2.1 | 0.3 | 0.0 | 0.3 | 0.5 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 9.3 | 0/31 | 162 |
+| codex | 15 | 1.3 | 0.0 | 8.7 | 1.5 | 0.1 | 0.0 | 0.1 | 0.3 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 9.3 | 0/23 | 169 |
+| opencode | 15 | 1.6 | 0.0 | 15.8 | 4.7 | 0.0 | 0.0 | 0.0 | 1.1 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 14.1 | 1/70 | 159 |
+
+hook-arm cross-contamination rows: 0
+
+## 9. prototype-v32: v3 metrics per session (means)
+
+| agent | n | ctx chars/edit | ok edit | fail edit | robot run | ctx total | captures | capture skipped | rechecks | instant MISSING | recheck s | tmo changes | denials | warnings | race repro | kw docs on demand | verdicts slow/missing | fail classes |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| claude | 15 | 356.9 | 180.0 | 574.1 | 240.4 | 5757.7 | 9.5 | 0.0 | 2.1 | 0.3 | 1.7 | 0.0 | 0.0 | 0.2 | 0.1 | 0.0 | 0/31 | value 35, absent 31, covered 17, other 11, ambiguous 7 |
+| codex | 15 | 350.4 | 174.7 | 541.5 | 270.6 | 5046.9 | 8.7 | 0.0 | 1.5 | 0.3 | 2.8 | 0.0 | 0.0 | 0.5 | 0.1 | 0.0 | 0/23 | value 57, absent 23, covered 19, other 13, ambiguous 5 |
+| opencode | 15 | 697.4 | 491.9 | 902.1 | 571.0 | 20370.8 | 15.8 | 0.0 | 4.7 | 1.0 | 4.0 | 0.1 | 0.1 | 2.1 | 0.3 | 0.0 | 1/70 | value 103, absent 70, other 28, covered 17, ambiguous 14 |
+
+## 10. prototype-v32: output profile per agent (lean = v3 output, rich = v2-like guidance)
+
+| agent | n | pass | profile (sessions) | decided from | model (hook) | ctx chars/edit | ok edit | fail edit |
+|---|---:|---:|---|---|---|---:|---:|---:|
+| claude | 15 | 1.00 | lean 15 | model:transcript 15 | claude-haiku-5-5 15 | 357 | 180 | 574 |
+| codex | 15 | 0.93 | lean 15 | model:payload 15 | gpt-5.6-luna 15 | 350 | 175 | 541 |
+| opencode | 15 | 0.53 | rich 15 | model:payload 15 | minimax-coding-plan/MiniMax-M2.5 15 | 697 | 492 | 902 |
+
+## 11. rf-harness engagement (hooks instead of a CLI)
+
+| agent | n | pass | firings | auto-executed lines | non-pass auto lines | gate denials | rewrites | Stop blocks | robot reproductions | still-running | .rf/state reads | .rf/docs reads | rfmcp CLI calls |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| claude | 15 | 1.00 | 58.3 | 55.1 | 6.5 | 0.0 | 0.3 | 0.0 | 2.4 | 0.0 | 8.2 | 0.2 | 0 |
+| codex | 15 | 0.93 | 58.2 | 64.9 | 6.6 | 0.0 | 0.1 | 0.0 | 1.3 | 0.0 | 8.5 | 2.1 | 0 |
+| opencode | 15 | 0.53 | 65.5 | 119.5 | 11.8 | 0.0 | 0.0 | 0.0 | 1.4 | 0.0 | 12.5 | 0.5 | 0 |
+
+Pass rate by hook activity (rf-harness sessions; confounded — struggling sessions trigger more hooks):
+
+| split | pass (n) high | pass (n) low |
+|---|---|---|
+| ≥1 gate denial vs none | — (0) | 0.82 (45) |
+| ≥1 Stop block vs none | — (0) | 0.82 (45) |
+| ≥1 robot-run reproduction vs none | 0.80 (25) | 0.85 (20) |
+
+Median hook latency per session, averaged (ms): post-tool 802, pre-tool 24, prompt 3, session-end 304, session-start 11, stop 7
+
+## 12. rf-harness: v2 hooks per session (means)
+
+| agent | n | docs files | kw docs | captures | rechecks | REPL rewrites | REPL denials | REPL cmds | loop hints | guard denials | suite | install | -P | big read | valve | .rf/docs/kw reads | .rf/state/latest reads | slow/missing | capture ms (median) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| claude | 15 | 1.5 | 0.0 | 9.3 | 1.2 | 0.3 | 0.0 | 0.3 | 0.3 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 8.1 | 0/18 | 165 |
+| codex | 15 | 1.4 | 0.1 | 8.8 | 0.8 | 0.1 | 0.0 | 0.1 | 0.3 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.3 | 8.5 | 0/12 | 172 |
+| opencode | 15 | 1.5 | 0.1 | 14.4 | 2.7 | 0.0 | 0.0 | 0.0 | 0.5 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.1 | 12.5 | 0/40 | 168 |
+
+hook-arm cross-contamination rows: 0
+
+## 13. rf-harness: v3 metrics per session (means)
+
+| agent | n | ctx chars/edit | ok edit | fail edit | robot run | ctx total | captures | capture skipped | rechecks | instant MISSING | recheck s | tmo changes | denials | warnings | race repro | kw docs on demand | verdicts slow/missing | fail classes |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| claude | 15 | 337.8 | 172.0 | 541.1 | 264.6 | 5284.7 | 9.3 | 0.0 | 1.2 | 0.1 | 2.7 | 0.0 | 0.0 | 0.4 | 0.1 | 0.0 | 0/18 | value 31, covered 24, absent 18, other 16, ambiguous 9 |
+| codex | 15 | 327.9 | 171.7 | 526.7 | 287.6 | 4679.7 | 8.8 | 0.0 | 0.8 | 0.3 | 1.4 | 0.0 | 0.0 | 0.4 | 0.3 | 0.1 | 0/12 | value 42, covered 18, other 16, absent 12, ambiguous 6 |
+| opencode | 15 | 676.0 | 449.4 | 915.6 | 419.4 | 16384.7 | 14.4 | 0.0 | 2.7 | 1.0 | 2.3 | 0.0 | 0.0 | 1.0 | 0.3 | 0.1 | 0/40 | value 63, absent 40, other 28, covered 21, ambiguous 20 |
+
+## 14. rf-harness: output profile per agent (lean = v3 output, rich = v2-like guidance)
+
+| agent | n | pass | profile (sessions) | decided from | model (hook) | ctx chars/edit | ok edit | fail edit |
+|---|---:|---:|---|---|---|---:|---:|---:|
+| claude | 15 | 1.00 | lean 15 | model:transcript 15 | claude-haiku-5-5 15 | 338 | 172 | 541 |
+| codex | 15 | 0.93 | lean 15 | model:payload 15 | gpt-5.6-luna 15 | 328 | 172 | 527 |
+| opencode | 15 | 0.53 | rich 15 | model:payload 15 | minimax-coding-plan/MiniMax-M2.5 15 | 676 | 449 | 916 |

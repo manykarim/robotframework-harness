@@ -25,8 +25,7 @@ compensated float summation in 3.12 and the research ran on 3.12/3.13). CI runs 
 ## Rounds
 
 Rounds are numbered as in the research. The two early A/B rounds ran between rounds 3 and 4 and carry their own
-names in the findings ("A/B round 1", "A/B round 2"), so they are `03a` and `03b`. Round 8, the v1 release
-gate, will be added by task 8.1.
+names in the findings ("A/B round 1", "A/B round 2"), so they are `03a` and `03b`. Round 8 is the v1 release gate.
 
 | folder | dates | what was tested | agents / models | sessions | key result |
 |---|---|---|---|---|---|
@@ -39,6 +38,7 @@ gate, will be added by task 8.1.
 | [05-v2](rounds/05-v2/) | 2026-10-08/09 | REPL/debugger research; hookpkg v1 vs v2 | same | 90 | v2 0.60 vs v1 0.51; fixes OpenCode, costs Claude +48% |
 | [06-v3-main](rounds/06-v3-main/) | 2026-10-09 | diagnosis; same-day rf-mcp vs v2 vs v3 | same | 180 | v2 0.70, v3 0.63, rf-mcp 0.52; v2 > rf-mcp in 8/0 cells (p = 0.008) |
 | [07-v31-v32](rounds/07-v31-v32/) | 2026-10-10 | v3.1 per-model profiles vs v3 vs rf-mcp, OpenRouter models, Haiku 5.5; v3.1 vs v3.2 | Haiku 5.5, gpt-5.6-luna, MiniMax-M2.5, DeepSeek V4.1 / Qwen 3.8 / GLM 5.3 Flash (+ stopped Gemini) | 206 valid + 40 v3.2 + 10 Gemini | **v3.1 0.83 vs rf-mcp 0.69** (206 sessions); Qwen 0.38 → 0.88 |
+| [08-release-gate-v1](rounds/08-release-gate-v1/) | 2026-10-11 | release gate: rf-harness (product 0.9.0, own installer) vs the v3.2 prototype; real-session checks per agent | Haiku 5.5, gpt-5.6-luna, MiniMax-M2.5 (+ Copilot CLI check) | 90 + 5 | **0.82 vs 0.82**, gate PASS; OpenCode 345 s vs 492 s |
 | [static-analysis](rounds/static-analysis/) | 2026-10-02 | Robocop + robotcode analyze as quality gates for rf-mcp | none (scripted) | – | agent-profile Robocop + analyze + dryrun catch 32/33 |
 
 Every A/B round folder has the same layout:

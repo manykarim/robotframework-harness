@@ -1,0 +1,7 @@
+[2026-10-11 09:17:56] [pid 3123445] start: tag=gate1 arms=prototype-v32,rf-harness reps=3 agents=claude,codex,opencode scenarios=live extra=--claude-model claude-haiku-5-5 --browser-concurrency 2 results=runs/results_live_gate1.jsonl
+[2026-10-11 09:17:56] [pid 3123445] start cleanup: dropped 0 aborted/torn rows, 0 rows re-labelled invalid
+[2026-10-11 09:17:56] [pid 3123445] status: 0/90 cells ok
+[2026-10-11 09:18:02] [pid 3123445] pass 1: starting harness
+[2026-10-11 13:20:42] [pid 3123445] pass 1: harness exited (0)
+[2026-10-11 13:20:43] [pid 3123445] pass 1: dropped 0 aborted/torn rows, 0 re-labelled invalid; 90/90 cells ok
+[2026-10-11 13:20:43] [pid 3123445] done: complete (90/90)

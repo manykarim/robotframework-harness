@@ -1,0 +1,99 @@
+[09:18:02] [config] models={'claude': 'claude-haiku-5-5', 'codex': 'gpt-5.6-luna', 'opencode': 'minimax-coding-plan/MiniMax-M2.5', 'copilot': 'gpt-4.1'} codex_effort='medium' opencode_variant='' results=~/workspace/robotframework-ai-engineering/eval/runs/results_live_gate1.jsonl work=~/.cache/ab-eval/rfh/work_live_gate1 prune=True browser_concurrency=2 or_models={'deepseek-v4.1-flash': 'deepseek/deepseek-v4.1-flash', 'qwen3.8-flash': 'qwen/qwen3.8-flash', 'glm-5.3-flash': 'z-ai/glm-5.3-flash', 'gemini-3.8-flash': 'google/gemini-3.8-flash'} or_budget_usd=150 min_or_balance=0.5 prototype_dir=~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/ab/hookpkg32 rf_harness_source=~/workspace/robotframework-ai-engineering
+[09:18:02] disk before:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  234G  202G   20G  92% /
+[09:18:02] [batch] 90 cells to run (skipping 0 done), concurrency=3, browser<=2, per-agent<=2, prune=True
+[09:20:31] [1/90] claude|rf-harness|tricentis_quote|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=27 149.0s
+[09:21:06] [2/90] claude|prototype-v32|tricentis_quote|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=30 183.7s
+[09:25:23] [3/90] codex|rf-harness|tricentis_quote|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=22 291.4s
+[09:26:16] [4/90] opencode|prototype-v32|tricentis_quote|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=36 309.5s
+[09:28:08] [5/90] claude|prototype-v32|carconfig_order|1 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=22 111.9s
+[09:28:46] [6/90] opencode|rf-harness|tricentis_quote|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=32 202.8s
+[09:30:19] [7/90] codex|prototype-v32|carconfig_order|1 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=25 93.7s
+[09:30:28] [8/90] claude|rf-harness|carconfig_order|1 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=30 140.6s
+[09:31:43] [9/90] codex|rf-harness|carconfig_order|1 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=20 83.9s
+[09:34:19] [10/90] opencode|prototype-v32|carconfig_order|1 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=34 231.3s
+[09:35:05] [11/90] opencode|rf-harness|carconfig_order|1 -> status=ok primary=False pass=10/11 mcp_calls=0 tools=43 201.7s
+[09:37:14] [12/90] claude|prototype-v32|demoshop_order|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=35 174.1s
+[09:37:58] [13/90] claude|rf-harness|demoshop_order|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=36 172.6s
+[09:39:39] [14/90] codex|prototype-v32|demoshop_order|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=27 145.2s
+[09:41:02] [15/90] codex|prototype-v32|tricentis_quote|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=25 184.8s
+[09:44:27] [16/90] opencode|rf-harness|demoshop_order|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=38 204.8s
+[09:49:57] [17/90] opencode|prototype-v32|demoshop_order|1 -> status=ok primary=False pass=11/12 mcp_calls=0 tools=65 618.5s
+[09:52:41] [18/90] claude|prototype-v32|demoshop_debug|1 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=35 494.2s
+[09:55:51] [19/90] codex|prototype-v32|demoshop_debug|1 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=13 189.9s
+[09:56:54] [20/90] claude|rf-harness|demoshop_debug|1 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=20 416.5s
+[10:01:52] [21/90] codex|rf-harness|demoshop_debug|1 -> status=ok primary=False pass=14/17 mcp_calls=0 tools=26 360.3s
+[10:02:29] [22/90] opencode|prototype-v32|demoshop_debug|1 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=25 335.0s
+[10:06:52] [23/90] claude|prototype-v32|tricentis_debug|1 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=21 263.1s
+[10:08:47] [24/90] opencode|rf-harness|demoshop_debug|1 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=34 415.5s
+[10:17:27] [25/90] claude|rf-harness|tricentis_debug|1 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=35 635.3s
+[10:19:25] [26/90] codex|prototype-v32|tricentis_debug|1 -> status=ok primary=False pass=14/15 mcp_calls=0 tools=60 638.1s
+[10:20:29] [27/90] codex|rf-harness|demoshop_order|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=26 181.5s
+[10:40:50] [28/90] opencode|rf-harness|tricentis_debug|1 -> status=ok primary=False pass=14/15 mcp_calls=0 tools=120 1221.1s
+[10:48:10] [29/90] claude|prototype-v32|tricentis_quote|2 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=51 440.0s
+[10:50:30] [30/90] claude|rf-harness|tricentis_quote|2 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=22 140.3s
+[10:50:33] [31/90] opencode|prototype-v32|tricentis_debug|1 -> status=ok primary=False pass=10/15 mcp_calls=0 tools=116 1867.5s
+[10:52:36] [32/90] codex|prototype-v32|tricentis_quote|2 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=24 126.0s
+[10:54:43] [33/90] codex|rf-harness|tricentis_debug|1 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=43 250.4s
+[10:55:17] [34/90] opencode|prototype-v32|tricentis_quote|2 -> status=ok primary=False pass=11/12 mcp_calls=0 tools=27 160.4s
+[10:57:20] [35/90] claude|prototype-v32|carconfig_order|2 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=28 123.5s
+[10:57:36] [36/90] opencode|rf-harness|tricentis_quote|2 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=34 173.3s
+[10:59:37] [37/90] claude|rf-harness|carconfig_order|2 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=24 137.4s
+[10:59:55] [38/90] codex|prototype-v32|carconfig_order|2 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=21 138.5s
+[11:03:16] [39/90] opencode|prototype-v32|carconfig_order|2 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=32 201.2s
+[11:03:33] [40/90] codex|rf-harness|tricentis_quote|2 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=28 235.0s
+[11:06:10] [41/90] claude|prototype-v32|demoshop_order|2 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=32 157.3s
+[11:07:04] [42/90] opencode|rf-harness|carconfig_order|2 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=35 228.3s
+[11:08:36] [43/90] claude|rf-harness|demoshop_order|2 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=31 146.6s
+[11:10:02] [44/90] codex|rf-harness|carconfig_order|2 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=18 85.4s
+[11:10:36] [45/90] codex|prototype-v32|demoshop_order|2 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=33 211.5s
+[11:18:57] [46/90] opencode|prototype-v32|demoshop_order|2 -> status=ok primary=False pass=11/12 mcp_calls=0 tools=83 534.7s
+[11:24:44] [47/90] claude|prototype-v32|demoshop_debug|2 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=25 347.5s
+[11:27:59] [48/90] opencode|rf-harness|demoshop_order|2 -> status=ok primary=False pass=11/12 mcp_calls=0 tools=108 1043.5s
+[11:30:40] [49/90] claude|rf-harness|demoshop_debug|2 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=21 356.2s
+[11:32:34] [50/90] codex|prototype-v32|demoshop_debug|2 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=30 274.5s
+[11:33:20] [51/90] codex|rf-harness|demoshop_order|2 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=23 160.1s
+[11:37:44] [52/90] opencode|prototype-v32|demoshop_debug|2 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=24 310.1s
+[11:38:55] [53/90] opencode|rf-harness|demoshop_debug|2 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=29 334.4s
+[11:49:58] [54/90] claude|rf-harness|tricentis_debug|2 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=40 663.1s
+[11:53:21] [55/90] claude|prototype-v32|tricentis_debug|2 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=46 937.3s
+[11:56:10] [56/90] codex|prototype-v32|tricentis_debug|2 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=57 372.3s
+[11:58:44] [57/90] codex|rf-harness|demoshop_debug|2 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=24 323.0s
+[12:02:21] [58/90] opencode|rf-harness|tricentis_debug|2 -> status=ok primary=False pass=14/15 mcp_calls=0 tools=15 216.7s
+[12:05:02] [59/90] claude|prototype-v32|tricentis_quote|3 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=27 161.1s
+[12:06:13] [60/90] opencode|prototype-v32|tricentis_debug|2 -> status=ok primary=False pass=14/15 mcp_calls=0 tools=46 603.0s
+[12:08:21] [61/90] claude|rf-harness|tricentis_quote|3 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=25 198.9s
+[12:09:47] [62/90] codex|prototype-v32|tricentis_quote|3 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=30 213.5s
+[12:14:06] [63/90] opencode|prototype-v32|tricentis_quote|3 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=28 259.2s
+[12:14:11] [64/90] codex|rf-harness|tricentis_debug|2 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=43 350.0s
+[12:15:49] [65/90] claude|prototype-v32|carconfig_order|3 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=18 98.3s
+[12:17:30] [66/90] claude|rf-harness|carconfig_order|3 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=18 100.9s
+[12:17:56] [67/90] opencode|rf-harness|tricentis_quote|3 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=32 230.3s
+[12:19:16] [68/90] codex|prototype-v32|carconfig_order|3 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=21 105.9s
+[12:21:02] [69/90] codex|rf-harness|tricentis_quote|3 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=26 186.2s
+[12:23:15] [70/90] opencode|prototype-v32|carconfig_order|3 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=41 238.8s
+[12:24:34] [71/90] opencode|rf-harness|carconfig_order|3 -> status=ok primary=False pass=9/11 mcp_calls=0 tools=49 211.7s
+[12:26:13] [72/90] claude|prototype-v32|demoshop_order|3 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=35 178.5s
+[12:29:12] [73/90] codex|prototype-v32|demoshop_order|3 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=28 179.4s
+[12:31:03] [74/90] codex|rf-harness|demoshop_order|3 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=26 110.8s
+[12:31:15] [75/90] claude|rf-harness|demoshop_order|3 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=36 401.0s
+[12:34:22] [76/90] opencode|rf-harness|demoshop_order|3 -> status=ok primary=False pass=11/12 mcp_calls=0 tools=35 187.2s
+[12:39:22] [77/90] claude|prototype-v32|demoshop_debug|3 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=18 299.5s
+[12:44:18] [78/90] opencode|prototype-v32|demoshop_order|3 -> status=ok primary=False pass=10/12 mcp_calls=0 tools=78 794.3s
+[12:46:11] [79/90] claude|rf-harness|demoshop_debug|3 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=28 408.8s
+[12:48:47] [80/90] codex|rf-harness|carconfig_order|3 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=20 156.2s
+[12:51:23] [81/90] codex|prototype-v32|demoshop_debug|3 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=36 425.9s
+[12:54:33] [82/90] opencode|prototype-v32|demoshop_debug|3 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=31 346.4s
+[12:56:20] [83/90] opencode|rf-harness|demoshop_debug|3 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=25 296.9s
+[13:00:40] [84/90] claude|prototype-v32|tricentis_debug|3 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=30 366.8s
+[13:03:47] [85/90] claude|rf-harness|tricentis_debug|3 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=33 446.5s
+[13:05:04] [86/90] codex|prototype-v32|tricentis_debug|3 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=29 264.4s
+[13:08:52] [87/90] codex|rf-harness|demoshop_debug|3 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=18 305.5s
+[13:13:57] [88/90] opencode|rf-harness|tricentis_debug|3 -> status=ok primary=False pass=14/15 mcp_calls=0 tools=28 304.4s
+[13:19:27] [89/90] codex|rf-harness|tricentis_debug|3 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=44 329.8s
+[13:20:41] [90/90] opencode|prototype-v32|tricentis_debug|3 -> status=ok primary=False pass=12/15 mcp_calls=0 tools=85 937.1s
+[13:20:42] [batch] done: ran=90 skipped=0 reaper_kills_total=49 (final sweep 0)
+[13:20:42] disk after:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  234G  204G   18G  93% /

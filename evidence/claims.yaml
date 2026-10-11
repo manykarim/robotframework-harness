@@ -2165,6 +2165,283 @@
     }
    ],
    "command": "python3 evidence/check_claims.py --only docs-v32-codex-v32 --show"
+  },
+  {
+   "id": "r8-rfharness",
+   "claim": "round 8: rf-harness 37/45",
+   "round": "08-release-gate-v1",
+   "files": [
+    "rounds/08-release-gate-v1/results/results_live_gate1.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "arms": [
+      "rf-harness"
+     ]
+    }
+   },
+   "expect": {
+    "value": 0.82,
+    "tolerance": 0.005,
+    "passes": 37,
+    "n": 45
+   },
+   "sources": [
+    {
+     "file": "rounds/08-release-gate-v1/README.md",
+     "text": "| **all** | **37/45 = 0.82** | **37/45 = 0.82** | |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r8-rfharness --show"
+  },
+  {
+   "id": "r8-prototype",
+   "claim": "round 8: prototype-v32 37/45",
+   "round": "08-release-gate-v1",
+   "files": [
+    "rounds/08-release-gate-v1/results/results_live_gate1.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "arms": [
+      "prototype-v32"
+     ]
+    }
+   },
+   "expect": {
+    "value": 0.82,
+    "tolerance": 0.005,
+    "passes": 37,
+    "n": 45
+   },
+   "sources": [
+    {
+     "file": "rounds/08-release-gate-v1/README.md",
+     "text": "| **all** | **37/45 = 0.82** | **37/45 = 0.82** | |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r8-prototype --show"
+  },
+  {
+   "id": "r8-claude-rfharness",
+   "claim": "round 8: Claude rf-harness 15/15",
+   "round": "08-release-gate-v1",
+   "files": [
+    "rounds/08-release-gate-v1/results/results_live_gate1.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "claude"
+     ],
+     "arms": [
+      "rf-harness"
+     ]
+    }
+   },
+   "expect": {
+    "value": 1.0,
+    "tolerance": 0.005,
+    "passes": 15,
+    "n": 15
+   },
+   "sources": [
+    {
+     "file": "rounds/08-release-gate-v1/README.md",
+     "text": "| Claude Code (main agent) | 15/15 | 15/15 | 282 / 268 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r8-claude-rfharness --show"
+  },
+  {
+   "id": "r8-claude-prototype",
+   "claim": "round 8: Claude prototype-v32 15/15",
+   "round": "08-release-gate-v1",
+   "files": [
+    "rounds/08-release-gate-v1/results/results_live_gate1.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "claude"
+     ],
+     "arms": [
+      "prototype-v32"
+     ]
+    }
+   },
+   "expect": {
+    "value": 1.0,
+    "tolerance": 0.005,
+    "passes": 15,
+    "n": 15
+   },
+   "sources": [
+    {
+     "file": "rounds/08-release-gate-v1/README.md",
+     "text": "| Claude Code (main agent) | 15/15 | 15/15 | 282 / 268 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r8-claude-prototype --show"
+  },
+  {
+   "id": "r8-codex-rfharness",
+   "claim": "round 8: Codex rf-harness 14/15",
+   "round": "08-release-gate-v1",
+   "files": [
+    "rounds/08-release-gate-v1/results/results_live_gate1.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "codex"
+     ],
+     "arms": [
+      "rf-harness"
+     ]
+    }
+   },
+   "expect": {
+    "value": 0.93,
+    "tolerance": 0.005,
+    "passes": 14,
+    "n": 15
+   },
+   "sources": [
+    {
+     "file": "rounds/08-release-gate-v1/README.md",
+     "text": "| Codex | 14/15 | 14/15 | 204 / 218 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r8-codex-rfharness --show"
+  },
+  {
+   "id": "r8-opencode-rfharness",
+   "claim": "round 8: OpenCode rf-harness 8/15",
+   "round": "08-release-gate-v1",
+   "files": [
+    "rounds/08-release-gate-v1/results/results_live_gate1.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "opencode"
+     ],
+     "arms": [
+      "rf-harness"
+     ]
+    }
+   },
+   "expect": {
+    "value": 0.53,
+    "tolerance": 0.005,
+    "passes": 8,
+    "n": 15
+   },
+   "sources": [
+    {
+     "file": "rounds/08-release-gate-v1/README.md",
+     "text": "| OpenCode | 8/15 | 8/15 | 345 / 492 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r8-opencode-rfharness --show"
+  },
+  {
+   "id": "r8-opencode-wall-rfharness",
+   "claim": "round 8: OpenCode wall rf-harness 345 s",
+   "round": "08-release-gate-v1",
+   "files": [
+    "rounds/08-release-gate-v1/results/results_live_gate1.jsonl"
+   ],
+   "compute": {
+    "metric": "mean",
+    "field": "wall_s",
+    "filter": {
+     "agents": [
+      "opencode"
+     ],
+     "arms": [
+      "rf-harness"
+     ]
+    }
+   },
+   "expect": {
+    "value": 345,
+    "tolerance": 0.5
+   },
+   "sources": [
+    {
+     "file": "rounds/08-release-gate-v1/README.md",
+     "text": "| OpenCode | 8/15 | 8/15 | 345 / 492 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r8-opencode-wall-rfharness --show"
+  },
+  {
+   "id": "r8-opencode-wall-prototype",
+   "claim": "round 8: OpenCode wall prototype 492 s",
+   "round": "08-release-gate-v1",
+   "files": [
+    "rounds/08-release-gate-v1/results/results_live_gate1.jsonl"
+   ],
+   "compute": {
+    "metric": "mean",
+    "field": "wall_s",
+    "filter": {
+     "agents": [
+      "opencode"
+     ],
+     "arms": [
+      "prototype-v32"
+     ]
+    }
+   },
+   "expect": {
+    "value": 492,
+    "tolerance": 0.5
+   },
+   "sources": [
+    {
+     "file": "rounds/08-release-gate-v1/README.md",
+     "text": "| OpenCode | 8/15 | 8/15 | 345 / 492 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r8-opencode-wall-prototype --show"
+  },
+  {
+   "id": "docs-r8-gate",
+   "claim": "docs: release gate rf-harness 0.82 vs prototype 0.82",
+   "round": "08-release-gate-v1",
+   "files": [
+    "rounds/08-release-gate-v1/results/results_live_gate1.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "arms": [
+      "rf-harness"
+     ]
+    }
+   },
+   "expect": {
+    "value": 0.82,
+    "tolerance": 0.005,
+    "passes": 37,
+    "n": 45
+   },
+   "sources": [
+    {
+     "file": "../docs/evidence.md",
+     "text": "| 8 | release gate: **rf-harness** (product 0.9.0) vs v3.2 prototype"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only docs-r8-gate --show"
   }
  ],
  "reports": [

@@ -1,0 +1,421 @@
+{
+  "verdict": "PASS",
+  "reasons": [],
+  "candidate": "rf-harness",
+  "baseline": "prototype-v32",
+  "main_agent": "claude",
+  "margin": 0.05,
+  "alpha": 0.05,
+  "sources": [
+    "runs/results_live_gate1.jsonl"
+  ],
+  "rows": 90,
+  "n_candidate": 45,
+  "n_baseline": 45,
+  "excluded": {},
+  "contaminated": [],
+  "contaminated_kept": false,
+  "adjusted": [],
+  "non_inferiority": {
+    "agent": "claude",
+    "margin": 0.05,
+    "rate_candidate": 1.0,
+    "rate_baseline": 1.0,
+    "pass_candidate": 15,
+    "n_candidate": 15,
+    "pass_baseline": 15,
+    "n_baseline": 15,
+    "delta": 0.0,
+    "threshold": 0.95,
+    "ci_delta": [
+      -0.2038892663043479,
+      0.2038892663043479
+    ],
+    "ci_candidate": [
+      0.7961107336956521,
+      1.0
+    ],
+    "ci_baseline": [
+      0.7961107336956521,
+      1.0
+    ],
+    "result": "PASS"
+  },
+  "per_agent": [
+    {
+      "agent": "claude",
+      "cells": 5,
+      "rate_candidate": 1.0,
+      "rate_baseline": 1.0,
+      "pass_candidate": 15,
+      "n_candidate": 15,
+      "pass_baseline": 15,
+      "n_baseline": 15,
+      "delta": 0.0,
+      "fisher_p": 1.0,
+      "cells_pos": 0,
+      "cells_neg": 0,
+      "sign_p": 1.0,
+      "regression": false
+    },
+    {
+      "agent": "codex",
+      "cells": 5,
+      "rate_candidate": 0.9333333333333333,
+      "rate_baseline": 0.9333333333333333,
+      "pass_candidate": 14,
+      "n_candidate": 15,
+      "pass_baseline": 14,
+      "n_baseline": 15,
+      "delta": 0.0,
+      "fisher_p": 1.0,
+      "cells_pos": 1,
+      "cells_neg": 1,
+      "sign_p": 1.0,
+      "regression": false
+    },
+    {
+      "agent": "opencode",
+      "cells": 5,
+      "rate_candidate": 0.5333333333333333,
+      "rate_baseline": 0.5333333333333333,
+      "pass_candidate": 8,
+      "n_candidate": 15,
+      "pass_baseline": 8,
+      "n_baseline": 15,
+      "delta": 0.0,
+      "fisher_p": 1.0,
+      "cells_pos": 2,
+      "cells_neg": 1,
+      "sign_p": 1.0,
+      "regression": false
+    }
+  ],
+  "overall": {
+    "cells": 15,
+    "rate_a": 0.8222222222222222,
+    "rate_b": 0.8222222222222222,
+    "n_a": 45,
+    "n_b": 45,
+    "pass_a": 37,
+    "pass_b": 37,
+    "delta_pooled": 0.0,
+    "delta_cellmean": -3.7007434154171884e-18,
+    "fisher_p": 1.0,
+    "cells_pos": 3,
+    "cells_neg": 2,
+    "sign_p": 1.0
+  },
+  "by_kind": {
+    "explore": {
+      "cells": 9,
+      "rate_a": 0.8518518518518519,
+      "rate_b": 0.8518518518518519,
+      "n_a": 27,
+      "n_b": 27,
+      "pass_a": 23,
+      "pass_b": 23,
+      "delta_pooled": 0.0,
+      "delta_cellmean": -6.1679056923619804e-18,
+      "fisher_p": 1.0,
+      "cells_pos": 2,
+      "cells_neg": 1,
+      "sign_p": 1.0
+    },
+    "debug": {
+      "cells": 6,
+      "rate_a": 0.7777777777777778,
+      "rate_b": 0.7777777777777778,
+      "n_a": 18,
+      "n_b": 18,
+      "pass_a": 14,
+      "pass_b": 14,
+      "delta_pooled": 0.0,
+      "delta_cellmean": 0.0,
+      "fisher_p": 1.0,
+      "cells_pos": 1,
+      "cells_neg": 1,
+      "sign_p": 1.0
+    }
+  },
+  "by_scenario": {
+    "tricentis_quote": {
+      "cells": 3,
+      "rate_a": 1.0,
+      "rate_b": 0.8888888888888888,
+      "n_a": 9,
+      "n_b": 9,
+      "pass_a": 9,
+      "pass_b": 8,
+      "delta_pooled": 0.11111111111111116,
+      "delta_cellmean": 0.11111111111111112,
+      "fisher_p": 1.0,
+      "cells_pos": 1,
+      "cells_neg": 0,
+      "sign_p": 1.0
+    },
+    "carconfig_order": {
+      "cells": 3,
+      "rate_a": 0.7777777777777778,
+      "rate_b": 1.0,
+      "n_a": 9,
+      "n_b": 9,
+      "pass_a": 7,
+      "pass_b": 9,
+      "delta_pooled": -0.2222222222222222,
+      "delta_cellmean": -0.22222222222222224,
+      "fisher_p": 0.47058823529411764,
+      "cells_pos": 0,
+      "cells_neg": 1,
+      "sign_p": 1.0
+    },
+    "demoshop_order": {
+      "cells": 3,
+      "rate_a": 0.7777777777777778,
+      "rate_b": 0.6666666666666666,
+      "n_a": 9,
+      "n_b": 9,
+      "pass_a": 7,
+      "pass_b": 6,
+      "delta_pooled": 0.11111111111111116,
+      "delta_cellmean": 0.1111111111111111,
+      "fisher_p": 1.0,
+      "cells_pos": 1,
+      "cells_neg": 0,
+      "sign_p": 1.0
+    },
+    "demoshop_debug": {
+      "cells": 3,
+      "rate_a": 0.8888888888888888,
+      "rate_b": 1.0,
+      "n_a": 9,
+      "n_b": 9,
+      "pass_a": 8,
+      "pass_b": 9,
+      "delta_pooled": -0.11111111111111116,
+      "delta_cellmean": -0.11111111111111112,
+      "fisher_p": 1.0,
+      "cells_pos": 0,
+      "cells_neg": 1,
+      "sign_p": 1.0
+    },
+    "tricentis_debug": {
+      "cells": 3,
+      "rate_a": 0.6666666666666666,
+      "rate_b": 0.5555555555555556,
+      "n_a": 9,
+      "n_b": 9,
+      "pass_a": 6,
+      "pass_b": 5,
+      "delta_pooled": 0.11111111111111105,
+      "delta_cellmean": 0.11111111111111112,
+      "fisher_p": 1.0,
+      "cells_pos": 1,
+      "cells_neg": 0,
+      "sign_p": 1.0
+    }
+  },
+  "per_cell": {
+    "claude|tricentis_quote": {
+      "delta": 0.0,
+      "rate_a": 1.0,
+      "rate_b": 1.0,
+      "n_a": 3,
+      "n_b": 3
+    },
+    "claude|carconfig_order": {
+      "delta": 0.0,
+      "rate_a": 1.0,
+      "rate_b": 1.0,
+      "n_a": 3,
+      "n_b": 3
+    },
+    "claude|demoshop_order": {
+      "delta": 0.0,
+      "rate_a": 1.0,
+      "rate_b": 1.0,
+      "n_a": 3,
+      "n_b": 3
+    },
+    "claude|demoshop_debug": {
+      "delta": 0.0,
+      "rate_a": 1.0,
+      "rate_b": 1.0,
+      "n_a": 3,
+      "n_b": 3
+    },
+    "claude|tricentis_debug": {
+      "delta": 0.0,
+      "rate_a": 1.0,
+      "rate_b": 1.0,
+      "n_a": 3,
+      "n_b": 3
+    },
+    "codex|tricentis_quote": {
+      "delta": 0.0,
+      "rate_a": 1.0,
+      "rate_b": 1.0,
+      "n_a": 3,
+      "n_b": 3
+    },
+    "codex|carconfig_order": {
+      "delta": 0.0,
+      "rate_a": 1.0,
+      "rate_b": 1.0,
+      "n_a": 3,
+      "n_b": 3
+    },
+    "codex|demoshop_order": {
+      "delta": 0.0,
+      "rate_a": 1.0,
+      "rate_b": 1.0,
+      "n_a": 3,
+      "n_b": 3
+    },
+    "codex|demoshop_debug": {
+      "delta": -0.33333333333333337,
+      "rate_a": 0.6666666666666666,
+      "rate_b": 1.0,
+      "n_a": 3,
+      "n_b": 3
+    },
+    "codex|tricentis_debug": {
+      "delta": 0.33333333333333337,
+      "rate_a": 1.0,
+      "rate_b": 0.6666666666666666,
+      "n_a": 3,
+      "n_b": 3
+    },
+    "opencode|tricentis_quote": {
+      "delta": 0.33333333333333337,
+      "rate_a": 1.0,
+      "rate_b": 0.6666666666666666,
+      "n_a": 3,
+      "n_b": 3
+    },
+    "opencode|carconfig_order": {
+      "delta": -0.6666666666666667,
+      "rate_a": 0.3333333333333333,
+      "rate_b": 1.0,
+      "n_a": 3,
+      "n_b": 3
+    },
+    "opencode|demoshop_order": {
+      "delta": 0.3333333333333333,
+      "rate_a": 0.3333333333333333,
+      "rate_b": 0.0,
+      "n_a": 3,
+      "n_b": 3
+    },
+    "opencode|demoshop_debug": {
+      "delta": 0.0,
+      "rate_a": 1.0,
+      "rate_b": 1.0,
+      "n_a": 3,
+      "n_b": 3
+    },
+    "opencode|tricentis_debug": {
+      "delta": 0.0,
+      "rate_a": 0.0,
+      "rate_b": 0.0,
+      "n_a": 3,
+      "n_b": 3
+    }
+  },
+  "windows": {
+    "rf-harness": [
+      "2026-10-11T07:18:02.915627+00:00",
+      "2026-10-11T11:19:26.949922+00:00"
+    ],
+    "prototype-v32": [
+      "2026-10-11T07:18:02.915514+00:00",
+      "2026-10-11T11:20:41.672591+00:00"
+    ]
+  },
+  "same_window": true,
+  "efficiency": {
+    "claude|rf-harness": {
+      "n": 15,
+      "rate": 1.0,
+      "cost_usd": 0.027003208666666667,
+      "wall_s": 281.5466666666667,
+      "turns": 30.4,
+      "tool_calls": 28.4
+    },
+    "claude|prototype-v32": {
+      "n": 15,
+      "rate": 1.0,
+      "cost_usd": 0.029788479333333336,
+      "wall_s": 267.78,
+      "turns": 32.2,
+      "tool_calls": 30.2
+    },
+    "codex|rf-harness": {
+      "n": 15,
+      "rate": 0.9333333333333333,
+      "cost_usd": null,
+      "wall_s": 203.60666666666665,
+      "turns": null,
+      "tool_calls": 27.133333333333333
+    },
+    "codex|prototype-v32": {
+      "n": 15,
+      "rate": 0.9333333333333333,
+      "cost_usd": null,
+      "wall_s": 217.59333333333333,
+      "turns": null,
+      "tool_calls": 30.6
+    },
+    "opencode|rf-harness": {
+      "n": 15,
+      "rate": 0.5333333333333333,
+      "cost_usd": null,
+      "wall_s": 345.22,
+      "turns": 44.4,
+      "tool_calls": 43.8
+    },
+    "opencode|prototype-v32": {
+      "n": 15,
+      "rate": 0.5333333333333333,
+      "cost_usd": null,
+      "wall_s": 492.4066666666667,
+      "turns": 50.6,
+      "tool_calls": 50.06666666666667
+    }
+  },
+  "value_artifacts": {},
+  "value_artifact_sensitivity": {
+    "rf-harness": {
+      "n": 45,
+      "passes": 37,
+      "passes_upper": 37
+    },
+    "prototype-v32": {
+      "n": 45,
+      "passes": 37,
+      "passes_upper": 37
+    }
+  },
+  "arm_totals": {
+    "rf-harness": {
+      "passes": 37,
+      "n": 45
+    },
+    "prototype-v32": {
+      "passes": 37,
+      "n": 45
+    }
+  },
+  "agents": [
+    "claude",
+    "codex",
+    "opencode"
+  ],
+  "scenarios": [
+    "tricentis_quote",
+    "carconfig_order",
+    "demoshop_order",
+    "demoshop_debug",
+    "tricentis_debug"
+  ]
+}

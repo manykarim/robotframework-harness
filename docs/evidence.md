@@ -1,6 +1,6 @@
 # Evidence
 
-The harness came out of seven experiment rounds (2026-10-01 to 2026-10-10). All data, graders, reports and harness
+The harness came out of seven experiment rounds (2026-10-01 to 2026-10-10); round 8 (2026-10-11) is the v1 release gate. All data, graders, reports and harness
 versions are in the repository's [`evidence/`](https://github.com/manykarim/robotframework-ai-engineering/tree/main/evidence)
 folder. `evidence/check_claims.py` recomputes every number on this page from the archived results.
 
@@ -8,6 +8,7 @@ folder. `evidence/check_claims.py` recomputes every number on this page from the
 
 | round | comparison (same window) | sessions | result |
 |---|---|---|---|
+| 8 | release gate: **rf-harness** (product 0.9.0) vs v3.2 prototype; Haiku 5.5, Codex, OpenCode/MiniMax | 90 | **0.82 vs 0.82** (Claude 15/15 each; gate PASS; OpenCode 345 s vs 492 s) |
 | 7 | rf-mcp vs v3 vs **v3.1** (per-model output profiles); Haiku 5.5, Codex, OpenCode/MiniMax, DeepSeek/Qwen/GLM via OpenRouter | 206 valid | **0.69 / 0.75 / 0.83** (v3.1 vs rf-mcp p = 0.073; 7 cells better, 2 worse) |
 | 7 | v3.1 vs **v3.2** (covered-input targets, read-streak nudge), Codex | 30 | 14/15 vs **15/15** (n.s.) |
 | 6 | rf-mcp vs v2 vs v3, Claude (Haiku 4.5) / Codex / OpenCode | 180 | 0.52 / **0.70** / 0.63 (v2 > rf-mcp in 8 of 8 differing cells, sign p = 0.008) |
