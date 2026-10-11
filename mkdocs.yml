@@ -1,0 +1,76 @@
+site_name: robotframework-ai-engineering
+site_description: Agent harness for Robot Framework - Agent Skill, agent hooks and a local robotcode live session for Claude Code, Codex, GitHub Copilot, VS Code and OpenCode.
+repo_url: https://github.com/manykarim/robotframework-ai-engineering
+repo_name: manykarim/robotframework-ai-engineering
+edit_uri: edit/main/docs/
+docs_dir: docs
+strict: true
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - search.highlight
+  palette:
+    - scheme: default
+      primary: indigo
+      toggle: { icon: material/brightness-7, name: Dark mode }
+    - scheme: slate
+      primary: indigo
+      toggle: { icon: material/brightness-4, name: Light mode }
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc: { permalink: true }
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed: { alternate_style: true }
+
+nav:
+  - Home: index.md
+  - Get started:
+      - Overview: get-started/index.md
+      - Claude Code: get-started/claude-code.md
+      - OpenAI Codex: get-started/codex.md
+      - GitHub Copilot CLI: get-started/copilot-cli.md
+      - VS Code (Copilot): get-started/vscode.md
+      - OpenCode: get-started/opencode.md
+      - Use it in your project: get-started/your-project.md
+  - Concepts:
+      - Architecture: concepts/architecture.md
+      - Hook lifecycle per agent: concepts/hook-lifecycle.md
+      - Live session: concepts/live-session.md
+      - Live timeouts: concepts/live-timeouts.md
+      - Plain-run reproduction: concepts/plain-run-reproduction.md
+      - Failure verdicts: concepts/verdicts.md
+      - Page-state files: concepts/page-state.md
+      - Keyword knowledge: concepts/keyword-knowledge.md
+      - Output profiles: concepts/output-profiles.md
+      - Static quality and refusals: concepts/static-quality.md
+      - Stop gate: concepts/stop-gate.md
+      - REPL and debugger: concepts/repl-debugger.md
+      - Desktop safety: concepts/desktop-safety.md
+      - Helper lifecycle: concepts/helper-lifecycle.md
+      - Evaluation method: concepts/evaluation.md
+  - Agents: agents/matrix.md
+  - Reference:
+      - CLI: reference/cli.md
+      - Environment variables: reference/environment.md
+      - Files and directories: reference/files.md
+      - Hook events: reference/hook-events.md
+  - Evidence: evidence.md
+  - Troubleshooting: troubleshooting.md
+  - Comparison: comparison.md
+  - Contributing: contributing.md
+
+hooks:
+  - scripts/mkdocs_hooks.py
+
+validation:
+  omitted_files: warn
+  absolute_links: info
+  unrecognized_links: info

@@ -13,7 +13,7 @@
 
 ## 3. Plugin and marketplace (marketplace-distribution)
 
-- [ ] 3.1 Write `plugins/rf-harness/`: `plugin.json`, the `rf-harness` skill (from hookpkg32 SKILL.md and references, fixture-free), `hooks/hooks.json`, and `variants/codex` and `variants/opencode`. Verify `claude plugin validate .` passes and the fixture-leak scan from the evaluation finds nothing.
+- [x] 3.1 Write `plugins/rf-harness/`: `plugin.json`, the `rf-harness` skill (from hookpkg32 SKILL.md and references, fixture-free), `hooks/hooks.json`, and `variants/codex` and `variants/opencode`. Verify `claude plugin validate .` passes and the fixture-leak scan from the evaluation finds nothing.
 - [x] 3.2 Implement `bin/rfh-launch` (stdlib only): interpreter discovery (design D3 order), version-compatibility check, exec of the runtime, fail-open setup hint. Verify with unit tests for each discovery branch, a missing-runtime case (one hint line, exit 0) and launcher overhead under 50 ms median.
 - [ ] 3.3 Add `.claude-plugin/marketplace.json`, then install the plugin from a local checkout in Claude Code, Copilot CLI, VS Code and Codex. Verify in one real session per agent that live feedback arrives after editing a test, and record the verified agent versions in `docs/agents/matrix.md`.
 
