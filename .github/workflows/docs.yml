@@ -2,9 +2,9 @@ name: docs
 on:
   push:
     branches: [main]
-    paths: ["docs/**", "mkdocs.yml", "scripts/gen_reference.py", "scripts/mkdocs_hooks.py", "src/rf_harness/**", "evidence/**"]
+    paths: [".github/workflows/docs.yml", "docs/**", "mkdocs.yml", "scripts/gen_reference.py", "scripts/mkdocs_hooks.py", "src/rf_harness/**", "evidence/**"]
   pull_request:
-    paths: ["docs/**", "mkdocs.yml", "scripts/gen_reference.py", "scripts/mkdocs_hooks.py", "src/rf_harness/**", "evidence/**"]
+    paths: [".github/workflows/docs.yml", "docs/**", "mkdocs.yml", "scripts/gen_reference.py", "scripts/mkdocs_hooks.py", "src/rf_harness/**", "evidence/**"]
   workflow_dispatch:
 permissions:
   contents: read
@@ -25,5 +25,5 @@ jobs:
         uses: lycheeverse/lychee-action@v2
         with:
           # MkDocs' generated 404 page uses root-relative links (site root unknown offline): not part of the docs content
-          args: --offline --no-progress --include-fragments --exclude-path site/404.html "site/**/*.html"
+          args: --offline --no-progress --include-fragments --index-files index.html --exclude-path site/404.html "site/**/*.html"
           fail: true
