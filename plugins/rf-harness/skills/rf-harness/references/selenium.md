@@ -1,0 +1,40 @@
+# SeleniumLibrary: locators and frames
+
+SELENIUMLIBRARY -- LOCATORS AND FRAMES
+
+VERIFIED CORE:
+- Strategies: id:x / name:x / css:x / xpath:x / link:Text / partial link:Te (= works too: id=x).
+  A bare value matches id or name only; bare `//...` is xpath.
+- IFRAMES: Select Frame    id:frame-id   ...   Unselect Frame   (no >>> in SeleniumLibrary).
+- SHADOW DOM: not pierced by css/xpath; use Browser library, or Execute Javascript returning the element.
+- Selenium is not strict: with several matches it silently uses the FIRST one.
+
+--- selenium locator reference ---
+locator_strategies:
+  id: Element id (e.g., 'id:example')
+  name: name attribute (e.g., 'name:example')
+  identifier: Either id or name (e.g., 'identifier:example')
+  class: Element class (e.g., 'class:example')
+  tag: Tag name (e.g., 'tag:div')
+  xpath: XPath expression (e.g., 'xpath://div[@id="example"]')
+  css: CSS selector (e.g., 'css:div#example')
+  dom: DOM expression (e.g., 'dom:document.images[5]')
+  link: Exact text a link has (e.g., 'link:The example')
+  partial link: Partial link text (e.g., 'partial link:he ex')
+  sizzle: Sizzle selector deprecated (e.g., 'sizzle:div.example')
+  data: Element data-* attribute (e.g., 'data:id:my_id')
+  jquery: jQuery expression (e.g., 'jquery:div.example')
+  default: Keyword specific default behavior (e.g., 'default:example')
+common_examples:
+  By ID: id:my-button
+  By Name: name:firstname
+  By CSS: css:#submit-btn
+  By XPath: xpath://input[@type='submit']
+  By Class: class:button-primary
+  By Link Text: link:Click Here
+tips:
+  - For form elements, 'name:fieldname' is often most reliable
+  - CSS selectors use 'css:' prefix, not just the selector
+  - XPath expressions must start with 'xpath:' prefix
+  - Use 'identifier:' to match either id or name attributes
+  - For buttons/links, try 'link:' for exact text matching

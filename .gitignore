@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+site/
+# generated at build time from plugins/rf-harness (hatch_build.py)
+src/rf_harness/_assets/
+# Robot Framework / harness run artefacts
+output.xml
+log.html
+report.html
+results/
+.rf/
+# never commit secrets
+.env

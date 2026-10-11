@@ -1,0 +1,93 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "robotframework-harness"
+dynamic = ["version"]
+description = "Agent harness for Robot Framework: an Agent Skill, agent hooks and a local robotcode-based live session for Claude Code, Codex, GitHub Copilot, VS Code and OpenCode."
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+authors = [{ name = "Many Kasiriha" }]
+keywords = ["robotframework", "testing", "ai", "agents", "claude-code", "codex", "copilot", "opencode", "robotcode", "playwright"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: Robot Framework",
+    "Framework :: Robot Framework :: Tool",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Testing",
+]
+# The installer has no dependencies, so `uvx robotframework-harness install` starts fast anywhere.
+dependencies = []
+
+[project.optional-dependencies]
+# Installed by the installer into the project's Python environment (where Robot Framework and its libraries live).
+runtime = [
+    "robotframework>=7.0",
+    "robotcode[repl,runner,analyze]>=2.7,<2.8",
+]
+quality = ["robotframework-robocop>=9.1"]
+
+[project.urls]
+Homepage = "https://github.com/manykarim/robotframework-ai-engineering"
+Documentation = "https://github.com/manykarim/robotframework-ai-engineering/tree/main/docs"
+Issues = "https://github.com/manykarim/robotframework-ai-engineering/issues"
+
+[project.scripts]
+robotframework-harness = "rf_harness.installer.cli:main"
+rf-harness = "rf_harness.installer.cli:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "ruff>=0.6",
+    "mypy>=1.10",
+    "robotframework>=7.0",
+    "robotcode[repl,runner,analyze]>=2.7,<2.8",
+    "robotframework-robocop>=9.1",
+]
+
+[tool.hatch.version]
+path = "src/rf_harness/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/rf_harness"]
+artifacts = ["src/rf_harness/_assets/**"]
+
+[tool.hatch.build.targets.wheel.hooks.custom]
+path = "hatch_build.py"
+
+[tool.hatch.build.targets.sdist]
+include = ["src/rf_harness", "plugins", "hatch_build.py", "README.md", "LICENSE"]
+
+[tool.hatch.build.targets.sdist.hooks.custom]
+path = "hatch_build.py"
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+extend-exclude = ["src/rf_harness/_assets", "eval", "evidence"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+files = ["src/rf_harness/installer", "src/rf_harness/config.py"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "browser: needs Browser library + chromium (simulation suite)",
+    "slow: takes more than a few seconds",
+]
