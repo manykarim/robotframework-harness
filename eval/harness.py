@@ -146,6 +146,7 @@ ARM_SPEC = {                     # arm -> has_mcp
 HOOK_PKGS = {
     "rf-harness": {"log_env": "RFH_HOOK_LOG", "log_name": "rfh_hooks.jsonl",
                    "marker": r"rf_harness\.runtime|rfh-launch|\[rfh\]", "state_dir": (".rf", "harness.json"),
+                   "own_states": [(".rf", "hook"), (".rf", "exec"), (".rf", "lint")],
                    "usage": 32},
     "prototype-v32": {"log_env": "RFH32_HOOK_LOG", "log_name": "rfh32_hooks.jsonl", "marker": r"rfharness32",
                       "state_dir": (".rf", "hook32"), "usage": 32},
@@ -1355,6 +1356,21 @@ def rf_harness_install_cmd(agent: str, ws: Path, venv_bin: Path, help_text: str 
             + rf_harness_optional_args(help_text, venv_bin))
 
 
+def _trust_copilot_folder(home: Path, ws: Path) -> None:
+    """Copilot CLI runs repository hooks (.github/hooks, files mode at project scope) only in trusted folders. A user
+    accepts the trust prompt once; the cell simulates that in its ISOLATED COPILOT_HOME (never the real ~/.copilot)."""
+    cfg = Path(home) / "config.json"
+    try:
+        data = json.loads(cfg.read_text(encoding="utf-8")) if cfg.is_file() else {}
+    except ValueError:
+        data = {}
+    folders = [str(f) for f in data.get("trusted_folders") or []]
+    if str(ws) not in folders:
+        data["trusted_folders"] = folders + [str(ws)]
+        cfg.parent.mkdir(parents=True, exist_ok=True)
+        cfg.write_text(json.dumps(data, indent=1), encoding="utf-8")
+
+
 def install_rf_harness(agent: str, ws: Path, home: Path, venv_bin: Path, help_text: str | None = None) -> dict:
     """Provision the rf-harness arm into one cell exactly like a user would (files mode, project scope, consented
     runtime from this checkout). Returns {extra_args, extra_env, notes, markers}; raises on installer failure.
@@ -1372,6 +1388,8 @@ def install_rf_harness(agent: str, ws: Path, home: Path, venv_bin: Path, help_te
     out = ((p.stdout or "") + (p.stderr or "")).strip()
     if p.returncode != 0:
         raise RuntimeError(f"rf-harness installer failed (exit {p.returncode}): {out[-600:]}")
+    if agent == "copilot":
+        _trust_copilot_folder(home, ws)
     extra_args = shlex.split(os.environ.get(f"AB_RF_HARNESS_ARGS_{agent.upper()}", ""))
     extra_env: dict = {"PATH": f"{venv_bin}{os.pathsep}{os.environ.get('PATH', '')}"}
     for line in reversed((p.stdout or "").strip().splitlines()):
@@ -2297,7 +2315,9 @@ def contamination(arm: str, calls: list[dict], ws: Path | None, mcp_calls: int) 
         for mk in markers:
             orx = re.compile(mk)
             cross_hits += sum(1 for c in calls if orx.search(c.get("input") or ""))
-        cross_hits += sum(1 for st in states if st != tuple(own["state_dir"]) and _hook_dir(ws, st))
+        # paths the arm itself writes are never cross hits (the product's .rf/hook equals the legacy v1 state dir)
+        own_states = {tuple(own["state_dir"])} | {tuple(x) for x in own.get("own_states", ())}
+        cross_hits += sum(1 for st in states if st not in own_states and _hook_dir(ws, st))
     return {"helper_cli_calls": helper_hits, "hook_usage_hits": hook_hits, "hook_cross_hits": cross_hits,
             "contaminated": bool(((not has_mcp) and mcp_calls > 0) or helper_hits > 0 or hook_hits > 0
                                  or cross_hits > 0)}

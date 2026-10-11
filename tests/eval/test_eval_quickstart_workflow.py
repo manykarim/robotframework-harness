@@ -26,7 +26,7 @@ def test_quickstart_dry_run_prints_the_plan_only(agent):
     assert p.returncode == 0, p.stderr
     plan = json.loads(p.stdout)
     assert plan["dry_run"] is True and plan["agent"] == agent
-    assert [s["name"] for s in plan["steps"]] == ["project", "install", "doctor", "robot"]
+    assert [s["name"] for s in plan["steps"]] == ["project", "browsers", "install", "doctor", "robot"]
     assert plan["documented_commands"] <= plan["max_commands"] == 5
     install = next(s["cmd"] for s in plan["steps"] if s["name"] == "install")
     assert f"install --agents {agent} --mode files --scope project" in install

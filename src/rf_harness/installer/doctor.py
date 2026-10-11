@@ -19,7 +19,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from .. import __version__
-from . import _assets, codex_trust, envfind
+from . import _assets, codex_trust, envfind, homes
 from . import manifest as _m
 from . import transforms as _x
 from .adapters import Options, by_name
@@ -87,6 +87,19 @@ def check_installed(ins: _m.Installation, project: Path) -> Check:
         return Check(name, False, detail + f" (installer is {__version__})",
                      f"rf-harness install --agent {ins.agent} --scope {ins.scope} --mode {ins.mode}")
     return Check(name, True, detail)
+
+
+def check_copilot_trust(ins: _m.Installation, project: Path) -> Check | None:
+    """Files mode at project scope writes .github/hooks/, which Copilot CLI runs only in trusted folders."""
+    if ins.mode != "files" or ins.scope != "project":
+        return None
+    trusted = homes.copilot_folder_trusted(project)
+    name = "copilot-cli: folder trusted (repository hooks run only in trusted folders)"
+    if trusted:
+        return Check(name, True, str(project))
+    detail = "no Copilot config found" if trusted is None else f"{project} is not in trusted_folders"
+    return Check(name, False, detail, f"start copilot in {project} once and trust the folder, or add it to "
+                 f"trusted_folders in {homes.copilot_home() / 'config.json'}")
 
 
 def check_codex_trust(ins: _m.Installation, project: Path) -> Check:
@@ -308,6 +321,10 @@ def run(project: Path, agents: list[str] | None, scopes: list[str], explicit_pyt
         checks.append(check_installed(ins, project))
         if ins.agent == "codex":
             checks.append(check_codex_trust(ins, project))
+        if ins.agent == "copilot-cli":
+            ct = check_copilot_trust(ins, project)
+            if ct is not None:
+                checks.append(ct)
         checks.append(probe(ins, project))
     env_checks, python, info = environment_checks(project, explicit_python)
     checks += env_checks

@@ -75,7 +75,7 @@ class CopilotCliAdapter(Adapter):
         if mode == "files":
             if opts.scope == "project":
                 return ["Copilot CLI runs repository hooks (.github/hooks) only in trusted folders: trust this folder "
-                        "when Copilot asks, or add it to trustedFolders in ~/.copilot/config.json."]
+                        "when Copilot asks, or add it to trusted_folders in ~/.copilot/config.json."]
             return ["Copilot CLI loads the rf-harness skill and hooks at the next start."]
         where = ".claude/settings.json and .github/copilot/settings.json" if opts.scope == "project" else \
             str(copilot_home() / "settings.json")

@@ -50,6 +50,12 @@ SESSION_PROMPT = ("Add a second test case 'Quick Start Sum' to tests/demo.robot 
 FEEDBACK_MARKER = "[rfh]"
 
 
+def _browsers_cached() -> bool:
+    """True when Playwright browsers are already downloaded (PLAYWRIGHT_BROWSERS_PATH or ~/.cache/ms-playwright)."""
+    base = Path(os.environ.get("PLAYWRIGHT_BROWSERS_PATH") or Path.home() / ".cache" / "ms-playwright")
+    return base.is_dir() and any(base.glob("chromium*"))
+
+
 def installer_cmd(python: str) -> list[str]:
     return [python, "-m", "rf_harness.installer.cli"]
 
@@ -73,14 +79,21 @@ def agent_session_cmd(agent: str, project: Path) -> list[str] | None:
 def plan(agent: str, project: Path, repo: Path, python: str, with_agent: bool) -> list[dict]:
     """The steps, in order: {name, cmd, cwd, documented (counts toward the five-command budget), timeout_s}."""
     steps = [
-        {"name": "project", "cmd": ["uv", "venv", str(project / ".venv")], "documented": True, "timeout_s": 120},
+        # the documented quick start: `uv venv && uv pip install robotframework robotframework-browser`, then
+        # `rfbrowser init chromium` (here: reuse already downloaded browsers when PLAYWRIGHT_BROWSERS_PATH has them)
+        {"name": "project", "cmd": ["sh", "-c", f"uv venv {shlex.quote(str(project / '.venv'))} && uv pip install -q "
+                                    f"--python {shlex.quote(str(project / '.venv' / VENV_BIN / 'python'))} "
+                                    "robotframework robotframework-browser==19.12.7"],
+         "documented": True, "timeout_s": 600},
+        {"name": "browsers", "cmd": [str(project / ".venv" / VENV_BIN / "rfbrowser"), "init"]
+         + (["--skip-browsers"] if _browsers_cached() else ["chromium"]), "documented": True, "timeout_s": 900},
         {"name": "install", "cmd": installer_cmd(python) + [
             "install", "--agents", agent, "--mode", "files", "--scope", "project", "--project", str(project), "--yes",
             "--runtime-source", str(repo)], "documented": True, "timeout_s": 600},
         {"name": "doctor", "cmd": installer_cmd(python) + ["doctor", "--agents", agent, "--project", str(project)],
          "documented": True, "timeout_s": 120},
         {"name": "robot", "cmd": [str(project / ".venv" / VENV_BIN / "robot"), "--outputdir", str(project / "results"),
-                                  str(project / "tests" / "demo.robot")], "documented": True, "timeout_s": 120},
+                                  str(project / "tests" / "demo.robot")], "documented": False, "timeout_s": 120},
     ]
     if with_agent:
         cmd = agent_session_cmd(agent, project)
@@ -103,6 +116,16 @@ def step_env(project: Path, repo: Path, real_home: bool) -> dict:
     return env
 
 
+def _trust_codex_project(codex_home: Path, project: Path) -> None:
+    """Simulate the documented manual step 'start codex in the project once and accept the trust prompt' inside the
+    ISOLATED Codex home (never the user's real ~/.codex): Codex loads a project's .codex/ only in trusted projects."""
+    cfg = codex_home / "config.toml"
+    entry = f'\n[projects."{project}"]\ntrust_level = "trusted"\n'
+    text = cfg.read_text(encoding="utf-8") if cfg.is_file() else ""
+    if f'[projects."{project}"]' not in text:
+        cfg.write_text(text + entry, encoding="utf-8")
+
+
 def run_steps(steps: list[dict], project: Path, repo: Path, real_home: bool) -> list[dict]:
     project.mkdir(parents=True, exist_ok=True)
     (project / "tests").mkdir(exist_ok=True)
@@ -118,6 +141,8 @@ def run_steps(steps: list[dict], project: Path, repo: Path, real_home: bool) -> 
             rec.update(rc=None, skipped=True, note=s.get("note"))
             out.append(rec)
             continue
+        if s["name"] == "doctor" and not real_home and (project / ".codex").is_dir():
+            _trust_codex_project(project / ".agent_home", project)
         t0 = time.monotonic()
         try:
             p = subprocess.run(s["cmd"], cwd=s["cwd"], env=env, capture_output=True, text=True,

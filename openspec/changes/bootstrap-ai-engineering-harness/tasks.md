@@ -52,4 +52,4 @@
 
 - [ ] 8.1 Run the same-window release gate: rf-harness vs the hookpkg32 prototype on Claude Code, Codex, OpenCode and Qwen 3.8 Flash, 3 reps, live scenarios. Verify the gate report passes non-inferiority and archive it as evidence round 8.
 - [ ] 8.2 With the owner's explicit go-ahead (repository already private from 1.3): make it public, enable Pages, configure PyPI trusted publishing, tag `v1.0.0`, move `stable`, and publish the wheel, sdist and transcript assets. Verify that `uvx robotframework-harness install` works from PyPI on a clean machine and that `claude plugin marketplace add manykarim/robotframework-ai-engineering` installs v1.0.0.
-- [ ] 8.3 Add a pointer in rf-mcp's change `robotcode-agent-harness` (design D9 and runtime specs superseded by this repository). Verify `openspec validate` passes in both repositories.
+- [x] 8.3 Add a pointer in rf-mcp's change `robotcode-agent-harness` (design D9 and runtime specs superseded by this repository). Verify `openspec validate` passes in both repositories.

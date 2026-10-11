@@ -60,3 +60,43 @@ def vscode_claude_home() -> Path:
 def user_agents_skills() -> Path:
     """The cross-vendor user skills folder Codex reads (``~/.agents/skills``)."""
     return Path.home() / ".agents" / "skills"
+
+
+def copilot_trusted_folders() -> list[str] | None:
+    """`trusted_folders` from $COPILOT_HOME/config.json (Copilot CLI runs repository hooks only in these folders).
+    None when the file is missing or unreadable. The file may contain // comments, so a regex fallback is used."""
+    import json
+    import re
+
+    cfg = copilot_home() / "config.json"
+    try:
+        text = cfg.read_text(encoding="utf-8")
+    except OSError:
+        return None
+    try:
+        data = json.loads(text)
+        folders = data.get("trusted_folders") if isinstance(data, dict) else None
+        return [str(f) for f in folders] if isinstance(folders, list) else []
+    except ValueError:
+        m = re.search(r'"trusted_folders"\s*:\s*\[(.*?)\]', text, re.S)
+        return re.findall(r'"((?:[^"\\]|\\.)*)"', m.group(1)) if m else []
+
+
+def copilot_folder_trusted(project: Path) -> bool | None:
+    """True when `project` or one of its parents is a Copilot trusted folder; None when Copilot's config is absent."""
+    folders = copilot_trusted_folders()
+    if folders is None:
+        return None
+    try:
+        resolved = Path(project).resolve()
+    except OSError:
+        resolved = Path(project)
+    for f in folders:
+        try:
+            root = Path(f).expanduser().resolve()
+        except OSError:
+            continue
+        if resolved == root or root in resolved.parents:
+            return True
+    return False
+
