@@ -78,12 +78,14 @@ jobs:
       DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || false }}
       TAG: gh${{ github.run_id }}
       AB_OUT_DIR: ${{ github.workspace }}/eval/runs
-      AB_WORK_BASE: ${{ runner.temp }}/ab-eval
       AB_VENV_BIN: ${{ github.workspace }}/.eval-venv/bin
       AB_RF_MCP_CMD: ${{ github.workspace }}/.eval-venv/bin/python -m robotmcp.server
       AB_CLAUDE_AUTH: api-key
       AB_MIN_OR_BALANCE: "0.5"
     steps:
+      - name: Cell work dir (runner context is not available in job-level env)
+        run: echo "AB_WORK_BASE=$RUNNER_TEMP/ab-eval" >> "$GITHUB_ENV"
+
       - uses: actions/checkout@v4
 
       - uses: astral-sh/setup-uv@v6
