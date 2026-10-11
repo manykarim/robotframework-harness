@@ -1,0 +1,5 @@
+Import Library    Browser    timeout=5s
+New Browser    chromium    headless=True
+New Page    https://www.saucedemo.com
+Click    [data-test="login-btn"]
+.exit

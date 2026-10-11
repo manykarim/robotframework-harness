@@ -1,0 +1,16 @@
+### mode=reopen
+v1 Fill Text missing arg                   diagnostics after 2.317 s (4 publishes) ["DataError: Keyword 'Browser.Fill Text' expected 2 to 3 arguments, got 1."]
+v2 fixed                                   diagnostics after 0.008 s (1 publishes) []
+v3 typo Clik                               diagnostics after 0.025 s (9 publishes) ["KeywordNotFound: No keyword with name 'Clik' found."]
+v4 add RequestsLibrary + undefined var     diagnostics after 0.015 s (1 publishes) []
+v5 selenium kw in browser session          diagnostics after 0.015 s (5 publishes) []
+completion at keyword position: 0.203s, 300 items, 600200 chars
+hover on 'Input Text': 0.004s, 4 chars: null
+### mode=change
+v1 Fill Text missing arg                   diagnostics after 2.316 s (4 publishes) ["DataError: Keyword 'Browser.Fill Text' expected 2 to 3 arguments, got 1."]
+v2 fixed                                   diagnostics after None s (0 publishes) []
+v3 typo Clik                               diagnostics after None s (0 publishes) []
+v4 add RequestsLibrary + undefined var     diagnostics after None s (0 publishes) []
+v5 selenium kw in browser session          diagnostics after None s (0 publishes) []
+completion at keyword position: 0.191s, 300 items, 600198 chars
+hover on 'Input Text': 0.005s, 1448 chars: {"contents": {"kind": "markdown", "value": "### Keyword *Fill Text*\n\n#### Arguments: \n\n| | | | |\n|:--|:--|:--|:--|\n| `selector`| : `str` |  |  |\n| `txt`|

@@ -1,0 +1,6 @@
+Import Library    Browser
+New Browser    chromium    headless=True
+New Page    https://www.saucedemo.com
+${t}=    Get Title
+Log    TITLE=${t}    console=True
+Close Browser

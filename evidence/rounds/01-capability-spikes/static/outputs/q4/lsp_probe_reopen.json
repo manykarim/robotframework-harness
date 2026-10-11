@@ -1,0 +1,65 @@
+{
+ "init_s": 0.8186964448541403,
+ "capabilities": [
+  "codeActionProvider",
+  "codeLensProvider",
+  "completionProvider",
+  "definitionProvider",
+  "documentFormattingProvider",
+  "documentHighlightProvider",
+  "documentRangeFormattingProvider",
+  "executeCommandProvider",
+  "foldingRangeProvider",
+  "hoverProvider",
+  "implementationProvider",
+  "inlayHintProvider",
+  "inlineValueProvider",
+  "referencesProvider",
+  "renameProvider",
+  "selectionRangeProvider",
+  "semanticTokensProvider",
+  "signatureHelpProvider",
+  "textDocumentSync",
+  "workspace"
+ ],
+ "rows": [
+  {
+   "step": "v1 Fill Text missing arg",
+   "diag_s": 2.3167048688046634,
+   "publishes": 4,
+   "diags": [
+    "DataError: Keyword 'Browser.Fill Text' expected 2 to 3 arguments, got 1."
+   ]
+  },
+  {
+   "step": "v2 fixed",
+   "diag_s": 0.00805735308676958,
+   "publishes": 1,
+   "diags": []
+  },
+  {
+   "step": "v3 typo Clik",
+   "diag_s": 0.025179173797369003,
+   "publishes": 9,
+   "diags": [
+    "KeywordNotFound: No keyword with name 'Clik' found."
+   ]
+  },
+  {
+   "step": "v4 add RequestsLibrary + undefined var",
+   "diag_s": 0.014518334064632654,
+   "publishes": 1,
+   "diags": []
+  },
+  {
+   "step": "v5 selenium kw in browser session",
+   "diag_s": 0.014810692053288221,
+   "publishes": 5,
+   "diags": []
+  }
+ ],
+ "completion_s": 0.2033465770073235,
+ "completion_items": 300,
+ "hover_s": 0.003843107260763645,
+ "hover_chars": 4
+}

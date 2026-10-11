@@ -1,0 +1,11 @@
+spec                          kws  raw bytes     gzip  ~tok raw slim bytes  slim gz   sha256[:12]
+Browser.raw.json              152     818302   108125    204575      37854     7487  e7f2c67021a7
+BuiltIn.raw.json              109     370464    41695     92616      19417     3371  0f4ce9409df6
+Collections.raw.json           43     166386    15475     41596       8346     1527  f684e0403d8c
+RequestsLibrary.raw.json       33      88142     7969     22035       5527     1068  1e0d1da36478
+SeleniumLibrary.raw.json      182     402287    41629    100571      28879     4664  334bcd3522a2
+String.raw.json                32     128649    12557     32162       5414     1195  b63ff54fdfd0
+common.resource.raw.json        4       2618      679       654        466      282  453b7adaff20
+Browser.html.json             152     947403   116305    236850      37854     7487  0b6c4b85c63d
+SeleniumLibrary.html.json     182     447113    43638    111778      28879     4664  c43ab227831e
+RequestsLibrary.html.json      33      97164     8543     24291       5527     1069  c5f33e92f870

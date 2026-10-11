@@ -1,0 +1,145 @@
+[
+ {
+  "query": "click element",
+  "scope": null,
+  "ms": 1.5,
+  "top": [
+   "SeleniumLibrary.Click Element",
+   "SeleniumLibrary.Double Click Element",
+   "Browser.Click",
+   "SeleniumLibrary.Click Element At Coordinates",
+   "Browser.Click With Options",
+   "SeleniumLibrary.Click Button"
+  ]
+ },
+ {
+  "query": "click element",
+  "scope": "Browser",
+  "ms": 1.3,
+  "top": [
+   "Browser.Click",
+   "Browser.Click With Options",
+   "Browser.Add Locator Handler Click",
+   "Browser.Get Element States",
+   "Browser.Get Element",
+   "Browser.Get Element By"
+  ]
+ },
+ {
+  "query": "fill text",
+  "scope": null,
+  "ms": 1.2,
+  "top": [
+   "Browser.Fill Text",
+   "Browser.Fill Secret",
+   "SeleniumLibrary.Input Text Into Alert",
+   "SeleniumLibrary.Input Text",
+   "Browser.Clear Text",
+   "SeleniumLibrary.Clear Element Text"
+  ]
+ },
+ {
+  "query": "fill text",
+  "scope": "Browser",
+  "ms": 1.3,
+  "top": [
+   "Browser.Fill Text",
+   "Browser.Fill Secret",
+   "Browser.Clear Text",
+   "Browser.Get Text",
+   "Browser.Type Text",
+   "BuiltIn.Replace Variables"
+  ]
+ },
+ {
+  "query": "post json",
+  "scope": null,
+  "ms": 1.2,
+  "top": [
+   "RequestsLibrary.Post Request",
+   "RequestsLibrary.POST",
+   "RequestsLibrary.To Json",
+   "RequestsLibrary.POST On Session",
+   "RequestsLibrary.Put Request",
+   "RequestsLibrary.Get Request"
+  ]
+ },
+ {
+  "query": "post json",
+  "scope": "RequestsLibrary",
+  "ms": 1.3,
+  "top": [
+   "RequestsLibrary.Post Request",
+   "RequestsLibrary.POST",
+   "RequestsLibrary.To Json",
+   "RequestsLibrary.POST On Session",
+   "RequestsLibrary.Put Request",
+   "RequestsLibrary.Get Request"
+  ]
+ },
+ {
+  "query": "wait until visible",
+  "scope": null,
+  "ms": 1.3,
+  "top": [
+   "SeleniumLibrary.Wait Until Element Is Visible",
+   "SeleniumLibrary.Wait Until Element Is Not Visible",
+   "SeleniumLibrary.Wait Until Location Is",
+   "SeleniumLibrary.Wait Until Location Contains",
+   "SeleniumLibrary.Wait Until Location Is Not",
+   "SeleniumLibrary.Wait Until Page Contains"
+  ]
+ },
+ {
+  "query": "wait until visible",
+  "scope": "SeleniumLibrary",
+  "ms": 1.4,
+  "top": [
+   "SeleniumLibrary.Wait Until Element Is Visible",
+   "SeleniumLibrary.Wait Until Element Is Not Visible",
+   "SeleniumLibrary.Wait Until Location Is",
+   "SeleniumLibrary.Wait Until Location Contains",
+   "SeleniumLibrary.Wait Until Location Is Not",
+   "SeleniumLibrary.Wait Until Page Contains"
+  ]
+ },
+ {
+  "query": "wait until visible",
+  "scope": null,
+  "ms": 1.3,
+  "top": [
+   "SeleniumLibrary.Wait Until Element Is Visible",
+   "SeleniumLibrary.Wait Until Element Is Not Visible",
+   "SeleniumLibrary.Wait Until Location Is",
+   "SeleniumLibrary.Wait Until Location Contains",
+   "SeleniumLibrary.Wait Until Location Is Not",
+   "SeleniumLibrary.Wait Until Page Contains"
+  ]
+ },
+ {
+  "query": "wait until visible",
+  "scope": "Browser",
+  "ms": 1.4,
+  "top": [
+   "Browser.Wait For Navigation",
+   "Browser.Wait For Load State",
+   "BuiltIn.Wait Until Keyword Succeeds",
+   "Browser.Wait For",
+   "Browser.Wait For All Promises",
+   "Browser.Wait For Alerts"
+  ]
+ },
+ {
+  "query": "get text",
+  "scope": null,
+  "ms": 1.3,
+  "top": [
+   "SeleniumLibrary.Get Text",
+   "Browser.Get Text",
+   "SeleniumLibrary.Input Text",
+   "SeleniumLibrary.Input Text Into Alert",
+   "Browser.Clear Text",
+   "Browser.Fill Text"
+  ]
+ }
+]

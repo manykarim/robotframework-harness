@@ -1,0 +1,10 @@
+# The root .gitignore hides Robot Framework run artefacts (results/, output.xml, log.html, report.html) and the
+# MkDocs build dir (site/). Inside the evidence archive these names are archived data: re-include them.
+!results/
+!output.xml
+!log.html
+!report.html
+!site/
+# never committed: release-asset build dir (transcript packs) and local caches
+_release_assets/
+__pycache__/

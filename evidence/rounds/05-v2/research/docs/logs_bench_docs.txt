@@ -1,0 +1,27 @@
+{'kind': 'show_kw', 'lib': 'Browser', 'kw': 'Get Text', 'median_ms': 1446, 'min_ms': 1338, 'bytes': 2382, 'lines': 51, 'rc': 0, 'err': ''}
+{'kind': 'show_kw', 'lib': 'Browser', 'kw': 'Click', 'median_ms': 1397, 'min_ms': 1309, 'bytes': 1365, 'lines': 41, 'rc': 0, 'err': ''}
+{'kind': 'show_kw', 'lib': 'Browser', 'kw': 'Get Aria Snapshot', 'median_ms': 1346, 'min_ms': 1305, 'bytes': 3040, 'lines': 61, 'rc': 0, 'err': ''}
+{'kind': 'show_kw', 'lib': 'SeleniumLibrary', 'kw': 'Click Element', 'median_ms': 1234, 'min_ms': 1211, 'bytes': 1829, 'lines': 40, 'rc': 0, 'err': ''}
+{'kind': 'show_kw', 'lib': 'SeleniumLibrary', 'kw': 'Wait Until Element Is Visible', 'median_ms': 1255, 'min_ms': 1234, 'bytes': 512, 'lines': 14, 'rc': 0, 'err': ''}
+{'kind': 'show_kw', 'lib': 'RequestsLibrary', 'kw': 'GET On Session', 'median_ms': 1137, 'min_ms': 1077, 'bytes': 850, 'lines': 25, 'rc': 0, 'err': ''}
+{'kind': 'show_kw', 'lib': 'BuiltIn', 'kw': 'Should Be Equal', 'median_ms': 1163, 'min_ms': 1113, 'bytes': 3112, 'lines': 74, 'rc': 0, 'err': ''}
+{'kind': 'show_kw', 'lib': 'Collections', 'kw': 'Get From Dictionary', 'median_ms': 1162, 'min_ms': 1107, 'bytes': 938, 'lines': 38, 'rc': 0, 'err': ''}
+{'kind': 'show_kw', 'lib': 'resources/shop.resource', 'kw': 'Add Product To Cart', 'median_ms': 1149, 'min_ms': 1067, 'bytes': 196, 'lines': 12, 'rc': 0, 'err': ''}
+{'kind': 'show_kw', 'lib': 'libs/ArgLib.py::advanced', 'kw': 'Advanced Keyword', 'median_ms': 1142, 'min_ms': 1094, 'bytes': 138, 'lines': 11, 'rc': 0, 'err': ''}
+{'kind': 'show_kw', 'lib': 'Browser::timeout=5s', 'kw': 'Get Text', 'median_ms': 1322, 'min_ms': 1293, 'bytes': 2382, 'lines': 51, 'rc': 0, 'err': ''}
+{'kind': 'show_all_md', 'lib': 'Browser', 'median_ms': 1332, 'bytes': 282339, 'rc': 0}
+{'kind': 'list', 'lib': 'Browser', 'median_ms': 1380, 'bytes': 2501, 'rc': 0}
+{'kind': 'json_file', 'lib': 'Browser', 'median_ms': 1426, 'bytes': 947403, 'rc': 0, 'err': ''}
+{'kind': 'show_all_md', 'lib': 'SeleniumLibrary', 'median_ms': 1257, 'bytes': 132130, 'rc': 0}
+{'kind': 'list', 'lib': 'SeleniumLibrary', 'median_ms': 1269, 'bytes': 3963, 'rc': 0}
+{'kind': 'json_file', 'lib': 'SeleniumLibrary', 'median_ms': 1315, 'bytes': 447113, 'rc': 0, 'err': ''}
+{'kind': 'show_all_md', 'lib': 'RequestsLibrary', 'median_ms': 1153, 'bytes': 42473, 'rc': 0}
+{'kind': 'list', 'lib': 'RequestsLibrary', 'median_ms': 1138, 'bytes': 490, 'rc': 0}
+{'kind': 'json_file', 'lib': 'RequestsLibrary', 'median_ms': 1162, 'bytes': 97164, 'rc': 0, 'err': ''}
+{'kind': 'show_all_md', 'lib': 'BuiltIn', 'median_ms': 1236, 'bytes': 133004, 'rc': 0}
+{'kind': 'list', 'lib': 'BuiltIn', 'median_ms': 1202, 'bytes': 2017, 'rc': 0}
+{'kind': 'json_file', 'lib': 'BuiltIn', 'median_ms': 1059, 'bytes': None, 'rc': 252, 'err': ''}
+{'kind': 'show_all_md', 'lib': 'resources/shop.resource', 'median_ms': 977, 'bytes': 485, 'rc': 0}
+{'kind': 'list', 'lib': 'resources/shop.resource', 'median_ms': 999, 'bytes': 39, 'rc': 0}
+{'kind': 'json_file', 'lib': 'resources/shop.resource', 'median_ms': 1022, 'bytes': 3132, 'rc': 0, 'err': ''}
+{'kind': 'plain_libdoc_show_kw', 'lib': 'Browser', 'median_ms': 592, 'bytes': 2382, 'rc': 0}

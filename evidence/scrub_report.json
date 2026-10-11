@@ -1,0 +1,67 @@
+{
+ "about": "Substitutions made by scrub.py while importing (counts only, never values).",
+ "files_scanned": 1245,
+ "files_changed": 276,
+ "files_skipped": [],
+ "rule_counts": {
+  "email": 4,
+  "home_path": 7732,
+  "home_slug": 23
+ },
+ "by_folder": {
+  "eval-snapshots/ab-7994ae3": {
+   "home_path": 5,
+   "home_slug": 5
+  },
+  "harness-versions/hookpkg2": {
+   "home_path": 1
+  },
+  "harness-versions/hookpkg3": {
+   "home_path": 1
+  },
+  "harness-versions/hookpkg31": {
+   "home_path": 1
+  },
+  "harness-versions/hookpkg32": {
+   "home_path": 1
+  },
+  "rounds/01-capability-spikes": {
+   "home_path": 1275,
+   "home_slug": 6
+  },
+  "rounds/02-local-runtime": {
+   "home_path": 744,
+   "home_slug": 1
+  },
+  "rounds/03-lsp-robocop": {
+   "home_path": 239
+  },
+  "rounds/03a-ab-file-authoring": {
+   "home_path": 411,
+   "home_slug": 2
+  },
+  "rounds/03b-ab-live-journeys": {
+   "email": 1,
+   "home_path": 1028
+  },
+  "rounds/04-hooks-matrix-and-hooks-ab": {
+   "home_path": 743,
+   "home_slug": 1
+  },
+  "rounds/05-v2": {
+   "email": 1,
+   "home_path": 1875
+  },
+  "rounds/06-v3-main": {
+   "email": 2,
+   "home_path": 431,
+   "home_slug": 8
+  },
+  "rounds/07-v31-v32": {
+   "home_path": 969
+  },
+  "rounds/static-analysis": {
+   "home_path": 8
+  }
+ }
+}

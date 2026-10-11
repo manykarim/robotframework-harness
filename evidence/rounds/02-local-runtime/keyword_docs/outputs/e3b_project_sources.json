@@ -1,0 +1,38 @@
+{
+ "import_s": 0.386,
+ "rc_pylib": {
+  "s": 0.008,
+  "n": 2,
+  "kws": [
+   "Create Order",
+   "Delete Order"
+  ],
+  "inits": [
+   "(library) \"ShopApi\": (base_url: str, token: str | None = ${None})"
+  ],
+  "errors": []
+ },
+ "rc_pylib_noargs": {
+  "s": 0.004,
+  "n": 0,
+  "errors": [
+   "Library 'ShopApi' expected 1 to 2 arguments, got 0."
+  ]
+ },
+ "rc_resource": {
+  "s": 0.002,
+  "n": 2,
+  "sig": "(keyword) \"Login As User\": (username, password, timeout = 10s)",
+  "md": "### Keyword *Login As User*\n\n#### Arguments: \n\n| | | | |\n|:--|:--|:--|:--|\n| `username`|   |  |  |\n| `password`|   |  |  |\n| `timeout`|   | = | `10s` |\n\n**Tags**: \n- auth\n- ui\n\n#### Documentation:\nLogs into the shop with the given credentials.\n\n\nOpens the login form, fills `username` and `password` "
+ },
+ "rf_pylib_args": {
+  "s": 0.002,
+  "n": 2
+ },
+ "rf_pylib_noargs": "ERR DataError: Library 'ShopApi' expected 1 to 2 arguments, got 0.",
+ "rf_resource": {
+  "s": 0.002,
+  "n": 2,
+  "first": "Add Product To Cart"
+ }
+}

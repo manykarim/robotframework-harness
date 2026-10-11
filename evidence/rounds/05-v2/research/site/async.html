@@ -1,0 +1,11 @@
+<!doctype html><html><head><title>R5 Async</title></head><body>
+<h1>Async</h1>
+<div id="host"></div>
+<script>
+const p=new URLSearchParams(location.search);
+for (const [id,ms] of [['a1500',1500],['a4000',4000],['a8000',8000]]){
+  const d=parseInt(p.get(id)||ms);
+  setTimeout(()=>{const b=document.createElement('button');b.id=id;b.textContent='Ready '+id;document.getElementById('host').appendChild(b);},d);
+}
+setTimeout(()=>{document.title='R5 Async Done'},2000);
+</script></body></html>

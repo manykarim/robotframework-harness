@@ -1,0 +1,685 @@
+{
+ "api_s05_minimal": {
+  "s": 0.75,
+  "chars": 2423,
+  "raw": {
+   "success": false,
+   "execution_status": "failed",
+   "statistics": {
+    "total": 3,
+    "passed": 1,
+    "failed": 2,
+    "skipped": 0,
+    "success_rate": 0.3333333333333333
+   },
+   "execution_details": {
+    "start_time": "2026-10-01T00:59:40.345758",
+    "end_time": "2026-10-01T00:59:40.963626",
+    "elapsed_time": 0.617868,
+    "return_code": 2,
+    "robot_version": "Unknown"
+   },
+   "suite_info": {
+    "name": "S05 Booker Runtime Fail",
+    "full_name": "S05 Booker Runtime Fail",
+    "documentation": "rf-mcp style API suite with two runtime-only failures (statically clean).",
+    "test_count": 3,
+    "metadata": {},
+    "source": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/suites/s05_booker_runtime_fail.robot"
+   },
+   "output_files": {
+    "output_xml": "/tmp/rf_mcp_execution_3wexl67u/output_normal_file_s05_booker_runtime_fail.robot_bad76d80/output.xml",
+    "log_html": "/tmp/rf_mcp_execution_3wexl67u/output_normal_file_s05_booker_runtime_fail.robot_bad76d80/log.html",
+    "report_html": "/tmp/rf_mcp_execution_3wexl67u/output_normal_file_s05_booker_runtime_fail.robot_bad76d80/report.html"
+   },
+   "failed_tests": [
+    {
+     "name": "Auth Expected Status Mismatch",
+     "status": "FAIL",
+     "message": "Url: https://restful-booker.herokuapp.com/auth Expected status: 200 != 401",
+     "start_time": "2026-10-01T00:59:40.847717",
+     "end_time": "2026-10-01T00:59:40.961430",
+     "elapsed_time": 0.113713,
+     "tags": [
+      "api",
+      "restful-booker"
+     ],
+     "critical": true,
+     "failing_keyword": {
+      "name": "POST On Session",
+      "message": "Url: https://restful-booker.herokuapp.com/auth Expected status: 200 != 401",
+      "elapsed_time": 0.112748
+     }
+    },
+    {
+     "name": "Post Without Url",
+     "status": "FAIL",
+     "message": "TypeError: RequestsOnSessionKeywords.post_on_session() missing 1 required positional argument: 'url'",
+     "start_time": "2026-10-01T00:59:40.961614",
+     "end_time": "2026-10-01T00:59:40.963187",
+     "elapsed_time": 0.001573,
+     "tags": [
+      "api",
+      "restful-booker"
+     ],
+     "critical": true,
+     "failing_keyword": {
+      "name": "POST On Session",
+      "message": "TypeError: RequestsOnSessionKeywords.post_on_session() missing 1 required positional argument: 'url'",
+      "elapsed_time": 0.000612
+     }
+    }
+   ],
+   "execution_id": "normal_file_s05_booker_runtime_fail.robot_bad76d80",
+   "session_id": "file_s05_booker_runtime_fail.robot",
+   "tool": "run_test_suite",
+   "suite_file_generated": "s05_booker_runtime_fail.robot",
+   "suite_file_path": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/suites/s05_booker_runtime_fail.robot",
+   "mode": "full"
+  }
+ },
+ "api_s05_standard": {
+  "s": 0.61,
+  "chars": 2421,
+  "raw": {
+   "success": false,
+   "execution_status": "failed",
+   "statistics": {
+    "total": 3,
+    "passed": 1,
+    "failed": 2,
+    "skipped": 0,
+    "success_rate": 0.3333333333333333
+   },
+   "execution_details": {
+    "start_time": "2026-10-01T00:59:41.007504",
+    "end_time": "2026-10-01T00:59:41.582437",
+    "elapsed_time": 0.574933,
+    "return_code": 2,
+    "robot_version": "Unknown"
+   },
+   "suite_info": {
+    "name": "S05 Booker Runtime Fail",
+    "full_name": "S05 Booker Runtime Fail",
+    "documentation": "rf-mcp style API suite with two runtime-only failures (statically clean).",
+    "test_count": 3,
+    "metadata": {},
+    "source": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/suites/s05_booker_runtime_fail.robot"
+   },
+   "output_files": {
+    "output_xml": "/tmp/rf_mcp_execution_3wexl67u/output_normal_file_s05_booker_runtime_fail.robot_39ce51dc/output.xml",
+    "log_html": "/tmp/rf_mcp_execution_3wexl67u/output_normal_file_s05_booker_runtime_fail.robot_39ce51dc/log.html",
+    "report_html": "/tmp/rf_mcp_execution_3wexl67u/output_normal_file_s05_booker_runtime_fail.robot_39ce51dc/report.html"
+   },
+   "failed_tests": [
+    {
+     "name": "Auth Expected Status Mismatch",
+     "status": "FAIL",
+     "message": "Url: https://restful-booker.herokuapp.com/auth Expected status: 200 != 401",
+     "start_time": "2026-10-01T00:59:41.467340",
+     "end_time": "2026-10-01T00:59:41.578006",
+     "elapsed_time": 0.110666,
+     "tags": [
+      "api",
+      "restful-booker"
+     ],
+     "critical": true,
+     "failing_keyword": {
+      "name": "POST On Session",
+      "message": "Url: https://restful-booker.herokuapp.com/auth Expected status: 200 != 401",
+      "elapsed_time": 0.10879
+     }
+    },
+    {
+     "name": "Post Without Url",
+     "status": "FAIL",
+     "message": "TypeError: RequestsOnSessionKeywords.post_on_session() missing 1 required positional argument: 'url'",
+     "start_time": "2026-10-01T00:59:41.578352",
+     "end_time": "2026-10-01T00:59:41.581855",
+     "elapsed_time": 0.003503,
+     "tags": [
+      "api",
+      "restful-booker"
+     ],
+     "critical": true,
+     "failing_keyword": {
+      "name": "POST On Session",
+      "message": "TypeError: RequestsOnSessionKeywords.post_on_session() missing 1 required positional argument: 'url'",
+      "elapsed_time": 0.00106
+     }
+    }
+   ],
+   "execution_id": "normal_file_s05_booker_runtime_fail.robot_39ce51dc",
+   "session_id": "file_s05_booker_runtime_fail.robot",
+   "tool": "run_test_suite",
+   "suite_file_generated": "s05_booker_runtime_fail.robot",
+   "suite_file_path": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/suites/s05_booker_runtime_fail.robot",
+   "mode": "full"
+  }
+ },
+ "api_s05_detailed": {
+  "s": 0.64,
+  "chars": 3314,
+  "raw": {
+   "success": false,
+   "execution_status": "failed",
+   "statistics": {
+    "total": 3,
+    "passed": 1,
+    "failed": 2,
+    "skipped": 0,
+    "success_rate": 0.3333333333333333
+   },
+   "execution_details": {
+    "start_time": "2026-10-01T00:59:41.621217",
+    "end_time": "2026-10-01T00:59:42.211933",
+    "elapsed_time": 0.590716,
+    "return_code": 2,
+    "robot_version": "Unknown"
+   },
+   "suite_info": {
+    "name": "S05 Booker Runtime Fail",
+    "full_name": "S05 Booker Runtime Fail",
+    "documentation": "rf-mcp style API suite with two runtime-only failures (statically clean).",
+    "test_count": 3,
+    "metadata": {},
+    "source": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/suites/s05_booker_runtime_fail.robot"
+   },
+   "output_files": {
+    "output_xml": "/tmp/rf_mcp_execution_3wexl67u/output_normal_file_s05_booker_runtime_fail.robot_9b6a554d/output.xml",
+    "log_html": "/tmp/rf_mcp_execution_3wexl67u/output_normal_file_s05_booker_runtime_fail.robot_9b6a554d/log.html",
+    "report_html": "/tmp/rf_mcp_execution_3wexl67u/output_normal_file_s05_booker_runtime_fail.robot_9b6a554d/report.html"
+   },
+   "test_details": [
+    {
+     "name": "Auth Returns Token",
+     "status": "PASS",
+     "message": "",
+     "start_time": "2026-10-01T00:59:41.647738",
+     "end_time": "2026-10-01T00:59:42.081556",
+     "elapsed_time": 0.433818,
+     "tags": [
+      "api",
+      "restful-booker"
+     ],
+     "critical": true
+    },
+    {
+     "name": "Auth Expected Status Mismatch",
+     "status": "FAIL",
+     "message": "Url: https://restful-booker.herokuapp.com/auth Expected status: 200 != 401",
+     "start_time": "2026-10-01T00:59:42.081838",
+     "end_time": "2026-10-01T00:59:42.207679",
+     "elapsed_time": 0.125841,
+     "tags": [
+      "api",
+      "restful-booker"
+     ],
+     "critical": true
+    },
+    {
+     "name": "Post Without Url",
+     "status": "FAIL",
+     "message": "TypeError: RequestsOnSessionKeywords.post_on_session() missing 1 required positional argument: 'url'",
+     "start_time": "2026-10-01T00:59:42.208039",
+     "end_time": "2026-10-01T00:59:42.211288",
+     "elapsed_time": 0.003249,
+     "tags": [
+      "api",
+      "restful-booker"
+     ],
+     "critical": true
+    }
+   ],
+   "failed_tests": [
+    {
+     "name": "Auth Expected Status Mismatch",
+     "status": "FAIL",
+     "message": "Url: https://restful-booker.herokuapp.com/auth Expected status: 200 != 401",
+     "start_time": "2026-10-01T00:59:42.081838",
+     "end_time": "2026-10-01T00:59:42.207679",
+     "elapsed_time": 0.125841,
+     "tags": [
+      "api",
+      "restful-booker"
+     ],
+     "critical": true,
+     "failing_keyword": {
+      "name": "POST On Session",
+      "message": "Url: https://restful-booker.herokuapp.com/auth Expected status: 200 != 401",
+      "elapsed_time": 0.123468
+     }
+    },
+    {
+     "name": "Post Without Url",
+     "status": "FAIL",
+     "message": "TypeError: RequestsOnSessionKeywords.post_on_session() missing 1 required positional argument: 'url'",
+     "start_time": "2026-10-01T00:59:42.208039",
+     "end_time": "2026-10-01T00:59:42.211288",
+     "elapsed_time": 0.003249,
+     "tags": [
+      "api",
+      "restful-booker"
+     ],
+     "critical": true,
+     "failing_keyword": {
+      "name": "POST On Session",
+      "message": "TypeError: RequestsOnSessionKeywords.post_on_session() missing 1 required positional argument: 'url'",
+      "elapsed_time": 0.001251
+     }
+    }
+   ],
+   "execution_id": "normal_file_s05_booker_runtime_fail.robot_9b6a554d",
+   "session_id": "file_s05_booker_runtime_fail.robot",
+   "tool": "run_test_suite",
+   "suite_file_generated": "s05_booker_runtime_fail.robot",
+   "suite_file_path": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/suites/s05_booker_runtime_fail.robot",
+   "mode": "full"
+  }
+ },
+ "ui_s02_minimal": {
+  "s": 0.92,
+  "chars": 7187,
+  "raw": {
+   "success": false,
+   "execution_status": "failed",
+   "statistics": {
+    "total": 2,
+    "passed": 0,
+    "failed": 2,
+    "skipped": 0,
+    "success_rate": 0.0
+   },
+   "execution_details": {
+    "start_time": "2026-10-01T00:59:42.260413",
+    "end_time": "2026-10-01T00:59:43.147784",
+    "elapsed_time": 0.887371,
+    "return_code": 2,
+    "robot_version": "Unknown"
+   },
+   "suite_info": {
+    "name": "S02 Saucedemo Bdd Valid",
+    "full_name": "S02 Saucedemo Bdd Valid",
+    "documentation": "Sauce Demo login and cart flow (rf-mcp build_test_suite style, bdd_style=True).\nOne test fails on purpose (problem_user sorting) so results analysis has a failure.",
+    "test_count": 2,
+    "metadata": {},
+    "source": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/suites/s02_saucedemo_bdd_valid.robot"
+   },
+   "output_files": {
+    "output_xml": "/tmp/rf_mcp_execution_3wexl67u/output_normal_file_s02_saucedemo_bdd_valid.robot_3fbba2c8/output.xml",
+    "log_html": "/tmp/rf_mcp_execution_3wexl67u/output_normal_file_s02_saucedemo_bdd_valid.robot_3fbba2c8/log.html",
+    "report_html": "/tmp/rf_mcp_execution_3wexl67u/output_normal_file_s02_saucedemo_bdd_valid.robot_3fbba2c8/report.html"
+   },
+   "failed_tests": [
+    {
+     "name": "Standard User Adds Backpack To Cart",
+     "status": "FAIL",
+     "message": "Parent suite setup failed:\nError: browserType.launch: Executable doesn't exist at ~/workspace/rf-mcp-robotcode/.venv/lib/python3.13/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium_headless_shell-1208/chrome-headless-shell-linux64/chrome-headless-shell\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551 Looks like Playwright Test or Playwright was just installed or updated. \u2551\n\u2551 Please run the following command to download new browsers:              \u2551\n\u2551                                                                         \u2551\n\u2551     npx playwright install                                              \u2551\n\u2551                                                                         \u2551\n\u2551 <3 Playwright Team                                                      \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d",
+     "start_time": "2026-10-01T00:59:43.115780",
+     "end_time": "2026-10-01T00:59:43.125791",
+     "elapsed_time": 0.010011,
+     "tags": [
+      "saucedemo",
+      "smoke",
+      "ui"
+     ],
+     "critical": true
+    },
+    {
+     "name": "Problem User Sorts By Price",
+     "status": "FAIL",
+     "message": "Parent suite setup failed:\nError: browserType.launch: Executable doesn't exist at ~/workspace/rf-mcp-robotcode/.venv/lib/python3.13/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium_headless_shell-1208/chrome-headless-shell-linux64/chrome-headless-shell\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551 Looks like Playwright Test or Playwright was just installed or updated. \u2551\n\u2551 Please run the following command to download new browsers:              \u2551\n\u2551                                                                         \u2551\n\u2551     npx playwright install                                              \u2551\n\u2551                                                                         \u2551\n\u2551 <3 Playwright Team                                                      \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d",
+     "start_time": "2026-10-01T00:59:43.132497",
+     "end_time": "2026-10-01T00:59:43.136034",
+     "elapsed_time": 0.003537,
+     "tags": [
+      "expected-fail",
+      "saucedemo",
+      "ui"
+     ],
+     "critical": true
+    }
+   ],
+   "suite_message": "Suite setup failed:\nError: browserType.launch: Executable doesn't exist at ~/workspace/rf-mcp-robotcode/.venv/lib/python3.13/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium_headless_shell-1208/chrome-headless-shell-linux64/chrome-headless-shell\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551 Looks like Playwright Test or Playwright was just installed or updated. \u2551\n\u2551 Please run the following command to download new browsers:              \u2551\n\u2551                                                                         \u2551\n\u2551     npx playwright install                                              \u2551\n\u2551                                                                         \u2551\n\u2551 <3 Playwright Team                                                      \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d",
+   "execution_id": "normal_file_s02_saucedemo_bdd_valid.robot_3fbba2c8",
+   "session_id": "file_s02_saucedemo_bdd_valid.robot",
+   "tool": "run_test_suite",
+   "suite_file_generated": "s02_saucedemo_bdd_valid.robot",
+   "suite_file_path": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/suites/s02_saucedemo_bdd_valid.robot",
+   "mode": "full"
+  }
+ },
+ "ui_s02_standard": {
+  "s": 0.92,
+  "chars": 7187,
+  "raw": {
+   "success": false,
+   "execution_status": "failed",
+   "statistics": {
+    "total": 2,
+    "passed": 0,
+    "failed": 2,
+    "skipped": 0,
+    "success_rate": 0.0
+   },
+   "execution_details": {
+    "start_time": "2026-10-01T00:59:43.175068",
+    "end_time": "2026-10-01T00:59:44.056892",
+    "elapsed_time": 0.881824,
+    "return_code": 2,
+    "robot_version": "Unknown"
+   },
+   "suite_info": {
+    "name": "S02 Saucedemo Bdd Valid",
+    "full_name": "S02 Saucedemo Bdd Valid",
+    "documentation": "Sauce Demo login and cart flow (rf-mcp build_test_suite style, bdd_style=True).\nOne test fails on purpose (problem_user sorting) so results analysis has a failure.",
+    "test_count": 2,
+    "metadata": {},
+    "source": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/suites/s02_saucedemo_bdd_valid.robot"
+   },
+   "output_files": {
+    "output_xml": "/tmp/rf_mcp_execution_3wexl67u/output_normal_file_s02_saucedemo_bdd_valid.robot_bbac6227/output.xml",
+    "log_html": "/tmp/rf_mcp_execution_3wexl67u/output_normal_file_s02_saucedemo_bdd_valid.robot_bbac6227/log.html",
+    "report_html": "/tmp/rf_mcp_execution_3wexl67u/output_normal_file_s02_saucedemo_bdd_valid.robot_bbac6227/report.html"
+   },
+   "failed_tests": [
+    {
+     "name": "Standard User Adds Backpack To Cart",
+     "status": "FAIL",
+     "message": "Parent suite setup failed:\nError: browserType.launch: Executable doesn't exist at ~/workspace/rf-mcp-robotcode/.venv/lib/python3.13/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium_headless_shell-1208/chrome-headless-shell-linux64/chrome-headless-shell\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551 Looks like Playwright Test or Playwright was just installed or updated. \u2551\n\u2551 Please run the following command to download new browsers:              \u2551\n\u2551                                                                         \u2551\n\u2551     npx playwright install                                              \u2551\n\u2551                                                                         \u2551\n\u2551 <3 Playwright Team                                                      \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d",
+     "start_time": "2026-10-01T00:59:44.025590",
+     "end_time": "2026-10-01T00:59:44.032401",
+     "elapsed_time": 0.006811,
+     "tags": [
+      "saucedemo",
+      "smoke",
+      "ui"
+     ],
+     "critical": true
+    },
+    {
+     "name": "Problem User Sorts By Price",
+     "status": "FAIL",
+     "message": "Parent suite setup failed:\nError: browserType.launch: Executable doesn't exist at ~/workspace/rf-mcp-robotcode/.venv/lib/python3.13/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium_headless_shell-1208/chrome-headless-shell-linux64/chrome-headless-shell\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551 Looks like Playwright Test or Playwright was just installed or updated. \u2551\n\u2551 Please run the following command to download new browsers:              \u2551\n\u2551                                                                         \u2551\n\u2551     npx playwright install                                              \u2551\n\u2551                                                                         \u2551\n\u2551 <3 Playwright Team                                                      \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d",
+     "start_time": "2026-10-01T00:59:44.040146",
+     "end_time": "2026-10-01T00:59:44.043605",
+     "elapsed_time": 0.003459,
+     "tags": [
+      "expected-fail",
+      "saucedemo",
+      "ui"
+     ],
+     "critical": true
+    }
+   ],
+   "suite_message": "Suite setup failed:\nError: browserType.launch: Executable doesn't exist at ~/workspace/rf-mcp-robotcode/.venv/lib/python3.13/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium_headless_shell-1208/chrome-headless-shell-linux64/chrome-headless-shell\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551 Looks like Playwright Test or Playwright was just installed or updated. \u2551\n\u2551 Please run the following command to download new browsers:              \u2551\n\u2551                                                                         \u2551\n\u2551     npx playwright install                                              \u2551\n\u2551                                                                         \u2551\n\u2551 <3 Playwright Team                                                      \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d",
+   "execution_id": "normal_file_s02_saucedemo_bdd_valid.robot_bbac6227",
+   "session_id": "file_s02_saucedemo_bdd_valid.robot",
+   "tool": "run_test_suite",
+   "suite_file_generated": "s02_saucedemo_bdd_valid.robot",
+   "suite_file_path": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/suites/s02_saucedemo_bdd_valid.robot",
+   "mode": "full"
+  }
+ },
+ "ui_s02_detailed": {
+  "s": 0.92,
+  "chars": 11149,
+  "raw": {
+   "success": false,
+   "execution_status": "failed",
+   "statistics": {
+    "total": 2,
+    "passed": 0,
+    "failed": 2,
+    "skipped": 0,
+    "success_rate": 0.0
+   },
+   "execution_details": {
+    "start_time": "2026-10-01T00:59:44.090503",
+    "end_time": "2026-10-01T00:59:44.977166",
+    "elapsed_time": 0.886663,
+    "return_code": 2,
+    "robot_version": "Unknown"
+   },
+   "suite_info": {
+    "name": "S02 Saucedemo Bdd Valid",
+    "full_name": "S02 Saucedemo Bdd Valid",
+    "documentation": "Sauce Demo login and cart flow (rf-mcp build_test_suite style, bdd_style=True).\nOne test fails on purpose (problem_user sorting) so results analysis has a failure.",
+    "test_count": 2,
+    "metadata": {},
+    "source": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/suites/s02_saucedemo_bdd_valid.robot"
+   },
+   "output_files": {
+    "output_xml": "/tmp/rf_mcp_execution_3wexl67u/output_normal_file_s02_saucedemo_bdd_valid.robot_4b5c5340/output.xml",
+    "log_html": "/tmp/rf_mcp_execution_3wexl67u/output_normal_file_s02_saucedemo_bdd_valid.robot_4b5c5340/log.html",
+    "report_html": "/tmp/rf_mcp_execution_3wexl67u/output_normal_file_s02_saucedemo_bdd_valid.robot_4b5c5340/report.html"
+   },
+   "test_details": [
+    {
+     "name": "Standard User Adds Backpack To Cart",
+     "status": "FAIL",
+     "message": "Parent suite setup failed:\nError: browserType.launch: Executable doesn't exist at ~/workspace/rf-mcp-robotcode/.venv/lib/python3.13/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium_headless_shell-1208/chrome-headless-shell-linux64/chrome-headless-shell\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551 Looks like Playwright Test or Playwright was just installed or updated. \u2551\n\u2551 Please run the following command to download new browsers:              \u2551\n\u2551                                                                         \u2551\n\u2551     npx playwright install                                              \u2551\n\u2551                                                                         \u2551\n\u2551 <3 Playwright Team                                                      \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d",
+     "start_time": "2026-10-01T00:59:44.947484",
+     "end_time": "2026-10-01T00:59:44.954022",
+     "elapsed_time": 0.006538,
+     "tags": [
+      "saucedemo",
+      "smoke",
+      "ui"
+     ],
+     "critical": true
+    },
+    {
+     "name": "Problem User Sorts By Price",
+     "status": "FAIL",
+     "message": "Parent suite setup failed:\nError: browserType.launch: Executable doesn't exist at ~/workspace/rf-mcp-robotcode/.venv/lib/python3.13/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium_headless_shell-1208/chrome-headless-shell-linux64/chrome-headless-shell\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551 Looks like Playwright Test or Playwright was just installed or updated. \u2551\n\u2551 Please run the following command to download new browsers:              \u2551\n\u2551                                                                         \u2551\n\u2551     npx playwright install                                              \u2551\n\u2551                                                                         \u2551\n\u2551 <3 Playwright Team                                                      \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d",
+     "start_time": "2026-10-01T00:59:44.960736",
+     "end_time": "2026-10-01T00:59:44.963876",
+     "elapsed_time": 0.00314,
+     "tags": [
+      "expected-fail",
+      "saucedemo",
+      "ui"
+     ],
+     "critical": true
+    }
+   ],
+   "failed_tests": [
+    {
+     "name": "Standard User Adds Backpack To Cart",
+     "status": "FAIL",
+     "message": "Parent suite setup failed:\nError: browserType.launch: Executable doesn't exist at ~/workspace/rf-mcp-robotcode/.venv/lib/python3.13/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium_headless_shell-1208/chrome-headless-shell-linux64/chrome-headless-shell\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551 Looks like Playwright Test or Playwright was just installed or updated. \u2551\n\u2551 Please run the following command to download new browsers:              \u2551\n\u2551                                                                         \u2551\n\u2551     npx playwright install                                              \u2551\n\u2551                                                                         \u2551\n\u2551 <3 Playwright Team                                                      \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d",
+     "start_time": "2026-10-01T00:59:44.947484",
+     "end_time": "2026-10-01T00:59:44.954022",
+     "elapsed_time": 0.006538,
+     "tags": [
+      "saucedemo",
+      "smoke",
+      "ui"
+     ],
+     "critical": true
+    },
+    {
+     "name": "Problem User Sorts By Price",
+     "status": "FAIL",
+     "message": "Parent suite setup failed:\nError: browserType.launch: Executable doesn't exist at ~/workspace/rf-mcp-robotcode/.venv/lib/python3.13/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium_headless_shell-1208/chrome-headless-shell-linux64/chrome-headless-shell\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551 Looks like Playwright Test or Playwright was just installed or updated. \u2551\n\u2551 Please run the following command to download new browsers:              \u2551\n\u2551                                                                         \u2551\n\u2551     npx playwright install                                              \u2551\n\u2551                                                                         \u2551\n\u2551 <3 Playwright Team                                                      \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d",
+     "start_time": "2026-10-01T00:59:44.960736",
+     "end_time": "2026-10-01T00:59:44.963876",
+     "elapsed_time": 0.00314,
+     "tags": [
+      "expected-fail",
+      "saucedemo",
+      "ui"
+     ],
+     "critical": true
+    }
+   ],
+   "suite_message": "Suite setup failed:\nError: browserType.launch: Executable doesn't exist at ~/workspace/rf-mcp-robotcode/.venv/lib/python3.13/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium_headless_shell-1208/chrome-headless-shell-linux64/chrome-headless-shell\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551 Looks like Playwright Test or Playwright was just installed or updated. \u2551\n\u2551 Please run the following command to download new browsers:              \u2551\n\u2551                                                                         \u2551\n\u2551     npx playwright install                                              \u2551\n\u2551                                                                         \u2551\n\u2551 <3 Playwright Team                                                      \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d",
+   "execution_id": "normal_file_s02_saucedemo_bdd_valid.robot_4b5c5340",
+   "session_id": "file_s02_saucedemo_bdd_valid.robot",
+   "tool": "run_test_suite",
+   "suite_file_generated": "s02_saucedemo_bdd_valid.robot",
+   "suite_file_path": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/suites/s02_saucedemo_bdd_valid.robot",
+   "mode": "full"
+  }
+ },
+ "dry_s03_minimal": {
+  "s": 1.37,
+  "chars": 1553,
+  "raw": {
+   "success": false,
+   "validation_status": "failed",
+   "suite_info": {
+    "name": "S03 Saucedemo Bdd Broken",
+    "test_count": 2,
+    "keyword_count": 0,
+    "libraries_used": []
+   },
+   "validation_results": {
+    "syntax_valid": false,
+    "imports_valid": true,
+    "keywords_found": false,
+    "issues": [
+     {
+      "type": "missing_keyword",
+      "message": "Keyword 'Input Text' not found in available libraries",
+      "severity": "error",
+      "context": "Input Text"
+     },
+     {
+      "type": "missing_keyword",
+      "message": "Keyword 'When the user adds sauce-labs-backpack to the cart' not found in available libraries",
+      "severity": "error",
+      "context": "When the user adds sauce-labs-backpack to the cart"
+     },
+     {
+      "type": "missing_keyword",
+      "message": "Keyword 'Input Text' not found in available libraries",
+      "severity": "error",
+      "context": "Input Text"
+     }
+    ],
+    "warnings": [],
+    "suggestions": [
+     "Check if the library containing 'Input Text' is imported or if keyword name is spelled correctly",
+     "Check if the library containing 'When the user adds sauce-labs-backpack to the cart' is imported or if keyword name is spelled correctly",
+     "Check if the library containing 'Input Text' is imported or if keyword name is spelled correctly"
+    ]
+   },
+   "return_code": 2,
+   "execution_id": "dry_file_s03_saucedemo_bdd_broken.robot_178f2eb8",
+   "session_id": "file_s03_saucedemo_bdd_broken.robot",
+   "tool": "run_test_suite_dry",
+   "execution_time": 0,
+   "suite_file_generated": "s03_saucedemo_bdd_broken.robot",
+   "suite_file_path": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/suites/s03_saucedemo_bdd_broken.robot",
+   "mode": "dry"
+  }
+ },
+ "dry_s03_standard": {
+  "s": 1.35,
+  "chars": 1553,
+  "raw": {
+   "success": false,
+   "validation_status": "failed",
+   "suite_info": {
+    "name": "S03 Saucedemo Bdd Broken",
+    "test_count": 2,
+    "keyword_count": 0,
+    "libraries_used": []
+   },
+   "validation_results": {
+    "syntax_valid": false,
+    "imports_valid": true,
+    "keywords_found": false,
+    "issues": [
+     {
+      "type": "missing_keyword",
+      "message": "Keyword 'Input Text' not found in available libraries",
+      "severity": "error",
+      "context": "Input Text"
+     },
+     {
+      "type": "missing_keyword",
+      "message": "Keyword 'When the user adds sauce-labs-backpack to the cart' not found in available libraries",
+      "severity": "error",
+      "context": "When the user adds sauce-labs-backpack to the cart"
+     },
+     {
+      "type": "missing_keyword",
+      "message": "Keyword 'Input Text' not found in available libraries",
+      "severity": "error",
+      "context": "Input Text"
+     }
+    ],
+    "warnings": [],
+    "suggestions": [
+     "Check if the library containing 'Input Text' is imported or if keyword name is spelled correctly",
+     "Check if the library containing 'When the user adds sauce-labs-backpack to the cart' is imported or if keyword name is spelled correctly",
+     "Check if the library containing 'Input Text' is imported or if keyword name is spelled correctly"
+    ]
+   },
+   "return_code": 2,
+   "execution_id": "dry_file_s03_saucedemo_bdd_broken.robot_6b00b1c2",
+   "session_id": "file_s03_saucedemo_bdd_broken.robot",
+   "tool": "run_test_suite_dry",
+   "execution_time": 0,
+   "suite_file_generated": "s03_saucedemo_bdd_broken.robot",
+   "suite_file_path": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/suites/s03_saucedemo_bdd_broken.robot",
+   "mode": "dry"
+  }
+ },
+ "dry_s03_detailed": {
+  "s": 1.34,
+  "chars": 1553,
+  "raw": {
+   "success": false,
+   "validation_status": "failed",
+   "suite_info": {
+    "name": "S03 Saucedemo Bdd Broken",
+    "test_count": 2,
+    "keyword_count": 0,
+    "libraries_used": []
+   },
+   "validation_results": {
+    "syntax_valid": false,
+    "imports_valid": true,
+    "keywords_found": false,
+    "issues": [
+     {
+      "type": "missing_keyword",
+      "message": "Keyword 'Input Text' not found in available libraries",
+      "severity": "error",
+      "context": "Input Text"
+     },
+     {
+      "type": "missing_keyword",
+      "message": "Keyword 'When the user adds sauce-labs-backpack to the cart' not found in available libraries",
+      "severity": "error",
+      "context": "When the user adds sauce-labs-backpack to the cart"
+     },
+     {
+      "type": "missing_keyword",
+      "message": "Keyword 'Input Text' not found in available libraries",
+      "severity": "error",
+      "context": "Input Text"
+     }
+    ],
+    "warnings": [],
+    "suggestions": [
+     "Check if the library containing 'Input Text' is imported or if keyword name is spelled correctly",
+     "Check if the library containing 'When the user adds sauce-labs-backpack to the cart' is imported or if keyword name is spelled correctly",
+     "Check if the library containing 'Input Text' is imported or if keyword name is spelled correctly"
+    ]
+   },
+   "return_code": 2,
+   "execution_id": "dry_file_s03_saucedemo_bdd_broken.robot_a66f21b5",
+   "session_id": "file_s03_saucedemo_bdd_broken.robot",
+   "tool": "run_test_suite_dry",
+   "execution_time": 0,
+   "suite_file_generated": "s03_saucedemo_bdd_broken.robot",
+   "suite_file_path": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/suites/s03_saucedemo_bdd_broken.robot",
+   "mode": "dry"
+  }
+ }
+}

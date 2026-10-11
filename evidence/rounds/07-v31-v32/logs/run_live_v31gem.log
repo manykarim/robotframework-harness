@@ -1,0 +1,22 @@
+[06:37:23] [config] models={'claude': 'claude-haiku-4-5', 'codex': 'gpt-5.6-luna', 'opencode': 'minimax-coding-plan/MiniMax-M2.5', 'copilot': 'gpt-4.1'} codex_effort='medium' opencode_variant='' results=~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/ab/harness/results_live_v31gem.jsonl work=~/.cache/ab-eval/work_live_v31gem prune=True browser_concurrency=1 or_models={'gemini-3.8-flash': 'google/gemini-3.8-flash'} or_budget_usd=90
+[06:37:24] [openrouter] models={'gemini-3.8-flash': 'google/gemini-3.8-flash'} budget=$90.00 baseline usage=$0.5431 spent since batch start=$0.0000
+[06:37:24] disk before:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  234G  214G  7,6G  97% /
+[06:37:24] [batch] 20 cells to run (skipping 0 done), concurrency=3, browser<=1, per-agent<=2, prune=True
+[06:49:30] [1/20] cc-or:gemini-3.8-flash|mcp|tricentis_quote|1 -> status=ok primary=False pass=1/12 mcp_calls=42 tools=80 726.5s or_est=$0.947496 or_delta=$2.020688
+[07:03:12] [2/20] cc-or:gemini-3.8-flash|hookpkg31|carconfig_order|1 -> status=ok primary=False pass=9/11 mcp_calls=0 tools=80 821.0s or_est=$3.810305 or_delta=$4.741002
+[07:14:54] [3/20] cc-or:gemini-3.8-flash|mcp|demoshop_order|1 -> status=ok primary=False pass=1/12 mcp_calls=41 tools=80 702.7s or_est=$1.126322 or_delta=$2.400632
+[07:25:34] [4/20] cc-or:gemini-3.8-flash|hookpkg31|demoshop_order|1 -> status=ok primary=False pass=7/12 mcp_calls=0 tools=80 639.9s or_est=$2.166281 or_delta=$3.050956
+[07:32:22] [5/20] cc-or:gemini-3.8-flash|mcp|demoshop_debug|1 -> status=ok primary=False pass=13/17 mcp_calls=0 tools=27 408.1s or_est=$0.105551 or_delta=$0.423158
+[07:46:07] [6/20] cc-or:gemini-3.8-flash|hookpkg31|demoshop_debug|1 -> status=ok primary=False pass=13/17 mcp_calls=0 tools=80 824.3s or_est=$1.642535 or_delta=$2.5275
+[08:05:24] [7/20] cc-or:gemini-3.8-flash|mcp|tricentis_debug|1 -> status=ok primary=False pass=10/15 mcp_calls=9 tools=80 1157.0s or_est=$1.278773 or_delta=$2.706566
+[08:18:04] [8/20] cc-or:gemini-3.8-flash|hookpkg31|tricentis_debug|1 -> status=ok primary=False pass=10/15 mcp_calls=0 tools=80 759.7s or_est=$1.52223 or_delta=$2.496335
+[08:29:36] [9/20] cc-or:gemini-3.8-flash|mcp|tricentis_quote|2 -> status=ok primary=False pass=1/12 mcp_calls=42 tools=80 692.2s or_est=$0.779343 or_delta=$1.869809
+[08:40:04] [10/20] cc-or:gemini-3.8-flash|hookpkg31|tricentis_quote|2 -> status=ok primary=False pass=7/12 mcp_calls=0 tools=80 627.6s or_est=$1.250828 or_delta=$2.231169
+[08:46:22] signal 15: aborting - killing running agents, no new cells
+[08:46:29] [11/20] cc-or:gemini-3.8-flash|mcp|carconfig_order|2 -> status=aborted primary=False pass=1/11 mcp_calls=26 tools=38 385.5s or_est=$0.0 or_delta=$1.500969
+[08:46:30] [batch] done: ran=11 skipped=9 reaper_kills_total=0 (final sweep 0) openrouter: spent $26.9333 of $90.00, 0 cells skipped by the budget
+[08:46:30] disk after:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  234G  215G  7,3G  97% /

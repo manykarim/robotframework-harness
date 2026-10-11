@@ -1,0 +1,257 @@
+{
+ "round": "7",
+ "folder": "07-v31-v32",
+ "title": "v3.1 per-model output profiles, cheap OpenRouter models, Haiku 5.5, and v3.2",
+ "kind": "ab",
+ "findings": [
+  "findings_v31.md",
+  "hookpkg31_build_findings.md",
+  "hookpkg32_build_findings.md"
+ ],
+ "main_results": "results/results_live_v31sub.jsonl",
+ "runs": [
+  {
+   "results_file": "results/results_live_v31gem.jsonl",
+   "rows": 11,
+   "rows_ok": 10,
+   "agents": [
+    "cc-or:gemini-3.8-flash"
+   ],
+   "models": {
+    "cc-or:gemini-3.8-flash": [
+     "google/gemini-3.8-flash"
+    ]
+   },
+   "arms": [
+    "hookpkg31",
+    "mcp"
+   ],
+   "scenarios": [
+    "carconfig_order",
+    "demoshop_debug",
+    "demoshop_order",
+    "tricentis_debug",
+    "tricentis_quote"
+   ],
+   "reps": [
+    1,
+    2
+   ],
+   "harness_version": [
+    "rc-3-journey"
+   ],
+   "max_turns": [
+    80
+   ],
+   "timeout_s": [
+    1800
+   ],
+   "started_utc": "2026-10-10T04:37:24.425361+00:00",
+   "finished_utc": "2026-10-10T06:46:29.920364+00:00"
+  },
+  {
+   "results_file": "results/results_live_v31or.jsonl",
+   "rows": 71,
+   "rows_ok": 71,
+   "agents": [
+    "cc-or:deepseek-v4.1-flash",
+    "cc-or:glm-5.3-flash",
+    "cc-or:qwen3.8-flash"
+   ],
+   "models": {
+    "cc-or:deepseek-v4.1-flash": [
+     "deepseek/deepseek-v4.1-flash"
+    ],
+    "cc-or:glm-5.3-flash": [
+     "z-ai/glm-5.3-flash"
+    ],
+    "cc-or:qwen3.8-flash": [
+     "qwen/qwen3.8-flash"
+    ]
+   },
+   "arms": [
+    "hookpkg3",
+    "hookpkg31",
+    "mcp"
+   ],
+   "scenarios": [
+    "carconfig_order",
+    "demoshop_debug",
+    "demoshop_order",
+    "tricentis_debug",
+    "tricentis_quote"
+   ],
+   "reps": [
+    1,
+    2
+   ],
+   "harness_version": [
+    "rc-3-journey"
+   ],
+   "max_turns": [
+    80
+   ],
+   "timeout_s": [
+    1800
+   ],
+   "started_utc": "2026-10-10T04:37:24.432864+00:00",
+   "finished_utc": "2026-10-10T10:19:46.078689+00:00"
+  },
+  {
+   "results_file": "results/results_live_v31sub.jsonl",
+   "rows": 135,
+   "rows_ok": 135,
+   "agents": [
+    "claude",
+    "codex",
+    "opencode"
+   ],
+   "models": {
+    "claude": [
+     "claude-haiku-5-5"
+    ],
+    "codex": [
+     "gpt-5.6-luna@medium"
+    ],
+    "opencode": [
+     "minimax-coding-plan/MiniMax-M2.5"
+    ]
+   },
+   "arms": [
+    "hookpkg3",
+    "hookpkg31",
+    "mcp"
+   ],
+   "scenarios": [
+    "carconfig_order",
+    "demoshop_debug",
+    "demoshop_order",
+    "tricentis_debug",
+    "tricentis_quote"
+   ],
+   "reps": [
+    1,
+    2,
+    3
+   ],
+   "harness_version": [
+    "rc-3-journey"
+   ],
+   "max_turns": [
+    80
+   ],
+   "timeout_s": [
+    1800
+   ],
+   "started_utc": "2026-10-10T04:37:29.784912+00:00",
+   "finished_utc": "2026-10-10T13:33:19.185643+00:00"
+  },
+  {
+   "results_file": "results/results_live_v32.jsonl",
+   "rows": 39,
+   "rows_ok": 39,
+   "agents": [
+    "cc-or:qwen3.8-flash",
+    "codex"
+   ],
+   "models": {
+    "cc-or:qwen3.8-flash": [
+     "qwen/qwen3.8-flash"
+    ],
+    "codex": [
+     "gpt-5.6-luna@medium"
+    ]
+   },
+   "arms": [
+    "hookpkg31",
+    "hookpkg32"
+   ],
+   "scenarios": [
+    "carconfig_order",
+    "demoshop_debug",
+    "demoshop_order",
+    "tricentis_debug",
+    "tricentis_quote"
+   ],
+   "reps": [
+    1,
+    2,
+    3
+   ],
+   "harness_version": [
+    "rc-3-journey"
+   ],
+   "max_turns": [
+    80
+   ],
+   "timeout_s": [
+    1800
+   ],
+   "started_utc": "2026-10-10T07:23:43.708188+00:00",
+   "finished_utc": "2026-10-10T11:33:14.804919+00:00"
+  },
+  {
+   "results_file": "results/results_live_v32smoke.jsonl",
+   "rows": 1,
+   "rows_ok": 1,
+   "agents": [
+    "cc-or:qwen3.8-flash"
+   ],
+   "models": {
+    "cc-or:qwen3.8-flash": [
+     "qwen/qwen3.8-flash"
+    ]
+   },
+   "arms": [
+    "hookpkg32"
+   ],
+   "scenarios": [
+    "tricentis_quote"
+   ],
+   "reps": [
+    1
+   ],
+   "harness_version": [
+    "rc-3-journey"
+   ],
+   "max_turns": [
+    80
+   ],
+   "timeout_s": [
+    1800
+   ],
+   "started_utc": "2026-10-10T07:12:09.825072+00:00",
+   "finished_utc": "2026-10-10T07:23:10.658394+00:00"
+  }
+ ],
+ "dates_utc": [
+  "2026-10-10"
+ ],
+ "harness_snapshot": "../../eval-snapshots/ab-7994ae3/harness/",
+ "scenario_definitions": "scenarios.json",
+ "transcript_dirs": [
+  "transcripts_live_v31sub",
+  "transcripts_live_v31or",
+  "transcripts_live_v31gem",
+  "transcripts_live_v32",
+  "transcripts_live_v32smoke"
+ ],
+ "agent_versions_recorded": {
+  "claude_code": [
+   "2.1.296"
+  ],
+  "codex": "not recorded in results or transcripts",
+  "opencode": "not recorded in results or transcripts"
+ },
+ "excluded_rows": {
+  "counts": {
+   "aborted": 1,
+   "codex_backend_outage": 1,
+   "contaminated": 1,
+   "credits_402": 76,
+   "not_ok_in_file": 1
+  },
+  "files": "excluded/excluded_<reason>.jsonl",
+  "note": "rows with in_results_file=true are still in the results file (contaminated / not ok); the others were removed from it and are kept here with their reason and the backup they came from"
+ }
+}

@@ -1,0 +1,5 @@
+output-dir = "out"
+
+[profiles.short]
+[profiles.short.variables]
+RFH_TIMEOUT = "2s"

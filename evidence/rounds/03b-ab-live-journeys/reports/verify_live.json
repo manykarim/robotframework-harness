@@ -1,0 +1,260 @@
+{
+ "at": "2026-10-01T23:45:36.894980+00:00",
+ "runs": 3,
+ "scenarios": {
+  "tricentis_quote": {
+   "reference": [
+    {
+     "primary": true,
+     "checks": "8/8",
+     "first_pass": true,
+     "flaky": false,
+     "durations_s": [
+      17.7
+     ],
+     "grade_s": 17.8,
+     "failed_checks": [],
+     "robot_detail": "#1 exit=0 stats={'pass': 1, 'fail': 0, 'skip': 0} 1 test, 1 passed, 0 failed"
+    },
+    {
+     "primary": true,
+     "checks": "8/8",
+     "first_pass": true,
+     "flaky": false,
+     "durations_s": [
+      18.3
+     ],
+     "grade_s": 18.4,
+     "failed_checks": [],
+     "robot_detail": "#1 exit=0 stats={'pass': 1, 'fail': 0, 'skip': 0} 1 test, 1 passed, 0 failed"
+    },
+    {
+     "primary": true,
+     "checks": "8/8",
+     "first_pass": true,
+     "flaky": false,
+     "durations_s": [
+      18.1
+     ],
+     "grade_s": 18.2,
+     "failed_checks": [],
+     "robot_detail": "#1 exit=0 stats={'pass': 1, 'fail': 0, 'skip': 0} 1 test, 1 passed, 0 failed"
+    }
+   ],
+   "pristine": {
+    "primary": false,
+    "checks": "1/8",
+    "first_pass": false,
+    "flaky": false,
+    "durations_s": null,
+    "grade_s": 0.1,
+    "failed_checks": [
+     "file_exists",
+     "file_contains",
+     "file_contains",
+     "file_contains",
+     "start date computed at run time",
+     "robot_pass",
+     "no_deprecated_keywords"
+    ],
+    "robot_detail": "robot file missing: ~/.cache/ab-eval/work_live/_verify/tricentis_quote-pristine-e7e2/workspace/tests/auto_quote.robot"
+   },
+   "reference_first_pass": "3/3",
+   "reference_pass_with_retry": "3/3",
+   "robot_s_first_attempt": [
+    17.7,
+    18.3,
+    18.1
+   ]
+  },
+  "carconfig_order": {
+   "reference": [
+    {
+     "primary": true,
+     "checks": "7/7",
+     "first_pass": true,
+     "flaky": false,
+     "durations_s": [
+      7.3
+     ],
+     "grade_s": 7.4,
+     "failed_checks": [],
+     "robot_detail": "#1 exit=0 stats={'pass': 1, 'fail': 0, 'skip': 0} 1 test, 1 passed, 0 failed"
+    },
+    {
+     "primary": true,
+     "checks": "7/7",
+     "first_pass": true,
+     "flaky": false,
+     "durations_s": [
+      7.3
+     ],
+     "grade_s": 7.4,
+     "failed_checks": [],
+     "robot_detail": "#1 exit=0 stats={'pass': 1, 'fail': 0, 'skip': 0} 1 test, 1 passed, 0 failed"
+    },
+    {
+     "primary": true,
+     "checks": "7/7",
+     "first_pass": true,
+     "flaky": false,
+     "durations_s": [
+      7.2
+     ],
+     "grade_s": 7.3,
+     "failed_checks": [],
+     "robot_detail": "#1 exit=0 stats={'pass': 1, 'fail': 0, 'skip': 0} 1 test, 1 passed, 0 failed"
+    }
+   ],
+   "pristine": {
+    "primary": false,
+    "checks": "1/7",
+    "first_pass": false,
+    "flaky": false,
+    "durations_s": null,
+    "grade_s": 0.1,
+    "failed_checks": [
+     "file_exists",
+     "file_contains",
+     "file_contains",
+     "file_contains",
+     "robot_pass",
+     "no_deprecated_keywords"
+    ],
+    "robot_detail": "robot file missing: ~/.cache/ab-eval/work_live/_verify/carconfig_order-pristine-817e/workspace/tests/x5_order.robot"
+   },
+   "reference_first_pass": "3/3",
+   "reference_pass_with_retry": "3/3",
+   "robot_s_first_attempt": [
+    7.3,
+    7.3,
+    7.2
+   ]
+  },
+  "demoshop_debug": {
+   "reference": [
+    {
+     "primary": true,
+     "checks": "13/13",
+     "first_pass": true,
+     "flaky": false,
+     "durations_s": [
+      23.2
+     ],
+     "grade_s": 23.3,
+     "failed_checks": [],
+     "robot_detail": "#1 exit=0 stats={'pass': 5, 'fail': 0, 'skip': 0} 5 tests, 5 passed, 0 failed"
+    },
+    {
+     "primary": true,
+     "checks": "13/13",
+     "first_pass": true,
+     "flaky": false,
+     "durations_s": [
+      32.2
+     ],
+     "grade_s": 32.3,
+     "failed_checks": [],
+     "robot_detail": "#1 exit=0 stats={'pass': 5, 'fail': 0, 'skip': 0} 5 tests, 5 passed, 0 failed"
+    },
+    {
+     "primary": true,
+     "checks": "13/13",
+     "first_pass": true,
+     "flaky": false,
+     "durations_s": [
+      22.7
+     ],
+     "grade_s": 22.8,
+     "failed_checks": [],
+     "robot_detail": "#1 exit=0 stats={'pass': 5, 'fail': 0, 'skip': 0} 5 tests, 5 passed, 0 failed"
+    }
+   ],
+   "pristine": {
+    "primary": false,
+    "checks": "12/13",
+    "first_pass": false,
+    "flaky": false,
+    "durations_s": [
+     42.3,
+     44.9
+    ],
+    "grade_s": 87.3,
+    "failed_checks": [
+     "robot_pass"
+    ],
+    "robot_detail": "or.click: Timeout 10000ms exceeded. | Shop :: Flowline Supply shop regression suite.                        | FAIL | | 5 tests, 2 passed, 3 failed || #2 exit=3 stats={'pass': 2, 'fail': 3, 'skip': 0}                         | FAIL | | TimeoutError: locator.click: Timeout 10000ms exceeded. | Shop :: Flowline Supply shop regression suite.                        | FAIL | | 5 tests, 2 passed, 3 failed"
+   },
+   "reference_first_pass": "3/3",
+   "reference_pass_with_retry": "3/3",
+   "robot_s_first_attempt": [
+    23.2,
+    32.2,
+    22.7
+   ]
+  },
+  "tricentis_debug": {
+   "reference": [
+    {
+     "primary": true,
+     "checks": "11/11",
+     "first_pass": true,
+     "flaky": false,
+     "durations_s": [
+      28.4
+     ],
+     "grade_s": 28.5,
+     "failed_checks": [],
+     "robot_detail": "#1 exit=0 stats={'pass': 3, 'fail': 0, 'skip': 0} 3 tests, 3 passed, 0 failed"
+    },
+    {
+     "primary": true,
+     "checks": "11/11",
+     "first_pass": true,
+     "flaky": false,
+     "durations_s": [
+      27.6
+     ],
+     "grade_s": 27.7,
+     "failed_checks": [],
+     "robot_detail": "#1 exit=0 stats={'pass': 3, 'fail': 0, 'skip': 0} 3 tests, 3 passed, 0 failed"
+    },
+    {
+     "primary": true,
+     "checks": "11/11",
+     "first_pass": true,
+     "flaky": false,
+     "durations_s": [
+      29.5
+     ],
+     "grade_s": 29.7,
+     "failed_checks": [],
+     "robot_detail": "#1 exit=0 stats={'pass': 3, 'fail': 0, 'skip': 0} 3 tests, 3 passed, 0 failed"
+    }
+   ],
+   "pristine": {
+    "primary": false,
+    "checks": "9/11",
+    "first_pass": false,
+    "flaky": false,
+    "durations_s": [
+     14.5,
+     15.1
+    ],
+    "grade_s": 29.7,
+    "failed_checks": [
+     "start date computed at run time",
+     "robot_pass"
+    ],
+    "robot_detail": "                           | FAIL | | Truck Quote :: Truck insurance quote regression suite (Tricentis V... | FAIL | | 3 tests, 0 passed, 3 failed || #2 exit=3 stats={'pass': 0, 'fail': 3, 'skip': 0} | FAIL | | Truck Quote Can Be Sent                                               | FAIL | | Truck Quote :: Truck insurance quote regression suite (Tricentis V... | FAIL | | 3 tests, 0 passed, 3 failed"
+   },
+   "reference_first_pass": "3/3",
+   "reference_pass_with_retry": "3/3",
+   "robot_s_first_attempt": [
+    28.4,
+    27.6,
+    29.5
+   ]
+  }
+ }
+}

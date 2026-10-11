@@ -1,0 +1,57 @@
+paths = ["."]
+
+# Robocop "agent profile" (round 3 draft). Use with --config <this file>, or paste into robot.toml /
+# pyproject.toml. NB: a --config file NOT named exactly "robocop.toml" must use the [tool.robocop] tables,
+# otherwise robocop 9.1 silently ignores the whole file (verified).
+# Goal: only findings that mean "this will fail / behave wrong" or "outdated syntax an agent
+# should not write", no documentation/naming/length/spacing style noise.
+# Requires robocop >= 9.0 (project rules KW05/KW06/ARG08/IMP07/IMP09).
+
+[tool.robocop]
+# python_path = ["resources", "libs"]   # add resource / library dirs here (same as robot --pythonpath)
+analyze_libraries = true       # imports libraries (executes their code) to read keyword signatures
+# ignored_libraries = ["SeleniumLibrary"]   # skip slow/side-effecting libraries; files importing them get no KW05
+
+[tool.robocop.lint]
+select = [
+  # --- RF parse/model errors (robot would fail) ---
+  "ERR*",          # parsing-error, invalid-for-loop, invalid-if, non-existing-setting, return-in-test-case, ...
+  "ARG05",         # invalid-argument ([Arguments] definition errors)
+  "DUP01", "DUP02", "DUP03", "DUP09",   # duplicated test / keyword / variable, tests+tasks
+  "LEN05",         # empty test case (RF: "Test cannot be empty")
+  "LEN15", "LEN16", "LEN17", "LEN21",   # empty imports / empty teardown
+  "MISC08",        # BREAK/CONTINUE/RETURN outside loop
+  "NAME09",        # lowercase else / else if (becomes a keyword call)
+  "NAME10", "NAME11", "NAME16",         # empty kw/test name, invalid section header
+  "SPC14", "SPC16", "SPC17",            # mis-indented variables/settings/block bodies
+  "SPC19", "SPC20", "SPC21", "SPC22",   # value glued to setting / '...' / variable (fixable)
+  # --- project semantics (needs library import) ---
+  "KW05",          # keyword-not-found
+  "KW06",          # ambiguous-keyword-name
+  "ARG08",         # invalid-argument-count (libraries + user keywords)
+  "IMP07",         # unresolved-resource-import
+  "IMP09",         # unresolved-library-import (also bad library init args)
+  # --- outdated syntax an LLM learned from old docs (all safe --fix) ---
+  "DEPR03",        # WITH NAME -> AS
+  "DEPR04",        # singular section headers
+  "DEPR07",        # Force Tags / Default Tags -> Test Tags
+  "DEPR08",        # Run Keyword If / Unless -> IF
+  "DEPR09",        # Exit/Continue For Loop (If) -> BREAK/CONTINUE
+  "DEPR10",        # Return From Keyword (If) -> RETURN
+  "DEPR11",        # [Return] -> RETURN
+  # --- cheap likely-bug signals ---
+  "VAR11",         # overwriting reserved variable (${TEST_NAME}, ${OUTPUT_DIR} ...)
+  "VAR13",         # automatic variable used where it does not exist
+  "MISC10",        # unreachable code after RETURN/BREAK
+  "ARG01",         # unused [Arguments] entry - often a typo'd ${variable} in the body
+]
+# Not selected on purpose: DOC*, NAME01-08/12-18 (case conventions), LEN01-04/06-14 (sizes, line length),
+# SPC01-13/15/18/23/24 (blank lines, trailing ws), TAG*, IMP01-06, DEPR05/DEPR06 (Set Variable/Create List -> VAR:
+# valid RF 7 code, would make agents rewrite working steps), MISC04/09/13/14/16, VAR01-10/12, KW07, ARG09.
+configure = [
+  "ARG01.severity=I",
+  "DEPR11.severity=W",
+  "IMP09.severity=E",
+  "IMP07.severity=E",
+  "KW06.severity=E",
+]

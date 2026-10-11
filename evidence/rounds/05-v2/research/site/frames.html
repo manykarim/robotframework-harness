@@ -1,0 +1,7 @@
+<!doctype html><html><head><title>R5 Frames</title></head><body>
+<h1>Frames and Shadow</h1>
+<iframe id="pay" src="pay.html" width="400" height="120"></iframe>
+<my-widget id="w"></my-widget>
+<script>
+customElements.define('my-widget',class extends HTMLElement{constructor(){super();const r=this.attachShadow({mode:'open'});r.innerHTML='<button id="shadow-btn">Shadow Button</button><input id="shadow-in" aria-label="Shadow input">';}});
+</script></body></html>

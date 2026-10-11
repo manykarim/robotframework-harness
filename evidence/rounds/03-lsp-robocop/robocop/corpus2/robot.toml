@@ -1,0 +1,3 @@
+paths = ["cases"]
+output-dir = "../out/run2"
+console-colors = "off"

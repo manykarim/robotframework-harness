@@ -1,0 +1,16 @@
+[project]
+name = "rfmcp-local-spike"
+version = "0.0.1"
+description = "SPIKE: rf-mcp local helper daemon embedding robotcode's REPL engine"
+requires-python = ">=3.10"
+dependencies = []  # uses robotcode/robotframework from the project venv; client is stdlib-only
+
+[project.entry-points.robotcode]
+rfmcp = "rfmcp_local.plugin"
+
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["rfmcp_local"]

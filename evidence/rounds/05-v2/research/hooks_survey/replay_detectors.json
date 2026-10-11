@@ -1,0 +1,2737 @@
+{
+ "summary": {
+  "claude": {
+   "n": 60,
+   "loop_fired": {
+    "n_with": 19,
+    "pass_with": 0.21,
+    "pass_without": 0.46
+   },
+   "churn_fired": {
+    "n_with": 38,
+    "pass_with": 0.32,
+    "pass_without": 0.5
+   },
+   "loop_first_fire_at_fraction_of_session_median": 0.6,
+   "weakening_sessions_by_rule": {
+    "expected-value-changed": 18,
+    "assertions-removed": 39,
+    "timeout-raised": 16,
+    "test-deleted": 2,
+    "assert-keyword-weakened": 3,
+    "failure-swallowed": 3,
+    "try-except-added": 2,
+    "operator-weakened": 3
+   },
+   "debug_sessions_with_block_rule": 12,
+   "debug_n": 24,
+   "bash_guard_sessions_by_rule": {
+    "env-mutation": 1,
+    "huge-artifact-read": 3,
+    "shell-sleep-poll": 2
+   }
+  },
+  "codex": {
+   "n": 60,
+   "loop_fired": {
+    "n_with": 14,
+    "pass_with": 0.71,
+    "pass_without": 0.87
+   },
+   "churn_fired": {
+    "n_with": 0,
+    "pass_with": null,
+    "pass_without": 0.83
+   },
+   "loop_first_fire_at_fraction_of_session_median": 0.31,
+   "weakening_sessions_by_rule": {},
+   "debug_sessions_with_block_rule": 0,
+   "debug_n": 24,
+   "bash_guard_sessions_by_rule": {
+    "env-mutation": 1
+   }
+  },
+  "opencode": {
+   "n": 60,
+   "loop_fired": {
+    "n_with": 36,
+    "pass_with": 0.25,
+    "pass_without": 0.62
+   },
+   "churn_fired": {
+    "n_with": 47,
+    "pass_with": 0.32,
+    "pass_without": 0.69
+   },
+   "loop_first_fire_at_fraction_of_session_median": 0.49,
+   "weakening_sessions_by_rule": {
+    "assertions-removed": 37,
+    "test-deleted": 6,
+    "expected-value-changed": 22,
+    "operator-weakened": 2,
+    "failure-swallowed": 5,
+    "timeout-raised": 24,
+    "assert-keyword-weakened": 2
+   },
+   "debug_sessions_with_block_rule": 11,
+   "debug_n": 24,
+   "bash_guard_sessions_by_rule": {
+    "huge-artifact-read": 7,
+    "env-mutation": 1
+   }
+  }
+ },
+ "rows": [
+  {
+   "agent": "claude",
+   "arm": "mcp",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": false,
+   "n_events": 13,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {
+    "expected-value-changed": 1,
+    "assertions-removed": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "neither",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": false,
+   "n_events": 51,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 5,
+    "timeout-raised": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "neither",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": false,
+   "n_events": 20,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "skillpkg",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": false,
+   "n_events": 77,
+   "loop_first": 65,
+   "loop_fires": 1,
+   "churn_fires": 0,
+   "weak": {
+    "assertions-removed": 2,
+    "expected-value-changed": 2,
+    "timeout-raised": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "mcp",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": true,
+   "n_events": 19,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "skillpkg",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": true,
+   "n_events": 51,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "mcp",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": true,
+   "n_events": 15,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "skillpkg",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": true,
+   "n_events": 112,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "neither",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": false,
+   "n_events": 78,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {
+    "test-deleted": 9,
+    "assert-keyword-weakened": 1,
+    "expected-value-changed": 2
+   },
+   "guard": {
+    "env-mutation": 1
+   }
+  },
+  {
+   "agent": "claude",
+   "arm": "mcp",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": false,
+   "n_events": 9,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "skillpkg",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": false,
+   "n_events": 65,
+   "loop_first": 57,
+   "loop_fires": 1,
+   "churn_fires": 1,
+   "weak": {
+    "timeout-raised": 1,
+    "assertions-removed": 2,
+    "expected-value-changed": 6
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "neither",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": true,
+   "n_events": 22,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "mcp",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": true,
+   "n_events": 19,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "neither",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": false,
+   "n_events": 173,
+   "loop_first": 66,
+   "loop_fires": 3,
+   "churn_fires": 2,
+   "weak": {
+    "test-deleted": 19,
+    "assertions-removed": 2
+   },
+   "guard": {
+    "huge-artifact-read": 11
+   }
+  },
+  {
+   "agent": "codex",
+   "arm": "skillpkg",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": true,
+   "n_events": 32,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "neither",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": true,
+   "n_events": 38,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "expected-value-changed": 4
+   },
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "skillpkg",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": false,
+   "n_events": 106,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "expected-value-changed": 2
+   },
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "mcp",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": false,
+   "n_events": 79,
+   "loop_first": 39,
+   "loop_fires": 1,
+   "churn_fires": 2,
+   "weak": {
+    "assertions-removed": 5
+   },
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "mcp",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": true,
+   "n_events": 22,
+   "loop_first": 18,
+   "loop_fires": 1,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 2
+   },
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "neither",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": false,
+   "n_events": 69,
+   "loop_first": 51,
+   "loop_fires": 1,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 3,
+    "test-deleted": 1,
+    "failure-swallowed": 1
+   },
+   "guard": {
+    "huge-artifact-read": 1
+   }
+  },
+  {
+   "agent": "codex",
+   "arm": "mcp",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": true,
+   "n_events": 9,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "skillpkg",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": true,
+   "n_events": 48,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "neither",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": true,
+   "n_events": 21,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "skillpkg",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": true,
+   "n_events": 37,
+   "loop_first": 32,
+   "loop_fires": 1,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "mcp",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": false,
+   "n_events": 16,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {
+    "assertions-removed": 3
+   },
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "skillpkg",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": false,
+   "n_events": 56,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {
+    "operator-weakened": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "neither",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": true,
+   "n_events": 110,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {
+    "assertions-removed": 1,
+    "test-deleted": 6
+   },
+   "guard": {
+    "env-mutation": 3
+   }
+  },
+  {
+   "agent": "claude",
+   "arm": "neither",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "n_events": 29,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {
+    "assertions-removed": 3
+   },
+   "guard": {
+    "huge-artifact-read": 1
+   }
+  },
+  {
+   "agent": "codex",
+   "arm": "neither",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "n_events": 27,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "mcp",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "n_events": 26,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "skillpkg",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": false,
+   "n_events": 21,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "mcp",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": false,
+   "n_events": 73,
+   "loop_first": 44,
+   "loop_fires": 1,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 6,
+    "expected-value-changed": 3,
+    "timeout-raised": 2
+   },
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "neither",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "n_events": 78,
+   "loop_first": 22,
+   "loop_fires": 3,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 4,
+    "failure-swallowed": 1,
+    "timeout-raised": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "mcp",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "n_events": 112,
+   "loop_first": 56,
+   "loop_fires": 2,
+   "churn_fires": 2,
+   "weak": {
+    "assertions-removed": 3,
+    "expected-value-changed": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "skillpkg",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "n_events": 67,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 2
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "neither",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": true,
+   "n_events": 36,
+   "loop_first": 11,
+   "loop_fires": 2,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "mcp",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "n_events": 36,
+   "loop_first": 9,
+   "loop_fires": 2,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "skillpkg",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": true,
+   "n_events": 42,
+   "loop_first": 11,
+   "loop_fires": 2,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "mcp",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "n_events": 36,
+   "loop_first": 9,
+   "loop_fires": 2,
+   "churn_fires": 1,
+   "weak": {
+    "timeout-raised": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "neither",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": true,
+   "n_events": 19,
+   "loop_first": 16,
+   "loop_fires": 1,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "mcp",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": true,
+   "n_events": 19,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "neither",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "n_events": 172,
+   "loop_first": 8,
+   "loop_fires": 4,
+   "churn_fires": 2,
+   "weak": {
+    "assertions-removed": 9
+   },
+   "guard": {
+    "huge-artifact-read": 1
+   }
+  },
+  {
+   "agent": "codex",
+   "arm": "skillpkg",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": true,
+   "n_events": 28,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "skillpkg",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": true,
+   "n_events": 130,
+   "loop_first": 80,
+   "loop_fires": 3,
+   "churn_fires": 1,
+   "weak": {
+    "expected-value-changed": 1,
+    "timeout-raised": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "skillpkg",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": true,
+   "n_events": 118,
+   "loop_first": 70,
+   "loop_fires": 1,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "mcp",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": true,
+   "n_events": 13,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "neither",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": true,
+   "n_events": 26,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "neither",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": true,
+   "n_events": 95,
+   "loop_first": 82,
+   "loop_fires": 1,
+   "churn_fires": 1,
+   "weak": {
+    "timeout-raised": 2,
+    "failure-swallowed": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "mcp",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": true,
+   "n_events": 15,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "skillpkg",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": true,
+   "n_events": 31,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "neither",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": true,
+   "n_events": 39,
+   "loop_first": 23,
+   "loop_fires": 2,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 3,
+    "expected-value-changed": 5
+   },
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "mcp",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": false,
+   "n_events": 82,
+   "loop_first": 12,
+   "loop_fires": 1,
+   "churn_fires": 0,
+   "weak": {
+    "assertions-removed": 5,
+    "test-deleted": 3,
+    "expected-value-changed": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "neither",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": true,
+   "n_events": 18,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "skillpkg",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": false,
+   "n_events": 108,
+   "loop_first": 75,
+   "loop_fires": 2,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 3,
+    "expected-value-changed": 5,
+    "assert-keyword-weakened": 1
+   },
+   "guard": {
+    "huge-artifact-read": 1
+   }
+  },
+  {
+   "agent": "codex",
+   "arm": "skillpkg",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": false,
+   "n_events": 30,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "mcp",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": true,
+   "n_events": 14,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "mcp",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": true,
+   "n_events": 3,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "neither",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "n_events": 18,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "skillpkg",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": true,
+   "n_events": 98,
+   "loop_first": 85,
+   "loop_fires": 1,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 1,
+    "expected-value-changed": 2
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "mcp",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "n_events": 13,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "skillpkg",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "n_events": 39,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "neither",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": false,
+   "n_events": 18,
+   "loop_first": 13,
+   "loop_fires": 1,
+   "churn_fires": 0,
+   "weak": {
+    "assertions-removed": 1,
+    "expected-value-changed": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "neither",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": false,
+   "n_events": 81,
+   "loop_first": 40,
+   "loop_fires": 3,
+   "churn_fires": 1,
+   "weak": {
+    "failure-swallowed": 10,
+    "assertions-removed": 6,
+    "timeout-raised": 4
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "neither",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "n_events": 39,
+   "loop_first": 7,
+   "loop_fires": 3,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "skillpkg",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": false,
+   "n_events": 103,
+   "loop_first": 16,
+   "loop_fires": 3,
+   "churn_fires": 1,
+   "weak": {
+    "timeout-raised": 2,
+    "expected-value-changed": 2,
+    "assertions-removed": 3
+   },
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "mcp",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": false,
+   "n_events": 81,
+   "loop_first": 25,
+   "loop_fires": 3,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 4,
+    "timeout-raised": 1,
+    "expected-value-changed": 3
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "mcp",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": true,
+   "n_events": 38,
+   "loop_first": 11,
+   "loop_fires": 3,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "skillpkg",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": true,
+   "n_events": 78,
+   "loop_first": 15,
+   "loop_fires": 2,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "mcp",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "n_events": 28,
+   "loop_first": 11,
+   "loop_fires": 1,
+   "churn_fires": 1,
+   "weak": {
+    "expected-value-changed": 1,
+    "timeout-raised": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "neither",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "n_events": 38,
+   "loop_first": 12,
+   "loop_fires": 1,
+   "churn_fires": 1,
+   "weak": {
+    "timeout-raised": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "mcp",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": true,
+   "n_events": 24,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "neither",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": true,
+   "n_events": 29,
+   "loop_first": 16,
+   "loop_fires": 2,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {
+    "env-mutation": 1
+   }
+  },
+  {
+   "agent": "opencode",
+   "arm": "skillpkg",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "n_events": 22,
+   "loop_first": 9,
+   "loop_fires": 1,
+   "churn_fires": 1,
+   "weak": {
+    "timeout-raised": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "skillpkg",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": false,
+   "n_events": 38,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "mcp",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": true,
+   "n_events": 24,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "neither",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": true,
+   "n_events": 23,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "mcp",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": false,
+   "n_events": 51,
+   "loop_first": 41,
+   "loop_fires": 1,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "neither",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": false,
+   "n_events": 204,
+   "loop_first": 187,
+   "loop_fires": 2,
+   "churn_fires": 1,
+   "weak": {
+    "timeout-raised": 6,
+    "expected-value-changed": 3,
+    "assertions-removed": 5,
+    "failure-swallowed": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "skillpkg",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": true,
+   "n_events": 39,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "skillpkg",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "n_events": 47,
+   "loop_first": 20,
+   "loop_fires": 1,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "neither",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "n_events": 59,
+   "loop_first": 10,
+   "loop_fires": 2,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 2,
+    "expected-value-changed": 1,
+    "timeout-raised": 2
+   },
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "skillpkg",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "n_events": 71,
+   "loop_first": 16,
+   "loop_fires": 1,
+   "churn_fires": 1,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "mcp",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": false,
+   "n_events": 73,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 4
+   },
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "neither",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": true,
+   "n_events": 80,
+   "loop_first": 37,
+   "loop_fires": 2,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 4,
+    "expected-value-changed": 1,
+    "timeout-raised": 6,
+    "try-except-added": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "skillpkg",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": true,
+   "n_events": 78,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "mcp",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": false,
+   "n_events": 20,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {
+    "assertions-removed": 2,
+    "assert-keyword-weakened": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "skillpkg",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": true,
+   "n_events": 62,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {
+    "operator-weakened": 1,
+    "assertions-removed": 3,
+    "expected-value-changed": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "neither",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": false,
+   "n_events": 68,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {
+    "assertions-removed": 5
+   },
+   "guard": {
+    "huge-artifact-read": 1
+   }
+  },
+  {
+   "agent": "claude",
+   "arm": "mcp",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": false,
+   "n_events": 14,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {
+    "timeout-raised": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "skillpkg",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": true,
+   "n_events": 70,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {
+    "assertions-removed": 4,
+    "expected-value-changed": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "neither",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": false,
+   "n_events": 62,
+   "loop_first": 10,
+   "loop_fires": 2,
+   "churn_fires": 2,
+   "weak": {
+    "assertions-removed": 6,
+    "try-except-added": 8,
+    "timeout-raised": 2,
+    "expected-value-changed": 3
+   },
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "mcp",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "n_events": 33,
+   "loop_first": 21,
+   "loop_fires": 1,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 3,
+    "expected-value-changed": 1
+   },
+   "guard": {
+    "shell-sleep-poll": 1
+   }
+  },
+  {
+   "agent": "claude",
+   "arm": "skillpkg",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "n_events": 29,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "neither",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": false,
+   "n_events": 76,
+   "loop_first": 43,
+   "loop_fires": 1,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 3,
+    "expected-value-changed": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "neither",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "n_events": 14,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {
+    "assertions-removed": 1
+   },
+   "guard": {
+    "shell-sleep-poll": 1
+   }
+  },
+  {
+   "agent": "claude",
+   "arm": "mcp",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "n_events": 66,
+   "loop_first": 50,
+   "loop_fires": 2,
+   "churn_fires": 1,
+   "weak": {
+    "timeout-raised": 3,
+    "assertions-removed": 3
+   },
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "skillpkg",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "n_events": 74,
+   "loop_first": 47,
+   "loop_fires": 2,
+   "churn_fires": 1,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "neither",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": true,
+   "n_events": 45,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 2
+   },
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "mcp",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": false,
+   "n_events": 1,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "skillpkg",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": false,
+   "n_events": 73,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "neither",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": true,
+   "n_events": 58,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "failure-swallowed": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "mcp",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": false,
+   "n_events": 23,
+   "loop_first": 14,
+   "loop_fires": 1,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 4,
+    "assert-keyword-weakened": 2
+   },
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "skillpkg",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": false,
+   "n_events": 76,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 1,
+    "expected-value-changed": 2
+   },
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "mcp",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "n_events": 77,
+   "loop_first": 14,
+   "loop_fires": 3,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 2,
+    "expected-value-changed": 2
+   },
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "neither",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": true,
+   "n_events": 50,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {
+    "test-deleted": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "skillpkg",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": false,
+   "n_events": 187,
+   "loop_first": 77,
+   "loop_fires": 3,
+   "churn_fires": 1,
+   "weak": {
+    "timeout-raised": 1,
+    "assertions-removed": 4
+   },
+   "guard": {
+    "huge-artifact-read": 7
+   }
+  },
+  {
+   "agent": "opencode",
+   "arm": "mcp",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": false,
+   "n_events": 17,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 2,
+    "expected-value-changed": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "skillpkg",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": true,
+   "n_events": 81,
+   "loop_first": 41,
+   "loop_fires": 2,
+   "churn_fires": 1,
+   "weak": {
+    "expected-value-changed": 3,
+    "assertions-removed": 2,
+    "operator-weakened": 2
+   },
+   "guard": {
+    "huge-artifact-read": 1
+   }
+  },
+  {
+   "agent": "claude",
+   "arm": "mcp",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": true,
+   "n_events": 4,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "skillpkg",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": false,
+   "n_events": 54,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {
+    "assertions-removed": 2
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "neither",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": true,
+   "n_events": 17,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "neither",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": false,
+   "n_events": 85,
+   "loop_first": 20,
+   "loop_fires": 2,
+   "churn_fires": 1,
+   "weak": {
+    "timeout-raised": 1,
+    "expected-value-changed": 1,
+    "assertions-removed": 5
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "mcp",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": true,
+   "n_events": 10,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "skillpkg",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": true,
+   "n_events": 35,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "mcp",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": false,
+   "n_events": 29,
+   "loop_first": 19,
+   "loop_fires": 1,
+   "churn_fires": 1,
+   "weak": {
+    "timeout-raised": 1,
+    "assertions-removed": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "neither",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": false,
+   "n_events": 121,
+   "loop_first": 12,
+   "loop_fires": 4,
+   "churn_fires": 2,
+   "weak": {
+    "assertions-removed": 17,
+    "timeout-raised": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "skillpkg",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": true,
+   "n_events": 71,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 2
+   },
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "mcp",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": false,
+   "n_events": 33,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "expected-value-changed": 1,
+    "assertions-removed": 4
+   },
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "neither",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "n_events": 57,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 3,
+    "failure-swallowed": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "neither",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "n_events": 25,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "skillpkg",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "n_events": 51,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "mcp",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": false,
+   "n_events": 20,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "skillpkg",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "n_events": 24,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "neither",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": false,
+   "n_events": 70,
+   "loop_first": 20,
+   "loop_fires": 2,
+   "churn_fires": 1,
+   "weak": {
+    "expected-value-changed": 2,
+    "assertions-removed": 5,
+    "timeout-raised": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "mcp",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": false,
+   "n_events": 116,
+   "loop_first": 34,
+   "loop_fires": 4,
+   "churn_fires": 4,
+   "weak": {
+    "assertions-removed": 10,
+    "timeout-raised": 4
+   },
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "skillpkg",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "n_events": 43,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "neither",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "n_events": 18,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "timeout-raised": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "skillpkg",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "n_events": 70,
+   "loop_first": 60,
+   "loop_fires": 1,
+   "churn_fires": 1,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "neither",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": true,
+   "n_events": 36,
+   "loop_first": 13,
+   "loop_fires": 2,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "mcp",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "n_events": 48,
+   "loop_first": 8,
+   "loop_fires": 3,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 3,
+    "timeout-raised": 2
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "mcp",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": true,
+   "n_events": 26,
+   "loop_first": 8,
+   "loop_fires": 1,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "skillpkg",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": true,
+   "n_events": 68,
+   "loop_first": 25,
+   "loop_fires": 2,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "neither",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "n_events": 45,
+   "loop_first": 18,
+   "loop_fires": 3,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 1,
+    "timeout-raised": 2,
+    "expected-value-changed": 2
+   },
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "mcp",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "n_events": 27,
+   "loop_first": 9,
+   "loop_fires": 1,
+   "churn_fires": 1,
+   "weak": {
+    "timeout-raised": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "skillpkg",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "n_events": 22,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "expected-value-changed": 1,
+    "timeout-raised": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "hookpkg",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": true,
+   "n_events": 20,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "hookpkg",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": true,
+   "n_events": 23,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "hookpkg",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": true,
+   "n_events": 29,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "test-deleted": 7,
+    "assertions-removed": 2,
+    "expected-value-changed": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "hookpkg",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": true,
+   "n_events": 18,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "hookpkg",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": true,
+   "n_events": 23,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "hookpkg",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": true,
+   "n_events": 32,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "expected-value-changed": 3,
+    "assertions-removed": 2
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "hookpkg",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": true,
+   "n_events": 12,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "hookpkg",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": false,
+   "n_events": 61,
+   "loop_first": 13,
+   "loop_fires": 1,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 2,
+    "expected-value-changed": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "hookpkg",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "n_events": 12,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "hookpkg",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": false,
+   "n_events": 40,
+   "loop_first": 22,
+   "loop_fires": 1,
+   "churn_fires": 1,
+   "weak": {
+    "expected-value-changed": 1,
+    "failure-swallowed": 1,
+    "timeout-raised": 1,
+    "assertions-removed": 3
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "hookpkg",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "n_events": 18,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "hookpkg",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "n_events": 15,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "hookpkg",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "n_events": 45,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 2,
+   "weak": {
+    "assertions-removed": 4,
+    "timeout-raised": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "hookpkg",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": true,
+   "n_events": 17,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "hookpkg",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "n_events": 20,
+   "loop_first": 10,
+   "loop_fires": 1,
+   "churn_fires": 1,
+   "weak": {
+    "timeout-raised": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "hookpkg",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": true,
+   "n_events": 34,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 3,
+    "expected-value-changed": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "hookpkg",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": false,
+   "n_events": 12,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "hookpkg",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": false,
+   "n_events": 33,
+   "loop_first": 25,
+   "loop_fires": 1,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 2
+   },
+   "guard": {
+    "huge-artifact-read": 1
+   }
+  },
+  {
+   "agent": "claude",
+   "arm": "hookpkg",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": false,
+   "n_events": 28,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "hookpkg",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": true,
+   "n_events": 14,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "hookpkg",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": true,
+   "n_events": 31,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 1,
+    "operator-weakened": 6
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "hookpkg",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": true,
+   "n_events": 22,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "hookpkg",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": false,
+   "n_events": 31,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 2
+   },
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "hookpkg",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": false,
+   "n_events": 65,
+   "loop_first": 59,
+   "loop_fires": 1,
+   "churn_fires": 2,
+   "weak": {
+    "assertions-removed": 5,
+    "timeout-raised": 4,
+    "expected-value-changed": 2
+   },
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "hookpkg",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "n_events": 17,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "hookpkg",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "n_events": 16,
+   "loop_first": 5,
+   "loop_fires": 1,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {
+    "huge-artifact-read": 3
+   }
+  },
+  {
+   "agent": "codex",
+   "arm": "hookpkg",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": false,
+   "n_events": 54,
+   "loop_first": 15,
+   "loop_fires": 2,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "hookpkg",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "n_events": 19,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "timeout-raised": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "hookpkg",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": true,
+   "n_events": 16,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "hookpkg",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "n_events": 23,
+   "loop_first": 19,
+   "loop_fires": 1,
+   "churn_fires": 1,
+   "weak": {
+    "timeout-raised": 1,
+    "assertions-removed": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "hookpkg",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": false,
+   "n_events": 47,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 5
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "hookpkg",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": true,
+   "n_events": 13,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "hookpkg",
+   "kind": "explore",
+   "scenario": "tricentis_quote",
+   "pass": true,
+   "n_events": 17,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "test-deleted": 6
+   },
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "hookpkg",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": false,
+   "n_events": 33,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "timeout-raised": 1,
+    "assertions-removed": 4
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "hookpkg",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": true,
+   "n_events": 14,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "hookpkg",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": false,
+   "n_events": 32,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {
+    "assertions-removed": 3,
+    "operator-weakened": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "hookpkg",
+   "kind": "explore",
+   "scenario": "carconfig_order",
+   "pass": false,
+   "n_events": 39,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "assertions-removed": 4,
+    "assert-keyword-weakened": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "hookpkg",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": true,
+   "n_events": 17,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "hookpkg",
+   "kind": "explore",
+   "scenario": "demoshop_order",
+   "pass": false,
+   "n_events": 31,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "hookpkg",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "n_events": 13,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "hookpkg",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "n_events": 26,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "hookpkg",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "n_events": 21,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "timeout-raised": 1
+   },
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "hookpkg",
+   "kind": "debug",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "n_events": 13,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "codex",
+   "arm": "hookpkg",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": true,
+   "n_events": 26,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 0,
+   "weak": {},
+   "guard": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "hookpkg",
+   "kind": "debug",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "n_events": 15,
+   "loop_first": null,
+   "loop_fires": 0,
+   "churn_fires": 1,
+   "weak": {
+    "timeout-raised": 1
+   },
+   "guard": {}
+  }
+ ]
+}

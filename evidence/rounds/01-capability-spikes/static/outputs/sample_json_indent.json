@@ -1,0 +1,47 @@
+{
+    "diagnostics": {
+        "cases/b01_typo_keyword.robot": [
+            {
+                "range": {
+                    "start": {
+                        "line": 5,
+                        "character": 4
+                    },
+                    "end": {
+                        "line": 5,
+                        "character": 19
+                    }
+                },
+                "message": "No keyword with name 'Shuold Be Equal' found.",
+                "severity": 1,
+                "code": "KeywordNotFound",
+                "source": "robotcode"
+            }
+        ],
+        "cases/b16_browser_missing_arg.robot": [
+            {
+                "range": {
+                    "start": {
+                        "line": 5,
+                        "character": 4
+                    },
+                    "end": {
+                        "line": 5,
+                        "character": 24
+                    }
+                },
+                "message": "Keyword 'Browser.Fill Text' expected 2 to 3 arguments, got 1.",
+                "severity": 1,
+                "code": "DataError",
+                "source": "robotcode"
+            }
+        ]
+    },
+    "summary": {
+        "files": 2,
+        "errors": 2,
+        "warnings": 0,
+        "infos": 0,
+        "hints": 0
+    }
+}

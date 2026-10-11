@@ -1,0 +1,104 @@
+{"t": "ready", "pid": 3596604, "hooked": true, "path": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round2/repl_only/run/life1/steps.jsonl", "ts": 1790837128.983}
+{"t": "idle", "n": 1, "id": null, "ts": 1790837129.012}
+{"t": "begin", "id": "c2", "ts": 1790837129.088}
+{"t": "step", "seq": 1, "id": "c2", "type": "KEYWORD", "name": "Sleep", "owner": "BuiltIn", "args": ["0.3s"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Slept 300 milliseconds."}], "status": "PASS", "elapsed_ms": 301.1, "return": null, "ts": 1790837129.39}
+{"t": "idle", "n": 2, "id": "c2", "ts": 1790837129.39}
+{"t": "step", "seq": 2, "id": "c2", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["client 2"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "client 2"}], "status": "PASS", "elapsed_ms": 1.1, "return": null, "ts": 1790837129.393}
+{"t": "idle", "n": 3, "id": "c2", "ts": 1790837129.393}
+{"t": "idle", "n": 4, "id": "c2", "ts": 1790837129.393}
+{"t": "end", "id": "c2", "src": "Sleep    0.3s\nLog    client 2", "steps": 2, "ts": 1790837129.393}
+{"t": "begin", "id": "c4", "ts": 1790837129.396}
+{"t": "step", "seq": 3, "id": "c4", "type": "KEYWORD", "name": "Sleep", "owner": "BuiltIn", "args": ["0.3s"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Slept 300 milliseconds."}], "status": "PASS", "elapsed_ms": 301.2, "return": null, "ts": 1790837129.698}
+{"t": "idle", "n": 5, "id": "c4", "ts": 1790837129.698}
+{"t": "step", "seq": 4, "id": "c4", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["client 4"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "client 4"}], "status": "PASS", "elapsed_ms": 0.9, "return": null, "ts": 1790837129.701}
+{"t": "idle", "n": 6, "id": "c4", "ts": 1790837129.701}
+{"t": "idle", "n": 7, "id": "c4", "ts": 1790837129.701}
+{"t": "end", "id": "c4", "src": "Sleep    0.3s\nLog    client 4", "steps": 4, "ts": 1790837129.701}
+{"t": "begin", "id": "c1", "ts": 1790837129.703}
+{"t": "step", "seq": 5, "id": "c1", "type": "KEYWORD", "name": "Sleep", "owner": "BuiltIn", "args": ["0.3s"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Slept 300 milliseconds."}], "status": "PASS", "elapsed_ms": 301.4, "return": null, "ts": 1790837130.006}
+{"t": "idle", "n": 8, "id": "c1", "ts": 1790837130.006}
+{"t": "step", "seq": 6, "id": "c1", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["client 1"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "client 1"}], "status": "PASS", "elapsed_ms": 0.8, "return": null, "ts": 1790837130.009}
+{"t": "idle", "n": 9, "id": "c1", "ts": 1790837130.009}
+{"t": "idle", "n": 10, "id": "c1", "ts": 1790837130.009}
+{"t": "end", "id": "c1", "src": "Sleep    0.3s\nLog    client 1", "steps": 6, "ts": 1790837130.009}
+{"t": "begin", "id": "c5", "ts": 1790837130.011}
+{"t": "step", "seq": 7, "id": "c5", "type": "KEYWORD", "name": "Sleep", "owner": "BuiltIn", "args": ["0.3s"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Slept 300 milliseconds."}], "status": "PASS", "elapsed_ms": 301.3, "return": null, "ts": 1790837130.314}
+{"t": "idle", "n": 11, "id": "c5", "ts": 1790837130.314}
+{"t": "step", "seq": 8, "id": "c5", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["client 5"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "client 5"}], "status": "PASS", "elapsed_ms": 1.3, "return": null, "ts": 1790837130.319}
+{"t": "idle", "n": 12, "id": "c5", "ts": 1790837130.319}
+{"t": "idle", "n": 13, "id": "c5", "ts": 1790837130.319}
+{"t": "end", "id": "c5", "src": "Sleep    0.3s\nLog    client 5", "steps": 8, "ts": 1790837130.319}
+{"t": "begin", "id": "c3", "ts": 1790837130.32}
+{"t": "step", "seq": 9, "id": "c3", "type": "KEYWORD", "name": "Sleep", "owner": "BuiltIn", "args": ["0.3s"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Slept 300 milliseconds."}], "status": "PASS", "elapsed_ms": 301.5, "return": null, "ts": 1790837130.624}
+{"t": "idle", "n": 14, "id": "c3", "ts": 1790837130.624}
+{"t": "step", "seq": 10, "id": "c3", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["client 3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "client 3"}], "status": "PASS", "elapsed_ms": 0.9, "return": null, "ts": 1790837130.627}
+{"t": "idle", "n": 15, "id": "c3", "ts": 1790837130.627}
+{"t": "idle", "n": 16, "id": "c3", "ts": 1790837130.627}
+{"t": "end", "id": "c3", "src": "Sleep    0.3s\nLog    client 3", "steps": 10, "ts": 1790837130.627}
+{"t": "begin", "id": "raw1", "ts": 1790837130.687}
+{"t": "step", "seq": 11, "id": "raw1", "type": "KEYWORD", "name": "Sleep", "owner": "BuiltIn", "args": ["0.1s"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Slept 100 milliseconds."}], "status": "PASS", "elapsed_ms": 101.3, "return": null, "ts": 1790837130.79}
+{"t": "idle", "n": 17, "id": "raw1", "ts": 1790837130.79}
+{"t": "step", "seq": 12, "id": "raw1", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["raw 1"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "raw 1"}], "status": "PASS", "elapsed_ms": 0.9, "return": null, "ts": 1790837130.793}
+{"t": "idle", "n": 18, "id": "raw1", "ts": 1790837130.793}
+{"t": "idle", "n": 19, "id": "raw1", "ts": 1790837130.793}
+{"t": "end", "id": "raw1", "src": "Sleep    0.1s\nLog    raw 1", "steps": 12, "ts": 1790837130.793}
+{"t": "begin", "id": "raw2", "ts": 1790837130.793}
+{"t": "step", "seq": 13, "id": "raw2", "type": "KEYWORD", "name": "Sleep", "owner": "BuiltIn", "args": ["0.1s"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Slept 100 milliseconds."}], "status": "PASS", "elapsed_ms": 101.1, "return": null, "ts": 1790837130.895}
+{"t": "idle", "n": 20, "id": "raw2", "ts": 1790837130.895}
+{"t": "step", "seq": 14, "id": "raw2", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["raw 2"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "raw 2"}], "status": "PASS", "elapsed_ms": 0.8, "return": null, "ts": 1790837130.898}
+{"t": "idle", "n": 21, "id": "raw2", "ts": 1790837130.898}
+{"t": "idle", "n": 22, "id": "raw2", "ts": 1790837130.898}
+{"t": "end", "id": "raw2", "src": "Sleep    0.1s\nLog    raw 2", "steps": 14, "ts": 1790837130.898}
+{"t": "begin", "id": "raw3", "ts": 1790837130.898}
+{"t": "step", "seq": 15, "id": "raw3", "type": "KEYWORD", "name": "Sleep", "owner": "BuiltIn", "args": ["0.1s"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Slept 100 milliseconds."}], "status": "PASS", "elapsed_ms": 101.1, "return": null, "ts": 1790837131.001}
+{"t": "idle", "n": 23, "id": "raw3", "ts": 1790837131.001}
+{"t": "step", "seq": 16, "id": "raw3", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["raw 3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "raw 3"}], "status": "PASS", "elapsed_ms": 0.8, "return": null, "ts": 1790837131.003}
+{"t": "idle", "n": 24, "id": "raw3", "ts": 1790837131.003}
+{"t": "idle", "n": 25, "id": "raw3", "ts": 1790837131.003}
+{"t": "end", "id": "raw3", "src": "Sleep    0.1s\nLog    raw 3", "steps": 16, "ts": 1790837131.003}
+{"t": "begin", "id": "raw4", "ts": 1790837131.003}
+{"t": "step", "seq": 17, "id": "raw4", "type": "KEYWORD", "name": "Sleep", "owner": "BuiltIn", "args": ["0.1s"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Slept 100 milliseconds."}], "status": "PASS", "elapsed_ms": 101.1, "return": null, "ts": 1790837131.106}
+{"t": "idle", "n": 26, "id": "raw4", "ts": 1790837131.106}
+{"t": "step", "seq": 18, "id": "raw4", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["raw 4"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "raw 4"}], "status": "PASS", "elapsed_ms": 0.8, "return": null, "ts": 1790837131.108}
+{"t": "idle", "n": 27, "id": "raw4", "ts": 1790837131.108}
+{"t": "idle", "n": 28, "id": "raw4", "ts": 1790837131.108}
+{"t": "end", "id": "raw4", "src": "Sleep    0.1s\nLog    raw 4", "steps": 18, "ts": 1790837131.108}
+{"t": "begin", "id": "raw5", "ts": 1790837131.108}
+{"t": "step", "seq": 19, "id": "raw5", "type": "KEYWORD", "name": "Sleep", "owner": "BuiltIn", "args": ["0.1s"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Slept 100 milliseconds."}], "status": "PASS", "elapsed_ms": 101.3, "return": null, "ts": 1790837131.211}
+{"t": "idle", "n": 29, "id": "raw5", "ts": 1790837131.211}
+{"t": "step", "seq": 20, "id": "raw5", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["raw 5"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "raw 5"}], "status": "PASS", "elapsed_ms": 0.8, "return": null, "ts": 1790837131.213}
+{"t": "idle", "n": 30, "id": "raw5", "ts": 1790837131.213}
+{"t": "idle", "n": 31, "id": "raw5", "ts": 1790837131.214}
+{"t": "end", "id": "raw5", "src": "Sleep    0.1s\nLog    raw 5", "steps": 20, "ts": 1790837131.214}
+{"t": "begin", "id": "long1", "ts": 1790837131.968}
+{"t": "step", "seq": 21, "id": "long1", "type": "KEYWORD", "name": "Sleep", "owner": "BuiltIn", "args": ["3s"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Slept 3 seconds."}], "status": "PASS", "elapsed_ms": 3001.1, "return": null, "ts": 1790837134.97}
+{"t": "idle", "n": 32, "id": "long1", "ts": 1790837134.97}
+{"t": "idle", "n": 33, "id": "long1", "ts": 1790837134.97}
+{"t": "end", "id": "long1", "src": "Sleep    3s", "steps": 21, "ts": 1790837134.97}
+{"t": "begin", "id": "after1", "ts": 1790837134.97}
+{"t": "step", "seq": 22, "id": "after1", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["queued behind long step"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "queued behind long step"}], "status": "PASS", "elapsed_ms": 0.9, "return": null, "ts": 1790837134.972}
+{"t": "idle", "n": 34, "id": "after1", "ts": 1790837134.973}
+{"t": "idle", "n": 35, "id": "after1", "ts": 1790837134.973}
+{"t": "end", "id": "after1", "src": "Log    queued behind long step", "steps": 22, "ts": 1790837134.973}
+{"t": "begin", "id": "int1", "ts": 1790837135.113}
+{"t": "step", "seq": 23, "id": "int1", "type": "KEYWORD", "name": "Sleep", "owner": "BuiltIn", "args": ["10s"], "assign": [], "status": "FAIL", "message": "Execution interrupted", "elapsed_ms": 930.2, "ts": 1790837136.044}
+{"t": "idle", "n": 36, "id": "int1", "ts": 1790837136.044}
+{"t": "end", "id": "int1", "src": "Sleep    10s", "steps": 23, "skipped_src": "", "ts": 1790837136.044}
+{"t": "begin", "id": "s9", "ts": 1790837136.113}
+{"t": "step", "seq": 24, "id": "s9", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["still alive after interrupt"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "still alive after interrupt"}], "status": "PASS", "elapsed_ms": 0.7, "return": null, "ts": 1790837136.115}
+{"t": "idle", "n": 37, "id": "s9", "ts": 1790837136.115}
+{"t": "idle", "n": 38, "id": "s9", "ts": 1790837136.115}
+{"t": "end", "id": "s9", "src": "Log    still alive after interrupt", "steps": 24, "ts": 1790837136.115}
+{"t": "begin", "id": "s10", "ts": 1790837136.694}
+{"t": "step", "seq": 25, "id": "s10", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["alive after idle SIGINT?"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "alive after idle SIGINT?"}], "status": "PASS", "elapsed_ms": 0.7, "return": null, "ts": 1790837136.696}
+{"t": "idle", "n": 39, "id": "s10", "ts": 1790837136.696}
+{"t": "idle", "n": 40, "id": "s10", "ts": 1790837136.696}
+{"t": "end", "id": "s10", "src": "Log    alive after idle SIGINT?", "steps": 25, "ts": 1790837136.696}
+{"t": "begin", "id": "s11", "ts": 1790837137.255}
+{"t": "step", "seq": 26, "id": "s11", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["alive after idle SIGTERM?"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "alive after idle SIGTERM?"}], "status": "PASS", "elapsed_ms": 0.7, "return": null, "ts": 1790837137.257}
+{"t": "idle", "n": 41, "id": "s11", "ts": 1790837137.258}
+{"t": "idle", "n": 42, "id": "s11", "ts": 1790837137.258}
+{"t": "end", "id": "s11", "src": "Log    alive after idle SIGTERM?", "steps": 26, "ts": 1790837137.258}
+{"t": "begin", "id": "s12", "ts": 1790837137.317}
+{"t": "step", "seq": 27, "id": "s12", "type": "KEYWORD", "name": "Repl", "owner": "robotcode.repl.Repl", "args": [], "assign": [], "status": "PASS", "elapsed_ms": 8305.1, "ts": 1790837137.318}
+{"t": "closed", "ts": 1790837137.319}

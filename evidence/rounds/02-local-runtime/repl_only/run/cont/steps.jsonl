@@ -1,0 +1,20 @@
+{"t": "ready", "pid": 3605397, "hooked": true, "path": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round2/repl_only/run/cont/steps.jsonl", "ts": 1790837292.0}
+{"t": "idle", "n": 1, "id": null, "ts": 1790837292.026}
+{"t": "begin", "id": "s1", "ts": 1790837292.086}
+{"t": "step", "seq": 1, "id": "s1", "type": "KEYWORD", "name": "Log Many", "owner": "BuiltIn", "args": ["a", "b", "c"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "a"}, {"level": "INFO", "html": false, "text": "b"}, {"level": "INFO", "html": false, "text": "c"}], "status": "PASS", "elapsed_ms": 1.1, "return": null, "ts": 1790837292.089}
+{"t": "idle", "n": 2, "id": "s1", "ts": 1790837292.089}
+{"t": "idle", "n": 3, "id": "s1", "ts": 1790837292.089}
+{"t": "end", "id": "s1", "src": "Log Many    a    b    c", "steps": 1, "ts": 1790837292.089}
+{"t": "begin", "id": "s2", "ts": 1790837292.147}
+{"t": "step", "seq": 2, "id": "s2", "type": "KEYWORD", "name": "Create Dictionary", "owner": "BuiltIn", "args": ["k1=v1", "k2=v2"], "assign": ["${d}"], "msgs": [{"level": "INFO", "html": false, "text": "${d} = {'k1': 'v1', 'k2': 'v2'}"}], "status": "PASS", "elapsed_ms": 1.1, "values": {"${d}": {"k1": "v1", "k2": "v2"}}, "return": "{'k1': 'v1', 'k2': 'v2'}", "ts": 1790837292.15}
+{"t": "idle", "n": 4, "id": "s2", "ts": 1790837292.15}
+{"t": "idle", "n": 5, "id": "s2", "ts": 1790837292.15}
+{"t": "end", "id": "s2", "src": "${d}    Create Dictionary    k1=v1    k2=v2", "steps": 2, "ts": 1790837292.15}
+{"t": "begin", "id": "s3", "ts": 1790837292.202}
+{"t": "step", "seq": 3, "id": "s3", "type": "FOR", "name": "", "owner": null, "args": [], "assign": ["${k}"], "items": [{"type": "ITERATION", "name": "${k}=x", "owner": null, "args": [], "assign": [], "items": [{"type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["${k}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "x"}], "status": "PASS", "elapsed_ms": 0.6}], "status": "PASS", "elapsed_ms": 0.9}, {"type": "ITERATION", "name": "${k}=y", "owner": null, "args": [], "assign": [], "items": [{"type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["${k}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "y"}], "status": "PASS", "elapsed_ms": 0.5}], "status": "PASS", "elapsed_ms": 0.7}], "flavor": "IN", "for_values": ["x", "y"], "status": "PASS", "elapsed_ms": 2.2, "ts": 1790837292.209}
+{"t": "idle", "n": 6, "id": "s3", "ts": 1790837292.209}
+{"t": "idle", "n": 7, "id": "s3", "ts": 1790837292.209}
+{"t": "end", "id": "s3", "src": "FOR    ${k}    IN    x    y\n    Log    ${k}\nEND", "steps": 3, "ts": 1790837292.209}
+{"t": "idle", "n": 8, "id": "s3", "ts": 1790837292.268}
+{"t": "step", "seq": 4, "id": "s3", "type": "KEYWORD", "name": "Repl", "owner": "robotcode.repl.Repl", "args": [], "assign": [], "status": "PASS", "elapsed_ms": 242.5, "ts": 1790837292.271}
+{"t": "closed", "ts": 1790837292.271}

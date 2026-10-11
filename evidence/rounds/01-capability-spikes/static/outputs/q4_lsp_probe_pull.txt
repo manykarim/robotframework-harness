@@ -1,0 +1,18 @@
+### PULL mode=change
+initialize: 0.81s; ; diagnosticProvider={'interFileDependencies': True, 'workspaceDiagnostics': False, 'identifier': 'robotcodelsp_d1648b29-9ff9-4cad-b7d1-8d7a05ae6b86', 'workDoneProgress': True}
+v1 Fill Text missing arg                   diagnostics after 0.014 s (1 publishes) []
+v2 fixed                                   diagnostics after 0.004 s (1 publishes) []
+v3 typo Clik                               diagnostics after 0.002 s (1 publishes) []
+v4 add RequestsLibrary + undefined var     diagnostics after 0.003 s (1 publishes) []
+v5 selenium kw in browser session          diagnostics after 0.003 s (1 publishes) []
+completion at keyword position: 0.252s, 300 items, 600213 chars
+hover on 'Input Text': 0.024s, 1448 chars: {"contents": {"kind": "markdown", "value": "### Keyword *Fill Text*\n\n#### Arguments: \n\n| | | | |\n|:--|:--|:--|:--|\n| `selector`| : `str` |  |  |\n| `txt`|
+### PULL mode=reopen
+initialize: 0.82s; ; diagnosticProvider={'interFileDependencies': True, 'workspaceDiagnostics': False, 'identifier': 'robotcodelsp_8b0ff022-5106-4981-9d58-1990d7a916c9', 'workDoneProgress': True}
+v1 Fill Text missing arg                   diagnostics after 0.014 s (1 publishes) []
+v2 fixed                                   diagnostics after 0.005 s (1 publishes) []
+v3 typo Clik                               diagnostics after 0.004 s (1 publishes) []
+v4 add RequestsLibrary + undefined var     diagnostics after 0.004 s (1 publishes) []
+v5 selenium kw in browser session          diagnostics after 0.004 s (1 publishes) []
+completion at keyword position: 0.278s, 300 items, 600188 chars
+hover on 'Input Text': 0.024s, 4 chars: null

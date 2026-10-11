@@ -1,0 +1,118 @@
+{
+ "claude": {
+  "rc": 0,
+  "secs": 66,
+  "rfmcp_cmds_distinct": 14,
+  "by_subcommand": {
+   "start": 1,
+   "step": 11,
+   "state": 1,
+   "stop": 1
+  },
+  "skill_loaded": true,
+  "first_cmds": [
+   "rfmcp start",
+   "rfmcp step 'Import Library    Browser'",
+   "rfmcp step 'New Browser    chromium    headless=True'",
+   "rfmcp step 'New Page    file:///tmp/claude-1000/-home-~-workspace-rf-mcp/1fce9b83-a4c5-",
+   "rfmcp state aria",
+   "rfmcp step 'Fill Text    id=username    alice'",
+   "rfmcp step 'Fill Text    id=password    password'",
+   "rfmcp step 'Click    id=login'",
+   "rfmcp step 'Wait For Elements State    id=status    visible    timeout=2s'",
+   "rfmcp step 'Get Text    id=status'",
+   "rfmcp step 'Fill Text    id=pay-frame >>> id=card    4242'",
+   "rfmcp step 'Click    id=pay-frame >>> id=pay'"
+  ],
+  "cost_usd": 0.10064580000000001,
+  "turns": 21,
+  "helper_left_running": false,
+  "final_stop": "{\"ok\":true,\"running\":false,\"killed\":0,\"forced\":0}",
+  "hook_calls": 1,
+  "hook_calls_with_robot_file": 1,
+  "test_exists": true,
+  "independent_rerun_rc": 0,
+  "uses_frame_piercing": true
+ },
+ "codex": {
+  "rc": 0,
+  "secs": 52,
+  "rfmcp_cmds_distinct": 2,
+  "by_subcommand": {
+   "start'": 1,
+   "run": 1
+  },
+  "skill_loaded": true,
+  "first_cmds": [
+   "rfmcp start'",
+   "rfmcp run tests/pay.robot'"
+  ],
+  "helper_left_running": true,
+  "final_stop": "{\"ok\":true,\"stopped\":true,\"stop_ms\":567,\"forced\":false,\"orphans\":0,\"killed_after_exit\":0}",
+  "hook_calls": 1,
+  "hook_calls_with_robot_file": 1,
+  "test_exists": true,
+  "independent_rerun_rc": 0,
+  "uses_frame_piercing": true
+ },
+ "opencode": {
+  "rc": 0,
+  "secs": 111,
+  "rfmcp_cmds_distinct": 12,
+  "by_subcommand": {
+   "start": 1,
+   "step": 8,
+   "state": 2,
+   "stop": 1
+  },
+  "skill_loaded": true,
+  "first_cmds": [
+   "rfmcp start",
+   "rfmcp step 'Import Library    Browser'",
+   "rfmcp step 'New Browser    chromium    headless=True'",
+   "rfmcp step 'New Page    file:///tmp/claude-1000/-home-~-workspace-rf-mcp/1fce9b83-a4c5-",
+   "rfmcp step 'Fill Text    id=username    alice'",
+   "rfmcp step 'Fill Text    id=password    secret123'",
+   "rfmcp step 'Click    id=login'",
+   "rfmcp state source",
+   "rfmcp state aria",
+   "rfmcp step 'Fill Text    id=pay-frame >>> id=card    4242'",
+   "rfmcp step 'Click    id=pay-frame >>> id=pay'",
+   "rfmcp stop"
+  ],
+  "helper_left_running": false,
+  "final_stop": "{\"ok\":true,\"running\":false,\"killed\":0,\"forced\":0}",
+  "hook_calls": 3,
+  "hook_calls_with_robot_file": 3,
+  "test_exists": true,
+  "independent_rerun_rc": 0,
+  "uses_frame_piercing": true
+ },
+ "copilot": {
+  "rc": 1,
+  "secs": 112,
+  "rfmcp_cmds_distinct": 0,
+  "by_subcommand": {},
+  "skill_loaded": true,
+  "first_cmds": [],
+  "helper_left_running": false,
+  "hook_calls": 0,
+  "hook_calls_with_robot_file": 0,
+  "test_exists": false,
+  "note": "run 3 (strong AGENTS.md pointer): skill tool called first (`skill robotframework` loaded OK), then GitHub 429 rate limit (reset ~4 h) -> no rfmcp use measurable"
+ },
+ "copilot_run2_weak_pointer": {
+  "rc": "killed at 681 s",
+  "skill_listed": true,
+  "skill_loaded": false,
+  "rfmcp_cmds_distinct": 0,
+  "hook_calls": 33,
+  "hook_calls_with_robot_file": 23,
+  "hook_text_delivered": true,
+  "outcome": "gpt-4.1 cycled Select Frame/Switch Frame/Set Frame/Get Frame despite hook KeywordNotFound reports; test failing",
+  "fixes_after": "hook skips read-only tools (view), adds Browser-iframe HINT; AGENTS.md pointer made imperative"
+ },
+ "copilot_run1_contaminated": {
+  "outcome": "user-global ~/.copilot/mcp-config.json RobotMCP server was active -> agent used MCP find_keywords; install() now returns --disable-builtin-mcps + --disable-mcp-server <each configured server>"
+ }
+}

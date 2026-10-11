@@ -1,15 +1,15 @@
 ## 1. Repository foundation
 
 - [x] 1.1 Create the layout from design D1 with `LICENSE` (Apache-2.0), `README.md` (pitch, 3-line quick start, evidence headline with link), `pyproject.toml` (dist `robotframework-harness`, console scripts `robotframework-harness` and `rf-harness`, zero dependencies, extra `runtime`), a hatch build hook that bundles `plugins/rf-harness/` into `rf_harness/_assets`, and `.gitignore`. Verify `uv build` produces a wheel that contains `_assets/skills/rf-harness/SKILL.md`.
-- [ ] 1.2 Add CI (`.github/workflows/ci.yml`: ruff, mypy, pytest on Linux/macOS/Windows with Python 3.10–3.13) and a version-consistency check (plugin.json == package version). Verify CI passes on an empty test suite and fails when the versions differ.
-- [ ] 1.3 Create the **private** GitHub repository `manykarim/robotframework-ai-engineering` and push `main`. Verify `gh repo view` reports visibility PRIVATE.
+- [x] 1.2 Add CI (`.github/workflows/ci.yml`: ruff, mypy, pytest on Linux/macOS/Windows with Python 3.10–3.13) and a version-consistency check (plugin.json == package version). Verify CI passes on an empty test suite and fails when the versions differ.
+- [x] 1.3 Create the **private** GitHub repository `manykarim/robotframework-ai-engineering` and push `main`. Verify `gh repo view` reports visibility PRIVATE.
 
 ## 2. Runtime port from v3.2 (harness-live-session, harness-failure-feedback, harness-keyword-knowledge, harness-static-quality)
 
 - [ ] 2.1 Port `rfharness32` into `rf_harness.runtime` (design D5): `RFH32_` → `RFH_` via the `config.py` registry, markers `[rfh]`, state dir `.rf/`, robotcode access only through `robotcode_adapter.py`. Verify that `python -m rf_harness.runtime.hook` handles a session-start payload and that a grep finds no `rfharness3`, `RFH3` or `hook32` strings.
 - [ ] 2.2 Port the 224-check simulation suite to `tests/simulation/` (Browser + chromium, run in CI on Linux). Verify ≥ 221/224 pass, with the scenario-D pre-tool lint timing check marked as a tolerated flake with a retry, and the v3.2 scenario L (covered `label:has(#id)` target, read-streak nudge) green.
 - [ ] 2.3 Add robotcode adapter contract tests (`BaseInterpreter`/`run_repl` embedding, libdoc, analyzer) pinned to `robotcode>=2.7,<2.8`. Verify they pass against robotcode 2.7.x.
-- [ ] 2.4 Vendor the desktop safety, isolation and focus guards into `rf_harness.runtime.desktop` with attribution, and add parity tests replaying recorded rf-mcp guard decisions. Desktop live steps stay refused unless `RFH_DESKTOP=1`. Verify the parity tests pass and an active-desktop input step is refused by default.
+- [x] 2.4 Vendor the desktop safety, isolation and focus guards into `rf_harness.runtime.desktop` with attribution, and add parity tests replaying recorded rf-mcp guard decisions. Desktop live steps stay refused unless `RFH_DESKTOP=1`. Verify the parity tests pass and an active-desktop input step is refused by default.
 
 ## 3. Plugin and marketplace (marketplace-distribution)
 
@@ -35,10 +35,10 @@
 
 ## 6. Evidence archive (experiment-evidence)
 
-- [ ] 6.1 Write `evidence/scrub.py` (key/token patterns, literal secret values from the environment, OAuth fields, agent homes, e-mail addresses, home-path normalization) and run it in CI on every `evidence/` change. Verify with a planted fake key that the check fails, and that a clean run produces an empty report.
-- [ ] 6.2 Import the rf-mcp research tree (commit `7994ae3`) into `evidence/rounds/<NN>-<topic>/`, with the static-analysis report, harness-version snapshots, eval snapshots, `incidents.md` and excluded-row files. Write `checksums.sha256`. Verify the scrub is clean and checksums match.
-- [ ] 6.3 Write `evidence/claims.yaml` for every number in the README and docs, and `check_claims.py`, which recomputes them. Verify the check passes, and fails after editing one archived result row.
-- [ ] 6.4 Pack the scrubbed transcripts per round as `.tar.zst` with a manifest (sha256, result-row key), and document download and verification. Verify the verification script on the packed assets locally.
+- [x] 6.1 Write `evidence/scrub.py` (key/token patterns, literal secret values from the environment, OAuth fields, agent homes, e-mail addresses, home-path normalization) and run it in CI on every `evidence/` change. Verify with a planted fake key that the check fails, and that a clean run produces an empty report.
+- [x] 6.2 Import the rf-mcp research tree (commit `7994ae3`) into `evidence/rounds/<NN>-<topic>/`, with the static-analysis report, harness-version snapshots, eval snapshots, `incidents.md` and excluded-row files. Write `checksums.sha256`. Verify the scrub is clean and checksums match.
+- [x] 6.3 Write `evidence/claims.yaml` for every number in the README and docs, and `check_claims.py`, which recomputes them. Verify the check passes, and fails after editing one archived result row.
+- [x] 6.4 Pack the scrubbed transcripts per round as `.tar.zst` with a manifest (sha256, result-row key), and document download and verification. Verify the verification script on the packed assets locally.
 - [ ] 6.5 Write reproduction guides per round (prerequisites, agent and model versions, commands, cost and duration, same-window rule). Verify the round-7 guide by running a 1-rep smoke of its command.
 
 ## 7. Documentation (harness-documentation)

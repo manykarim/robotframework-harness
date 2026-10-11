@@ -1,0 +1,16 @@
+{
+  "cmd": [
+    "~/workspace/robotcode-experiments/.venv/bin/robotcode",
+    "repl",
+    "--plain",
+    "--no-history",
+    "-d",
+    "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/hints/runs/M01/plain",
+    "-o",
+    "output.xml"
+  ],
+  "exit": 0,
+  "duration_s": 8.51,
+  "stderr_len": 125,
+  "results_log_exit": 0
+}

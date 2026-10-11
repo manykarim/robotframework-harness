@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Insurance - Applicant</title>
+<style>
+.ideal-radio,.ideal-check{position:relative;display:inline-block;width:18px;height:18px}
+.ideal-radio input,.ideal-check input{position:absolute;left:1px;top:1px;width:16px;height:16px;margin:0}
+.ideal-radio span,.ideal-check span{position:absolute;left:0;top:0;width:18px;height:18px;background:#ddd;border:1px solid #666}
+#far{margin-top:1800px}
+</style></head><body>
+<h1>Applicant</h1>
+<p>Gender:
+ <span class="ideal-radio"><input type="radio" name="gender" id="gender-female" value="f"><span></span></span>
+ <label for="gender-female">Female</label>
+ <span class="ideal-radio"><input type="radio" name="gender" id="gender-male" value="m"><span></span></span>
+ <label for="gender-male">Male</label></p>
+<p><label for="name">Name</label> <input id="name" name="name"></p>
+<p id="total" role="status">Total: 40.00 EUR</p>
+<p><button id="load" type="button" onclick="setTimeout(()=>{document.getElementById('late').innerHTML='<button id=&quot;late-btn&quot; type=&quot;button&quot; onclick=&quot;document.getElementById(\'step\').textContent=\'Step 2\'&quot;>Continue</button>'},4000)">Load details</button></p>
+<div id="late"></div><p id="step">Step 1</p>
+<p><button id="calc" type="button" onclick="setTimeout(()=>{document.getElementById('result').textContent='42'},1600)">Calculate</button>
+ <span id="result"></span></p>
+<div id="far"><span class="ideal-check"><input type="checkbox" id="newsletter"><span></span></span>
+ <label for="newsletter">Newsletter</label></div>
+</body></html>

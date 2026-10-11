@@ -1,0 +1,2 @@
+# Archived evidence must stay byte-identical on every platform: no end-of-line conversion.
+* -text

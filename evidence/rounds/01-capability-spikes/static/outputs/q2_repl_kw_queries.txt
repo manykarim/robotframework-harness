@@ -1,0 +1,13 @@
+=== .kw click element  1.367940158s 1922 chars
+Click Element
+=== .kw fill text  1.360008234s 1350 chars
+Fill Text
+- PageContent
+- Setter
+=== .kw post json  1.323031878s 40 chars
+=== .kw wait until visible  1.301607973s 49 chars
+=== .kw get text  1.356620316s 1506 chars
+Get Text
+- Assertion
+- Getter
+- PageContent

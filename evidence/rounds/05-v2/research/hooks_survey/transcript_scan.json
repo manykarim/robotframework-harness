@@ -1,0 +1,1534 @@
+{
+ "per_arm": {
+  "claude|hookpkg": {
+   "n": 15,
+   "pass": 0.53,
+   "pip_install": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "browser_install": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "pythonpath_workaround": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_output_xml_shell": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "grep_output_xml": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_log_html_shell": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robotcode_results": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robotcode_repl": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robot_debug": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robot_run": {
+    "sessions_with": 14,
+    "mean": 1.93
+   },
+   "sleep_shell": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "curl_wget_site": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "Sleep_kw": {
+    "sessions_with": 3,
+    "mean": 0.67
+   },
+   "ignore_error_wrap": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "skip_kw": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "abs_path_in_robot": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "set_browser_timeout": {
+    "sessions_with": 13,
+    "mean": 5.87
+   },
+   "iframe_selector": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "force_click": {
+    "sessions_with": 4,
+    "mean": 1.13
+   },
+   "read_output_xml_tool": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_log_html_tool": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_rf_state": {
+    "sessions_with": 15,
+    "mean": 11.73
+   },
+   "max_same_cmd": {
+    "sessions_with": 14,
+    "mean": 1.73
+   },
+   "max_same_file_edits": {
+    "sessions_with": 15,
+    "mean": 20.2
+   }
+  },
+  "claude|mcp": {
+   "n": 15,
+   "pass": 0.2,
+   "pip_install": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "browser_install": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "pythonpath_workaround": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_output_xml_shell": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "grep_output_xml": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_log_html_shell": {
+    "sessions_with": 1,
+    "mean": 0.07
+   },
+   "robotcode_results": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robotcode_repl": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robot_debug": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robot_run": {
+    "sessions_with": 14,
+    "mean": 12.67
+   },
+   "sleep_shell": {
+    "sessions_with": 1,
+    "mean": 0.07
+   },
+   "curl_wget_site": {
+    "sessions_with": 1,
+    "mean": 0.07
+   },
+   "Sleep_kw": {
+    "sessions_with": 8,
+    "mean": 1.0
+   },
+   "ignore_error_wrap": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "skip_kw": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "abs_path_in_robot": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "set_browser_timeout": {
+    "sessions_with": 9,
+    "mean": 2.33
+   },
+   "iframe_selector": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "force_click": {
+    "sessions_with": 6,
+    "mean": 1.6
+   },
+   "read_output_xml_tool": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_log_html_tool": {
+    "sessions_with": 1,
+    "mean": 0.07
+   },
+   "read_rf_state": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "max_same_cmd": {
+    "sessions_with": 14,
+    "mean": 5.93
+   },
+   "max_same_file_edits": {
+    "sessions_with": 15,
+    "mean": 17.0
+   }
+  },
+  "claude|neither": {
+   "n": 15,
+   "pass": 0.33,
+   "pip_install": {
+    "sessions_with": 1,
+    "mean": 0.07
+   },
+   "browser_install": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "pythonpath_workaround": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_output_xml_shell": {
+    "sessions_with": 1,
+    "mean": 0.07
+   },
+   "grep_output_xml": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_log_html_shell": {
+    "sessions_with": 4,
+    "mean": 0.33
+   },
+   "robotcode_results": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robotcode_repl": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robot_debug": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robot_run": {
+    "sessions_with": 15,
+    "mean": 20.4
+   },
+   "sleep_shell": {
+    "sessions_with": 2,
+    "mean": 0.13
+   },
+   "curl_wget_site": {
+    "sessions_with": 6,
+    "mean": 2.67
+   },
+   "Sleep_kw": {
+    "sessions_with": 9,
+    "mean": 6.07
+   },
+   "ignore_error_wrap": {
+    "sessions_with": 3,
+    "mean": 0.2
+   },
+   "skip_kw": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "abs_path_in_robot": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "set_browser_timeout": {
+    "sessions_with": 11,
+    "mean": 5.87
+   },
+   "iframe_selector": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "force_click": {
+    "sessions_with": 8,
+    "mean": 1.4
+   },
+   "read_output_xml_tool": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_log_html_tool": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_rf_state": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "max_same_cmd": {
+    "sessions_with": 15,
+    "mean": 9.93
+   },
+   "max_same_file_edits": {
+    "sessions_with": 15,
+    "mean": 23.4
+   }
+  },
+  "claude|skillpkg": {
+   "n": 15,
+   "pass": 0.47,
+   "pip_install": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "browser_install": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "pythonpath_workaround": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_output_xml_shell": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "grep_output_xml": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_log_html_shell": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robotcode_results": {
+    "sessions_with": 1,
+    "mean": 0.13
+   },
+   "robotcode_repl": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robot_debug": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robot_run": {
+    "sessions_with": 14,
+    "mean": 4.87
+   },
+   "sleep_shell": {
+    "sessions_with": 3,
+    "mean": 0.2
+   },
+   "curl_wget_site": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "Sleep_kw": {
+    "sessions_with": 1,
+    "mean": 0.07
+   },
+   "ignore_error_wrap": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "skip_kw": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "abs_path_in_robot": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "set_browser_timeout": {
+    "sessions_with": 10,
+    "mean": 3.33
+   },
+   "iframe_selector": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "force_click": {
+    "sessions_with": 1,
+    "mean": 0.07
+   },
+   "read_output_xml_tool": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_log_html_tool": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_rf_state": {
+    "sessions_with": 8,
+    "mean": 2.47
+   },
+   "max_same_cmd": {
+    "sessions_with": 15,
+    "mean": 5.4
+   },
+   "max_same_file_edits": {
+    "sessions_with": 15,
+    "mean": 8.47
+   }
+  },
+  "codex|hookpkg": {
+   "n": 15,
+   "pass": 0.87,
+   "pip_install": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "browser_install": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "pythonpath_workaround": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_output_xml_shell": {
+    "sessions_with": 2,
+    "mean": 0.27
+   },
+   "grep_output_xml": {
+    "sessions_with": 3,
+    "mean": 0.47
+   },
+   "read_log_html_shell": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robotcode_results": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robotcode_repl": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robot_debug": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robot_run": {
+    "sessions_with": 15,
+    "mean": 3.73
+   },
+   "sleep_shell": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "curl_wget_site": {
+    "sessions_with": 4,
+    "mean": 1.53
+   },
+   "Sleep_kw": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "ignore_error_wrap": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "skip_kw": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "abs_path_in_robot": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "set_browser_timeout": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "iframe_selector": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "force_click": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_output_xml_tool": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_log_html_tool": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_rf_state": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "max_same_cmd": {
+    "sessions_with": 15,
+    "mean": 3.27
+   },
+   "max_same_file_edits": {
+    "sessions_with": 15,
+    "mean": 12.53
+   }
+  },
+  "codex|mcp": {
+   "n": 15,
+   "pass": 0.8,
+   "pip_install": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "browser_install": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "pythonpath_workaround": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_output_xml_shell": {
+    "sessions_with": 1,
+    "mean": 0.13
+   },
+   "grep_output_xml": {
+    "sessions_with": 1,
+    "mean": 0.13
+   },
+   "read_log_html_shell": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robotcode_results": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robotcode_repl": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robot_debug": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robot_run": {
+    "sessions_with": 15,
+    "mean": 10.67
+   },
+   "sleep_shell": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "curl_wget_site": {
+    "sessions_with": 9,
+    "mean": 3.4
+   },
+   "Sleep_kw": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "ignore_error_wrap": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "skip_kw": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "abs_path_in_robot": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "set_browser_timeout": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "iframe_selector": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "force_click": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_output_xml_tool": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_log_html_tool": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_rf_state": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "max_same_cmd": {
+    "sessions_with": 15,
+    "mean": 6.13
+   },
+   "max_same_file_edits": {
+    "sessions_with": 14,
+    "mean": 8.93
+   }
+  },
+  "codex|neither": {
+   "n": 15,
+   "pass": 0.87,
+   "pip_install": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "browser_install": {
+    "sessions_with": 1,
+    "mean": 0.07
+   },
+   "pythonpath_workaround": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_output_xml_shell": {
+    "sessions_with": 3,
+    "mean": 0.2
+   },
+   "grep_output_xml": {
+    "sessions_with": 5,
+    "mean": 0.47
+   },
+   "read_log_html_shell": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robotcode_results": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robotcode_repl": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robot_debug": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robot_run": {
+    "sessions_with": 15,
+    "mean": 11.33
+   },
+   "sleep_shell": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "curl_wget_site": {
+    "sessions_with": 7,
+    "mean": 3.4
+   },
+   "Sleep_kw": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "ignore_error_wrap": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "skip_kw": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "abs_path_in_robot": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "set_browser_timeout": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "iframe_selector": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "force_click": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_output_xml_tool": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_log_html_tool": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_rf_state": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "max_same_cmd": {
+    "sessions_with": 15,
+    "mean": 6.93
+   },
+   "max_same_file_edits": {
+    "sessions_with": 15,
+    "mean": 8.73
+   }
+  },
+  "codex|skillpkg": {
+   "n": 15,
+   "pass": 0.8,
+   "pip_install": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "browser_install": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "pythonpath_workaround": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_output_xml_shell": {
+    "sessions_with": 2,
+    "mean": 0.13
+   },
+   "grep_output_xml": {
+    "sessions_with": 4,
+    "mean": 0.33
+   },
+   "read_log_html_shell": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robotcode_results": {
+    "sessions_with": 2,
+    "mean": 0.27
+   },
+   "robotcode_repl": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robot_debug": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robot_run": {
+    "sessions_with": 15,
+    "mean": 3.4
+   },
+   "sleep_shell": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "curl_wget_site": {
+    "sessions_with": 1,
+    "mean": 0.53
+   },
+   "Sleep_kw": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "ignore_error_wrap": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "skip_kw": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "abs_path_in_robot": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "set_browser_timeout": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "iframe_selector": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "force_click": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_output_xml_tool": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_log_html_tool": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_rf_state": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "max_same_cmd": {
+    "sessions_with": 15,
+    "mean": 5.6
+   },
+   "max_same_file_edits": {
+    "sessions_with": 15,
+    "mean": 5.07
+   }
+  },
+  "opencode|hookpkg": {
+   "n": 15,
+   "pass": 0.33,
+   "pip_install": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "browser_install": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "pythonpath_workaround": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_output_xml_shell": {
+    "sessions_with": 1,
+    "mean": 0.13
+   },
+   "grep_output_xml": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_log_html_shell": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robotcode_results": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robotcode_repl": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robot_debug": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robot_run": {
+    "sessions_with": 15,
+    "mean": 3.07
+   },
+   "sleep_shell": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "curl_wget_site": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "Sleep_kw": {
+    "sessions_with": 7,
+    "mean": 6.4
+   },
+   "ignore_error_wrap": {
+    "sessions_with": 1,
+    "mean": 0.47
+   },
+   "skip_kw": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "abs_path_in_robot": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "set_browser_timeout": {
+    "sessions_with": 11,
+    "mean": 5.53
+   },
+   "iframe_selector": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "force_click": {
+    "sessions_with": 8,
+    "mean": 1.87
+   },
+   "read_output_xml_tool": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_log_html_tool": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_rf_state": {
+    "sessions_with": 14,
+    "mean": 15.8
+   },
+   "max_same_cmd": {
+    "sessions_with": 15,
+    "mean": 2.8
+   },
+   "max_same_file_edits": {
+    "sessions_with": 15,
+    "mean": 25.33
+   }
+  },
+  "opencode|mcp": {
+   "n": 15,
+   "pass": 0.33,
+   "pip_install": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "browser_install": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "pythonpath_workaround": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_output_xml_shell": {
+    "sessions_with": 1,
+    "mean": 1.07
+   },
+   "grep_output_xml": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_log_html_shell": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robotcode_results": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robotcode_repl": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robot_debug": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robot_run": {
+    "sessions_with": 15,
+    "mean": 18.87
+   },
+   "sleep_shell": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "curl_wget_site": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "Sleep_kw": {
+    "sessions_with": 7,
+    "mean": 6.67
+   },
+   "ignore_error_wrap": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "skip_kw": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "abs_path_in_robot": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "set_browser_timeout": {
+    "sessions_with": 12,
+    "mean": 8.33
+   },
+   "iframe_selector": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "force_click": {
+    "sessions_with": 4,
+    "mean": 0.8
+   },
+   "read_output_xml_tool": {
+    "sessions_with": 2,
+    "mean": 0.2
+   },
+   "read_log_html_tool": {
+    "sessions_with": 1,
+    "mean": 0.07
+   },
+   "read_rf_state": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "max_same_cmd": {
+    "sessions_with": 15,
+    "mean": 15.4
+   },
+   "max_same_file_edits": {
+    "sessions_with": 15,
+    "mean": 21.27
+   }
+  },
+  "opencode|neither": {
+   "n": 15,
+   "pass": 0.4,
+   "pip_install": {
+    "sessions_with": 1,
+    "mean": 0.07
+   },
+   "browser_install": {
+    "sessions_with": 1,
+    "mean": 0.07
+   },
+   "pythonpath_workaround": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_output_xml_shell": {
+    "sessions_with": 4,
+    "mean": 3.07
+   },
+   "grep_output_xml": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_log_html_shell": {
+    "sessions_with": 1,
+    "mean": 0.07
+   },
+   "robotcode_results": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robotcode_repl": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robot_debug": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robot_run": {
+    "sessions_with": 15,
+    "mean": 33.73
+   },
+   "sleep_shell": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "curl_wget_site": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "Sleep_kw": {
+    "sessions_with": 11,
+    "mean": 8.0
+   },
+   "ignore_error_wrap": {
+    "sessions_with": 4,
+    "mean": 2.67
+   },
+   "skip_kw": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "abs_path_in_robot": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "set_browser_timeout": {
+    "sessions_with": 10,
+    "mean": 8.07
+   },
+   "iframe_selector": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "force_click": {
+    "sessions_with": 8,
+    "mean": 9.67
+   },
+   "read_output_xml_tool": {
+    "sessions_with": 3,
+    "mean": 0.2
+   },
+   "read_log_html_tool": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_rf_state": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "max_same_cmd": {
+    "sessions_with": 15,
+    "mean": 27.67
+   },
+   "max_same_file_edits": {
+    "sessions_with": 15,
+    "mean": 32.47
+   }
+  },
+  "opencode|skillpkg": {
+   "n": 15,
+   "pass": 0.53,
+   "pip_install": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "browser_install": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "pythonpath_workaround": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_output_xml_shell": {
+    "sessions_with": 2,
+    "mean": 0.67
+   },
+   "grep_output_xml": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_log_html_shell": {
+    "sessions_with": 1,
+    "mean": 0.07
+   },
+   "robotcode_results": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robotcode_repl": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robot_debug": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "robot_run": {
+    "sessions_with": 15,
+    "mean": 13.0
+   },
+   "sleep_shell": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "curl_wget_site": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "Sleep_kw": {
+    "sessions_with": 3,
+    "mean": 2.67
+   },
+   "ignore_error_wrap": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "skip_kw": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "abs_path_in_robot": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "set_browser_timeout": {
+    "sessions_with": 13,
+    "mean": 5.13
+   },
+   "iframe_selector": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "force_click": {
+    "sessions_with": 4,
+    "mean": 2.6
+   },
+   "read_output_xml_tool": {
+    "sessions_with": 1,
+    "mean": 0.2
+   },
+   "read_log_html_tool": {
+    "sessions_with": 0,
+    "mean": 0.0
+   },
+   "read_rf_state": {
+    "sessions_with": 11,
+    "mean": 3.33
+   },
+   "max_same_cmd": {
+    "sessions_with": 15,
+    "mean": 13.4
+   },
+   "max_same_file_edits": {
+    "sessions_with": 15,
+    "mean": 16.87
+   }
+  }
+ },
+ "flags": [
+  "pip_install",
+  "browser_install",
+  "pythonpath_workaround",
+  "read_output_xml_shell",
+  "grep_output_xml",
+  "read_log_html_shell",
+  "robotcode_results",
+  "robotcode_repl",
+  "robot_debug",
+  "robot_run",
+  "sleep_shell",
+  "curl_wget_site",
+  "Sleep_kw",
+  "ignore_error_wrap",
+  "skip_kw",
+  "abs_path_in_robot",
+  "set_browser_timeout",
+  "iframe_selector",
+  "force_click",
+  "read_output_xml_tool",
+  "read_log_html_tool",
+  "read_rf_state"
+ ],
+ "pass_with_vs_without": {
+  "pip_install": {
+   "n_with": 2,
+   "pass_with": 0.5,
+   "pass_without": 0.54
+  },
+  "browser_install": {
+   "n_with": 2,
+   "pass_with": 1.0,
+   "pass_without": 0.53
+  },
+  "read_output_xml_shell": {
+   "n_with": 17,
+   "pass_with": 0.41,
+   "pass_without": 0.55
+  },
+  "grep_output_xml": {
+   "n_with": 13,
+   "pass_with": 0.85,
+   "pass_without": 0.51
+  },
+  "read_log_html_shell": {
+   "n_with": 7,
+   "pass_with": 0.29,
+   "pass_without": 0.55
+  },
+  "robotcode_results": {
+   "n_with": 3,
+   "pass_with": 0.67,
+   "pass_without": 0.54
+  },
+  "robot_run": {
+   "n_with": 177,
+   "pass_with": 0.55,
+   "pass_without": 0.0
+  },
+  "sleep_shell": {
+   "n_with": 6,
+   "pass_with": 0.5,
+   "pass_without": 0.54
+  },
+  "curl_wget_site": {
+   "n_with": 28,
+   "pass_with": 0.68,
+   "pass_without": 0.51
+  },
+  "Sleep_kw": {
+   "n_with": 49,
+   "pass_with": 0.24,
+   "pass_without": 0.65
+  },
+  "ignore_error_wrap": {
+   "n_with": 8,
+   "pass_with": 0.5,
+   "pass_without": 0.54
+  },
+  "set_browser_timeout": {
+   "n_with": 89,
+   "pass_with": 0.28,
+   "pass_without": 0.79
+  },
+  "force_click": {
+   "n_with": 43,
+   "pass_with": 0.21,
+   "pass_without": 0.64
+  },
+  "read_output_xml_tool": {
+   "n_with": 6,
+   "pass_with": 0.67,
+   "pass_without": 0.53
+  },
+  "read_log_html_tool": {
+   "n_with": 2,
+   "pass_with": 0.0,
+   "pass_without": 0.54
+  },
+  "read_rf_state": {
+   "n_with": 48,
+   "pass_with": 0.42,
+   "pass_without": 0.58
+  },
+  "loop_cmd>=3": {
+   "n_with": 140,
+   "pass_with": 0.52,
+   "pass_without": 0.6
+  },
+  "loop_edit>=6": {
+   "n_with": 142,
+   "pass_with": 0.49,
+   "pass_without": 0.74
+  }
+ },
+ "stratified_by_agent_[n_with,pass_with,pass_without]": {
+  "pip_install": {
+   "claude": [
+    1,
+    0.0,
+    0.39
+   ],
+   "opencode": [
+    1,
+    1.0,
+    0.39
+   ]
+  },
+  "browser_install": {
+   "codex": [
+    1,
+    1.0,
+    0.83
+   ],
+   "opencode": [
+    1,
+    1.0,
+    0.39
+   ]
+  },
+  "read_output_xml_shell": {
+   "claude": [
+    1,
+    0.0,
+    0.39
+   ],
+   "codex": [
+    8,
+    0.5,
+    0.88
+   ],
+   "opencode": [
+    8,
+    0.38,
+    0.4
+   ]
+  },
+  "grep_output_xml": {
+   "codex": [
+    13,
+    0.85,
+    0.83
+   ]
+  },
+  "read_log_html_shell": {
+   "claude": [
+    5,
+    0.2,
+    0.4
+   ],
+   "opencode": [
+    2,
+    0.5,
+    0.4
+   ]
+  },
+  "robotcode_results": {
+   "claude": [
+    1,
+    1.0,
+    0.37
+   ],
+   "codex": [
+    2,
+    0.5,
+    0.84
+   ]
+  },
+  "robot_run": {
+   "claude": [
+    57,
+    0.4,
+    0.0
+   ]
+  },
+  "sleep_shell": {
+   "claude": [
+    6,
+    0.5,
+    0.37
+   ]
+  },
+  "curl_wget_site": {
+   "claude": [
+    7,
+    0.43,
+    0.38
+   ],
+   "codex": [
+    21,
+    0.76,
+    0.87
+   ]
+  },
+  "Sleep_kw": {
+   "claude": [
+    21,
+    0.19,
+    0.49
+   ],
+   "opencode": [
+    28,
+    0.29,
+    0.5
+   ]
+  },
+  "ignore_error_wrap": {
+   "claude": [
+    3,
+    0.67,
+    0.37
+   ],
+   "opencode": [
+    5,
+    0.4,
+    0.4
+   ]
+  },
+  "set_browser_timeout": {
+   "claude": [
+    43,
+    0.28,
+    0.65
+   ],
+   "opencode": [
+    46,
+    0.28,
+    0.79
+   ]
+  },
+  "force_click": {
+   "claude": [
+    19,
+    0.21,
+    0.46
+   ],
+   "opencode": [
+    24,
+    0.21,
+    0.53
+   ]
+  },
+  "read_output_xml_tool": {
+   "opencode": [
+    6,
+    0.67,
+    0.37
+   ]
+  },
+  "read_log_html_tool": {
+   "claude": [
+    1,
+    0.0,
+    0.39
+   ],
+   "opencode": [
+    1,
+    0.0,
+    0.41
+   ]
+  },
+  "read_rf_state": {
+   "claude": [
+    23,
+    0.43,
+    0.35
+   ],
+   "opencode": [
+    25,
+    0.4,
+    0.4
+   ]
+  },
+  "loop_cmd>=5": {
+   "claude": [
+    27,
+    0.26,
+    0.48
+   ],
+   "codex": [
+    30,
+    0.8,
+    0.87
+   ],
+   "opencode": [
+    46,
+    0.39,
+    0.43
+   ]
+  },
+  "loop_edit>=10": {
+   "claude": [
+    38,
+    0.32,
+    0.5
+   ],
+   "codex": [
+    25,
+    0.84,
+    0.83
+   ],
+   "opencode": [
+    47,
+    0.34,
+    0.62
+   ]
+  }
+ },
+ "n_sessions": 180
+}

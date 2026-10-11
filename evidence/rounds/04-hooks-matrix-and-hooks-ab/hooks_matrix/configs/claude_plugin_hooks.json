@@ -1,0 +1,116 @@
+{
+ "hooks": {
+  "SessionStart": [
+   {
+    "hooks": [
+     {
+      "type": "command",
+      "command": "/usr/bin/python3 ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/bin/hooklog.py --agent claude --event SessionStart --cell ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/runs/claude/main --src plugin"
+     }
+    ]
+   }
+  ],
+  "UserPromptSubmit": [
+   {
+    "hooks": [
+     {
+      "type": "command",
+      "command": "/usr/bin/python3 ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/bin/hooklog.py --agent claude --event UserPromptSubmit --cell ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/runs/claude/main --src plugin"
+     }
+    ]
+   }
+  ],
+  "PreToolUse": [
+   {
+    "matcher": "Write|Edit|MultiEdit|Bash",
+    "hooks": [
+     {
+      "type": "command",
+      "command": "/usr/bin/python3 ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/bin/hooklog.py --agent claude --event PreToolUse --cell ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/runs/claude/main --src plugin"
+     }
+    ]
+   }
+  ],
+  "PostToolUse": [
+   {
+    "matcher": "Write|Edit|MultiEdit|Bash|Read",
+    "hooks": [
+     {
+      "type": "command",
+      "command": "/usr/bin/python3 ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/bin/hooklog.py --agent claude --event PostToolUse --cell ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/runs/claude/main --src plugin"
+     }
+    ]
+   }
+  ],
+  "PostToolUseFailure": [
+   {
+    "hooks": [
+     {
+      "type": "command",
+      "command": "/usr/bin/python3 ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/bin/hooklog.py --agent claude --event PostToolUseFailure --cell ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/runs/claude/main --src plugin"
+     }
+    ]
+   }
+  ],
+  "PostToolBatch": [
+   {
+    "hooks": [
+     {
+      "type": "command",
+      "command": "/usr/bin/python3 ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/bin/hooklog.py --agent claude --event PostToolBatch --cell ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/runs/claude/main --src plugin --passive"
+     }
+    ]
+   }
+  ],
+  "Stop": [
+   {
+    "hooks": [
+     {
+      "type": "command",
+      "command": "/usr/bin/python3 ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/bin/hooklog.py --agent claude --event Stop --cell ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/runs/claude/main --src plugin"
+     }
+    ]
+   }
+  ],
+  "SessionEnd": [
+   {
+    "hooks": [
+     {
+      "type": "command",
+      "command": "/usr/bin/python3 ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/bin/hooklog.py --agent claude --event SessionEnd --cell ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/runs/claude/main --src plugin"
+     }
+    ]
+   }
+  ],
+  "Notification": [
+   {
+    "hooks": [
+     {
+      "type": "command",
+      "command": "/usr/bin/python3 ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/bin/hooklog.py --agent claude --event Notification --cell ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/runs/claude/main --src plugin --passive"
+     }
+    ]
+   }
+  ],
+  "PreCompact": [
+   {
+    "hooks": [
+     {
+      "type": "command",
+      "command": "/usr/bin/python3 ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/bin/hooklog.py --agent claude --event PreCompact --cell ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/runs/claude/main --src plugin --passive"
+     }
+    ]
+   }
+  ],
+  "StopFailure": [
+   {
+    "hooks": [
+     {
+      "type": "command",
+      "command": "/usr/bin/python3 ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/bin/hooklog.py --agent claude --event StopFailure --cell ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/runs/claude/main --src plugin --passive"
+     }
+    ]
+   }
+  ]
+ }
+}

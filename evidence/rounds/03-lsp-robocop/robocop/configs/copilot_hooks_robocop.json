@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "hooks": {
+    "postToolUse": [
+      {
+        "type": "command",
+        "bash": ".venv/bin/python .github/hooks/robocop_hook.py --agent copilot",
+        "timeoutSec": 30
+      }
+    ]
+  }
+}

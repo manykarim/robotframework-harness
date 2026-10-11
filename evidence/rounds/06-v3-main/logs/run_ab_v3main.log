@@ -1,0 +1,12 @@
+[2026-10-09 15:37:27] [pid 1180698] start: tag=v3main arms=mcp,hookpkg2,hookpkg3 reps=4 agents=claude,codex,opencode scenarios=live extra= results=results_live_v3main.jsonl
+[2026-10-09 15:37:27] [pid 1180698] start cleanup: dropped 0 aborted/auth-failure rows
+[2026-10-09 15:37:27] [pid 1180698] status: 0/180 cells ok
+[2026-10-09 15:37:34] [pid 1180698] pass 1: starting harness
+[2026-10-09 19:44:00] [pid 1180698] signal received - stopping the harness (running cells are marked aborted; a restart resumes them)
+[2026-10-09 19:46:18] [pid 1366067] start: tag=v3main arms=mcp,hookpkg2,hookpkg3 reps=4 agents=claude,codex,opencode scenarios=live extra= results=results_live_v3main.jsonl
+[2026-10-09 19:46:18] [pid 1366067] start cleanup: dropped 2 aborted/auth-failure rows
+[2026-10-09 19:46:18] [pid 1366067] status: 78/180 cells ok
+[2026-10-09 19:46:26] [pid 1366067] pass 1: starting harness
+[2026-10-10 00:31:08] [pid 1366067] pass 1: harness exited (0)
+[2026-10-10 00:31:08] [pid 1366067] pass 1: dropped 0 aborted/auth-failure rows; 180/180 cells ok
+[2026-10-10 00:31:08] [pid 1366067] done: complete (180/180)

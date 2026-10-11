@@ -1,0 +1,5 @@
+[2026-10-08 16:38:22] pass 1: starting harness
+[2026-10-08 20:19:29] pass 1: starting harness
+[2026-10-08 20:42:44] pass 1: harness exited (0)
+[2026-10-08 20:42:44] pass 1: dropped 0 auth-failure/aborted rows
+[2026-10-08 20:42:44] done: 90 rows

@@ -1,0 +1,4 @@
+[ INFO ] ${username} = jim
+
+# --- stderr ---
+[ FAIL ] Variable '${usernme}' not found.

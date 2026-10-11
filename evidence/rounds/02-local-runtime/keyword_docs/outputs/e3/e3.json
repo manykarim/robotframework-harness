@@ -1,0 +1,947 @@
+[
+ {
+  "wall_s": 0.714,
+  "venv": "x",
+  "mode": "rf",
+  "lib": "Browser",
+  "n": 152,
+  "import_s": 0.18,
+  "build_s": 0.24,
+  "sample": {
+   "name": "Fill Text",
+   "args": [
+    "selector: str",
+    "txt: str",
+    "force: bool = False"
+   ],
+   "tags": [
+    "PageContent",
+    "Setter"
+   ],
+   "doc_len": 1027,
+   "doc_first": "Clears and fills the given ``txt`` into the text field found by ``selector``."
+  },
+  "warm_rebuild_s": 0.137,
+  "total_in_proc_s": 0.557
+ },
+ {
+  "wall_s": 0.791,
+  "venv": "x",
+  "mode": "rc",
+  "lib": "Browser",
+  "n": 152,
+  "errors": [],
+  "import_s": 0.381,
+  "build_s": 0.227,
+  "sample": {
+   "name": "Fill Text",
+   "signature": "(keyword) \"Fill Text\": (selector: str, txt: str, force: bool = ${False})",
+   "args": [
+    [
+     "selector",
+     "POSITIONAL_OR_NAMED",
+     [
+      "str"
+     ],
+     null
+    ],
+    [
+     "txt",
+     "POSITIONAL_OR_NAMED",
+     [
+      "str"
+     ],
+     null
+    ],
+    [
+     "force",
+     "POSITIONAL_OR_NAMED",
+     [
+      "bool"
+     ],
+     "${False}"
+    ]
+   ],
+   "tags": [
+    "PageContent",
+    "Setter"
+   ],
+   "return_type": "",
+   "doc_format": "ROBOT",
+   "md_len": 1267
+  },
+  "pickle_bytes": 530380,
+  "pickle_dump_s": 0.008,
+  "total_in_proc_s": 0.618
+ },
+ {
+  "wall_s": 0.508,
+  "venv": "x",
+  "mode": "rcpk",
+  "lib": "Browser",
+  "n": 152,
+  "import_s": 0.361,
+  "build_s": 0.012,
+  "md_len": 1267,
+  "md_s": 0.0007,
+  "total_in_proc_s": 0.374
+ },
+ {
+  "wall_s": 0.294,
+  "venv": "x",
+  "mode": "rfjs",
+  "lib": "Browser",
+  "n": 152,
+  "import_s": 0.178,
+  "build_s": 0.017,
+  "spec_bytes": 818302,
+  "total_in_proc_s": 0.195
+ },
+ {
+  "wall_s": 0.284,
+  "venv": "x",
+  "mode": "rfjs",
+  "lib": "Browser",
+  "n": 152,
+  "import_s": 0.176,
+  "build_s": 0.016,
+  "spec_bytes": 818302,
+  "total_in_proc_s": 0.193
+ },
+ {
+  "wall_s": 0.536,
+  "venv": "x",
+  "mode": "rcdb",
+  "lib": "Browser",
+  "entries": [
+   "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round2/keyword_docs/project/libs/ShopApi.py",
+   "Browser",
+   "RequestsLibrary",
+   "robot.libraries.BuiltIn",
+   "robot.libraries.Collections",
+   "robot.libraries.Easter",
+   "robot.libraries.String"
+  ],
+  "n": 152,
+  "import_s": 0.383,
+  "build_s": 0.015,
+  "total_in_proc_s": 0.398
+ },
+ {
+  "wall_s": 0.347,
+  "venv": "x",
+  "mode": "rf",
+  "lib": "RequestsLibrary",
+  "n": 33,
+  "import_s": 0.169,
+  "build_s": 0.066,
+  "sample": {
+   "name": "POST On Session",
+   "args": [
+    "*args",
+    "**kwargs"
+   ],
+   "tags": [],
+   "doc_len": 871,
+   "doc_first": "Sends a POST request on a previously created HTTP Session."
+  },
+  "warm_rebuild_s": 0.01,
+  "total_in_proc_s": 0.245
+ },
+ {
+  "wall_s": 0.578,
+  "venv": "x",
+  "mode": "rc",
+  "lib": "RequestsLibrary",
+  "n": 33,
+  "errors": [],
+  "import_s": 0.351,
+  "build_s": 0.078,
+  "sample": {
+   "name": "POST On Session",
+   "signature": "(keyword) \"POST On Session\": (*\u200dargs, *\u200d*\u200dkwargs)",
+   "args": [
+    [
+     "args",
+     "VAR_POSITIONAL",
+     null,
+     null
+    ],
+    [
+     "kwargs",
+     "VAR_NAMED",
+     null,
+     null
+    ]
+   ],
+   "tags": [],
+   "return_type": "",
+   "doc_format": "ROBOT",
+   "md_len": 996
+  },
+  "pickle_bytes": 79022,
+  "pickle_dump_s": 0.002,
+  "total_in_proc_s": 0.431
+ },
+ {
+  "wall_s": 0.495,
+  "venv": "x",
+  "mode": "rcpk",
+  "lib": "RequestsLibrary",
+  "n": 33,
+  "import_s": 0.362,
+  "build_s": 0.002,
+  "md_len": 996,
+  "md_s": 0.0004,
+  "total_in_proc_s": 0.364
+ },
+ {
+  "wall_s": 0.281,
+  "venv": "x",
+  "mode": "rfjs",
+  "lib": "RequestsLibrary",
+  "n": 33,
+  "import_s": 0.188,
+  "build_s": 0.001,
+  "spec_bytes": 88142,
+  "total_in_proc_s": 0.189
+ },
+ {
+  "wall_s": 0.295,
+  "venv": "x",
+  "mode": "rfjs",
+  "lib": "RequestsLibrary",
+  "n": 33,
+  "import_s": 0.187,
+  "build_s": 0.001,
+  "spec_bytes": 88142,
+  "total_in_proc_s": 0.188
+ },
+ {
+  "wall_s": 0.537,
+  "venv": "x",
+  "mode": "rcdb",
+  "lib": "RequestsLibrary",
+  "entries": [
+   "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round2/keyword_docs/project/libs/ShopApi.py",
+   "Browser",
+   "RequestsLibrary",
+   "robot.libraries.BuiltIn",
+   "robot.libraries.Collections",
+   "robot.libraries.Easter",
+   "robot.libraries.String"
+  ],
+  "n": 33,
+  "import_s": 0.377,
+  "build_s": 0.007,
+  "total_in_proc_s": 0.384
+ },
+ {
+  "wall_s": 0.456,
+  "venv": "x",
+  "mode": "rf",
+  "lib": "BuiltIn",
+  "n": 109,
+  "import_s": 0.184,
+  "build_s": 0.093,
+  "sample": {
+   "name": "Should Be Equal",
+   "args": [
+    "first: object",
+    "second: object",
+    "msg: str | None = None",
+    "values: bool = True",
+    "ignore_case: bool = False",
+    "formatter: Literal['str', 'repr', 'ascii'] = str",
+    "strip_spaces: Literal['LEADING', 'TRAILING'] | bool = False",
+    "collapse_spaces: bool = False",
+    "type: Literal['AUTO'] | Any | None = None",
+    "types: Any | None = None"
+   ],
+   "tags": [],
+   "doc_len": 2099,
+   "doc_first": "Fails if the given objects are unequal."
+  },
+  "warm_rebuild_s": 0.058,
+  "total_in_proc_s": 0.335
+ },
+ {
+  "wall_s": 0.634,
+  "venv": "x",
+  "mode": "rc",
+  "lib": "BuiltIn",
+  "n": 109,
+  "errors": [],
+  "import_s": 0.392,
+  "build_s": 0.071,
+  "sample": {
+   "name": "Should Be Equal",
+   "signature": "(keyword) \"Should Be Equal\": (first: object, second: object, msg: str | None = ${None}, values: bool = ${True}, ignore_case: bool = ${False}, formatter: Literal['str', 'repr', 'ascii'] = str, strip_spaces: Literal['LEADING', 'TRAILING'] | bool = ${False}, collapse_spaces: bool = ${False}, type: Literal['AUTO'] | Any | None = ${None}, types: Any | None = ${None})",
+   "args": [
+    [
+     "first",
+     "POSITIONAL_OR_NAMED",
+     [
+      "object"
+     ],
+     null
+    ],
+    [
+     "second",
+     "POSITIONAL_OR_NAMED",
+     [
+      "object"
+     ],
+     null
+    ],
+    [
+     "msg",
+     "POSITIONAL_OR_NAMED",
+     [
+      "str",
+      "None"
+     ],
+     "${None}"
+    ],
+    [
+     "values",
+     "POSITIONAL_OR_NAMED",
+     [
+      "bool"
+     ],
+     "${True}"
+    ],
+    [
+     "ignore_case",
+     "POSITIONAL_OR_NAMED",
+     [
+      "bool"
+     ],
+     "${False}"
+    ],
+    [
+     "formatter",
+     "POSITIONAL_OR_NAMED",
+     [
+      "Literal['str', 'repr', 'ascii']"
+     ],
+     "str"
+    ],
+    [
+     "strip_spaces",
+     "POSITIONAL_OR_NAMED",
+     [
+      "Literal['LEADING', 'TRAILING']",
+      "bool"
+     ],
+     "${False}"
+    ],
+    [
+     "collapse_spaces",
+     "POSITIONAL_OR_NAMED",
+     [
+      "bool"
+     ],
+     "${False}"
+    ],
+    [
+     "type",
+     "POSITIONAL_OR_NAMED",
+     [
+      "Literal['AUTO']",
+      "Any",
+      "None"
+     ],
+     "${None}"
+    ],
+    [
+     "types",
+     "POSITIONAL_OR_NAMED",
+     [
+      "Any",
+      "None"
+     ],
+     "${None}"
+    ]
+   ],
+   "tags": [],
+   "return_type": "",
+   "doc_format": "MARKDOWN",
+   "md_len": 3239
+  },
+  "pickle_bytes": 238589,
+  "pickle_dump_s": 0.005,
+  "total_in_proc_s": 0.47
+ },
+ {
+  "wall_s": 0.541,
+  "venv": "x",
+  "mode": "rcpk",
+  "lib": "BuiltIn",
+  "n": 109,
+  "import_s": 0.392,
+  "build_s": 0.006,
+  "md_len": 3239,
+  "md_s": 0.0004,
+  "total_in_proc_s": 0.398
+ },
+ {
+  "wall_s": 0.297,
+  "venv": "x",
+  "mode": "rfjs",
+  "lib": "BuiltIn",
+  "n": 109,
+  "import_s": 0.184,
+  "build_s": 0.01,
+  "spec_bytes": 370464,
+  "total_in_proc_s": 0.194
+ },
+ {
+  "wall_s": 0.28,
+  "venv": "x",
+  "mode": "rfjs",
+  "lib": "BuiltIn",
+  "n": 109,
+  "import_s": 0.179,
+  "build_s": 0.011,
+  "spec_bytes": 370464,
+  "total_in_proc_s": 0.19
+ },
+ {
+  "wall_s": 0.547,
+  "venv": "x",
+  "mode": "rcdb",
+  "lib": "BuiltIn",
+  "entries": [
+   "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round2/keyword_docs/project/libs/ShopApi.py",
+   "Browser",
+   "RequestsLibrary",
+   "robot.libraries.BuiltIn",
+   "robot.libraries.Collections",
+   "robot.libraries.Easter",
+   "robot.libraries.String"
+  ],
+  "n": 109,
+  "import_s": 0.39,
+  "build_s": 0.013,
+  "total_in_proc_s": 0.402
+ },
+ {
+  "wall_s": 0.346,
+  "venv": "x",
+  "mode": "rf",
+  "lib": "Collections",
+  "n": 43,
+  "import_s": 0.192,
+  "build_s": 0.037,
+  "sample": {
+   "name": "Append To List",
+   "args": [
+    "list_: MutableSequence",
+    "*values: object"
+   ],
+   "tags": [],
+   "doc_len": 629,
+   "doc_first": "Adds `values` to the end of `list`."
+  },
+  "warm_rebuild_s": 0.021,
+  "total_in_proc_s": 0.249
+ },
+ {
+  "wall_s": 0.53,
+  "venv": "x",
+  "mode": "rc",
+  "lib": "Collections",
+  "n": 43,
+  "errors": [],
+  "import_s": 0.362,
+  "build_s": 0.032,
+  "sample": {
+   "name": "Append To List",
+   "signature": "(keyword) \"Append To List\": (list_: MutableSequence, *\u200dvalues: object)",
+   "args": [
+    [
+     "list_",
+     "POSITIONAL_OR_NAMED",
+     [
+      "MutableSequence"
+     ],
+     null
+    ],
+    [
+     "values",
+     "VAR_POSITIONAL",
+     [
+      "object"
+     ],
+     null
+    ]
+   ],
+   "tags": [],
+   "return_type": "MutableSequence",
+   "doc_format": "MARKDOWN",
+   "md_len": 936
+  },
+  "pickle_bytes": 99734,
+  "pickle_dump_s": 0.002,
+  "total_in_proc_s": 0.396
+ },
+ {
+  "wall_s": 0.497,
+  "venv": "x",
+  "mode": "rcpk",
+  "lib": "Collections",
+  "n": 43,
+  "import_s": 0.362,
+  "build_s": 0.003,
+  "md_len": 936,
+  "md_s": 0.0002,
+  "total_in_proc_s": 0.365
+ },
+ {
+  "wall_s": 0.28,
+  "venv": "x",
+  "mode": "rfjs",
+  "lib": "Collections",
+  "n": 43,
+  "import_s": 0.179,
+  "build_s": 0.002,
+  "spec_bytes": 166386,
+  "total_in_proc_s": 0.182
+ },
+ {
+  "wall_s": 0.285,
+  "venv": "x",
+  "mode": "rfjs",
+  "lib": "Collections",
+  "n": 43,
+  "import_s": 0.172,
+  "build_s": 0.002,
+  "spec_bytes": 166386,
+  "total_in_proc_s": 0.175
+ },
+ {
+  "wall_s": 0.537,
+  "venv": "x",
+  "mode": "rcdb",
+  "lib": "Collections",
+  "entries": [
+   "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round2/keyword_docs/project/libs/ShopApi.py",
+   "Browser",
+   "RequestsLibrary",
+   "robot.libraries.BuiltIn",
+   "robot.libraries.Collections",
+   "robot.libraries.Easter",
+   "robot.libraries.String"
+  ],
+  "n": 43,
+  "import_s": 0.39,
+  "build_s": 0.009,
+  "total_in_proc_s": 0.399
+ },
+ {
+  "wall_s": 0.322,
+  "venv": "x",
+  "mode": "rf",
+  "lib": "String",
+  "n": 32,
+  "import_s": 0.18,
+  "build_s": 0.03,
+  "sample": {
+   "name": "Split String",
+   "args": [
+    "string: str | bytes",
+    "separator: str | bytes | None = None",
+    "max_split: int = -1"
+   ],
+   "tags": [],
+   "doc_len": 952,
+   "doc_first": "Splits the `string` using `separator` as a delimiter string."
+  },
+  "warm_rebuild_s": 0.019,
+  "total_in_proc_s": 0.229
+ },
+ {
+  "wall_s": 0.535,
+  "venv": "x",
+  "mode": "rc",
+  "lib": "String",
+  "n": 32,
+  "errors": [],
+  "import_s": 0.36,
+  "build_s": 0.033,
+  "sample": {
+   "name": "Split String",
+   "signature": "(keyword) \"Split String\": (string: str | bytes, separator: str | bytes | None = ${None}, max_split: int = ${-1})",
+   "args": [
+    [
+     "string",
+     "POSITIONAL_OR_NAMED",
+     [
+      "str",
+      "bytes"
+     ],
+     null
+    ],
+    [
+     "separator",
+     "POSITIONAL_OR_NAMED",
+     [
+      "str",
+      "bytes",
+      "None"
+     ],
+     "${None}"
+    ],
+    [
+     "max_split",
+     "POSITIONAL_OR_NAMED",
+     [
+      "int"
+     ],
+     "${-1}"
+    ]
+   ],
+   "tags": [],
+   "return_type": "list[str] | list[bytes]",
+   "doc_format": "MARKDOWN",
+   "md_len": 1464
+  },
+  "pickle_bytes": 68904,
+  "pickle_dump_s": 0.001,
+  "total_in_proc_s": 0.394
+ },
+ {
+  "wall_s": 0.507,
+  "venv": "x",
+  "mode": "rcpk",
+  "lib": "String",
+  "n": 32,
+  "import_s": 0.37,
+  "build_s": 0.002,
+  "md_len": 1464,
+  "md_s": 0.0001,
+  "total_in_proc_s": 0.372
+ },
+ {
+  "wall_s": 0.272,
+  "venv": "x",
+  "mode": "rfjs",
+  "lib": "String",
+  "n": 32,
+  "import_s": 0.179,
+  "build_s": 0.002,
+  "spec_bytes": 128649,
+  "total_in_proc_s": 0.181
+ },
+ {
+  "wall_s": 0.292,
+  "venv": "x",
+  "mode": "rfjs",
+  "lib": "String",
+  "n": 32,
+  "import_s": 0.185,
+  "build_s": 0.002,
+  "spec_bytes": 128649,
+  "total_in_proc_s": 0.187
+ },
+ {
+  "wall_s": 0.55,
+  "venv": "x",
+  "mode": "rcdb",
+  "lib": "String",
+  "entries": [
+   "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round2/keyword_docs/project/libs/ShopApi.py",
+   "Browser",
+   "RequestsLibrary",
+   "robot.libraries.BuiltIn",
+   "robot.libraries.Collections",
+   "robot.libraries.Easter",
+   "robot.libraries.String"
+  ],
+  "n": 32,
+  "import_s": 0.38,
+  "build_s": 0.021,
+  "total_in_proc_s": 0.401
+ },
+ {
+  "wall_s": 0.604,
+  "venv": "w",
+  "mode": "rf",
+  "lib": "SeleniumLibrary",
+  "n": 182,
+  "import_s": 0.171,
+  "build_s": 0.205,
+  "sample": {
+   "name": "Input Text",
+   "args": [
+    "locator: WebElement | str",
+    "text: str",
+    "clear: bool = True"
+   ],
+   "tags": [],
+   "doc_len": 964,
+   "doc_first": "Types the given ``text`` into the text field identified by ``locator``."
+  },
+  "warm_rebuild_s": 0.081,
+  "total_in_proc_s": 0.456
+ },
+ {
+  "wall_s": 0.674,
+  "venv": "w",
+  "mode": "rc",
+  "lib": "SeleniumLibrary",
+  "n": 182,
+  "errors": [],
+  "import_s": 0.338,
+  "build_s": 0.174,
+  "sample": {
+   "name": "Input Text",
+   "signature": "(keyword) \"Input Text\": (locator: WebElement | str, text: str, clear: bool = ${True})",
+   "args": [
+    [
+     "locator",
+     "POSITIONAL_OR_NAMED",
+     [
+      "WebElement",
+      "str"
+     ],
+     null
+    ],
+    [
+     "text",
+     "POSITIONAL_OR_NAMED",
+     [
+      "str"
+     ],
+     null
+    ],
+    [
+     "clear",
+     "POSITIONAL_OR_NAMED",
+     [
+      "bool"
+     ],
+     "${True}"
+    ]
+   ],
+   "tags": [],
+   "return_type": null,
+   "doc_format": "ROBOT",
+   "md_len": 1161
+  },
+  "pickle_bytes": 266213,
+  "pickle_dump_s": 0.005,
+  "total_in_proc_s": 0.52
+ },
+ {
+  "wall_s": 0.481,
+  "venv": "w",
+  "mode": "rcpk",
+  "lib": "SeleniumLibrary",
+  "n": 182,
+  "import_s": 0.338,
+  "build_s": 0.006,
+  "md_len": 1161,
+  "md_s": 0.0008,
+  "total_in_proc_s": 0.345
+ },
+ {
+  "wall_s": 0.251,
+  "venv": "w",
+  "mode": "rfjs",
+  "lib": "SeleniumLibrary",
+  "n": 182,
+  "import_s": 0.158,
+  "build_s": 0.006,
+  "spec_bytes": 402287,
+  "total_in_proc_s": 0.165
+ },
+ {
+  "wall_s": 0.257,
+  "venv": "w",
+  "mode": "rfjs",
+  "lib": "SeleniumLibrary",
+  "n": 182,
+  "import_s": 0.161,
+  "build_s": 0.006,
+  "spec_bytes": 402287,
+  "total_in_proc_s": 0.167
+ },
+ {
+  "wall_s": 0.343,
+  "venv": "w",
+  "mode": "rf",
+  "lib": "BuiltIn",
+  "n": 107,
+  "import_s": 0.169,
+  "build_s": 0.04,
+  "sample": {
+   "name": "Should Be Equal",
+   "args": [
+    "first",
+    "second",
+    "msg=None",
+    "values=True",
+    "ignore_case=False",
+    "formatter=str",
+    "strip_spaces=False",
+    "collapse_spaces=False",
+    "type=None",
+    "types=None"
+   ],
+   "tags": [],
+   "doc_len": 2780,
+   "doc_first": "Fails if the given objects are unequal."
+  },
+  "warm_rebuild_s": 0.032,
+  "total_in_proc_s": 0.24
+ },
+ {
+  "wall_s": 0.519,
+  "venv": "w",
+  "mode": "rc",
+  "lib": "BuiltIn",
+  "n": 107,
+  "errors": [],
+  "import_s": 0.332,
+  "build_s": 0.05,
+  "sample": {
+   "name": "Should Be Equal",
+   "signature": "(keyword) \"Should Be Equal\": (first, second, msg = ${None}, values = ${True}, ignore_case = ${False}, formatter = str, strip_spaces = ${False}, collapse_spaces = ${False}, type = ${None}, types = ${None})",
+   "args": [
+    [
+     "first",
+     "POSITIONAL_OR_NAMED",
+     null,
+     null
+    ],
+    [
+     "second",
+     "POSITIONAL_OR_NAMED",
+     null,
+     null
+    ],
+    [
+     "msg",
+     "POSITIONAL_OR_NAMED",
+     null,
+     "${None}"
+    ],
+    [
+     "values",
+     "POSITIONAL_OR_NAMED",
+     null,
+     "${True}"
+    ],
+    [
+     "ignore_case",
+     "POSITIONAL_OR_NAMED",
+     null,
+     "${False}"
+    ],
+    [
+     "formatter",
+     "POSITIONAL_OR_NAMED",
+     null,
+     "str"
+    ],
+    [
+     "strip_spaces",
+     "POSITIONAL_OR_NAMED",
+     null,
+     "${False}"
+    ],
+    [
+     "collapse_spaces",
+     "POSITIONAL_OR_NAMED",
+     null,
+     "${False}"
+    ],
+    [
+     "type",
+     "POSITIONAL_OR_NAMED",
+     null,
+     "${None}"
+    ],
+    [
+     "types",
+     "POSITIONAL_OR_NAMED",
+     null,
+     "${None}"
+    ]
+   ],
+   "tags": [],
+   "return_type": null,
+   "doc_format": "ROBOT",
+   "md_len": 3169
+  },
+  "pickle_bytes": 197806,
+  "pickle_dump_s": 0.003,
+  "total_in_proc_s": 0.387
+ },
+ {
+  "wall_s": 0.473,
+  "venv": "w",
+  "mode": "rcpk",
+  "lib": "BuiltIn",
+  "n": 107,
+  "import_s": 0.341,
+  "build_s": 0.005,
+  "md_len": 3169,
+  "md_s": 0.0011,
+  "total_in_proc_s": 0.346
+ },
+ {
+  "wall_s": 0.271,
+  "venv": "w",
+  "mode": "rfjs",
+  "lib": "BuiltIn",
+  "n": 107,
+  "import_s": 0.175,
+  "build_s": 0.003,
+  "spec_bytes": 210622,
+  "total_in_proc_s": 0.178
+ },
+ {
+  "wall_s": 0.251,
+  "venv": "w",
+  "mode": "rfjs",
+  "lib": "BuiltIn",
+  "n": 107,
+  "import_s": 0.159,
+  "build_s": 0.002,
+  "spec_bytes": 210622,
+  "total_in_proc_s": 0.161
+ },
+ {
+  "wall_s": 0.026,
+  "mode": "bare_python",
+  "venv": "x"
+ },
+ {
+  "wall_s": 0.296,
+  "mode": "import_robot_libdocpkg",
+  "venv": "x"
+ },
+ {
+  "wall_s": 0.51,
+  "mode": "import_rc_library_doc",
+  "venv": "x"
+ },
+ {
+  "wall_s": 0.02,
+  "mode": "bare_python",
+  "venv": "w"
+ },
+ {
+  "wall_s": 0.276,
+  "mode": "import_robot_libdocpkg",
+  "venv": "w"
+ },
+ {
+  "wall_s": 0.504,
+  "mode": "import_rc_library_doc",
+  "venv": "w"
+ }
+]

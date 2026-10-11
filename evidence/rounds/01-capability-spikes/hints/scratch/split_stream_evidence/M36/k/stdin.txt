@@ -1,0 +1,4 @@
+Import Library    Collections
+${username}=    Set Variable    jim
+Log    ${usernme}
+.exit

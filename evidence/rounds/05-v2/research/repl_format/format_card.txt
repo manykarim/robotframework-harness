@@ -1,0 +1,15 @@
+RF REPL format:
+mkdir -p out && robotcode repl --plain --no-history -d out <<'RF' 2>&1
+Library    Browser
+${t}=    Get Title
+RF
+- Quote the heredoc ('RF') or the shell eats ${vars}. 2>&1: [ FAIL ] goes to stderr. Exit code is always 0.
+- One statement per line, 4 spaces between cells. No `...` lines: keep all args on one line.
+- FOR/IF/WHILE/TRY end with END, no blank line inside; unclosed blocks run nothing.
+- No *** sections ***, test names, [Tags]/[Setup], keyword definitions (use Import Resource).
+- Only assigned values print. A failure doesn't stop later lines: fix the first FAIL.
+- Each call is a new session: start with Library/New Browser/New Page.
+- .kw <name or text> docs/search, .doc <imported lib>, .vars --user, .exit
+robotcode robot-debug --plain -d out x.robot <<'RF' 2>&1 pauses at the first failure:
+.where .pp ${v} .s .n .c; keywords run live (=> value), one line each, no FOR; Import Library.
+.break Kw Name (no quotes) stops at the call: conditions see caller vars. EOF = continue.

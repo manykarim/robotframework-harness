@@ -1,0 +1,13 @@
+{
+ "jsonrpc": "2.0",
+ "id": 9,
+ "result": {
+  "success": true,
+  "items": [
+   {
+    "mime": "x-application/robotframework-repl-log",
+    "data": "{\"items\":[{\"id\":\"s1-t1-k1-k12\",\"name\":\"Keyword Doc\",\"owner\":\"KwDocs\",\"source_name\":\"\",\"doc\":\"\",\"args\":[\"shop.Login As User\",\"json\"],\"assign\":[],\"tags\":[],\"timeout\":null,\"type\":\"KEYWORD\",\"status\":\"PASS\",\"message\":\"\",\"start_time\":\"20261001 08:48:37.154\",\"end_time\":\"20261001 08:48:37.155\",\"elapsed_time\":\"00:00:00.001\",\"items\":[{\"id\":\"message-0\",\"message\":\"Arguments: [ 'shop.Login As User' | 'json' ]\",\"level\":\"TRACE\",\"html\":false,\"timestamp\":\"08:48:37\",\"node_type\":\"message\"},{\"id\":\"message-1\",\"message\":\"{\\\"name\\\": \\\"Login As User\\\", \\\"owner\\\": \\\"shop\\\", \\\"signature\\\": \\\"Login As User(username, password, timeout=10s)\\\", \\\"tags\\\": [\\\"auth\\\", \\\"ui\\\"], \\\"short_doc\\\": \\\"Logs into the shop with the given credentials.\\\", \\\"doc\\\": \\\"Logs into the shop with the given credentials.\\\\n\\\\nOpens the login form, fills ``username`` and ``password`` and submits.\\\\nFails if the dashboard does not appear within ``timeout``.\\\"}\",\"level\":\"INFO\",\"html\":false,\"timestamp\":\"08:48:37\",\"node_type\":\"message\"},{\"id\":\"message-2\",\"message\":\"Return: '{\\\"name\\\": \\\"Login As User\\\", \\\"owner\\\": \\\"shop\\\", \\\"signature\\\": \\\"Login As User(username, password, timeout=10s)\\\", \\\"tags\\\": [\\\"auth\\\", \\\"ui\\\"], \\\"short_doc\\\": \\\"Logs into the shop with the given credentials.\\\", \\\"doc\\\": \\\"Logs into the shop with the given credentials.\\\\\\\\n\\\\\\\\nOpens the login form, fills ``username`` and ``password`` and submits.\\\\\\\\nFails if the dashboard does not appear within ``timeout``.\\\"}'\",\"level\":\"TRACE\",\"html\":false,\"timestamp\":\"08:48:37\",\"node_type\":\"message\"}],\"node_type\":\"keyword\"}],\"node_type\":\"root\"}"
+   }
+  ]
+ }
+}

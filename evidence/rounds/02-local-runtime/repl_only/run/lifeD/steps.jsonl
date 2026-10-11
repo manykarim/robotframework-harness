@@ -1,0 +1,25 @@
+{"t": "ready", "pid": 3602868, "hooked": true, "path": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round2/repl_only/run/lifeD/steps.jsonl", "ts": 1790837226.052}
+{"t": "idle", "n": 1, "id": null, "ts": 1790837226.081}
+{"t": "begin", "id": "s1", "ts": 1790837226.132}
+{"t": "step", "seq": 1, "id": "s1", "type": "KEYWORD", "name": "Import Library", "owner": "BuiltIn", "args": ["Browser"], "assign": [], "status": "PASS", "elapsed_ms": 179.2, "return": null, "ts": 1790837226.313}
+{"t": "idle", "n": 2, "id": "s1", "ts": 1790837226.313}
+{"t": "idle", "n": 3, "id": "s1", "ts": 1790837226.313}
+{"t": "end", "id": "s1", "src": "Import Library    Browser", "steps": 1, "ts": 1790837226.313}
+{"t": "begin", "id": "s2", "ts": 1790837226.373}
+{"t": "step", "seq": 2, "id": "s2", "type": "KEYWORD", "name": "New Browser", "owner": "Browser", "args": ["chromium", "headless=${HEADLESS}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "{\"browser\": \"chromium\", \"headless\": true, \"chromiumSandbox\": false, \"devtools\": false, \"handleSIGHUP\": true, \"handleSIGINT\": true, \"handleSIGTERM\": true, \"slowMo\": 0.0, \"timeout\": 30000.0, \"tracesDir\": \"~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round2/repl_only/run/lifeD/out/browser/traces/temp/14e17cd0-cc7e-4538-ac77-f5a264eb84e2\"}"}, {"level": "INFO", "html": false, "text": "Starting Browser process ~/workspace/robotcode-experiments/.venv/lib/python3.13/site-packages/Browser/wrapper/index.js using at 127.0.0.1:51111"}, {"level": "INFO", "html": false, "text": "Successfully created browser with options: {\"browser\":\"chromium\",\"headless\":true,\"chromiumSandbox\":false,\"devtools\":false,\"handleSIGHUP\":true,\"handleSIGINT\":true,\"handleSIGTERM\":true,\"slowMo\":0,\"timeout\":30000,\"tracesDir\":\"~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round2/repl_only/run/lifeD/out/browser/traces/temp/14e17cd0-cc7e-4538-ac77-f5a264eb84e2\"}"}], "status": "PASS", "elapsed_ms": 818.5, "return": "browser=14f164ee-28e5-42f2-8907-42f63491962c", "ts": 1790837227.194}
+{"t": "idle", "n": 4, "id": "s2", "ts": 1790837227.195}
+{"t": "idle", "n": 5, "id": "s2", "ts": 1790837227.195}
+{"t": "end", "id": "s2", "src": "New Browser    chromium    headless=${HEADLESS}", "steps": 2, "ts": 1790837227.195}
+{"t": "begin", "id": "s3", "ts": 1790837227.256}
+{"t": "step", "seq": 3, "id": "s3", "type": "KEYWORD", "name": "New Page", "owner": "Browser", "args": ["https://www.saucedemo.com"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Successfully initialized new page object and opened url: https://www.saucedemo.com"}, {"level": "INFO", "html": false, "text": "No context was open. New context was automatically opened when this page is created."}], "status": "PASS", "elapsed_ms": 408.9, "return": "{'page_id': 'page=d3ecc351-1fe8-445b-b216-fc410a96393b', 'video_path': ''}", "ts": 1790837227.667}
+{"t": "idle", "n": 6, "id": "s3", "ts": 1790837227.667}
+{"t": "idle", "n": 7, "id": "s3", "ts": 1790837227.667}
+{"t": "end", "id": "s3", "src": "New Page    https://www.saucedemo.com", "steps": 3, "ts": 1790837227.667}
+{"t": "begin", "id": "s4", "ts": 1790837227.721}
+{"t": "step", "seq": 4, "id": "s4", "type": "KEYWORD", "name": "New Page", "owner": "Browser", "args": ["https://www.saucedemo.com"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Successfully initialized new page object and opened url: https://www.saucedemo.com"}], "status": "PASS", "elapsed_ms": 149.4, "return": "{'page_id': 'page=14efdac5-15d3-4267-8e4c-b62859db4b9e', 'video_path': ''}", "ts": 1790837227.872}
+{"t": "idle", "n": 8, "id": "s4", "ts": 1790837227.872}
+{"t": "idle", "n": 9, "id": "s4", "ts": 1790837227.872}
+{"t": "end", "id": "s4", "src": "New Page    https://www.saucedemo.com", "steps": 4, "ts": 1790837227.872}
+{"t": "idle", "n": 10, "id": "s4", "ts": 1790837228.076}
+{"t": "step", "seq": 5, "id": "s4", "type": "KEYWORD", "name": "Repl", "owner": "robotcode.repl.Repl", "args": [], "assign": [], "status": "PASS", "elapsed_ms": 1996.1, "ts": 1790837228.09}
+{"t": "closed", "ts": 1790837228.091}

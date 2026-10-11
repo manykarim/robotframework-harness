@@ -1,0 +1,2 @@
+[tool.robotcode-analyze]
+global-library-search-order = ["LibA"]

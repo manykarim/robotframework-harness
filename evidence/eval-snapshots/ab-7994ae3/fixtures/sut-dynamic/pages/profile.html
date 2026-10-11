@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8" /><title>User Profile</title>
+<style>
+  #profile { border: 1px solid #ccc; padding: 8px; margin-top: 8px; width: 240px; }
+  #status { color: #666; }
+</style>
+</head>
+<body>
+  <h1>User Profile</h1>
+  <button id="load" type="button">Load profile</button>
+  <p id="status"></p>
+  <div id="slot"></div>
+
+  <script>
+    // The profile card does NOT exist in the DOM until ~400 ms after the click.
+    document.getElementById("load").addEventListener("click", function () {
+      var status = document.getElementById("status");
+      status.textContent = "Loading...";
+      setTimeout(function () {
+        var card = document.createElement("div");
+        card.id = "profile";
+        card.setAttribute("data-uid", "u-42");
+        card.innerHTML = '<span id="name">Ada Lovelace</span>';
+        document.getElementById("slot").appendChild(card);
+        status.textContent = "";
+      }, 400);
+    });
+  </script>
+</body>
+</html>

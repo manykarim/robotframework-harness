@@ -1,0 +1,1276 @@
+# Index of published claims -> archived data -> recomputation.
+# Format: the JSON-compatible subset of YAML. Full-line '#' comments are allowed; everything else is JSON, so
+# evidence/check_claims.py reads this file with the standard library only (comments stripped, then json.loads).
+# Paths are relative to evidence/. 'expect' holds the published numbers (rates rounded to 2 decimals, tolerance
+# 0.005; seconds rounded to integers, tolerance 0.5; p values rounded to 3 decimals, tolerance 0.0005). Integer
+# fields (passes, n, pos, neg, counts) must match exactly. 'sources' quotes where each number is published; run
+# `python3 evidence/check_claims.py --check-sources` to verify the quotes are still there.
+# When you change a number in README.md or docs/, change or add its claim here in the same commit.
+# 'reports': `check_claims.py --reports` re-runs the archived analyzer on each archived results file and compares
+# the output with the archived report (byte-identical unless 'allowed_changed_lines' / 'allowed_extra_keys' say why).
+{
+ "version": 1,
+ "claims": [
+  {
+   "id": "readme-pooled-harness",
+   "claim": "harness (v3.1) pooled pass rate 0.83 (83%) on live journeys",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "arms": [
+      "hookpkg31"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 0.83,
+    "tolerance": 0.005,
+    "passes": 58,
+    "n": 70
+   },
+   "sources": [
+    {
+     "file": "../README.md",
+     "text": "passed 83% of sessions versus 69% for rf-mcp"
+    },
+    {
+     "file": "rounds/07-v31-v32/findings_v31.md",
+     "text": "| hookpkg31 (v3.1, per-model profile) | 58/70 = **0.83** | 0.72–0.90 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only readme-pooled-harness --show",
+   "note": "Pooled over the two v3.1 runs of round 7 (subscription agents + OpenRouter models), status-ok rows, contaminated row kept as in the published reports (analyze_hooks.py default); see r7-pooled-rfmcp-drop-contaminated for the sensitivity check."
+  },
+  {
+   "id": "readme-pooled-rfmcp",
+   "claim": "rf-mcp 0.36.0 pooled pass rate 0.69 (69%) on the same journeys",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "arms": [
+      "mcp"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 0.69,
+    "tolerance": 0.005,
+    "passes": 47,
+    "n": 68
+   },
+   "sources": [
+    {
+     "file": "../README.md",
+     "text": "passed 83% of sessions versus 69% for rf-mcp"
+    },
+    {
+     "file": "rounds/07-v31-v32/findings_v31.md",
+     "text": "| rf-mcp 0.36.0 | 47/68 = **0.69** | 0.57–0.79 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only readme-pooled-rfmcp --show",
+   "note": "Pooled over the two v3.1 runs of round 7 (subscription agents + OpenRouter models), status-ok rows, contaminated row kept as in the published reports (analyze_hooks.py default); see r7-pooled-rfmcp-drop-contaminated for the sensitivity check."
+  },
+  {
+   "id": "readme-sessions",
+   "claim": "206 valid sessions in the pooled comparison (all three arms)",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "count",
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 206
+   },
+   "sources": [
+    {
+     "file": "../README.md",
+     "text": "six agent/model combinations (206 sessions)"
+    },
+    {
+     "file": "rounds/07-v31-v32/findings_v31.md",
+     "text": "Pooled over the two v3.1 runs (206 valid cells):"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only readme-sessions --show",
+   "note": "71 of the 135 planned OpenRouter cells are valid; 64 were removed after the credit exhaustion (excluded_credits_402.jsonl)."
+  },
+  {
+   "id": "readme-combinations",
+   "claim": "six agent/model combinations",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "distinct",
+    "field": "agent",
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 6
+   },
+   "sources": [
+    {
+     "file": "../README.md",
+     "text": "six agent/model combinations (206 sessions)"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only readme-combinations --show",
+   "note": "claude (Haiku 5.5), codex (gpt-5.6-luna), opencode (MiniMax-M2.5), and Claude Code via OpenRouter with DeepSeek V4.1 Flash, Qwen 3.8 Flash and GLM 5.3 Flash."
+  },
+  {
+   "id": "readme-qwen-rfmcp",
+   "claim": "Qwen 3.8 Flash with rf-mcp: 0.38",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "cc-or:qwen3.8-flash"
+     ],
+     "arms": [
+      "mcp"
+     ]
+    }
+   },
+   "expect": {
+    "value": 0.38,
+    "tolerance": 0.005,
+    "passes": 3,
+    "n": 8
+   },
+   "sources": [
+    {
+     "file": "../README.md",
+     "text": "Qwen 3.8 Flash: 0.38 → 0.88"
+    },
+    {
+     "file": "rounds/07-v31-v32/findings_v31.md",
+     "text": "| Qwen 3.8 Flash | 0.38 | 0.75 | **0.88** | rich |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only readme-qwen-rfmcp --show"
+  },
+  {
+   "id": "readme-qwen-harness",
+   "claim": "Qwen 3.8 Flash with the harness (v3.1): 0.88",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "cc-or:qwen3.8-flash"
+     ],
+     "arms": [
+      "hookpkg31"
+     ]
+    }
+   },
+   "expect": {
+    "value": 0.88,
+    "tolerance": 0.005,
+    "passes": 7,
+    "n": 8
+   },
+   "sources": [
+    {
+     "file": "../README.md",
+     "text": "Qwen 3.8 Flash: 0.38 → 0.88"
+    },
+    {
+     "file": "rounds/07-v31-v32/findings_v31.md",
+     "text": "| Qwen 3.8 Flash | 0.38 | 0.75 | **0.88** | rich |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only readme-qwen-harness --show"
+  },
+  {
+   "id": "r7-opencode-rfmcp",
+   "claim": "OpenCode + MiniMax-M2.5 with rf-mcp: 0.27",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "opencode"
+     ],
+     "arms": [
+      "mcp"
+     ]
+    }
+   },
+   "expect": {
+    "value": 0.27,
+    "tolerance": 0.005,
+    "passes": 4,
+    "n": 15
+   },
+   "sources": [
+    {
+     "file": "rounds/07-v31-v32/findings_v31.md",
+     "text": "| OpenCode + MiniMax-M2.5 | 0.27 | 0.47 | **0.53** | rich |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r7-opencode-rfmcp --show"
+  },
+  {
+   "id": "r7-opencode-harness",
+   "claim": "OpenCode + MiniMax-M2.5 with the harness (v3.1): 0.53",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "opencode"
+     ],
+     "arms": [
+      "hookpkg31"
+     ]
+    }
+   },
+   "expect": {
+    "value": 0.53,
+    "tolerance": 0.005,
+    "passes": 8,
+    "n": 15
+   },
+   "sources": [
+    {
+     "file": "rounds/07-v31-v32/findings_v31.md",
+     "text": "| OpenCode + MiniMax-M2.5 | 0.27 | 0.47 | **0.53** | rich |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r7-opencode-harness --show"
+  },
+  {
+   "id": "r7-codex-wall-rfmcp",
+   "claim": "Codex mean wall time with rf-mcp: 405 s",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "mean",
+    "field": "wall_s",
+    "filter": {
+     "agents": [
+      "codex"
+     ],
+     "arms": [
+      "mcp"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 405,
+    "tolerance": 0.5
+   },
+   "sources": [
+    {
+     "file": "rounds/07-v31-v32/findings_v31.md",
+     "text": "| Codex: wall / tool calls | 405 s / 39 | 207 s / 28 | **199 s / 28** |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r7-codex-wall-rfmcp --show",
+   "note": "With the contaminated Codex row dropped the mean is 402 s."
+  },
+  {
+   "id": "r7-codex-wall-harness",
+   "claim": "Codex mean wall time with the harness (v3.1): 199 s",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "mean",
+    "field": "wall_s",
+    "filter": {
+     "agents": [
+      "codex"
+     ],
+     "arms": [
+      "hookpkg31"
+     ]
+    }
+   },
+   "expect": {
+    "value": 199,
+    "tolerance": 0.5
+   },
+   "sources": [
+    {
+     "file": "rounds/07-v31-v32/findings_v31.md",
+     "text": "| Codex: wall / tool calls | 405 s / 39 | 207 s / 28 | **199 s / 28** |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r7-codex-wall-harness --show"
+  },
+  {
+   "id": "r7-opencode-timeouts-rfmcp",
+   "claim": "OpenCode 30-minute timeouts with rf-mcp: 7 of 15",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "count_true",
+    "field": "timed_out",
+    "filter": {
+     "agents": [
+      "opencode"
+     ],
+     "arms": [
+      "mcp"
+     ]
+    }
+   },
+   "expect": {
+    "value": 7
+   },
+   "sources": [
+    {
+     "file": "rounds/07-v31-v32/findings_v31.md",
+     "text": "| OpenCode: wall / turns / timeouts (30 min) | 1,237 s / 104 / **7** | 513 s / 45 / 1 | **436 s / 52 / 0** |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r7-opencode-timeouts-rfmcp --show"
+  },
+  {
+   "id": "r7-opencode-timeouts-harness",
+   "claim": "OpenCode 30-minute timeouts with the harness (v3.1): 0 of 15",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "count_true",
+    "field": "timed_out",
+    "filter": {
+     "agents": [
+      "opencode"
+     ],
+     "arms": [
+      "hookpkg31"
+     ]
+    }
+   },
+   "expect": {
+    "value": 0
+   },
+   "sources": [
+    {
+     "file": "rounds/07-v31-v32/findings_v31.md",
+     "text": "| OpenCode: wall / turns / timeouts (30 min) | 1,237 s / 104 / **7** | 513 s / 45 / 1 | **436 s / 52 / 0** |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r7-opencode-timeouts-harness --show"
+  },
+  {
+   "id": "r7-harness-ci",
+   "claim": "95% Wilson interval of the harness pass rate: 0.72–0.90",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "wilson",
+    "filter": {
+     "arms": [
+      "hookpkg31"
+     ]
+    }
+   },
+   "expect": {
+    "lo": 0.72,
+    "hi": 0.9,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "rounds/07-v31-v32/findings_v31.md",
+     "text": "| hookpkg31 (v3.1, per-model profile) | 58/70 = **0.83** | 0.72–0.90 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r7-harness-ci --show"
+  },
+  {
+   "id": "r7-rfmcp-ci",
+   "claim": "95% Wilson interval of the rf-mcp pass rate: 0.57–0.79",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "wilson",
+    "filter": {
+     "arms": [
+      "mcp"
+     ]
+    }
+   },
+   "expect": {
+    "lo": 0.57,
+    "hi": 0.79,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "rounds/07-v31-v32/findings_v31.md",
+     "text": "| rf-mcp 0.36.0 | 47/68 = **0.69** | 0.57–0.79 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r7-rfmcp-ci --show"
+  },
+  {
+   "id": "r7-harness-vs-rfmcp-fisher",
+   "claim": "harness (v3.1) vs rf-mcp, pooled: Fisher p = 0.073",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "fisher",
+    "a": "hookpkg31",
+    "b": "mcp"
+   },
+   "expect": {
+    "p": 0.073,
+    "tolerance": 0.0005
+   },
+   "sources": [
+    {
+     "file": "rounds/07-v31-v32/findings_v31.md",
+     "text": "v3.1 vs rf-mcp: +0.14 (Fisher p = 0.073). By cell, 7 better and 2 worse (sign test p = 0.18)."
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r7-harness-vs-rfmcp-fisher --show"
+  },
+  {
+   "id": "r7-harness-vs-rfmcp-sign",
+   "claim": "harness (v3.1) vs rf-mcp by agent x scenario cell: 7 better, 2 worse, sign test p = 0.18",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "sign_test",
+    "a": "hookpkg31",
+    "b": "mcp"
+   },
+   "expect": {
+    "pos": 7,
+    "neg": 2,
+    "p": 0.18,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "rounds/07-v31-v32/findings_v31.md",
+     "text": "v3.1 vs rf-mcp: +0.14 (Fisher p = 0.073). By cell, 7 better and 2 worse (sign test p = 0.18)."
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r7-harness-vs-rfmcp-sign --show"
+  },
+  {
+   "id": "r7-rfmcp-drop-contaminated",
+   "claim": "sensitivity: rf-mcp pooled rate stays 0.69 when the contaminated row is dropped",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "arms": [
+      "mcp"
+     ]
+    },
+    "contaminated": "drop"
+   },
+   "expect": {
+    "value": 0.69,
+    "tolerance": 0.005,
+    "passes": 46,
+    "n": 67
+   },
+   "sources": [
+    {
+     "file": "rounds/07-v31-v32/findings_v31.md",
+     "text": "One cell was contaminated"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r7-rfmcp-drop-contaminated --show",
+   "note": "The findings say the analyzer excludes the contaminated cell, but the published reports and the pooled numbers keep it (n = 68). Dropping it gives 46/67 = 0.687, which still rounds to 0.69."
+  },
+  {
+   "id": "r7-openrouter-cost",
+   "claim": "the 71 valid OpenRouter sessions cost $6.22 (list-price estimate)",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "sum",
+    "field": "cost_usd"
+   },
+   "expect": {
+    "value": 6.22,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "rounds/07-v31-v32/findings_v31.md",
+     "text": "The 71 valid OpenRouter sessions cost **$6.22** in total (list-price estimate)."
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r7-openrouter-cost --show"
+  },
+  {
+   "id": "r7-excluded-credits402",
+   "claim": "76 sessions excluded because the OpenRouter account ran out of credits",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/excluded/excluded_credits_402.jsonl"
+   ],
+   "compute": {
+    "metric": "excluded",
+    "reason": "credits_402"
+   },
+   "expect": {
+    "value": 76
+   },
+   "sources": [
+    {
+     "file": "rounds/07-v31-v32/findings_v31.md",
+     "text": "The 76 rows were removed, with backups in `*.credits402.jsonl`."
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r7-excluded-credits402 --show"
+  },
+  {
+   "id": "r7-v32-codex",
+   "claim": "v3.2 with Codex: 15/15",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v32.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "codex"
+     ],
+     "arms": [
+      "hookpkg32"
+     ]
+    }
+   },
+   "expect": {
+    "value": 1.0,
+    "tolerance": 0.005,
+    "passes": 15,
+    "n": 15
+   },
+   "sources": [
+    {
+     "file": "rounds/07-v31-v32/findings_v31.md",
+     "text": "| Codex | 14/15 | **15/15** (wall 240 → 209 s, tool calls 31 → 27) |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r7-v32-codex --show"
+  },
+  {
+   "id": "r7-v31-codex-same-window",
+   "claim": "v3.1 with Codex in the same window: 14/15",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v32.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "codex"
+     ],
+     "arms": [
+      "hookpkg31"
+     ]
+    }
+   },
+   "expect": {
+    "value": 0.93,
+    "tolerance": 0.005,
+    "passes": 14,
+    "n": 15
+   },
+   "sources": [
+    {
+     "file": "rounds/07-v31-v32/findings_v31.md",
+     "text": "| Codex | 14/15 | **15/15** (wall 240 → 209 s, tool calls 31 → 27) |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r7-v31-codex-same-window --show",
+   "note": "Includes the re-run of the Codex backend-outage cell; the failed original is in excluded_codex_backend_outage.jsonl."
+  },
+  {
+   "id": "r6-v2",
+   "claim": "round 6: hookpkg2 (v2) pass rate 0.70",
+   "round": "06-v3-main",
+   "files": [
+    "rounds/06-v3-main/results/results_live_v3main.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "arms": [
+      "hookpkg2"
+     ]
+    }
+   },
+   "expect": {
+    "value": 0.7,
+    "tolerance": 0.005,
+    "passes": 42,
+    "n": 60
+   },
+   "sources": [
+    {
+     "file": "rounds/06-v3-main/findings_v3main.md",
+     "text": "| hookpkg2 (v2) | 60 | **0.70** | 0.57–0.80 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r6-v2 --show"
+  },
+  {
+   "id": "r6-rfmcp",
+   "claim": "round 6: rf-mcp pass rate 0.52",
+   "round": "06-v3-main",
+   "files": [
+    "rounds/06-v3-main/results/results_live_v3main.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "arms": [
+      "mcp"
+     ]
+    }
+   },
+   "expect": {
+    "value": 0.52,
+    "tolerance": 0.005,
+    "passes": 31,
+    "n": 60
+   },
+   "sources": [
+    {
+     "file": "rounds/06-v3-main/findings_v3main.md",
+     "text": "| mcp (rf-mcp 0.36.0) | 60 | 0.52 | 0.39–0.64 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r6-rfmcp --show"
+  },
+  {
+   "id": "r6-v3",
+   "claim": "round 6: hookpkg3 (v3) pass rate 0.63",
+   "round": "06-v3-main",
+   "files": [
+    "rounds/06-v3-main/results/results_live_v3main.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "arms": [
+      "hookpkg3"
+     ]
+    }
+   },
+   "expect": {
+    "value": 0.63,
+    "tolerance": 0.005,
+    "passes": 38,
+    "n": 60
+   },
+   "sources": [
+    {
+     "file": "rounds/06-v3-main/findings_v3main.md",
+     "text": "| hookpkg3 (v3) | 60 | 0.63 | 0.51–0.74 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r6-v3 --show"
+  },
+  {
+   "id": "r6-v2-vs-rfmcp-sign",
+   "claim": "round 6: v2 better than rf-mcp in 8 cells, worse in 0 (sign test p = 0.008)",
+   "round": "06-v3-main",
+   "files": [
+    "rounds/06-v3-main/results/results_live_v3main.jsonl"
+   ],
+   "compute": {
+    "metric": "sign_test",
+    "a": "hookpkg2",
+    "b": "mcp"
+   },
+   "expect": {
+    "pos": 8,
+    "neg": 0,
+    "p": 0.008,
+    "tolerance": 0.0005
+   },
+   "sources": [
+    {
+     "file": "rounds/06-v3-main/findings_v3main.md",
+     "text": "| v2 − mcp | **+0.18** (0.061) | **8/0 (0.008)** |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r6-v2-vs-rfmcp-sign --show"
+  },
+  {
+   "id": "r6-v2-vs-rfmcp-fisher",
+   "claim": "round 6: v2 vs rf-mcp, Fisher p = 0.061",
+   "round": "06-v3-main",
+   "files": [
+    "rounds/06-v3-main/results/results_live_v3main.jsonl"
+   ],
+   "compute": {
+    "metric": "fisher",
+    "a": "hookpkg2",
+    "b": "mcp"
+   },
+   "expect": {
+    "p": 0.061,
+    "tolerance": 0.0005
+   },
+   "sources": [
+    {
+     "file": "rounds/06-v3-main/findings_v3main.md",
+     "text": "| v2 − mcp | **+0.18** (0.061) | **8/0 (0.008)** |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r6-v2-vs-rfmcp-fisher --show"
+  },
+  {
+   "id": "r6-claude-rfmcp",
+   "claim": "round 6: Claude Code (Haiku 4.5) with rf-mcp 0.30",
+   "round": "06-v3-main",
+   "files": [
+    "rounds/06-v3-main/results/results_live_v3main.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "claude"
+     ],
+     "arms": [
+      "mcp"
+     ]
+    }
+   },
+   "expect": {
+    "value": 0.3,
+    "tolerance": 0.005,
+    "passes": 6,
+    "n": 20
+   },
+   "sources": [
+    {
+     "file": "rounds/06-v3-main/findings_v3main.md",
+     "text": "| Claude (main target) | 0.30 | 0.60 | **0.65** |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r6-claude-rfmcp --show"
+  },
+  {
+   "id": "r6-claude-v3",
+   "claim": "round 6: Claude Code (Haiku 4.5) with v3 0.65",
+   "round": "06-v3-main",
+   "files": [
+    "rounds/06-v3-main/results/results_live_v3main.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "agents": [
+      "claude"
+     ],
+     "arms": [
+      "hookpkg3"
+     ]
+    }
+   },
+   "expect": {
+    "value": 0.65,
+    "tolerance": 0.005,
+    "passes": 13,
+    "n": 20
+   },
+   "sources": [
+    {
+     "file": "rounds/06-v3-main/findings_v3main.md",
+     "text": "| Claude (main target) | 0.30 | 0.60 | **0.65** |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r6-claude-v3 --show"
+  },
+  {
+   "id": "r3a-neither",
+   "claim": "03a-ab-file-authoring: neither pass rate 0.83",
+   "round": "03a-ab-file-authoring",
+   "files": [
+    "rounds/03a-ab-file-authoring/results/results_rc.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "arms": [
+      "neither"
+     ]
+    }
+   },
+   "expect": {
+    "value": 0.83,
+    "tolerance": 0.005,
+    "passes": 50,
+    "n": 60
+   },
+   "sources": [
+    {
+     "file": "rounds/03a-ab-file-authoring/findings.md",
+     "text": "| neither | 60 | 0.83 | 0.72–0.91 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r3a-neither --show"
+  },
+  {
+   "id": "r3a-mcp",
+   "claim": "03a-ab-file-authoring: mcp pass rate 0.97",
+   "round": "03a-ab-file-authoring",
+   "files": [
+    "rounds/03a-ab-file-authoring/results/results_rc.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "arms": [
+      "mcp"
+     ]
+    }
+   },
+   "expect": {
+    "value": 0.97,
+    "tolerance": 0.005,
+    "passes": 58,
+    "n": 60
+   },
+   "sources": [
+    {
+     "file": "rounds/03a-ab-file-authoring/findings.md",
+     "text": "| mcp | 60 | **0.97** | 0.89–0.99 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r3a-mcp --show"
+  },
+  {
+   "id": "r3a-skillpkg",
+   "claim": "03a-ab-file-authoring: skillpkg pass rate 0.92",
+   "round": "03a-ab-file-authoring",
+   "files": [
+    "rounds/03a-ab-file-authoring/results/results_rc.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "arms": [
+      "skillpkg"
+     ]
+    }
+   },
+   "expect": {
+    "value": 0.92,
+    "tolerance": 0.005,
+    "passes": 55,
+    "n": 60
+   },
+   "sources": [
+    {
+     "file": "rounds/03a-ab-file-authoring/findings.md",
+     "text": "| skillpkg | 60 | **0.92** | 0.82–0.96 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r3a-skillpkg --show"
+  },
+  {
+   "id": "r3b-neither",
+   "claim": "03b-ab-live-journeys: neither pass rate 0.53",
+   "round": "03b-ab-live-journeys",
+   "files": [
+    "rounds/03b-ab-live-journeys/results/results_live.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "arms": [
+      "neither"
+     ]
+    }
+   },
+   "expect": {
+    "value": 0.53,
+    "tolerance": 0.005,
+    "passes": 24,
+    "n": 45
+   },
+   "sources": [
+    {
+     "file": "rounds/03b-ab-live-journeys/findings_live.md",
+     "text": "| neither | 45 | 0.53 | 0.39–0.67 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r3b-neither --show"
+  },
+  {
+   "id": "r3b-mcp",
+   "claim": "03b-ab-live-journeys: mcp pass rate 0.44",
+   "round": "03b-ab-live-journeys",
+   "files": [
+    "rounds/03b-ab-live-journeys/results/results_live.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "arms": [
+      "mcp"
+     ]
+    }
+   },
+   "expect": {
+    "value": 0.44,
+    "tolerance": 0.005,
+    "passes": 20,
+    "n": 45
+   },
+   "sources": [
+    {
+     "file": "rounds/03b-ab-live-journeys/findings_live.md",
+     "text": "| mcp | 45 | **0.44** | 0.31–0.59 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r3b-mcp --show"
+  },
+  {
+   "id": "r3b-skillpkg",
+   "claim": "03b-ab-live-journeys: skillpkg pass rate 0.60",
+   "round": "03b-ab-live-journeys",
+   "files": [
+    "rounds/03b-ab-live-journeys/results/results_live.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "arms": [
+      "skillpkg"
+     ]
+    }
+   },
+   "expect": {
+    "value": 0.6,
+    "tolerance": 0.005,
+    "passes": 27,
+    "n": 45
+   },
+   "sources": [
+    {
+     "file": "rounds/03b-ab-live-journeys/findings_live.md",
+     "text": "| skillpkg | 45 | **0.60** | 0.45–0.73 |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r3b-skillpkg --show"
+  },
+  {
+   "id": "r4-skillpkg",
+   "claim": "04-hooks-matrix-and-hooks-ab: skillpkg pass rate 0.56",
+   "round": "04-hooks-matrix-and-hooks-ab",
+   "files": [
+    "rounds/04-hooks-matrix-and-hooks-ab/results/results_live_hooks.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "arms": [
+      "skillpkg"
+     ]
+    }
+   },
+   "expect": {
+    "value": 0.56,
+    "tolerance": 0.005,
+    "passes": 25,
+    "n": 45
+   },
+   "sources": [
+    {
+     "file": "rounds/04-hooks-matrix-and-hooks-ab/findings_hooks.md",
+     "text": "| **pass, all (n=45)** | 0.56 (0.41–0.69) | **0.58** (0.43–0.71) |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r4-skillpkg --show"
+  },
+  {
+   "id": "r4-hookpkg",
+   "claim": "04-hooks-matrix-and-hooks-ab: hookpkg pass rate 0.58",
+   "round": "04-hooks-matrix-and-hooks-ab",
+   "files": [
+    "rounds/04-hooks-matrix-and-hooks-ab/results/results_live_hooks.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "arms": [
+      "hookpkg"
+     ]
+    }
+   },
+   "expect": {
+    "value": 0.58,
+    "tolerance": 0.005,
+    "passes": 26,
+    "n": 45
+   },
+   "sources": [
+    {
+     "file": "rounds/04-hooks-matrix-and-hooks-ab/findings_hooks.md",
+     "text": "| **pass, all (n=45)** | 0.56 (0.41–0.69) | **0.58** (0.43–0.71) |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r4-hookpkg --show"
+  },
+  {
+   "id": "r5-hookpkg",
+   "claim": "05-v2: hookpkg pass rate 0.51",
+   "round": "05-v2",
+   "files": [
+    "rounds/05-v2/results/results_live_v2.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "arms": [
+      "hookpkg"
+     ]
+    }
+   },
+   "expect": {
+    "value": 0.51,
+    "tolerance": 0.005,
+    "passes": 23,
+    "n": 45
+   },
+   "sources": [
+    {
+     "file": "rounds/05-v2/findings_v2.md",
+     "text": "| **pass, all (n=45)** | 0.51 (0.37–0.65) | **0.60** (0.45–0.73) |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r5-hookpkg --show"
+  },
+  {
+   "id": "r5-hookpkg2",
+   "claim": "05-v2: hookpkg2 pass rate 0.60",
+   "round": "05-v2",
+   "files": [
+    "rounds/05-v2/results/results_live_v2.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "arms": [
+      "hookpkg2"
+     ]
+    }
+   },
+   "expect": {
+    "value": 0.6,
+    "tolerance": 0.005,
+    "passes": 27,
+    "n": 45
+   },
+   "sources": [
+    {
+     "file": "rounds/05-v2/findings_v2.md",
+     "text": "| **pass, all (n=45)** | 0.51 (0.37–0.65) | **0.60** (0.45–0.73) |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r5-hookpkg2 --show"
+  },
+  {
+   "id": "r3b-skillpkg-vs-rfmcp-sign",
+   "claim": "A/B round 2: skill + local package better than rf-mcp in 9 cells, worse in 3",
+   "round": "03b-ab-live-journeys",
+   "files": [
+    "rounds/03b-ab-live-journeys/results/results_live.jsonl"
+   ],
+   "compute": {
+    "metric": "sign_test",
+    "a": "skillpkg",
+    "b": "mcp"
+   },
+   "expect": {
+    "pos": 9,
+    "neg": 3,
+    "p": 0.15,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "rounds/03b-ab-live-journeys/findings_live.md",
+     "text": "| skillpkg−mcp | **+0.16 (0.21)** | +0.18 (0.22) | **9/3 (0.15)** |"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only r3b-skillpkg-vs-rfmcp-sign --show"
+  }
+ ],
+ "reports": [
+  {
+   "round": "03a-ab-file-authoring",
+   "analyzer": "eval-snapshots/ab-7994ae3/harness/analyze.py",
+   "results": "rounds/03a-ab-file-authoring/results/results_rc.jsonl",
+   "args": [],
+   "report": "rounds/03a-ab-file-authoring/reports/report_rc.txt",
+   "summary": "rounds/03a-ab-file-authoring/reports/summary_rc.json",
+   "allowed_changed_lines": "^- rows (whose transcript reports an agent-side error|that hit the turn cap)",
+   "note": "the archived analyzer is the final version; it splits turn-cap rows out of the 'agent-side error' line that the report of this round was generated with",
+   "allowed_extra_keys": [
+    "live"
+   ]
+  },
+  {
+   "round": "03b-ab-live-journeys",
+   "analyzer": "eval-snapshots/ab-7994ae3/harness/analyze.py",
+   "results": "rounds/03b-ab-live-journeys/results/results_live.jsonl",
+   "args": [],
+   "report": "rounds/03b-ab-live-journeys/reports/report_live.txt",
+   "summary": "rounds/03b-ab-live-journeys/reports/summary_live.json",
+   "allowed_changed_lines": "^- rows (whose transcript reports an agent-side error|that hit the turn cap)",
+   "note": "the archived analyzer is the final version; it splits turn-cap rows out of the 'agent-side error' line that the report of this round was generated with"
+  },
+  {
+   "round": "03b-ab-live-journeys",
+   "analyzer": "eval-snapshots/ab-7994ae3/harness/analyze.py",
+   "results": "rounds/03b-ab-live-journeys/results/results_live_pilot_nocopilot.jsonl",
+   "args": [],
+   "report": "rounds/03b-ab-live-journeys/reports/report_live_pilot.txt",
+   "allowed_changed_lines": "^- rows (whose transcript reports an agent-side error|that hit the turn cap)",
+   "note": "the archived analyzer is the final version; it splits turn-cap rows out of the 'agent-side error' line that the report of this round was generated with"
+  },
+  {
+   "round": "04-hooks-matrix-and-hooks-ab",
+   "analyzer": "eval-snapshots/ab-7994ae3/harness/analyze_hooks.py",
+   "results": "rounds/04-hooks-matrix-and-hooks-ab/results/results_live_hooks.jsonl",
+   "args": [],
+   "report": "rounds/04-hooks-matrix-and-hooks-ab/reports/report_live_hooks.txt",
+   "summary": "rounds/04-hooks-matrix-and-hooks-ab/reports/summary_live_hooks.json",
+   "allowed_changed_lines": "^- rows (whose transcript reports an agent-side error|that hit the turn cap)",
+   "note": "the archived analyzer is the final version; it splits turn-cap rows out of the 'agent-side error' line that the report of this round was generated with"
+  },
+  {
+   "round": "05-v2",
+   "analyzer": "eval-snapshots/ab-7994ae3/harness/analyze_hooks.py",
+   "results": "rounds/05-v2/results/results_live_v2.jsonl",
+   "args": [
+    "--arms",
+    "hookpkg,hookpkg2"
+   ],
+   "report": "rounds/05-v2/reports/report_live_v2.txt",
+   "summary": "rounds/05-v2/reports/summary_live_v2.json"
+  },
+  {
+   "round": "06-v3-main",
+   "analyzer": "eval-snapshots/ab-7994ae3/harness/analyze_hooks.py",
+   "results": "rounds/06-v3-main/results/results_live_v3main.jsonl",
+   "args": [
+    "--arms",
+    "mcp,hookpkg2,hookpkg3"
+   ],
+   "report": "rounds/06-v3-main/reports/report_live_v3main.txt",
+   "summary": "rounds/06-v3-main/reports/summary_live_v3main.json"
+  },
+  {
+   "round": "07-v31-v32",
+   "analyzer": "eval-snapshots/ab-7994ae3/harness/analyze_hooks.py",
+   "results": "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+   "args": [
+    "--arms",
+    "mcp,hookpkg3,hookpkg31"
+   ],
+   "report": "rounds/07-v31-v32/reports/report_live_v31sub.txt",
+   "summary": "rounds/07-v31-v32/reports/summary_live_v31sub.json"
+  },
+  {
+   "round": "07-v31-v32",
+   "analyzer": "eval-snapshots/ab-7994ae3/harness/analyze_hooks.py",
+   "results": "rounds/07-v31-v32/results/results_live_v31or.jsonl",
+   "args": [
+    "--arms",
+    "mcp,hookpkg3,hookpkg31"
+   ],
+   "report": "rounds/07-v31-v32/reports/report_live_v31or.txt",
+   "summary": "rounds/07-v31-v32/reports/summary_live_v31or.json"
+  },
+  {
+   "round": "07-v31-v32",
+   "analyzer": "eval-snapshots/ab-7994ae3/harness/analyze_hooks.py",
+   "results": "rounds/07-v31-v32/results/results_live_v32.jsonl",
+   "args": [
+    "--arms",
+    "hookpkg31,hookpkg32"
+   ],
+   "report": "rounds/07-v31-v32/reports/report_live_v32.txt",
+   "summary": "rounds/07-v31-v32/reports/summary_live_v32.json"
+  }
+ ]
+}

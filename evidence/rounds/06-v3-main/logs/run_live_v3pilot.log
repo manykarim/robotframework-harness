@@ -1,0 +1,24 @@
+[14:57:44] [config] models={'claude': 'claude-haiku-4-5', 'codex': 'gpt-5.6-luna', 'opencode': 'minimax-coding-plan/MiniMax-M2.5', 'copilot': 'gpt-4.1'} codex_effort='medium' opencode_variant='' results=~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/ab/harness/results_live_v3pilot.jsonl work=~/.cache/ab-eval/work_live_v3pilot prune=True browser_concurrency=3
+[14:57:44] disk before:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  234G  212G  9,7G  96% /
+[14:57:44] [batch] 15 cells to run (skipping 0 done), concurrency=3, browser<=3, per-agent<=2, prune=True
+[15:00:33] [1/15] codex|hookpkg3|tricentis_quote|1 -> status=ok primary=False pass=8/12 mcp_calls=0 tools=26 168.9s
+[15:05:13] [2/15] claude|hookpkg3|carconfig_order|1 -> status=ok primary=False pass=10/11 mcp_calls=0 tools=52 280.4s
+[15:05:31] [3/15] claude|hookpkg3|tricentis_quote|1 -> status=ok primary=False pass=10/12 mcp_calls=0 tools=62 466.8s
+[15:06:22] [4/15] opencode|hookpkg3|tricentis_quote|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=62 517.7s
+[15:07:29] [5/15] codex|hookpkg3|carconfig_order|1 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=29 135.5s
+[15:10:04] [6/15] codex|hookpkg3|demoshop_order|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=26 155.4s
+[15:10:13] [7/15] claude|hookpkg3|demoshop_order|1 -> status=ok primary=False pass=10/12 mcp_calls=0 tools=38 231.3s
+[15:10:42] [8/15] opencode|hookpkg3|carconfig_order|1 -> status=ok primary=False pass=9/11 mcp_calls=0 tools=47 311.1s
+[15:16:16] [9/15] codex|hookpkg3|demoshop_debug|1 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=25 334.5s
+[15:16:23] [10/15] claude|hookpkg3|demoshop_debug|1 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=37 370.2s
+[15:22:21] [11/15] opencode|hookpkg3|demoshop_debug|1 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=28 365.0s
+[15:24:22] [12/15] opencode|hookpkg3|demoshop_order|1 -> status=ok primary=False pass=11/12 mcp_calls=0 tools=93 857.4s
+[15:27:00] [13/15] codex|hookpkg3|tricentis_debug|1 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=34 278.6s
+[15:29:18] [14/15] claude|hookpkg3|tricentis_debug|1 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=76 774.6s
+[15:35:57] [15/15] opencode|hookpkg3|tricentis_debug|1 -> status=ok primary=False pass=14/15 mcp_calls=0 tools=47 695.5s
+[15:35:58] [batch] done: ran=15 skipped=0 reaper_kills_total=2 (final sweep 0)
+[15:35:58] disk after:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  234G  212G  9,7G  96% /

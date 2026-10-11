@@ -1,0 +1,333 @@
+{
+ "ok": true,
+ "passed": 62,
+ "total": 62,
+ "latency": {
+  "gate_deny_ms": {
+   "n": 1,
+   "median_ms": 119,
+   "max_ms": 119
+  },
+  "claude:start": {
+   "n": 4,
+   "median_ms": 79,
+   "max_ms": 106
+  },
+  "claude:pre": {
+   "n": 22,
+   "median_ms": 122,
+   "max_ms": 1603
+  },
+  "claude:post": {
+   "n": 23,
+   "median_ms": 1025,
+   "max_ms": 10589
+  },
+  "claude:stop": {
+   "n": 4,
+   "median_ms": 66,
+   "max_ms": 73
+  },
+  "claude:postfail": {
+   "n": 1,
+   "median_ms": 7777,
+   "max_ms": 7777
+  },
+  "codex:start": {
+   "n": 1,
+   "median_ms": 78,
+   "max_ms": 78
+  },
+  "codex:pre": {
+   "n": 3,
+   "median_ms": 161,
+   "max_ms": 305
+  },
+  "codex:post": {
+   "n": 2,
+   "median_ms": 1356,
+   "max_ms": 2607
+  },
+  "copilot:start": {
+   "n": 1,
+   "median_ms": 80,
+   "max_ms": 80
+  },
+  "copilot:pre": {
+   "n": 3,
+   "median_ms": 149,
+   "max_ms": 385
+  },
+  "copilot:post": {
+   "n": 2,
+   "median_ms": 1351,
+   "max_ms": 2600
+  },
+  "opencode:start": {
+   "n": 1,
+   "median_ms": 93,
+   "max_ms": 93
+  },
+  "opencode:pre": {
+   "n": 3,
+   "median_ms": 158,
+   "max_ms": 324
+  },
+  "opencode:post": {
+   "n": 2,
+   "median_ms": 1336,
+   "max_ms": 2571
+  }
+ },
+ "wall_s": 129,
+ "checks": [
+  {
+   "check": "A SessionStart returns context fast (79 ms)",
+   "ok": true
+  },
+  {
+   "check": "A1 first write: suite setup + 3 lines PASS + page summary",
+   "ok": true
+  },
+  {
+   "check": "A2 appended lines run (only the new ones), navigation summary",
+   "ok": true
+  },
+  {
+   "check": "A3 failing line: hidden radio -> NOT RUN NOT_VISIBLE with the label to click",
+   "ok": true
+  },
+  {
+   "check": "A4 fix -> resumes AT the fixed line in the open page (L16, L17 only)",
+   "ok": true
+  },
+  {
+   "check": "A5 element inside iframe -> NOT_FOUND with the `frame >>> selector` fix",
+   "ok": true
+  },
+  {
+   "check": "A6 async confirmation read too early -> fails at L22 with the read value",
+   "ok": true
+  },
+  {
+   "check": "A7 wait inserted before an executed line -> test restarted cleanly, all pass",
+   "ok": true
+  },
+  {
+   "check": "A8 changed an executed earlier line -> test restarted (L10 New Page re-ran), stops at the stale greeting",
+   "ok": true
+  },
+  {
+   "check": "A9 fix the assertion -> resumes from L15 to the end",
+   "ok": true
+  },
+  {
+   "check": "A10 PreToolUse denies NEW hard errors with line numbers (typo, arg count, missing END); file unchanged",
+   "ok": true
+  },
+  {
+   "check": "A11 deprecated `Run Keyword If` -> input rewritten to IF/END before writing; new lines run",
+   "ok": true
+  },
+  {
+   "check": "A12 Stop blocks: test changed and never ran plainly",
+   "ok": true
+  },
+  {
+   "check": "A13 Stop with stop_hook_active -> allow (no loop)",
+   "ok": true
+  },
+  {
+   "check": "A14 plain robot run (green) -> summary + verified recorded",
+   "ok": true
+  },
+  {
+   "check": "A15 Stop after the green plain run -> allow",
+   "ok": true
+  },
+  {
+   "check": "A16 whole-file write: test 1 passes, test 2 runs (fresh Test Setup page) and fails at L17",
+   "ok": true
+  },
+  {
+   "check": "A17 fix -> only L17 re-runs",
+   "ok": true
+  },
+  {
+   "check": "A: no process mentions the workspace any more",
+   "ok": true
+  },
+  {
+   "check": "A: SessionEnd < 1.5 s (385 ms) and 0 orphans after it",
+   "ok": true
+  },
+  {
+   "check": "A: no generated files left in the workspace",
+   "ok": true
+  },
+  {
+   "check": "B1 failing plain run -> failure summary + live reproduction stopped at the failing line with page summary",
+   "ok": true
+  },
+  {
+   "check": "B2 fix the reproduced line -> resumes at L13 in the open page and passes",
+   "ok": true
+  },
+  {
+   "check": "B3 edit inside the never-run second test -> runs it from its setup, then fails on the total (async/wrong?)",
+   "ok": true
+  },
+  {
+   "check": "B4 plain run green after repair -> verified",
+   "ok": true
+  },
+  {
+   "check": "B5 Stop allows after the green run",
+   "ok": true
+  },
+  {
+   "check": "B6 edit inside a user keyword -> the first test calling it re-runs from the top",
+   "ok": true
+  },
+  {
+   "check": "B7 failure inside a user keyword -> reported on the calling line with the keyword's file:line",
+   "ok": true
+  },
+  {
+   "check": "B: no process mentions the workspace any more",
+   "ok": true
+  },
+  {
+   "check": "B: SessionEnd < 1.5 s (378 ms) and 0 orphans after it",
+   "ok": true
+  },
+  {
+   "check": "B: no generated files left in the workspace",
+   "ok": true
+  },
+  {
+   "check": "C1 API test: GET passes, wrong expected value fails at L9 with the real value",
+   "ok": true
+  },
+  {
+   "check": "C2 fix -> resumes at L9",
+   "ok": true
+  },
+  {
+   "check": "C3 POST with json= body appended -> PASS (returned value shown)",
+   "ok": true
+  },
+  {
+   "check": "C: no process mentions the workspace any more",
+   "ok": true
+  },
+  {
+   "check": "C: SessionEnd < 1.5 s (390 ms) and 0 orphans after it",
+   "ok": true
+  },
+  {
+   "check": "C: no generated files left in the workspace",
+   "ok": true
+  },
+  {
+   "check": "D[codex] SessionStart context (78 ms)",
+   "ok": true
+  },
+  {
+   "check": "D[codex] planted typo in a new file -> deny with line number",
+   "ok": true
+  },
+  {
+   "check": "D[codex] corrected write -> allowed, lines run live",
+   "ok": true
+  },
+  {
+   "check": "D[codex] deprecated syntax -> rewritten tool input (rewrite)",
+   "ok": true
+  },
+  {
+   "check": "D[codex]: no process mentions the workspace any more",
+   "ok": true
+  },
+  {
+   "check": "D[codex]: SessionEnd < 1.5 s (377 ms) and 0 orphans after it",
+   "ok": true
+  },
+  {
+   "check": "D[codex]: no generated files left in the workspace",
+   "ok": true
+  },
+  {
+   "check": "D[copilot] SessionStart context (80 ms)",
+   "ok": true
+  },
+  {
+   "check": "D[copilot] planted typo in a new file -> deny with line number",
+   "ok": true
+  },
+  {
+   "check": "D[copilot] corrected write -> allowed, lines run live",
+   "ok": true
+  },
+  {
+   "check": "D[copilot] deprecated syntax -> rewritten tool input (rewrite)",
+   "ok": true
+  },
+  {
+   "check": "D[copilot] sessionEnd keeps the session (it fires after every copilot run)",
+   "ok": true
+  },
+  {
+   "check": "D[copilot] agent process gone -> daemons exit by themselves (watch-pid), 0 orphans",
+   "ok": true
+  },
+  {
+   "check": "D[opencode] SessionStart context (93 ms)",
+   "ok": true
+  },
+  {
+   "check": "D[opencode] planted typo in a new file -> deny with line number",
+   "ok": true
+  },
+  {
+   "check": "D[opencode] corrected write -> allowed, lines run live",
+   "ok": true
+  },
+  {
+   "check": "D[opencode] deprecated syntax -> rewritten tool input (rewrite)",
+   "ok": true
+  },
+  {
+   "check": "D[opencode]: no process mentions the workspace any more",
+   "ok": true
+  },
+  {
+   "check": "D[opencode]: SessionEnd < 1.5 s (383 ms) and 0 orphans after it",
+   "ok": true
+  },
+  {
+   "check": "D[opencode]: no generated files left in the workspace",
+   "ok": true
+  },
+  {
+   "check": "E1 long step -> hook returns at the budget with 'still running'",
+   "ok": true
+  },
+  {
+   "check": "E2 next hook event delivers the earlier result, then runs the new line",
+   "ok": true
+  },
+  {
+   "check": "E: no process mentions the workspace any more",
+   "ok": true
+  },
+  {
+   "check": "E: SessionEnd < 1.5 s (376 ms) and 0 orphans after it",
+   "ok": true
+  },
+  {
+   "check": "E: no generated files left in the workspace",
+   "ok": true
+  }
+ ]
+}

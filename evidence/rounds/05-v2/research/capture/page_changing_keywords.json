@@ -1,0 +1,15 @@
+{
+ "_doc": "Round-5: which top-level keywords trigger a page capture. Names normalized (lowercase, no spaces). always = capture after PASS; maybe = cheap check (url + sha1 of normalized source: Browser 5-41 ms, Selenium 4-34 ms) then full capture only if changed; on_fail = any FAIL of always/maybe or any locator-failure message -> capture (dedup pointer if unchanged) + near-miss grep. skip = getters/asserts/waits (no capture; New Browser/New Context/Create Webdriver have no page yet).",
+ "Browser_20.5": {
+  "always": ["Go To", "Go Back", "Go Forward", "Reload", "New Page", "New Persistent Context", "Switch Page", "Switch Context", "Switch Browser", "Close Page", "Close Context", "Wait For Navigation", "Wait For Load State"],
+  "maybe": ["Click", "Click With Options", "Tap", "Press Keys", "Keyboard Key", "Keyboard Input", "Type Text", "Fill Text", "Fill Secret", "Type Secret", "Clear Text", "Select Options By", "Check Checkbox", "Uncheck Checkbox", "Upload File By Selector", "Promise To Upload File", "Drag And Drop", "Drag And Drop By Coordinates", "Drag And Drop Relative To", "Mouse Button", "Hover", "Focus", "Evaluate JavaScript", "Handle Future Dialogs", "Wait For Elements State", "Wait For Condition", "Scroll To", "Scroll By", "Scroll To Element", "Set Viewport Size", "Set Offline", "Add Cookie", "Add Locator Handler Click", "Add Locator Handler Custom"],
+  "skip_no_page_yet": ["New Browser", "New Context"],
+  "note": "Close Browser/Close Browser Server end the page: write a 'closed' history line only"
+ },
+ "SeleniumLibrary_6.8": {
+  "always": ["Open Browser", "Go To", "Go Back", "Reload Page", "Switch Window", "Close Window", "Switch Browser", "Select Frame", "Unselect Frame", "Submit Form", "Wait Until Location Is", "Wait Until Location Contains", "Wait Until Location Is Not", "Wait Until Location Does Not Contain"],
+  "maybe": ["Click Element", "Click Button", "Click Link", "Click Image", "Click Element At Coordinates", "Double Click Element", "Press Key", "Press Keys", "Input Text", "Input Password", "Clear Element Text", "Select From List By Index", "Select From List By Label", "Select From List By Value", "Unselect From List By Index", "Unselect From List By Label", "Unselect From List By Value", "Select All From List", "Unselect All From List", "Select Checkbox", "Unselect Checkbox", "Select Radio Button", "Choose File", "Execute Javascript", "Execute Async Javascript", "Handle Alert", "Input Text Into Alert", "Mouse Down", "Mouse Up", "Mouse Over", "Mouse Out", "Open Context Menu", "Drag And Drop", "Drag And Drop By Offset", "Simulate Event", "Scroll Element Into View", "Set Window Size", "Maximize Browser Window", "Wait Until Element Is Visible", "Wait Until Page Contains Element"],
+  "skip_no_page_yet": ["Create Webdriver"],
+  "note": "Select Frame changes the capture context: source/controls are then the frame's (verified)"
+ }
+}

@@ -1,0 +1,59 @@
+{
+ "about": "Release assets with the scrubbed session transcripts, one per A/B round. Download them into evidence/_release_assets/ and run evidence/verify_assets.py.",
+ "assets": [
+  {
+   "round": "03a-ab-file-authoring",
+   "asset": "evidence-transcripts-03a-ab-file-authoring.tar.zst",
+   "bytes": 1965304,
+   "sha256": "a5a8c7614ecc0fabde1ccc863f49edf519a6008d69ec51e5cc380719b3befb72",
+   "files": 226,
+   "tar_bytes": 19097600,
+   "manifest": "transcripts/03a-ab-file-authoring.manifest.json"
+  },
+  {
+   "round": "03b-ab-live-journeys",
+   "asset": "evidence-transcripts-03b-ab-live-journeys.tar.zst",
+   "bytes": 24707297,
+   "sha256": "16d51a98c505ec340eda47157f3bb643d2fb4c040dff154efb5247cce0f7add5",
+   "files": 214,
+   "tar_bytes": 110909440,
+   "manifest": "transcripts/03b-ab-live-journeys.manifest.json"
+  },
+  {
+   "round": "04-hooks-matrix-and-hooks-ab",
+   "asset": "evidence-transcripts-04-hooks-matrix-and-hooks-ab.tar.zst",
+   "bytes": 11685977,
+   "sha256": "02a80d5d8317c93db2562605456803c94db801e272e8917c8698aeda4db9aecd",
+   "files": 93,
+   "tar_bytes": 56985600,
+   "manifest": "transcripts/04-hooks-matrix-and-hooks-ab.manifest.json"
+  },
+  {
+   "round": "05-v2",
+   "asset": "evidence-transcripts-05-v2.tar.zst",
+   "bytes": 8238114,
+   "sha256": "a6214784a6ef780df3b02652390540ee9139e3751bf183f584a04ff28ae8767e",
+   "files": 92,
+   "tar_bytes": 50565120,
+   "manifest": "transcripts/05-v2.manifest.json"
+  },
+  {
+   "round": "06-v3-main",
+   "asset": "evidence-transcripts-06-v3-main.tar.zst",
+   "bytes": 12700394,
+   "sha256": "f91a1bb31c53bf161d87dc44b3121d604c5784f94cfdbbdbe8a8eab5fc24a219",
+   "files": 197,
+   "tar_bytes": 78069760,
+   "manifest": "transcripts/06-v3-main.manifest.json"
+  },
+  {
+   "round": "07-v31-v32",
+   "asset": "evidence-transcripts-07-v31-v32.tar.zst",
+   "bytes": 25777439,
+   "sha256": "a69f870b6040471edee31f485b3e3eeaed6d11da975a4ed3e66fb2788d46e28d",
+   "files": 335,
+   "tar_bytes": 176128000,
+   "manifest": "transcripts/07-v31-v32.manifest.json"
+  }
+ ]
+}

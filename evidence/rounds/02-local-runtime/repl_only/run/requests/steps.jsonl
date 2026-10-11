@@ -1,0 +1,521 @@
+{"t": "ready", "pid": 3593821, "hooked": true, "path": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round2/repl_only/run/requests/steps.jsonl", "ts": 1790837061.576}
+{"t": "idle", "n": 1, "id": null, "ts": 1790837061.603}
+{"t": "begin", "id": "s1", "ts": 1790837061.679}
+{"t": "step", "seq": 1, "id": "s1", "type": "KEYWORD", "name": "Import Library", "owner": "BuiltIn", "args": ["RequestsLibrary"], "assign": [], "status": "PASS", "elapsed_ms": 65.2, "return": null, "ts": 1790837061.746}
+{"t": "idle", "n": 2, "id": "s1", "ts": 1790837061.747}
+{"t": "idle", "n": 3, "id": "s1", "ts": 1790837061.747}
+{"t": "end", "id": "s1", "src": "Import Library    RequestsLibrary", "steps": 1, "ts": 1790837061.747}
+{"t": "begin", "id": "s2", "ts": 1790837061.815}
+{"t": "step", "seq": 2, "id": "s2", "type": "KEYWORD", "name": "Create Session", "owner": "RequestsLibrary", "args": ["rb", "https://restful-booker.herokuapp.com"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Creating Session using : alias=rb, url=https://restful-booker.herokuapp.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 "}], "status": "PASS", "elapsed_ms": 0.7, "return": "<requests.sessions.Session object at 0x793ba4d89a90>", "ts": 1790837061.817}
+{"t": "idle", "n": 4, "id": "s2", "ts": 1790837061.817}
+{"t": "idle", "n": 5, "id": "s2", "ts": 1790837061.817}
+{"t": "end", "id": "s2", "src": "Create Session    rb    https://restful-booker.herokuapp.com", "steps": 2, "ts": 1790837061.817}
+{"t": "begin", "id": "s3", "ts": 1790837061.865}
+{"t": "step", "seq": 3, "id": "s3", "type": "KEYWORD", "name": "Create Dictionary", "owner": "BuiltIn", "args": ["username=admin", "password=password123"], "assign": ["&{creds}"], "msgs": [{"level": "INFO", "html": false, "text": "&{creds} = { username=admin | password=password123 }"}], "status": "PASS", "elapsed_ms": 1.3, "values": {"&{creds}": {"username": "admin", "password": "password123"}}, "return": "{'username': 'admin', 'password': 'password123'}", "ts": 1790837061.868}
+{"t": "idle", "n": 6, "id": "s3", "ts": 1790837061.869}
+{"t": "idle", "n": 7, "id": "s3", "ts": 1790837061.869}
+{"t": "end", "id": "s3", "src": "&{creds}    Create Dictionary    username=admin    password=password123", "steps": 3, "ts": 1790837061.869}
+{"t": "begin", "id": "s4", "ts": 1790837061.923}
+{"t": "step", "seq": 4, "id": "s4", "type": "KEYWORD", "name": "POST On Session", "owner": "RequestsLibrary", "args": ["rb", "/auth", "json=${creds}"], "assign": ["${resp}"], "msgs": [{"level": "INFO", "html": false, "text": "POST Request : url=https://restful-booker.herokuapp.com/auth \n path_url=/auth \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '48', 'Content-Type': 'application/json'} \n body=b'{\"username\": \"admin\", \"password\": \"password123\"}' \n "}, {"level": "INFO", "html": false, "text": "POST Response : url=https://restful-booker.herokuapp.com/auth \n status=200, reason=OK \n headers={'Content-Length': '27', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:22 GMT', 'Etag': 'W/\"1b-NkuczJSFcmfxG9PDe+2XpwuJV/k\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report-To': '{...(+508)"}, {"level": "INFO", "html": false, "text": "${resp} = <Response [200]>"}], "status": "PASS", "elapsed_ms": 453.9, "values": {"${resp}": "<Response [200]> {\"token\":\"043946bad5981de\"}"}, "return": "<Response [200]> {\"token\":\"043946bad5981de\"}", "ts": 1790837062.379}
+{"t": "idle", "n": 8, "id": "s4", "ts": 1790837062.379}
+{"t": "idle", "n": 9, "id": "s4", "ts": 1790837062.379}
+{"t": "end", "id": "s4", "src": "${resp}    POST On Session    rb    /auth    json=${creds}", "steps": 4, "ts": 1790837062.379}
+{"t": "begin", "id": "s5", "ts": 1790837062.443}
+{"t": "step", "seq": 5, "id": "s5", "type": "KEYWORD", "name": "Set Variable", "owner": "BuiltIn", "args": ["${resp.json()}[token]"], "assign": ["${token}"], "msgs": [{"level": "INFO", "html": false, "text": "${token} = 043946bad5981de"}], "status": "PASS", "elapsed_ms": 1.1, "values": {"${token}": "043946bad5981de"}, "return": "043946bad5981de", "ts": 1790837062.447}
+{"t": "idle", "n": 10, "id": "s5", "ts": 1790837062.447}
+{"t": "idle", "n": 11, "id": "s5", "ts": 1790837062.447}
+{"t": "end", "id": "s5", "src": "${token}    Set Variable    ${resp.json()}[token]", "steps": 5, "ts": 1790837062.447}
+{"t": "begin", "id": "s6", "ts": 1790837062.517}
+{"t": "step", "seq": 6, "id": "s6", "type": "KEYWORD", "name": "Create Dictionary", "owner": "BuiltIn", "args": ["checkin=2026-10-01", "checkout=2026-10-05"], "assign": ["&{dates}"], "msgs": [{"level": "INFO", "html": false, "text": "&{dates} = { checkin=2026-10-01 | checkout=2026-10-05 }"}], "status": "PASS", "elapsed_ms": 1.1, "values": {"&{dates}": {"checkin": "2026-10-01", "checkout": "2026-10-05"}}, "return": "{'checkin': '2026-10-01', 'checkout': '2026-10-05'}", "ts": 1790837062.52}
+{"t": "idle", "n": 12, "id": "s6", "ts": 1790837062.52}
+{"t": "step", "seq": 7, "id": "s6", "type": "KEYWORD", "name": "Create Dictionary", "owner": "BuiltIn", "args": ["firstname=Rf", "lastname=Mcp", "totalprice=${123}", "depositpaid=${True}", "bookingdates=${dates}", "additionalneeds=Breakfast"], "assign": ["&{booking}"], "msgs": [{"level": "INFO", "html": false, "text": "&{booking} = { firstname=Rf | lastname=Mcp | totalprice=123 | depositpaid=True | bookingdates={'checkin': '2026-10-01', 'checkout': '2026-10-05'} | additionalneeds=Breakfast }"}], "status": "PASS", "elapsed_ms": 1.5, "values": {"&{booking}": {"firstname": "Rf", "lastname": "Mcp", "totalprice": 123, "depositpaid": true, "bookingdates": {"checkin": "2026-10-01", "checkout": "2026-10-05"}, "additionalneeds": "Breakfast"}}, "return": "{'firstname': 'Rf', 'lastname': 'Mcp', 'totalprice': 123, 'depositpaid': True, 'bookingdates': {'checkin': '2026-10-01', 'checkout': '2026-10-05'}, 'additionalneeds': 'Breakfast'}", "ts": 1790837062.523}
+{"t": "idle", "n": 13, "id": "s6", "ts": 1790837062.523}
+{"t": "idle", "n": 14, "id": "s6", "ts": 1790837062.523}
+{"t": "end", "id": "s6", "src": "&{dates}    Create Dictionary    checkin=2026-10-01    checkout=2026-10-05\n&{booking}    Create Dictionary    firstname=Rf    lastname=Mcp    totalprice=${123}    depositpaid=${True}    bookingdates=${dates}    additionalneeds=Breakfast", "steps": 7, "ts": 1790837062.524}
+{"t": "begin", "id": "s7", "ts": 1790837062.613}
+{"t": "step", "seq": 8, "id": "s7", "type": "KEYWORD", "name": "POST On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking", "json=${booking}"], "assign": ["${resp}"], "msgs": [{"level": "INFO", "html": false, "text": "POST Request : url=https://restful-booker.herokuapp.com/booking \n path_url=/booking \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '179', 'Content-Type': 'application/json'} \n body=b'{\"firstname\": \"Rf\", \"lastname\": \"Mcp\", \"totalprice\": 123, \"depositpaid\": true, \"bookingdates\": {\"checkin\": \"2026-1...(+69)"}, {"level": "INFO", "html": false, "text": "POST Response : url=https://restful-booker.herokuapp.com/booking \n status=200, reason=OK \n headers={'Content-Length': '194', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:22 GMT', 'Etag': 'W/\"c2-uAY4TkI47yRhVvgfnbImocwVWNM\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report-To'...(+679)"}, {"level": "INFO", "html": false, "text": "${resp} = <Response [200]>"}], "status": "PASS", "elapsed_ms": 106.6, "values": {"${resp}": "<Response [200]> {\"bookingid\":1885,\"booking\":{\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}}"}, "return": "<Response [200]> {\"bookingid\":1885,\"booking\":{\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}}", "ts": 1790837062.721}
+{"t": "idle", "n": 15, "id": "s7", "ts": 1790837062.721}
+{"t": "idle", "n": 16, "id": "s7", "ts": 1790837062.721}
+{"t": "end", "id": "s7", "src": "${resp}    POST On Session    rb    /booking    json=${booking}", "steps": 8, "ts": 1790837062.721}
+{"t": "begin", "id": "s8", "ts": 1790837062.795}
+{"t": "step", "seq": 9, "id": "s8", "type": "KEYWORD", "name": "Set Variable", "owner": "BuiltIn", "args": ["${resp.json()}[bookingid]"], "assign": ["${id}"], "msgs": [{"level": "INFO", "html": false, "text": "${id} = 1885"}], "status": "PASS", "elapsed_ms": 1.0, "values": {"${id}": 1885}, "return": "1885", "ts": 1790837062.797}
+{"t": "idle", "n": 17, "id": "s8", "ts": 1790837062.797}
+{"t": "idle", "n": 18, "id": "s8", "ts": 1790837062.797}
+{"t": "end", "id": "s8", "src": "${id}    Set Variable    ${resp.json()}[bookingid]", "steps": 9, "ts": 1790837062.797}
+{"t": "begin", "id": "s9", "ts": 1790837062.867}
+{"t": "step", "seq": 10, "id": "s9", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": ["${resp}"], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:22 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+654)"}, {"level": "INFO", "html": false, "text": "${resp} = <Response [200]>"}], "status": "PASS", "elapsed_ms": 103.7, "values": {"${resp}": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}"}, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837062.973}
+{"t": "idle", "n": 19, "id": "s9", "ts": 1790837062.973}
+{"t": "idle", "n": 20, "id": "s9", "ts": 1790837062.973}
+{"t": "end", "id": "s9", "src": "${resp}    GET On Session    rb    /booking/${id}", "steps": 10, "ts": 1790837062.973}
+{"t": "begin", "id": "s10", "ts": 1790837063.061}
+{"t": "step", "seq": 11, "id": "s10", "type": "KEYWORD", "name": "Should Be Equal As Strings", "owner": "BuiltIn", "args": ["${resp.json()}[firstname]", "Rf"], "assign": [], "status": "PASS", "elapsed_ms": 0.9, "return": null, "ts": 1790837063.064}
+{"t": "idle", "n": 21, "id": "s10", "ts": 1790837063.064}
+{"t": "idle", "n": 22, "id": "s10", "ts": 1790837063.064}
+{"t": "end", "id": "s10", "src": "Should Be Equal As Strings    ${resp.json()}[firstname]    Rf", "steps": 11, "ts": 1790837063.064}
+{"t": "begin", "id": "s11", "ts": 1790837063.149}
+{"t": "step", "seq": 12, "id": "s11", "type": "KEYWORD", "name": "Should Be Equal As Strings", "owner": "BuiltIn", "args": ["${resp.json()}[firstname]", "Wrong"], "assign": [], "msgs": [{"level": "FAIL", "html": false, "text": "Rf != Wrong"}], "status": "FAIL", "message": "Rf != Wrong", "elapsed_ms": 1.4, "ts": 1790837063.152}
+{"t": "idle", "n": 23, "id": "s11", "ts": 1790837063.152}
+{"t": "end", "id": "s11", "src": "Should Be Equal As Strings    ${resp.json()}[firstname]    Wrong", "steps": 12, "skipped_src": "", "ts": 1790837063.152}
+{"t": "begin", "id": "s12", "ts": 1790837063.238}
+{"t": "step", "seq": 13, "id": "s12", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/999999999", "expected_status=anything"], "assign": ["${r2}"], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/999999999 \n path_url=/booking/999999999 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/999999999 \n status=404, reason=Not Found \n headers={'Content-Length': '9', 'Content-Type': 'text/plain; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:23 GMT', 'Etag': 'W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Rep...(+501)"}, {"level": "INFO", "html": false, "text": "${r2} = <Response [404]>"}], "status": "PASS", "elapsed_ms": 102.8, "values": {"${r2}": "<Response [404]> Not Found"}, "return": "<Response [404]> Not Found", "ts": 1790837063.342}
+{"t": "idle", "n": 24, "id": "s12", "ts": 1790837063.342}
+{"t": "idle", "n": 25, "id": "s12", "ts": 1790837063.342}
+{"t": "end", "id": "s12", "src": "${r2}    GET On Session    rb    /booking/999999999    expected_status=anything", "steps": 13, "ts": 1790837063.342}
+{"t": "begin", "id": "s13", "ts": 1790837063.428}
+{"t": "step", "seq": 14, "id": "s13", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["404", "${r2}"], "assign": [], "status": "PASS", "elapsed_ms": 0.6, "return": null, "ts": 1790837063.43}
+{"t": "idle", "n": 26, "id": "s13", "ts": 1790837063.43}
+{"t": "idle", "n": 27, "id": "s13", "ts": 1790837063.43}
+{"t": "end", "id": "s13", "src": "Status Should Be    404    ${r2}", "steps": 14, "ts": 1790837063.43}
+{"t": "begin", "id": "s14", "ts": 1790837063.521}
+{"t": "step", "seq": 15, "id": "s14", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.4, "return": null, "ts": 1790837063.522}
+{"t": "idle", "n": 28, "id": "s14", "ts": 1790837063.522}
+{"t": "idle", "n": 29, "id": "s14", "ts": 1790837063.523}
+{"t": "end", "id": "s14", "src": "Status Should Be    200    ${resp}", "steps": 15, "ts": 1790837063.523}
+{"t": "begin", "id": "s15", "ts": 1790837063.608}
+{"t": "step", "seq": 16, "id": "s15", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.4, "return": null, "ts": 1790837063.61}
+{"t": "idle", "n": 30, "id": "s15", "ts": 1790837063.61}
+{"t": "idle", "n": 31, "id": "s15", "ts": 1790837063.61}
+{"t": "end", "id": "s15", "src": "Status Should Be    200    ${resp}", "steps": 16, "ts": 1790837063.61}
+{"t": "begin", "id": "s16", "ts": 1790837063.689}
+{"t": "step", "seq": 17, "id": "s16", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837063.691}
+{"t": "idle", "n": 32, "id": "s16", "ts": 1790837063.691}
+{"t": "idle", "n": 33, "id": "s16", "ts": 1790837063.691}
+{"t": "end", "id": "s16", "src": "Status Should Be    200    ${resp}", "steps": 17, "ts": 1790837063.691}
+{"t": "begin", "id": "s17", "ts": 1790837063.773}
+{"t": "step", "seq": 18, "id": "s17", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837063.775}
+{"t": "idle", "n": 34, "id": "s17", "ts": 1790837063.775}
+{"t": "idle", "n": 35, "id": "s17", "ts": 1790837063.775}
+{"t": "end", "id": "s17", "src": "Status Should Be    200    ${resp}", "steps": 18, "ts": 1790837063.775}
+{"t": "begin", "id": "s18", "ts": 1790837063.854}
+{"t": "step", "seq": 19, "id": "s18", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837063.856}
+{"t": "idle", "n": 36, "id": "s18", "ts": 1790837063.856}
+{"t": "idle", "n": 37, "id": "s18", "ts": 1790837063.856}
+{"t": "end", "id": "s18", "src": "Status Should Be    200    ${resp}", "steps": 19, "ts": 1790837063.856}
+{"t": "begin", "id": "s19", "ts": 1790837063.945}
+{"t": "step", "seq": 20, "id": "s19", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837063.947}
+{"t": "idle", "n": 38, "id": "s19", "ts": 1790837063.947}
+{"t": "idle", "n": 39, "id": "s19", "ts": 1790837063.947}
+{"t": "end", "id": "s19", "src": "Status Should Be    200    ${resp}", "steps": 20, "ts": 1790837063.947}
+{"t": "begin", "id": "s20", "ts": 1790837064.043}
+{"t": "step", "seq": 21, "id": "s20", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.4, "return": null, "ts": 1790837064.045}
+{"t": "idle", "n": 40, "id": "s20", "ts": 1790837064.045}
+{"t": "idle", "n": 41, "id": "s20", "ts": 1790837064.045}
+{"t": "end", "id": "s20", "src": "Status Should Be    200    ${resp}", "steps": 21, "ts": 1790837064.045}
+{"t": "begin", "id": "s21", "ts": 1790837064.164}
+{"t": "step", "seq": 22, "id": "s21", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.6, "return": null, "ts": 1790837064.166}
+{"t": "idle", "n": 42, "id": "s21", "ts": 1790837064.166}
+{"t": "idle", "n": 43, "id": "s21", "ts": 1790837064.166}
+{"t": "end", "id": "s21", "src": "Status Should Be    200    ${resp}", "steps": 22, "ts": 1790837064.166}
+{"t": "begin", "id": "s22", "ts": 1790837064.247}
+{"t": "step", "seq": 23, "id": "s22", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.7, "return": null, "ts": 1790837064.25}
+{"t": "idle", "n": 44, "id": "s22", "ts": 1790837064.25}
+{"t": "idle", "n": 45, "id": "s22", "ts": 1790837064.25}
+{"t": "end", "id": "s22", "src": "Status Should Be    200    ${resp}", "steps": 23, "ts": 1790837064.25}
+{"t": "begin", "id": "s23", "ts": 1790837064.326}
+{"t": "step", "seq": 24, "id": "s23", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.6, "return": null, "ts": 1790837064.329}
+{"t": "idle", "n": 46, "id": "s23", "ts": 1790837064.329}
+{"t": "idle", "n": 47, "id": "s23", "ts": 1790837064.329}
+{"t": "end", "id": "s23", "src": "Status Should Be    200    ${resp}", "steps": 24, "ts": 1790837064.329}
+{"t": "begin", "id": "s24", "ts": 1790837064.407}
+{"t": "step", "seq": 25, "id": "s24", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.6, "return": null, "ts": 1790837064.409}
+{"t": "idle", "n": 48, "id": "s24", "ts": 1790837064.409}
+{"t": "idle", "n": 49, "id": "s24", "ts": 1790837064.409}
+{"t": "end", "id": "s24", "src": "Status Should Be    200    ${resp}", "steps": 25, "ts": 1790837064.409}
+{"t": "begin", "id": "s25", "ts": 1790837064.5}
+{"t": "step", "seq": 26, "id": "s25", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.4, "return": null, "ts": 1790837064.502}
+{"t": "idle", "n": 50, "id": "s25", "ts": 1790837064.502}
+{"t": "idle", "n": 51, "id": "s25", "ts": 1790837064.502}
+{"t": "end", "id": "s25", "src": "Status Should Be    200    ${resp}", "steps": 26, "ts": 1790837064.502}
+{"t": "begin", "id": "s26", "ts": 1790837064.58}
+{"t": "step", "seq": 27, "id": "s26", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.6, "return": null, "ts": 1790837064.583}
+{"t": "idle", "n": 52, "id": "s26", "ts": 1790837064.583}
+{"t": "idle", "n": 53, "id": "s26", "ts": 1790837064.583}
+{"t": "end", "id": "s26", "src": "Status Should Be    200    ${resp}", "steps": 27, "ts": 1790837064.583}
+{"t": "begin", "id": "s27", "ts": 1790837064.663}
+{"t": "step", "seq": 28, "id": "s27", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.6, "return": null, "ts": 1790837064.665}
+{"t": "idle", "n": 54, "id": "s27", "ts": 1790837064.665}
+{"t": "idle", "n": 55, "id": "s27", "ts": 1790837064.665}
+{"t": "end", "id": "s27", "src": "Status Should Be    200    ${resp}", "steps": 28, "ts": 1790837064.665}
+{"t": "begin", "id": "s28", "ts": 1790837064.761}
+{"t": "step", "seq": 29, "id": "s28", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837064.763}
+{"t": "idle", "n": 56, "id": "s28", "ts": 1790837064.763}
+{"t": "idle", "n": 57, "id": "s28", "ts": 1790837064.763}
+{"t": "end", "id": "s28", "src": "Status Should Be    200    ${resp}", "steps": 29, "ts": 1790837064.763}
+{"t": "begin", "id": "s29", "ts": 1790837064.867}
+{"t": "step", "seq": 30, "id": "s29", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.7, "return": null, "ts": 1790837064.87}
+{"t": "idle", "n": 58, "id": "s29", "ts": 1790837064.87}
+{"t": "idle", "n": 59, "id": "s29", "ts": 1790837064.87}
+{"t": "end", "id": "s29", "src": "Status Should Be    200    ${resp}", "steps": 30, "ts": 1790837064.87}
+{"t": "begin", "id": "s30", "ts": 1790837064.958}
+{"t": "step", "seq": 31, "id": "s30", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.8, "return": null, "ts": 1790837064.961}
+{"t": "idle", "n": 60, "id": "s30", "ts": 1790837064.961}
+{"t": "idle", "n": 61, "id": "s30", "ts": 1790837064.961}
+{"t": "end", "id": "s30", "src": "Status Should Be    200    ${resp}", "steps": 31, "ts": 1790837064.961}
+{"t": "begin", "id": "s31", "ts": 1790837065.048}
+{"t": "step", "seq": 32, "id": "s31", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837065.05}
+{"t": "idle", "n": 62, "id": "s31", "ts": 1790837065.05}
+{"t": "idle", "n": 63, "id": "s31", "ts": 1790837065.05}
+{"t": "end", "id": "s31", "src": "Status Should Be    200    ${resp}", "steps": 32, "ts": 1790837065.05}
+{"t": "begin", "id": "s32", "ts": 1790837065.154}
+{"t": "step", "seq": 33, "id": "s32", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.4, "return": null, "ts": 1790837065.155}
+{"t": "idle", "n": 64, "id": "s32", "ts": 1790837065.155}
+{"t": "idle", "n": 65, "id": "s32", "ts": 1790837065.155}
+{"t": "end", "id": "s32", "src": "Status Should Be    200    ${resp}", "steps": 33, "ts": 1790837065.155}
+{"t": "begin", "id": "s33", "ts": 1790837065.28}
+{"t": "step", "seq": 34, "id": "s33", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837065.283}
+{"t": "idle", "n": 66, "id": "s33", "ts": 1790837065.283}
+{"t": "idle", "n": 67, "id": "s33", "ts": 1790837065.283}
+{"t": "end", "id": "s33", "src": "Status Should Be    200    ${resp}", "steps": 34, "ts": 1790837065.283}
+{"t": "begin", "id": "s34", "ts": 1790837065.361}
+{"t": "step", "seq": 35, "id": "s34", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837065.362}
+{"t": "idle", "n": 68, "id": "s34", "ts": 1790837065.362}
+{"t": "idle", "n": 69, "id": "s34", "ts": 1790837065.363}
+{"t": "end", "id": "s34", "src": "Status Should Be    200    ${resp}", "steps": 35, "ts": 1790837065.363}
+{"t": "begin", "id": "s35", "ts": 1790837065.434}
+{"t": "step", "seq": 36, "id": "s35", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837065.436}
+{"t": "idle", "n": 70, "id": "s35", "ts": 1790837065.436}
+{"t": "idle", "n": 71, "id": "s35", "ts": 1790837065.436}
+{"t": "end", "id": "s35", "src": "Status Should Be    200    ${resp}", "steps": 36, "ts": 1790837065.436}
+{"t": "begin", "id": "s36", "ts": 1790837065.509}
+{"t": "step", "seq": 37, "id": "s36", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.4, "return": null, "ts": 1790837065.511}
+{"t": "idle", "n": 72, "id": "s36", "ts": 1790837065.511}
+{"t": "idle", "n": 73, "id": "s36", "ts": 1790837065.511}
+{"t": "end", "id": "s36", "src": "Status Should Be    200    ${resp}", "steps": 37, "ts": 1790837065.511}
+{"t": "begin", "id": "s37", "ts": 1790837065.59}
+{"t": "step", "seq": 38, "id": "s37", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.4, "return": null, "ts": 1790837065.592}
+{"t": "idle", "n": 74, "id": "s37", "ts": 1790837065.592}
+{"t": "idle", "n": 75, "id": "s37", "ts": 1790837065.592}
+{"t": "end", "id": "s37", "src": "Status Should Be    200    ${resp}", "steps": 38, "ts": 1790837065.592}
+{"t": "begin", "id": "s38", "ts": 1790837065.664}
+{"t": "step", "seq": 39, "id": "s38", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837065.666}
+{"t": "idle", "n": 76, "id": "s38", "ts": 1790837065.666}
+{"t": "idle", "n": 77, "id": "s38", "ts": 1790837065.666}
+{"t": "end", "id": "s38", "src": "Status Should Be    200    ${resp}", "steps": 39, "ts": 1790837065.666}
+{"t": "begin", "id": "s39", "ts": 1790837065.74}
+{"t": "step", "seq": 40, "id": "s39", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.4, "return": null, "ts": 1790837065.742}
+{"t": "idle", "n": 78, "id": "s39", "ts": 1790837065.742}
+{"t": "idle", "n": 79, "id": "s39", "ts": 1790837065.742}
+{"t": "end", "id": "s39", "src": "Status Should Be    200    ${resp}", "steps": 40, "ts": 1790837065.742}
+{"t": "begin", "id": "s40", "ts": 1790837065.818}
+{"t": "step", "seq": 41, "id": "s40", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837065.82}
+{"t": "idle", "n": 80, "id": "s40", "ts": 1790837065.82}
+{"t": "idle", "n": 81, "id": "s40", "ts": 1790837065.82}
+{"t": "end", "id": "s40", "src": "Status Should Be    200    ${resp}", "steps": 41, "ts": 1790837065.82}
+{"t": "begin", "id": "s41", "ts": 1790837065.887}
+{"t": "step", "seq": 42, "id": "s41", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.6, "return": null, "ts": 1790837065.89}
+{"t": "idle", "n": 82, "id": "s41", "ts": 1790837065.89}
+{"t": "idle", "n": 83, "id": "s41", "ts": 1790837065.89}
+{"t": "end", "id": "s41", "src": "Status Should Be    200    ${resp}", "steps": 42, "ts": 1790837065.89}
+{"t": "begin", "id": "s42", "ts": 1790837065.961}
+{"t": "step", "seq": 43, "id": "s42", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837065.963}
+{"t": "idle", "n": 84, "id": "s42", "ts": 1790837065.963}
+{"t": "idle", "n": 85, "id": "s42", "ts": 1790837065.963}
+{"t": "end", "id": "s42", "src": "Status Should Be    200    ${resp}", "steps": 43, "ts": 1790837065.964}
+{"t": "begin", "id": "s43", "ts": 1790837066.035}
+{"t": "step", "seq": 44, "id": "s43", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.3, "return": null, "ts": 1790837066.036}
+{"t": "idle", "n": 86, "id": "s43", "ts": 1790837066.036}
+{"t": "idle", "n": 87, "id": "s43", "ts": 1790837066.036}
+{"t": "end", "id": "s43", "src": "Status Should Be    200    ${resp}", "steps": 44, "ts": 1790837066.036}
+{"t": "begin", "id": "b44", "ts": 1790837066.124}
+{"t": "step", "seq": 45, "id": "b44", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.7, "return": null, "ts": 1790837066.127}
+{"t": "idle", "n": 88, "id": "b44", "ts": 1790837066.127}
+{"t": "idle", "n": 89, "id": "b44", "ts": 1790837066.127}
+{"t": "end", "id": "b44", "src": "Status Should Be    200    ${resp}", "steps": 45, "ts": 1790837066.127}
+{"t": "begin", "id": "b45", "ts": 1790837066.171}
+{"t": "step", "seq": 46, "id": "b45", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.6, "return": null, "ts": 1790837066.174}
+{"t": "idle", "n": 90, "id": "b45", "ts": 1790837066.174}
+{"t": "idle", "n": 91, "id": "b45", "ts": 1790837066.174}
+{"t": "end", "id": "b45", "src": "Status Should Be    200    ${resp}", "steps": 46, "ts": 1790837066.174}
+{"t": "begin", "id": "b46", "ts": 1790837066.211}
+{"t": "step", "seq": 47, "id": "b46", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.4, "return": null, "ts": 1790837066.212}
+{"t": "idle", "n": 92, "id": "b46", "ts": 1790837066.212}
+{"t": "idle", "n": 93, "id": "b46", "ts": 1790837066.212}
+{"t": "end", "id": "b46", "src": "Status Should Be    200    ${resp}", "steps": 47, "ts": 1790837066.212}
+{"t": "begin", "id": "b47", "ts": 1790837066.247}
+{"t": "step", "seq": 48, "id": "b47", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837066.249}
+{"t": "idle", "n": 94, "id": "b47", "ts": 1790837066.249}
+{"t": "idle", "n": 95, "id": "b47", "ts": 1790837066.249}
+{"t": "end", "id": "b47", "src": "Status Should Be    200    ${resp}", "steps": 48, "ts": 1790837066.249}
+{"t": "begin", "id": "b48", "ts": 1790837066.287}
+{"t": "step", "seq": 49, "id": "b48", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.4, "return": null, "ts": 1790837066.289}
+{"t": "idle", "n": 96, "id": "b48", "ts": 1790837066.289}
+{"t": "idle", "n": 97, "id": "b48", "ts": 1790837066.289}
+{"t": "end", "id": "b48", "src": "Status Should Be    200    ${resp}", "steps": 49, "ts": 1790837066.289}
+{"t": "begin", "id": "b49", "ts": 1790837066.323}
+{"t": "step", "seq": 50, "id": "b49", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837066.325}
+{"t": "idle", "n": 98, "id": "b49", "ts": 1790837066.325}
+{"t": "idle", "n": 99, "id": "b49", "ts": 1790837066.325}
+{"t": "end", "id": "b49", "src": "Status Should Be    200    ${resp}", "steps": 50, "ts": 1790837066.325}
+{"t": "begin", "id": "b50", "ts": 1790837066.364}
+{"t": "step", "seq": 51, "id": "b50", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837066.366}
+{"t": "idle", "n": 100, "id": "b50", "ts": 1790837066.366}
+{"t": "idle", "n": 101, "id": "b50", "ts": 1790837066.366}
+{"t": "end", "id": "b50", "src": "Status Should Be    200    ${resp}", "steps": 51, "ts": 1790837066.366}
+{"t": "begin", "id": "b51", "ts": 1790837066.399}
+{"t": "step", "seq": 52, "id": "b51", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837066.401}
+{"t": "idle", "n": 102, "id": "b51", "ts": 1790837066.401}
+{"t": "idle", "n": 103, "id": "b51", "ts": 1790837066.401}
+{"t": "end", "id": "b51", "src": "Status Should Be    200    ${resp}", "steps": 52, "ts": 1790837066.401}
+{"t": "begin", "id": "b52", "ts": 1790837066.439}
+{"t": "step", "seq": 53, "id": "b52", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.6, "return": null, "ts": 1790837066.441}
+{"t": "idle", "n": 104, "id": "b52", "ts": 1790837066.441}
+{"t": "idle", "n": 105, "id": "b52", "ts": 1790837066.441}
+{"t": "end", "id": "b52", "src": "Status Should Be    200    ${resp}", "steps": 53, "ts": 1790837066.441}
+{"t": "begin", "id": "b53", "ts": 1790837066.478}
+{"t": "step", "seq": 54, "id": "b53", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837066.48}
+{"t": "idle", "n": 106, "id": "b53", "ts": 1790837066.48}
+{"t": "idle", "n": 107, "id": "b53", "ts": 1790837066.48}
+{"t": "end", "id": "b53", "src": "Status Should Be    200    ${resp}", "steps": 54, "ts": 1790837066.48}
+{"t": "begin", "id": "b54", "ts": 1790837066.518}
+{"t": "step", "seq": 55, "id": "b54", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837066.52}
+{"t": "idle", "n": 108, "id": "b54", "ts": 1790837066.52}
+{"t": "idle", "n": 109, "id": "b54", "ts": 1790837066.52}
+{"t": "end", "id": "b54", "src": "Status Should Be    200    ${resp}", "steps": 55, "ts": 1790837066.52}
+{"t": "begin", "id": "b55", "ts": 1790837066.561}
+{"t": "step", "seq": 56, "id": "b55", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837066.563}
+{"t": "idle", "n": 110, "id": "b55", "ts": 1790837066.563}
+{"t": "idle", "n": 111, "id": "b55", "ts": 1790837066.563}
+{"t": "end", "id": "b55", "src": "Status Should Be    200    ${resp}", "steps": 56, "ts": 1790837066.563}
+{"t": "begin", "id": "b56", "ts": 1790837066.594}
+{"t": "step", "seq": 57, "id": "b56", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.6, "return": null, "ts": 1790837066.596}
+{"t": "idle", "n": 112, "id": "b56", "ts": 1790837066.596}
+{"t": "idle", "n": 113, "id": "b56", "ts": 1790837066.596}
+{"t": "end", "id": "b56", "src": "Status Should Be    200    ${resp}", "steps": 57, "ts": 1790837066.596}
+{"t": "begin", "id": "b57", "ts": 1790837066.633}
+{"t": "step", "seq": 58, "id": "b57", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837066.635}
+{"t": "idle", "n": 114, "id": "b57", "ts": 1790837066.635}
+{"t": "idle", "n": 115, "id": "b57", "ts": 1790837066.635}
+{"t": "end", "id": "b57", "src": "Status Should Be    200    ${resp}", "steps": 58, "ts": 1790837066.635}
+{"t": "begin", "id": "b58", "ts": 1790837066.67}
+{"t": "step", "seq": 59, "id": "b58", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.4, "return": null, "ts": 1790837066.672}
+{"t": "idle", "n": 116, "id": "b58", "ts": 1790837066.672}
+{"t": "idle", "n": 117, "id": "b58", "ts": 1790837066.672}
+{"t": "end", "id": "b58", "src": "Status Should Be    200    ${resp}", "steps": 59, "ts": 1790837066.672}
+{"t": "begin", "id": "b59", "ts": 1790837066.703}
+{"t": "step", "seq": 60, "id": "b59", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837066.704}
+{"t": "idle", "n": 118, "id": "b59", "ts": 1790837066.704}
+{"t": "idle", "n": 119, "id": "b59", "ts": 1790837066.704}
+{"t": "end", "id": "b59", "src": "Status Should Be    200    ${resp}", "steps": 60, "ts": 1790837066.705}
+{"t": "begin", "id": "b60", "ts": 1790837066.741}
+{"t": "step", "seq": 61, "id": "b60", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837066.743}
+{"t": "idle", "n": 120, "id": "b60", "ts": 1790837066.743}
+{"t": "idle", "n": 121, "id": "b60", "ts": 1790837066.743}
+{"t": "end", "id": "b60", "src": "Status Should Be    200    ${resp}", "steps": 61, "ts": 1790837066.743}
+{"t": "begin", "id": "b61", "ts": 1790837066.783}
+{"t": "step", "seq": 62, "id": "b61", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.6, "return": null, "ts": 1790837066.786}
+{"t": "idle", "n": 122, "id": "b61", "ts": 1790837066.786}
+{"t": "idle", "n": 123, "id": "b61", "ts": 1790837066.786}
+{"t": "end", "id": "b61", "src": "Status Should Be    200    ${resp}", "steps": 62, "ts": 1790837066.786}
+{"t": "begin", "id": "b62", "ts": 1790837066.823}
+{"t": "step", "seq": 63, "id": "b62", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837066.825}
+{"t": "idle", "n": 124, "id": "b62", "ts": 1790837066.825}
+{"t": "idle", "n": 125, "id": "b62", "ts": 1790837066.825}
+{"t": "end", "id": "b62", "src": "Status Should Be    200    ${resp}", "steps": 63, "ts": 1790837066.825}
+{"t": "begin", "id": "b63", "ts": 1790837066.862}
+{"t": "step", "seq": 64, "id": "b63", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837066.864}
+{"t": "idle", "n": 126, "id": "b63", "ts": 1790837066.864}
+{"t": "idle", "n": 127, "id": "b63", "ts": 1790837066.864}
+{"t": "end", "id": "b63", "src": "Status Should Be    200    ${resp}", "steps": 64, "ts": 1790837066.864}
+{"t": "begin", "id": "b64", "ts": 1790837066.9}
+{"t": "step", "seq": 65, "id": "b64", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837066.902}
+{"t": "idle", "n": 128, "id": "b64", "ts": 1790837066.902}
+{"t": "idle", "n": 129, "id": "b64", "ts": 1790837066.902}
+{"t": "end", "id": "b64", "src": "Status Should Be    200    ${resp}", "steps": 65, "ts": 1790837066.902}
+{"t": "begin", "id": "b65", "ts": 1790837066.939}
+{"t": "step", "seq": 66, "id": "b65", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837066.941}
+{"t": "idle", "n": 130, "id": "b65", "ts": 1790837066.941}
+{"t": "idle", "n": 131, "id": "b65", "ts": 1790837066.941}
+{"t": "end", "id": "b65", "src": "Status Should Be    200    ${resp}", "steps": 66, "ts": 1790837066.941}
+{"t": "begin", "id": "b66", "ts": 1790837066.98}
+{"t": "step", "seq": 67, "id": "b66", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837066.981}
+{"t": "idle", "n": 132, "id": "b66", "ts": 1790837066.981}
+{"t": "idle", "n": 133, "id": "b66", "ts": 1790837066.981}
+{"t": "end", "id": "b66", "src": "Status Should Be    200    ${resp}", "steps": 67, "ts": 1790837066.981}
+{"t": "begin", "id": "b67", "ts": 1790837067.013}
+{"t": "step", "seq": 68, "id": "b67", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837067.015}
+{"t": "idle", "n": 134, "id": "b67", "ts": 1790837067.015}
+{"t": "idle", "n": 135, "id": "b67", "ts": 1790837067.015}
+{"t": "end", "id": "b67", "src": "Status Should Be    200    ${resp}", "steps": 68, "ts": 1790837067.015}
+{"t": "begin", "id": "b68", "ts": 1790837067.055}
+{"t": "step", "seq": 69, "id": "b68", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837067.057}
+{"t": "idle", "n": 136, "id": "b68", "ts": 1790837067.058}
+{"t": "idle", "n": 137, "id": "b68", "ts": 1790837067.058}
+{"t": "end", "id": "b68", "src": "Status Should Be    200    ${resp}", "steps": 69, "ts": 1790837067.058}
+{"t": "begin", "id": "b69", "ts": 1790837067.1}
+{"t": "step", "seq": 70, "id": "b69", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837067.102}
+{"t": "idle", "n": 138, "id": "b69", "ts": 1790837067.102}
+{"t": "idle", "n": 139, "id": "b69", "ts": 1790837067.102}
+{"t": "end", "id": "b69", "src": "Status Should Be    200    ${resp}", "steps": 70, "ts": 1790837067.103}
+{"t": "begin", "id": "b70", "ts": 1790837067.146}
+{"t": "step", "seq": 71, "id": "b70", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837067.148}
+{"t": "idle", "n": 140, "id": "b70", "ts": 1790837067.148}
+{"t": "idle", "n": 141, "id": "b70", "ts": 1790837067.148}
+{"t": "end", "id": "b70", "src": "Status Should Be    200    ${resp}", "steps": 71, "ts": 1790837067.148}
+{"t": "begin", "id": "b71", "ts": 1790837067.187}
+{"t": "step", "seq": 72, "id": "b71", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837067.189}
+{"t": "idle", "n": 142, "id": "b71", "ts": 1790837067.189}
+{"t": "idle", "n": 143, "id": "b71", "ts": 1790837067.189}
+{"t": "end", "id": "b71", "src": "Status Should Be    200    ${resp}", "steps": 72, "ts": 1790837067.189}
+{"t": "begin", "id": "b72", "ts": 1790837067.229}
+{"t": "step", "seq": 73, "id": "b72", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837067.231}
+{"t": "idle", "n": 144, "id": "b72", "ts": 1790837067.231}
+{"t": "idle", "n": 145, "id": "b72", "ts": 1790837067.231}
+{"t": "end", "id": "b72", "src": "Status Should Be    200    ${resp}", "steps": 73, "ts": 1790837067.231}
+{"t": "begin", "id": "b73", "ts": 1790837067.268}
+{"t": "step", "seq": 74, "id": "b73", "type": "KEYWORD", "name": "Status Should Be", "owner": "RequestsLibrary", "args": ["200", "${resp}"], "assign": [], "status": "PASS", "elapsed_ms": 0.5, "return": null, "ts": 1790837067.27}
+{"t": "idle", "n": 146, "id": "b73", "ts": 1790837067.27}
+{"t": "idle", "n": 147, "id": "b73", "ts": 1790837067.27}
+{"t": "end", "id": "b73", "src": "Status Should Be    200    ${resp}", "steps": 74, "ts": 1790837067.27}
+{"t": "begin", "id": "s74", "ts": 1790837067.404}
+{"t": "step", "seq": 75, "id": "s74", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:27 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+650)"}], "status": "PASS", "elapsed_ms": 121.9, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837067.527}
+{"t": "idle", "n": 148, "id": "s74", "ts": 1790837067.527}
+{"t": "idle", "n": 149, "id": "s74", "ts": 1790837067.527}
+{"t": "end", "id": "s74", "src": "GET On Session    rb    /booking/${id}", "steps": 75, "ts": 1790837067.527}
+{"t": "begin", "id": "s75", "ts": 1790837067.607}
+{"t": "step", "seq": 76, "id": "s75", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:27 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+650)"}], "status": "PASS", "elapsed_ms": 101.1, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837067.709}
+{"t": "idle", "n": 150, "id": "s75", "ts": 1790837067.709}
+{"t": "idle", "n": 151, "id": "s75", "ts": 1790837067.709}
+{"t": "end", "id": "s75", "src": "GET On Session    rb    /booking/${id}", "steps": 76, "ts": 1790837067.709}
+{"t": "begin", "id": "s76", "ts": 1790837067.781}
+{"t": "step", "seq": 77, "id": "s76", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:27 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+650)"}], "status": "PASS", "elapsed_ms": 99.3, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837067.881}
+{"t": "idle", "n": 152, "id": "s76", "ts": 1790837067.881}
+{"t": "idle", "n": 153, "id": "s76", "ts": 1790837067.881}
+{"t": "end", "id": "s76", "src": "GET On Session    rb    /booking/${id}", "steps": 77, "ts": 1790837067.882}
+{"t": "begin", "id": "s77", "ts": 1790837067.958}
+{"t": "step", "seq": 78, "id": "s77", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:28 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+654)"}], "status": "PASS", "elapsed_ms": 99.8, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837068.059}
+{"t": "idle", "n": 154, "id": "s77", "ts": 1790837068.059}
+{"t": "idle", "n": 155, "id": "s77", "ts": 1790837068.059}
+{"t": "end", "id": "s77", "src": "GET On Session    rb    /booking/${id}", "steps": 78, "ts": 1790837068.059}
+{"t": "begin", "id": "s78", "ts": 1790837068.134}
+{"t": "step", "seq": 79, "id": "s78", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:28 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+654)"}], "status": "PASS", "elapsed_ms": 100.2, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837068.236}
+{"t": "idle", "n": 156, "id": "s78", "ts": 1790837068.236}
+{"t": "idle", "n": 157, "id": "s78", "ts": 1790837068.236}
+{"t": "end", "id": "s78", "src": "GET On Session    rb    /booking/${id}", "steps": 79, "ts": 1790837068.236}
+{"t": "begin", "id": "s79", "ts": 1790837068.328}
+{"t": "step", "seq": 80, "id": "s79", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:28 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+654)"}], "status": "PASS", "elapsed_ms": 103.4, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837068.433}
+{"t": "idle", "n": 158, "id": "s79", "ts": 1790837068.433}
+{"t": "idle", "n": 159, "id": "s79", "ts": 1790837068.433}
+{"t": "end", "id": "s79", "src": "GET On Session    rb    /booking/${id}", "steps": 80, "ts": 1790837068.433}
+{"t": "begin", "id": "s80", "ts": 1790837068.499}
+{"t": "step", "seq": 81, "id": "s80", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:28 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+654)"}], "status": "PASS", "elapsed_ms": 101.6, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837068.602}
+{"t": "idle", "n": 160, "id": "s80", "ts": 1790837068.603}
+{"t": "idle", "n": 161, "id": "s80", "ts": 1790837068.603}
+{"t": "end", "id": "s80", "src": "GET On Session    rb    /booking/${id}", "steps": 81, "ts": 1790837068.603}
+{"t": "begin", "id": "s81", "ts": 1790837068.727}
+{"t": "step", "seq": 82, "id": "s81", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:28 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+654)"}], "status": "PASS", "elapsed_ms": 108.0, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837068.836}
+{"t": "idle", "n": 162, "id": "s81", "ts": 1790837068.836}
+{"t": "idle", "n": 163, "id": "s81", "ts": 1790837068.836}
+{"t": "end", "id": "s81", "src": "GET On Session    rb    /booking/${id}", "steps": 82, "ts": 1790837068.836}
+{"t": "begin", "id": "s82", "ts": 1790837068.914}
+{"t": "step", "seq": 83, "id": "s82", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:28 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+654)"}], "status": "PASS", "elapsed_ms": 117.8, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837069.033}
+{"t": "idle", "n": 164, "id": "s82", "ts": 1790837069.033}
+{"t": "idle", "n": 165, "id": "s82", "ts": 1790837069.033}
+{"t": "end", "id": "s82", "src": "GET On Session    rb    /booking/${id}", "steps": 83, "ts": 1790837069.033}
+{"t": "begin", "id": "s83", "ts": 1790837069.126}
+{"t": "step", "seq": 84, "id": "s83", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:29 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+642)"}], "status": "PASS", "elapsed_ms": 105.8, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837069.234}
+{"t": "idle", "n": 166, "id": "s83", "ts": 1790837069.234}
+{"t": "idle", "n": 167, "id": "s83", "ts": 1790837069.234}
+{"t": "end", "id": "s83", "src": "GET On Session    rb    /booking/${id}", "steps": 84, "ts": 1790837069.234}
+{"t": "begin", "id": "s84", "ts": 1790837069.32}
+{"t": "step", "seq": 85, "id": "s84", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:29 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+642)"}], "status": "PASS", "elapsed_ms": 113.5, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837069.435}
+{"t": "idle", "n": 168, "id": "s84", "ts": 1790837069.435}
+{"t": "idle", "n": 169, "id": "s84", "ts": 1790837069.435}
+{"t": "end", "id": "s84", "src": "GET On Session    rb    /booking/${id}", "steps": 85, "ts": 1790837069.435}
+{"t": "begin", "id": "s85", "ts": 1790837069.521}
+{"t": "step", "seq": 86, "id": "s85", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:29 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+642)"}], "status": "PASS", "elapsed_ms": 113.0, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837069.636}
+{"t": "idle", "n": 170, "id": "s85", "ts": 1790837069.636}
+{"t": "idle", "n": 171, "id": "s85", "ts": 1790837069.636}
+{"t": "end", "id": "s85", "src": "GET On Session    rb    /booking/${id}", "steps": 86, "ts": 1790837069.636}
+{"t": "begin", "id": "s86", "ts": 1790837069.708}
+{"t": "step", "seq": 87, "id": "s86", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:29 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+642)"}], "status": "PASS", "elapsed_ms": 116.6, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837069.826}
+{"t": "idle", "n": 172, "id": "s86", "ts": 1790837069.826}
+{"t": "idle", "n": 173, "id": "s86", "ts": 1790837069.826}
+{"t": "end", "id": "s86", "src": "GET On Session    rb    /booking/${id}", "steps": 87, "ts": 1790837069.826}
+{"t": "begin", "id": "s87", "ts": 1790837069.897}
+{"t": "step", "seq": 88, "id": "s87", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:29 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+642)"}], "status": "PASS", "elapsed_ms": 100.6, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837069.999}
+{"t": "idle", "n": 174, "id": "s87", "ts": 1790837069.999}
+{"t": "idle", "n": 175, "id": "s87", "ts": 1790837069.999}
+{"t": "end", "id": "s87", "src": "GET On Session    rb    /booking/${id}", "steps": 88, "ts": 1790837069.999}
+{"t": "begin", "id": "s88", "ts": 1790837070.067}
+{"t": "step", "seq": 89, "id": "s88", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:30 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+646)"}], "status": "PASS", "elapsed_ms": 110.3, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837070.179}
+{"t": "idle", "n": 176, "id": "s88", "ts": 1790837070.179}
+{"t": "idle", "n": 177, "id": "s88", "ts": 1790837070.179}
+{"t": "end", "id": "s88", "src": "GET On Session    rb    /booking/${id}", "steps": 89, "ts": 1790837070.179}
+{"t": "begin", "id": "s89", "ts": 1790837070.258}
+{"t": "step", "seq": 90, "id": "s89", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:30 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+646)"}], "status": "PASS", "elapsed_ms": 103.1, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837070.363}
+{"t": "idle", "n": 178, "id": "s89", "ts": 1790837070.363}
+{"t": "idle", "n": 179, "id": "s89", "ts": 1790837070.363}
+{"t": "end", "id": "s89", "src": "GET On Session    rb    /booking/${id}", "steps": 90, "ts": 1790837070.363}
+{"t": "begin", "id": "s90", "ts": 1790837070.443}
+{"t": "step", "seq": 91, "id": "s90", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:30 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+646)"}], "status": "PASS", "elapsed_ms": 103.8, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837070.549}
+{"t": "idle", "n": 180, "id": "s90", "ts": 1790837070.549}
+{"t": "idle", "n": 181, "id": "s90", "ts": 1790837070.549}
+{"t": "end", "id": "s90", "src": "GET On Session    rb    /booking/${id}", "steps": 91, "ts": 1790837070.549}
+{"t": "begin", "id": "s91", "ts": 1790837070.616}
+{"t": "step", "seq": 92, "id": "s91", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:30 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+646)"}], "status": "PASS", "elapsed_ms": 104.8, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837070.722}
+{"t": "idle", "n": 182, "id": "s91", "ts": 1790837070.722}
+{"t": "idle", "n": 183, "id": "s91", "ts": 1790837070.722}
+{"t": "end", "id": "s91", "src": "GET On Session    rb    /booking/${id}", "steps": 92, "ts": 1790837070.722}
+{"t": "begin", "id": "s92", "ts": 1790837070.8}
+{"t": "step", "seq": 93, "id": "s92", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:30 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+646)"}], "status": "PASS", "elapsed_ms": 103.1, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837070.905}
+{"t": "idle", "n": 184, "id": "s92", "ts": 1790837070.905}
+{"t": "idle", "n": 185, "id": "s92", "ts": 1790837070.905}
+{"t": "end", "id": "s92", "src": "GET On Session    rb    /booking/${id}", "steps": 93, "ts": 1790837070.905}
+{"t": "begin", "id": "s93", "ts": 1790837070.969}
+{"t": "step", "seq": 94, "id": "s93", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:31 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+646)"}], "status": "PASS", "elapsed_ms": 102.5, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837071.073}
+{"t": "idle", "n": 186, "id": "s93", "ts": 1790837071.073}
+{"t": "idle", "n": 187, "id": "s93", "ts": 1790837071.073}
+{"t": "end", "id": "s93", "src": "GET On Session    rb    /booking/${id}", "steps": 94, "ts": 1790837071.073}
+{"t": "begin", "id": "s94", "ts": 1790837071.131}
+{"t": "step", "seq": 95, "id": "s94", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:31 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+646)"}], "status": "PASS", "elapsed_ms": 115.1, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837071.248}
+{"t": "idle", "n": 188, "id": "s94", "ts": 1790837071.248}
+{"t": "idle", "n": 189, "id": "s94", "ts": 1790837071.248}
+{"t": "end", "id": "s94", "src": "GET On Session    rb    /booking/${id}", "steps": 95, "ts": 1790837071.248}
+{"t": "begin", "id": "s95", "ts": 1790837071.311}
+{"t": "step", "seq": 96, "id": "s95", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:31 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+646)"}], "status": "PASS", "elapsed_ms": 102.0, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837071.415}
+{"t": "idle", "n": 190, "id": "s95", "ts": 1790837071.415}
+{"t": "idle", "n": 191, "id": "s95", "ts": 1790837071.415}
+{"t": "end", "id": "s95", "src": "GET On Session    rb    /booking/${id}", "steps": 96, "ts": 1790837071.415}
+{"t": "begin", "id": "s96", "ts": 1790837071.493}
+{"t": "step", "seq": 97, "id": "s96", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:31 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+646)"}], "status": "PASS", "elapsed_ms": 101.8, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837071.596}
+{"t": "idle", "n": 192, "id": "s96", "ts": 1790837071.596}
+{"t": "idle", "n": 193, "id": "s96", "ts": 1790837071.596}
+{"t": "end", "id": "s96", "src": "GET On Session    rb    /booking/${id}", "steps": 97, "ts": 1790837071.596}
+{"t": "begin", "id": "s97", "ts": 1790837071.662}
+{"t": "step", "seq": 98, "id": "s97", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:31 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+646)"}], "status": "PASS", "elapsed_ms": 104.1, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837071.768}
+{"t": "idle", "n": 194, "id": "s97", "ts": 1790837071.768}
+{"t": "idle", "n": 195, "id": "s97", "ts": 1790837071.768}
+{"t": "end", "id": "s97", "src": "GET On Session    rb    /booking/${id}", "steps": 98, "ts": 1790837071.768}
+{"t": "begin", "id": "s98", "ts": 1790837071.838}
+{"t": "step", "seq": 99, "id": "s98", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:31 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+646)"}], "status": "PASS", "elapsed_ms": 107.5, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837071.947}
+{"t": "idle", "n": 196, "id": "s98", "ts": 1790837071.947}
+{"t": "idle", "n": 197, "id": "s98", "ts": 1790837071.947}
+{"t": "end", "id": "s98", "src": "GET On Session    rb    /booking/${id}", "steps": 99, "ts": 1790837071.947}
+{"t": "begin", "id": "s99", "ts": 1790837072.024}
+{"t": "step", "seq": 100, "id": "s99", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:32 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+646)"}], "status": "PASS", "elapsed_ms": 100.6, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837072.126}
+{"t": "idle", "n": 198, "id": "s99", "ts": 1790837072.126}
+{"t": "idle", "n": 199, "id": "s99", "ts": 1790837072.126}
+{"t": "end", "id": "s99", "src": "GET On Session    rb    /booking/${id}", "steps": 100, "ts": 1790837072.126}
+{"t": "begin", "id": "s100", "ts": 1790837072.202}
+{"t": "step", "seq": 101, "id": "s100", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:32 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+646)"}], "status": "PASS", "elapsed_ms": 100.5, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837072.303}
+{"t": "idle", "n": 200, "id": "s100", "ts": 1790837072.304}
+{"t": "idle", "n": 201, "id": "s100", "ts": 1790837072.304}
+{"t": "end", "id": "s100", "src": "GET On Session    rb    /booking/${id}", "steps": 101, "ts": 1790837072.304}
+{"t": "begin", "id": "s101", "ts": 1790837072.379}
+{"t": "step", "seq": 102, "id": "s101", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:32 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+646)"}], "status": "PASS", "elapsed_ms": 103.6, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837072.485}
+{"t": "idle", "n": 202, "id": "s101", "ts": 1790837072.485}
+{"t": "idle", "n": 203, "id": "s101", "ts": 1790837072.485}
+{"t": "end", "id": "s101", "src": "GET On Session    rb    /booking/${id}", "steps": 102, "ts": 1790837072.485}
+{"t": "begin", "id": "s102", "ts": 1790837072.554}
+{"t": "step", "seq": 103, "id": "s102", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:32 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+646)"}], "status": "PASS", "elapsed_ms": 104.5, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837072.66}
+{"t": "idle", "n": 204, "id": "s102", "ts": 1790837072.661}
+{"t": "idle", "n": 205, "id": "s102", "ts": 1790837072.661}
+{"t": "end", "id": "s102", "src": "GET On Session    rb    /booking/${id}", "steps": 103, "ts": 1790837072.661}
+{"t": "begin", "id": "s103", "ts": 1790837072.743}
+{"t": "step", "seq": 104, "id": "s103", "type": "KEYWORD", "name": "GET On Session", "owner": "RequestsLibrary", "args": ["rb", "/booking/${id}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "GET Request : url=https://restful-booker.herokuapp.com/booking/1885 \n path_url=/booking/1885 \n headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} \n body=None \n "}, {"level": "INFO", "html": false, "text": "GET Response : url=https://restful-booker.herokuapp.com/booking/1885 \n status=200, reason=OK \n headers={'Content-Length': '165', 'Content-Type': 'application/json; charset=utf-8', 'Date': 'Thu, 01 Oct 2026 06:44:32 GMT', 'Etag': 'W/\"a5-V0xfCxo/muQ1pwG+T6qv6HofXW8\"', 'Nel': '{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}', 'Report...(+646)"}], "status": "PASS", "elapsed_ms": 105.3, "return": "<Response [200]> {\"firstname\":\"Rf\",\"lastname\":\"Mcp\",\"totalprice\":123,\"depositpaid\":true,\"bookingdates\":{\"checkin\":\"2026-10-01\",\"checkout\":\"2026-10-05\"},\"additionalneeds\":\"Breakfast\"}", "ts": 1790837072.85}
+{"t": "idle", "n": 206, "id": "s103", "ts": 1790837072.85}
+{"t": "idle", "n": 207, "id": "s103", "ts": 1790837072.85}
+{"t": "end", "id": "s103", "src": "GET On Session    rb    /booking/${id}", "steps": 104, "ts": 1790837072.85}
+{"t": "idle", "n": 208, "id": "s103", "ts": 1790837073.034}
+{"t": "step", "seq": 105, "id": "s103", "type": "KEYWORD", "name": "Repl", "owner": "robotcode.repl.Repl", "args": [], "assign": [], "status": "PASS", "elapsed_ms": 11431.9, "ts": 1790837073.038}
+{"t": "closed", "ts": 1790837073.038}

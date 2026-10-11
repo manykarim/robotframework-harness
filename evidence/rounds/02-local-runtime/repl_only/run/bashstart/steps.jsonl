@@ -1,0 +1,10 @@
+{"t": "ready", "pid": 3610512, "hooked": true, "path": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round2/repl_only/proj/../run/bashstart/steps.jsonl", "ts": 1790837410.549}
+{"t": "idle", "n": 1, "id": null, "ts": 1790837410.585}
+{"t": "begin", "id": "b1", "ts": 1790837410.674}
+{"t": "step", "seq": 1, "id": "b1", "type": "KEYWORD", "name": "Evaluate", "owner": "BuiltIn", "args": ["6*7"], "assign": ["${v}"], "msgs": [{"level": "INFO", "html": false, "text": "${v} = 42"}], "status": "PASS", "elapsed_ms": 1.7, "values": {"${v}": 42}, "return": "42", "ts": 1790837410.678}
+{"t": "idle", "n": 2, "id": "b1", "ts": 1790837410.678}
+{"t": "idle", "n": 3, "id": "b1", "ts": 1790837410.678}
+{"t": "end", "id": "b1", "src": "${v}    Evaluate    6*7", "steps": 1, "ts": 1790837410.678}
+{"t": "idle", "n": 4, "id": "b1", "ts": 1790837410.69}
+{"t": "step", "seq": 2, "id": "b1", "type": "KEYWORD", "name": "Repl", "owner": "robotcode.repl.Repl", "args": [], "assign": [], "status": "PASS", "elapsed_ms": 106.2, "ts": 1790837410.693}
+{"t": "closed", "ts": 1790837410.693}

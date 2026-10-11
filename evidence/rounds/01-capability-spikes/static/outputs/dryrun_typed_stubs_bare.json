@@ -1,0 +1,399 @@
+[
+ {
+  "id": "b01_typo_keyword",
+  "typed_stub_dry": "error",
+  "real_dry": "error",
+  "msgs": [
+   "No keyword with name 'Shuold Be Equal' found. Did you mean:\n    BuiltIn.Should Be Equal"
+  ],
+  "s": 0.05
+ },
+ {
+  "id": "b02_too_few_args",
+  "typed_stub_dry": "error",
+  "real_dry": "error",
+  "msgs": [
+   "Keyword 'BuiltIn.Should Be Equal' expected 2 to 10 arguments, got 1."
+  ],
+  "s": 0.049
+ },
+ {
+  "id": "b03_too_many_args",
+  "typed_stub_dry": "error",
+  "real_dry": "error",
+  "msgs": [
+   "Keyword 'BuiltIn.Log' expected 1 to 6 arguments, got 8."
+  ],
+  "s": 0.051
+ },
+ {
+  "id": "b04_unknown_named_arg",
+  "typed_stub_dry": "error",
+  "real_dry": "error",
+  "msgs": [
+   "Keyword 'BuiltIn.Should Be Equal' got unexpected named argument 'ignor_case'."
+  ],
+  "s": 0.057
+ },
+ {
+  "id": "b05_undefined_variable",
+  "typed_stub_dry": "ok",
+  "real_dry": "ok",
+  "msgs": [],
+  "s": 0.059
+ },
+ {
+  "id": "b06_missing_library_import",
+  "typed_stub_dry": "error",
+  "real_dry": "error",
+  "msgs": [
+   "No keyword with name 'Convert To Upper Case' found."
+  ],
+  "s": 0.047
+ },
+ {
+  "id": "b07_browser_kw_with_selenium_only",
+  "typed_stub_dry": "error",
+  "real_dry": "error",
+  "msgs": [
+   "No keyword with name 'Fill Text' found."
+  ],
+  "s": 0.088
+ },
+ {
+  "id": "b08_ambiguous_two_custom_libs",
+  "typed_stub_dry": "error",
+  "real_dry": "error",
+  "msgs": [
+   "Multiple keywords with name 'Do Thing' found. Give the full name of the keyword you want to use:\n   "
+  ],
+  "s": 0.043
+ },
+ {
+  "id": "b09_ambiguous_browser_selenium",
+  "typed_stub_dry": "error",
+  "real_dry": "error",
+  "msgs": [
+   "Multiple keywords with name 'Get Text' found. Give the full name of the keyword you want to use:\n   "
+  ],
+  "s": 0.103
+ },
+ {
+  "id": "b10_bad_embedded_call",
+  "typed_stub_dry": "error",
+  "real_dry": "error",
+  "msgs": [
+   "No keyword with name 'The User Adds many Items To The Cart' found."
+  ],
+  "s": 0.056
+ },
+ {
+  "id": "b11_invalid_for",
+  "typed_stub_dry": "error",
+  "real_dry": "error",
+  "msgs": [
+   "FOR loop has no 'IN' or other valid separator."
+  ],
+  "s": 0.044
+ },
+ {
+  "id": "b12_for_missing_end",
+  "typed_stub_dry": "error",
+  "real_dry": "error",
+  "msgs": [
+   "FOR loop must have closing END."
+  ],
+  "s": 0.04
+ },
+ {
+  "id": "b13_invalid_if",
+  "typed_stub_dry": "error",
+  "real_dry": "error",
+  "msgs": [
+   "Multiple errors:\n- IF must have a condition.\n- ELSE IF not allowed after ELSE."
+  ],
+  "s": 0.04
+ },
+ {
+  "id": "b14_wrong_setting_name",
+  "typed_stub_dry": "error",
+  "real_dry": "error",
+  "msgs": [
+   "Non-existing setting 'Tag'. Did you mean:\n    Tags",
+   "ERROR: Error in file '~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corp"
+  ],
+  "s": 0.053
+ },
+ {
+  "id": "b15_resource_path_wrong",
+  "typed_stub_dry": "error",
+  "real_dry": "error",
+  "msgs": [
+   "ERROR: Error in file '~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corp"
+  ],
+  "s": 0.046
+ },
+ {
+  "id": "b16_browser_missing_arg",
+  "typed_stub_dry": "error",
+  "real_dry": "error",
+  "msgs": [
+   "Keyword 'Browser.Fill Text' expected 2 to 3 arguments, got 1."
+  ],
+  "s": 0.073
+ },
+ {
+  "id": "b17_browser_positional_after_named",
+  "typed_stub_dry": "error",
+  "real_dry": "error",
+  "msgs": [
+   "Keyword 'Browser.New Page' got unexpected named argument 'wait_untl'."
+  ],
+  "s": 0.073
+ },
+ {
+  "id": "b18_requests_missing_url",
+  "typed_stub_dry": "error",
+  "real_dry": "error",
+  "msgs": [
+   "Keyword 'RequestsLibrary.Create Session' expected 2 to 14 arguments, got 1."
+  ],
+  "s": 0.046
+ },
+ {
+  "id": "b19_requests_on_session_missing_url",
+  "typed_stub_dry": "ok",
+  "real_dry": "ok",
+  "msgs": [],
+  "s": 0.04
+ },
+ {
+  "id": "b20_single_space_separator",
+  "typed_stub_dry": "error",
+  "real_dry": "error",
+  "msgs": [
+   "No keyword with name 'Log hello world' found. Did you try using keyword 'BuiltIn.Log' and forgot to "
+  ],
+  "s": 0.047
+ },
+ {
+  "id": "b21_library_not_installed",
+  "typed_stub_dry": "error",
+  "real_dry": "error",
+  "msgs": [
+   "ERROR: Error in file '~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corp"
+  ],
+  "s": 0.042
+ },
+ {
+  "id": "b22_library_init_args",
+  "typed_stub_dry": "error",
+  "real_dry": "error",
+  "msgs": [
+   "ERROR: Error in file '~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corp"
+  ],
+  "s": 0.044
+ },
+ {
+  "id": "b23_wrong_library_prefix",
+  "typed_stub_dry": "error",
+  "real_dry": "error",
+  "msgs": [
+   "No keyword with name 'Strng.Convert To Upper Case' found. Did you mean:\n    String.Convert To Upper "
+  ],
+  "s": 0.055
+ },
+ {
+  "id": "b24_unclosed_variable",
+  "typed_stub_dry": "ok",
+  "real_dry": "ok",
+  "msgs": [],
+  "s": 0.039
+ },
+ {
+  "id": "b25_return_in_test",
+  "typed_stub_dry": "error",
+  "real_dry": "error",
+  "msgs": [
+   "RETURN is not allowed in this context."
+  ],
+  "s": 0.043
+ },
+ {
+  "id": "b26_unknown_section",
+  "typed_stub_dry": "error",
+  "real_dry": "error",
+  "msgs": [
+   "ERROR: Error in file '~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corp"
+  ],
+  "s": 0.039
+ },
+ {
+  "id": "b27_assertion_operator_typo",
+  "typed_stub_dry": "error",
+  "real_dry": "error",
+  "msgs": [
+   "ValueError: Argument 'assertion_operator' got value '===' that cannot be converted to AssertionOpera"
+  ],
+  "s": 0.076
+ },
+ {
+  "id": "b28_int_conversion",
+  "typed_stub_dry": "error",
+  "real_dry": "error",
+  "msgs": [
+   "ValueError: Argument 'count' got value 'abc' that cannot be converted to integer."
+  ],
+  "s": 0.048
+ },
+ {
+  "id": "b29_user_kw_too_many_args",
+  "typed_stub_dry": "error",
+  "real_dry": "error",
+  "msgs": [
+   "Keyword 'common.Login As' expected 1 to 2 arguments, got 3."
+  ],
+  "s": 0.053
+ },
+ {
+  "id": "b30_selenium_kw_in_browser_session",
+  "typed_stub_dry": "error",
+  "real_dry": "error",
+  "msgs": [
+   "No keyword with name 'Input Text' found."
+  ],
+  "s": 0.091
+ },
+ {
+  "id": "b31_empty_test",
+  "typed_stub_dry": "error",
+  "real_dry": "error",
+  "msgs": [
+   "Test cannot be empty."
+  ],
+  "s": 0.042
+ },
+ {
+  "id": "b32_duplicate_test",
+  "typed_stub_dry": "warn",
+  "real_dry": "warn",
+  "msgs": [
+   "WARN: Multiple tests with name 'Same' executed in suite 'B32 Duplicate Test'."
+  ],
+  "s": 0.052
+ },
+ {
+  "id": "b33_keyword_only_missing",
+  "typed_stub_dry": "error",
+  "real_dry": "error",
+  "msgs": [
+   "Keyword 'Process.Start Process' expected at least 1 non-named argument, got 0."
+  ],
+  "s": 0.059
+ },
+ {
+  "id": "v01_builtin_ok",
+  "typed_stub_dry": "ok",
+  "real_dry": "ok",
+  "msgs": [],
+  "s": 0.04
+ },
+ {
+  "id": "v02_bdd_user_keyword",
+  "typed_stub_dry": "ok",
+  "real_dry": "ok",
+  "msgs": [],
+  "s": 0.069
+ },
+ {
+  "id": "v03_bdd_on_library_kw",
+  "typed_stub_dry": "ok",
+  "real_dry": "ok",
+  "msgs": [],
+  "s": 0.09
+ },
+ {
+  "id": "v04_assign_then_use",
+  "typed_stub_dry": "ok",
+  "real_dry": "ok",
+  "msgs": [],
+  "s": 0.045
+ },
+ {
+  "id": "v05_dynamic_set_test_variable",
+  "typed_stub_dry": "ok",
+  "real_dry": "ok",
+  "msgs": [],
+  "s": 0.041
+ },
+ {
+  "id": "v06_cli_variable",
+  "typed_stub_dry": "ok",
+  "real_dry": "ok",
+  "msgs": [],
+  "s": 0.048
+ },
+ {
+  "id": "v07_search_order_resolves_ambiguity",
+  "typed_stub_dry": "ok",
+  "real_dry": "ok",
+  "msgs": [],
+  "s": 0.043
+ },
+ {
+  "id": "v08_qualified_name",
+  "typed_stub_dry": "ok",
+  "real_dry": "ok",
+  "msgs": [],
+  "s": 0.039
+ },
+ {
+  "id": "v09_browser_ok",
+  "typed_stub_dry": "ok",
+  "real_dry": "ok",
+  "msgs": [],
+  "s": 0.072
+ },
+ {
+  "id": "v10_requests_ok",
+  "typed_stub_dry": "ok",
+  "real_dry": "ok",
+  "msgs": [],
+  "s": 0.043
+ },
+ {
+  "id": "v11_selenium_ok",
+  "typed_stub_dry": "ok",
+  "real_dry": "ok",
+  "msgs": [],
+  "s": 0.059
+ },
+ {
+  "id": "v12_robot_toml_variable",
+  "typed_stub_dry": "ok",
+  "real_dry": "ok",
+  "msgs": [],
+  "s": 0.047
+ },
+ {
+  "id": "v13_suite_variable_env_var",
+  "typed_stub_dry": "ok",
+  "real_dry": "ok",
+  "msgs": [],
+  "s": 0.04
+ },
+ {
+  "id": "v14_var_syntax_rf7",
+  "typed_stub_dry": "ok",
+  "real_dry": "ok",
+  "msgs": [],
+  "s": 0.047
+ },
+ {
+  "id": "v15_timeout_named_kw_only",
+  "typed_stub_dry": "ok",
+  "real_dry": "ok",
+  "msgs": [],
+  "s": 0.051
+ }
+]

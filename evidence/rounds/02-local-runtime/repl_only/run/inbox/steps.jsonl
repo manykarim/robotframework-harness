@@ -1,0 +1,165 @@
+{"t": "ready", "pid": 3607795, "hooked": true, "path": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round2/repl_only/run/inbox/steps.jsonl", "ts": 1790837353.559}
+{"t": "idle", "n": 1, "id": null, "ts": 1790837353.594}
+{"t": "begin", "id": "s1", "ts": 1790837353.647}
+{"t": "step", "seq": 1, "id": "s1", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["via inbox"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "via inbox"}], "status": "PASS", "elapsed_ms": 0.8, "return": null, "ts": 1790837353.649}
+{"t": "idle", "n": 2, "id": "s1", "ts": 1790837353.649}
+{"t": "idle", "n": 3, "id": "s1", "ts": 1790837353.65}
+{"t": "end", "id": "s1", "src": "Log    via inbox", "steps": 1, "ts": 1790837353.65}
+{"t": "begin", "id": "s2", "ts": 1790837353.707}
+{"t": "step", "seq": 2, "id": "s2", "type": "FOR", "name": "", "owner": null, "args": [], "assign": ["${i}"], "items": [{"type": "ITERATION", "name": "${i}=1", "owner": null, "args": [], "assign": [], "items": [{"type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["${i}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "1"}], "status": "PASS", "elapsed_ms": 0.7}], "status": "PASS", "elapsed_ms": 1.0}, {"type": "ITERATION", "name": "${i}=2", "owner": null, "args": [], "assign": [], "items": [{"type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["${i}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "2"}], "status": "PASS", "elapsed_ms": 0.6}], "status": "PASS", "elapsed_ms": 0.9}], "flavor": "IN", "for_values": ["1", "2"], "status": "PASS", "elapsed_ms": 2.4, "ts": 1790837353.713}
+{"t": "idle", "n": 4, "id": "s2", "ts": 1790837353.713}
+{"t": "idle", "n": 5, "id": "s2", "ts": 1790837353.713}
+{"t": "end", "id": "s2", "src": "FOR  ${i}  IN  1  2\n    Log  ${i}\nEND", "steps": 2, "ts": 1790837353.713}
+{"t": "begin", "id": "s3", "ts": 1790837353.785}
+{"t": "step", "seq": 3, "id": "s3", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 2.8, "return": null, "ts": 1790837353.79}
+{"t": "idle", "n": 6, "id": "s3", "ts": 1790837353.79}
+{"t": "idle", "n": 7, "id": "s3", "ts": 1790837353.79}
+{"t": "end", "id": "s3", "src": "Log    ping", "steps": 3, "ts": 1790837353.79}
+{"t": "begin", "id": "s4", "ts": 1790837353.879}
+{"t": "step", "seq": 4, "id": "s4", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 0.9, "return": null, "ts": 1790837353.882}
+{"t": "idle", "n": 8, "id": "s4", "ts": 1790837353.882}
+{"t": "idle", "n": 9, "id": "s4", "ts": 1790837353.882}
+{"t": "end", "id": "s4", "src": "Log    ping", "steps": 4, "ts": 1790837353.882}
+{"t": "begin", "id": "s5", "ts": 1790837353.958}
+{"t": "step", "seq": 5, "id": "s5", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 0.7, "return": null, "ts": 1790837353.961}
+{"t": "idle", "n": 10, "id": "s5", "ts": 1790837353.961}
+{"t": "idle", "n": 11, "id": "s5", "ts": 1790837353.961}
+{"t": "end", "id": "s5", "src": "Log    ping", "steps": 5, "ts": 1790837353.961}
+{"t": "begin", "id": "s6", "ts": 1790837354.033}
+{"t": "step", "seq": 6, "id": "s6", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 0.7, "return": null, "ts": 1790837354.035}
+{"t": "idle", "n": 12, "id": "s6", "ts": 1790837354.036}
+{"t": "idle", "n": 13, "id": "s6", "ts": 1790837354.036}
+{"t": "end", "id": "s6", "src": "Log    ping", "steps": 6, "ts": 1790837354.036}
+{"t": "begin", "id": "s7", "ts": 1790837354.102}
+{"t": "step", "seq": 7, "id": "s7", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 0.7, "return": null, "ts": 1790837354.104}
+{"t": "idle", "n": 14, "id": "s7", "ts": 1790837354.104}
+{"t": "idle", "n": 15, "id": "s7", "ts": 1790837354.104}
+{"t": "end", "id": "s7", "src": "Log    ping", "steps": 7, "ts": 1790837354.104}
+{"t": "begin", "id": "s8", "ts": 1790837354.174}
+{"t": "step", "seq": 8, "id": "s8", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 0.6, "return": null, "ts": 1790837354.176}
+{"t": "idle", "n": 16, "id": "s8", "ts": 1790837354.176}
+{"t": "idle", "n": 17, "id": "s8", "ts": 1790837354.176}
+{"t": "end", "id": "s8", "src": "Log    ping", "steps": 8, "ts": 1790837354.176}
+{"t": "begin", "id": "s9", "ts": 1790837354.259}
+{"t": "step", "seq": 9, "id": "s9", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 0.7, "return": null, "ts": 1790837354.261}
+{"t": "idle", "n": 18, "id": "s9", "ts": 1790837354.261}
+{"t": "idle", "n": 19, "id": "s9", "ts": 1790837354.261}
+{"t": "end", "id": "s9", "src": "Log    ping", "steps": 9, "ts": 1790837354.261}
+{"t": "begin", "id": "s10", "ts": 1790837354.331}
+{"t": "step", "seq": 10, "id": "s10", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 0.6, "return": null, "ts": 1790837354.333}
+{"t": "idle", "n": 20, "id": "s10", "ts": 1790837354.333}
+{"t": "idle", "n": 21, "id": "s10", "ts": 1790837354.333}
+{"t": "end", "id": "s10", "src": "Log    ping", "steps": 10, "ts": 1790837354.333}
+{"t": "begin", "id": "s11", "ts": 1790837354.4}
+{"t": "step", "seq": 11, "id": "s11", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 0.8, "return": null, "ts": 1790837354.403}
+{"t": "idle", "n": 22, "id": "s11", "ts": 1790837354.403}
+{"t": "idle", "n": 23, "id": "s11", "ts": 1790837354.403}
+{"t": "end", "id": "s11", "src": "Log    ping", "steps": 11, "ts": 1790837354.403}
+{"t": "begin", "id": "s12", "ts": 1790837354.463}
+{"t": "step", "seq": 12, "id": "s12", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 0.6, "return": null, "ts": 1790837354.465}
+{"t": "idle", "n": 24, "id": "s12", "ts": 1790837354.465}
+{"t": "idle", "n": 25, "id": "s12", "ts": 1790837354.465}
+{"t": "end", "id": "s12", "src": "Log    ping", "steps": 12, "ts": 1790837354.465}
+{"t": "begin", "id": "s13", "ts": 1790837354.535}
+{"t": "step", "seq": 13, "id": "s13", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 0.7, "return": null, "ts": 1790837354.537}
+{"t": "idle", "n": 26, "id": "s13", "ts": 1790837354.537}
+{"t": "idle", "n": 27, "id": "s13", "ts": 1790837354.537}
+{"t": "end", "id": "s13", "src": "Log    ping", "steps": 13, "ts": 1790837354.537}
+{"t": "begin", "id": "s14", "ts": 1790837354.604}
+{"t": "step", "seq": 14, "id": "s14", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 1.0, "return": null, "ts": 1790837354.606}
+{"t": "idle", "n": 28, "id": "s14", "ts": 1790837354.607}
+{"t": "idle", "n": 29, "id": "s14", "ts": 1790837354.607}
+{"t": "end", "id": "s14", "src": "Log    ping", "steps": 14, "ts": 1790837354.607}
+{"t": "begin", "id": "s15", "ts": 1790837354.676}
+{"t": "step", "seq": 15, "id": "s15", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 0.6, "return": null, "ts": 1790837354.678}
+{"t": "idle", "n": 30, "id": "s15", "ts": 1790837354.678}
+{"t": "idle", "n": 31, "id": "s15", "ts": 1790837354.678}
+{"t": "end", "id": "s15", "src": "Log    ping", "steps": 15, "ts": 1790837354.678}
+{"t": "begin", "id": "s16", "ts": 1790837354.751}
+{"t": "step", "seq": 16, "id": "s16", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 0.9, "return": null, "ts": 1790837354.753}
+{"t": "idle", "n": 32, "id": "s16", "ts": 1790837354.753}
+{"t": "idle", "n": 33, "id": "s16", "ts": 1790837354.753}
+{"t": "end", "id": "s16", "src": "Log    ping", "steps": 16, "ts": 1790837354.753}
+{"t": "begin", "id": "s17", "ts": 1790837354.816}
+{"t": "step", "seq": 17, "id": "s17", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 0.6, "return": null, "ts": 1790837354.818}
+{"t": "idle", "n": 34, "id": "s17", "ts": 1790837354.818}
+{"t": "idle", "n": 35, "id": "s17", "ts": 1790837354.818}
+{"t": "end", "id": "s17", "src": "Log    ping", "steps": 17, "ts": 1790837354.818}
+{"t": "begin", "id": "s18", "ts": 1790837354.888}
+{"t": "step", "seq": 18, "id": "s18", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 0.6, "return": null, "ts": 1790837354.89}
+{"t": "idle", "n": 36, "id": "s18", "ts": 1790837354.89}
+{"t": "idle", "n": 37, "id": "s18", "ts": 1790837354.89}
+{"t": "end", "id": "s18", "src": "Log    ping", "steps": 18, "ts": 1790837354.891}
+{"t": "begin", "id": "s19", "ts": 1790837354.951}
+{"t": "step", "seq": 19, "id": "s19", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 0.7, "return": null, "ts": 1790837354.953}
+{"t": "idle", "n": 38, "id": "s19", "ts": 1790837354.953}
+{"t": "idle", "n": 39, "id": "s19", "ts": 1790837354.953}
+{"t": "end", "id": "s19", "src": "Log    ping", "steps": 19, "ts": 1790837354.953}
+{"t": "begin", "id": "s20", "ts": 1790837355.02}
+{"t": "step", "seq": 20, "id": "s20", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 0.8, "return": null, "ts": 1790837355.022}
+{"t": "idle", "n": 40, "id": "s20", "ts": 1790837355.022}
+{"t": "idle", "n": 41, "id": "s20", "ts": 1790837355.022}
+{"t": "end", "id": "s20", "src": "Log    ping", "steps": 20, "ts": 1790837355.022}
+{"t": "begin", "id": "s21", "ts": 1790837355.099}
+{"t": "step", "seq": 21, "id": "s21", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 0.8, "return": null, "ts": 1790837355.101}
+{"t": "idle", "n": 42, "id": "s21", "ts": 1790837355.101}
+{"t": "idle", "n": 43, "id": "s21", "ts": 1790837355.102}
+{"t": "end", "id": "s21", "src": "Log    ping", "steps": 21, "ts": 1790837355.102}
+{"t": "begin", "id": "s22", "ts": 1790837355.164}
+{"t": "step", "seq": 22, "id": "s22", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 0.9, "return": null, "ts": 1790837355.167}
+{"t": "idle", "n": 44, "id": "s22", "ts": 1790837355.167}
+{"t": "idle", "n": 45, "id": "s22", "ts": 1790837355.167}
+{"t": "end", "id": "s22", "src": "Log    ping", "steps": 22, "ts": 1790837355.167}
+{"t": "begin", "id": "s23", "ts": 1790837355.23}
+{"t": "step", "seq": 23, "id": "s23", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 0.9, "return": null, "ts": 1790837355.233}
+{"t": "idle", "n": 46, "id": "s23", "ts": 1790837355.233}
+{"t": "idle", "n": 47, "id": "s23", "ts": 1790837355.233}
+{"t": "end", "id": "s23", "src": "Log    ping", "steps": 23, "ts": 1790837355.233}
+{"t": "begin", "id": "s24", "ts": 1790837355.293}
+{"t": "step", "seq": 24, "id": "s24", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 0.9, "return": null, "ts": 1790837355.295}
+{"t": "idle", "n": 48, "id": "s24", "ts": 1790837355.295}
+{"t": "idle", "n": 49, "id": "s24", "ts": 1790837355.296}
+{"t": "end", "id": "s24", "src": "Log    ping", "steps": 24, "ts": 1790837355.296}
+{"t": "begin", "id": "s25", "ts": 1790837355.361}
+{"t": "step", "seq": 25, "id": "s25", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 0.8, "return": null, "ts": 1790837355.364}
+{"t": "idle", "n": 50, "id": "s25", "ts": 1790837355.364}
+{"t": "idle", "n": 51, "id": "s25", "ts": 1790837355.364}
+{"t": "end", "id": "s25", "src": "Log    ping", "steps": 25, "ts": 1790837355.364}
+{"t": "begin", "id": "s26", "ts": 1790837355.43}
+{"t": "step", "seq": 26, "id": "s26", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 0.7, "return": null, "ts": 1790837355.434}
+{"t": "idle", "n": 52, "id": "s26", "ts": 1790837355.434}
+{"t": "idle", "n": 53, "id": "s26", "ts": 1790837355.434}
+{"t": "end", "id": "s26", "src": "Log    ping", "steps": 26, "ts": 1790837355.434}
+{"t": "begin", "id": "s27", "ts": 1790837355.517}
+{"t": "step", "seq": 27, "id": "s27", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 0.9, "return": null, "ts": 1790837355.519}
+{"t": "idle", "n": 54, "id": "s27", "ts": 1790837355.519}
+{"t": "idle", "n": 55, "id": "s27", "ts": 1790837355.519}
+{"t": "end", "id": "s27", "src": "Log    ping", "steps": 27, "ts": 1790837355.519}
+{"t": "begin", "id": "s28", "ts": 1790837355.592}
+{"t": "step", "seq": 28, "id": "s28", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 0.8, "return": null, "ts": 1790837355.595}
+{"t": "idle", "n": 56, "id": "s28", "ts": 1790837355.595}
+{"t": "idle", "n": 57, "id": "s28", "ts": 1790837355.595}
+{"t": "end", "id": "s28", "src": "Log    ping", "steps": 28, "ts": 1790837355.595}
+{"t": "begin", "id": "s29", "ts": 1790837355.658}
+{"t": "step", "seq": 29, "id": "s29", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 0.6, "return": null, "ts": 1790837355.66}
+{"t": "idle", "n": 58, "id": "s29", "ts": 1790837355.66}
+{"t": "idle", "n": 59, "id": "s29", "ts": 1790837355.66}
+{"t": "end", "id": "s29", "src": "Log    ping", "steps": 29, "ts": 1790837355.66}
+{"t": "begin", "id": "s30", "ts": 1790837355.736}
+{"t": "step", "seq": 30, "id": "s30", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 0.6, "return": null, "ts": 1790837355.738}
+{"t": "idle", "n": 60, "id": "s30", "ts": 1790837355.738}
+{"t": "idle", "n": 61, "id": "s30", "ts": 1790837355.738}
+{"t": "end", "id": "s30", "src": "Log    ping", "steps": 30, "ts": 1790837355.738}
+{"t": "begin", "id": "s31", "ts": 1790837355.808}
+{"t": "step", "seq": 31, "id": "s31", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 0.8, "return": null, "ts": 1790837355.811}
+{"t": "idle", "n": 62, "id": "s31", "ts": 1790837355.811}
+{"t": "idle", "n": 63, "id": "s31", "ts": 1790837355.811}
+{"t": "end", "id": "s31", "src": "Log    ping", "steps": 31, "ts": 1790837355.811}
+{"t": "begin", "id": "s32", "ts": 1790837355.874}
+{"t": "step", "seq": 32, "id": "s32", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["ping"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "ping"}], "status": "PASS", "elapsed_ms": 1.0, "return": null, "ts": 1790837355.877}
+{"t": "idle", "n": 64, "id": "s32", "ts": 1790837355.877}
+{"t": "idle", "n": 65, "id": "s32", "ts": 1790837355.877}
+{"t": "end", "id": "s32", "src": "Log    ping", "steps": 32, "ts": 1790837355.877}
+{"t": "idle", "n": 66, "id": "s32", "ts": 1790837356.007}
+{"t": "step", "seq": 33, "id": "s32", "type": "KEYWORD", "name": "Repl", "owner": "robotcode.repl.Repl", "args": [], "assign": [], "status": "PASS", "elapsed_ms": 2414.4, "ts": 1790837356.01}
+{"t": "closed", "ts": 1790837356.01}

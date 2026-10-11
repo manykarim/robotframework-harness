@@ -1,0 +1,16 @@
+SHELL QUOTING FOR rfmcp step   [rfmcp guide quoting]
+
+- One RF line per argument string; separate keyword and arguments with 4 spaces (2+ works, one space does not).
+- Wrap the line in SINGLE quotes: rfmcp step 'Fill Text    id=user    ${USER}'   (${...} stays literal for RF)
+- Line contains a single quote, or several lines (FOR/IF blocks)? Use a QUOTED heredoc (the quotes around RF
+  stop the shell from touching $ { } \ ):
+    rfmcp step - <<'RF'
+    ${n}=    Get Element Count    css=.row
+    IF    ${n} > 2
+        Log    many rows
+    END
+    RF
+- Never double-quote cells that contain ${...} or $var (the shell expands them).
+- Escape RF specials as in a .robot file: \# for a literal #, ${EMPTY} for empty strings, ${SPACE} for spaces.
+- One rfmcp call at a time, never in parallel or in the background: the session is shared and serialized.
+- For longer flows prefer writing the .robot file with your edit tool and `rfmcp run FILE --new`: no quoting at all.

@@ -1,0 +1,50 @@
+==============================================================================
+S01 Booker Rfmcp Generated Valid & S02 Saucedemo Bdd Valid                    
+==============================================================================
+S01 Booker Rfmcp Generated Valid & S02 Saucedemo Bdd Valid.S01 Booker Rfmcp...
+==============================================================================
+Read Booking :: Verify that we can read booking data from the Rest... ~/workspace/robotcode-experiments/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host 'restful-booker.herokuapp.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+~/workspace/robotcode-experiments/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host 'restful-booker.herokuapp.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+~/workspace/robotcode-experiments/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host 'restful-booker.herokuapp.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+| PASS |
+------------------------------------------------------------------------------
+Create New Booking :: Verify that we can create a new booking via ... ~/workspace/robotcode-experiments/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host 'restful-booker.herokuapp.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+| PASS |
+------------------------------------------------------------------------------
+Authenticate Admin :: Verify that we can authenticate as admin and... ~/workspace/robotcode-experiments/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host 'restful-booker.herokuapp.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+| PASS |
+------------------------------------------------------------------------------
+Delete Booking While Authenticated :: Create a booking, authentica... ~/workspace/robotcode-experiments/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host 'restful-booker.herokuapp.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+~/workspace/robotcode-experiments/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host 'restful-booker.herokuapp.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+~/workspace/robotcode-experiments/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host 'restful-booker.herokuapp.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+~/workspace/robotcode-experiments/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host 'restful-booker.herokuapp.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+| PASS |
+------------------------------------------------------------------------------
+S01 Booker Rfmcp Generated Valid & S02 Saucedemo Bdd Valid.S01 Boo... | PASS |
+4 tests, 4 passed, 0 failed
+==============================================================================
+S01 Booker Rfmcp Generated Valid & S02 Saucedemo Bdd Valid.S02 Saucedemo Bd...
+==============================================================================
+Standard User Adds Backpack To Cart                                   | PASS |
+------------------------------------------------------------------------------
+Problem User Sorts By Price                                           | FAIL |
+Text '$29.99' (str) should be '$7.99' (str)
+------------------------------------------------------------------------------
+S01 Booker Rfmcp Generated Valid & S02 Saucedemo Bdd Valid.S02 Sau... | FAIL |
+2 tests, 1 passed, 1 failed
+==============================================================================
+S01 Booker Rfmcp Generated Valid & S02 Saucedemo Bdd Valid            | FAIL |
+6 tests, 5 passed, 1 failed
+==============================================================================
+Output:  ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/../outputs/run/output.xml
+Log:     ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/../outputs/run/log.html
+Report:  ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/../outputs/run/report.html

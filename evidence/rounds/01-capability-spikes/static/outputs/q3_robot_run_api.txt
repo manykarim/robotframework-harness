@@ -1,0 +1,22 @@
+==============================================================================
+S05 Booker Runtime Fail :: rf-mcp style API suite with two runtime-only fai...
+==============================================================================
+Auth Returns Token                                                    ~/workspace/robotcode-experiments/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host 'restful-booker.herokuapp.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+| PASS |
+------------------------------------------------------------------------------
+Auth Expected Status Mismatch                                         ~/workspace/robotcode-experiments/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host 'restful-booker.herokuapp.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+| FAIL |
+Url: https://restful-booker.herokuapp.com/auth Expected status: 200 != 401
+------------------------------------------------------------------------------
+Post Without Url                                                      [ WARN ] You might have an = symbol in url. You better place 'url=' before, example: 'url=/your-url/foo?param=a' or use '/your-url/foo  params=param=a' or escape it
+| FAIL |
+TypeError: RequestsOnSessionKeywords.post_on_session() missing 1 required positional argument: 'url'
+------------------------------------------------------------------------------
+S05 Booker Runtime Fail :: rf-mcp style API suite with two runtime... | FAIL |
+3 tests, 1 passed, 2 failed
+==============================================================================
+Output:  ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/../outputs/run_api/output.xml
+Log:     ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/../outputs/run_api/log.html
+Report:  ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/../outputs/run_api/report.html

@@ -1,0 +1,18 @@
+KEYWORD BuiltIn.Import Library  Browser  timeout=5s
+KEYWORD Browser.New Browser  chromium  headless=True
+  [ INFO ] {"browser": "chromium", "headless": true, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/hints/runs/M01/k/browser/traces/temp/b6537878-afc4-4707-a4ba-850ee75be283"}
+  [ INFO ] Starting Browser process ~/workspace/robotcode-experiments/.venv/lib/python3.13/site-packages/Browser/wrapper/index.js using at 127.0.0.1:48343
+  [ INFO ] Successfully created browser with options: {"browser":"chromium","headless":true,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/hints/runs/M01/k/browser/traces/temp/b6537878-afc4-4707-a4ba-850ee75be283"}
+KEYWORD Browser.New Page  https://www.saucedemo.com
+  [ INFO ] Successfully initialized new page object and opened url: https://www.saucedemo.com
+  [ INFO ] No context was open. New context was automatically opened when this page is created.
+KEYWORD Browser.Click  [data-test="login-btn"]
+  [ INFO ] Clicks the element '[data-test="login-btn"]'.
+  [ INFO ] *HTML*</td></tr><tr><td colspan="3"><a href="browser/screenshot/fail-screenshot-1.png" target="_blank"><img src="browser/screenshot/fail-screenshot-1.png" style="max-width:800px;max-height:800px;"/></a>
+  [ INFO ] See also file://~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/hints/runs/M01/k/playwright-log.txt for additional details.
+
+# --- stderr ---
+  [ FAIL ] TimeoutError: locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator('[data-test="login-btn"]')
+

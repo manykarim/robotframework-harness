@@ -1,0 +1,8 @@
+<!doctype html><html><head><title>R5 Form</title></head><body>
+<form id="f" onsubmit="event.preventDefault();document.getElementById('out').textContent='Thanks '+document.getElementById('name').value;">
+<label for="name">Name</label><input id="name" name="name" placeholder="Your name">
+<label><input type="checkbox" id="agree" style="opacity:0;position:absolute"> <span class="fake">I agree</span></label>
+<select id="country"><option value="">--</option><option value="de">Germany</option><option value="fr">France</option></select>
+<button type="submit" id="submit">Send</button>
+</form><p id="out"></p>
+</body></html>

@@ -1,0 +1,49 @@
+b01_typo_keyword                           exp=error an=error(x1,0.81s) dry=error(0.304s) | KeywordNotFound:No keyword with name 'Shuold Be Equal' found.
+b02_too_few_args                           exp=error an=error(x1,0.84s) dry=error(0.326s) | DataError:Keyword 'BuiltIn.Should Be Equal' expected 2 to 10 arguments, got 1.
+b03_too_many_args                          exp=error an=error(x1,0.86s) dry=error(0.371s) | DataError:Keyword 'BuiltIn.Log' expected 1 to 6 arguments, got 8.
+b04_unknown_named_arg                      exp=error an=error(x1,0.80s) dry=error(0.304s) | DataError:Keyword 'BuiltIn.Should Be Equal' got unexpected named argument 'ignor
+b05_undefined_variable                     exp=error an=error(x1,0.77s) dry=ok   (0.304s) | VariableNotFound:Variable '${undefined_var}' not found.
+b06_missing_library_import                 exp=error an=error(x1,0.80s) dry=error(0.332s) | KeywordNotFound:No keyword with name 'Convert To Upper Case' found.
+b07_browser_kw_with_selenium_only          exp=error an=error(x1,4.46s) dry=error(0.457s) | KeywordNotFound:No keyword with name 'Fill Text' found.
+b08_ambiguous_two_custom_libs              exp=error an=error(x1,2.76s) dry=error(0.349s) | MultipleKeywords:Multiple keywords with name 'Do Thing' found. Give the full name of th
+b09_ambiguous_browser_selenium             exp=error an=error(x1,2.40s) dry=error(0.629s) | MultipleKeywords:Multiple keywords with name 'Get Text' found. Give the full name of th
+b10_bad_embedded_call                      exp=error an=error(x1,1.86s) dry=error(0.299s) | KeywordNotFound:No keyword with name 'The User Adds many Items To The Cart' found.
+b11_invalid_for                            exp=error an=error(x1,0.80s) dry=error(0.384s) | ModelError:FOR loop has no 'IN' or other valid separator.
+b12_for_missing_end                        exp=error an=error(x1,0.82s) dry=error(0.294s) | ModelError:FOR loop must have closing END.
+b13_invalid_if                             exp=error an=error(x1,0.80s) dry=error(0.291s) | ModelError:ELSE IF not allowed after ELSE.; ModelError:IF must have a condition.
+b14_wrong_setting_name                     exp=error an=error(x1,0.80s) dry=error(0.31s) | TokenError:Non-existing setting 'Test Setupp'. Did you mean:; TokenError:Non-existing setting 'Tag'. Did you mean:
+b15_resource_path_wrong                    exp=error an=error(x1,0.81s) dry=error(0.307s) | DataError:Resource file 'resources/nonexist.resource' does not exist.
+b16_browser_missing_arg                    exp=error an=error(x1,0.84s) dry=error(1.519s) | DataError:Keyword 'Browser.Fill Text' expected 2 to 3 arguments, got 1.
+b17_browser_positional_after_named         exp=error an=error(x1,0.85s) dry=error(1.397s) | DataError:Keyword 'Browser.New Page' got unexpected named argument 'wait_untl'.
+b18_requests_missing_url                   exp=error an=error(x1,1.96s) dry=error(0.411s) | DataError:Keyword 'RequestsLibrary.Create Session' expected 2 to 14 arguments, g
+b19_requests_on_session_missing_url        exp=error an=ok   (x0,0.78s) dry=ok   (0.404s) | 
+b20_single_space_separator                 exp=error an=error(x1,0.80s) dry=error(0.296s) | KeywordNotFound:No keyword with name 'Log hello world' found.
+b21_library_not_installed                  exp=error an=error(x1,1.76s) dry=error(0.297s) | DataError:Importing test library 'NonExistentLib' failed: ModuleNotFoundError: N
+b22_library_init_args                      exp=error an=ok   (x0,0.82s) dry=error(0.291s) | 
+b23_wrong_library_prefix                   exp=error an=error(x1,1.79s) dry=error(0.325s) | KeywordNotFound:No keyword with name 'Strng.Convert To Upper Case' found.
+b24_unclosed_variable                      exp=error an=error(x1,0.78s) dry=ok   (0.294s) | TokenError:Variable '${unclosed' was not closed properly.
+b25_return_in_test                         exp=error an=error(x1,0.78s) dry=error(0.298s) | TokenError:RETURN is not allowed in this context.
+b26_unknown_section                        exp=error an=error(x1,0.77s) dry=error(0.321s) | InvalidHeader:Unrecognized section header '*** Varibles ***'. Valid sections: 'Setti
+b27_assertion_operator_typo                exp=error an=ok   (x0,0.86s) dry=error(1.385s) | 
+b28_int_conversion                         exp=error an=ok   (x0,0.86s) dry=error(0.324s) | 
+b29_user_kw_too_many_args                  exp=error an=error(x1,0.93s) dry=error(0.394s) | DataError:Keyword 'common.Login As' expected 1 to 2 arguments, got 3.
+b30_selenium_kw_in_browser_session         exp=error an=error(x1,0.92s) dry=error(1.287s) | KeywordNotFound:No keyword with name 'Input Text' found.
+b31_empty_test                             exp=error an=error(x1,0.77s) dry=error(0.291s) | ModelError:Test cannot be empty.
+b32_duplicate_test                         exp=warn  an=ok   (x0,0.84s) dry=warn (0.295s) | 
+b33_keyword_only_missing                   exp=error an=error(x1,1.87s) dry=error(0.343s) | DataError:Keyword 'Process.Start Process' expected at least 1 non-named argument
+v01_builtin_ok                             exp=ok    an=ok   (x0,0.92s) dry=ok   (0.301s) | 
+v02_bdd_user_keyword                       exp=ok    an=ok   (x0,0.81s) dry=ok   (0.305s) | 
+v03_bdd_on_library_kw                      exp=ok    an=ok   (x0,0.88s) dry=ok   (1.379s) | 
+v04_assign_then_use                        exp=ok    an=ok   (x0,0.80s) dry=ok   (0.328s) | 
+v05_dynamic_set_test_variable              exp=ok    an=error(x1,0.82s) dry=ok   (0.351s) | VariableNotFound:Variable '${dyn}' not found.
+v06_cli_variable                           exp=ok    an=error(x1,0.86s) dry=ok   (0.35s) | VariableNotFound:Variable '${FROM_CLI}' not found.
+v06_cli_variable+cli-var                   exp=ok    an=ok   (x0,1.06s) dry=ok   (0.302s) | 
+v07_search_order_resolves_ambiguity        exp=ok    an=error(x1,0.76s) dry=ok   (0.331s) | MultipleKeywords:Multiple keywords with name 'Do Thing' found. Give the full name of th
+v08_qualified_name                         exp=ok    an=ok   (x0,0.81s) dry=ok   (0.293s) | 
+v09_browser_ok                             exp=ok    an=ok   (x0,0.84s) dry=ok   (1.383s) | 
+v10_requests_ok                            exp=ok    an=ok   (x0,0.85s) dry=ok   (0.387s) | 
+v11_selenium_ok                            exp=ok    an=ok   (x0,0.85s) dry=ok   (0.428s) | 
+v12_robot_toml_variable                    exp=ok    an=ok   (x0,0.82s) dry=ok   (0.31s) | 
+v13_suite_variable_env_var                 exp=ok    an=ok   (x0,0.80s) dry=ok   (0.29s) | 
+v14_var_syntax_rf7                         exp=ok    an=ok   (x0,0.81s) dry=ok   (0.32s) | 
+v15_timeout_named_kw_only                  exp=ok    an=ok   (x0,0.80s) dry=ok   (0.338s) | 

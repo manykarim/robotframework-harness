@@ -1,0 +1,6 @@
+# Spike-local robotcode config (makes this dir the project root for robotcode)
+output-dir = "out/default"
+console-colors = "off"
+
+[variables]
+HEADLESS = "True"

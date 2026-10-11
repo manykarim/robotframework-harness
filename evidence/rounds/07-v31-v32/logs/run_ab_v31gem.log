@@ -1,0 +1,5 @@
+[2026-10-10 06:37:22] [pid 1723638] start: tag=v31gem arms=mcp,hookpkg31 reps=2 agents=cc-or:gemini-3.8-flash scenarios=live extra=--or-models google/gemini-3.8-flash --or-budget-usd 90 --browser-concurrency 1 results=results_live_v31gem.jsonl
+[2026-10-10 06:37:22] [pid 1723638] start cleanup: dropped 0 aborted/auth-failure rows
+[2026-10-10 06:37:23] [pid 1723638] status: 0/20 cells ok
+[2026-10-10 06:37:23] [pid 1723638] pass 1: starting harness
+[] [pid 1723638] signal received - stopping the harness (running cells are marked aborted; a restart resumes them)

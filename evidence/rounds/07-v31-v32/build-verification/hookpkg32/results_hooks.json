@@ -1,0 +1,136 @@
+{
+ "ok": false,
+ "passed": 19,
+ "total": 20,
+ "latency": {
+  "codex:start": {
+   "n": 1,
+   "median_ms": 152,
+   "max_ms": 152
+  },
+  "codex:pre": {
+   "n": 3,
+   "median_ms": 272,
+   "max_ms": 921
+  },
+  "codex:post": {
+   "n": 3,
+   "median_ms": 718,
+   "max_ms": 3043
+  },
+  "copilot:start": {
+   "n": 1,
+   "median_ms": 152,
+   "max_ms": 152
+  },
+  "copilot:pre": {
+   "n": 3,
+   "median_ms": 276,
+   "max_ms": 1769
+  },
+  "copilot:post": {
+   "n": 3,
+   "median_ms": 729,
+   "max_ms": 3672
+  },
+  "opencode:start": {
+   "n": 1,
+   "median_ms": 167,
+   "max_ms": 167
+  },
+  "opencode:pre": {
+   "n": 3,
+   "median_ms": 240,
+   "max_ms": 1427
+  },
+  "opencode:post": {
+   "n": 3,
+   "median_ms": 719,
+   "max_ms": 3067
+  }
+ },
+ "wall_s": 32,
+ "checks": [
+  {
+   "check": "D[codex] SessionStart context (152 ms)",
+   "ok": true
+  },
+  {
+   "check": "D[codex] planted typo in a new file -> v3: allowed with a one-line 'not blocking' warning (L8 KeywordNotFound) delivered to the agent; the live run stops at L8",
+   "ok": true
+  },
+  {
+   "check": "D[codex] corrected write -> allowed, lines run live",
+   "ok": true
+  },
+  {
+   "check": "D[codex] deprecated syntax -> rewritten tool input (rewrite)",
+   "ok": true
+  },
+  {
+   "check": "D[codex]: no process mentions the workspace any more",
+   "ok": true
+  },
+  {
+   "check": "D[codex]: SessionEnd < 1.5 s (456 ms) and 0 orphans after it",
+   "ok": true
+  },
+  {
+   "check": "D[codex]: no generated files left in the workspace",
+   "ok": true
+  },
+  {
+   "check": "D[copilot] SessionStart context (152 ms)",
+   "ok": true
+  },
+  {
+   "check": "D[copilot] planted typo in a new file -> v3: allowed with a one-line 'not blocking' warning (L8 KeywordNotFound) delivered to the agent; the live run stops at L8",
+   "ok": false,
+   "detail": "{'decision': 'allow', 'pre': {}, 'pre_ms': 1769, 'reason': '', 'post': {'additionalContext': 'Live tests/shapes.robot: L6-L7 PASS (2 lines)\\nL8 NOT RUN  Clik text=Accept all\\n  verdict: STATIC KeywordNotFound: No keyword with name \\'Clik\\' found.\\nPage \"Shop - Sign in\" login.html (4 controls) | files: .rf/state/latest/\\nNEXT: fix line 8 (KeywordNotFound); it runs as soon as it is valid.\\nKeyword lists: .rf/docs/Browser.md (grep -i \\'<words>\\')'}, 'post_ms': 3672, 'text': 'Live tests/shapes.robot: L6-L7 PASS (2 lines)\\nL8 NOT RUN  Clik text=Accept all\\n  verdict: STATIC KeywordNotFound: No keyword with name \\'Clik\\' found.\\nPage \"Shop - Sign in\" login.html (4 controls) | files: .rf/state/latest/\\nNEXT: fix line 8 (KeywordNotFound); it runs as soon as it is valid.\\nKeyword lists: .rf/docs/Browser.md (grep -i \\'<words>\\')'}"
+  },
+  {
+   "check": "D[copilot] corrected write -> allowed, lines run live",
+   "ok": true
+  },
+  {
+   "check": "D[copilot] deprecated syntax -> rewritten tool input (rewrite)",
+   "ok": true
+  },
+  {
+   "check": "D[copilot] sessionEnd keeps the session (it fires after every copilot run)",
+   "ok": true
+  },
+  {
+   "check": "D[copilot] agent process gone -> daemons exit by themselves (watch-pid), 0 orphans",
+   "ok": true
+  },
+  {
+   "check": "D[opencode] SessionStart context (167 ms)",
+   "ok": true
+  },
+  {
+   "check": "D[opencode] planted typo in a new file -> v3: allowed with a one-line 'not blocking' warning (L8 KeywordNotFound) delivered to the agent; the live run stops at L8",
+   "ok": true
+  },
+  {
+   "check": "D[opencode] corrected write -> allowed, lines run live",
+   "ok": true
+  },
+  {
+   "check": "D[opencode] deprecated syntax -> rewritten tool input (rewrite)",
+   "ok": true
+  },
+  {
+   "check": "D[opencode]: no process mentions the workspace any more",
+   "ok": true
+  },
+  {
+   "check": "D[opencode]: SessionEnd < 1.5 s (442 ms) and 0 orphans after it",
+   "ok": true
+  },
+  {
+   "check": "D[opencode]: no generated files left in the workspace",
+   "ok": true
+  }
+ ]
+}

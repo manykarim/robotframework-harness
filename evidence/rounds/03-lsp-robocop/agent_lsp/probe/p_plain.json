@@ -1,0 +1,82 @@
+{
+ "tag": "plaintext",
+ "pull": false,
+ "reply": true,
+ "t_initialize": 1.009,
+ "server_caps": [
+  "codeActionProvider",
+  "codeLensProvider",
+  "completionProvider",
+  "definitionProvider",
+  "documentFormattingProvider",
+  "documentHighlightProvider",
+  "documentRangeFormattingProvider",
+  "executeCommandProvider",
+  "foldingRangeProvider",
+  "hoverProvider",
+  "implementationProvider",
+  "inlayHintProvider",
+  "inlineValueProvider",
+  "referencesProvider",
+  "renameProvider",
+  "selectionRangeProvider",
+  "semanticTokensProvider",
+  "signatureHelpProvider",
+  "textDocumentSync",
+  "workspace",
+  "workspaceSymbolProvider"
+ ],
+ "diagnosticProvider": null,
+ "t_first_diag_clean": null,
+ "clean_diags": null,
+ "rss_after_open_kb": 93072,
+ "pids": [
+  3870497,
+  3870535
+ ],
+ "change_mode": "reopen",
+ "t_diag_after_change": 0.003,
+ "planted_diags": [],
+ "hover_project_kw": null,
+ "hover_builtin_kw": null,
+ "hover_library_kw": {
+  "contents": {
+   "kind": "markdown",
+   "value": "### Keyword *Fill Text*\n\n#### Arguments: \n\n| | | | |\n|:--|:--|:--|:--|\n| `selector`| : `str` |  |  |\n| `txt`| : `str` |  |  |\n| `force`| : `bool` | = | `${False}` |\n\n**Tags**: \n- PageContent\n- Setter\n\n#### Documentation:\nClears and fills the given `txt` into the text field found by `selector`.\n\n\nThis keyword waits for an element matching the `selector` to appear, waits for actionability checks, focuses the element, fills it and triggers an input event after filling.\n\n\nIf the element matching the selector is not an \\<input>, \\<textarea> or [contenteditable] element, this keyword fails. Note that you can pass an empty string as `txt` to clear the input field.\n\n\n| Arguments | Description |\n| :--- | :--- |\n| `selector` | Selector of the text field. See the `Finding elements` section for details about the selectors. |\n| `txt` | Text for the text field. |\n| `force` | Set to `True` to skip Playwright's [Actionability checks](https://playwright.dev/docs/actionability). |\n\n\nKeyword uses strict mode, see `Finding elements` for more details about strict mode.\n\n\nSee `Type Text` for emulating typing text character by character.\n\n\nExample:\n\n\n```text\n`Fill Text`    css=input#username_field    username\n```\n\n[Comment >>](https://forum.robotframework.org/t//4254)\n\n"
+  },
+  "range": {
+   "start": {
+    "line": 21,
+    "character": 4
+   },
+   "end": {
+    "line": 21,
+    "character": 13
+   }
+  }
+ },
+ "wsym_Product": [
+  [
+   "Type Into Product Finder",
+   "shop",
+   "sp/probe/p_plain/resources/shop.resource"
+  ]
+ ],
+ "wsym_Fill Text": [],
+ "wsym_Get Element Count": [],
+ "wsym_Probe": [
+  [
+   "Probe Catalog Endpoint",
+   "shop",
+   "sp/probe/p_plain/resources/shop.resource"
+  ]
+ ],
+ "rss_end_kb": 93164,
+ "t_total": 193.204,
+ "server_requests_seen": [
+  "workspace/configuration"
+ ],
+ "notifications_seen": [
+  "textDocument/publishDiagnostics"
+ ]
+}

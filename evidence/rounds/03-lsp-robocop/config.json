@@ -1,0 +1,25 @@
+{
+ "round": "3",
+ "folder": "03-lsp-robocop",
+ "title": "robotcode LSP diagnostics in agents, LSP as validator, Robocop 9.1",
+ "kind": "spike",
+ "dates": [
+  "2026-10-01"
+ ],
+ "agents": {
+  "claude": "Claude Code 2.1.286",
+  "opencode": "OpenCode 1.15.12",
+  "copilot": "Copilot CLI 1.0.54",
+  "codex": "Codex 0.153.4"
+ },
+ "tools": {
+  "robotcode": "2.7.0",
+  "robocop": "9.1.0"
+ },
+ "sessions": "32 headless agent sessions (agent_lsp study)",
+ "studies": [
+  "agent_lsp",
+  "lsp_quality",
+  "robocop"
+ ]
+}

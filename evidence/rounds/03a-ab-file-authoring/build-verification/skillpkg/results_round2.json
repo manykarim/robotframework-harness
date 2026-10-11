@@ -1,0 +1,24 @@
+{
+ "ok": true,
+ "passed": 43,
+ "total": 43,
+ "timings": {
+  "stop_noop_ms": 62,
+  "check_static_ms": 6406,
+  "skill_md_bytes": 5335,
+  "debug_first_robot_ms": 13175,
+  "debug_reproduce_ms": 7624,
+  "debug_final_robot_ms": 8161,
+  "guard_covered_ms": 1673,
+  "state_controls_ms": 141,
+  "guard_not_visible_ms": 1719,
+  "no_guard_async_click_ms": 2916,
+  "hook_portable_ms": 2521
+ },
+ "python": "~/workspace/rf-mcp-robotcode/.venv/bin/python",
+ "failed": [],
+ "versions": {
+  "robotframework": "7.3.2",
+  "robotframework-browser": "19.12.7"
+ }
+}

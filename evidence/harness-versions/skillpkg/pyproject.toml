@@ -1,0 +1,20 @@
+[project]
+name = "rfmcp-skill"
+version = "0.1.0"
+description = "RESEARCH PROTOTYPE (A/B treatment arm): Agent Skill + local rfmcp helper CLI + post-edit hooks for Robot Framework, no MCP"
+requires-python = ">=3.10"
+# uses robotframework / robotcode / robocop / (optional) rf-mcp hint engine from the project venv
+dependencies = []
+
+[project.scripts]
+rfmcp = "rfmcp_skill.cli:main"
+
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["rfmcp_skill"]
+
+[tool.setuptools.package-data]
+rfmcp_skill = ["skill/*.md", "skill/references/*.md", "guides/*.txt", "data/*"]

@@ -1,0 +1,13 @@
+{
+ "jsonrpc": "2.0",
+ "id": 3,
+ "result": {
+  "success": false,
+  "items": [
+   {
+    "mime": "x-application/robotframework-repl-log",
+    "data": "{\"items\":[{\"id\":\"s1-t1-k1-k6\",\"name\":\".kw Click\",\"owner\":\"\",\"source_name\":\"\",\"doc\":\"\",\"args\":[],\"assign\":[],\"tags\":[],\"timeout\":null,\"type\":\"KEYWORD\",\"status\":\"FAIL\",\"message\":\"No keyword with name '.kw Click' found.\",\"start_time\":\"20261001 08:48:37.077\",\"end_time\":\"20261001 08:48:37.077\",\"elapsed_time\":\"00:00:00.000\",\"items\":[{\"id\":\"message-0\",\"message\":\"No keyword with name '.kw Click' found.\",\"level\":\"FAIL\",\"html\":false,\"timestamp\":\"08:48:37\",\"node_type\":\"message\"}],\"node_type\":\"keyword\"}],\"node_type\":\"root\"}"
+   }
+  ]
+ }
+}

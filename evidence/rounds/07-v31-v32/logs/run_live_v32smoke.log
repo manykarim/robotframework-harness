@@ -1,0 +1,11 @@
+[09:12:09] [config] models={'claude': 'claude-haiku-4-5', 'codex': 'gpt-5.6-luna', 'opencode': 'minimax-coding-plan/MiniMax-M2.5', 'copilot': 'gpt-4.1'} codex_effort='medium' opencode_variant='' results=~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/ab/harness/results_live_v32smoke.jsonl work=~/.cache/ab-eval/work_live_v32smoke prune=True browser_concurrency=1 or_models={'qwen3.8-flash': 'qwen/qwen3.8-flash'} or_budget_usd=5
+[09:12:09] [openrouter] models={'qwen3.8-flash': 'qwen/qwen3.8-flash'} budget=$5.00 baseline usage=$27.7891 spent since batch start=$0.0000
+[09:12:09] disk before:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  234G  215G  7,2G  97% /
+[09:12:09] [batch] 1 cells to run (skipping 0 done), concurrency=3, browser<=1, per-agent<=2, prune=True
+[09:23:10] [1/1] cc-or:qwen3.8-flash|hookpkg32|tricentis_quote|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=41 660.8s or_est=$0.042085 or_delta=$0.19994
+[09:23:11] [batch] done: ran=1 skipped=0 reaper_kills_total=2 (final sweep 0) openrouter: spent $0.1999 of $5.00, 0 cells skipped by the budget
+[09:23:11] disk after:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  234G  215G  7,0G  97% /

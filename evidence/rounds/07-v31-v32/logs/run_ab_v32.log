@@ -1,0 +1,19 @@
+[2026-10-10 09:23:41] [pid 1910377] start: tag=v32 arms=hookpkg31,hookpkg32 reps=3 agents=codex,cc-or:qwen3.8-flash scenarios=live extra=--or-models qwen/qwen3.8-flash --or-budget-usd 15 --browser-concurrency 1 results=results_live_v32.jsonl
+[2026-10-10 09:23:42] [pid 1910377] start cleanup: dropped 0 aborted/auth-failure rows
+[2026-10-10 09:23:42] [pid 1910377] status: 0/60 cells ok
+[2026-10-10 09:23:42] [pid 1910377] pass 1: starting harness
+[2026-10-10 13:10:00] [pid 1910377] signal received - stopping the harness (running cells are marked aborted; a restart resumes them)
+[2026-10-10 13:11:43] [pid 2188246] start: tag=v32 arms=hookpkg31,hookpkg32 reps=3 agents=codex scenarios=live extra=--browser-concurrency 2 results=results_live_v32.jsonl
+[2026-10-10 13:11:43] [pid 2188246] start cleanup: dropped 1 aborted/auth-failure rows
+[2026-10-10 13:11:44] [pid 2188246] status: 22/30 cells ok
+[2026-10-10 13:11:44] [pid 2188246] pass 1: starting harness
+[2026-10-10 13:27:56] [pid 2188246] pass 1: harness exited (0)
+[2026-10-10 13:27:57] [pid 2188246] pass 1: dropped 0 aborted/auth-failure rows; 30/30 cells ok
+[2026-10-10 13:27:57] [pid 2188246] done: complete (30/30)
+[2026-10-10 13:29:14] [pid 2213842] start: tag=v32 arms=hookpkg31,hookpkg32 reps=3 agents=codex scenarios=live extra=--browser-concurrency 2 results=results_live_v32.jsonl
+[2026-10-10 13:29:14] [pid 2213842] start cleanup: dropped 0 aborted/auth-failure rows
+[2026-10-10 13:29:14] [pid 2213842] status: 29/30 cells ok
+[2026-10-10 13:29:15] [pid 2213842] pass 1: starting harness
+[2026-10-10 13:33:15] [pid 2213842] pass 1: harness exited (0)
+[2026-10-10 13:33:15] [pid 2213842] pass 1: dropped 0 aborted/auth-failure rows; 30/30 cells ok
+[2026-10-10 13:33:15] [pid 2213842] done: complete (30/30)

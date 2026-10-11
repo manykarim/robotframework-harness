@@ -1,0 +1,26 @@
+{
+  "source": "round-5 results_live_v2.jsonl transcripts; scripts parse_claude.py, episodes.py, reactions.py, rechecks_all.py, composition.py, opencode_sessions.py",
+  "claude_per_session_v1_vs_v2": {
+    "wall_s": [351, 524], "model_s": [186, 240], "tool_s": [165, 283],
+    "edit_hook_s": [96, 135], "robot_bash_s": [68, 128], "robot_runs": [2.2, 4.1],
+    "turns": [38.7, 52.1], "edits": [19.4, 24.2], "reads_state": [7.7, 10.3], "bash_rf_state_grep": [3.3, 8.0],
+    "source_html_greps": [1.9, 6.3], "hook_chars_total": [22227, 33802], "post_chars_per_edit_mean": [1094, 1290],
+    "cache_read_tok": [1770161, 2838259], "cache_read_per_turn": [45700, 54500], "out_tok": [15468, 19889],
+    "hook_refused_edits": [0.4, 1.1], "failed_plain_runs_with_repro": [1.2, 2.8]
+  },
+  "rechecks": {
+    "claude": {"slow": 49, "slow_false_element_present": 48, "slow_passed_after": 1, "missing": 53, "missing_instant": 29, "missing_instant_element_exists": 13, "missing_waited": 24},
+    "opencode": {"slow": 62, "slow_false_element_present": 62, "slow_passed_after": 2, "missing": 79, "missing_instant": 23, "missing_waited": 56},
+    "codex_rowmetrics": {"slow": 16, "slow_scenarios": "tricentis only", "missing": 24},
+    "genuine_late_elements": 1, "genuine_late_appeared_s": [7.9],
+    "edit_dur_s_by_verdict_claude_v2": {"slow": 6.4, "missing_instant": 3.7, "missing_waited": 14.4, "pass": 5.5, "v1_fail": 6.6, "v1_pass": 3.1}
+  },
+  "reactions_added_wait_line": {"claude_after_slow": "19/49", "claude_after_missing": "8/53", "opencode_after_slow": "32/60", "opencode_after_missing": "10/79"},
+  "live_vs_plain": {"explore_live_pass_then_plain_fail": {"v1": "5/14", "v2": "13/20"}, "repro_passed_live_not_reproduced": {"v1": "2/18", "v2": "19/42"}, "robot_dur_fail_with_repro_s": [40.4, 37.1], "robot_dur_pass_s": [19.5, 18.9]},
+  "redundancy_v2": {"controls_line_repeat": 0.82, "docs_line_repeat": 0.71, "hint_line_repeat": 0.71, "intercepts_fragment_shown": {"v1": 11, "v2": 0}},
+  "episodes_claude": {"v1": {"n": 72, "median_s": 19, "mean_s": 30, "edits": 1.8}, "v2": {"n": 72, "median_s": 21, "mean_s": 49, "edits": 2.4},
+    "v2_similar_control": {"yes": [7, 1.4], "no": [25, 2.6]}, "v2_slow": {"yes": [33, 2.2], "no": [16, 2.4]},
+    "v2_assertion": {"median_s": 59, "mean_s": 143, "edits": 5.8}, "v1_assertion": {"median_s": 51, "mean_s": 62, "edits": 2.5}},
+  "codex": {"v2_wall_mean": 268, "v2_wall_mean_excl_tricentis_quote_rep2": 209, "v1_wall_mean": 207, "outlier": "tricentis_quote rep2: 1088 s, 9 failing plain runs after live pass, 8 reproductions, 165 captures, post-tool median 4.3 s"},
+  "debug": {"cell_mean_delta_s": 146, "opencode_tricentis_debug_share": 0.99, "v1_opencode_tricentis_debug_rep1_wall_s": 14, "excl_opencode_tricentis_debug": [346, 348]}
+}

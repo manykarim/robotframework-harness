@@ -1,0 +1,13 @@
+{
+ "n_keywords": 544,
+ "gen_s_per_lib": {
+  "Browser": 0.234,
+  "SeleniumLibrary": 0.181,
+  "RequestsLibrary": 0.032,
+  "BuiltIn": 0.03,
+  "Collections": 0.013,
+  "String": 0.011
+ },
+ "corpus_total_s": 0.638,
+ "corpus_json_bytes": 583752
+}

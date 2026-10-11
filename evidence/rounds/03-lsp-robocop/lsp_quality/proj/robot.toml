@@ -1,0 +1,9 @@
+# round-3 live-file project (robotcode detects this file as the project root)
+paths = ["tests"]
+python-path = ["resources"]
+output-dir = "results"
+console-colors = "off"
+
+[variables]
+BASE_URL = "https://www.saucedemo.com"
+API_URL = "https://restful-booker.herokuapp.com"

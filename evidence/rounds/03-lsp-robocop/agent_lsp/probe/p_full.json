@@ -1,0 +1,170 @@
+{
+ "tag": "full",
+ "pull": false,
+ "reply": true,
+ "t_initialize": 1.395,
+ "server_caps": [
+  "codeActionProvider",
+  "codeLensProvider",
+  "completionProvider",
+  "definitionProvider",
+  "documentFormattingProvider",
+  "documentHighlightProvider",
+  "documentRangeFormattingProvider",
+  "executeCommandProvider",
+  "foldingRangeProvider",
+  "hoverProvider",
+  "implementationProvider",
+  "inlayHintProvider",
+  "inlineValueProvider",
+  "referencesProvider",
+  "renameProvider",
+  "selectionRangeProvider",
+  "semanticTokensProvider",
+  "signatureHelpProvider",
+  "textDocumentSync",
+  "workspace",
+  "workspaceSymbolProvider"
+ ],
+ "diagnosticProvider": null,
+ "t_first_diag_clean": 7.098,
+ "clean_diags": [
+  {
+   "range": {
+    "start": {
+     "line": 3,
+     "character": 0
+    },
+    "end": {
+     "line": 3,
+     "character": 0
+    }
+   },
+   "message": "Invalid number of empty lines between sections (1/2)",
+   "severity": 2,
+   "code": "SPC03-empty-lines-between-sections",
+   "codeDescription": {
+    "href": "https://robocop.dev/v9.1.0/rules_list/#spc03-empty-lines-between-sections"
+   },
+   "source": "robocop"
+  },
+  {
+   "range": {
+    "start": {
+     "line": 0,
+     "character": 0
+    },
+    "end": {
+     "line": 0,
+     "character": 0
+    }
+   },
+   "message": "Missing documentation in suite",
+   "severity": 2,
+   "code": "DOC03-missing-doc-suite",
+   "codeDescription": {
+    "href": "https://robocop.dev/v9.1.0/rules_list/#doc03-missing-doc-suite"
+   },
+   "source": "robocop"
+  },
+  {
+   "range": {
+    "start": {
+     "line": 5,
+     "character": 0
+    },
+    "end": {
+     "line": 5,
+     "character": 17
+    }
+   },
+   "message": "Missing documentation in 'Catalog Api Is Up' test case",
+   "severity": 2,
+   "code": "DOC02-missing-doc-test-case",
+   "codeDescription": {
+    "href": "https://robocop.dev/v9.1.0/rules_list/#doc02-missing-doc-test-case"
+   },
+   "source": "robocop"
+  }
+ ],
+ "rss_after_open_kb": 98064,
+ "pids": [
+  3865641,
+  3865718
+ ],
+ "change_mode": "full",
+ "t_diag_after_change": null,
+ "planted_diags": null,
+ "hover_project_kw": {
+  "contents": {
+   "kind": "markdown",
+   "value": "### Keyword *Probe Catalog Endpoint*\n\n#### Arguments: \n\n| | | | |\n|:--|:--|:--|:--|\n| `path`|   |  |  |\n| `expected_status`|   | = | `200` |\n\n#### Documentation:\nGETs `path` from the catalog API and returns the response.\n\n"
+  },
+  "range": {
+   "start": {
+    "line": 6,
+    "character": 16
+   },
+   "end": {
+    "line": 6,
+    "character": 38
+   }
+  }
+ },
+ "hover_builtin_kw": {
+  "contents": {
+   "kind": "markdown",
+   "value": "### Keyword *Should Be Equal As Integers*\n\n#### Arguments: \n\n| | | | |\n|:--|:--|:--|:--|\n| `first`| : `object` |  |  |\n| `second`| : `object` |  |  |\n| `msg`| : `str` \\| `None` | = | `${None}` |\n| `values`| : `bool` | = | `${True}` |\n| `base`| : `int` \\| `None` | = | `${None}` |\n\n#### Documentation:\nFails if objects are unequal after converting them to integers.\n\nArgs:\n    first: The first value to compare.\n    second: The second value to compare.\n    msg: The custom error message.\n    values: If true, compared values are added to the custom error message.\n    base: Optional base to use in integer conversion.\n\nSee [Convert To Integer] for information how to convert integers from\nother bases than 10 by using the `base` argument and `0b/0o/0x` prefixes.\n\nSee the [Controlling failure messages] section for information about\noverriding the default failure message with `msg` and `values` arguments.\n\nExamples:\n```robotframework\n*** Test Cases ***\nShould be equal as integers\n    Should Be Equal As Integers    42        ${42}    Error message\n    Should Be Equal As Integers    ABCD      abcd     base=16\n    Should Be Equal As Integers    0b1011    11\n```\n\nAn alternative to using [Should Be Equal As Integers] is using\nthe [Should Be Equal] keyword with `type` and `types` arguments\nthat support type conversion and validation."
+  },
+  "range": {
+   "start": {
+    "line": 7,
+    "character": 4
+   },
+   "end": {
+    "line": 7,
+    "character": 31
+   }
+  }
+ },
+ "hover_library_kw": {
+  "contents": {
+   "kind": "markdown",
+   "value": "### Keyword *Fill Text*\n\n#### Arguments: \n\n| | | | |\n|:--|:--|:--|:--|\n| `selector`| : `str` |  |  |\n| `txt`| : `str` |  |  |\n| `force`| : `bool` | = | `${False}` |\n\n**Tags**: \n- PageContent\n- Setter\n\n#### Documentation:\nClears and fills the given `txt` into the text field found by `selector`.\n\n\nThis keyword waits for an element matching the `selector` to appear, waits for actionability checks, focuses the element, fills it and triggers an input event after filling.\n\n\nIf the element matching the selector is not an \\<input>, \\<textarea> or [contenteditable] element, this keyword fails. Note that you can pass an empty string as `txt` to clear the input field.\n\n\n| Arguments | Description |\n| :--- | :--- |\n| `selector` | Selector of the text field. See the `Finding elements` section for details about the selectors. |\n| `txt` | Text for the text field. |\n| `force` | Set to `True` to skip Playwright's [Actionability checks](https://playwright.dev/docs/actionability). |\n\n\nKeyword uses strict mode, see `Finding elements` for more details about strict mode.\n\n\nSee `Type Text` for emulating typing text character by character.\n\n\nExample:\n\n\n```text\n`Fill Text`    css=input#username_field    username\n```\n\n[Comment >>](https://forum.robotframework.org/t//4254)\n\n"
+  },
+  "range": {
+   "start": {
+    "line": 21,
+    "character": 4
+   },
+   "end": {
+    "line": 21,
+    "character": 13
+   }
+  }
+ },
+ "wsym_Product": [
+  [
+   "Type Into Product Finder",
+   "shop",
+   "lsp/probe/p_full/resources/shop.resource"
+  ]
+ ],
+ "wsym_Fill Text": [],
+ "wsym_Get Element Count": [],
+ "wsym_Probe": [
+  [
+   "Probe Catalog Endpoint",
+   "shop",
+   "lsp/probe/p_full/resources/shop.resource"
+  ]
+ ],
+ "rss_end_kb": 98252,
+ "t_total": 80.484,
+ "server_requests_seen": [
+  "workspace/configuration"
+ ],
+ "notifications_seen": [
+  "textDocument/publishDiagnostics"
+ ]
+}

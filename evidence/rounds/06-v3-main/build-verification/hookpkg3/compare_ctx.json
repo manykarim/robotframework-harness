@@ -1,0 +1,152 @@
+{
+ "v2": {
+  "edits": [
+   {
+    "step": "first write",
+    "chars": 940,
+    "ms": 3663,
+    "text": "Live run of tests/journey.robot (hook: live Robot Framework session; the page stays open):\n  ('Order Journey': first run)\n  L3 PASS  Suite Setup    New Browser    chromium    headless=True\n  L10 PASS  New Page    ${URL}\n  L11 PASS  Click    text=Accept all\n  L12 PASS  Fill Text    id=username    alice\nPage (step-002-click): \"Shop - Sign in\"  file:///tmp/claude-1000/-home-~-workspace-rf-mcp/1fce9b83-a4c5-4548-8f0f-3be83ba63c56/scratchpad/cmp/v2/site/login.html\n  3 controls; .rf/state/latest/: page.txt 234B, controls.txt 215B, aria.yaml 194B, source.html 924B, screenshot.jpg 9.5K\n  controls: \"Username\" id=username | \"Password\" id=password | \"Sign in\" data-test=signin\n  history: step-001-new-page, step-002-click (.rf/state/<dir>/)\n-> All test lines passed live. Final proof before finishing: robot -d results tests/journey.robot\n\nKeyword docs for the imports: .rf/docs/Browser.md (one line per keyword; full docs: <Name>.full.md)."
+   },
+   {
+    "step": "signin",
+    "chars": 973,
+    "ms": 1486,
+    "text": "Live run of tests/journey.robot (hook: live Robot Framework session; the page stays open):\n  ('Order Journey': new lines)\n  L13 PASS  Fill Text    id=password    secret\n  L14 PASS  Click    data-test=signin\n  L15 PASS  Get Text    id=greeting    ==    Hello, alice\nPage (step-003-click): \"Shop - Order\"  file:///tmp/claude-1000/-home-~-workspace-rf-mcp/1fce9b83-a4c5-4548-8f0f-3be83ba63c56/scratchpad/cmp/v2/site/order.html?user=alice\n  7 controls; iframes: id=pay-frame (`<frame> >>> <sel>`); .rf/state/latest/: page.txt 302B, controls.txt 1.1K, aria.yaml 603B, source.html 2.3K, screenshot.jpg 17.5K\n  controls: \"Standard\" label[for=\"ship-standard\"] | \"Express\" label[for=\"ship-express\"] | \"Country\" id=country | \"Gift wrap\" label:has(#gift) | \"Place order\" data-test=place-order | \"Card number\" id=pay-frame >>> id=card | \"Confirm card\" id=pay-frame >>> id=confirm-card\n-> All test lines passed live. Final proof before finishing: robot -d results tests/journey.robot"
+   },
+   {
+    "step": "hidden radio",
+    "chars": 936,
+    "ms": 3608,
+    "text": "Live run of tests/journey.robot (hook: live Robot Framework session; the page stays open):\n  ('Order Journey': new lines)\n  L16 NOT RUN (refused before execution: NOT_VISIBLE)  Check Checkbox    id=ship-express\n      fix: the <input type=radio> is hidden by CSS (styled control): click its visible label `Click    label[for=\"ship-express\"]`, then verify `Get Checkbox State    id=ship-express    ==    checked`\n      docs: .rf/docs/kw/Browser.Check_Checkbox.md  Check Checkbox(selector, force=False) -- Checks the checkbox or selects radio button found by selector.\nPage (step-003-click): \"Shop - Order\"  file:///tmp/claude-1000/-home-~-workspace-rf-mcp/1fce9b83-a4c5-4548-8f0f-3be83ba63c56/scratchpad/cmp/v2/site/order.html?user=alice  (unchanged since the last capture; .rf/state/latest/)\n-> Fix line 16 of tests/journey.robot or insert lines before it: the hook re-runs from there in this page. Page: .rf/state/latest/controls.txt"
+   },
+   {
+    "step": "label fix",
+    "chars": 940,
+    "ms": 1328,
+    "text": "Live run of tests/journey.robot (hook: live Robot Framework session; the page stays open):\n  ('Order Journey': new lines)\n  L16 PASS  Click    label[for=\"ship-express\"]\n  L17 PASS  Select Options By    id=country    label    Norway\nPage (step-004-click): \"Shop - Order\"  file:///tmp/claude-1000/-home-~-workspace-rf-mcp/1fce9b83-a4c5-4548-8f0f-3be83ba63c56/scratchpad/cmp/v2/site/order.html?user=alice\n  7 controls; iframes: id=pay-frame (`<frame> >>> <sel>`); .rf/state/latest/: page.txt 302B, controls.txt 1.1K, aria.yaml 633B, source.html 2.3K, screenshot.jpg 18.3K\n  controls: \"Standard\" label[for=\"ship-standard\"] | \"Express\" label[for=\"ship-express\"] | \"Country\" id=country | \"Gift wrap\" label:has(#gift) | \"Place order\" data-test=place-order | \"Card number\" id=pay-frame >>> id=card | \"Confirm card\" id=pay-frame >>> id=confirm-card\n-> All test lines passed live. Final proof before finishing: robot -d results tests/journey.robot"
+   },
+   {
+    "step": "iframe miss",
+    "chars": 802,
+    "ms": 2738,
+    "text": "Live run of tests/journey.robot (hook: live Robot Framework session; the page stays open):\n  ('Order Journey': new lines)\n  L18 NOT RUN (refused before execution: NOT_FOUND)  Fill Text    id=card    4242\n      fix: element is inside an iframe: use `id=pay-frame >>> id=card`\n      docs: .rf/docs/kw/Browser.Fill_Text.md  Fill Text(selector, txt, force=False) -- Clears and fills the given txt into the text field found by selector.\nPage (step-004-click): \"Shop - Order\"  file:///tmp/claude-1000/-home-~-workspace-rf-mcp/1fce9b83-a4c5-4548-8f0f-3be83ba63c56/scratchpad/cmp/v2/site/order.html?user=alice  (unchanged since the last capture; .rf/state/latest/)\n-> Fix line 18 of tests/journey.robot or insert lines before it: the hook re-runs from there in this page. Page: .rf/state/latest/controls.txt"
+   },
+   {
+    "step": "iframe fix + slow",
+    "chars": 1021,
+    "ms": 5115,
+    "text": "Live run of tests/journey.robot (hook: live Robot Framework session; the page stays open):\n  ('Order Journey': new lines)\n  L18 PASS  Fill Text    id=pay-frame >>> id=card    4242\n  L19 PASS  Click    id=pay-frame >>> id=confirm-card\n  L20 PASS  Click    data-test=place-order\n  L21 PASS  Get Text    id=confirmation    contains    Total: 55.00 EUR\n      recheck: SLOW -- the element appeared after 3.4 s (live timeout 2.5 s, normal 10.0 s); PASSED on the re-check. Add before line 21: `Wait For Elements State    id=confirmation    visible    timeout=10s`\nPage (step-006-click): \"Shop - Confirmation\"  file:///tmp/claude-1000/-home-~-workspace-rf-mcp/1fce9b83-a4c5-4548-8f0f-3be83ba63c56/scratchpad/cmp/v2/site/done.html?total=55&ship=e...\n  0 controls; .rf/state/latest/: page.txt 271B, controls.txt 16B, aria.yaml 94B, source.html 659B, screenshot.jpg 8.1K\n  history: step-005-click, step-006-click (.rf/state/<dir>/)\n-> All test lines passed live. Final proof before finishing: robot -d results tests/journey.robot"
+   },
+   {
+    "step": "value miss",
+    "chars": 1214,
+    "ms": 1333,
+    "text": "Live run of tests/journey.robot (hook: live Robot Framework session; the page stays open):\n  ('Order Journey': new lines)\n  L22 FAIL  Get Text    id=result    ==    Finished\n      Text 'Done' (str) should be 'Finished' (str)\n      hint: value assertion failed -- an assertion operator retries only ~1 s (retry_assertions_for) -- if the page was still updating (spinner, async result), wait for the final value instead; otherwise the expected value or the selector is wrong (.rf/state/aria.yaml)  try: Wait For Condition    Text    id=result    ==    Finished    timeout=15s\n      docs: .rf/docs/kw/Browser.Get_Text.md  Get Text(selector, assertion_operator=None, assertion_expected=None, message=None) -- Returns text attribute of the element found by selector.\nPage (step-007-get-text): \"Shop - Confirmation\"  file:///tmp/claude-1000/-home-~-workspace-rf-mcp/1fce9b83-a4c5-4548-8f0f-3be83ba63c56/scratchpad/cmp/v2/site/done.html?total=55&ship=e...\n  0 controls; .rf/state/latest/: page.txt 263B, controls.txt 16B, aria.yaml 131B, source.html 715B, screenshot.jpg 9.6K\n-> Fix line 22 of tests/journey.robot or insert lines before it: the hook re-runs from there in this page. Page: .rf/state/latest/controls.txt"
+   },
+   {
+    "step": "value fix",
+    "chars": 267,
+    "ms": 132,
+    "text": "Live run of tests/journey.robot (hook: live Robot Framework session; the page stays open):\n  ('Order Journey': new lines)\n  L22 PASS  Get Text    id=result    ==    Done\n-> All test lines passed live. Final proof before finishing: robot -d results tests/journey.robot"
+   }
+  ],
+  "robot": [
+   {
+    "step": "failing plain run",
+    "chars": 1541,
+    "ms": 14728,
+    "text": "Plain robot run: 1 tests, 0 passed, 1 failed (results/b/output.xml).\n  FAIL 'Broken' (tests/broken.robot:9) at [Click]: TimeoutError: locator.click: Timeout 10000ms exceeded. Call log: - waiting for locator('id=signin-button')\n  docs: .rf/docs/kw/Browser.Click.md  Click(selector, button=left)\n\nReproduced live: 'Broken' re-run from the top in the hook session, stopped at its first failure; that page stays open:\n  ('Broken': reproduce)\n  (browser context closed (fresh cookies/storage for the restart))\n  L3-L11 PASS (3 lines)\n  L12 PASS  Fill Text    id=username    alice\n  L13 NOT RUN (refused before execution: NOT_FOUND)  Click    id=signin-button\n      recheck: MISSING -- not there after the normal 10.0 s either: wrong selector, iframe (`<frame> >>> sel`) or hidden; see .rf/state/latest/controls.txt\n      similar control: button  \"Sign in\"  data-test=signin   => data-test=signin\n      docs: .rf/docs/kw/Browser.Click.md  Click(selector, button=left)\nPage (step-009-click): \"Shop - Sign in\"  file:///tmp/claude-1000/-home-~-workspace-rf-mcp/1fce9b83-a4c5-4548-8f0f-3be83ba63c56/scratchpad/cmp/v2/site/login.html\n  3 controls; .rf/state/latest/: page.txt 234B, controls.txt 215B, aria.yaml 194B, source.html 924B, screenshot.jpg 9.5K\n  controls: \"Username\" id=username | \"Password\" id=password | \"Sign in\" data-test=signin\n  history: step-008-new-page, step-009-click (.rf/state/<dir>/)\n-> Fix line 13 of tests/broken.robot or insert lines before it: the hook re-runs from there in this page. Page: .rf/state/latest/controls.txt"
+   },
+   {
+    "step": "green plain run",
+    "chars": 131,
+    "ms": 95,
+    "text": "Plain robot run: 1 tests, 1 passed, 0 failed (results/j/output.xml).\n  -> verified: tests/journey.robot (green plain run recorded)."
+   }
+  ],
+  "edit_chars_total": 7093,
+  "edit_chars_mean": 887,
+  "edit_chars_max": 1214,
+  "robot_chars": [
+   1541,
+   131
+  ],
+  "hook_ms_edit_median": 2112.0,
+  "hook_ms_edit_total": 19403
+ },
+ "v3": {
+  "edits": [
+   {
+    "step": "first write",
+    "chars": 239,
+    "ms": 2995,
+    "text": "Live tests/journey.robot: L3-L12 PASS (4 lines)\nPage \"Shop - Sign in\" login.html (3 controls) | files: .rf/state/latest/\nAll lines pass live. NEXT: robot -d results tests/journey.robot\nKeyword lists: .rf/docs/Browser.md (grep -i '<words>')"
+   },
+   {
+    "step": "signin",
+    "chars": 190,
+    "ms": 1342,
+    "text": "Live tests/journey.robot: L13-L15 PASS (3 lines)\nPage \"Shop - Order\" order.html?user=alice (7 controls; iframes: id=pay-frame)\nAll lines pass live. NEXT: robot -d results tests/journey.robot"
+   },
+   {
+    "step": "hidden radio",
+    "chars": 581,
+    "ms": 2653,
+    "text": "Live tests/journey.robot: L16 NOT RUN  Check Checkbox id=ship-express\n  verdict: NOT_VISIBLE - the <input type=radio> is hidden by CSS (styled control): click its visible label `Click label[for=\"ship-express\"]`, then verify `Get Checkbox State id=ship-express == checked`\n  similar controls:\n    \"Express\" => label[for=\"ship-express\"]\n    \"Standard\" => label[for=\"ship-standard\"]\n  keyword: Check Checkbox(selector, force=False) (full doc on request: .rf/docs/kw/Browser.Check_Checkbox.md)\nPage unchanged: \"Shop - Order\"\nNEXT: line 16: `Click    label[for=\"ship-express\"]` instead."
+   },
+   {
+    "step": "label fix",
+    "chars": 190,
+    "ms": 812,
+    "text": "Live tests/journey.robot: L16-L17 PASS (2 lines)\nPage \"Shop - Order\" order.html?user=alice (7 controls; iframes: id=pay-frame)\nAll lines pass live. NEXT: robot -d results tests/journey.robot"
+   },
+   {
+    "step": "iframe miss",
+    "chars": 292,
+    "ms": 2750,
+    "text": "Live tests/journey.robot: L18 NOT RUN  Fill Text id=card 4242\n  verdict: IN_IFRAME - found inside an iframe: use `id=pay-frame >>> id=card`\n  keyword: Fill Text(selector, txt, force=False)\nPage unchanged: \"Shop - Order\"\nNEXT: use `id=pay-frame >>> id=card` on line 18; only that line re-runs."
+   },
+   {
+    "step": "iframe fix + slow",
+    "chars": 190,
+    "ms": 4945,
+    "text": "Live tests/journey.robot: L18-L20 PASS (3 lines)\nL21 PASS after 4.1 s (late element; this page now keeps the normal 10 s live)\nAll lines pass live. NEXT: robot -d results tests/journey.robot"
+   },
+   {
+    "step": "value miss",
+    "chars": 401,
+    "ms": 1260,
+    "text": "Live tests/journey.robot: L22 FAIL  Get Text id=result == Finished\n  actual 'Done' vs expected 'Finished' (the expected text is NOT on the page: check the app state / the steps before)\n  keyword: Get Text(selector, assertion_operator=None, assertion_expected=None, message=None)\nPage unchanged: \"Shop - Confirmation\"\nNEXT: line 22: fix the expected value or the step that sets it (not a timing issue)."
+   },
+   {
+    "step": "value fix",
+    "chars": 136,
+    "ms": 169,
+    "text": "Live tests/journey.robot: L22 PASS\nPage unchanged: \"Shop - Confirmation\"\nAll lines pass live. NEXT: robot -d results tests/journey.robot"
+   }
+  ],
+  "robot": [
+   {
+    "step": "failing plain run",
+    "chars": 654,
+    "ms": 6820,
+    "text": "Plain robot: 1 tests, 0 passed, 1 failed (results/b/output.xml)\n  FAIL 'Broken' (tests/broken.robot) at Click: TimeoutError: locator.click: Timeout 10000ms exceeded. | no element matched `id=signin-button`\n  keyword: Click(selector, button=left)\nReproduced live ('Broken' from the top): L3-L12 PASS (4 lines)\nL13 NOT RUN  Click id=signin-button\n  verdict: MISSING - the page did not change for 6.2 s: wrong selector or iframe, not timing\n  similar controls:\n    \"Sign in\" => data-test=signin\nPage \"Shop - Sign in\" login.html (3 controls)\nNEXT: fix the selector on line 13 from a control above (all: .rf/state/latest/controls.txt); only that line re-runs."
+   },
+   {
+    "step": "green plain run",
+    "chars": 74,
+    "ms": 109,
+    "text": "Plain robot: 1 tests, 1 passed, 0 failed -> verified: tests/journey.robot."
+   }
+  ],
+  "edit_chars_total": 2219,
+  "edit_chars_mean": 277,
+  "edit_chars_max": 581,
+  "robot_chars": [
+   654,
+   74
+  ],
+  "hook_ms_edit_median": 1997.5,
+  "hook_ms_edit_total": 16926
+ }
+}

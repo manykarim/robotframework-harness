@@ -1,0 +1,5 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Shop - Confirmation</title></head><body>
+<h1>Thank you</h1><p id="result" role="status">Processing...</p>
+<script>const q=new URLSearchParams(location.search);
+setTimeout(()=>{document.getElementById('result').textContent='Order ORD-'+(1000+Number(q.get('total')||0))+' confirmed! Total: '+Number(q.get('total')||0).toFixed(2)+' EUR';},1500);</script>
+</body></html>

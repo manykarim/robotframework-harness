@@ -1,0 +1,14 @@
+[ INFO ] {"browser": "chromium", "headless": true, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/hints/runs/M01/plain/browser/traces/temp/8598d105-2904-4e86-a65e-393821da0a49"}
+[ INFO ] Starting Browser process ~/workspace/robotcode-experiments/.venv/lib/python3.13/site-packages/Browser/wrapper/index.js using at 127.0.0.1:33987
+[ INFO ] Successfully created browser with options: {"browser":"chromium","headless":true,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/hints/runs/M01/plain/browser/traces/temp/8598d105-2904-4e86-a65e-393821da0a49"}
+[ INFO ] Successfully initialized new page object and opened url: https://www.saucedemo.com
+[ INFO ] No context was open. New context was automatically opened when this page is created.
+[ INFO ] Clicks the element '[data-test="login-btn"]'.
+[ INFO ] *HTML*</td></tr><tr><td colspan="3"><a href="browser/screenshot/fail-screenshot-1.png" target="_blank"><img src="browser/screenshot/fail-screenshot-1.png" style="max-width:800px;max-height:800px;"/></a>
+[ INFO ] See also file://~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/hints/runs/M01/plain/playwright-log.txt for additional details.
+
+# --- stderr ---
+[ FAIL ] TimeoutError: locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator('[data-test="login-btn"]')
+

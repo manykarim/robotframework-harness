@@ -1,0 +1,82 @@
+[09:23:42] [config] models={'claude': 'claude-haiku-4-5', 'codex': 'gpt-5.6-luna', 'opencode': 'minimax-coding-plan/MiniMax-M2.5', 'copilot': 'gpt-4.1'} codex_effort='medium' opencode_variant='' results=~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/ab/harness/results_live_v32.jsonl work=~/.cache/ab-eval/work_live_v32 prune=True browser_concurrency=1 or_models={'qwen3.8-flash': 'qwen/qwen3.8-flash'} or_budget_usd=15
+[09:23:43] [openrouter] models={'qwen3.8-flash': 'qwen/qwen3.8-flash'} budget=$15.00 baseline usage=$28.0037 spent since batch start=$0.0000
+[09:23:43] disk before:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  234G  215G  7,0G  97% /
+[09:23:43] [batch] 60 cells to run (skipping 0 done), concurrency=3, browser<=1, per-agent<=2, prune=True
+[09:28:34] [1/60] codex|hookpkg31|tricentis_quote|1 -> status=ok primary=False pass=11/12 mcp_calls=0 tools=30 290.7s
+[09:38:19] [2/60] cc-or:qwen3.8-flash|hookpkg32|tricentis_quote|1 -> status=ok primary=False pass=11/12 mcp_calls=0 tools=61 585.1s or_est=$0.056789 or_delta=$0.133723
+[09:40:47] [3/60] codex|hookpkg31|carconfig_order|1 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=31 147.6s
+[09:42:46] [4/60] codex|hookpkg32|carconfig_order|1 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=27 119.4s
+[09:56:37] [5/60] cc-or:qwen3.8-flash|hookpkg31|carconfig_order|1 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=37 830.9s or_est=$0.036464 or_delta=$0.158034
+[10:02:02] [6/60] cc-or:qwen3.8-flash|hookpkg32|carconfig_order|1 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=33 324.6s or_est=$0.029657 or_delta=$0.131531
+[10:04:50] [7/60] codex|hookpkg31|demoshop_order|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=28 168.4s
+[10:07:24] [8/60] codex|hookpkg32|demoshop_order|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=29 153.9s
+[10:17:50] [9/60] cc-or:qwen3.8-flash|hookpkg31|demoshop_order|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=56 625.3s or_est=$0.058357 or_delta=$0.267412
+[10:23:59] [10/60] cc-or:qwen3.8-flash|hookpkg32|demoshop_order|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=38 369.3s or_est=$0.033028 or_delta=$0.11455
+[10:33:34] [11/60] codex|hookpkg31|demoshop_debug|1 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=42 574.7s
+[10:41:39] [12/60] codex|hookpkg32|demoshop_debug|1 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=29 485.4s
+[10:53:24] [13/60] cc-or:qwen3.8-flash|hookpkg31|demoshop_debug|1 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=30 704.9s or_est=$0.035856 or_delta=$0.288667
+[11:23:59] [14/60] cc-or:qwen3.8-flash|hookpkg32|demoshop_debug|1 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=60 1835.0s or_est=$0.0 or_delta=$0.583492
+[11:32:04] [15/60] codex|hookpkg31|tricentis_debug|1 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=33 485.2s
+[11:35:24] [16/60] codex|hookpkg32|tricentis_debug|1 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=18 199.5s
+[11:57:37] [17/60] cc-or:qwen3.8-flash|hookpkg31|tricentis_debug|1 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=63 1333.3s or_est=$0.106111 or_delta=$1.587967
+[12:10:04] [18/60] cc-or:qwen3.8-flash|hookpkg32|tricentis_debug|1 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=36 746.2s or_est=$0.045763 or_delta=$0.38479
+[12:12:33] [19/60] codex|hookpkg31|tricentis_quote|2 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=23 150.0s
+[12:15:34] [20/60] codex|hookpkg32|tricentis_quote|2 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=31 181.0s
+[12:16:03] [21/60] cc-or:qwen3.8-flash|hookpkg31|tricentis_quote|2 -> status=ok primary=False pass=1/12 mcp_calls=0 tools=0 28.0s or_est=$0.0 or_delta=$0.000586
+[12:16:37] [22/60] cc-or:qwen3.8-flash|hookpkg32|tricentis_quote|2 -> status=ok primary=False pass=1/12 mcp_calls=0 tools=0 34.4s or_est=$0.0 or_delta=$0.001587
+[12:19:12] [23/60] codex|hookpkg31|carconfig_order|2 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=19 155.1s
+[12:21:59] [24/60] codex|hookpkg32|carconfig_order|2 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=21 167.2s
+[12:22:28] [25/60] cc-or:qwen3.8-flash|hookpkg31|carconfig_order|2 -> status=ok primary=False pass=1/11 mcp_calls=0 tools=0 28.3s or_est=$0.0 or_delta=$0.005262
+[12:22:39] [26/60] cc-or:qwen3.8-flash|hookpkg32|carconfig_order|2 -> status=ok primary=False pass=1/11 mcp_calls=0 tools=0 10.5s or_est=$0.0 or_delta=$0.00095
+[12:25:11] [27/60] codex|hookpkg31|demoshop_order|2 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=25 151.9s
+[12:26:54] [28/60] codex|hookpkg32|demoshop_order|2 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=23 103.9s
+[12:27:35] [29/60] cc-or:qwen3.8-flash|hookpkg31|demoshop_order|2 -> status=ok primary=False pass=1/12 mcp_calls=0 tools=0 40.8s or_est=$0.0 or_delta=$0.002675
+[12:27:52] [30/60] cc-or:qwen3.8-flash|hookpkg32|demoshop_order|2 -> status=ok primary=False pass=1/12 mcp_calls=0 tools=0 16.6s or_est=$0.0 or_delta=$0.001246
+[12:32:34] [31/60] codex|hookpkg31|demoshop_debug|2 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=31 282.3s
+[12:37:03] [32/60] codex|hookpkg32|demoshop_debug|2 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=29 268.8s
+[12:39:22] [33/60] cc-or:qwen3.8-flash|hookpkg31|demoshop_debug|2 -> status=ok primary=False pass=13/17 mcp_calls=0 tools=0 138.7s or_est=$0.0 or_delta=$None
+[12:41:52] [34/60] cc-or:qwen3.8-flash|hookpkg32|demoshop_debug|2 -> status=ok primary=False pass=13/17 mcp_calls=0 tools=0 150.2s or_est=$0.0 or_delta=$0.0
+[12:45:57] [35/60] codex|hookpkg31|tricentis_debug|2 -> status=ok primary=False pass=10/15 mcp_calls=0 tools=3 244.5s
+[12:56:28] [36/60] codex|hookpkg32|tricentis_debug|2 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=30 631.4s
+[12:57:50] [37/60] cc-or:qwen3.8-flash|hookpkg31|tricentis_debug|2 -> status=ok primary=False pass=10/15 mcp_calls=0 tools=0 82.0s or_est=$0.0 or_delta=$0.0
+[12:59:17] [38/60] cc-or:qwen3.8-flash|hookpkg32|tricentis_debug|2 -> status=ok primary=False pass=10/15 mcp_calls=0 tools=0 86.1s or_est=$0.0 or_delta=$0.0
+[13:02:26] [39/60] codex|hookpkg31|tricentis_quote|3 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=35 189.0s
+[13:05:45] [40/60] codex|hookpkg32|tricentis_quote|3 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=25 199.1s
+[13:06:31] [41/60] cc-or:qwen3.8-flash|hookpkg31|tricentis_quote|3 -> status=ok primary=False pass=1/12 mcp_calls=0 tools=0 46.2s or_est=$0.0 or_delta=$0.0
+[13:07:18] [42/60] cc-or:qwen3.8-flash|hookpkg32|tricentis_quote|3 -> status=ok primary=False pass=1/12 mcp_calls=0 tools=0 47.2s or_est=$0.0 or_delta=$0.0
+[13:09:42] [43/60] codex|hookpkg31|carconfig_order|3 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=23 143.3s
+[13:10:00] signal 15: aborting - killing running agents, no new cells
+[13:10:05] [44/60] codex|hookpkg32|carconfig_order|3 -> status=aborted primary=False pass=6/11 mcp_calls=0 tools=5 23.3s
+[13:10:06] [batch] done: ran=44 skipped=16 reaper_kills_total=13 (final sweep 0) openrouter: spent $4.2811 of $15.00, 0 cells skipped by the budget
+[13:10:06] disk after:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  234G  211G   12G  95% /
+[13:11:44] [config] models={'claude': 'claude-haiku-4-5', 'codex': 'gpt-5.6-luna', 'opencode': 'minimax-coding-plan/MiniMax-M2.5', 'copilot': 'gpt-4.1'} codex_effort='medium' opencode_variant='' results=~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/ab/harness/results_live_v32.jsonl work=~/.cache/ab-eval/work_live_v32 prune=True browser_concurrency=2 or_models={'deepseek-v4.1-flash': 'deepseek/deepseek-v4.1-flash', 'qwen3.8-flash': 'qwen/qwen3.8-flash', 'glm-5.3-flash': 'z-ai/glm-5.3-flash', 'gemini-3.8-flash': 'google/gemini-3.8-flash'} or_budget_usd=150
+[13:11:44] disk before:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  234G  210G   12G  95% /
+[13:11:44] [batch] 8 cells to run (skipping 31 done), concurrency=3, browser<=2, per-agent<=2, prune=True
+[13:14:21] [1/8] codex|hookpkg32|tricentis_quote|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=20 157.3s
+[13:14:45] [2/8] codex|hookpkg32|carconfig_order|3 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=31 181.0s
+[13:16:19] [3/8] codex|hookpkg32|demoshop_order|3 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=27 118.2s
+[13:19:43] [4/8] codex|hookpkg32|demoshop_debug|3 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=24 203.5s
+[13:23:25] [5/8] codex|hookpkg31|demoshop_debug|3 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=49 519.6s
+[13:24:58] [6/8] codex|hookpkg31|tricentis_debug|3 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=40 314.9s
+[13:26:57] [7/8] codex|hookpkg31|demoshop_order|3 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=27 118.9s
+[13:27:56] [8/8] codex|hookpkg32|tricentis_debug|3 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=33 271.2s
+[13:27:56] [batch] done: ran=8 skipped=0 reaper_kills_total=0 (final sweep 0)
+[13:27:56] disk after:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  234G  211G   12G  96% /
+[13:29:15] [config] models={'claude': 'claude-haiku-4-5', 'codex': 'gpt-5.6-luna', 'opencode': 'minimax-coding-plan/MiniMax-M2.5', 'copilot': 'gpt-4.1'} codex_effort='medium' opencode_variant='' results=~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/ab/harness/results_live_v32.jsonl work=~/.cache/ab-eval/work_live_v32 prune=True browser_concurrency=2 or_models={'deepseek-v4.1-flash': 'deepseek/deepseek-v4.1-flash', 'qwen3.8-flash': 'qwen/qwen3.8-flash', 'glm-5.3-flash': 'z-ai/glm-5.3-flash', 'gemini-3.8-flash': 'google/gemini-3.8-flash'} or_budget_usd=150
+[13:29:15] disk before:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  234G  211G   12G  95% /
+[13:29:15] [batch] 1 cells to run (skipping 38 done), concurrency=3, browser<=2, per-agent<=2, prune=True
+[13:33:14] [1/1] codex|hookpkg31|tricentis_debug|2 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=23 239.5s
+[13:33:15] [batch] done: ran=1 skipped=0 reaper_kills_total=0 (final sweep 0)
+[13:33:15] disk after:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  234G  211G   11G  96% /

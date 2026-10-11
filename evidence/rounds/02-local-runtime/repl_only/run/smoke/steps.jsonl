@@ -1,0 +1,25 @@
+{"t": "ready", "pid": 3590714, "hooked": true, "path": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round2/repl_only/run/smoke/steps.jsonl", "ts": 1790836950.97}
+{"t": "idle", "n": 1, "id": null, "ts": 1790836950.999}
+{"t": "begin", "id": "s1", "ts": 1790836951.065}
+{"t": "step", "seq": 1, "id": "s1", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["x"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "x"}], "status": "PASS", "elapsed_ms": 0.9, "return": null, "ts": 1790836951.067}
+{"t": "idle", "n": 2, "id": "s1", "ts": 1790836951.068}
+{"t": "idle", "n": 3, "id": "s1", "ts": 1790836951.068}
+{"t": "end", "id": "s1", "src": "Log  x", "steps": 1, "ts": 1790836951.068}
+{"t": "begin", "id": "s2", "ts": 1790836951.123}
+{"t": "step", "seq": 2, "id": "s2", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["x"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "x"}], "status": "PASS", "elapsed_ms": 0.8, "return": null, "ts": 1790836951.126}
+{"t": "idle", "n": 4, "id": "s2", "ts": 1790836951.126}
+{"t": "idle", "n": 5, "id": "s2", "ts": 1790836951.126}
+{"t": "end", "id": "s2", "src": "Log  x", "steps": 2, "ts": 1790836951.126}
+{"t": "begin", "id": "s3", "ts": 1790836951.178}
+{"t": "step", "seq": 3, "id": "s3", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["x"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "x"}], "status": "PASS", "elapsed_ms": 0.9, "return": null, "ts": 1790836951.18}
+{"t": "idle", "n": 6, "id": "s3", "ts": 1790836951.18}
+{"t": "idle", "n": 7, "id": "s3", "ts": 1790836951.18}
+{"t": "end", "id": "s3", "src": "Log  x", "steps": 3, "ts": 1790836951.18}
+{"t": "begin", "id": "s4", "ts": 1790836951.234}
+{"t": "step", "seq": 4, "id": "s4", "type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["x"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "x"}], "status": "PASS", "elapsed_ms": 1.0, "return": null, "ts": 1790836951.237}
+{"t": "idle", "n": 8, "id": "s4", "ts": 1790836951.237}
+{"t": "idle", "n": 9, "id": "s4", "ts": 1790836951.237}
+{"t": "end", "id": "s4", "src": "Log  x", "steps": 4, "ts": 1790836951.237}
+{"t": "idle", "n": 10, "id": "s4", "ts": 1790836951.293}
+{"t": "step", "seq": 5, "id": "s4", "type": "KEYWORD", "name": "Repl", "owner": "robotcode.repl.Repl", "args": [], "assign": [], "status": "PASS", "elapsed_ms": 295.2, "ts": 1790836951.296}
+{"t": "closed", "ts": 1790836951.296}

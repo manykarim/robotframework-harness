@@ -1,0 +1,4204 @@
+{
+ "round": "07-v31-v32",
+ "asset_format": "tar.zst",
+ "transcript_dirs": [
+  "transcripts_live_v31sub",
+  "transcripts_live_v31or",
+  "transcripts_live_v31gem",
+  "transcripts_live_v32",
+  "transcripts_live_v32smoke"
+ ],
+ "files": 335,
+ "status_counts": {
+  "excluded:aborted": 1,
+  "excluded:codex_backend_outage": 1,
+  "excluded:credits_402": 76,
+  "not_scored_in_results_file": 2,
+  "scored": 255
+ },
+ "scrub_substitutions": {
+  "email": 1207,
+  "home_path": 37731,
+  "home_slug": 9,
+  "oauth_field": 10
+ },
+ "scrub_py_sha256": "4e9a9f3c9ba610bdd294ab4d6282da39075e5cc4130e867dc7aa93abe30f8bb6",
+ "entries": [
+  {
+   "file": "transcripts_live_v31sub/claude/carconfig_order-hookpkg3-rep1-d8103b.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/carconfig_order-hookpkg3-rep1-d8103b.jsonl.gz",
+   "sha256": "375a6dba760e2c0588c79dd335b4bd86c20c8b5145c26c5d3f628721cd1d6919",
+   "bytes": 416697,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg3|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 8,
+    "home_path": 94
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/carconfig_order-hookpkg3-rep2-edc67d.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/carconfig_order-hookpkg3-rep2-edc67d.jsonl.gz",
+   "sha256": "8f1890c7e0f49e8f7a860d80bcaa8b01ac883e6553c4da3beb81684c049f566f",
+   "bytes": 250985,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg3|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 69
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/carconfig_order-hookpkg3-rep3-dc5e38.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/carconfig_order-hookpkg3-rep3-dc5e38.jsonl.gz",
+   "sha256": "82ddcfcddff43a799fbfca8346e7d2b4800e2a4a5eaa71c3b74eafd7d9142f88",
+   "bytes": 249639,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg3|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 83
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/carconfig_order-hookpkg31-rep1-b8ce63.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/carconfig_order-hookpkg31-rep1-b8ce63.jsonl.gz",
+   "sha256": "def419e4df61760c3b203fe887cb770adc270a83603742e3dc3273712592a1de",
+   "bytes": 304175,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg31|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 8,
+    "home_path": 85
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/carconfig_order-hookpkg31-rep2-bff324.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/carconfig_order-hookpkg31-rep2-bff324.jsonl.gz",
+   "sha256": "5ce481f1c64295d97d4a785ad0337c65d715c8c10e0882a51cb835aa73f7b7c7",
+   "bytes": 388737,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg31|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 12,
+    "home_path": 85
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/carconfig_order-hookpkg31-rep3-15fc97.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/carconfig_order-hookpkg31-rep3-15fc97.jsonl.gz",
+   "sha256": "a3e2fe2195b4a5c58b2ab58995a6f188fdf47e2e238b955316e54fcb7518ce7d",
+   "bytes": 314606,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg31|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 8,
+    "home_path": 95
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/carconfig_order-mcp-rep1-fbd5af.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/carconfig_order-mcp-rep1-fbd5af.jsonl.gz",
+   "sha256": "512be6044fc17bd24059b30c40ad103d15543e36cda9da46ebfa46fb58ebbd75",
+   "bytes": 234202,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|mcp|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 12,
+    "home_path": 91
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/carconfig_order-mcp-rep2-df321a.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/carconfig_order-mcp-rep2-df321a.jsonl.gz",
+   "sha256": "c1824bd8ca9c3b2d7f4db7539974b295ac3562a9ff3d3de7cc1c0d01a0a2f06c",
+   "bytes": 291911,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|mcp|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 10,
+    "home_path": 71
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/carconfig_order-mcp-rep3-e8e262.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/carconfig_order-mcp-rep3-e8e262.jsonl.gz",
+   "sha256": "eef022804df74e925b052be315e521cc2c27c2df5564665d35525db1373022c3",
+   "bytes": 342389,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|mcp|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 109
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/demoshop_debug-hookpkg3-rep1-737abb.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/demoshop_debug-hookpkg3-rep1-737abb.jsonl.gz",
+   "sha256": "c6ae8dd68806a8637c1fc8e7607cd3904bfb4692bfa640bcd063e27d41b392cf",
+   "bytes": 409945,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg3|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 89
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/demoshop_debug-hookpkg3-rep2-a92936.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/demoshop_debug-hookpkg3-rep2-a92936.jsonl.gz",
+   "sha256": "6c3079f64aceabaf1b83f777ddf4972fe73c3663ba3089b8fa8957dbeef3f256",
+   "bytes": 554090,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg3|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 186
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/demoshop_debug-hookpkg3-rep3-5b143a.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/demoshop_debug-hookpkg3-rep3-5b143a.jsonl.gz",
+   "sha256": "7a0ff2ee0e078d8ccab607ce334abab8a03e867753b27563cafdf767d976e3c7",
+   "bytes": 588199,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg3|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 174
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/demoshop_debug-hookpkg31-rep1-b3090c.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/demoshop_debug-hookpkg31-rep1-b3090c.jsonl.gz",
+   "sha256": "b5e5d868b94942bc87c585b40094f14bcb6c3a17d3cccd6033cb87ab2c5a8622",
+   "bytes": 303001,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg31|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 75
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/demoshop_debug-hookpkg31-rep2-9ba744.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/demoshop_debug-hookpkg31-rep2-9ba744.jsonl.gz",
+   "sha256": "6713db90aa2ea1fd73ed4fe43349fc7dcf9d5629b14c9fc93c5280169c4f002b",
+   "bytes": 704990,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg31|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 170
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/demoshop_debug-hookpkg31-rep3-5cced7.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/demoshop_debug-hookpkg31-rep3-5cced7.jsonl.gz",
+   "sha256": "68ebf30462bbfeb46693409210ef8dee8e982c06e9652514fde1565f095be5e1",
+   "bytes": 255137,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg31|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 74
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/demoshop_debug-mcp-rep1-c8c07b.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/demoshop_debug-mcp-rep1-c8c07b.jsonl.gz",
+   "sha256": "ece71ca4873cee80733748c45831c76a914e6a0baf2721091120b23a0a99b7f6",
+   "bytes": 376162,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|mcp|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 106
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/demoshop_debug-mcp-rep2-742b9a.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/demoshop_debug-mcp-rep2-742b9a.jsonl.gz",
+   "sha256": "baa323111f4015d769df29d3b43aec8f883cc9780bf0478859fe534984a119cd",
+   "bytes": 600507,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|mcp|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 130
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/demoshop_debug-mcp-rep3-55f1c6.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/demoshop_debug-mcp-rep3-55f1c6.jsonl.gz",
+   "sha256": "2860e36f413937cbd52d1badeca48ae7cb24bd8254f841ca4b57d38cd0140024",
+   "bytes": 572071,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|mcp|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 104
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/demoshop_order-hookpkg3-rep1-91e4aa.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/demoshop_order-hookpkg3-rep1-91e4aa.jsonl.gz",
+   "sha256": "d065cf937a175e5c623ae284deea28cee1a341e89a47a54b1ce735e7ff51e1cc",
+   "bytes": 468751,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg3|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 144
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/demoshop_order-hookpkg3-rep2-fe5edc.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/demoshop_order-hookpkg3-rep2-fe5edc.jsonl.gz",
+   "sha256": "bfe3e8937a6069f9041dec67491899a6d1752fd8cb4b427a60a3d355488fc2dc",
+   "bytes": 359751,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg3|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 104
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/demoshop_order-hookpkg3-rep3-99bb72.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/demoshop_order-hookpkg3-rep3-99bb72.jsonl.gz",
+   "sha256": "3ee79a946a92431969b11d37e10f42984954ac4206ec88623362d64b6f40474a",
+   "bytes": 350882,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg3|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 105
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/demoshop_order-hookpkg31-rep1-989d4f.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/demoshop_order-hookpkg31-rep1-989d4f.jsonl.gz",
+   "sha256": "b378654799d6055bad6c4d7a0942acd1e130bd8a009486582310cbab38867f9d",
+   "bytes": 416753,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg31|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 8,
+    "home_path": 130
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/demoshop_order-hookpkg31-rep2-b12989.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/demoshop_order-hookpkg31-rep2-b12989.jsonl.gz",
+   "sha256": "89a0fe2109719a1b5a2ec1e4da3c12607d7dc9fee50feb729e77b0e53ada441f",
+   "bytes": 368713,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg31|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 114
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/demoshop_order-hookpkg31-rep3-c9a542.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/demoshop_order-hookpkg31-rep3-c9a542.jsonl.gz",
+   "sha256": "49c10d40e4870d1c5ef53fe15cd2188ec719689946f6276dcca12ec3cc050849",
+   "bytes": 347332,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg31|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 8,
+    "home_path": 116
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/demoshop_order-mcp-rep1-eda75e.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/demoshop_order-mcp-rep1-eda75e.jsonl.gz",
+   "sha256": "cb70e30d5a7f38bf243c43c787ddc0e608fbbbeac0d0c233b020def45f4c68d8",
+   "bytes": 386890,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|mcp|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 158
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/demoshop_order-mcp-rep2-b3b695.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/demoshop_order-mcp-rep2-b3b695.jsonl.gz",
+   "sha256": "2a8f3a050e2927aec3780c18fb25aaaad3d35436e99aceabfc735720014fc0f3",
+   "bytes": 370821,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|mcp|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 101
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/demoshop_order-mcp-rep3-a96eeb.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/demoshop_order-mcp-rep3-a96eeb.jsonl.gz",
+   "sha256": "b1090f152717830975be5b6da665bfad2964abff5235ab8eac42cab37e78fd03",
+   "bytes": 332064,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|mcp|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 119
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/tricentis_debug-hookpkg3-rep1-b44f16.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/tricentis_debug-hookpkg3-rep1-b44f16.jsonl.gz",
+   "sha256": "c1874ee216bdb03fa10cf24f80d4610c2529b8f5232ea31cf02de9fca1f98f34",
+   "bytes": 367912,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg3|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 106
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/tricentis_debug-hookpkg3-rep2-ea0d67.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/tricentis_debug-hookpkg3-rep2-ea0d67.jsonl.gz",
+   "sha256": "3a0160f0a66406d6a054d0829a1dcfe6556ae0414092613dfea999e3945c3a62",
+   "bytes": 270046,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg3|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 70
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/tricentis_debug-hookpkg3-rep3-729848.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/tricentis_debug-hookpkg3-rep3-729848.jsonl.gz",
+   "sha256": "22b74735b9f27733102c408dd671ec24a06d3ca106299615614f21ce21ad086a",
+   "bytes": 416017,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg3|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 103
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/tricentis_debug-hookpkg31-rep1-db7c85.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/tricentis_debug-hookpkg31-rep1-db7c85.jsonl.gz",
+   "sha256": "25154785cac45215630ca6d3e6a989dbde8da07b9eb7affe37d4842a432e30b2",
+   "bytes": 326973,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg31|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 95
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/tricentis_debug-hookpkg31-rep2-5f14de.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/tricentis_debug-hookpkg31-rep2-5f14de.jsonl.gz",
+   "sha256": "3f018a70f7c91cc0483c635cb5f54a0b0319d39d7e4feff257d6ebdc51a7dbb1",
+   "bytes": 507855,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg31|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "email": 1,
+    "home_path": 152
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/tricentis_debug-hookpkg31-rep3-033171.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/tricentis_debug-hookpkg31-rep3-033171.jsonl.gz",
+   "sha256": "bd338277b52085fad056ed84d1ec096ea0534f9c760f6dca125418b3da1088fa",
+   "bytes": 598591,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg31|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 182
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/tricentis_debug-mcp-rep1-64c8be.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/tricentis_debug-mcp-rep1-64c8be.jsonl.gz",
+   "sha256": "1c46fd6ac885a09afac40940dbf27dda2fcdeb7d5dcfbbf344bbc260c9fb5b0b",
+   "bytes": 261555,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|mcp|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 86
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/tricentis_debug-mcp-rep2-dd564d.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/tricentis_debug-mcp-rep2-dd564d.jsonl.gz",
+   "sha256": "bef271383e442194dc33114fbc4c399b37b27402694464f3ee0c3923dbe357ef",
+   "bytes": 393975,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|mcp|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 95
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/tricentis_debug-mcp-rep3-3846d4.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/tricentis_debug-mcp-rep3-3846d4.jsonl.gz",
+   "sha256": "416e8d410842d3cdf67d39f565b21b1b0f6aeba667f6f292c019e452c0d7d3dd",
+   "bytes": 450230,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|mcp|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 146
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/tricentis_quote-hookpkg3-rep1-e135a1.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/tricentis_quote-hookpkg3-rep1-e135a1.jsonl.gz",
+   "sha256": "b0d53414d0d2e85a0d437efac10ec5415d7e02b85ed464e9218fd6cc289c6750",
+   "bytes": 367443,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg3|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 142
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/tricentis_quote-hookpkg3-rep2-7121ce.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/tricentis_quote-hookpkg3-rep2-7121ce.jsonl.gz",
+   "sha256": "8d04708c0e3cf62133b907a0f2cf2f3a500719cdb2742f260c939a35300c0331",
+   "bytes": 335447,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg3|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 115
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/tricentis_quote-hookpkg3-rep3-dce5ad.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/tricentis_quote-hookpkg3-rep3-dce5ad.jsonl.gz",
+   "sha256": "ae7ae5de631958fd5e0e7f4128bb4b402cd275947d924343aea96913c94367cc",
+   "bytes": 306112,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg3|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 96
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/tricentis_quote-hookpkg31-rep1-fa825f.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/tricentis_quote-hookpkg31-rep1-fa825f.jsonl.gz",
+   "sha256": "36919d3a536be97d75df0312cb9f2f5dc8834376fcb03f1fcb50f975ad07f157",
+   "bytes": 349516,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg31|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 115
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/tricentis_quote-hookpkg31-rep2-f2e84e.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/tricentis_quote-hookpkg31-rep2-f2e84e.jsonl.gz",
+   "sha256": "808dda62754de3269a0409264196330e1bfbf64073e924f44ec3d74cbfdb3786",
+   "bytes": 354989,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg31|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 130
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/tricentis_quote-hookpkg31-rep3-cab713.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/tricentis_quote-hookpkg31-rep3-cab713.jsonl.gz",
+   "sha256": "3b5e84fbb122063371d8a67f5278f9cb2209cdd0161598bf0c12e6dd2ba92fdb",
+   "bytes": 376220,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|hookpkg31|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 128
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/tricentis_quote-mcp-rep1-769e18.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/tricentis_quote-mcp-rep1-769e18.jsonl.gz",
+   "sha256": "07972e089995af7b348d0769239bbae830bbbeea1f5a067481059bfe3145a536",
+   "bytes": 485483,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|mcp|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 87
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/tricentis_quote-mcp-rep2-be26fe.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/tricentis_quote-mcp-rep2-be26fe.jsonl.gz",
+   "sha256": "eee580797f306540ca8cb8c0163c20b329cc3c3113afb7decd77130d91d9d852",
+   "bytes": 266209,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|mcp|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 87
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/claude/tricentis_quote-mcp-rep3-b62458.jsonl",
+   "transcript": "transcripts_live_v31sub/claude/tricentis_quote-mcp-rep3-b62458.jsonl.gz",
+   "sha256": "8864f45026721505e5366d8c6f74660fe43893a47d12a2a3e7666cf50ca9cc23",
+   "bytes": 367505,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "claude|mcp|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 149
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/carconfig_order-hookpkg3-rep1-302355.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/carconfig_order-hookpkg3-rep1-302355.jsonl.gz",
+   "sha256": "9809b00d10fb6540b996b0b6eb43f8efb0fd44342bf3da3a6ab95098adaa43c4",
+   "bytes": 140632,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg3|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 7,
+    "home_path": 33
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/carconfig_order-hookpkg3-rep2-329cba.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/carconfig_order-hookpkg3-rep2-329cba.jsonl.gz",
+   "sha256": "f41e60188a2b8e08f0a1ac8467d412acaa8a3b8674f2d430f4e337b23efa2fd7",
+   "bytes": 127853,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg3|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 41
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/carconfig_order-hookpkg3-rep3-1e7008.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/carconfig_order-hookpkg3-rep3-1e7008.jsonl.gz",
+   "sha256": "329c2fc055ec0d2c5350df4b434e69560c5e96e93958a364a712a7b55f867cb5",
+   "bytes": 139680,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg3|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 37
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/carconfig_order-hookpkg31-rep1-1a5f57.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/carconfig_order-hookpkg31-rep1-1a5f57.jsonl.gz",
+   "sha256": "f4414fa77fa6baf748cf2ce3ae2e66cff34e575aa323e833ce46af9c1b59470e",
+   "bytes": 215060,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg31|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 10,
+    "home_path": 34
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/carconfig_order-hookpkg31-rep2-a09ea8.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/carconfig_order-hookpkg31-rep2-a09ea8.jsonl.gz",
+   "sha256": "b39688d7ba0de882b28611b2a6704f92afa3bef386a30c7f3124d44291533006",
+   "bytes": 140296,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg31|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 7,
+    "home_path": 37
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/carconfig_order-hookpkg31-rep3-2b5a23.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/carconfig_order-hookpkg31-rep3-2b5a23.jsonl.gz",
+   "sha256": "d2bad4629e12837bc1d90425d0897340f175f34e2a507b30466c01935dc18a76",
+   "bytes": 144632,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg31|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 8,
+    "home_path": 52
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/carconfig_order-mcp-rep1-9a3d30.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/carconfig_order-mcp-rep1-9a3d30.jsonl.gz",
+   "sha256": "ad022176a11244f84a4d24fdbdb15b989c616cf8be0f225241cd67f162cebadd",
+   "bytes": 120470,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|mcp|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 8,
+    "home_path": 30
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/carconfig_order-mcp-rep2-f7be4b.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/carconfig_order-mcp-rep2-f7be4b.jsonl.gz",
+   "sha256": "f1592d09b54fb93e2ed2a971457e1d7d40cd77f4900394a10ed4389a09863b96",
+   "bytes": 426740,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|mcp|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 17,
+    "home_path": 76
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/carconfig_order-mcp-rep3-e7efab.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/carconfig_order-mcp-rep3-e7efab.jsonl.gz",
+   "sha256": "60410828cf3b55e2335dfdab03c7d95e84921b98746d018d50d99f0b8d163374",
+   "bytes": 156897,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|mcp|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 11,
+    "home_path": 81
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/demoshop_debug-hookpkg3-rep1-4ead6f.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/demoshop_debug-hookpkg3-rep1-4ead6f.jsonl.gz",
+   "sha256": "6af3a232a1125ed8dee43e444e3de1b72e5ca6f933d814876fd219fb0b3d3236",
+   "bytes": 92618,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg3|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 38
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/demoshop_debug-hookpkg3-rep2-90f2ac.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/demoshop_debug-hookpkg3-rep2-90f2ac.jsonl.gz",
+   "sha256": "8da04f952473bb18e209383eb80fe4520dc472126eafee68463d2a7923b90147",
+   "bytes": 104116,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg3|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "email": 3,
+    "home_path": 55
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/demoshop_debug-hookpkg3-rep3-164e97.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/demoshop_debug-hookpkg3-rep3-164e97.jsonl.gz",
+   "sha256": "7a9957495d1b1b6e48eed6f46321c2adb47514e34b3de9228aedbddeb386005e",
+   "bytes": 168138,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg3|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "email": 3,
+    "home_path": 50,
+    "oauth_field": 1
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/demoshop_debug-hookpkg31-rep1-38a0c4.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/demoshop_debug-hookpkg31-rep1-38a0c4.jsonl.gz",
+   "sha256": "8f237f2df55b97a85aba62318f234798f39de2d4d884bdeaf9b0d5194424e445",
+   "bytes": 82353,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg31|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 1,
+    "home_path": 23,
+    "oauth_field": 1
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/demoshop_debug-hookpkg31-rep2-87b9d7.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/demoshop_debug-hookpkg31-rep2-87b9d7.jsonl.gz",
+   "sha256": "d1afc7c0bb10b6343c6775dcb3236f9b4df54c85b85ee8fbea7ca01320aed928",
+   "bytes": 64473,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg31|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "email": 1,
+    "home_path": 32
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/demoshop_debug-hookpkg31-rep3-360614.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/demoshop_debug-hookpkg31-rep3-360614.jsonl.gz",
+   "sha256": "cce2ed5cade82ac40db233fc436546e3ff85f4dd5f359a61d6bb07bb0034f4ab",
+   "bytes": 103689,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg31|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "email": 3,
+    "home_path": 71
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/demoshop_debug-mcp-rep1-e08ccb.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/demoshop_debug-mcp-rep1-e08ccb.jsonl.gz",
+   "sha256": "941e581638987757810a166f7ae56afd1ab726e41101701700f2e5bc7e6f6a42",
+   "bytes": 350320,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|mcp|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 85
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/demoshop_debug-mcp-rep2-58f193.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/demoshop_debug-mcp-rep2-58f193.jsonl.gz",
+   "sha256": "fc8d12f2b02ad719efa261fdbaf8691e3d7586b524302333fde1724db127e9b5",
+   "bytes": 116629,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|mcp|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 31,
+    "oauth_field": 1
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/demoshop_debug-mcp-rep3-3eeef5.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/demoshop_debug-mcp-rep3-3eeef5.jsonl.gz",
+   "sha256": "9f13ddd762735e064124161d490522a753b89f8b7c8b453ab5cb9e5ce75f9366",
+   "bytes": 238000,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|mcp|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 90
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/demoshop_order-hookpkg3-rep1-493ff8.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/demoshop_order-hookpkg3-rep1-493ff8.jsonl.gz",
+   "sha256": "c819031ffa0233505a6ff42984a8ef0918c310c1ffd465249418ffbd32d8e0a8",
+   "bytes": 77038,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg3|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 3,
+    "home_path": 38
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/demoshop_order-hookpkg3-rep2-816a2d.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/demoshop_order-hookpkg3-rep2-816a2d.jsonl.gz",
+   "sha256": "eca713f55a48d501fbe4ad99c43b787b4914cde3691309b95848732e58cd3646",
+   "bytes": 70225,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg3|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 49
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/demoshop_order-hookpkg3-rep3-4e4f34.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/demoshop_order-hookpkg3-rep3-4e4f34.jsonl.gz",
+   "sha256": "2afb03427069ed9b2a52d861899b1c80d83990045daef771589f6a41daef0e28",
+   "bytes": 73305,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg3|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 3,
+    "home_path": 47
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/demoshop_order-hookpkg31-rep1-121524.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/demoshop_order-hookpkg31-rep1-121524.jsonl.gz",
+   "sha256": "047b6fcb0af0a6fd76bcddf830e5c05f916dff1a6b6e55706c6282700f5bcccc",
+   "bytes": 79204,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg31|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 5,
+    "home_path": 40
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/demoshop_order-hookpkg31-rep2-be4ccd.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/demoshop_order-hookpkg31-rep2-be4ccd.jsonl.gz",
+   "sha256": "e7974c56fa7b8ebbecdd581686bf748b9a60c4fb7779119dadcd88e5800c41e2",
+   "bytes": 106834,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg31|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 3,
+    "home_path": 55
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/demoshop_order-hookpkg31-rep3-315259.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/demoshop_order-hookpkg31-rep3-315259.jsonl.gz",
+   "sha256": "125ba4cb14647f6d3979eb03c11e6194ff769a11941fc1825b42b548c7c1ed39",
+   "bytes": 86196,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg31|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 46
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/demoshop_order-mcp-rep1-2bf47f.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/demoshop_order-mcp-rep1-2bf47f.jsonl.gz",
+   "sha256": "704738384be62c214cc886969e2df666cff828e01a47aacc635a356b2223e2ed",
+   "bytes": 166582,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|mcp|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 3,
+    "home_path": 35
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/demoshop_order-mcp-rep2-0d7e19.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/demoshop_order-mcp-rep2-0d7e19.jsonl.gz",
+   "sha256": "d01aa017f2d28fdf71b99a41467615e9dc91da1847f196a04d04afa676ccd37b",
+   "bytes": 81998,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|mcp|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 3,
+    "home_path": 39
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/demoshop_order-mcp-rep3-d12af8.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/demoshop_order-mcp-rep3-d12af8.jsonl.gz",
+   "sha256": "bc1ce37d16d84e4f8e4bb6107ba7584614baee87c865222e24ecdf3bfaba3374",
+   "bytes": 71843,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|mcp|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 3,
+    "home_path": 58
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/tricentis_debug-hookpkg3-rep1-d4b288.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/tricentis_debug-hookpkg3-rep1-d4b288.jsonl.gz",
+   "sha256": "308be3026e4c02e5fc8c9b6a008cf82afeb894165149c3a08a5254f811d8a906",
+   "bytes": 108484,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg3|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 51
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/tricentis_debug-hookpkg3-rep2-ac1d0a.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/tricentis_debug-hookpkg3-rep2-ac1d0a.jsonl.gz",
+   "sha256": "4d46d4c5a6ef38e5388c872512bd9a2be30e3850577b3ad10b8957b571c5b4f3",
+   "bytes": 81380,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg3|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 57
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/tricentis_debug-hookpkg3-rep3-ad6b61.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/tricentis_debug-hookpkg3-rep3-ad6b61.jsonl.gz",
+   "sha256": "57c5db94ec05165b7b0550ff9fb1582922bbf58a8fc5aa116b1d47fd2e1d16c8",
+   "bytes": 121111,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg3|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 71
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/tricentis_debug-hookpkg31-rep1-4869ad.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/tricentis_debug-hookpkg31-rep1-4869ad.jsonl.gz",
+   "sha256": "505df73c004346b4d9e91c770afbb57bce8c4485192560ac1a41245779f80963",
+   "bytes": 101580,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg31|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 79
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/tricentis_debug-hookpkg31-rep2-32445a.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/tricentis_debug-hookpkg31-rep2-32445a.jsonl.gz",
+   "sha256": "461c3099e573fd8d0e70fde9ec8b37a064b4ae1003d6d26f6618f1e1302b41d9",
+   "bytes": 121629,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg31|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 109
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/tricentis_debug-hookpkg31-rep3-f9c021.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/tricentis_debug-hookpkg31-rep3-f9c021.jsonl.gz",
+   "sha256": "408ef4fff716c98235d63a8ba000c1baf9712b87080c4ad103120c091804a7cb",
+   "bytes": 64004,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg31|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 49
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/tricentis_debug-mcp-rep1-6cec84.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/tricentis_debug-mcp-rep1-6cec84.jsonl.gz",
+   "sha256": "5d47560dee81b20beb89a87859e526f1efff94d0b1d7da16743027ae26c47493",
+   "bytes": 369917,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|mcp|tricentis_debug|1",
+   "status": "not_scored_in_results_file",
+   "scrub": {
+    "home_path": 76
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/tricentis_debug-mcp-rep2-bd2675.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/tricentis_debug-mcp-rep2-bd2675.jsonl.gz",
+   "sha256": "12b08bc1f2cca3d7cc18992b2e548dac0f9d82d94479a73e13db7833e00ae1a5",
+   "bytes": 82553,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|mcp|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 68
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/tricentis_debug-mcp-rep3-305dee.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/tricentis_debug-mcp-rep3-305dee.jsonl.gz",
+   "sha256": "f6427aa13d816f8d59832a5958990145ebdb3cd2967b1ec5cda0ad2acf840dfd",
+   "bytes": 135030,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|mcp|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 206
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/tricentis_quote-hookpkg3-rep1-a699fe.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/tricentis_quote-hookpkg3-rep1-a699fe.jsonl.gz",
+   "sha256": "58c08c74ce17c2954e72026e469ccceb447d92c4a22279aa9f7d4f79ad719ec9",
+   "bytes": 71189,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg3|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 43
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/tricentis_quote-hookpkg3-rep2-ec729b.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/tricentis_quote-hookpkg3-rep2-ec729b.jsonl.gz",
+   "sha256": "2f0733ce380d4b532510a787e6e34130443c92ab5d4d9b8bc289b3931fe557a0",
+   "bytes": 68301,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg3|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 46
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/tricentis_quote-hookpkg3-rep3-1fa305.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/tricentis_quote-hookpkg3-rep3-1fa305.jsonl.gz",
+   "sha256": "76e3d112b9f407b2106b1e1c76ddfba09a68a57433a6b8ad94315c0542dcdda6",
+   "bytes": 65006,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg3|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 41
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/tricentis_quote-hookpkg31-rep1-242978.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/tricentis_quote-hookpkg31-rep1-242978.jsonl.gz",
+   "sha256": "574995f0915a986715a55ebedee476bfcf4bfb26cc964024c010320c362430aa",
+   "bytes": 71726,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg31|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 56
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/tricentis_quote-hookpkg31-rep2-b4c550.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/tricentis_quote-hookpkg31-rep2-b4c550.jsonl.gz",
+   "sha256": "69fdb29a8e0d7230cb0c278a8c2a4f46726ec2474b06ffb104214a4349372057",
+   "bytes": 79538,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg31|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 50
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/tricentis_quote-hookpkg31-rep3-f8fbaf.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/tricentis_quote-hookpkg31-rep3-f8fbaf.jsonl.gz",
+   "sha256": "f731669f673452ad1a21f072da637002c8932708ca5a2dbf55e8a4c09ab246a1",
+   "bytes": 89271,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|hookpkg31|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 65
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/tricentis_quote-mcp-rep1-c326ee.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/tricentis_quote-mcp-rep1-c326ee.jsonl.gz",
+   "sha256": "926f56b4eb6879d082c365c23d7a46449948e4c2cb590f4e1be8de2b3aca4165",
+   "bytes": 166067,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|mcp|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 67,
+    "home_slug": 9
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/tricentis_quote-mcp-rep2-d4eeac.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/tricentis_quote-mcp-rep2-d4eeac.jsonl.gz",
+   "sha256": "5ce93d7a374305de0531c84c992f8fb00616f2fd9581af8588843543432717c3",
+   "bytes": 104837,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|mcp|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 38
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/codex/tricentis_quote-mcp-rep3-2897f0.jsonl",
+   "transcript": "transcripts_live_v31sub/codex/tricentis_quote-mcp-rep3-2897f0.jsonl.gz",
+   "sha256": "e300b1d0ae796f05be193a89bb8d10a2b8e16b73ab000de14ef1bf0739944fc3",
+   "bytes": 138342,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "codex|mcp|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 187
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/carconfig_order-hookpkg3-rep1-ce564d.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/carconfig_order-hookpkg3-rep1-ce564d.jsonl.gz",
+   "sha256": "1b607a866f76c3f5ce7f5ab8b0c87da95eef1028159f848ea001623d5bc8f589",
+   "bytes": 268054,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg3|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 9,
+    "home_path": 333
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/carconfig_order-hookpkg3-rep2-10c599.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/carconfig_order-hookpkg3-rep2-10c599.jsonl.gz",
+   "sha256": "941566588c223c48b1d17c60f9a1f4f2e3546674dc57562ab9dd88d09e9ac4a6",
+   "bytes": 197494,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg3|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 8,
+    "home_path": 248
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/carconfig_order-hookpkg3-rep3-c70959.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/carconfig_order-hookpkg3-rep3-c70959.jsonl.gz",
+   "sha256": "0d29768823e6b8029238decd341f597342d5d6329ab01ccea64c178407551c40",
+   "bytes": 54195,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg3|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 1,
+    "home_path": 49
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/carconfig_order-hookpkg31-rep1-2f9e93.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/carconfig_order-hookpkg31-rep1-2f9e93.jsonl.gz",
+   "sha256": "61e5af3d384b555eaf2b8acb11f77344052bb4b04b2061788ca1bfcf41779a9f",
+   "bytes": 295665,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg31|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 9,
+    "home_path": 347
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/carconfig_order-hookpkg31-rep2-82447c.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/carconfig_order-hookpkg31-rep2-82447c.jsonl.gz",
+   "sha256": "0662df7e1a7738e0356360c8335d30bfdb62b1ff33ffaf933b1f236b54a71c7d",
+   "bytes": 213059,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg31|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 10,
+    "home_path": 186
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/carconfig_order-hookpkg31-rep3-7ef2f9.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/carconfig_order-hookpkg31-rep3-7ef2f9.jsonl.gz",
+   "sha256": "a0fb0f9091bfc41006a1c6a0dc5b152b17a4e6fe203c7de9d026dea192fd9350",
+   "bytes": 275605,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg31|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 8,
+    "home_path": 317
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/carconfig_order-mcp-rep1-b8d6e9.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/carconfig_order-mcp-rep1-b8d6e9.jsonl.gz",
+   "sha256": "b3d2cb32e1a6f7cde6dacfae3c042d5654396d4ec52df769fb00f61cd142c2f2",
+   "bytes": 1211870,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|mcp|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 22,
+    "home_path": 236
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/carconfig_order-mcp-rep2-67d46e.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/carconfig_order-mcp-rep2-67d46e.jsonl.gz",
+   "sha256": "dc289d1bcab0ac8843c5eb644d00a2d0bd03cc785b6470f8f4ba2f10f9b0e56d",
+   "bytes": 6204794,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|mcp|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 310
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/carconfig_order-mcp-rep3-99ac2e.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/carconfig_order-mcp-rep3-99ac2e.jsonl.gz",
+   "sha256": "b59df1ffb4c24aed45d25b81ec9b4b6c45e76cb9168f269ed8361aa8e069ab6a",
+   "bytes": 45898,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|mcp|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 3
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/demoshop_debug-hookpkg3-rep1-766a7b.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/demoshop_debug-hookpkg3-rep1-766a7b.jsonl.gz",
+   "sha256": "cb7f69164eecde21b37f71ad776fc695db7c1c42019f260cf4de365818cfcd5e",
+   "bytes": 179664,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg3|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 1,
+    "home_path": 183
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/demoshop_debug-hookpkg3-rep2-cab452.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/demoshop_debug-hookpkg3-rep2-cab452.jsonl.gz",
+   "sha256": "4c7ce770c33e3675e63a817b909608e42c3a478e706696f19a6eddebaa3b456a",
+   "bytes": 228681,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg3|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "email": 3,
+    "home_path": 163
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/demoshop_debug-hookpkg3-rep3-1f31c8.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/demoshop_debug-hookpkg3-rep3-1f31c8.jsonl.gz",
+   "sha256": "ceede07ec02414e8964a32d99b47d0b385f4167c26657b2249d8e0218e932f42",
+   "bytes": 98315,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg3|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 106
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/demoshop_debug-hookpkg31-rep1-58cafd.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/demoshop_debug-hookpkg31-rep1-58cafd.jsonl.gz",
+   "sha256": "bad08b8afd0da225ce157348ac2d96437cf96a5f6dd04c47994ad93ca2ca5b56",
+   "bytes": 130749,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg31|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 131
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/demoshop_debug-hookpkg31-rep2-c49cb0.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/demoshop_debug-hookpkg31-rep2-c49cb0.jsonl.gz",
+   "sha256": "dc51ae0972bbf8f67b8ba034bde0b021dbf42d1849d602018e88f050d20e54e2",
+   "bytes": 115348,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg31|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "email": 3,
+    "home_path": 109
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/demoshop_debug-hookpkg31-rep3-529d14.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/demoshop_debug-hookpkg31-rep3-529d14.jsonl.gz",
+   "sha256": "c0235fc3fff66562a01c88d2b8276d1823f803b8bb4e610905936b22e64b9d23",
+   "bytes": 150390,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg31|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "email": 5,
+    "home_path": 119
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/demoshop_debug-mcp-rep1-4915dc.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/demoshop_debug-mcp-rep1-4915dc.jsonl.gz",
+   "sha256": "b8d73cef1be0ac9a603172622c0cb7304bea1c8c9e6c858e48619d057c2be610",
+   "bytes": 507142,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|mcp|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 781
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/demoshop_debug-mcp-rep2-e5421d.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/demoshop_debug-mcp-rep2-e5421d.jsonl.gz",
+   "sha256": "9cbf4709d6972bf1c87bea2ea39636a45a580105adeb47adf704e6fe2d95f1ea",
+   "bytes": 2857811,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|mcp|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 644
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/demoshop_debug-mcp-rep3-e3230e.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/demoshop_debug-mcp-rep3-e3230e.jsonl.gz",
+   "sha256": "3831c2bef69903a0ed63f975ea8f8cc9b0e0861b85e276ea4f39c7d05c89d58e",
+   "bytes": 374647,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|mcp|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 531
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/demoshop_order-hookpkg3-rep1-d9dfd4.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/demoshop_order-hookpkg3-rep1-d9dfd4.jsonl.gz",
+   "sha256": "91a695febc66800aba10214a41834d0e2c1fef7608b10b67fde043a47011b603",
+   "bytes": 320876,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg3|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 344
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/demoshop_order-hookpkg3-rep2-df2782.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/demoshop_order-hookpkg3-rep2-df2782.jsonl.gz",
+   "sha256": "9b4b416fe65d2fbe6e90dc6277e2579ac89148612a83f0ebc6ad901f428c9a0e",
+   "bytes": 195362,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg3|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 209
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/demoshop_order-hookpkg3-rep3-719ab4.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/demoshop_order-hookpkg3-rep3-719ab4.jsonl.gz",
+   "sha256": "44f446b746da5b05054361a99aea6d1141aa9870145d99c2e376e3b33a0057da",
+   "bytes": 283569,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg3|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 320
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/demoshop_order-hookpkg31-rep1-319630.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/demoshop_order-hookpkg31-rep1-319630.jsonl.gz",
+   "sha256": "2bafb8ee031e3a070f545b06d14b0f28ec0c3f650613fe8d935e589f2630d0c7",
+   "bytes": 226920,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg31|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 262
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/demoshop_order-hookpkg31-rep2-3f59e2.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/demoshop_order-hookpkg31-rep2-3f59e2.jsonl.gz",
+   "sha256": "897f13a75e454227a4195b8e4184247640d59fe3b19f965268b1a589d24cf521",
+   "bytes": 210551,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg31|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 143
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/demoshop_order-hookpkg31-rep3-951f68.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/demoshop_order-hookpkg31-rep3-951f68.jsonl.gz",
+   "sha256": "f74551034ccd8f47484d3d7ff209c98b5684e49d58be4cd5ef5433143d761061",
+   "bytes": 257100,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg31|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 302
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/demoshop_order-mcp-rep1-4d7845.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/demoshop_order-mcp-rep1-4d7845.jsonl.gz",
+   "sha256": "b00e95efcbb1787733099ce99b4ddea38fa13e878d78ac5b8260cd40c0b93bec",
+   "bytes": 642426,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|mcp|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 34,
+    "home_path": 442
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/demoshop_order-mcp-rep2-689ef9.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/demoshop_order-mcp-rep2-689ef9.jsonl.gz",
+   "sha256": "1cf756999e6fd9dc8a08b93676d063ee6a96dfde2539e9743f9f062a7d18545d",
+   "bytes": 409339,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|mcp|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 7,
+    "home_path": 201
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/demoshop_order-mcp-rep3-0dd899.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/demoshop_order-mcp-rep3-0dd899.jsonl.gz",
+   "sha256": "3674f669d2558144ce789f73c9f0851cac884cc18fe70f990edb956e87152fab",
+   "bytes": 297550,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|mcp|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 12,
+    "home_path": 144
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/tricentis_debug-hookpkg3-rep1-b9a7b6.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/tricentis_debug-hookpkg3-rep1-b9a7b6.jsonl.gz",
+   "sha256": "ff7b31764cddca593f643024e8934814ca01b6c0b8b9517714e5e110260cc4ee",
+   "bytes": 3215,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg3|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {}
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/tricentis_debug-hookpkg3-rep2-021785.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/tricentis_debug-hookpkg3-rep2-021785.jsonl.gz",
+   "sha256": "9b5b21fd3c34d1e57122741b61c88e925642ff97fc66f52b38909331be18622f",
+   "bytes": 242939,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg3|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 275
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/tricentis_debug-hookpkg3-rep3-42cd98.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/tricentis_debug-hookpkg3-rep3-42cd98.jsonl.gz",
+   "sha256": "9c6bb6358ede55ad42f1c661758bad6ee2ce0310675cc0d67e72c7085b5de3ae",
+   "bytes": 658665,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg3|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 963
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/tricentis_debug-hookpkg31-rep1-29c8d7.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/tricentis_debug-hookpkg31-rep1-29c8d7.jsonl.gz",
+   "sha256": "3d59bbfba45902baf35a2cda77b90d3682ed452ccd72a536f89645a9324e6133",
+   "bytes": 261877,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg31|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 298
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/tricentis_debug-hookpkg31-rep2-a8daff.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/tricentis_debug-hookpkg31-rep2-a8daff.jsonl.gz",
+   "sha256": "4d5f8de7605ed240aab621aaa1d1f6b0631b45dad5abb439c86ae94daed6bbfa",
+   "bytes": 254193,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg31|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 318
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/tricentis_debug-hookpkg31-rep3-12fe61.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/tricentis_debug-hookpkg31-rep3-12fe61.jsonl.gz",
+   "sha256": "3778c32f24ae45ada16ffd2cb9730423f7fb792854d88966b2c8994d36b1b329",
+   "bytes": 752941,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg31|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 927
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/tricentis_debug-mcp-rep1-27f398.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/tricentis_debug-mcp-rep1-27f398.jsonl.gz",
+   "sha256": "3ee3461200516f3f3966d626af63fd9c29aadbf3729e5a91a89f06ea5c0d6505",
+   "bytes": 128142,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|mcp|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 202
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/tricentis_debug-mcp-rep2-963fc3.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/tricentis_debug-mcp-rep2-963fc3.jsonl.gz",
+   "sha256": "5875ed13a884f71e27996ade3d9504e30a3b75ceaf782bd1ad49f0e7a2fe1d0b",
+   "bytes": 441337,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|mcp|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 732
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/tricentis_debug-mcp-rep3-99e6dc.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/tricentis_debug-mcp-rep3-99e6dc.jsonl.gz",
+   "sha256": "471691d5787de7e21a103f979b4973d5441e67b3eb3f56102ddfc1f6bbb5c20e",
+   "bytes": 459706,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|mcp|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 800
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/tricentis_quote-hookpkg3-rep1-29c6fe.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/tricentis_quote-hookpkg3-rep1-29c6fe.jsonl.gz",
+   "sha256": "4e19238621b2a061f49e2a2ee4aa8bf2f7672967f6f5f8ea87054c9f37e6a8bd",
+   "bytes": 267478,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg3|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 331
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/tricentis_quote-hookpkg3-rep2-ba2a58.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/tricentis_quote-hookpkg3-rep2-ba2a58.jsonl.gz",
+   "sha256": "8b27e1a7f26aa6d8f78ec21fec7feb30e0fbdace37fb962e7eda2b22d8e8dc5d",
+   "bytes": 210686,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg3|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 243
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/tricentis_quote-hookpkg3-rep3-65df9b.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/tricentis_quote-hookpkg3-rep3-65df9b.jsonl.gz",
+   "sha256": "f7bcf2aa468d20f7c1e92547c1510defeaad9d4132a92ac741982f24e415804c",
+   "bytes": 284919,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg3|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 312
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/tricentis_quote-hookpkg31-rep1-7d501a.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/tricentis_quote-hookpkg31-rep1-7d501a.jsonl.gz",
+   "sha256": "3777afb28f1526d6e7f74a9d9504da821033335577942c304c937af90c07f2cf",
+   "bytes": 205405,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg31|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 235
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/tricentis_quote-hookpkg31-rep2-605724.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/tricentis_quote-hookpkg31-rep2-605724.jsonl.gz",
+   "sha256": "17787623ff58d229ac6ddb6f1be6522c117ba89e6936531587ef9469f36a041a",
+   "bytes": 293403,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg31|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 350
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/tricentis_quote-hookpkg31-rep3-b3f8bb.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/tricentis_quote-hookpkg31-rep3-b3f8bb.jsonl.gz",
+   "sha256": "db1f2cf638bcec600f1ef767e2c0b6fd8cc6b9c1bbf730476a8988ea3a0d4bd4",
+   "bytes": 193411,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|hookpkg31|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 196
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/tricentis_quote-mcp-rep1-976daf.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/tricentis_quote-mcp-rep1-976daf.jsonl.gz",
+   "sha256": "3cdb2a7cb25a01888822b3a4e72f068a25ed5750d7948c50df6ff5561124a407",
+   "bytes": 862569,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|mcp|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 815
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/tricentis_quote-mcp-rep2-0c1e99.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/tricentis_quote-mcp-rep2-0c1e99.jsonl.gz",
+   "sha256": "882c1408b83967d0f51d3eb7f45ab9c329dda33ea6311bb0e0e4c84e872860d8",
+   "bytes": 361038,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|mcp|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 272
+   }
+  },
+  {
+   "file": "transcripts_live_v31sub/opencode/tricentis_quote-mcp-rep3-ec73b9.jsonl",
+   "transcript": "transcripts_live_v31sub/opencode/tricentis_quote-mcp-rep3-ec73b9.jsonl.gz",
+   "sha256": "280224e80e03f935a3f04fa850bb663512ea0a1add7e915df06a372879edbb0b",
+   "bytes": 2264760,
+   "results_file": "results/results_live_v31sub.jsonl",
+   "key": "opencode|mcp|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 394
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/carconfig_order-hookpkg3-rep1-4923e7.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/carconfig_order-hookpkg3-rep1-4923e7.jsonl.gz",
+   "sha256": "b85cffac50a37e190b04da7ce17f3a4ff951d5fbadcadc20c5b83f22f9dfc56a",
+   "bytes": 1235065,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg3|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 16,
+    "home_path": 285
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/carconfig_order-hookpkg3-rep2-5c6643.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/carconfig_order-hookpkg3-rep2-5c6643.jsonl.gz",
+   "sha256": "5e96e19969b7f73e6c62638b5f2e15fc8add60f8620e0d3738d9a4e5f50732bf",
+   "bytes": 1257761,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg3|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 102,
+    "home_path": 296
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/carconfig_order-hookpkg3-rep3-4cc25b.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/carconfig_order-hookpkg3-rep3-4cc25b.jsonl.gz",
+   "sha256": "8bd4dd6e3d578dc4e54b48a73c208fa27b4ab56609695274ee67398a70b59aaf",
+   "bytes": 8679,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg3|carconfig_order|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/carconfig_order-hookpkg31-rep1-15aabf.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/carconfig_order-hookpkg31-rep1-15aabf.jsonl.gz",
+   "sha256": "c3a6d7d91c4e2f5d7622c429e0a07e232a7342e5f381b9856800ab813647d271",
+   "bytes": 1975029,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg31|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 45,
+    "home_path": 241
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/carconfig_order-hookpkg31-rep2-3f6be3.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/carconfig_order-hookpkg31-rep2-3f6be3.jsonl.gz",
+   "sha256": "80b22c360caa4347e0d6d3d2409e3f9fd34b096796edbfddb595980a37a24c76",
+   "bytes": 1006151,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg31|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 53,
+    "home_path": 151
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/carconfig_order-hookpkg31-rep3-171fd3.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/carconfig_order-hookpkg31-rep3-171fd3.jsonl.gz",
+   "sha256": "a1bc074a5cd763b8fbef0a3743f18064e0d2bd67d6ed1d0708b053698fe159bb",
+   "bytes": 8683,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg31|carconfig_order|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/carconfig_order-mcp-rep1-395f11.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/carconfig_order-mcp-rep1-395f11.jsonl.gz",
+   "sha256": "3d08eb775b135243b4ad844bd58584f8d3f010cbf383648783b8730091c88015",
+   "bytes": 1212546,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|mcp|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 8,
+    "home_path": 117
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/carconfig_order-mcp-rep2-29a1c4.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/carconfig_order-mcp-rep2-29a1c4.jsonl.gz",
+   "sha256": "02e15e2c6b2b84eb8ec6199da0c7e8d53e1caa7ab6f1763787d070f80dd86902",
+   "bytes": 1056556,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|mcp|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 10,
+    "home_path": 108
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/carconfig_order-mcp-rep3-a9ef03.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/carconfig_order-mcp-rep3-a9ef03.jsonl.gz",
+   "sha256": "0b77b1ef693f1c902e42f2ded4fed1f3b65e13079f70911f471167cae3d36627",
+   "bytes": 6230,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|mcp|carconfig_order|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_debug-hookpkg3-rep1-480791.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_debug-hookpkg3-rep1-480791.jsonl.gz",
+   "sha256": "1704d5140f7056ac7db0ff45c9dfd2ef4f35383d33015fce0512b494b87f97b1",
+   "bytes": 252344,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg3|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 68
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_debug-hookpkg3-rep2-688c99.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_debug-hookpkg3-rep2-688c99.jsonl.gz",
+   "sha256": "fac74af7b5579c37d06102411cee5611fc2ec4ebc89122ec5cc95119f2cb1635",
+   "bytes": 55823,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg3|demoshop_debug|2",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 19
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_debug-hookpkg3-rep3-3be836.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_debug-hookpkg3-rep3-3be836.jsonl.gz",
+   "sha256": "b80670ab1eba336e461038673da787003a0dfa595f3a693dac21ae893ad5973a",
+   "bytes": 9015,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg3|demoshop_debug|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_debug-hookpkg31-rep1-50a4de.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_debug-hookpkg31-rep1-50a4de.jsonl.gz",
+   "sha256": "f566bacf3fafb7488b48e19647519e80342155b57581a2e643e5a1658c969152",
+   "bytes": 821195,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg31|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 14,
+    "home_path": 146
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_debug-hookpkg31-rep2-6afddb.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_debug-hookpkg31-rep2-6afddb.jsonl.gz",
+   "sha256": "75af96c326725b7c232eca8bad08113264e2ec7c592126613658200992dd1a86",
+   "bytes": 1047366,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg31|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 102
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_debug-hookpkg31-rep3-2f5a48.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_debug-hookpkg31-rep3-2f5a48.jsonl.gz",
+   "sha256": "d0f96c48d73a1a7cfe7438a738f5db2657446a5e7685592be4dad6afcaf040f8",
+   "bytes": 9017,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg31|demoshop_debug|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_debug-mcp-rep1-a3bb4f.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_debug-mcp-rep1-a3bb4f.jsonl.gz",
+   "sha256": "b4afcf8462570420f3879abf09c53181ebcf9d0282778bdb162c8106edec8a0f",
+   "bytes": 1278348,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|mcp|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 184,
+    "oauth_field": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_debug-mcp-rep2-01a635.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_debug-mcp-rep2-01a635.jsonl.gz",
+   "sha256": "4c8cf3d26d006291af1617dfd03445e223a30ee36065de7237dc0558310a045d",
+   "bytes": 2207328,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|mcp|demoshop_debug|2",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "email": 4,
+    "home_path": 187,
+    "oauth_field": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_debug-mcp-rep3-3df27a.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_debug-mcp-rep3-3df27a.jsonl.gz",
+   "sha256": "41f8347e92201048a21a5925c6f4b84aaa0aa3bdbbe437cd77e4002fdffb95a0",
+   "bytes": 6227,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|mcp|demoshop_debug|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_order-hookpkg3-rep1-deae63.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_order-hookpkg3-rep1-deae63.jsonl.gz",
+   "sha256": "b225d3bc49505d79092165afeccf8e7ed967d286a4a7ea23219984bcedef3bb4",
+   "bytes": 921417,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg3|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 122
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_order-hookpkg3-rep2-cb30e4.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_order-hookpkg3-rep2-cb30e4.jsonl.gz",
+   "sha256": "39a4a9c2dcc18babaeaed26acd43c09773551416d5ce08664cd1cd2f7f9e94f3",
+   "bytes": 78966,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg3|demoshop_order|2",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 21
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_order-hookpkg3-rep3-417dc2.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_order-hookpkg3-rep3-417dc2.jsonl.gz",
+   "sha256": "d7483011a07aebd7c704f898148988640502c0cc701a9d964dc6fbbc6ebbb337",
+   "bytes": 8676,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg3|demoshop_order|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_order-hookpkg31-rep1-5b62ab.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_order-hookpkg31-rep1-5b62ab.jsonl.gz",
+   "sha256": "b71e326a97c339263f83c807f47b02b770ba9b5fb2276de81d726889251dc5e6",
+   "bytes": 555355,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg31|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 8,
+    "home_path": 77
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_order-hookpkg31-rep2-5c5287.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_order-hookpkg31-rep2-5c5287.jsonl.gz",
+   "sha256": "ac036da1f1105ad3eac0ae3d0f4b29ee24b86ef07f5ba2ce63b29e85f2500089",
+   "bytes": 766292,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg31|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 92
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_order-hookpkg31-rep3-a4b5c2.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_order-hookpkg31-rep3-a4b5c2.jsonl.gz",
+   "sha256": "ad21b182b15b1597d5e45a59e3fc41cf1ac4c912caa32d3b17b2574617170864",
+   "bytes": 8679,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg31|demoshop_order|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_order-mcp-rep1-73c934.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_order-mcp-rep1-73c934.jsonl.gz",
+   "sha256": "e2d7193fd2ab38fd9eacc516ba1a5c94ba814f3aa1c1cb15cd455a22c2a3ff53",
+   "bytes": 1309388,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|mcp|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 107,
+    "oauth_field": 1
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_order-mcp-rep2-2dd293.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_order-mcp-rep2-2dd293.jsonl.gz",
+   "sha256": "0b6454eea59744b5dda0120efe1fac2e1cd48282463bc7795dd855402318e08f",
+   "bytes": 3512415,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|mcp|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 12,
+    "home_path": 204
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_order-mcp-rep3-734b92.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/demoshop_order-mcp-rep3-734b92.jsonl.gz",
+   "sha256": "f3c44fb97dc2799b7f7ce696c21020343114aa44ec867b0547ac707e8848b7d6",
+   "bytes": 6227,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|mcp|demoshop_order|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_debug-hookpkg3-rep1-9c17aa.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_debug-hookpkg3-rep1-9c17aa.jsonl.gz",
+   "sha256": "a5f951cbbe535e0f6ad5bbdc4f2420f60dec00b618298fb18b0aafff75fed79c",
+   "bytes": 1220077,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg3|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 92
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_debug-hookpkg3-rep2-d49247.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_debug-hookpkg3-rep2-d49247.jsonl.gz",
+   "sha256": "cdcd7e34c328496eb7d75c9a04a1a7e426ec48234f145efd5261c4f3c9c90786",
+   "bytes": 9000,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg3|tricentis_debug|2",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_debug-hookpkg3-rep3-c94be0.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_debug-hookpkg3-rep3-c94be0.jsonl.gz",
+   "sha256": "86abd83928c52d8347ae78fd574cad8bfe3812d740ed01229daab094a69834a9",
+   "bytes": 8999,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg3|tricentis_debug|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_debug-hookpkg31-rep1-17c242.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_debug-hookpkg31-rep1-17c242.jsonl.gz",
+   "sha256": "0406d4eae5e82eed307a0c1878772a98f19e23fd8552307376007cffaed2a34d",
+   "bytes": 1071161,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg31|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 128
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_debug-hookpkg31-rep2-da699b.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_debug-hookpkg31-rep2-da699b.jsonl.gz",
+   "sha256": "0a74955153d9d12fb5de7f50a191c863a382fcf5b1eb12428ef4e2cd8e1b83c1",
+   "bytes": 10143,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg31|tricentis_debug|2",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_debug-hookpkg31-rep3-6530fd.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_debug-hookpkg31-rep3-6530fd.jsonl.gz",
+   "sha256": "5aeee5475cde3bb147c7f6239ae0d527b646b948cf3ff29f1c8bd5fa379a5220",
+   "bytes": 9002,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg31|tricentis_debug|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_debug-mcp-rep1-ff7331.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_debug-mcp-rep1-ff7331.jsonl.gz",
+   "sha256": "8a2503e2c0417b2d64b25b65e89b30591c32d2dcfeaad548e3df78e647dd45ca",
+   "bytes": 2029135,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|mcp|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 97
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_debug-mcp-rep2-1d91b0.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_debug-mcp-rep2-1d91b0.jsonl.gz",
+   "sha256": "f0842ffb3bfabf69eee0b992bba5f1058d9e846c9da05c40ea57577f05d87525",
+   "bytes": 179882,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|mcp|tricentis_debug|2",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 41
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_debug-mcp-rep3-8892f2.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_debug-mcp-rep3-8892f2.jsonl.gz",
+   "sha256": "6885be779bf7f103c8d8e4ab5d305cd273a097f9f87cb69b3254f2d191282552",
+   "bytes": 6230,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|mcp|tricentis_debug|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_quote-hookpkg3-rep1-8e39f4.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_quote-hookpkg3-rep1-8e39f4.jsonl.gz",
+   "sha256": "da7bf65575691e06b5d603a314955a909f460820c76a2317ff11392b43c73bd8",
+   "bytes": 404130,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg3|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 70
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_quote-hookpkg3-rep2-3f1e83.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_quote-hookpkg3-rep2-3f1e83.jsonl.gz",
+   "sha256": "4e0e2e4e2f6677dcbbdab8525bc492aeddd08be1753fc8f09bdc8a9fe327942c",
+   "bytes": 2117979,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg3|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 229
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_quote-hookpkg3-rep3-dbc1fb.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_quote-hookpkg3-rep3-dbc1fb.jsonl.gz",
+   "sha256": "64d9099cad3657eaa083ca9d8c73655204435313325edd20e7ce8959a8484603",
+   "bytes": 8679,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg3|tricentis_quote|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_quote-hookpkg31-rep1-c230ba.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_quote-hookpkg31-rep1-c230ba.jsonl.gz",
+   "sha256": "8e71e49f040e490e477996581bff1335fdc07cf9a363b60d01f35614404e4430",
+   "bytes": 1056241,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg31|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 84
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_quote-hookpkg31-rep2-58b3c4.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_quote-hookpkg31-rep2-58b3c4.jsonl.gz",
+   "sha256": "b6f99f74573f672845a7dc2b813e8acf70f7763c36e51aad0c18bbfdfc47fa8a",
+   "bytes": 1440925,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg31|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 144
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_quote-hookpkg31-rep3-15848f.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_quote-hookpkg31-rep3-15848f.jsonl.gz",
+   "sha256": "5e9b9cb3ae8ef9e19b4bb38710262016f7f94aa75c4c0b549c6750743b1671bf",
+   "bytes": 8682,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|hookpkg31|tricentis_quote|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_quote-mcp-rep1-b0d65c.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_quote-mcp-rep1-b0d65c.jsonl.gz",
+   "sha256": "fbe94c85cdb47845b654319d23b0a86306f714dbed2934b347a847fb190f5a50",
+   "bytes": 1952668,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|mcp|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 194
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_quote-mcp-rep2-8a1204.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_quote-mcp-rep2-8a1204.jsonl.gz",
+   "sha256": "d76ec49dc2892fbe6f47363ff27fae2aa0ee463d32dc1b4b0036fc19f7254cc1",
+   "bytes": 1388588,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|mcp|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 148
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_quote-mcp-rep3-abff8c.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:deepseek-v4.1-flash/tricentis_quote-mcp-rep3-abff8c.jsonl.gz",
+   "sha256": "e418f836ac047edcb07d1e6cace4daa8ba092d8c37833e3614965accebed1e50",
+   "bytes": 6230,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:deepseek-v4.1-flash|mcp|tricentis_quote|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/carconfig_order-hookpkg3-rep1-5ac906.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/carconfig_order-hookpkg3-rep1-5ac906.jsonl.gz",
+   "sha256": "565b6eeb8f626c5201d06c14014c3ac48893d1a0361bb26757fc97c13c9da25e",
+   "bytes": 906366,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg3|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 7,
+    "home_path": 82
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/carconfig_order-hookpkg3-rep2-c6bb81.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/carconfig_order-hookpkg3-rep2-c6bb81.jsonl.gz",
+   "sha256": "a227c976b50aed43a4f21fe6290e076f4264feb64808ab8b10cb2cd324f6fdd1",
+   "bytes": 1857994,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg3|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 14,
+    "home_path": 237
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/carconfig_order-hookpkg3-rep3-4ca91c.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/carconfig_order-hookpkg3-rep3-4ca91c.jsonl.gz",
+   "sha256": "f13598c7d9d904d5ad72e9c57d24939c1fec519adb291ea1efe30f7efe2fc834",
+   "bytes": 8641,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg3|carconfig_order|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/carconfig_order-hookpkg31-rep1-e062ce.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/carconfig_order-hookpkg31-rep1-e062ce.jsonl.gz",
+   "sha256": "73a71e86442a21c0aa67ff38d431a592421141ed1e86ae5411087988d6d3abd6",
+   "bytes": 1235690,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg31|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 30,
+    "home_path": 186
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/carconfig_order-hookpkg31-rep2-93bf81.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/carconfig_order-hookpkg31-rep2-93bf81.jsonl.gz",
+   "sha256": "b3af6a1c1c5a2dc1301dbb65532f6997c9f0e256de9a32cae2c690335aba3a43",
+   "bytes": 922240,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg31|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 95
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/carconfig_order-hookpkg31-rep3-21335c.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/carconfig_order-hookpkg31-rep3-21335c.jsonl.gz",
+   "sha256": "444d4e97f41a35bd24d81a7da4a25a3c03738c2bc7d7e5f7be7128c0f8d59877",
+   "bytes": 8646,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg31|carconfig_order|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/carconfig_order-mcp-rep1-4e1e10.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/carconfig_order-mcp-rep1-4e1e10.jsonl.gz",
+   "sha256": "45be5cffd8c7f99fecb2910839b5cc88d67abb82e819c007833bf0d0a284bb21",
+   "bytes": 713894,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:glm-5.3-flash|mcp|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 9,
+    "home_path": 175
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/carconfig_order-mcp-rep2-71b5ad.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/carconfig_order-mcp-rep2-71b5ad.jsonl.gz",
+   "sha256": "2fb95a165e54060063aec3551def3e9c399c4671d36ea8cda74b0184ef80e797",
+   "bytes": 656049,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:glm-5.3-flash|mcp|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 10,
+    "home_path": 130
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/carconfig_order-mcp-rep3-d00625.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/carconfig_order-mcp-rep3-d00625.jsonl.gz",
+   "sha256": "403a4acadada1a10617e8c4fafa3b210ee98f40ab03ba92d8bf53bd613802e95",
+   "bytes": 6192,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:glm-5.3-flash|mcp|carconfig_order|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_debug-hookpkg3-rep1-1d6825.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_debug-hookpkg3-rep1-1d6825.jsonl.gz",
+   "sha256": "9c23f6d26307dbd1010274a55b8fcb66f65e5237ba6073e733079ddc74e39581",
+   "bytes": 788610,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg3|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 180
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_debug-hookpkg3-rep2-d8baa9.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_debug-hookpkg3-rep2-d8baa9.jsonl.gz",
+   "sha256": "bda8eeadc34a3c2cf6311ee0b912a2094483298268cfa32155784ec306e243f9",
+   "bytes": 18756,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg3|demoshop_debug|2",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 3
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_debug-hookpkg3-rep3-171bfe.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_debug-hookpkg3-rep3-171bfe.jsonl.gz",
+   "sha256": "dec3fa39a236f09d0c3dc0f6bbabbfc436b54d4c09275c9ab37978a9ec10d2f0",
+   "bytes": 8978,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg3|demoshop_debug|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_debug-hookpkg31-rep1-8b47fe.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_debug-hookpkg31-rep1-8b47fe.jsonl.gz",
+   "sha256": "d0fda46016d067219ac6ba798932ac9e2dd1379d90b574b12f84723ce8e362e8",
+   "bytes": 1116974,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg31|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 76
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_debug-hookpkg31-rep2-b2b669.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_debug-hookpkg31-rep2-b2b669.jsonl.gz",
+   "sha256": "ca04d9806e75adac16d7c2c0fd91ad1cc65fc3898b7a17997e607402357c6730",
+   "bytes": 56839,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg31|demoshop_debug|2",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 15
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_debug-hookpkg31-rep3-178cb2.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_debug-hookpkg31-rep3-178cb2.jsonl.gz",
+   "sha256": "d73dadaaa9f3b8299d3d5bd452a0d6b1f9429efafc1baefb46bc4bb0b6c67de7",
+   "bytes": 8980,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg31|demoshop_debug|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_debug-mcp-rep1-1ea0a8.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_debug-mcp-rep1-1ea0a8.jsonl.gz",
+   "sha256": "8f0d21a5e12bbf502299d9206fc5712d6904fc9c551d6ff0f491bc86729382dc",
+   "bytes": 1579265,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:glm-5.3-flash|mcp|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 168
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_debug-mcp-rep2-9beacd.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_debug-mcp-rep2-9beacd.jsonl.gz",
+   "sha256": "7bb5e501a73a03fb389503d0ea226e8b0ace406f2289db67bb356f520926dde4",
+   "bytes": 139489,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:glm-5.3-flash|mcp|demoshop_debug|2",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "email": 4,
+    "home_path": 14
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_debug-mcp-rep3-9ecda4.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_debug-mcp-rep3-9ecda4.jsonl.gz",
+   "sha256": "94acecf7113562c684960ffc9e56d467983238c4aaac982ccb300f49e09d51e1",
+   "bytes": 6191,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:glm-5.3-flash|mcp|demoshop_debug|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_order-hookpkg3-rep1-0e4c9b.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_order-hookpkg3-rep1-0e4c9b.jsonl.gz",
+   "sha256": "8a955b35889f7ddee0f1a5f4172812a92c2f4684382a19ee0d30791a2dfc3c56",
+   "bytes": 813894,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg3|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 160
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_order-hookpkg3-rep2-437f27.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_order-hookpkg3-rep2-437f27.jsonl.gz",
+   "sha256": "eeb394872c159fbb61dde7771d33d807c1649ee2e9ca3787ceb70181bcb5fdf8",
+   "bytes": 1322666,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg3|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 8,
+    "home_path": 153
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_order-hookpkg3-rep3-1a7c53.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_order-hookpkg3-rep3-1a7c53.jsonl.gz",
+   "sha256": "cb9dc64c6f79ee3807e93dd1c8614102bc561ba7e057f536e3698d41361f76ec",
+   "bytes": 8638,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg3|demoshop_order|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_order-hookpkg31-rep1-7facf0.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_order-hookpkg31-rep1-7facf0.jsonl.gz",
+   "sha256": "abfcc74593d206e4478f5ef40e265d70abc8df73e85c029f8ac02a3e883314a5",
+   "bytes": 1057119,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg31|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 126
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_order-hookpkg31-rep2-0e8cee.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_order-hookpkg31-rep2-0e8cee.jsonl.gz",
+   "sha256": "01cea08f67828f4a720f19ee9a4bf982b30ae51f204d585751c3e402006819ab",
+   "bytes": 720569,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg31|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 10,
+    "home_path": 133
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_order-hookpkg31-rep3-bbe1e6.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_order-hookpkg31-rep3-bbe1e6.jsonl.gz",
+   "sha256": "260831225edf9ae73a0dff66e106f6c7a84b99b84c476e6b5c871b8bacce9b34",
+   "bytes": 8641,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg31|demoshop_order|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_order-mcp-rep1-8a576e.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_order-mcp-rep1-8a576e.jsonl.gz",
+   "sha256": "557b00c1f80c47c00ac09b76b2d21a31febb8ed9c2fb99ade937edf61d099314",
+   "bytes": 659787,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:glm-5.3-flash|mcp|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 128
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_order-mcp-rep2-d0fb51.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_order-mcp-rep2-d0fb51.jsonl.gz",
+   "sha256": "9e0e1701a7190593d87029b4f1f252b0f6cd064193da9ce9afe55aec56092de6",
+   "bytes": 751948,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:glm-5.3-flash|mcp|demoshop_order|2",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "email": 8,
+    "home_path": 60
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_order-mcp-rep3-1d4def.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/demoshop_order-mcp-rep3-1d4def.jsonl.gz",
+   "sha256": "e774cc09bf0d95e360d0ee487a9344a26f25f124990adf114ea45e24971bd369",
+   "bytes": 6189,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:glm-5.3-flash|mcp|demoshop_order|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_debug-hookpkg3-rep1-cb4fa8.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_debug-hookpkg3-rep1-cb4fa8.jsonl.gz",
+   "sha256": "b763f6d9387c8171d93c44f4d78c67ff87e13db04d31f7a83e4d284cdd3daa13",
+   "bytes": 1147268,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg3|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 206
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_debug-hookpkg3-rep2-1e3d72.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_debug-hookpkg3-rep2-1e3d72.jsonl.gz",
+   "sha256": "61f81b0a5be472db023684e97c61d45b00154672abee7670c98ee9d00216f2f8",
+   "bytes": 8963,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg3|tricentis_debug|2",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_debug-hookpkg3-rep3-8cf322.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_debug-hookpkg3-rep3-8cf322.jsonl.gz",
+   "sha256": "88245ec0981569d4e2bbe40aa11678de9b215cfbcdb88431b0f1c40894971602",
+   "bytes": 8961,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg3|tricentis_debug|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_debug-hookpkg31-rep1-a2a208.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_debug-hookpkg31-rep1-a2a208.jsonl.gz",
+   "sha256": "08a30ebdfdb89bd082135ec13fe0f8d18fca70a0495f2b487d4d77fe8bfa06e3",
+   "bytes": 1816304,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg31|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 67
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_debug-hookpkg31-rep2-8028e8.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_debug-hookpkg31-rep2-8028e8.jsonl.gz",
+   "sha256": "21cac1cb468078219eeee25637c05c0f2448b0c64ed52571d3b392f15660f1fb",
+   "bytes": 8966,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg31|tricentis_debug|2",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_debug-hookpkg31-rep3-0bd5b4.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_debug-hookpkg31-rep3-0bd5b4.jsonl.gz",
+   "sha256": "5296aaa8c711b77139a7fc5afe30dc900b6f50b6b1712dcc685e5fd22fd406b3",
+   "bytes": 8966,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg31|tricentis_debug|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_debug-mcp-rep1-d69eaf.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_debug-mcp-rep1-d69eaf.jsonl.gz",
+   "sha256": "4b8eaef33a4e1615a94cb40ee65cc5f0164d97b9628bb68e4ba9478fc22bbf04",
+   "bytes": 1121071,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:glm-5.3-flash|mcp|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 78
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_debug-mcp-rep2-8185b3.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_debug-mcp-rep2-8185b3.jsonl.gz",
+   "sha256": "5a5d12c3ba219007a4d838d1c0d0174f59e5405fe69993f11aef474a3b066e28",
+   "bytes": 6194,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:glm-5.3-flash|mcp|tricentis_debug|2",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_debug-mcp-rep3-a7e301.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_debug-mcp-rep3-a7e301.jsonl.gz",
+   "sha256": "d5e3209fdfa987015efe5a199600a122d206b3f7d8a4e86207a56cc157b13d9f",
+   "bytes": 6194,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:glm-5.3-flash|mcp|tricentis_debug|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_quote-hookpkg3-rep1-ca294a.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_quote-hookpkg3-rep1-ca294a.jsonl.gz",
+   "sha256": "7bf03130c3c8a220f3695c8a8dcfda4cab44fa076b4e67964b53f28296fbfc39",
+   "bytes": 1412880,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg3|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 263
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_quote-hookpkg3-rep2-75c0cd.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_quote-hookpkg3-rep2-75c0cd.jsonl.gz",
+   "sha256": "cf04690546309734008ef2ca27e508c514051220adf00b7abf0fe165c4936903",
+   "bytes": 2188054,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg3|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 208
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_quote-hookpkg3-rep3-770595.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_quote-hookpkg3-rep3-770595.jsonl.gz",
+   "sha256": "30a8ee4b782116f04b48eaedf76b9cb9500a2e43cd246028cc419edf7c4a8d17",
+   "bytes": 8644,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg3|tricentis_quote|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_quote-hookpkg31-rep1-bee209.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_quote-hookpkg31-rep1-bee209.jsonl.gz",
+   "sha256": "641b15928773ba057d7f44856dec7335a8e4d7ba09856607e88404d8e038eb01",
+   "bytes": 745607,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg31|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 128
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_quote-hookpkg31-rep2-95dd88.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_quote-hookpkg31-rep2-95dd88.jsonl.gz",
+   "sha256": "37c5bb1b85e48f41f099e52f6590522604f243719dfd9163d9c33ca4588e13fd",
+   "bytes": 567369,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg31|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 81
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_quote-hookpkg31-rep3-8de977.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_quote-hookpkg31-rep3-8de977.jsonl.gz",
+   "sha256": "cc1249e6ab5a71b44b17bee3ff3af2d0ca5d99ff3901c2c93531fae5ae814fb8",
+   "bytes": 8645,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:glm-5.3-flash|hookpkg31|tricentis_quote|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_quote-mcp-rep1-129168.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_quote-mcp-rep1-129168.jsonl.gz",
+   "sha256": "a8bd14a1e6563108b6d3887fe4ab7cf37e70d2d25319fecae0b2e5d882c33704",
+   "bytes": 1954474,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:glm-5.3-flash|mcp|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 186
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_quote-mcp-rep2-0010bf.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_quote-mcp-rep2-0010bf.jsonl.gz",
+   "sha256": "4845af359de988e613f2ff51455d218ee3e33cb5cd01d494f00d9d3364e7afaf",
+   "bytes": 2586314,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:glm-5.3-flash|mcp|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 143
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_quote-mcp-rep3-0bbb99.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:glm-5.3-flash/tricentis_quote-mcp-rep3-0bbb99.jsonl.gz",
+   "sha256": "668332530666f73f567148c7bb031f672f9482e22ad4037f9a597900b517c50c",
+   "bytes": 6193,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:glm-5.3-flash|mcp|tricentis_quote|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/carconfig_order-hookpkg3-rep1-49b966.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/carconfig_order-hookpkg3-rep1-49b966.jsonl.gz",
+   "sha256": "3f3bc05335ed8039cc09e71c6910e0f6313de1f84280e0872bd2621fd0671829",
+   "bytes": 1296254,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg3|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 8,
+    "home_path": 158
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/carconfig_order-hookpkg3-rep2-c3f57d.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/carconfig_order-hookpkg3-rep2-c3f57d.jsonl.gz",
+   "sha256": "3966e68931b80a3c22a8a6b4a711658b75084b3de1eef193c3025b3ad3e2220e",
+   "bytes": 1470722,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg3|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 8,
+    "home_path": 94
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/carconfig_order-hookpkg3-rep3-33a4d6.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/carconfig_order-hookpkg3-rep3-33a4d6.jsonl.gz",
+   "sha256": "549779c31623f532b336ade2fde06b920cccf201eb86c3493ebc5e74810e0ff9",
+   "bytes": 10692,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg3|carconfig_order|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/carconfig_order-hookpkg31-rep1-30ae85.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/carconfig_order-hookpkg31-rep1-30ae85.jsonl.gz",
+   "sha256": "a71628532421d088bb7b411fce4662211d5a02207cf1e3cd6ee30fb341e99e71",
+   "bytes": 1646139,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg31|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 11,
+    "home_path": 107
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/carconfig_order-hookpkg31-rep2-67b644.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/carconfig_order-hookpkg31-rep2-67b644.jsonl.gz",
+   "sha256": "53a4c59f870e4023422f0fa68fedf333aa6be2c203d53270a55a5c3016234507",
+   "bytes": 1514584,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg31|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 105
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/carconfig_order-hookpkg31-rep3-2a5256.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/carconfig_order-hookpkg31-rep3-2a5256.jsonl.gz",
+   "sha256": "4ea623403e7773f3bb56e5c4fbd26ebe2f053005dbde535ae00a6c9e3e868406",
+   "bytes": 10695,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg31|carconfig_order|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/carconfig_order-mcp-rep1-dc7945.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/carconfig_order-mcp-rep1-dc7945.jsonl.gz",
+   "sha256": "e4de06606faad82a1807bb0daf64faa627f28cc245ec7252ef0eb6dc0209ab1c",
+   "bytes": 580002,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:qwen3.8-flash|mcp|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 76
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/carconfig_order-mcp-rep2-a4ea1f.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/carconfig_order-mcp-rep2-a4ea1f.jsonl.gz",
+   "sha256": "aadd88db3d03fe1b32785aa7cbbbf4c164d2739fc957319f240bc238675969df",
+   "bytes": 1779845,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:qwen3.8-flash|mcp|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 154
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/carconfig_order-mcp-rep3-6b55d8.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/carconfig_order-mcp-rep3-6b55d8.jsonl.gz",
+   "sha256": "02e8c92119eacc0608512f2c64151167096ea5c706ae5a58a31190282a6f6d93",
+   "bytes": 6194,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|mcp|carconfig_order|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_debug-hookpkg3-rep1-9cf4dd.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_debug-hookpkg3-rep1-9cf4dd.jsonl.gz",
+   "sha256": "69b25c8077d9b26abbb6ecac6c365f5bb0674179dc6fe80c45e12a07b001c46c",
+   "bytes": 1434514,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg3|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 88
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_debug-hookpkg3-rep2-6ebc72.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_debug-hookpkg3-rep2-6ebc72.jsonl.gz",
+   "sha256": "77d401d0f18245898ef7b32d172dec11d1f5f9dd2a7c9d61767b659568cdd22d",
+   "bytes": 8979,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg3|demoshop_debug|2",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_debug-hookpkg3-rep3-37aeb7.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_debug-hookpkg3-rep3-37aeb7.jsonl.gz",
+   "sha256": "586a78b7973296bac06583142afe0307a0877a90ed89cebfaccdb1340ae1fb76",
+   "bytes": 8978,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg3|demoshop_debug|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_debug-hookpkg31-rep1-8eb8a9.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_debug-hookpkg31-rep1-8eb8a9.jsonl.gz",
+   "sha256": "43d71bbe2c6fd463ff932eb5a26682104d0062b2a15854c5817a65217a432771",
+   "bytes": 2008951,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg31|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 111
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_debug-hookpkg31-rep2-52839f.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_debug-hookpkg31-rep2-52839f.jsonl.gz",
+   "sha256": "0d5ce4b9b527d1e09753977510c60570db20a00ed5278c462c7cd1dab5369031",
+   "bytes": 8981,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg31|demoshop_debug|2",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_debug-hookpkg31-rep3-32c748.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_debug-hookpkg31-rep3-32c748.jsonl.gz",
+   "sha256": "d26fce16a50ce17e846f01b1128bc5e8e4f84c2660557e56366efce0504f4199",
+   "bytes": 8981,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg31|demoshop_debug|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_debug-mcp-rep1-ab7452.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_debug-mcp-rep1-ab7452.jsonl.gz",
+   "sha256": "926de9fa7f4f38b2b74936317034b5982bedfcd6b69dff2696a25b0efdeb6fd0",
+   "bytes": 1631327,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:qwen3.8-flash|mcp|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 101
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_debug-mcp-rep2-b60962.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_debug-mcp-rep2-b60962.jsonl.gz",
+   "sha256": "40b02236d38b3f5f8ab85dfdbeb9cdf4f10cc20fb35560d878a5a624d23a96ef",
+   "bytes": 141557,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|mcp|demoshop_debug|2",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 14
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_debug-mcp-rep3-670070.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_debug-mcp-rep3-670070.jsonl.gz",
+   "sha256": "728d401fbd781f271dbaa4af69082fa7a13ea7afeb4eb71d29756eec65982fda",
+   "bytes": 6191,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|mcp|demoshop_debug|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_order-hookpkg3-rep1-0894e4.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_order-hookpkg3-rep1-0894e4.jsonl.gz",
+   "sha256": "451c6be0f9a5d6ca3bd7a949187acacfeff71e548b35cf39bf466791b0ba0958",
+   "bytes": 965489,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg3|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 5,
+    "home_path": 90
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_order-hookpkg3-rep2-d1e050.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_order-hookpkg3-rep2-d1e050.jsonl.gz",
+   "sha256": "0d3acdb8143a0e29cecc652ca4b1c33f85796e281e2ae3a4c6adf228c0d9aa7d",
+   "bytes": 1246870,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg3|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 138
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_order-hookpkg3-rep3-41f6a5.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_order-hookpkg3-rep3-41f6a5.jsonl.gz",
+   "sha256": "6aceebe57a1f3c502147da017f9daa6874acdd9015a88ca6088600f7e855790b",
+   "bytes": 8640,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg3|demoshop_order|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_order-hookpkg31-rep1-4245d1.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_order-hookpkg31-rep1-4245d1.jsonl.gz",
+   "sha256": "1133f7aaedd942b2195312d75198ecd381cc3716ac9ef5f93ea0c8030b3c0731",
+   "bytes": 741085,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg31|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 91
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_order-hookpkg31-rep2-eac820.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_order-hookpkg31-rep2-eac820.jsonl.gz",
+   "sha256": "f504979910fd2f0974dfaaa4281ca4d483c14a90bc63b331c7b93d612d34255e",
+   "bytes": 853251,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg31|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 83
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_order-hookpkg31-rep3-91d1fb.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_order-hookpkg31-rep3-91d1fb.jsonl.gz",
+   "sha256": "103da28028444b4bce430a660d745ac8de97669b47f5645aecaf1b4ea89e56ef",
+   "bytes": 8643,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg31|demoshop_order|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_order-mcp-rep1-e3a21b.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_order-mcp-rep1-e3a21b.jsonl.gz",
+   "sha256": "3cbe64b0f909f23a2714234adb422eeec09029e10bb1643572500471cfea3f33",
+   "bytes": 3276227,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:qwen3.8-flash|mcp|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 8,
+    "home_path": 190
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_order-mcp-rep2-69d1ab.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_order-mcp-rep2-69d1ab.jsonl.gz",
+   "sha256": "f7ce85ef2b4aefaf91607643635f225a6e3649e6f16902ec130365ae2d97ebde",
+   "bytes": 1071118,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:qwen3.8-flash|mcp|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 74
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_order-mcp-rep3-db8dcd.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/demoshop_order-mcp-rep3-db8dcd.jsonl.gz",
+   "sha256": "ca3edd5ed74022359a998b6f12903c1dc5839821a7df511ab9a7cc11b4af8ca1",
+   "bytes": 6191,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|mcp|demoshop_order|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_debug-hookpkg3-rep1-4b228b.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_debug-hookpkg3-rep1-4b228b.jsonl.gz",
+   "sha256": "723c5b649e98a4dcf4ed5ca90400add1c32eb20a405114f8a374def98c425d34",
+   "bytes": 1531243,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg3|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 139
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_debug-hookpkg3-rep2-c3c854.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_debug-hookpkg3-rep2-c3c854.jsonl.gz",
+   "sha256": "68354ed39899cf44f09dd4e796b6baa7d96c2bc3a00dd0489fa374c881a95ec9",
+   "bytes": 8964,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg3|tricentis_debug|2",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_debug-hookpkg3-rep3-f15680.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_debug-hookpkg3-rep3-f15680.jsonl.gz",
+   "sha256": "03f018f938794594c5a10c90ed8b750ab465c6312395fe3a3d84d1ce723d0044",
+   "bytes": 8963,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg3|tricentis_debug|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_debug-hookpkg31-rep1-1cd30c.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_debug-hookpkg31-rep1-1cd30c.jsonl.gz",
+   "sha256": "3578242d23bfadd333420931f0be3def277848cc6dab6a0fae4472e8eb97624d",
+   "bytes": 1218141,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg31|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 115
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_debug-hookpkg31-rep2-e88ccf.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_debug-hookpkg31-rep2-e88ccf.jsonl.gz",
+   "sha256": "4e1daf418960d7109d9cd7e362a535cd4199c448d85e92f8039aea00b70866cf",
+   "bytes": 8966,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg31|tricentis_debug|2",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_debug-hookpkg31-rep3-f4c9de.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_debug-hookpkg31-rep3-f4c9de.jsonl.gz",
+   "sha256": "063602a6d2f0d8fd4585944d742a8a96e63c6ba718ef248d3e74ffd1f7c3cc54",
+   "bytes": 8966,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg31|tricentis_debug|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_debug-mcp-rep1-ba0345.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_debug-mcp-rep1-ba0345.jsonl.gz",
+   "sha256": "d0dbf49093570d4e7caffc20883bca1505fd5dc506471f73e83d9aa0c2e79747",
+   "bytes": 3416326,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:qwen3.8-flash|mcp|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 215
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_debug-mcp-rep2-d7e9a3.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_debug-mcp-rep2-d7e9a3.jsonl.gz",
+   "sha256": "7307d28ca6949465e2615b73ea082a61355fae6628bbd0c6d70dad1921392f07",
+   "bytes": 6194,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|mcp|tricentis_debug|2",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_debug-mcp-rep3-1a5a54.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_debug-mcp-rep3-1a5a54.jsonl.gz",
+   "sha256": "16fb297619a2d5b6055ba734acdf14e1b426b710a3f2931eeedd6e811ec1b78b",
+   "bytes": 6194,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|mcp|tricentis_debug|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_quote-hookpkg3-rep1-b6b03c.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_quote-hookpkg3-rep1-b6b03c.jsonl.gz",
+   "sha256": "2c22482e5ef3575f3844861ae7df18f8a5ff78de1ca71f58324ef0aac55986c6",
+   "bytes": 1297796,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg3|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 145
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_quote-hookpkg3-rep2-a1e1ae.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_quote-hookpkg3-rep2-a1e1ae.jsonl.gz",
+   "sha256": "b9ade974e06fb8516d40535985c48ef297ffdac17e2c15b452b6da1ab3fda5ed",
+   "bytes": 966328,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg3|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 79
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_quote-hookpkg3-rep3-331278.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_quote-hookpkg3-rep3-331278.jsonl.gz",
+   "sha256": "fbc483899df2b8236517ced665dcd8dca128a97d0390c7f7bb2e57f14ff61e6d",
+   "bytes": 8643,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg3|tricentis_quote|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_quote-hookpkg31-rep1-9ca0d8.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_quote-hookpkg31-rep1-9ca0d8.jsonl.gz",
+   "sha256": "bc8ca56dfcf763a1f19259c7d73b5431a7ef3f4355d9206eeb3357d0326aad9d",
+   "bytes": 1071399,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg31|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 166
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_quote-hookpkg31-rep2-d704ec.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_quote-hookpkg31-rep2-d704ec.jsonl.gz",
+   "sha256": "8e3300aa2eb79ecdaa595597898a13861106ef961fc5221c5c13490eb62250c9",
+   "bytes": 2669756,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg31|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 244
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_quote-hookpkg31-rep3-ebd113.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_quote-hookpkg31-rep3-ebd113.jsonl.gz",
+   "sha256": "3789ec7ef6c9a48297938dd0b95377a62b1dbb326ad90023fd8fdfd76118a515",
+   "bytes": 8646,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg31|tricentis_quote|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_quote-mcp-rep1-844104.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_quote-mcp-rep1-844104.jsonl.gz",
+   "sha256": "4b3cc6e46c2f04cef697894704bfeb78b1d600798048e84f4983304830924876",
+   "bytes": 251943,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:qwen3.8-flash|mcp|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 26
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_quote-mcp-rep2-8dbf41.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_quote-mcp-rep2-8dbf41.jsonl.gz",
+   "sha256": "0569fa331b6ed2495f1fcd095353fe9470b4cdaf88e26300dc193ecd17939ec4",
+   "bytes": 2136939,
+   "results_file": "results/results_live_v31or.jsonl",
+   "key": "cc-or:qwen3.8-flash|mcp|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 146
+   }
+  },
+  {
+   "file": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_quote-mcp-rep3-790cb2.jsonl",
+   "transcript": "transcripts_live_v31or/cc-or:qwen3.8-flash/tricentis_quote-mcp-rep3-790cb2.jsonl.gz",
+   "sha256": "62217ae88a4a7d8f4cc2a8ea3d58b1ab776f9b3eba710335f7a89bcfb7e48780",
+   "bytes": 6194,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|mcp|tricentis_quote|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31gem/cc-or:gemini-3.8-flash/carconfig_order-hookpkg31-rep1-eaf85c.jsonl",
+   "transcript": "transcripts_live_v31gem/cc-or:gemini-3.8-flash/carconfig_order-hookpkg31-rep1-eaf85c.jsonl.gz",
+   "sha256": "eeedef1be50a81ad32228bde9fd9b578951e73ca53cb5bd764e2585cb4224755",
+   "bytes": 2314610,
+   "results_file": "results/results_live_v31gem.jsonl",
+   "key": "cc-or:gemini-3.8-flash|hookpkg31|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 80,
+    "home_path": 247
+   }
+  },
+  {
+   "file": "transcripts_live_v31gem/cc-or:gemini-3.8-flash/carconfig_order-mcp-rep2-26ccd0.jsonl",
+   "transcript": "transcripts_live_v31gem/cc-or:gemini-3.8-flash/carconfig_order-mcp-rep2-26ccd0.jsonl.gz",
+   "sha256": "bd7b9be582801c21376dc2f1b4e9cb24db6ce43493d8ba23a1a62c09d9bf3392",
+   "bytes": 631029,
+   "results_file": "results/results_live_v31gem.jsonl",
+   "key": "cc-or:gemini-3.8-flash|mcp|carconfig_order|2",
+   "status": "not_scored_in_results_file",
+   "scrub": {
+    "email": 20,
+    "home_path": 74
+   }
+  },
+  {
+   "file": "transcripts_live_v31gem/cc-or:gemini-3.8-flash/demoshop_debug-hookpkg31-rep1-ba6821.jsonl",
+   "transcript": "transcripts_live_v31gem/cc-or:gemini-3.8-flash/demoshop_debug-hookpkg31-rep1-ba6821.jsonl.gz",
+   "sha256": "1ce884f3791c218ae303c62db34141fdca9aa0040a8ee927fe7c1da6643c0e9f",
+   "bytes": 570631,
+   "results_file": "results/results_live_v31gem.jsonl",
+   "key": "cc-or:gemini-3.8-flash|hookpkg31|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 247
+   }
+  },
+  {
+   "file": "transcripts_live_v31gem/cc-or:gemini-3.8-flash/demoshop_debug-mcp-rep1-02eb48.jsonl",
+   "transcript": "transcripts_live_v31gem/cc-or:gemini-3.8-flash/demoshop_debug-mcp-rep1-02eb48.jsonl.gz",
+   "sha256": "e30aef251eef1c21059fc3df435f38d6bd19bb245169288b283682a97fb66448",
+   "bytes": 471976,
+   "results_file": "results/results_live_v31gem.jsonl",
+   "key": "cc-or:gemini-3.8-flash|mcp|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 80,
+    "oauth_field": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v31gem/cc-or:gemini-3.8-flash/demoshop_order-hookpkg31-rep1-ba37b0.jsonl",
+   "transcript": "transcripts_live_v31gem/cc-or:gemini-3.8-flash/demoshop_order-hookpkg31-rep1-ba37b0.jsonl.gz",
+   "sha256": "36c423effc7b80acc033651b7eeedf411c859080164abf72bad1a72cd580d93a",
+   "bytes": 761867,
+   "results_file": "results/results_live_v31gem.jsonl",
+   "key": "cc-or:gemini-3.8-flash|hookpkg31|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 10,
+    "home_path": 240
+   }
+  },
+  {
+   "file": "transcripts_live_v31gem/cc-or:gemini-3.8-flash/demoshop_order-mcp-rep1-804d28.jsonl",
+   "transcript": "transcripts_live_v31gem/cc-or:gemini-3.8-flash/demoshop_order-mcp-rep1-804d28.jsonl.gz",
+   "sha256": "d1a1a53aa1a99e485c7b39bca5d2598d56d2157afa97da35fb13e7cbacc44b9f",
+   "bytes": 541024,
+   "results_file": "results/results_live_v31gem.jsonl",
+   "key": "cc-or:gemini-3.8-flash|mcp|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 14,
+    "home_path": 182
+   }
+  },
+  {
+   "file": "transcripts_live_v31gem/cc-or:gemini-3.8-flash/tricentis_debug-hookpkg31-rep1-200cc1.jsonl",
+   "transcript": "transcripts_live_v31gem/cc-or:gemini-3.8-flash/tricentis_debug-hookpkg31-rep1-200cc1.jsonl.gz",
+   "sha256": "dfa3dd39cb81c8dc12eb9d60e026c7704f241aadc57daf6fcac851b8cb2909c4",
+   "bytes": 626127,
+   "results_file": "results/results_live_v31gem.jsonl",
+   "key": "cc-or:gemini-3.8-flash|hookpkg31|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 244
+   }
+  },
+  {
+   "file": "transcripts_live_v31gem/cc-or:gemini-3.8-flash/tricentis_debug-mcp-rep1-cd4f8b.jsonl",
+   "transcript": "transcripts_live_v31gem/cc-or:gemini-3.8-flash/tricentis_debug-mcp-rep1-cd4f8b.jsonl.gz",
+   "sha256": "83c4763f036b190cf049e08d807b100afb55f8d96d5495542f3228f8efe0044a",
+   "bytes": 732200,
+   "results_file": "results/results_live_v31gem.jsonl",
+   "key": "cc-or:gemini-3.8-flash|mcp|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 201
+   }
+  },
+  {
+   "file": "transcripts_live_v31gem/cc-or:gemini-3.8-flash/tricentis_quote-hookpkg31-rep2-ffbf26.jsonl",
+   "transcript": "transcripts_live_v31gem/cc-or:gemini-3.8-flash/tricentis_quote-hookpkg31-rep2-ffbf26.jsonl.gz",
+   "sha256": "ce46ff54a8771dc0409beece71d43439adb948203c90803189df3e1c4018484b",
+   "bytes": 643977,
+   "results_file": "results/results_live_v31gem.jsonl",
+   "key": "cc-or:gemini-3.8-flash|hookpkg31|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 241
+   }
+  },
+  {
+   "file": "transcripts_live_v31gem/cc-or:gemini-3.8-flash/tricentis_quote-mcp-rep1-3e37f3.jsonl",
+   "transcript": "transcripts_live_v31gem/cc-or:gemini-3.8-flash/tricentis_quote-mcp-rep1-3e37f3.jsonl.gz",
+   "sha256": "4c1542f9255c45c41e0e01ad6a1b26247309ac6e24e160302ee2ce9630ad20a4",
+   "bytes": 639337,
+   "results_file": "results/results_live_v31gem.jsonl",
+   "key": "cc-or:gemini-3.8-flash|mcp|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 152
+   }
+  },
+  {
+   "file": "transcripts_live_v31gem/cc-or:gemini-3.8-flash/tricentis_quote-mcp-rep2-0903bc.jsonl",
+   "transcript": "transcripts_live_v31gem/cc-or:gemini-3.8-flash/tricentis_quote-mcp-rep2-0903bc.jsonl.gz",
+   "sha256": "8ebebb7ce2ea88219c5e4b9c3532e70e6b0e41488c78b4b8e434c6d7d3bda0c6",
+   "bytes": 608772,
+   "results_file": "results/results_live_v31gem.jsonl",
+   "key": "cc-or:gemini-3.8-flash|mcp|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 149
+   }
+  },
+  {
+   "file": "transcripts_live_v32/cc-or:qwen3.8-flash/carconfig_order-hookpkg31-rep1-eb773e.jsonl",
+   "transcript": "transcripts_live_v32/cc-or:qwen3.8-flash/carconfig_order-hookpkg31-rep1-eb773e.jsonl.gz",
+   "sha256": "c8cd0a1e92adb1bd6d81d5c8023e1fb0237a9dc5244afff2537be444a79bea9e",
+   "bytes": 919851,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg31|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 76
+   }
+  },
+  {
+   "file": "transcripts_live_v32/cc-or:qwen3.8-flash/carconfig_order-hookpkg31-rep2-bc280e.jsonl",
+   "transcript": "transcripts_live_v32/cc-or:qwen3.8-flash/carconfig_order-hookpkg31-rep2-bc280e.jsonl.gz",
+   "sha256": "acf00b72fef21c67e0bcff31744f3d939251e0081ffa03c34d4e98c5f01e1ab6",
+   "bytes": 8640,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg31|carconfig_order|2",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v32/cc-or:qwen3.8-flash/carconfig_order-hookpkg32-rep1-2e85e9.jsonl",
+   "transcript": "transcripts_live_v32/cc-or:qwen3.8-flash/carconfig_order-hookpkg32-rep1-2e85e9.jsonl.gz",
+   "sha256": "d53b98479616499e8596a8ed2605e923761ba85b146ad3f1395a4d758b1e4956",
+   "bytes": 768217,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg32|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 102
+   }
+  },
+  {
+   "file": "transcripts_live_v32/cc-or:qwen3.8-flash/carconfig_order-hookpkg32-rep2-7e8f71.jsonl",
+   "transcript": "transcripts_live_v32/cc-or:qwen3.8-flash/carconfig_order-hookpkg32-rep2-7e8f71.jsonl.gz",
+   "sha256": "f97c6cc49c96722fdcf951dd509eca43c40bdbbbf1f39765069db9c881d1f65b",
+   "bytes": 8640,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg32|carconfig_order|2",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v32/cc-or:qwen3.8-flash/demoshop_debug-hookpkg31-rep1-7a0508.jsonl",
+   "transcript": "transcripts_live_v32/cc-or:qwen3.8-flash/demoshop_debug-hookpkg31-rep1-7a0508.jsonl.gz",
+   "sha256": "bc7e0f8a625459819825c07196ea2ab14c815a29e508d8671884717944253ba8",
+   "bytes": 1573995,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg31|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 97
+   }
+  },
+  {
+   "file": "transcripts_live_v32/cc-or:qwen3.8-flash/demoshop_debug-hookpkg31-rep2-4abb70.jsonl",
+   "transcript": "transcripts_live_v32/cc-or:qwen3.8-flash/demoshop_debug-hookpkg31-rep2-4abb70.jsonl.gz",
+   "sha256": "4dbe09eda7b5f05890f07ae1f69b3b2215aca70d0da399d5c1b4dadba4ff909c",
+   "bytes": 8975,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg31|demoshop_debug|2",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v32/cc-or:qwen3.8-flash/demoshop_debug-hookpkg32-rep1-faa94c.jsonl",
+   "transcript": "transcripts_live_v32/cc-or:qwen3.8-flash/demoshop_debug-hookpkg32-rep1-faa94c.jsonl.gz",
+   "sha256": "4941f9fada2060301b078130d7f30223a3d5ea41bbdfc988855b28274e0da612",
+   "bytes": 3824913,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg32|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 166
+   }
+  },
+  {
+   "file": "transcripts_live_v32/cc-or:qwen3.8-flash/demoshop_debug-hookpkg32-rep2-74ed21.jsonl",
+   "transcript": "transcripts_live_v32/cc-or:qwen3.8-flash/demoshop_debug-hookpkg32-rep2-74ed21.jsonl.gz",
+   "sha256": "5e9d72d256a94e8ea60f718b1f81e0098d5ab523c6817590c6509288b942b280",
+   "bytes": 8975,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg32|demoshop_debug|2",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v32/cc-or:qwen3.8-flash/demoshop_order-hookpkg31-rep1-2d0fae.jsonl",
+   "transcript": "transcripts_live_v32/cc-or:qwen3.8-flash/demoshop_order-hookpkg31-rep1-2d0fae.jsonl.gz",
+   "sha256": "3e039c1d3554c512fe5f2b0258cf49c6fe08629a01299f5a21c9dbf59ffb3b04",
+   "bytes": 1607295,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg31|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 96
+   }
+  },
+  {
+   "file": "transcripts_live_v32/cc-or:qwen3.8-flash/demoshop_order-hookpkg31-rep2-150fb0.jsonl",
+   "transcript": "transcripts_live_v32/cc-or:qwen3.8-flash/demoshop_order-hookpkg31-rep2-150fb0.jsonl.gz",
+   "sha256": "c8bcbaceae5b285556a4fe5b77edf0d8461d9520c31152331eeddfbc512023c2",
+   "bytes": 8637,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg31|demoshop_order|2",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v32/cc-or:qwen3.8-flash/demoshop_order-hookpkg32-rep1-285a9d.jsonl",
+   "transcript": "transcripts_live_v32/cc-or:qwen3.8-flash/demoshop_order-hookpkg32-rep1-285a9d.jsonl.gz",
+   "sha256": "5affca0d1f7b23e5033f55269e4065750bbd7b86b000d2fe35e04664ad0dda1a",
+   "bytes": 799528,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg32|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 137
+   }
+  },
+  {
+   "file": "transcripts_live_v32/cc-or:qwen3.8-flash/demoshop_order-hookpkg32-rep2-f58384.jsonl",
+   "transcript": "transcripts_live_v32/cc-or:qwen3.8-flash/demoshop_order-hookpkg32-rep2-f58384.jsonl.gz",
+   "sha256": "d8f62e1fec29994f288b47248aef3697529fcc180ed74ef82d120b24338a9437",
+   "bytes": 8637,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg32|demoshop_order|2",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v32/cc-or:qwen3.8-flash/tricentis_debug-hookpkg31-rep1-f99e79.jsonl",
+   "transcript": "transcripts_live_v32/cc-or:qwen3.8-flash/tricentis_debug-hookpkg31-rep1-f99e79.jsonl.gz",
+   "sha256": "380a11b5bc2d0f16b95459c81ee4a899c623aeec3b447b44ce43d51c67ad3e9d",
+   "bytes": 2952440,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg31|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 196
+   }
+  },
+  {
+   "file": "transcripts_live_v32/cc-or:qwen3.8-flash/tricentis_debug-hookpkg31-rep2-d327b9.jsonl",
+   "transcript": "transcripts_live_v32/cc-or:qwen3.8-flash/tricentis_debug-hookpkg31-rep2-d327b9.jsonl.gz",
+   "sha256": "7628bc8ba4d0928f9038ad63f9a021a526fa953cd0254a267d92d6fb3d7e6c8f",
+   "bytes": 8961,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg31|tricentis_debug|2",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v32/cc-or:qwen3.8-flash/tricentis_debug-hookpkg32-rep1-2247aa.jsonl",
+   "transcript": "transcripts_live_v32/cc-or:qwen3.8-flash/tricentis_debug-hookpkg32-rep1-2247aa.jsonl.gz",
+   "sha256": "1f9bf7620efd2590bc766c6ec9b0f500f9d5ebe619d5c7930092c6e7b4535148",
+   "bytes": 1713138,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg32|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 108
+   }
+  },
+  {
+   "file": "transcripts_live_v32/cc-or:qwen3.8-flash/tricentis_debug-hookpkg32-rep2-3a4381.jsonl",
+   "transcript": "transcripts_live_v32/cc-or:qwen3.8-flash/tricentis_debug-hookpkg32-rep2-3a4381.jsonl.gz",
+   "sha256": "cdbc1c5ecf5a86b7b013e0bb4568cce4173afc3ed9d005755e6aba13b5bb5b25",
+   "bytes": 8960,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg32|tricentis_debug|2",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v32/cc-or:qwen3.8-flash/tricentis_quote-hookpkg31-rep2-bdbb86.jsonl",
+   "transcript": "transcripts_live_v32/cc-or:qwen3.8-flash/tricentis_quote-hookpkg31-rep2-bdbb86.jsonl.gz",
+   "sha256": "944338cae004568d3bbae7282ce23f6e5764563dcd34b78ec3ad04cbcc4388a1",
+   "bytes": 8640,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg31|tricentis_quote|2",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v32/cc-or:qwen3.8-flash/tricentis_quote-hookpkg31-rep3-eb62f5.jsonl",
+   "transcript": "transcripts_live_v32/cc-or:qwen3.8-flash/tricentis_quote-hookpkg31-rep3-eb62f5.jsonl.gz",
+   "sha256": "e85f19103a676071793bc93edb660988938358c332da52c5d1235d6783253450",
+   "bytes": 8640,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg31|tricentis_quote|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v32/cc-or:qwen3.8-flash/tricentis_quote-hookpkg32-rep1-d9c811.jsonl",
+   "transcript": "transcripts_live_v32/cc-or:qwen3.8-flash/tricentis_quote-hookpkg32-rep1-d9c811.jsonl.gz",
+   "sha256": "b0d376b5b94a02ce37ccf83371807bfa0d738e21319aed0f8507a4e1aee28404",
+   "bytes": 1127335,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg32|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 160
+   }
+  },
+  {
+   "file": "transcripts_live_v32/cc-or:qwen3.8-flash/tricentis_quote-hookpkg32-rep2-ff278d.jsonl",
+   "transcript": "transcripts_live_v32/cc-or:qwen3.8-flash/tricentis_quote-hookpkg32-rep2-ff278d.jsonl.gz",
+   "sha256": "d90d72badd9af269135391d617e0fd11fd5e1041b856c0b92da7fd6d78b1f329",
+   "bytes": 8640,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg32|tricentis_quote|2",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v32/cc-or:qwen3.8-flash/tricentis_quote-hookpkg32-rep3-383abb.jsonl",
+   "transcript": "transcripts_live_v32/cc-or:qwen3.8-flash/tricentis_quote-hookpkg32-rep3-383abb.jsonl.gz",
+   "sha256": "8d0cde6dbde2a385c4855bef40312ef484e15bb0c2454e0ebdd9b34f0451a5f4",
+   "bytes": 8640,
+   "results_file": "excluded/excluded_credits_402.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg32|tricentis_quote|3",
+   "status": "excluded:credits_402",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/carconfig_order-hookpkg31-rep1-2543ef.jsonl",
+   "transcript": "transcripts_live_v32/codex/carconfig_order-hookpkg31-rep1-2543ef.jsonl.gz",
+   "sha256": "044449fb5b0bd8961326ffa01ab9f821874ce09140eb0b63877387acb1e6c302",
+   "bytes": 162368,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg31|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 47
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/carconfig_order-hookpkg31-rep2-d9370e.jsonl",
+   "transcript": "transcripts_live_v32/codex/carconfig_order-hookpkg31-rep2-d9370e.jsonl.gz",
+   "sha256": "0b97fd3e785664d3f383e83128aed203c569fe0282f231834a90f9d9bae47e7d",
+   "bytes": 140124,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg31|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 25
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/carconfig_order-hookpkg31-rep3-26c159.jsonl",
+   "transcript": "transcripts_live_v32/codex/carconfig_order-hookpkg31-rep3-26c159.jsonl.gz",
+   "sha256": "9ea6aec85da59feffef26c2d4fcb3435de06fe4d499e822f00acf8f4085a58c7",
+   "bytes": 135487,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg31|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 34
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/carconfig_order-hookpkg32-rep1-0e41c4.jsonl",
+   "transcript": "transcripts_live_v32/codex/carconfig_order-hookpkg32-rep1-0e41c4.jsonl.gz",
+   "sha256": "7fd26eb580a0001710dc2d9fccb347635b185924d00f5cdf00067e3fd4973a12",
+   "bytes": 69362,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg32|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 5,
+    "home_path": 44
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/carconfig_order-hookpkg32-rep2-a42dd8.jsonl",
+   "transcript": "transcripts_live_v32/codex/carconfig_order-hookpkg32-rep2-a42dd8.jsonl.gz",
+   "sha256": "fb2da81ca03a401cb53ed0cec706cbf1302207d35c3d5269ce96e1a76aadadd2",
+   "bytes": 145566,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg32|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 35
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/carconfig_order-hookpkg32-rep3-177b32.jsonl",
+   "transcript": "transcripts_live_v32/codex/carconfig_order-hookpkg32-rep3-177b32.jsonl.gz",
+   "sha256": "49306bf58c520d83c982fa5e73c0ef7f34dbdef92baf355b3d343e9404a929cd",
+   "bytes": 164635,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg32|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 7,
+    "home_path": 43
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/carconfig_order-hookpkg32-rep3-b8e093.jsonl",
+   "transcript": "transcripts_live_v32/codex/carconfig_order-hookpkg32-rep3-b8e093.jsonl.gz",
+   "sha256": "2cae755f71a7b80c5963541e1aafb60363bb7b38e2ca6411bacfaa86e28a6862",
+   "bytes": 14023,
+   "results_file": "excluded/excluded_aborted.jsonl",
+   "key": "codex|hookpkg32|carconfig_order|3",
+   "status": "excluded:aborted",
+   "scrub": {
+    "email": 1,
+    "home_path": 6
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/demoshop_debug-hookpkg31-rep1-d6e43c.jsonl",
+   "transcript": "transcripts_live_v32/codex/demoshop_debug-hookpkg31-rep1-d6e43c.jsonl.gz",
+   "sha256": "13da28f956d88f0f9bfdef078a77a960c73e88017402cdb6fa3268c30706e5bc",
+   "bytes": 134664,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg31|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 1,
+    "home_path": 70
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/demoshop_debug-hookpkg31-rep2-5e0eea.jsonl",
+   "transcript": "transcripts_live_v32/codex/demoshop_debug-hookpkg31-rep2-5e0eea.jsonl.gz",
+   "sha256": "6e81ee47c791fd81befe79011a0a897bbd892f611e8c2fafa4074361ad2a7040",
+   "bytes": 153345,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg31|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 31
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/demoshop_debug-hookpkg31-rep3-60a16c.jsonl",
+   "transcript": "transcripts_live_v32/codex/demoshop_debug-hookpkg31-rep3-60a16c.jsonl.gz",
+   "sha256": "0085e7ab3b9d27b0df697d4ac0de3bc6613b948f485eb0197eb334a061213e6a",
+   "bytes": 157977,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg31|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 80
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/demoshop_debug-hookpkg32-rep1-b67db3.jsonl",
+   "transcript": "transcripts_live_v32/codex/demoshop_debug-hookpkg32-rep1-b67db3.jsonl.gz",
+   "sha256": "3e789af08115c5947b257019ff1a851cd59570471b724a7f888c32f049579260",
+   "bytes": 106889,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg32|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 1,
+    "home_path": 59
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/demoshop_debug-hookpkg32-rep2-0e4957.jsonl",
+   "transcript": "transcripts_live_v32/codex/demoshop_debug-hookpkg32-rep2-0e4957.jsonl.gz",
+   "sha256": "340a938d61eec992d94bf9663272c24c39efb03513e7c94dd96f2169f654bcaf",
+   "bytes": 114546,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg32|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "email": 3,
+    "home_path": 40
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/demoshop_debug-hookpkg32-rep3-f5ea2f.jsonl",
+   "transcript": "transcripts_live_v32/codex/demoshop_debug-hookpkg32-rep3-f5ea2f.jsonl.gz",
+   "sha256": "c631f6c6c185f68207ae6fca9f4b6b667a511201094dee1c3359971bbafb98fd",
+   "bytes": 1202779,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg32|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 113
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/demoshop_order-hookpkg31-rep1-dfcf91.jsonl",
+   "transcript": "transcripts_live_v32/codex/demoshop_order-hookpkg31-rep1-dfcf91.jsonl.gz",
+   "sha256": "8ecc39fa644afd059d59d10332fb041d170721cd9a8478b8bab671caa04e0239",
+   "bytes": 77820,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg31|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 5,
+    "home_path": 47
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/demoshop_order-hookpkg31-rep2-dae228.jsonl",
+   "transcript": "transcripts_live_v32/codex/demoshop_order-hookpkg31-rep2-dae228.jsonl.gz",
+   "sha256": "58e7658760f66587f3343a647052540c10059343360ccda874d17ed920c39e25",
+   "bytes": 65786,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg31|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 47
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/demoshop_order-hookpkg31-rep3-927ee7.jsonl",
+   "transcript": "transcripts_live_v32/codex/demoshop_order-hookpkg31-rep3-927ee7.jsonl.gz",
+   "sha256": "7b007788eb5ab932d4188c46f89c406b9e002f4194de4fe0bcd7c37e211014f0",
+   "bytes": 76059,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg31|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 5,
+    "home_path": 46
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/demoshop_order-hookpkg32-rep1-b035ed.jsonl",
+   "transcript": "transcripts_live_v32/codex/demoshop_order-hookpkg32-rep1-b035ed.jsonl.gz",
+   "sha256": "54eb8bea9feb701f208e75a9aef775ea37131fb994f845b0d4834a0f12665aad",
+   "bytes": 81315,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg32|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 48
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/demoshop_order-hookpkg32-rep2-5ba83b.jsonl",
+   "transcript": "transcripts_live_v32/codex/demoshop_order-hookpkg32-rep2-5ba83b.jsonl.gz",
+   "sha256": "fbb17f128cac2b1190dec5d89aaf614382b292e4e93777467ab4d6e2e353731d",
+   "bytes": 61397,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg32|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 5,
+    "home_path": 37
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/demoshop_order-hookpkg32-rep3-c7d573.jsonl",
+   "transcript": "transcripts_live_v32/codex/demoshop_order-hookpkg32-rep3-c7d573.jsonl.gz",
+   "sha256": "faa9a1fc3ed37e5869e666c570d67314ffb3eda18578dd0c226de52e2b900db4",
+   "bytes": 87789,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg32|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 5,
+    "home_path": 43
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/tricentis_debug-hookpkg31-rep1-636cfa.jsonl",
+   "transcript": "transcripts_live_v32/codex/tricentis_debug-hookpkg31-rep1-636cfa.jsonl.gz",
+   "sha256": "e66a35a2d58d454926d42f919f307c38e5e89f0554ccd0c2c18f0d9eacdbbf1d",
+   "bytes": 92365,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg31|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 60
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/tricentis_debug-hookpkg31-rep2-2fb5e8.jsonl",
+   "transcript": "transcripts_live_v32/codex/tricentis_debug-hookpkg31-rep2-2fb5e8.jsonl.gz",
+   "sha256": "e69defa958969598b67c7788bd84b2b747725956d97fd1d03be1ef45a4921233",
+   "bytes": 89534,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg31|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 46
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/tricentis_debug-hookpkg31-rep2-8565ea.jsonl",
+   "transcript": "transcripts_live_v32/codex/tricentis_debug-hookpkg31-rep2-8565ea.jsonl.gz",
+   "sha256": "6c5a676a4cec1fad6c863c36d29582d19a4b8b0c4df634b519109806a91ea765",
+   "bytes": 3894,
+   "results_file": "excluded/excluded_codex_backend_outage.jsonl",
+   "key": "codex|hookpkg31|tricentis_debug|2",
+   "status": "excluded:codex_backend_outage",
+   "scrub": {}
+  },
+  {
+   "file": "transcripts_live_v32/codex/tricentis_debug-hookpkg31-rep3-88e907.jsonl",
+   "transcript": "transcripts_live_v32/codex/tricentis_debug-hookpkg31-rep3-88e907.jsonl.gz",
+   "sha256": "86c78a7d7536d0b715239c6e049ed0bc7994378594c1abeec1b04169de9beba6",
+   "bytes": 104458,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg31|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 64
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/tricentis_debug-hookpkg32-rep1-29797f.jsonl",
+   "transcript": "transcripts_live_v32/codex/tricentis_debug-hookpkg32-rep1-29797f.jsonl.gz",
+   "sha256": "816f93048971bc267b22d876bd766b705623ed5573d5f9af55b9a8d683ed6c44",
+   "bytes": 61034,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg32|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 31
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/tricentis_debug-hookpkg32-rep2-0443df.jsonl",
+   "transcript": "transcripts_live_v32/codex/tricentis_debug-hookpkg32-rep2-0443df.jsonl.gz",
+   "sha256": "79aed209f4f7df68138347ab024a2b36ff3b2234d5ff1e086ae80a9510eed263",
+   "bytes": 93763,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg32|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 55
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/tricentis_debug-hookpkg32-rep3-4e6527.jsonl",
+   "transcript": "transcripts_live_v32/codex/tricentis_debug-hookpkg32-rep3-4e6527.jsonl.gz",
+   "sha256": "f7a7a0e7d0deba78c4d3ee702dbc8fd28c2b93c7d618c2606b84abaa916e9771",
+   "bytes": 94814,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg32|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 64
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/tricentis_quote-hookpkg31-rep1-6d8d61.jsonl",
+   "transcript": "transcripts_live_v32/codex/tricentis_quote-hookpkg31-rep1-6d8d61.jsonl.gz",
+   "sha256": "9a5a834916dba371351c5238485aac0fa505e9ef58668b10281cb1c23166daa9",
+   "bytes": 74231,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg31|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 54
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/tricentis_quote-hookpkg31-rep2-bf9cd2.jsonl",
+   "transcript": "transcripts_live_v32/codex/tricentis_quote-hookpkg31-rep2-bf9cd2.jsonl.gz",
+   "sha256": "26ab63733aca13a5754d73d93fe62e35e6cbfa930b37b1e86390c851faacc30d",
+   "bytes": 71225,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg31|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 38
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/tricentis_quote-hookpkg31-rep3-ec7055.jsonl",
+   "transcript": "transcripts_live_v32/codex/tricentis_quote-hookpkg31-rep3-ec7055.jsonl.gz",
+   "sha256": "5833586dd2366827a558e363988f2e3b99e434bd0b2a1b11ca33d2ed1fabaec4",
+   "bytes": 79682,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg31|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 70
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/tricentis_quote-hookpkg32-rep1-20c9d3.jsonl",
+   "transcript": "transcripts_live_v32/codex/tricentis_quote-hookpkg32-rep1-20c9d3.jsonl.gz",
+   "sha256": "a09379ca255f47560796c0562955f3bbebab942e7f75a3ed328f06e72f7849fb",
+   "bytes": 58727,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg32|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 39
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/tricentis_quote-hookpkg32-rep2-59d12a.jsonl",
+   "transcript": "transcripts_live_v32/codex/tricentis_quote-hookpkg32-rep2-59d12a.jsonl.gz",
+   "sha256": "11f51bdf1d6e4c624ba08eb42cd6d9b4c0a911eb03ac6bd26f0e8ddad6c12c35",
+   "bytes": 90525,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg32|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 62
+   }
+  },
+  {
+   "file": "transcripts_live_v32/codex/tricentis_quote-hookpkg32-rep3-b720e7.jsonl",
+   "transcript": "transcripts_live_v32/codex/tricentis_quote-hookpkg32-rep3-b720e7.jsonl.gz",
+   "sha256": "5032cbd1f93bfdaba40b2feb84d426001ab37204110d0ea0a889c0abd47bae68",
+   "bytes": 79556,
+   "results_file": "results/results_live_v32.jsonl",
+   "key": "codex|hookpkg32|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 37
+   }
+  },
+  {
+   "file": "transcripts_live_v32smoke/cc-or:qwen3.8-flash/tricentis_quote-hookpkg32-rep1-53f235.jsonl",
+   "transcript": "transcripts_live_v32smoke/cc-or:qwen3.8-flash/tricentis_quote-hookpkg32-rep1-53f235.jsonl.gz",
+   "sha256": "785c25c9f3ffad1ead9df456590f6faf4b1b0a612845055dcb19e611a705b5a2",
+   "bytes": 1107572,
+   "results_file": "results/results_live_v32smoke.jsonl",
+   "key": "cc-or:qwen3.8-flash|hookpkg32|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 150
+   }
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "ok": true,
+ "passed": 50,
+ "total": 50,
+ "timings": {
+  "start_ms": 571,
+  "guard_not_found_ms": 1753,
+  "state_aria_ms": 154,
+  "search_ms": 118,
+  "run_first_ms_cold_analyzer": 2900,
+  "run_new_ms_median": 128,
+  "check_ms": 660,
+  "hook_ms_helper": 1440,
+  "stop_ms": 676,
+  "procs_in_session": 3,
+  "robot_final_ms": 2872,
+  "step_get_title_rfmcp_ms": {
+   "median": 72,
+   "p90": 83
+  },
+  "step_get_title_fastpy_ms": {
+   "median": 52,
+   "p90": 59
+  },
+  "kill9_survivors_after_2_5s_pdeathsig": 0
+ },
+ "failed": []
+}

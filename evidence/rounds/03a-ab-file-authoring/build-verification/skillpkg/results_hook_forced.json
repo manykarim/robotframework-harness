@@ -1,0 +1,22 @@
+{
+ "opencode": {
+  "hook_calls": 1,
+  "model_saw_hook_text": true,
+  "quoted_reports": false,
+  "final_has_Clik": true,
+  "final_has_Select_Frame": true,
+  "final_uses_IF": true,
+  "final_uses_frame_piercing": false,
+  "errors_left": 2
+ },
+ "codex": {
+  "hook_calls": 2,
+  "model_saw_hook_text": false,
+  "quoted_reports": true,
+  "final_has_Clik": false,
+  "final_has_Select_Frame": false,
+  "final_uses_IF": true,
+  "final_uses_frame_piercing": false,
+  "errors_left": 0
+ }
+}

@@ -1,0 +1,139 @@
+{
+ "bm25_build_s": {
+  "all6:all6": 0.043,
+  "session:browser": 0.041,
+  "session:selenium": 0.024,
+  "session:requests": 0.02
+ },
+ "matcher_build_s": {
+  "all6:all6:d1": 0.265,
+  "all6:all6:d2": 0.521,
+  "session:browser:d1": 0.192,
+  "session:browser:d2": 0.431,
+  "session:selenium:d1": 0.153,
+  "session:selenium:d2": 0.342,
+  "session:requests:d1": 0.106,
+  "session:requests:d2": 0.302
+ },
+ "all6": {
+  "n_cases": 30,
+  "a1": {
+   "hit@5": 0.167,
+   "recall@5": 0.084,
+   "MRR@10": 0.167,
+   "ms_per_query": 1.19
+  },
+  "a2": {
+   "hit@5": 0.433,
+   "recall@5": 0.283,
+   "MRR@10": 0.31,
+   "ms_per_query": 0.37
+  },
+  "a3": {
+   "hit@5": 0.933,
+   "recall@5": 0.681,
+   "MRR@10": 0.757,
+   "ms_per_query": 1.65
+  },
+  "b": {
+   "hit@5": 0.733,
+   "recall@5": 0.591,
+   "MRR@10": 0.633,
+   "ms_per_query": 36.84
+  },
+  "c": {
+   "hit@5": 0.933,
+   "recall@5": 0.819,
+   "MRR@10": 0.86,
+   "ms_per_query": 0.6
+  },
+  "d3": {
+   "hit@5": 0.967,
+   "recall@5": 0.783,
+   "MRR@10": 0.889,
+   "ms_per_query": 1.01
+  },
+  "e": {
+   "hit@5": 0.967,
+   "recall@5": 0.812,
+   "MRR@10": 0.9,
+   "ms_per_query": 1.64
+  },
+  "d1": {
+   "hit@5": 0.633,
+   "recall@5": 0.517,
+   "MRR@10": 0.562,
+   "ms_per_query": 419.43
+  },
+  "d2": {
+   "hit@5": 0.733,
+   "recall@5": 0.584,
+   "MRR@10": 0.641,
+   "ms_per_query": 428.46
+  }
+ },
+ "session": {
+  "n_cases": 46,
+  "a1": {
+   "hit@5": 0.13,
+   "recall@5": 0.105,
+   "MRR@10": 0.13,
+   "ms_per_query": 0.7
+  },
+  "a2": {
+   "hit@5": 0.543,
+   "recall@5": 0.476,
+   "MRR@10": 0.368,
+   "ms_per_query": 0.25
+  },
+  "a3": {
+   "hit@5": 0.87,
+   "recall@5": 0.768,
+   "MRR@10": 0.745,
+   "ms_per_query": 1.11
+  },
+  "b": {
+   "hit@5": 0.674,
+   "recall@5": 0.607,
+   "MRR@10": 0.587,
+   "ms_per_query": 25.01
+  },
+  "c": {
+   "hit@5": 0.957,
+   "recall@5": 0.917,
+   "MRR@10": 0.845,
+   "ms_per_query": 0.41
+  },
+  "d3": {
+   "hit@5": 0.913,
+   "recall@5": 0.844,
+   "MRR@10": 0.807,
+   "ms_per_query": 0.64
+  },
+  "e": {
+   "hit@5": 0.978,
+   "recall@5": 0.909,
+   "MRR@10": 0.844,
+   "ms_per_query": 1.08
+  },
+  "d1": {
+   "hit@5": 0.717,
+   "recall@5": 0.639,
+   "MRR@10": 0.609,
+   "ms_per_query": 276.98
+  },
+  "d2": {
+   "hit@5": 0.826,
+   "recall@5": 0.726,
+   "MRR@10": 0.671,
+   "ms_per_query": 284.87
+  }
+ },
+ "model2vec": {
+  "import_s": 0.109,
+  "load_s": 0.4,
+  "embed_corpus_s": 0.022,
+  "n": 544
+ },
+ "corpus_s": 0.638
+}

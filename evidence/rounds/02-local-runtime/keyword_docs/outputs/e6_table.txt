@@ -1,0 +1,9 @@
+all n= 544 C0: mean 96 med 72 p90 162 C1: mean 161 med 134 p90 251 C2: mean 270 med 168 p90 600 FULL: mean 879 med 616 p90 1811
+gold n= 75 C0: mean 109 med 85 p90 157 C1: mean 175 med 146 p90 248 C2: mean 348 med 199 p90 623 FULL: mean 1346 med 1051 p90 2691
+recovered 14 of RequestsLibrary *args/**kwargs keywords:
+   RequestsLibrary.DELETE -> url, expected_status=None, msg=None, **kwargs
+   RequestsLibrary.DELETE On Session -> alias, url, expected_status=None, msg=None, **kwargs
+   RequestsLibrary.GET -> url, params=None, expected_status=None, msg=None, **kwargs
+   RequestsLibrary.GET On Session -> alias, url, params=None, expected_status=None, msg=None, **kwargs
+   RequestsLibrary.HEAD -> url, expected_status=None, msg=None, **kwargs
+   RequestsLibrary.HEAD On Session -> alias, url, expected_status=None, msg=None, **kwargs

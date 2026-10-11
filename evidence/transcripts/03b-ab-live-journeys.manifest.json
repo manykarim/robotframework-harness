@@ -1,0 +1,2673 @@
+{
+ "round": "03b-ab-live-journeys",
+ "asset_format": "tar.zst",
+ "transcript_dirs": [
+  "transcripts_live",
+  "transcripts_live_pilot",
+  "transcripts_live_smoke"
+ ],
+ "files": 214,
+ "status_counts": {
+  "excluded:aborted": 2,
+  "excluded:auth_expiry": 25,
+  "scored": 187
+ },
+ "scrub_substitutions": {
+  "email": 778,
+  "home_path": 47296,
+  "oauth_field": 3
+ },
+ "scrub_py_sha256": "4e9a9f3c9ba610bdd294ab4d6282da39075e5cc4130e867dc7aa93abe30f8bb6",
+ "entries": [
+  {
+   "file": "transcripts_live/claude/carconfig_order-mcp-rep1-e0dcf6.jsonl",
+   "transcript": "transcripts_live/claude/carconfig_order-mcp-rep1-e0dcf6.jsonl.gz",
+   "sha256": "f3db6f87f718072dd0f50acc7137c8de623cdb41e15c02d3fac52968fc1d7af7",
+   "bytes": 618038,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|mcp|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 140
+   }
+  },
+  {
+   "file": "transcripts_live/claude/carconfig_order-mcp-rep2-58163a.jsonl",
+   "transcript": "transcripts_live/claude/carconfig_order-mcp-rep2-58163a.jsonl.gz",
+   "sha256": "4a7cb5afc791c34f3657bec266a8bca9786a11753cb5aede8595cf0a69eab2a7",
+   "bytes": 839081,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|mcp|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 18,
+    "home_path": 270
+   }
+  },
+  {
+   "file": "transcripts_live/claude/carconfig_order-mcp-rep2-adf5b2.jsonl",
+   "transcript": "transcripts_live/claude/carconfig_order-mcp-rep2-adf5b2.jsonl.gz",
+   "sha256": "3727100d2416362d1ec76bb46b7bcc0896760acbb1464c6fbe0a9eb3fa10538a",
+   "bytes": 19568,
+   "results_file": "excluded/excluded_auth_expiry.jsonl",
+   "key": "claude|mcp|carconfig_order|2",
+   "status": "excluded:auth_expiry",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live/claude/carconfig_order-mcp-rep3-2b8f1f.jsonl",
+   "transcript": "transcripts_live/claude/carconfig_order-mcp-rep3-2b8f1f.jsonl.gz",
+   "sha256": "0d67d6e4c2edbf6aadcf3140d6f239b177b5e23a84e08615f4944f33b3a64aa0",
+   "bytes": 867364,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|mcp|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 20,
+    "home_path": 251
+   }
+  },
+  {
+   "file": "transcripts_live/claude/carconfig_order-mcp-rep3-3488f6.jsonl",
+   "transcript": "transcripts_live/claude/carconfig_order-mcp-rep3-3488f6.jsonl.gz",
+   "sha256": "8b1229c44d39360ebf3fcdc5120f29fd3b5713a8c6b043a6d2761e7021005b44",
+   "bytes": 19799,
+   "results_file": "excluded/excluded_auth_expiry.jsonl",
+   "key": "claude|mcp|carconfig_order|3",
+   "status": "excluded:auth_expiry",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live/claude/carconfig_order-neither-rep1-4de622.jsonl",
+   "transcript": "transcripts_live/claude/carconfig_order-neither-rep1-4de622.jsonl.gz",
+   "sha256": "7b91421a9424a24018482b3603dd8e387d689c3067ec254b8b79fa9a5f74c82c",
+   "bytes": 937129,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|neither|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 14,
+    "home_path": 451
+   }
+  },
+  {
+   "file": "transcripts_live/claude/carconfig_order-neither-rep2-bb4184.jsonl",
+   "transcript": "transcripts_live/claude/carconfig_order-neither-rep2-bb4184.jsonl.gz",
+   "sha256": "bf95b7d0882283e583039f2c58691c148371a5fee3aac4df54e8b4ab83f96cfe",
+   "bytes": 4723,
+   "results_file": "excluded/excluded_auth_expiry.jsonl",
+   "key": "claude|neither|carconfig_order|2",
+   "status": "excluded:auth_expiry",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live/claude/carconfig_order-neither-rep2-f9ac7b.jsonl",
+   "transcript": "transcripts_live/claude/carconfig_order-neither-rep2-f9ac7b.jsonl.gz",
+   "sha256": "6add8f0e6cde69770a205fc04ec96f843495d015f1c49fff3f0fdf549b3c2508",
+   "bytes": 5358822,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|neither|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 5,
+    "home_path": 429
+   }
+  },
+  {
+   "file": "transcripts_live/claude/carconfig_order-neither-rep3-54c45e.jsonl",
+   "transcript": "transcripts_live/claude/carconfig_order-neither-rep3-54c45e.jsonl.gz",
+   "sha256": "82072c2a4d1329a5bb97e6bf189e061eab6f7acdcaa9d844d0fed81927dab826",
+   "bytes": 828526,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|neither|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 15,
+    "home_path": 235
+   }
+  },
+  {
+   "file": "transcripts_live/claude/carconfig_order-neither-rep3-892789.jsonl",
+   "transcript": "transcripts_live/claude/carconfig_order-neither-rep3-892789.jsonl.gz",
+   "sha256": "5fcd4ef5272fc6e26ba7e79d96c5a907aa94194a5656d1df9ac051adef6e40a3",
+   "bytes": 4825,
+   "results_file": "excluded/excluded_auth_expiry.jsonl",
+   "key": "claude|neither|carconfig_order|3",
+   "status": "excluded:auth_expiry",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live/claude/carconfig_order-skillpkg-rep1-9c3a33.jsonl",
+   "transcript": "transcripts_live/claude/carconfig_order-skillpkg-rep1-9c3a33.jsonl.gz",
+   "sha256": "17efb04dce11d8465fd8206a258755153aa723f158d79f1efdf11123369ff9ac",
+   "bytes": 690335,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|skillpkg|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 12,
+    "home_path": 247
+   }
+  },
+  {
+   "file": "transcripts_live/claude/carconfig_order-skillpkg-rep2-87f9d0.jsonl",
+   "transcript": "transcripts_live/claude/carconfig_order-skillpkg-rep2-87f9d0.jsonl.gz",
+   "sha256": "4489a019009c2df54f71d9c43a3cb5d1d915463f97191466db6bba5a2ea22878",
+   "bytes": 4760,
+   "results_file": "excluded/excluded_auth_expiry.jsonl",
+   "key": "claude|skillpkg|carconfig_order|2",
+   "status": "excluded:auth_expiry",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live/claude/carconfig_order-skillpkg-rep2-f39239.jsonl",
+   "transcript": "transcripts_live/claude/carconfig_order-skillpkg-rep2-f39239.jsonl.gz",
+   "sha256": "5e19b0eae2ac0bbed821ee585d502f252ee91b959b7230c007ecda908c207833",
+   "bytes": 561831,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|skillpkg|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 8,
+    "home_path": 292
+   }
+  },
+  {
+   "file": "transcripts_live/claude/carconfig_order-skillpkg-rep3-76a370.jsonl",
+   "transcript": "transcripts_live/claude/carconfig_order-skillpkg-rep3-76a370.jsonl.gz",
+   "sha256": "038549d05c2f24b34279cc5d134dde9348a9fdb65853d613e6ca9cd131c51955",
+   "bytes": 4862,
+   "results_file": "excluded/excluded_auth_expiry.jsonl",
+   "key": "claude|skillpkg|carconfig_order|3",
+   "status": "excluded:auth_expiry",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live/claude/carconfig_order-skillpkg-rep3-a27413.jsonl",
+   "transcript": "transcripts_live/claude/carconfig_order-skillpkg-rep3-a27413.jsonl.gz",
+   "sha256": "d51e4906bdada4a583b6dc387eefe6341fd6a0f7b4022e9d529f8e2575c5a6b4",
+   "bytes": 620932,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|skillpkg|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 8,
+    "home_path": 221
+   }
+  },
+  {
+   "file": "transcripts_live/claude/demoshop_debug-mcp-rep1-5bd90a.jsonl",
+   "transcript": "transcripts_live/claude/demoshop_debug-mcp-rep1-5bd90a.jsonl.gz",
+   "sha256": "fdcdad299f97589abd9bb12d4bc8912313e4f03eccf607cf0518240b50f63372",
+   "bytes": 869515,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|mcp|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 477
+   }
+  },
+  {
+   "file": "transcripts_live/claude/demoshop_debug-mcp-rep2-5838c7.jsonl",
+   "transcript": "transcripts_live/claude/demoshop_debug-mcp-rep2-5838c7.jsonl.gz",
+   "sha256": "d11e0552a029365b7e1f4602cb3ff6ab59fa9b60e23e7a8fd4380d1854dca18e",
+   "bytes": 19564,
+   "results_file": "excluded/excluded_auth_expiry.jsonl",
+   "key": "claude|mcp|demoshop_debug|2",
+   "status": "excluded:auth_expiry",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live/claude/demoshop_debug-mcp-rep2-ffee31.jsonl",
+   "transcript": "transcripts_live/claude/demoshop_debug-mcp-rep2-ffee31.jsonl.gz",
+   "sha256": "d94f307730cb9ccb5e6f6f8a67f1aa5a418fe20d9cdd733d6a1cf62b0d7e2b45",
+   "bytes": 1977166,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|mcp|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 218
+   }
+  },
+  {
+   "file": "transcripts_live/claude/demoshop_debug-mcp-rep3-9e1557.jsonl",
+   "transcript": "transcripts_live/claude/demoshop_debug-mcp-rep3-9e1557.jsonl.gz",
+   "sha256": "28e7c16134796a909472d673feda0bde4654a6dda3422723ef6f51ccfa953b49",
+   "bytes": 361596,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|mcp|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 218
+   }
+  },
+  {
+   "file": "transcripts_live/claude/demoshop_debug-neither-rep1-6be97e.jsonl",
+   "transcript": "transcripts_live/claude/demoshop_debug-neither-rep1-6be97e.jsonl.gz",
+   "sha256": "2dfc2fca3c23b5b41572d1655854d307556d33a708750ff593113206a108533c",
+   "bytes": 2078221,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|neither|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 1,
+    "home_path": 234
+   }
+  },
+  {
+   "file": "transcripts_live/claude/demoshop_debug-neither-rep2-d5ec2f.jsonl",
+   "transcript": "transcripts_live/claude/demoshop_debug-neither-rep2-d5ec2f.jsonl.gz",
+   "sha256": "a48cd3b3e6bd2ab9755b9287e309047615ec3950146cce8c0797ee280012b768",
+   "bytes": 915926,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|neither|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 497
+   }
+  },
+  {
+   "file": "transcripts_live/claude/demoshop_debug-neither-rep2-f1e02f.jsonl",
+   "transcript": "transcripts_live/claude/demoshop_debug-neither-rep2-f1e02f.jsonl.gz",
+   "sha256": "291b96d99318ef9fe6e293311126adc4c178c0c81ea8cf5b434aa9e1b5f8068a",
+   "bytes": 4720,
+   "results_file": "excluded/excluded_auth_expiry.jsonl",
+   "key": "claude|neither|demoshop_debug|2",
+   "status": "excluded:auth_expiry",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live/claude/demoshop_debug-neither-rep3-0bcf60.jsonl",
+   "transcript": "transcripts_live/claude/demoshop_debug-neither-rep3-0bcf60.jsonl.gz",
+   "sha256": "31034650d2a144ce60d94f519dff1d1aec5c89db53bc263f7e4cbc39447e14d8",
+   "bytes": 695611,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|neither|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 378
+   }
+  },
+  {
+   "file": "transcripts_live/claude/demoshop_debug-skillpkg-rep1-c32395.jsonl",
+   "transcript": "transcripts_live/claude/demoshop_debug-skillpkg-rep1-c32395.jsonl.gz",
+   "sha256": "673dd6e11484991208e398a18da800d5360e7dd67a4bba13b2f7909257d9c432",
+   "bytes": 459859,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|skillpkg|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 177
+   }
+  },
+  {
+   "file": "transcripts_live/claude/demoshop_debug-skillpkg-rep1-ca0474.jsonl",
+   "transcript": "transcripts_live/claude/demoshop_debug-skillpkg-rep1-ca0474.jsonl.gz",
+   "sha256": "3ca6329230f5b493a015e2a59e7be4df44d561046ec51124e3865ce43b3ad06d",
+   "bytes": 291282,
+   "results_file": "excluded/excluded_auth_expiry.jsonl",
+   "key": "claude|skillpkg|demoshop_debug|1",
+   "status": "excluded:auth_expiry",
+   "scrub": {
+    "home_path": 110
+   }
+  },
+  {
+   "file": "transcripts_live/claude/demoshop_debug-skillpkg-rep2-073ba8.jsonl",
+   "transcript": "transcripts_live/claude/demoshop_debug-skillpkg-rep2-073ba8.jsonl.gz",
+   "sha256": "7d6d4591cbb2542e0accac41ffae8c2620e119a4a4d6ff773ec64a5544c1eac6",
+   "bytes": 4757,
+   "results_file": "excluded/excluded_auth_expiry.jsonl",
+   "key": "claude|skillpkg|demoshop_debug|2",
+   "status": "excluded:auth_expiry",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live/claude/demoshop_debug-skillpkg-rep2-9710ae.jsonl",
+   "transcript": "transcripts_live/claude/demoshop_debug-skillpkg-rep2-9710ae.jsonl.gz",
+   "sha256": "3ce0071771f12778e898aa11905eee2b8bf38a029814d05147c2e81e71aa00ce",
+   "bytes": 318779,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|skillpkg|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 133
+   }
+  },
+  {
+   "file": "transcripts_live/claude/demoshop_debug-skillpkg-rep3-37d53a.jsonl",
+   "transcript": "transcripts_live/claude/demoshop_debug-skillpkg-rep3-37d53a.jsonl.gz",
+   "sha256": "fa85ba3d43a16d6c507e9dfd563cb3bc3d32776c3ed72645e537b240f42a9153",
+   "bytes": 407994,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|skillpkg|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 181
+   }
+  },
+  {
+   "file": "transcripts_live/claude/demoshop_order-mcp-rep1-322bd8.jsonl",
+   "transcript": "transcripts_live/claude/demoshop_order-mcp-rep1-322bd8.jsonl.gz",
+   "sha256": "75fb688f646fee0c79bfc340ebdddde1006ef5f2fe2c9438b94634bad32bc61c",
+   "bytes": 772489,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|mcp|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 16,
+    "home_path": 270
+   }
+  },
+  {
+   "file": "transcripts_live/claude/demoshop_order-mcp-rep2-b15824.jsonl",
+   "transcript": "transcripts_live/claude/demoshop_order-mcp-rep2-b15824.jsonl.gz",
+   "sha256": "fe92b4e36e1f79c5a4d720ec192b0b01061b0c73374d28acce5fd189d36caa62",
+   "bytes": 761434,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|mcp|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 16,
+    "home_path": 231
+   }
+  },
+  {
+   "file": "transcripts_live/claude/demoshop_order-mcp-rep2-ba8ebc.jsonl",
+   "transcript": "transcripts_live/claude/demoshop_order-mcp-rep2-ba8ebc.jsonl.gz",
+   "sha256": "13839e51b690c203900f0c170a08bcd9e0aa0a8f3fe2814006807f011a37fd36",
+   "bytes": 19565,
+   "results_file": "excluded/excluded_auth_expiry.jsonl",
+   "key": "claude|mcp|demoshop_order|2",
+   "status": "excluded:auth_expiry",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live/claude/demoshop_order-mcp-rep3-aed05d.jsonl",
+   "transcript": "transcripts_live/claude/demoshop_order-mcp-rep3-aed05d.jsonl.gz",
+   "sha256": "ddc26160a0b2e19fb98c76b2e3295efc064ec051820f3f81e5c333ca8f3aeac1",
+   "bytes": 619242,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|mcp|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 123
+   }
+  },
+  {
+   "file": "transcripts_live/claude/demoshop_order-neither-rep1-500e81.jsonl",
+   "transcript": "transcripts_live/claude/demoshop_order-neither-rep1-500e81.jsonl.gz",
+   "sha256": "44608606ef039648cc6b341cc02017bc43c469404a4f435dc35e121bf82b52bf",
+   "bytes": 874279,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|neither|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 395
+   }
+  },
+  {
+   "file": "transcripts_live/claude/demoshop_order-neither-rep2-813eee.jsonl",
+   "transcript": "transcripts_live/claude/demoshop_order-neither-rep2-813eee.jsonl.gz",
+   "sha256": "429753cebbfaf8711c008828a2fa1d923e27ec02f650dcb6f90590b54c661263",
+   "bytes": 4720,
+   "results_file": "excluded/excluded_auth_expiry.jsonl",
+   "key": "claude|neither|demoshop_order|2",
+   "status": "excluded:auth_expiry",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live/claude/demoshop_order-neither-rep2-af8690.jsonl",
+   "transcript": "transcripts_live/claude/demoshop_order-neither-rep2-af8690.jsonl.gz",
+   "sha256": "57d817aeb43bd4cfc743fa0c15e9a9e573025abee5472344e6c2733e8dd53d96",
+   "bytes": 2810605,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|neither|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 53,
+    "home_path": 408
+   }
+  },
+  {
+   "file": "transcripts_live/claude/demoshop_order-neither-rep3-9a1df6.jsonl",
+   "transcript": "transcripts_live/claude/demoshop_order-neither-rep3-9a1df6.jsonl.gz",
+   "sha256": "d47b06822163d5dbe18a207054b7a3532624797872412c1164f108770142fbe1",
+   "bytes": 984949,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|neither|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 115,
+    "home_path": 402
+   }
+  },
+  {
+   "file": "transcripts_live/claude/demoshop_order-skillpkg-rep1-b8a353.jsonl",
+   "transcript": "transcripts_live/claude/demoshop_order-skillpkg-rep1-b8a353.jsonl.gz",
+   "sha256": "201439488018fec20ee94f2fda877788050597bdf7edf4e78b55117071cb5b0a",
+   "bytes": 494095,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|skillpkg|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 10,
+    "home_path": 192
+   }
+  },
+  {
+   "file": "transcripts_live/claude/demoshop_order-skillpkg-rep2-4379e0.jsonl",
+   "transcript": "transcripts_live/claude/demoshop_order-skillpkg-rep2-4379e0.jsonl.gz",
+   "sha256": "44815733c83756ec9f98fbad83391d4795cdbc6db816ede98a63b63fdc52204a",
+   "bytes": 4757,
+   "results_file": "excluded/excluded_auth_expiry.jsonl",
+   "key": "claude|skillpkg|demoshop_order|2",
+   "status": "excluded:auth_expiry",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live/claude/demoshop_order-skillpkg-rep2-c1d942.jsonl",
+   "transcript": "transcripts_live/claude/demoshop_order-skillpkg-rep2-c1d942.jsonl.gz",
+   "sha256": "ea5c3614ad28a89ff8e42abb9ba38bb622aa8311984ece13581aa3423ec063a4",
+   "bytes": 578225,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|skillpkg|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 235
+   }
+  },
+  {
+   "file": "transcripts_live/claude/demoshop_order-skillpkg-rep3-32b48c.jsonl",
+   "transcript": "transcripts_live/claude/demoshop_order-skillpkg-rep3-32b48c.jsonl.gz",
+   "sha256": "5a77f7f8ba32ecb1b427c7dc207fe96c8f44063a114f379169ec36f87105b71e",
+   "bytes": 518052,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|skillpkg|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 12,
+    "home_path": 196
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_debug-mcp-rep1-607259.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_debug-mcp-rep1-607259.jsonl.gz",
+   "sha256": "97b4f6323d38ae2c95a4d712e1d5705d2f8890815a98745a987e825784c6ea84",
+   "bytes": 19567,
+   "results_file": "excluded/excluded_auth_expiry.jsonl",
+   "key": "claude|mcp|tricentis_debug|1",
+   "status": "excluded:auth_expiry",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_debug-mcp-rep1-c7ec36.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_debug-mcp-rep1-c7ec36.jsonl.gz",
+   "sha256": "67629c10b5f85ca6e855e07f2770982f76901bf1fa2b71fa41045f2c19e86297",
+   "bytes": 890792,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|mcp|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 456
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_debug-mcp-rep2-09870f.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_debug-mcp-rep2-09870f.jsonl.gz",
+   "sha256": "7aef7ceb2f09c302fddd283cf1663468d97234a2d256dabf968405d6e1cd1ed5",
+   "bytes": 726059,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|mcp|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 416
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_debug-mcp-rep2-9b0410.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_debug-mcp-rep2-9b0410.jsonl.gz",
+   "sha256": "98ff4f1a7f47ab06ec579422100d18cd9b23ae109a6df59a53213a5bdabf0b20",
+   "bytes": 19799,
+   "results_file": "excluded/excluded_auth_expiry.jsonl",
+   "key": "claude|mcp|tricentis_debug|2",
+   "status": "excluded:auth_expiry",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_debug-mcp-rep3-617cb3.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_debug-mcp-rep3-617cb3.jsonl.gz",
+   "sha256": "9aab231b61ecf8f6cac746c6b1bb986331d1ede6ed7e1c1be2bb486248d701da",
+   "bytes": 740268,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|mcp|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 293
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_debug-neither-rep1-2d2acb.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_debug-neither-rep1-2d2acb.jsonl.gz",
+   "sha256": "6874edd852ff6ff81d44098f93d3d075a91e014422cce1953ef5d4b48179bedf",
+   "bytes": 4722,
+   "results_file": "excluded/excluded_auth_expiry.jsonl",
+   "key": "claude|neither|tricentis_debug|1",
+   "status": "excluded:auth_expiry",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_debug-neither-rep1-9c9c03.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_debug-neither-rep1-9c9c03.jsonl.gz",
+   "sha256": "68806501edfe42f8d1d33fb3e0dcb5dcd353355a89454da58a3d41180a634aba",
+   "bytes": 706323,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|neither|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 390
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_debug-neither-rep2-a2889a.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_debug-neither-rep2-a2889a.jsonl.gz",
+   "sha256": "80433f9dfd4c471a5a57d4d47d235fc84b952494c0b3cf5ba970a7f9529428f8",
+   "bytes": 4825,
+   "results_file": "excluded/excluded_auth_expiry.jsonl",
+   "key": "claude|neither|tricentis_debug|2",
+   "status": "excluded:auth_expiry",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_debug-neither-rep2-b7ab69.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_debug-neither-rep2-b7ab69.jsonl.gz",
+   "sha256": "3f0cb4b0d01f55f0d39bc606dce8465edc05c4a480ffb6f5b26ba40380fe02c2",
+   "bytes": 172366,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|neither|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 82
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_debug-neither-rep3-7b142b.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_debug-neither-rep3-7b142b.jsonl.gz",
+   "sha256": "e7bb32ed1e00822a9bb78ae7f6067f30976a454ec4f959e5ad339b5fa3a4e767",
+   "bytes": 291898,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|neither|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 133
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_debug-skillpkg-rep1-1283a4.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_debug-skillpkg-rep1-1283a4.jsonl.gz",
+   "sha256": "0feb7d089b28d274373310dc5781212adee90aefd48a24c12ab9aaf609daf8c0",
+   "bytes": 4759,
+   "results_file": "excluded/excluded_auth_expiry.jsonl",
+   "key": "claude|skillpkg|tricentis_debug|1",
+   "status": "excluded:auth_expiry",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_debug-skillpkg-rep1-12ceff.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_debug-skillpkg-rep1-12ceff.jsonl.gz",
+   "sha256": "7d64616da5552586009e85afc38d0c61d77facc50da498b2e9022796d3afc7ab",
+   "bytes": 834924,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|skillpkg|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 314
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_debug-skillpkg-rep2-55d059.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_debug-skillpkg-rep2-55d059.jsonl.gz",
+   "sha256": "0db0d4e31bd4ecb4caf294818d5e6e2b69431d6c0d637e6e3ee2011a521c1321",
+   "bytes": 653578,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|skillpkg|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 286
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_debug-skillpkg-rep2-75cccb.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_debug-skillpkg-rep2-75cccb.jsonl.gz",
+   "sha256": "e3db14e5e126ceb3fcf8d591ef81a34e05d9fa61e0f9ef510a8d475f889b1f78",
+   "bytes": 4862,
+   "results_file": "excluded/excluded_auth_expiry.jsonl",
+   "key": "claude|skillpkg|tricentis_debug|2",
+   "status": "excluded:auth_expiry",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_debug-skillpkg-rep3-5eba10.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_debug-skillpkg-rep3-5eba10.jsonl.gz",
+   "sha256": "a4df5e52ef01d86df14fe0791f7decfd005b3cfe2430048f59417e4c77cebe2c",
+   "bytes": 727933,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|skillpkg|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 274
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_quote-mcp-rep1-95c5e2.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_quote-mcp-rep1-95c5e2.jsonl.gz",
+   "sha256": "570f1688fc02476e66c1291b0d793ec340d8f70e3f605595a6626e3e663ad3ad",
+   "bytes": 904730,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|mcp|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 200
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_quote-mcp-rep2-84cd74.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_quote-mcp-rep2-84cd74.jsonl.gz",
+   "sha256": "142fc799b366a1bd73e4935d3d5d7ef7443c5d12918faff91c2299ded8ecd6e3",
+   "bytes": 785997,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|mcp|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 324
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_quote-mcp-rep2-fbcbdb.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_quote-mcp-rep2-fbcbdb.jsonl.gz",
+   "sha256": "0e7b1666069af0a2303abe7ad781ab24c1df29b043187806c7eb1c428b597e64",
+   "bytes": 19568,
+   "results_file": "excluded/excluded_auth_expiry.jsonl",
+   "key": "claude|mcp|tricentis_quote|2",
+   "status": "excluded:auth_expiry",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_quote-mcp-rep3-831086.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_quote-mcp-rep3-831086.jsonl.gz",
+   "sha256": "4b660251f0f1db17c078132ff360ee639a2bb3c247d786dd73b16445c007fc04",
+   "bytes": 822500,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|mcp|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 130
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_quote-mcp-rep3-94e95d.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_quote-mcp-rep3-94e95d.jsonl.gz",
+   "sha256": "060c086af65a4218088de4f5f9778a76635a33d96c5822a680bee15a4f3278a7",
+   "bytes": 19799,
+   "results_file": "excluded/excluded_auth_expiry.jsonl",
+   "key": "claude|mcp|tricentis_quote|3",
+   "status": "excluded:auth_expiry",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_quote-neither-rep1-88d8aa.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_quote-neither-rep1-88d8aa.jsonl.gz",
+   "sha256": "458b8a7c6603365f569c21512ae1675f9f5b85f82c38cfd4c59a50385ee964f7",
+   "bytes": 652164,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|neither|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 294
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_quote-neither-rep2-ac9a24.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_quote-neither-rep2-ac9a24.jsonl.gz",
+   "sha256": "075a65a9abcbc6225171a496bd4941add122356e0acd4827608c0f13b3ecbb0c",
+   "bytes": 4723,
+   "results_file": "excluded/excluded_auth_expiry.jsonl",
+   "key": "claude|neither|tricentis_quote|2",
+   "status": "excluded:auth_expiry",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_quote-neither-rep2-e3cfcc.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_quote-neither-rep2-e3cfcc.jsonl.gz",
+   "sha256": "5c97c9f247c27b48df04d3b62b2018e01e864b81b1593bbf70b580fcf988b014",
+   "bytes": 1216766,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|neither|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 394
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_quote-neither-rep3-0085d9.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_quote-neither-rep3-0085d9.jsonl.gz",
+   "sha256": "49584765332bf62b9497bae3ba6b1991cb38efb67f1dfdcf409b1a2715745f21",
+   "bytes": 761377,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|neither|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 248
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_quote-neither-rep3-108f01.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_quote-neither-rep3-108f01.jsonl.gz",
+   "sha256": "bffbbba821d07ae66150408fe4e1c97f1208f0048e891e795e638a4bf7394753",
+   "bytes": 4825,
+   "results_file": "excluded/excluded_auth_expiry.jsonl",
+   "key": "claude|neither|tricentis_quote|3",
+   "status": "excluded:auth_expiry",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_quote-skillpkg-rep1-a564b1.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_quote-skillpkg-rep1-a564b1.jsonl.gz",
+   "sha256": "65babe1a9c526fa627215dea066048e5ec3876262f3c1687f4d5fa42671da08a",
+   "bytes": 620818,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|skillpkg|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 204
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_quote-skillpkg-rep2-4b073c.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_quote-skillpkg-rep2-4b073c.jsonl.gz",
+   "sha256": "c6b74ccbaa0074007ecbbcec845e16a7c0c84fccbbd701440bbc43af901fd6e6",
+   "bytes": 623722,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|skillpkg|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 232
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_quote-skillpkg-rep2-ac7e53.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_quote-skillpkg-rep2-ac7e53.jsonl.gz",
+   "sha256": "3f0ad32bda189f7da453bfdd12f0a5343db860183f6e2428d545a1c0939cae3d",
+   "bytes": 4760,
+   "results_file": "excluded/excluded_auth_expiry.jsonl",
+   "key": "claude|skillpkg|tricentis_quote|2",
+   "status": "excluded:auth_expiry",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_quote-skillpkg-rep3-989371.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_quote-skillpkg-rep3-989371.jsonl.gz",
+   "sha256": "40569f64c8b402f6e1d245524463ee388014039903360e0a2fd614ef96c5cd0e",
+   "bytes": 4862,
+   "results_file": "excluded/excluded_auth_expiry.jsonl",
+   "key": "claude|skillpkg|tricentis_quote|3",
+   "status": "excluded:auth_expiry",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live/claude/tricentis_quote-skillpkg-rep3-f4cced.jsonl",
+   "transcript": "transcripts_live/claude/tricentis_quote-skillpkg-rep3-f4cced.jsonl.gz",
+   "sha256": "846dd632fbec852d18cf6ebd17f4e70fab32f25eca28fcebad1b7e8ce1bcd4d6",
+   "bytes": 611971,
+   "results_file": "results/results_live.jsonl",
+   "key": "claude|skillpkg|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 251
+   }
+  },
+  {
+   "file": "transcripts_live/codex/carconfig_order-mcp-rep1-14125a.jsonl",
+   "transcript": "transcripts_live/codex/carconfig_order-mcp-rep1-14125a.jsonl.gz",
+   "sha256": "2d2a0d7d041f0473e5b88190fbfa267222301a3655d8e6d4b658aa9c80b5aff6",
+   "bytes": 103739,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|mcp|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 5,
+    "home_path": 26
+   }
+  },
+  {
+   "file": "transcripts_live/codex/carconfig_order-mcp-rep2-34d93f.jsonl",
+   "transcript": "transcripts_live/codex/carconfig_order-mcp-rep2-34d93f.jsonl.gz",
+   "sha256": "b7ff8a4db96d9a7b3ed058ee8b8fac7d5f7529f4bde6511eaf536df97dfb6aa7",
+   "bytes": 258095,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|mcp|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 3,
+    "home_path": 86
+   }
+  },
+  {
+   "file": "transcripts_live/codex/carconfig_order-mcp-rep3-c83e77.jsonl",
+   "transcript": "transcripts_live/codex/carconfig_order-mcp-rep3-c83e77.jsonl.gz",
+   "sha256": "53e1cbd1e1652ac2d4c5abd92f8ed52f1045b40457dddf3656fabb8a88266768",
+   "bytes": 143720,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|mcp|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 10,
+    "home_path": 125
+   }
+  },
+  {
+   "file": "transcripts_live/codex/carconfig_order-neither-rep1-ff4536.jsonl",
+   "transcript": "transcripts_live/codex/carconfig_order-neither-rep1-ff4536.jsonl.gz",
+   "sha256": "2a68a53974da62bdc270859de0d12563a77c2da7e1c4c601040fe9329cef2c9b",
+   "bytes": 90611,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|neither|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 9,
+    "home_path": 39
+   }
+  },
+  {
+   "file": "transcripts_live/codex/carconfig_order-neither-rep2-098dc1.jsonl",
+   "transcript": "transcripts_live/codex/carconfig_order-neither-rep2-098dc1.jsonl.gz",
+   "sha256": "18031ce0d62d582912a8ae8baa424f96a77ceae25bacdc1974e1724fdf6571a0",
+   "bytes": 165409,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|neither|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 8,
+    "home_path": 103
+   }
+  },
+  {
+   "file": "transcripts_live/codex/carconfig_order-neither-rep3-e67075.jsonl",
+   "transcript": "transcripts_live/codex/carconfig_order-neither-rep3-e67075.jsonl.gz",
+   "sha256": "8ff07a9425da9aec7e7ed373bb8556493d3f4cae3e76cd230d505e6166ead4e0",
+   "bytes": 434759,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|neither|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 19,
+    "home_path": 55
+   }
+  },
+  {
+   "file": "transcripts_live/codex/carconfig_order-skillpkg-rep1-f510b6.jsonl",
+   "transcript": "transcripts_live/codex/carconfig_order-skillpkg-rep1-f510b6.jsonl.gz",
+   "sha256": "6e82d719549835c209f79a7434d6073a9ad567b5671ee6a5470ed4166091fe60",
+   "bytes": 72070,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|skillpkg|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 38
+   }
+  },
+  {
+   "file": "transcripts_live/codex/carconfig_order-skillpkg-rep2-8117e3.jsonl",
+   "transcript": "transcripts_live/codex/carconfig_order-skillpkg-rep2-8117e3.jsonl.gz",
+   "sha256": "2d404ea01fb24897ff0bf26752769b769ebb2414f7b4114d62353dc8fa9b18ea",
+   "bytes": 83344,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|skillpkg|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 19
+   }
+  },
+  {
+   "file": "transcripts_live/codex/carconfig_order-skillpkg-rep3-3aeeef.jsonl",
+   "transcript": "transcripts_live/codex/carconfig_order-skillpkg-rep3-3aeeef.jsonl.gz",
+   "sha256": "83e368899830e69e89fc31b3685b6a9196c59b570316c323e72e51786df2b945",
+   "bytes": 96188,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|skillpkg|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 5,
+    "home_path": 28
+   }
+  },
+  {
+   "file": "transcripts_live/codex/demoshop_debug-mcp-rep1-e89a93.jsonl",
+   "transcript": "transcripts_live/codex/demoshop_debug-mcp-rep1-e89a93.jsonl.gz",
+   "sha256": "fa5550896671046ee81d7caf068b5d1096f342a929de43996c40c5a6000d6266",
+   "bytes": 76683,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|mcp|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 46
+   }
+  },
+  {
+   "file": "transcripts_live/codex/demoshop_debug-mcp-rep2-61591b.jsonl",
+   "transcript": "transcripts_live/codex/demoshop_debug-mcp-rep2-61591b.jsonl.gz",
+   "sha256": "94bfaf618b436050162f7cc036ef67b2cb9e03051d8d5f5feacfbdbe9de10c0a",
+   "bytes": 49619,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|mcp|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 34
+   }
+  },
+  {
+   "file": "transcripts_live/codex/demoshop_debug-mcp-rep3-0e3945.jsonl",
+   "transcript": "transcripts_live/codex/demoshop_debug-mcp-rep3-0e3945.jsonl.gz",
+   "sha256": "931791cc0926aebab2eb5b98318c3f540ae81cabb80d5fb0d8c0f754f105772c",
+   "bytes": 107164,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|mcp|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "email": 1,
+    "home_path": 21,
+    "oauth_field": 1
+   }
+  },
+  {
+   "file": "transcripts_live/codex/demoshop_debug-neither-rep1-3eab3f.jsonl",
+   "transcript": "transcripts_live/codex/demoshop_debug-neither-rep1-3eab3f.jsonl.gz",
+   "sha256": "510db49955ab4b6fbfe757b34d6279db0d694632a90d90461118155238a37730",
+   "bytes": 141632,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|neither|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 1,
+    "home_path": 71
+   }
+  },
+  {
+   "file": "transcripts_live/codex/demoshop_debug-neither-rep2-b12e65.jsonl",
+   "transcript": "transcripts_live/codex/demoshop_debug-neither-rep2-b12e65.jsonl.gz",
+   "sha256": "0544da24e791adaf7ce6fde24c859ff44d8ec0c2ad992739c55fdc71c4656db2",
+   "bytes": 185781,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|neither|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "email": 1,
+    "home_path": 28,
+    "oauth_field": 1
+   }
+  },
+  {
+   "file": "transcripts_live/codex/demoshop_debug-neither-rep3-057655.jsonl",
+   "transcript": "transcripts_live/codex/demoshop_debug-neither-rep3-057655.jsonl.gz",
+   "sha256": "0334bd65daee5aa83338c4344c98f9e1e05596b001db0d3b5901c6b3ac0747d6",
+   "bytes": 134378,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|neither|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "email": 1,
+    "home_path": 72,
+    "oauth_field": 1
+   }
+  },
+  {
+   "file": "transcripts_live/codex/demoshop_debug-skillpkg-rep1-fdb190.jsonl",
+   "transcript": "transcripts_live/codex/demoshop_debug-skillpkg-rep1-fdb190.jsonl.gz",
+   "sha256": "26b8f8b86e04b264120c3eac4d9745ed2f49ac30741251b97b79e9d3b7120a59",
+   "bytes": 56291,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|skillpkg|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 26
+   }
+  },
+  {
+   "file": "transcripts_live/codex/demoshop_debug-skillpkg-rep2-bc7bc6.jsonl",
+   "transcript": "transcripts_live/codex/demoshop_debug-skillpkg-rep2-bc7bc6.jsonl.gz",
+   "sha256": "cdd6647e7b2e4ab7f9738ceeca0ca0211ce3fb9ce4bc7c08a3e2cb146a10478e",
+   "bytes": 1154884,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|skillpkg|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "email": 9,
+    "home_path": 48
+   }
+  },
+  {
+   "file": "transcripts_live/codex/demoshop_debug-skillpkg-rep3-31ec4e.jsonl",
+   "transcript": "transcripts_live/codex/demoshop_debug-skillpkg-rep3-31ec4e.jsonl.gz",
+   "sha256": "95e9659c4a12fe435a09d95ad38d462163fb35b69390e0491fb154c5d732a5c3",
+   "bytes": 59024,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|skillpkg|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "email": 1,
+    "home_path": 31
+   }
+  },
+  {
+   "file": "transcripts_live/codex/demoshop_order-mcp-rep1-e080a3.jsonl",
+   "transcript": "transcripts_live/codex/demoshop_order-mcp-rep1-e080a3.jsonl.gz",
+   "sha256": "411d3085c3696e33d18f40c3348e490ba91fbf51044f3c1555e615858ca8184c",
+   "bytes": 198853,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|mcp|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 77
+   }
+  },
+  {
+   "file": "transcripts_live/codex/demoshop_order-mcp-rep2-71fc9e.jsonl",
+   "transcript": "transcripts_live/codex/demoshop_order-mcp-rep2-71fc9e.jsonl.gz",
+   "sha256": "d156d00b8f617a26146f566a368749d5b88dc8adf88b7036bfbf5c716f9e029a",
+   "bytes": 69213,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|mcp|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 5,
+    "home_path": 45
+   }
+  },
+  {
+   "file": "transcripts_live/codex/demoshop_order-mcp-rep3-06481d.jsonl",
+   "transcript": "transcripts_live/codex/demoshop_order-mcp-rep3-06481d.jsonl.gz",
+   "sha256": "2027c62884b13c764e022c199638c2884cdde3279e975050e6ff3a7278aaafce",
+   "bytes": 126082,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|mcp|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 3,
+    "home_path": 73
+   }
+  },
+  {
+   "file": "transcripts_live/codex/demoshop_order-neither-rep1-2c7243.jsonl",
+   "transcript": "transcripts_live/codex/demoshop_order-neither-rep1-2c7243.jsonl.gz",
+   "sha256": "c7b99631dcc923a85caece246b5c205a27fa0a65a776211cb9a425637cfa4bf9",
+   "bytes": 96602,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|neither|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 1,
+    "home_path": 14
+   }
+  },
+  {
+   "file": "transcripts_live/codex/demoshop_order-neither-rep2-9f49f9.jsonl",
+   "transcript": "transcripts_live/codex/demoshop_order-neither-rep2-9f49f9.jsonl.gz",
+   "sha256": "1cf203c8ba397b3ab5c7cd837ae0c01e893e602ae571dcf974cfa043038aa86b",
+   "bytes": 87851,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|neither|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 39
+   }
+  },
+  {
+   "file": "transcripts_live/codex/demoshop_order-neither-rep3-908617.jsonl",
+   "transcript": "transcripts_live/codex/demoshop_order-neither-rep3-908617.jsonl.gz",
+   "sha256": "d6e14189db81c53320fe4815a87048948e9d83ce329302afa9be2779a3e2cf1b",
+   "bytes": 71857,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|neither|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 38
+   }
+  },
+  {
+   "file": "transcripts_live/codex/demoshop_order-skillpkg-rep1-32989f.jsonl",
+   "transcript": "transcripts_live/codex/demoshop_order-skillpkg-rep1-32989f.jsonl.gz",
+   "sha256": "1f36093794f4399c8d1296c00aae4bf7459ecd0a74631978dc2128cd8d2a0020",
+   "bytes": 101722,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|skillpkg|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 58
+   }
+  },
+  {
+   "file": "transcripts_live/codex/demoshop_order-skillpkg-rep2-1133d1.jsonl",
+   "transcript": "transcripts_live/codex/demoshop_order-skillpkg-rep2-1133d1.jsonl.gz",
+   "sha256": "a5eae916f3e900713c0e3533e313e6b21ea555fe644ae46f80c7bdac88cfbfd9",
+   "bytes": 72524,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|skillpkg|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 22
+   }
+  },
+  {
+   "file": "transcripts_live/codex/demoshop_order-skillpkg-rep3-4a17cd.jsonl",
+   "transcript": "transcripts_live/codex/demoshop_order-skillpkg-rep3-4a17cd.jsonl.gz",
+   "sha256": "1cf9b29cb754670fd863705e77514150e9ac719ccce0107aae47321a2abc1a47",
+   "bytes": 84902,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|skillpkg|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 22
+   }
+  },
+  {
+   "file": "transcripts_live/codex/tricentis_debug-mcp-rep1-39609c.jsonl",
+   "transcript": "transcripts_live/codex/tricentis_debug-mcp-rep1-39609c.jsonl.gz",
+   "sha256": "f371bc930029c0a49c8b8ddd5e3db73546ab4bf2355fea27f64473ca2f0ad54a",
+   "bytes": 111694,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|mcp|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 165
+   }
+  },
+  {
+   "file": "transcripts_live/codex/tricentis_debug-mcp-rep2-464974.jsonl",
+   "transcript": "transcripts_live/codex/tricentis_debug-mcp-rep2-464974.jsonl.gz",
+   "sha256": "a297b9c4605a3f411089817f38c5cddbbc1a915dbc7c953e25230fcfc087c082",
+   "bytes": 115905,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|mcp|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 142
+   }
+  },
+  {
+   "file": "transcripts_live/codex/tricentis_debug-mcp-rep3-3e4a85.jsonl",
+   "transcript": "transcripts_live/codex/tricentis_debug-mcp-rep3-3e4a85.jsonl.gz",
+   "sha256": "2390b79adb4bda52d88c841b5aefa664163a7a200dea5ca6d7de2a5a985b1bbd",
+   "bytes": 97532,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|mcp|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 77
+   }
+  },
+  {
+   "file": "transcripts_live/codex/tricentis_debug-neither-rep1-d76da1.jsonl",
+   "transcript": "transcripts_live/codex/tricentis_debug-neither-rep1-d76da1.jsonl.gz",
+   "sha256": "fceb036d8009fca72fd03fdb1e9752311df55e2496ab35e44bdbb777a230c274",
+   "bytes": 132576,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|neither|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 129
+   }
+  },
+  {
+   "file": "transcripts_live/codex/tricentis_debug-neither-rep2-816fb0.jsonl",
+   "transcript": "transcripts_live/codex/tricentis_debug-neither-rep2-816fb0.jsonl.gz",
+   "sha256": "0943a9d22b74b3a1d0ab2be53919e572e98c6010c35b460a1a18b926aa2e59cb",
+   "bytes": 136836,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|neither|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 133
+   }
+  },
+  {
+   "file": "transcripts_live/codex/tricentis_debug-neither-rep3-838bfc.jsonl",
+   "transcript": "transcripts_live/codex/tricentis_debug-neither-rep3-838bfc.jsonl.gz",
+   "sha256": "3a367a7660c46ec6703c10dae5f80b2861ccc7e30428610bc54558b8d09b2b83",
+   "bytes": 341621,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|neither|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 90
+   }
+  },
+  {
+   "file": "transcripts_live/codex/tricentis_debug-skillpkg-rep1-af9579.jsonl",
+   "transcript": "transcripts_live/codex/tricentis_debug-skillpkg-rep1-af9579.jsonl.gz",
+   "sha256": "f0de2e5f3d077404ee654206a8e5fc312a12859858bf762f79b250a5f3de47da",
+   "bytes": 99994,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|skillpkg|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 54
+   }
+  },
+  {
+   "file": "transcripts_live/codex/tricentis_debug-skillpkg-rep2-7b8ab6.jsonl",
+   "transcript": "transcripts_live/codex/tricentis_debug-skillpkg-rep2-7b8ab6.jsonl.gz",
+   "sha256": "b6954328bee357c08975535fc385ba1129a7ee12655364cd48eac49ba4b8536a",
+   "bytes": 156385,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|skillpkg|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 287
+   }
+  },
+  {
+   "file": "transcripts_live/codex/tricentis_debug-skillpkg-rep3-bf4d80.jsonl",
+   "transcript": "transcripts_live/codex/tricentis_debug-skillpkg-rep3-bf4d80.jsonl.gz",
+   "sha256": "9302e99c3943bf41395aef430da65bf8a195b274468504a87f6b8431e9ea0989",
+   "bytes": 176937,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|skillpkg|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 75
+   }
+  },
+  {
+   "file": "transcripts_live/codex/tricentis_quote-mcp-rep1-8de06b.jsonl",
+   "transcript": "transcripts_live/codex/tricentis_quote-mcp-rep1-8de06b.jsonl.gz",
+   "sha256": "e472e92e5b75e3b46065ae416fa71d554501a199fa3edc942efdc933a5f8cc1e",
+   "bytes": 89348,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|mcp|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 66
+   }
+  },
+  {
+   "file": "transcripts_live/codex/tricentis_quote-mcp-rep2-a020a8.jsonl",
+   "transcript": "transcripts_live/codex/tricentis_quote-mcp-rep2-a020a8.jsonl.gz",
+   "sha256": "a8047cc2bac38dd86e605ce53fbf7ab95b4ccc5b787c4c1fce1b9da96798a2a3",
+   "bytes": 124168,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|mcp|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 62
+   }
+  },
+  {
+   "file": "transcripts_live/codex/tricentis_quote-mcp-rep3-21d49e.jsonl",
+   "transcript": "transcripts_live/codex/tricentis_quote-mcp-rep3-21d49e.jsonl.gz",
+   "sha256": "e02512599348343efd5c14c56fc6c9e488cf71a967cacaa69edfb6602f4e71b5",
+   "bytes": 62969,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|mcp|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 53
+   }
+  },
+  {
+   "file": "transcripts_live/codex/tricentis_quote-neither-rep1-8682a9.jsonl",
+   "transcript": "transcripts_live/codex/tricentis_quote-neither-rep1-8682a9.jsonl.gz",
+   "sha256": "7d7783ce2cb936175293133bff798cd2804744df98037ed57140f1fc00d19d11",
+   "bytes": 240944,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|neither|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 23
+   }
+  },
+  {
+   "file": "transcripts_live/codex/tricentis_quote-neither-rep2-2f29da.jsonl",
+   "transcript": "transcripts_live/codex/tricentis_quote-neither-rep2-2f29da.jsonl.gz",
+   "sha256": "34b60eb4b0f59b6f980fdf00f8370cde0b12763e4c20aa0a9b3d9de283262b3c",
+   "bytes": 75527,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|neither|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 52
+   }
+  },
+  {
+   "file": "transcripts_live/codex/tricentis_quote-neither-rep3-23d52c.jsonl",
+   "transcript": "transcripts_live/codex/tricentis_quote-neither-rep3-23d52c.jsonl.gz",
+   "sha256": "71c753c6831dfe87b0065dc2914454c1f4aeee951574100a8240b48d3b2c3e54",
+   "bytes": 85150,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|neither|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 113
+   }
+  },
+  {
+   "file": "transcripts_live/codex/tricentis_quote-skillpkg-rep1-b02181.jsonl",
+   "transcript": "transcripts_live/codex/tricentis_quote-skillpkg-rep1-b02181.jsonl.gz",
+   "sha256": "b7a4bee06e2376385899235351242af41f7df7b4b9fb91e8010463284d6a93a6",
+   "bytes": 127635,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|skillpkg|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 42
+   }
+  },
+  {
+   "file": "transcripts_live/codex/tricentis_quote-skillpkg-rep2-0c84d3.jsonl",
+   "transcript": "transcripts_live/codex/tricentis_quote-skillpkg-rep2-0c84d3.jsonl.gz",
+   "sha256": "cbaaff253598209b558897d2fb130578734e80fd3bb38e34a311893cd6bcbfe1",
+   "bytes": 114506,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|skillpkg|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 30
+   }
+  },
+  {
+   "file": "transcripts_live/codex/tricentis_quote-skillpkg-rep3-8e655f.jsonl",
+   "transcript": "transcripts_live/codex/tricentis_quote-skillpkg-rep3-8e655f.jsonl.gz",
+   "sha256": "c670e900746ce88764718a95747ad772f55594124d79256a2e55307592ee1006",
+   "bytes": 114971,
+   "results_file": "results/results_live.jsonl",
+   "key": "codex|skillpkg|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 38
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/carconfig_order-mcp-rep1-dde387.jsonl",
+   "transcript": "transcripts_live/opencode/carconfig_order-mcp-rep1-dde387.jsonl.gz",
+   "sha256": "a4abadbe0bc0b27269113e5f2863d7aab8121cc543e4088eaaf24db4cfedd90f",
+   "bytes": 1806177,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|mcp|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 498
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/carconfig_order-mcp-rep2-cb8f2e.jsonl",
+   "transcript": "transcripts_live/opencode/carconfig_order-mcp-rep2-cb8f2e.jsonl.gz",
+   "sha256": "53d68c6f8f564fce0cfd842f5f508791d3c0e7c82cc4ac179d6be420ac1cea05",
+   "bytes": 3259098,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|mcp|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 546
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/carconfig_order-mcp-rep3-b0171d.jsonl",
+   "transcript": "transcripts_live/opencode/carconfig_order-mcp-rep3-b0171d.jsonl.gz",
+   "sha256": "dcea62f0963b4038cf967758fb6a19a3610110146f906a0e09898d2716ff128c",
+   "bytes": 356072,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|mcp|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 158
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/carconfig_order-neither-rep1-ec6485.jsonl",
+   "transcript": "transcripts_live/opencode/carconfig_order-neither-rep1-ec6485.jsonl.gz",
+   "sha256": "37d2e9731e169b1bf9054fa6d5ae44ca65caa29470401daf75276332354874ba",
+   "bytes": 277744,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|neither|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 24,
+    "home_path": 212
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/carconfig_order-neither-rep2-b0277f.jsonl",
+   "transcript": "transcripts_live/opencode/carconfig_order-neither-rep2-b0277f.jsonl.gz",
+   "sha256": "e3651549b07ee8d34ac7deec8f52e8efc611dec57878abeedfceba09818133fd",
+   "bytes": 221528,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|neither|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 309
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/carconfig_order-neither-rep3-14c1f5.jsonl",
+   "transcript": "transcripts_live/opencode/carconfig_order-neither-rep3-14c1f5.jsonl.gz",
+   "sha256": "343bfe675626acab90b59ee0b0833aa21d1fbe4cdebe8d562287cd7d6d6d1702",
+   "bytes": 386531,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|neither|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 17,
+    "home_path": 271
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/carconfig_order-skillpkg-rep1-e16386.jsonl",
+   "transcript": "transcripts_live/opencode/carconfig_order-skillpkg-rep1-e16386.jsonl.gz",
+   "sha256": "4e011b24e45766ed47b7f2a9915640164f205f3fd10f981639d00378b33c86a3",
+   "bytes": 471073,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|skillpkg|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 10,
+    "home_path": 394
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/carconfig_order-skillpkg-rep2-558c22.jsonl",
+   "transcript": "transcripts_live/opencode/carconfig_order-skillpkg-rep2-558c22.jsonl.gz",
+   "sha256": "5aa3a157131074abe9251382c4350b7a19f0723f4270c40f3bf6626d8583f908",
+   "bytes": 450061,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|skillpkg|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 11,
+    "home_path": 296
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/carconfig_order-skillpkg-rep3-fa496d.jsonl",
+   "transcript": "transcripts_live/opencode/carconfig_order-skillpkg-rep3-fa496d.jsonl.gz",
+   "sha256": "fcf3cd26514a9bd94adb7c387b667122e6d1746fc3bdaf2389e1548b1ed85a3f",
+   "bytes": 371067,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|skillpkg|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 9,
+    "home_path": 335
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/demoshop_debug-mcp-rep1-db8dc1.jsonl",
+   "transcript": "transcripts_live/opencode/demoshop_debug-mcp-rep1-db8dc1.jsonl.gz",
+   "sha256": "5be13558d4d18833189a2ae0d3e5fac1b4ca37bdc4fd09a264513344471e4be5",
+   "bytes": 579494,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|mcp|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 973
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/demoshop_debug-mcp-rep2-4dbca0.jsonl",
+   "transcript": "transcripts_live/opencode/demoshop_debug-mcp-rep2-4dbca0.jsonl.gz",
+   "sha256": "1a1c0077219efe5e49a8f52749b2ca2c151082ee3ba2c86362f2a58ea60c9535",
+   "bytes": 478082,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|mcp|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 646
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/demoshop_debug-mcp-rep3-af4388.jsonl",
+   "transcript": "transcripts_live/opencode/demoshop_debug-mcp-rep3-af4388.jsonl.gz",
+   "sha256": "6e5936fc1755eab4a693844cd1eb9d450aff4a9e978951999e47b9cec9edd0b0",
+   "bytes": 592602,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|mcp|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 921
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/demoshop_debug-neither-rep1-6ee6c8.jsonl",
+   "transcript": "transcripts_live/opencode/demoshop_debug-neither-rep1-6ee6c8.jsonl.gz",
+   "sha256": "4533a09525796b2cc30d4a18e7e8dfa1a6bc099d247aed53476833b8bf35d0fb",
+   "bytes": 1731191,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|neither|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 674
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/demoshop_debug-neither-rep2-7ede32.jsonl",
+   "transcript": "transcripts_live/opencode/demoshop_debug-neither-rep2-7ede32.jsonl.gz",
+   "sha256": "d191ee1a1a71f7557b124f086978eed1650595776399f594d8cab98143fa0595",
+   "bytes": 547195,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|neither|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 719
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/demoshop_debug-neither-rep3-4ec602.jsonl",
+   "transcript": "transcripts_live/opencode/demoshop_debug-neither-rep3-4ec602.jsonl.gz",
+   "sha256": "38a6e6e1a41074216717987cac8e682ffba452dc7682a2c41f59e54d98951c49",
+   "bytes": 438289,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|neither|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 609
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/demoshop_debug-skillpkg-rep1-713e96.jsonl",
+   "transcript": "transcripts_live/opencode/demoshop_debug-skillpkg-rep1-713e96.jsonl.gz",
+   "sha256": "15483016901c7499f4dfa2f7eefab4825ac88d2f07927fbfb71e5b1039f9b776",
+   "bytes": 372514,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|skillpkg|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 364
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/demoshop_debug-skillpkg-rep2-58fb59.jsonl",
+   "transcript": "transcripts_live/opencode/demoshop_debug-skillpkg-rep2-58fb59.jsonl.gz",
+   "sha256": "179bde03c9972a1d029a7dfc2510ab559c5d9a342a8c8f1c39abbcd2d62061fb",
+   "bytes": 561618,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|skillpkg|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "email": 1,
+    "home_path": 459
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/demoshop_debug-skillpkg-rep3-6eb7ae.jsonl",
+   "transcript": "transcripts_live/opencode/demoshop_debug-skillpkg-rep3-6eb7ae.jsonl.gz",
+   "sha256": "ed2814e55af26f358b4d05d4c756a2fdf6a9a5ae3727c950b8427c474763a456",
+   "bytes": 220806,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|skillpkg|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 204
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/demoshop_order-mcp-rep1-b8a299.jsonl",
+   "transcript": "transcripts_live/opencode/demoshop_order-mcp-rep1-b8a299.jsonl.gz",
+   "sha256": "78bf4c80c162ec91d523b9d929653a8a73c5d85c6e37e0460f65732958c2788d",
+   "bytes": 1124574,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|mcp|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 159
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/demoshop_order-mcp-rep2-1e4f4d.jsonl",
+   "transcript": "transcripts_live/opencode/demoshop_order-mcp-rep2-1e4f4d.jsonl.gz",
+   "sha256": "7cfbe7f537b528d062891d53ad08fa26fe0872113fd74a5b5fb649e0cfb8ccd3",
+   "bytes": 149904,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|mcp|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 1,
+    "home_path": 12
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/demoshop_order-mcp-rep3-a797e7.jsonl",
+   "transcript": "transcripts_live/opencode/demoshop_order-mcp-rep3-a797e7.jsonl.gz",
+   "sha256": "edbc9c056eefab6f205313150e49916dc3ed4667f7482624b8688acf7e0f1c93",
+   "bytes": 263566,
+   "results_file": "excluded/excluded_aborted.jsonl",
+   "key": "opencode|mcp|demoshop_order|3",
+   "status": "excluded:aborted",
+   "scrub": {
+    "email": 7,
+    "home_path": 180
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/demoshop_order-mcp-rep3-e6d5cf.jsonl",
+   "transcript": "transcripts_live/opencode/demoshop_order-mcp-rep3-e6d5cf.jsonl.gz",
+   "sha256": "8986b911939a1119f2f3313f56ccae2349c37f29b1204c51f97104a5b2b275ce",
+   "bytes": 9771802,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|mcp|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 245
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/demoshop_order-neither-rep1-0c941e.jsonl",
+   "transcript": "transcripts_live/opencode/demoshop_order-neither-rep1-0c941e.jsonl.gz",
+   "sha256": "a1c3d322c5205fe5241366ebd649d04f8503184d746f964d59b87cf59c798c9c",
+   "bytes": 536006,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|neither|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 549
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/demoshop_order-neither-rep2-5fd0d2.jsonl",
+   "transcript": "transcripts_live/opencode/demoshop_order-neither-rep2-5fd0d2.jsonl.gz",
+   "sha256": "a3f3ee8f07a3ef7e19fe45f49a303c74760ea4ff973db689e8f07c822054c89f",
+   "bytes": 102998,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|neither|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 19,
+    "home_path": 66
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/demoshop_order-neither-rep3-2a45fa.jsonl",
+   "transcript": "transcripts_live/opencode/demoshop_order-neither-rep3-2a45fa.jsonl.gz",
+   "sha256": "8c9f32b8ef7cfaf9f98e656a3b18d70c26d0151f6e3c0a966c21522f1628c252",
+   "bytes": 197053,
+   "results_file": "excluded/excluded_aborted.jsonl",
+   "key": "opencode|neither|demoshop_order|3",
+   "status": "excluded:aborted",
+   "scrub": {
+    "email": 8,
+    "home_path": 363
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/demoshop_order-neither-rep3-ebb213.jsonl",
+   "transcript": "transcripts_live/opencode/demoshop_order-neither-rep3-ebb213.jsonl.gz",
+   "sha256": "08265b7d984ddac6079beefe39fb8ae7d691904bbc5d9fd099c684d187416acd",
+   "bytes": 600724,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|neither|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 82,
+    "home_path": 871
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/demoshop_order-skillpkg-rep1-9420ce.jsonl",
+   "transcript": "transcripts_live/opencode/demoshop_order-skillpkg-rep1-9420ce.jsonl.gz",
+   "sha256": "02b91cdcb4da14f4ae7d65287b0aaffa14dba747ae43293b888c76ef4afe953c",
+   "bytes": 293724,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|skillpkg|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 9,
+    "home_path": 221
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/demoshop_order-skillpkg-rep2-cc9666.jsonl",
+   "transcript": "transcripts_live/opencode/demoshop_order-skillpkg-rep2-cc9666.jsonl.gz",
+   "sha256": "f2679edb78b05b1df8542568c600e362b79c3b3d34f23aa8c8475b8bfffdd681",
+   "bytes": 482392,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|skillpkg|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 7,
+    "home_path": 419
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/demoshop_order-skillpkg-rep3-d01b0d.jsonl",
+   "transcript": "transcripts_live/opencode/demoshop_order-skillpkg-rep3-d01b0d.jsonl.gz",
+   "sha256": "94f90c88322b47f9f588f07db1f5053496149eafa19cbb43701e8aa2da4a984a",
+   "bytes": 366546,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|skillpkg|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 7,
+    "home_path": 174
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/tricentis_debug-mcp-rep1-560b40.jsonl",
+   "transcript": "transcripts_live/opencode/tricentis_debug-mcp-rep1-560b40.jsonl.gz",
+   "sha256": "b29b382f4e31be3b2a9925746ccc95f1ae00459ba128cb2fbcf78be794d052ce",
+   "bytes": 210221,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|mcp|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 324
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/tricentis_debug-mcp-rep2-495394.jsonl",
+   "transcript": "transcripts_live/opencode/tricentis_debug-mcp-rep2-495394.jsonl.gz",
+   "sha256": "ea979a5bd7175adca062bc39d7d784b1829a14a2580ebe8bbbd2961f358a0231",
+   "bytes": 167824,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|mcp|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 248
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/tricentis_debug-mcp-rep3-5d0a17.jsonl",
+   "transcript": "transcripts_live/opencode/tricentis_debug-mcp-rep3-5d0a17.jsonl.gz",
+   "sha256": "15c8ceaebf0057a3e65645590ed321a7be5c7fefa37a2963f74c355df1287bc6",
+   "bytes": 153616,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|mcp|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 240
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/tricentis_debug-neither-rep1-cb8a18.jsonl",
+   "transcript": "transcripts_live/opencode/tricentis_debug-neither-rep1-cb8a18.jsonl.gz",
+   "sha256": "49d72e80a129bca200086e00ab40cc9305d37bac273bda2cdfc8ca768c7822f3",
+   "bytes": 777384,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|neither|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 1341
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/tricentis_debug-neither-rep2-1b76d0.jsonl",
+   "transcript": "transcripts_live/opencode/tricentis_debug-neither-rep2-1b76d0.jsonl.gz",
+   "sha256": "ceb10f1ff3b5555b6cef10a776012dd569d94c1ba545b1f96da5582097d8a904",
+   "bytes": 190241,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|neither|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 291
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/tricentis_debug-neither-rep3-5ee27c.jsonl",
+   "transcript": "transcripts_live/opencode/tricentis_debug-neither-rep3-5ee27c.jsonl.gz",
+   "sha256": "0aaebdbcc3a73dcc57e4ef69aaaa2a2985980983a526d1a7214188b4ba275e4e",
+   "bytes": 231423,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|neither|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 396
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/tricentis_debug-skillpkg-rep1-59b862.jsonl",
+   "transcript": "transcripts_live/opencode/tricentis_debug-skillpkg-rep1-59b862.jsonl.gz",
+   "sha256": "fa97a4e177fe3de7b9c2aa3e8db25ddddfe3cce8da3bf997bee40cd58ab71e6e",
+   "bytes": 631529,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|skillpkg|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 591
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/tricentis_debug-skillpkg-rep2-26f6a9.jsonl",
+   "transcript": "transcripts_live/opencode/tricentis_debug-skillpkg-rep2-26f6a9.jsonl.gz",
+   "sha256": "af2615726abdcd8ca08b6131e79e21addc7858171f7e6fd07ca8c38c25df2ec6",
+   "bytes": 146589,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|skillpkg|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 197
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/tricentis_debug-skillpkg-rep3-b9b624.jsonl",
+   "transcript": "transcripts_live/opencode/tricentis_debug-skillpkg-rep3-b9b624.jsonl.gz",
+   "sha256": "a21062e1ae0c845105b0a972522060936cb346f03e8b0bba87903b0a6768041a",
+   "bytes": 154069,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|skillpkg|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 188
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/tricentis_quote-mcp-rep1-5bc5cd.jsonl",
+   "transcript": "transcripts_live/opencode/tricentis_quote-mcp-rep1-5bc5cd.jsonl.gz",
+   "sha256": "0374df3356deb24472a5a1f19445d9a88309a743d222f166206f03cada14fc8f",
+   "bytes": 297896,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|mcp|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 130
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/tricentis_quote-mcp-rep2-7892d0.jsonl",
+   "transcript": "transcripts_live/opencode/tricentis_quote-mcp-rep2-7892d0.jsonl.gz",
+   "sha256": "fa5007f044faa213231b1180e674c4c5ef71ca17e564140aebf7242e7698482f",
+   "bytes": 355039,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|mcp|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 155
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/tricentis_quote-mcp-rep3-5b83ce.jsonl",
+   "transcript": "transcripts_live/opencode/tricentis_quote-mcp-rep3-5b83ce.jsonl.gz",
+   "sha256": "fc594d2d18a07dd801ac0e8bf7685a4770dde795eaecee369e9fd5eeca93445b",
+   "bytes": 355956,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|mcp|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 153
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/tricentis_quote-neither-rep1-eb9ebb.jsonl",
+   "transcript": "transcripts_live/opencode/tricentis_quote-neither-rep1-eb9ebb.jsonl.gz",
+   "sha256": "879e4ceaad825cc5dfd03514309608421bbb4137ff3fb8a7050153abad290476",
+   "bytes": 2158693,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|neither|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 1311
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/tricentis_quote-neither-rep2-43cda4.jsonl",
+   "transcript": "transcripts_live/opencode/tricentis_quote-neither-rep2-43cda4.jsonl.gz",
+   "sha256": "113f443680ea09c8cabb09e145d3fc0a6a3d8aa19e08e08f616be32447604052",
+   "bytes": 784627,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|neither|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 435
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/tricentis_quote-neither-rep3-cf27bc.jsonl",
+   "transcript": "transcripts_live/opencode/tricentis_quote-neither-rep3-cf27bc.jsonl.gz",
+   "sha256": "3e4e53452b70eb5fd28fe5a590abff6fd5f417bcd5578fc3c0dbee8d2e658aa2",
+   "bytes": 1787573,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|neither|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 1297
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/tricentis_quote-skillpkg-rep1-478620.jsonl",
+   "transcript": "transcripts_live/opencode/tricentis_quote-skillpkg-rep1-478620.jsonl.gz",
+   "sha256": "437f3d606405f9172b7fbdcf68b730254b7bffe3510bf7a92a08b5140ac1432a",
+   "bytes": 491359,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|skillpkg|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 184
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/tricentis_quote-skillpkg-rep2-a03c30.jsonl",
+   "transcript": "transcripts_live/opencode/tricentis_quote-skillpkg-rep2-a03c30.jsonl.gz",
+   "sha256": "982fc148e85779cbc11e98e8bfbc829ae829e68a0d5fe0de71df65b61daa6dbd",
+   "bytes": 716269,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|skillpkg|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 461
+   }
+  },
+  {
+   "file": "transcripts_live/opencode/tricentis_quote-skillpkg-rep3-f5862a.jsonl",
+   "transcript": "transcripts_live/opencode/tricentis_quote-skillpkg-rep3-f5862a.jsonl.gz",
+   "sha256": "36b6c7ddfc2c322be80650847b41e4fc8e124ff1049de9bbbf7192e7fbc4586b",
+   "bytes": 1544415,
+   "results_file": "results/results_live.jsonl",
+   "key": "opencode|skillpkg|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 1117
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/claude/carconfig_order-mcp-rep1-624721.jsonl",
+   "transcript": "transcripts_live_pilot/claude/carconfig_order-mcp-rep1-624721.jsonl.gz",
+   "sha256": "24f8832449e3ab53a4f32d729a032c870e795267e4d5074c3d686a75037dbd16",
+   "bytes": 3488499,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "claude|mcp|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 133
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/claude/carconfig_order-neither-rep1-fee6cd.jsonl",
+   "transcript": "transcripts_live_pilot/claude/carconfig_order-neither-rep1-fee6cd.jsonl.gz",
+   "sha256": "ac3b76701f811d176e76d40e7b7241602933cbcb00f82e89ef2ef577b87bc04a",
+   "bytes": 863065,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "claude|neither|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 15,
+    "home_path": 380
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/claude/carconfig_order-skillpkg-rep1-0cdc2f.jsonl",
+   "transcript": "transcripts_live_pilot/claude/carconfig_order-skillpkg-rep1-0cdc2f.jsonl.gz",
+   "sha256": "6b7ab4ebfc78ae3620d2785ea2c96819965e1ae1b0dc85671f725373a7290a66",
+   "bytes": 485528,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "claude|skillpkg|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 221
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/claude/demoshop_debug-mcp-rep1-b3bdb3.jsonl",
+   "transcript": "transcripts_live_pilot/claude/demoshop_debug-mcp-rep1-b3bdb3.jsonl.gz",
+   "sha256": "0e367b2ea3d429c27a1fe0e95335b26996eb2666ae7e41e635675832ef541ebe",
+   "bytes": 685142,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "claude|mcp|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 367
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/claude/demoshop_debug-neither-rep1-127557.jsonl",
+   "transcript": "transcripts_live_pilot/claude/demoshop_debug-neither-rep1-127557.jsonl.gz",
+   "sha256": "e1e61560f421363c55a224212bb4bfce50b6131a15c38ef6bb51e644fcaa0753",
+   "bytes": 388868,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "claude|neither|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 165
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/claude/demoshop_debug-skillpkg-rep1-5ef583.jsonl",
+   "transcript": "transcripts_live_pilot/claude/demoshop_debug-skillpkg-rep1-5ef583.jsonl.gz",
+   "sha256": "92399b2a203f094a8166aa33ef1424760cbe6da00a0080130b93511b8e6a16b6",
+   "bytes": 391846,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "claude|skillpkg|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 147
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/claude/tricentis_debug-mcp-rep1-30b94c.jsonl",
+   "transcript": "transcripts_live_pilot/claude/tricentis_debug-mcp-rep1-30b94c.jsonl.gz",
+   "sha256": "044b9b19202951a895a45b074e8dcb757c954ada2596ea8adbad9b379b8f9ad0",
+   "bytes": 983195,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "claude|mcp|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 491
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/claude/tricentis_debug-neither-rep1-f562de.jsonl",
+   "transcript": "transcripts_live_pilot/claude/tricentis_debug-neither-rep1-f562de.jsonl.gz",
+   "sha256": "2141fe1614606b7a57983b66bb4b741b243fcc422b318d47933a33529af841e8",
+   "bytes": 373934,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "claude|neither|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 200
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/claude/tricentis_debug-skillpkg-rep1-f322c3.jsonl",
+   "transcript": "transcripts_live_pilot/claude/tricentis_debug-skillpkg-rep1-f322c3.jsonl.gz",
+   "sha256": "fce2c37319c1981f3aab5e11791fa2fa9efa9071deeb98a35e3eeec1c314cdc9",
+   "bytes": 722951,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "claude|skillpkg|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 253
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/claude/tricentis_quote-mcp-rep1-f8630d.jsonl",
+   "transcript": "transcripts_live_pilot/claude/tricentis_quote-mcp-rep1-f8630d.jsonl.gz",
+   "sha256": "2231577f19571981cb1728f1efb4e382bf14e06808abda205144b3068c053b37",
+   "bytes": 637493,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "claude|mcp|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 101
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/claude/tricentis_quote-neither-rep1-ce4e90.jsonl",
+   "transcript": "transcripts_live_pilot/claude/tricentis_quote-neither-rep1-ce4e90.jsonl.gz",
+   "sha256": "c0d1821e35b4b5f7455ae68eb63f90962e13aeeaf0115d2a46db1fe6a6ff036c",
+   "bytes": 1218980,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "claude|neither|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 473
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/claude/tricentis_quote-skillpkg-rep1-ece3cc.jsonl",
+   "transcript": "transcripts_live_pilot/claude/tricentis_quote-skillpkg-rep1-ece3cc.jsonl.gz",
+   "sha256": "8a871f5561a343f27d245278bcf010a65b3a6e680523bb3ebcc7dc196b0b2dbe",
+   "bytes": 549614,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "claude|skillpkg|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 218
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/codex/carconfig_order-mcp-rep1-044f31.jsonl",
+   "transcript": "transcripts_live_pilot/codex/carconfig_order-mcp-rep1-044f31.jsonl.gz",
+   "sha256": "23516a6c903767d01d3247ce27d38193152e135c0e8ae0afc49c2c232c5b1966",
+   "bytes": 157799,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "codex|mcp|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 1,
+    "home_path": 31
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/codex/carconfig_order-neither-rep1-f0fd83.jsonl",
+   "transcript": "transcripts_live_pilot/codex/carconfig_order-neither-rep1-f0fd83.jsonl.gz",
+   "sha256": "9e35de258c9dc34f7df66f4ddd704d593a3a0a2923b43044cf3394c2ebfc5968",
+   "bytes": 102257,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "codex|neither|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 12,
+    "home_path": 60
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/codex/carconfig_order-skillpkg-rep1-9124c9.jsonl",
+   "transcript": "transcripts_live_pilot/codex/carconfig_order-skillpkg-rep1-9124c9.jsonl.gz",
+   "sha256": "8774fcf6d6e27c5ae0b37ec840d1961a91b343c96ef3684c2d22b93faaa0897c",
+   "bytes": 119508,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "codex|skillpkg|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 33
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/codex/demoshop_debug-mcp-rep1-ddcedd.jsonl",
+   "transcript": "transcripts_live_pilot/codex/demoshop_debug-mcp-rep1-ddcedd.jsonl.gz",
+   "sha256": "499a080a19232ddf9f1cff5368943faafb9bd40fb5939316489bf1fc93eb2548",
+   "bytes": 144209,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "codex|mcp|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 74
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/codex/demoshop_debug-neither-rep1-f405ae.jsonl",
+   "transcript": "transcripts_live_pilot/codex/demoshop_debug-neither-rep1-f405ae.jsonl.gz",
+   "sha256": "dfb7b36cb544337e75fd2fccd9129fc829cfb4d2bcabf74b4ef64813af7ca871",
+   "bytes": 101033,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "codex|neither|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 47
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/codex/demoshop_debug-skillpkg-rep1-e261b5.jsonl",
+   "transcript": "transcripts_live_pilot/codex/demoshop_debug-skillpkg-rep1-e261b5.jsonl.gz",
+   "sha256": "cb4e90be6246cb83ccdf73b4c02e59a97a850fc921abf85881374ff6e2ab4292",
+   "bytes": 102180,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "codex|skillpkg|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 1,
+    "home_path": 93
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/codex/tricentis_debug-mcp-rep1-734cc8.jsonl",
+   "transcript": "transcripts_live_pilot/codex/tricentis_debug-mcp-rep1-734cc8.jsonl.gz",
+   "sha256": "133cee71c45b5c3466483e6c949c7284dd101b4a62473206343787bb6b9e07e5",
+   "bytes": 138184,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "codex|mcp|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 140
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/codex/tricentis_debug-neither-rep1-7192be.jsonl",
+   "transcript": "transcripts_live_pilot/codex/tricentis_debug-neither-rep1-7192be.jsonl.gz",
+   "sha256": "f1f37c08dd6777fc15930f5eb271ddfbb281bb746b443cd83e7e311198f408ce",
+   "bytes": 145326,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "codex|neither|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 111
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/codex/tricentis_debug-skillpkg-rep1-1d5b0e.jsonl",
+   "transcript": "transcripts_live_pilot/codex/tricentis_debug-skillpkg-rep1-1d5b0e.jsonl.gz",
+   "sha256": "ef8305f345b28a7c0f13ab62dfacfc94e7cd954a2a7f38562e902073c0b0b746",
+   "bytes": 136240,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "codex|skillpkg|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 68
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/codex/tricentis_quote-mcp-rep1-f620e7.jsonl",
+   "transcript": "transcripts_live_pilot/codex/tricentis_quote-mcp-rep1-f620e7.jsonl.gz",
+   "sha256": "9506a5402f056005fa8834259dc40f88b067549b4d79d6457512d9257ce92922",
+   "bytes": 125513,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "codex|mcp|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 65
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/codex/tricentis_quote-neither-rep1-d64120.jsonl",
+   "transcript": "transcripts_live_pilot/codex/tricentis_quote-neither-rep1-d64120.jsonl.gz",
+   "sha256": "eb59359e88e8335d431d48561c9f4d3c3edb8dd5814b1cac2b2858b23eae388f",
+   "bytes": 112633,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "codex|neither|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 134
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/codex/tricentis_quote-skillpkg-rep1-7c5ec9.jsonl",
+   "transcript": "transcripts_live_pilot/codex/tricentis_quote-skillpkg-rep1-7c5ec9.jsonl.gz",
+   "sha256": "7e814db61686fc4a06d6444d51b543cd928390ae278ea834761fb45c07582b2c",
+   "bytes": 94193,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "codex|skillpkg|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 17
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/copilot/carconfig_order-mcp-rep1-46aeb0.jsonl",
+   "transcript": "transcripts_live_pilot/copilot/carconfig_order-mcp-rep1-46aeb0.jsonl.gz",
+   "sha256": "930121c67541fbd32305c5467617abcf49eeb556587981f3518bb4333d44b036",
+   "bytes": 11198,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "copilot|mcp|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/copilot/carconfig_order-neither-rep1-802895.jsonl",
+   "transcript": "transcripts_live_pilot/copilot/carconfig_order-neither-rep1-802895.jsonl.gz",
+   "sha256": "da616159d7cfade33b2ebe530dd4d7992dd3ca207e941ac9721950b2b3c005a5",
+   "bytes": 10765,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "copilot|neither|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/copilot/carconfig_order-skillpkg-rep1-575867.jsonl",
+   "transcript": "transcripts_live_pilot/copilot/carconfig_order-skillpkg-rep1-575867.jsonl.gz",
+   "sha256": "0bf0a7594eb5217c99857bcf62062658ef118cd2adb0b2eec52f733e3a03b6ac",
+   "bytes": 11395,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "copilot|skillpkg|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 3
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/copilot/demoshop_debug-mcp-rep1-9aff83.jsonl",
+   "transcript": "transcripts_live_pilot/copilot/demoshop_debug-mcp-rep1-9aff83.jsonl.gz",
+   "sha256": "30849c56db92bd3532ccd8641512b59592180e3c575bf3582fe535561582af45",
+   "bytes": 10940,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "copilot|mcp|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/copilot/demoshop_debug-neither-rep1-20873a.jsonl",
+   "transcript": "transcripts_live_pilot/copilot/demoshop_debug-neither-rep1-20873a.jsonl.gz",
+   "sha256": "8fcc5e43812e8e99aa6007aaf5b2b52ad04d5ffed9804a6e6e4a852246e07971",
+   "bytes": 10523,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "copilot|neither|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/copilot/demoshop_debug-skillpkg-rep1-3b6c72.jsonl",
+   "transcript": "transcripts_live_pilot/copilot/demoshop_debug-skillpkg-rep1-3b6c72.jsonl.gz",
+   "sha256": "3742681b793bd3ee03fa3164e3759b3bddc0afe91fe44fc675c5ad36695926cc",
+   "bytes": 11176,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "copilot|skillpkg|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 3
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/copilot/tricentis_debug-mcp-rep1-730f4d.jsonl",
+   "transcript": "transcripts_live_pilot/copilot/tricentis_debug-mcp-rep1-730f4d.jsonl.gz",
+   "sha256": "12d111c09e09f1797b0672142447b3e574a61942bccb85825b00876fc57f5066",
+   "bytes": 11021,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "copilot|mcp|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/copilot/tricentis_debug-neither-rep1-fe54c5.jsonl",
+   "transcript": "transcripts_live_pilot/copilot/tricentis_debug-neither-rep1-fe54c5.jsonl.gz",
+   "sha256": "7ea559e353aef2a0b41ac8434644d911de2796290bd225e31161cbd159a874b5",
+   "bytes": 10589,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "copilot|neither|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 2
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/copilot/tricentis_debug-skillpkg-rep1-f27048.jsonl",
+   "transcript": "transcripts_live_pilot/copilot/tricentis_debug-skillpkg-rep1-f27048.jsonl.gz",
+   "sha256": "139df42ddf2e6833e0bb562c295a9c30b6d557d4f803736b6a9c3cd992b67720",
+   "bytes": 11253,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "copilot|skillpkg|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 3
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/copilot/tricentis_quote-mcp-rep1-34b06b.jsonl",
+   "transcript": "transcripts_live_pilot/copilot/tricentis_quote-mcp-rep1-34b06b.jsonl.gz",
+   "sha256": "755260954a5964fcd83129e6e5c9fda8cf4bbb3dd184ca31f324040204d5adab",
+   "bytes": 159461,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "copilot|mcp|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 26
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/copilot/tricentis_quote-neither-rep1-d1f4e6.jsonl",
+   "transcript": "transcripts_live_pilot/copilot/tricentis_quote-neither-rep1-d1f4e6.jsonl.gz",
+   "sha256": "cc334e2b553ac44459dc7597d17fe1741cfada381352a290d560bc1e10626c6a",
+   "bytes": 445384,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "copilot|neither|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 286
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/copilot/tricentis_quote-skillpkg-rep1-a80f95.jsonl",
+   "transcript": "transcripts_live_pilot/copilot/tricentis_quote-skillpkg-rep1-a80f95.jsonl.gz",
+   "sha256": "14441d8a4435c871f977739ffd8097e4b003adf029f218cdd9e9bb2e2a6d137b",
+   "bytes": 24913,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "copilot|skillpkg|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 6
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/opencode/carconfig_order-mcp-rep1-a53585.jsonl",
+   "transcript": "transcripts_live_pilot/opencode/carconfig_order-mcp-rep1-a53585.jsonl.gz",
+   "sha256": "d3b3cf5576596b46adf41f0249fa576b70968d9daa484f8c2493da5a1a3608c9",
+   "bytes": 2495479,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "opencode|mcp|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 544
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/opencode/carconfig_order-neither-rep1-f27a06.jsonl",
+   "transcript": "transcripts_live_pilot/opencode/carconfig_order-neither-rep1-f27a06.jsonl.gz",
+   "sha256": "182d3f08d30623d8e116ff2e7588bce27064a0ba4a5f65ba9ec9d6849074a9c0",
+   "bytes": 126527,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "opencode|neither|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 199
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/opencode/carconfig_order-skillpkg-rep1-675855.jsonl",
+   "transcript": "transcripts_live_pilot/opencode/carconfig_order-skillpkg-rep1-675855.jsonl.gz",
+   "sha256": "41e0e901d5374e633abf4b8a95392cfcd54ee28da478e8f0b0e605878c35eab5",
+   "bytes": 600706,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "opencode|skillpkg|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 8,
+    "home_path": 433
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/opencode/demoshop_debug-mcp-rep1-5e06c1.jsonl",
+   "transcript": "transcripts_live_pilot/opencode/demoshop_debug-mcp-rep1-5e06c1.jsonl.gz",
+   "sha256": "3446efc5396fdeca73b89d69bd1bb2a37e0e9ef86d53ce3b8affd31ea2d8ce60",
+   "bytes": 468787,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "opencode|mcp|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 7,
+    "home_path": 328
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/opencode/demoshop_debug-neither-rep1-16af12.jsonl",
+   "transcript": "transcripts_live_pilot/opencode/demoshop_debug-neither-rep1-16af12.jsonl.gz",
+   "sha256": "cb6ffaad0a784ad045486fabe6305e76ae75e34769c77d37595d270abf268f38",
+   "bytes": 466137,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "opencode|neither|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 659
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/opencode/demoshop_debug-skillpkg-rep1-883566.jsonl",
+   "transcript": "transcripts_live_pilot/opencode/demoshop_debug-skillpkg-rep1-883566.jsonl.gz",
+   "sha256": "c2a14e2c40688687609492c181d526fe857e8bffc0c781dd7f7a0ec8c813b76a",
+   "bytes": 211054,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "opencode|skillpkg|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 194
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/opencode/tricentis_debug-mcp-rep1-647c8d.jsonl",
+   "transcript": "transcripts_live_pilot/opencode/tricentis_debug-mcp-rep1-647c8d.jsonl.gz",
+   "sha256": "799cc89598b43e4d9fba11b8c547668d3ee08bc9f096daac575ebc1020f4aca7",
+   "bytes": 164420,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "opencode|mcp|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 256
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/opencode/tricentis_debug-neither-rep1-9d1432.jsonl",
+   "transcript": "transcripts_live_pilot/opencode/tricentis_debug-neither-rep1-9d1432.jsonl.gz",
+   "sha256": "8cee12d993aac81988a1e5eeb5261a815f5930b4cc9049ad2fdee60e71f175e4",
+   "bytes": 635261,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "opencode|neither|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 1113
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/opencode/tricentis_debug-skillpkg-rep1-c9c326.jsonl",
+   "transcript": "transcripts_live_pilot/opencode/tricentis_debug-skillpkg-rep1-c9c326.jsonl.gz",
+   "sha256": "93be2d9b94be0584115bd3732a189c4b723f7ea94f068a2dfa6dc41be26f7fb6",
+   "bytes": 7981,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "opencode|skillpkg|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 6
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/opencode/tricentis_quote-mcp-rep1-35c08b.jsonl",
+   "transcript": "transcripts_live_pilot/opencode/tricentis_quote-mcp-rep1-35c08b.jsonl.gz",
+   "sha256": "fa59445acdf4fb6836318c7b264a1aa55fdffc2c48e73335aad92112957a8933",
+   "bytes": 782435,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "opencode|mcp|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 928
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/opencode/tricentis_quote-neither-rep1-9f6777.jsonl",
+   "transcript": "transcripts_live_pilot/opencode/tricentis_quote-neither-rep1-9f6777.jsonl.gz",
+   "sha256": "a99eb46dcb49168246266413f387e61690d5c211d5f8a4bde84b6272a84c2abd",
+   "bytes": 1688267,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "opencode|neither|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 688
+   }
+  },
+  {
+   "file": "transcripts_live_pilot/opencode/tricentis_quote-skillpkg-rep1-eb757c.jsonl",
+   "transcript": "transcripts_live_pilot/opencode/tricentis_quote-skillpkg-rep1-eb757c.jsonl.gz",
+   "sha256": "ac01f24cee0f0eea5ceb331ec731941974ba24d6b0005435f35f6d6d24dad6c4",
+   "bytes": 566336,
+   "results_file": "results/results_live_pilot.jsonl",
+   "key": "opencode|skillpkg|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 212
+   }
+  },
+  {
+   "file": "transcripts_live_smoke/claude/carconfig_order-mcp-rep1-58036a.jsonl",
+   "transcript": "transcripts_live_smoke/claude/carconfig_order-mcp-rep1-58036a.jsonl.gz",
+   "sha256": "5506fa8dc690e5d704dbdfbf56d44c2dc2ab36ce8d79c3d875a75e8521cf66c0",
+   "bytes": 523081,
+   "results_file": "results/results_live_smoke.jsonl",
+   "key": "claude|mcp|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 12,
+    "home_path": 111
+   }
+  },
+  {
+   "file": "transcripts_live_smoke/claude/carconfig_order-neither-rep1-35f326.jsonl",
+   "transcript": "transcripts_live_smoke/claude/carconfig_order-neither-rep1-35f326.jsonl.gz",
+   "sha256": "1f076482777b00957ba3b5aa95c3cf242240bf8edc46a66aeb4531fee5b2844e",
+   "bytes": 1714938,
+   "results_file": "results/results_live_smoke.jsonl",
+   "key": "claude|neither|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 5,
+    "home_path": 253
+   }
+  },
+  {
+   "file": "transcripts_live_smoke/claude/demoshop_debug-mcp-rep1-4f31ef.jsonl",
+   "transcript": "transcripts_live_smoke/claude/demoshop_debug-mcp-rep1-4f31ef.jsonl.gz",
+   "sha256": "6aa7c1848259a761dbc2ef121ba433daa0ce7eef05dabdfca9eca64099bba78d",
+   "bytes": 643709,
+   "results_file": "results/results_live_smoke.jsonl",
+   "key": "claude|mcp|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 298
+   }
+  },
+  {
+   "file": "transcripts_live_smoke/claude/demoshop_debug-neither-rep1-e66cf3.jsonl",
+   "transcript": "transcripts_live_smoke/claude/demoshop_debug-neither-rep1-e66cf3.jsonl.gz",
+   "sha256": "3310db7c55e4083daa718fec279c1174a119104584eb0859fd9734debd0ba8bf",
+   "bytes": 565162,
+   "results_file": "results/results_live_smoke.jsonl",
+   "key": "claude|neither|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 312
+   }
+  }
+ ]
+}

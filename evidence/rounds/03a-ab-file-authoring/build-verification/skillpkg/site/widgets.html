@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Travel request</title>
+<style>
+  .seg input[type=radio] { position: absolute; opacity: 0; width: 0; height: 0; }  /* visually hidden radio */
+  .seg label { display: inline-block; padding: 4px 10px; border: 1px solid #888; cursor: pointer; }
+  .seg input:checked + label { background: #246; color: #fff; }
+  .check input[type=checkbox] { display: none; }                                  /* fully hidden checkbox */
+  .check .box { display: inline-block; width: 14px; height: 14px; border: 1px solid #333; }
+  .check input:checked + .box { background: #2a2; }
+  .dd { position: relative; display: inline-block; }
+  .dd ul { list-style: none; margin: 0; padding: 0; border: 1px solid #888; background: #fff; }
+  .dd li { padding: 2px 8px; cursor: pointer; }
+  .overlay { position: fixed; inset: 0; background: rgba(0,0,0,.4); }
+  .modal { position: fixed; top: 30%; left: 30%; background: #fff; padding: 1em; }
+</style>
+</head>
+<body>
+<h1>Travel request</h1>
+<div id="consent" class="overlay"><div class="modal" role="dialog" aria-label="Cookies">
+  We use cookies. <button type="button" id="consent-ok">Accept all</button></div></div>
+<form id="req" onsubmit="return false">
+  <p><label for="traveller">Traveller name</label> <input id="traveller" name="traveller" data-test="traveller"></p>
+  <p><input id="email" type="email" placeholder="name@example.com" aria-label="E-mail" data-testid="email"></p>
+  <fieldset class="seg"><legend>Trip type</legend>
+    <input type="radio" name="trip" id="trip-one" value="one"><label for="trip-one">One way</label>
+    <input type="radio" name="trip" id="trip-round" value="round"><label for="trip-round">Round trip</label>
+  </fieldset>
+  <p><label class="check"><input type="checkbox" id="insurance"><span class="box"></span> Add travel insurance</label></p>
+  <p><label for="dest">Destination</label>
+    <select id="dest" name="dest"><option value="">-- choose --</option><option value="ber">Berlin</option>
+      <option value="osl">Oslo</option><option value="rom">Rome</option></select></p>
+  <p class="dd"><span id="class-label">Travel class</span>
+    <button type="button" id="travel-class" role="combobox" aria-haspopup="listbox" aria-expanded="false"
+            aria-labelledby="class-label">Choose class</button>
+    <ul id="travel-class-list" role="listbox" hidden>
+      <li role="option" data-value="eco">Economy</li><li role="option" data-value="biz">Business</li>
+      <li role="option" data-value="first">First</li></ul></p>
+  <p><label for="depart">Departure date</label> <input type="date" id="depart"></p>
+  <p><label for="ret">Return date (MM/DD/YYYY)</label> <input id="ret" placeholder="MM/DD/YYYY"></p>
+  <p><button type="button" id="send-request" data-test="send">Send request</button>
+     <button type="button" id="reset-form">Reset form</button>
+     <button type="button" id="save-tpl">Save as template</button>
+     <a href="help.html" target="_blank" id="help-link">Help</a></p>
+</form>
+<div id="spinner" hidden>Processing...</div>
+<p id="status" role="status">Not sent</p>
+<ul id="results"></ul>
+<script>
+const $ = (id) => document.getElementById(id);
+const pad = (n) => String(n).padStart(2, "0");
+const iso = (d) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+$("depart").min = iso(new Date());
+$("consent-ok").onclick = () => $("consent").remove();
+const list = $("travel-class-list"), dd = $("travel-class");
+dd.onclick = () => { list.hidden = !list.hidden; dd.setAttribute("aria-expanded", String(!list.hidden)); };
+list.querySelectorAll("li").forEach((li) => li.onclick = () => {
+  dd.textContent = li.textContent; dd.dataset.value = li.dataset.value; list.hidden = true;
+  dd.setAttribute("aria-expanded", "false");
+});
+$("send-request").onclick = () => {
+  const trip = document.querySelector("input[name=trip]:checked");
+  const missing = [];
+  if (!$("traveller").value) missing.push("name");
+  if (!trip) missing.push("trip type");
+  if (!$("dest").value) missing.push("destination");
+  if (!dd.dataset.value) missing.push("class");
+  if (!$("depart").value) missing.push("departure");
+  if (missing.length) { $("status").textContent = "Missing: " + missing.join(", "); return; }
+  const dep = new Date($("depart").value + "T00:00:00");
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  if (dep < today) { $("status").textContent = "Departure must not be in the past"; return; }
+  let back = "";
+  if (trip.value === "round") {
+    const m = /^(\d\d)\/(\d\d)\/(\d{4})$/.exec($("ret").value);
+    if (!m) { $("status").textContent = "Return date must be MM/DD/YYYY"; return; }
+    const r = new Date(+m[3], +m[1] - 1, +m[2]);
+    if (r <= dep) { $("status").textContent = "Return must be after departure"; return; }
+    back = " back " + iso(r);
+  }
+  $("spinner").hidden = false;
+  $("status").textContent = "Processing...";
+  $("results").innerHTML = "";
+  setTimeout(() => {
+    $("spinner").hidden = true;
+    $("status").textContent = `Request confirmed: ${$("traveller").value}, ${trip.value}, ` +
+      `${$("dest").selectedOptions[0].text}, ${dd.textContent}, ${$("depart").value}${back}, ` +
+      `insurance ${$("insurance").checked ? "yes" : "no"}`;
+  }, 2000);
+  setTimeout(() => {
+    ["Flight", "Hotel", "Train"].forEach((t) => {
+      const li = document.createElement("li"); li.className = "result"; li.textContent = t; $("results").append(li);
+    });
+  }, 2500);
+};
+$("reset-form").onclick = () => {
+  if (confirm("Reset the form?")) { $("req").reset(); dd.textContent = "Choose class"; delete dd.dataset.value;
+    $("status").textContent = "Form reset"; }
+  else { $("status").textContent = "Reset cancelled"; }
+};
+$("save-tpl").onclick = () => {
+  const n = prompt("Template name?");
+  $("status").textContent = n ? "Template saved: " + n : "Template not saved";
+};
+</script>
+</body>
+</html>

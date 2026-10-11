@@ -1,0 +1,20 @@
+{
+ "date": "2026-10-08",
+ "versions_tested": {"claude": "2.1.289 (claude-haiku-4-5)", "codex": "0.161.0 (gpt-5.6-luna low)", "opencode": "1.15.12 (MiniMax-M2.7)", "copilot_cli": "1.0.91 (--model auto -> gpt-6-luna; gpt-4.1/gpt-5-mini/claude-haiku-4.5 'not available' via --model)", "vscode": "docs only (Local harness reference dated 2026-10-07)"},
+ "verified_model_visible_injection": {
+  "claude": ["SessionStart.additionalContext", "UserPromptSubmit.additionalContext", "PreToolUse.additionalContext (also with updatedInput/deny)", "PreToolUse deny reason", "PostToolUse.additionalContext", "PostToolUseFailure.additionalContext", "Stop decision=block reason", "asyncRewake exit-2 stderr", "skill-frontmatter PostToolUse/Stop"],
+  "codex": ["SessionStart", "UserPromptSubmit", "PreToolUse.additionalContext", "PreToolUse deny reason", "PostToolUse.additionalContext (apply_patch + Bash incl. non-zero exit)", "Stop block reason (new user turn)"],
+  "copilot": ["sessionStart.additionalContext", "userPromptSubmitted.additionalContext", "postToolUse.additionalContext (appended to tool result)", "preToolUse deny reason", "agentStop block reason (new user turn)"],
+  "opencode": ["tool.execute.after output.output mutation", "chat.message text-part mutation", "tool.execute.before throw message", "client.session.prompt noReply insertion"],
+  "opencode_not_visible": ["experimental.chat.system.transform push and system[0] append (3 runs)"]
+ },
+ "verified_rewrite": {"claude": "PreToolUse updatedInput on Write", "codex": "PreToolUse updatedInput.command (apply_patch patch text)", "copilot": "preToolUse modifiedArgs = raw patch string for apply_patch", "opencode": "mutate output.args in tool.execute.before"},
+ "verified_stop_continue": {"claude": true, "codex": true, "copilot": "true (sessionEnd fires between turns)", "opencode": "no Stop hook; idle+promptAsync fails in `opencode run`; noReply prompt insert at assistant finish works (1/1 msg_finish, 1/1 text_complete)"},
+ "session_end_headless": {"claude": "yes reason=other", "codex": "yes reason=other", "copilot": "yes reason=complete, but after EVERY agent run incl. stop-block continuation", "opencode": "plugin dispose() awaited at shutdown"},
+ "timeouts": {"claude": "default 600s, 3s kill verified -> cancelled, fail-open; exit1 fail-open but JSON honored", "codex": "default 600s, 3s kill verified, silent fail-open; exit1 fail-open", "copilot": "default 30s, 3s kill verified, fail-open warning; preToolUse exit1 = deny (fail-closed)", "opencode": "no timeout, awaited; throw = deny"},
+ "sync_20s_hook_blocks_agent": {"claude": true, "codex": true, "copilot": true, "opencode": true},
+ "parallel_tool_calls": {"claude": "Bash hooks concurrent, Write serialized", "codex": "concurrent", "opencode": "concurrent", "copilot": "preToolUse up front, postToolUse serialized"},
+ "setsid_helper_survives_agent_exit": {"claude": true, "codex": true, "copilot": true, "opencode": true},
+ "config_loading": {"claude": "plugin --plugin-dir + project .claude/settings.json both run in -p", "codex": "CODEX_HOME config.toml + project .codex/hooks.json; untrusted hooks silently skipped; bypass flag or pre-trust via app-server hooks/list hash", "copilot": "--plugin-dir + $COPILOT_HOME/hooks run; repo .github/hooks only when folder in trusted_folders", "opencode": ".opencode/plugins/*.js auto-loaded (first run installs deps ~9s)"},
+ "evidence": "runs/<agent>/<cell>/{hooks.jsonl,agent_stdout.log,result.json,helper.log}; trustprobe/"
+}

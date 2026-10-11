@@ -1,0 +1,11 @@
+# Hypothetical per-session overlay a remote rf-mcp could ask the agent to write
+# (client-side state: variables learned during the session + search order + tags).
+[profiles.sess-42]
+description = "rf-mcp session 42 (web, Browser)"
+[profiles.sess-42.extend-variables]
+FROM_CLI = "x"
+dyn = "1"
+TOKEN = "abc"
+
+[tool.robotcode-analyze]
+extend-global-library-search-order = ["LibA"]

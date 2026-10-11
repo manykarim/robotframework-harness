@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Shop - Order</title>
+<style>
+.ideal-radio,.ideal-check{position:relative;display:inline-block;width:18px;height:18px;vertical-align:middle}
+.ideal-radio input,.ideal-check input{position:absolute;left:1px;top:1px;width:16px;height:16px;margin:0}
+.ideal-radio span,.ideal-check span{position:absolute;left:0;top:0;width:18px;height:18px;background:#ddd;border:1px solid #555}
+.ideal-radio input:checked+span,.ideal-check input:checked+span{background:#246}
+</style></head><body>
+<h1 id="greeting"></h1>
+<form id="order" onsubmit="return false">
+ <fieldset class="seg"><legend>Shipping</legend>
+  <span class="ideal-radio"><input type="radio" name="ship" id="ship-standard" value="standard"><span></span></span><label for="ship-standard">Standard</label>
+  <span class="ideal-radio"><input type="radio" name="ship" id="ship-express" value="express"><span></span></span><label for="ship-express">Express</label>
+ </fieldset>
+ <p><label for="country">Country</label> <select id="country"><option value="">-- choose --</option>
+   <option value="de">Germany</option><option value="no">Norway</option><option value="it">Italy</option></select></p>
+ <p><span class="ideal-check"><input type="checkbox" id="gift"><span></span></span> <label for="gift">Gift wrap</label></p>
+ <h2>Payment</h2>
+ <iframe id="pay-frame" title="Payment" src="pay.html" width="420" height="120"></iframe>
+ <p><button id="place" data-test="place-order" disabled onclick="placeOrder()">Place order</button></p>
+ <p id="total" role="status"></p>
+</form>
+<script>
+const q=new URLSearchParams(location.search);document.getElementById('greeting').textContent='Hello, '+(q.get('user')||'guest');
+let cardOk=false;window.addEventListener('message',e=>{if(e.data==='card-ok'){cardOk=true;document.getElementById('place').disabled=false;}});
+function price(){const s=document.querySelector('input[name=ship]:checked');let t=40;if(s&&s.value==='express')t+=15;if(document.getElementById('gift').checked)t+=5;return t;}
+document.getElementById('order').addEventListener('change',()=>{document.getElementById('total').textContent='Total: '+price().toFixed(2)+' EUR';});
+function placeOrder(){const s=document.querySelector('input[name=ship]:checked'),c=document.getElementById('country').value;
+ if(!s||!c){document.getElementById('total').textContent='Missing: shipping or country';return;}
+ location.href='done.html?total='+price()+'&ship='+s.value+'&country='+c;}
+</script></body></html>

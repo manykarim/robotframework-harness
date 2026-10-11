@@ -1,0 +1,24 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Demo Shop</title></head>
+<body>
+<h1>Demo Shop</h1>
+<form id="login-form" onsubmit="return false">
+  <label for="username">Username</label><input id="username" name="username">
+  <label for="password">Password</label><input id="password" name="password" type="password">
+  <button id="login" data-test="login-button" onclick="setTimeout(()=>{document.getElementById('status').textContent='Welcome, '+document.getElementById('username').value},300)">Log in</button>
+</form>
+<div id="status" role="status"></div>
+<ul><li class="item">Apple</li><li class="item">Banana</li><li class="item">Cherry</li></ul>
+<shadow-widget id="widget"></shadow-widget>
+<h2>Payment</h2>
+<iframe id="pay-frame" name="pay" title="Payment" src="frame.html" width="400" height="150"></iframe>
+<script>
+customElements.define('shadow-widget', class extends HTMLElement {
+  connectedCallback() {
+    const r = this.attachShadow({mode: 'open'});
+    r.innerHTML = '<button id="shadow-btn">Shadow Button</button><span id="shadow-out"></span>';
+    r.getElementById('shadow-btn').addEventListener('click', () => { r.getElementById('shadow-out').textContent = 'Shadow clicked'; });
+  }
+});
+</script>
+</body></html>

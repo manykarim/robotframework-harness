@@ -1,0 +1,72 @@
+[
+ {
+  "spec": "Browser",
+  "keywords": 147,
+  "cache_bytes": 247335,
+  "cold_build_ms": 226,
+  "warm_load_ms": 2.4,
+  "exact_lookup_ms": 0.005,
+  "fuzzy_lookup_ms": 0.6,
+  "cache_key_ms": 1.15
+ },
+ {
+  "spec": "SeleniumLibrary",
+  "keywords": 182,
+  "cache_bytes": 141925,
+  "cold_build_ms": 90,
+  "warm_load_ms": 1.2,
+  "exact_lookup_ms": 0.005,
+  "fuzzy_lookup_ms": 1.26,
+  "cache_key_ms": 0.75
+ },
+ {
+  "spec": "RequestsLibrary",
+  "keywords": 33,
+  "cache_bytes": 42262,
+  "cold_build_ms": 38,
+  "warm_load_ms": 0.6,
+  "exact_lookup_ms": 0.005,
+  "fuzzy_lookup_ms": 0.35,
+  "cache_key_ms": 1.01
+ },
+ {
+  "spec": "BuiltIn",
+  "keywords": 107,
+  "cache_bytes": 125281,
+  "cold_build_ms": 37,
+  "warm_load_ms": 0.6,
+  "exact_lookup_ms": 0.005,
+  "fuzzy_lookup_ms": 0.56,
+  "cache_key_ms": 0.24
+ },
+ {
+  "spec": "Collections",
+  "keywords": 43,
+  "cache_bytes": 34770,
+  "cold_build_ms": 14,
+  "warm_load_ms": 0.3,
+  "exact_lookup_ms": 0.006,
+  "fuzzy_lookup_ms": 0.56,
+  "cache_key_ms": 0.22
+ },
+ {
+  "spec": "resources/shop.resource",
+  "keywords": 3,
+  "cache_bytes": 1010,
+  "cold_build_ms": 3,
+  "warm_load_ms": 0.1,
+  "exact_lookup_ms": 0.005,
+  "fuzzy_lookup_ms": 0.03,
+  "cache_key_ms": 0.05
+ },
+ {
+  "spec": "libs/ArgLib.py::advanced",
+  "keywords": 2,
+  "cache_bytes": 679,
+  "cold_build_ms": 2,
+  "warm_load_ms": 0.1,
+  "exact_lookup_ms": 0.006,
+  "fuzzy_lookup_ms": 0.08,
+  "cache_key_ms": 0.05
+ }
+]

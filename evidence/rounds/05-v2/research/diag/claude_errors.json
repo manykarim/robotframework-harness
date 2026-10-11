@@ -1,0 +1,237 @@
+[
+ {
+  "key": "claude|skillpkg|carconfig_order|1",
+  "errors": [
+   "result:error_max_turns"
+  ],
+  "result": {
+   "subtype": "error_max_turns",
+   "is_error": true,
+   "num_turns": 81,
+   "duration_ms": 381024,
+   "total_cost_usd": 0.6090767
+  },
+  "primary_pass": false,
+  "robot_first_pass": false,
+  "tools": {
+   "Bash": 73,
+   "rfmcp step/run": 52,
+   "Edit": 3,
+   "Read": 2,
+   "Skill": 1,
+   "Write": 1
+  },
+  "robot_runs": 2
+ },
+ {
+  "key": "claude|skillpkg|demoshop_debug|1",
+  "errors": [
+   "result:error_max_turns"
+  ],
+  "result": {
+   "subtype": "error_max_turns",
+   "is_error": true,
+   "num_turns": 81,
+   "duration_ms": 953228,
+   "total_cost_usd": 0.6614300000000003
+  },
+  "primary_pass": false,
+  "robot_first_pass": false,
+  "tools": {
+   "Bash": 55,
+   "rfmcp step/run": 20,
+   "Edit": 17,
+   "Read": 8,
+   "Skill": 1
+  },
+  "robot_runs": 19
+ },
+ {
+  "key": "claude|skillpkg|tricentis_quote|2",
+  "errors": [
+   "result:error_max_turns"
+  ],
+  "result": {
+   "subtype": "error_max_turns",
+   "is_error": true,
+   "num_turns": 81,
+   "duration_ms": 352553,
+   "total_cost_usd": 0.5231254
+  },
+  "primary_pass": false,
+  "robot_first_pass": false,
+  "tools": {
+   "Bash": 72,
+   "rfmcp step/run": 53,
+   "Edit": 4,
+   "Read": 2,
+   "Skill": 1,
+   "Write": 1
+  },
+  "robot_runs": 0
+ },
+ {
+  "key": "claude|skillpkg|carconfig_order|2",
+  "errors": [
+   "result:error_max_turns"
+  ],
+  "result": {
+   "subtype": "error_max_turns",
+   "is_error": true,
+   "num_turns": 81,
+   "duration_ms": 376417,
+   "total_cost_usd": 0.6451500000000002
+  },
+  "primary_pass": false,
+  "robot_first_pass": false,
+  "tools": {
+   "Bash": 56,
+   "rfmcp step/run": 29,
+   "Edit": 16,
+   "Read": 6,
+   "Skill": 1,
+   "Write": 1
+  },
+  "robot_runs": 6
+ },
+ {
+  "key": "claude|skillpkg|tricentis_debug|2",
+  "errors": [
+   "result:error_max_turns"
+  ],
+  "result": {
+   "subtype": "error_max_turns",
+   "is_error": true,
+   "num_turns": 81,
+   "duration_ms": 432392,
+   "total_cost_usd": 0.6365463
+  },
+  "primary_pass": false,
+  "robot_first_pass": false,
+  "tools": {
+   "Bash": 66,
+   "rfmcp step/run": 47,
+   "Read": 8,
+   "Edit": 5,
+   "Skill": 1
+  },
+  "robot_runs": 3
+ },
+ {
+  "key": "claude|hookpkg|tricentis_quote|3",
+  "errors": [
+   "result:error_max_turns"
+  ],
+  "result": {
+   "subtype": "error_max_turns",
+   "is_error": true,
+   "num_turns": 81,
+   "duration_ms": 525605,
+   "total_cost_usd": 0.8211725999999998
+  },
+  "primary_pass": false,
+  "robot_first_pass": false,
+  "tools": {
+   "Edit": 46,
+   "Read": 32,
+   "Skill": 1,
+   "Write": 1
+  },
+  "robot_runs": 0
+ },
+ {
+  "key": "claude|skillpkg|tricentis_quote|3",
+  "errors": [
+   "result:error_max_turns"
+  ],
+  "result": {
+   "subtype": "error_max_turns",
+   "is_error": true,
+   "num_turns": 81,
+   "duration_ms": 416934,
+   "total_cost_usd": 0.5704199000000002
+  },
+  "primary_pass": false,
+  "robot_first_pass": false,
+  "tools": {
+   "Bash": 72,
+   "rfmcp step/run": 42,
+   "Edit": 5,
+   "Skill": 1,
+   "Write": 1,
+   "Read": 1
+  },
+  "robot_runs": 4
+ },
+ {
+  "key": "claude|skillpkg|carconfig_order|3",
+  "errors": [
+   "result:error_max_turns"
+  ],
+  "result": {
+   "subtype": "error_max_turns",
+   "is_error": true,
+   "num_turns": 81,
+   "duration_ms": 346416,
+   "total_cost_usd": 0.6450848
+  },
+  "primary_pass": false,
+  "robot_first_pass": false,
+  "tools": {
+   "Bash": 60,
+   "rfmcp step/run": 32,
+   "Edit": 11,
+   "Read": 7,
+   "Skill": 1,
+   "Write": 1
+  },
+  "robot_runs": 8
+ },
+ {
+  "key": "claude|skillpkg|demoshop_order|3",
+  "errors": [
+   "result:error_max_turns"
+  ],
+  "result": {
+   "subtype": "error_max_turns",
+   "is_error": true,
+   "num_turns": 81,
+   "duration_ms": 462998,
+   "total_cost_usd": 0.6219195999999998
+  },
+  "primary_pass": false,
+  "robot_first_pass": false,
+  "tools": {
+   "Bash": 71,
+   "rfmcp step/run": 42,
+   "Edit": 4,
+   "Read": 3,
+   "Skill": 1,
+   "Write": 1
+  },
+  "robot_runs": 6
+ },
+ {
+  "key": "claude|skillpkg|tricentis_debug|3",
+  "errors": [
+   "result:error_max_turns"
+  ],
+  "result": {
+   "subtype": "error_max_turns",
+   "is_error": true,
+   "num_turns": 81,
+   "duration_ms": 742914,
+   "total_cost_usd": 0.7451979999999999
+  },
+  "primary_pass": false,
+  "robot_first_pass": false,
+  "tools": {
+   "Bash": 58,
+   "rfmcp step/run": 34,
+   "Read": 13,
+   "Edit": 8,
+   "Skill": 1
+  },
+  "robot_runs": 7
+ }
+]

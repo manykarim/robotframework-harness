@@ -1,0 +1,7 @@
+# Local robotcode config for the locator-intelligence experiments (research only)
+output-dir = "out/default"
+console-colors = "off"
+python-path = ["resources"]
+
+[variables]
+HEADLESS = "True"

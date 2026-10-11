@@ -1,0 +1,46 @@
+x rf                     Browser          wall=  0.71s n=152 import=0.18 build=0.24 warm=0.137 pkl= spec= 
+x rc                     Browser          wall=  0.79s n=152 import=0.381 build=0.227 warm= pkl=530380 spec= 
+x rcpk                   Browser          wall=  0.51s n=152 import=0.361 build=0.012 warm= pkl= spec= 
+x rfjs                   Browser          wall=  0.29s n=152 import=0.178 build=0.017 warm= pkl= spec=818302 
+x rfjs                   Browser          wall=  0.28s n=152 import=0.176 build=0.016 warm= pkl= spec=818302 
+x rcdb                   Browser          wall=  0.54s n=152 import=0.383 build=0.015 warm= pkl= spec= 
+x rf                     RequestsLibrary  wall=  0.35s n=33 import=0.169 build=0.066 warm=0.01 pkl= spec= 
+x rc                     RequestsLibrary  wall=  0.58s n=33 import=0.351 build=0.078 warm= pkl=79022 spec= 
+x rcpk                   RequestsLibrary  wall=  0.49s n=33 import=0.362 build=0.002 warm= pkl= spec= 
+x rfjs                   RequestsLibrary  wall=  0.28s n=33 import=0.188 build=0.001 warm= pkl= spec=88142 
+x rfjs                   RequestsLibrary  wall=  0.29s n=33 import=0.187 build=0.001 warm= pkl= spec=88142 
+x rcdb                   RequestsLibrary  wall=  0.54s n=33 import=0.377 build=0.007 warm= pkl= spec= 
+x rf                     BuiltIn          wall=  0.46s n=109 import=0.184 build=0.093 warm=0.058 pkl= spec= 
+x rc                     BuiltIn          wall=  0.63s n=109 import=0.392 build=0.071 warm= pkl=238589 spec= 
+x rcpk                   BuiltIn          wall=  0.54s n=109 import=0.392 build=0.006 warm= pkl= spec= 
+x rfjs                   BuiltIn          wall=  0.30s n=109 import=0.184 build=0.01 warm= pkl= spec=370464 
+x rfjs                   BuiltIn          wall=  0.28s n=109 import=0.179 build=0.011 warm= pkl= spec=370464 
+x rcdb                   BuiltIn          wall=  0.55s n=109 import=0.39 build=0.013 warm= pkl= spec= 
+x rf                     Collections      wall=  0.35s n=43 import=0.192 build=0.037 warm=0.021 pkl= spec= 
+x rc                     Collections      wall=  0.53s n=43 import=0.362 build=0.032 warm= pkl=99734 spec= 
+x rcpk                   Collections      wall=  0.50s n=43 import=0.362 build=0.003 warm= pkl= spec= 
+x rfjs                   Collections      wall=  0.28s n=43 import=0.179 build=0.002 warm= pkl= spec=166386 
+x rfjs                   Collections      wall=  0.28s n=43 import=0.172 build=0.002 warm= pkl= spec=166386 
+x rcdb                   Collections      wall=  0.54s n=43 import=0.39 build=0.009 warm= pkl= spec= 
+x rf                     String           wall=  0.32s n=32 import=0.18 build=0.03 warm=0.019 pkl= spec= 
+x rc                     String           wall=  0.54s n=32 import=0.36 build=0.033 warm= pkl=68904 spec= 
+x rcpk                   String           wall=  0.51s n=32 import=0.37 build=0.002 warm= pkl= spec= 
+x rfjs                   String           wall=  0.27s n=32 import=0.179 build=0.002 warm= pkl= spec=128649 
+x rfjs                   String           wall=  0.29s n=32 import=0.185 build=0.002 warm= pkl= spec=128649 
+x rcdb                   String           wall=  0.55s n=32 import=0.38 build=0.021 warm= pkl= spec= 
+w rf                     SeleniumLibrary  wall=  0.60s n=182 import=0.171 build=0.205 warm=0.081 pkl= spec= 
+w rc                     SeleniumLibrary  wall=  0.67s n=182 import=0.338 build=0.174 warm= pkl=266213 spec= 
+w rcpk                   SeleniumLibrary  wall=  0.48s n=182 import=0.338 build=0.006 warm= pkl= spec= 
+w rfjs                   SeleniumLibrary  wall=  0.25s n=182 import=0.158 build=0.006 warm= pkl= spec=402287 
+w rfjs                   SeleniumLibrary  wall=  0.26s n=182 import=0.161 build=0.006 warm= pkl= spec=402287 
+w rf                     BuiltIn          wall=  0.34s n=107 import=0.169 build=0.04 warm=0.032 pkl= spec= 
+w rc                     BuiltIn          wall=  0.52s n=107 import=0.332 build=0.05 warm= pkl=197806 spec= 
+w rcpk                   BuiltIn          wall=  0.47s n=107 import=0.341 build=0.005 warm= pkl= spec= 
+w rfjs                   BuiltIn          wall=  0.27s n=107 import=0.175 build=0.003 warm= pkl= spec=210622 
+w rfjs                   BuiltIn          wall=  0.25s n=107 import=0.159 build=0.002 warm= pkl= spec=210622 
+x bare_python                             wall=  0.03s n= import= build= warm= pkl= spec= 
+x import_robot_libdocpkg                  wall=  0.30s n= import= build= warm= pkl= spec= 
+x import_rc_library_doc                   wall=  0.51s n= import= build= warm= pkl= spec= 
+w bare_python                             wall=  0.02s n= import= build= warm= pkl= spec= 
+w import_robot_libdocpkg                  wall=  0.28s n= import= build= warm= pkl= spec= 
+w import_rc_library_doc                   wall=  0.50s n= import= build= warm= pkl= spec= 

@@ -1,0 +1,13 @@
+{
+ "jsonrpc": "2.0",
+ "id": 4,
+ "result": {
+  "success": true,
+  "items": [
+   {
+    "mime": "x-application/robotframework-repl-log",
+    "data": "{\"items\":[{\"id\":\"s1-t1-k1-k7\",\"name\":\"Search Keywords\",\"owner\":\"KwDocs\",\"source_name\":\"\",\"doc\":\"\",\"args\":[\"post json\",\"5\"],\"assign\":[],\"tags\":[],\"timeout\":null,\"type\":\"KEYWORD\",\"status\":\"PASS\",\"message\":\"\",\"start_time\":\"20261001 08:48:37.081\",\"end_time\":\"20261001 08:48:37.129\",\"elapsed_time\":\"00:00:00.048\",\"items\":[{\"id\":\"message-0\",\"message\":\"Arguments: [ 'post json' | 5 ]\",\"level\":\"TRACE\",\"html\":false,\"timestamp\":\"08:48:37\",\"node_type\":\"message\"},{\"id\":\"message-1\",\"message\":\"Create Order(product_id: int, quantity: int = 1, coupon: str | None = None)  [ShopApi]\\nCreates a new order via POST /orders and returns the JSON body.\\nPOST(*args, **kwargs)  [RequestsLibrary]\\nSends a POST request.\\nPOST On Session(*args, **kwargs)  [RequestsLibrary]\\nSends a POST request on a previously created HTTP Session.\\nPost Request(alias, uri, data=None, json=None, params=None, headers=None, files=None, allow_redirects=None, timeout=None)  [RequestsLibrary]\\n*DEPRECATED* Please use POST On Session instead.\\nDelete Request(alias, uri, data=None, json=None, params=None, headers=None, allow_redirects=None, timeout=None)  [RequestsLibrary]\\n*DEPRECATED* Please use DELETE On Session instead.\",\"level\":\"INFO\",\"html\":false,\"timestamp\":\"08:48:37\",\"node_type\":\"message\"},{\"id\":\"message-2\",\"message\":\"Return: 'Create Order(product_id: int, quantity: int = 1, coupon: str | None = None)  [ShopApi]\\\\nCreates a new order via POST /orders and returns the JSON body.\\\\nPOST(*args, **kwargs)  [RequestsLibrary]\\\\nSends a POST request.\\\\nPOST On Session(*args, **kwargs)  [RequestsLibrary]\\\\nSends a POST request on a previously created HTTP Session.\\\\nPost Request(alias, uri, data=None, json=None, params=None, headers=None, files=None, allow_redirects=None, timeout=None)  [RequestsLibrary]\\\\n*DEPRECATED* Please use POST On Session instead.\\\\nDelete Request(alias, uri, data=None, json=None, params=None, headers=None, allow_redirects=None, timeout=None)  [RequestsLibrary]\\\\n*DEPRECATED* Please use DELETE On Session instead.'\",\"level\":\"TRACE\",\"html\":false,\"timestamp\":\"08:48:37\",\"node_type\":\"message\"}],\"node_type\":\"keyword\"}],\"node_type\":\"root\"}"
+   }
+  ]
+ }
+}

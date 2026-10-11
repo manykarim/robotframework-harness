@@ -1,0 +1,969 @@
+{
+ "ok": true,
+ "passed": 216,
+ "total": 216,
+ "latency": {
+  "gate_deny_ms": {
+   "n": 1,
+   "median_ms": 150,
+   "max_ms": 150
+  },
+  "claude:start": {
+   "n": 10,
+   "median_ms": 117,
+   "max_ms": 154
+  },
+  "claude:pre": {
+   "n": 86,
+   "median_ms": 148,
+   "max_ms": 1707
+  },
+  "claude:post": {
+   "n": 66,
+   "median_ms": 1314,
+   "max_ms": 6915
+  },
+  "claude:stop": {
+   "n": 4,
+   "median_ms": 95,
+   "max_ms": 98
+  },
+  "claude:postfail": {
+   "n": 11,
+   "median_ms": 7155,
+   "max_ms": 8542
+  },
+  "codex:start": {
+   "n": 4,
+   "median_ms": 121,
+   "max_ms": 295
+  },
+  "codex:pre": {
+   "n": 10,
+   "median_ms": 156,
+   "max_ms": 694
+  },
+  "codex:post": {
+   "n": 9,
+   "median_ms": 729,
+   "max_ms": 5342
+  },
+  "copilot:start": {
+   "n": 2,
+   "median_ms": 115,
+   "max_ms": 119
+  },
+  "copilot:pre": {
+   "n": 7,
+   "median_ms": 144,
+   "max_ms": 566
+  },
+  "copilot:post": {
+   "n": 6,
+   "median_ms": 146,
+   "max_ms": 2833
+  },
+  "opencode:start": {
+   "n": 6,
+   "median_ms": 118,
+   "max_ms": 121
+  },
+  "opencode:pre": {
+   "n": 32,
+   "median_ms": 131,
+   "max_ms": 673
+  },
+  "opencode:post": {
+   "n": 21,
+   "median_ms": 5334,
+   "max_ms": 8708
+  },
+  "capture_ms": {
+   "n": 4,
+   "median_ms": 120,
+   "max_ms": 329
+  },
+  "pre_bash_ms": {
+   "n": 7,
+   "median_ms": 111,
+   "max_ms": 162
+  },
+  "claude:prompt": {
+   "n": 2,
+   "median_ms": 137,
+   "max_ms": 152
+  },
+  "opencode:prompt": {
+   "n": 2,
+   "median_ms": 146,
+   "max_ms": 149
+  }
+ },
+ "wall_s": 882,
+ "checks": [
+  {
+   "check": "A SessionStart returns context fast (120 ms)",
+   "ok": true
+  },
+  {
+   "check": "A1 first write: suite setup + 3 lines PASS as ONE block line + one page line (<= 250 chars)",
+   "ok": true
+  },
+  {
+   "check": "A2 appended lines run (only the new ones), navigation summary",
+   "ok": true
+  },
+  {
+   "check": "A3 failing line: hidden radio -> NOT RUN NOT_VISIBLE with the label to click",
+   "ok": true
+  },
+  {
+   "check": "A4 fix -> resumes AT the fixed line in the open page (L16, L17 only)",
+   "ok": true
+  },
+  {
+   "check": "A5 element inside iframe -> NOT_FOUND with the `frame >>> selector` fix",
+   "ok": true
+  },
+  {
+   "check": "A6 async confirmation read too early -> fails at L22 with the read value",
+   "ok": true
+  },
+  {
+   "check": "A7 replacing an executed PROBE line (Get Text) by a wait + new getter -> no restart needed, continues in the page; stops at L23: actual (the real confirmation text) vs expected",
+   "ok": true
+  },
+  {
+   "check": "A7b fix the expected text -> resumes at L23, all pass",
+   "ok": true
+  },
+  {
+   "check": "A8 changed an executed earlier line -> test restarted (L10 New Page re-ran), stops at the stale greeting",
+   "ok": true
+  },
+  {
+   "check": "A9 fix the assertion -> resumes from L15 to the end",
+   "ok": true
+  },
+  {
+   "check": "A10 PreToolUse denies only the CERTAIN hard error (missing END: ModelError) with its line number and lists the uncertain ones (typo, arg count) as not blocking; file unchanged",
+   "ok": true
+  },
+  {
+   "check": "A11 deprecated `Run Keyword If` -> input rewritten to IF/END before writing; new lines run",
+   "ok": true
+  },
+  {
+   "check": "A12 Stop blocks: test changed and never ran plainly",
+   "ok": true
+  },
+  {
+   "check": "A13 Stop with stop_hook_active -> allow (no loop)",
+   "ok": true
+  },
+  {
+   "check": "A14 plain robot run (green) -> summary + verified recorded",
+   "ok": true
+  },
+  {
+   "check": "A15 Stop after the green plain run -> allow",
+   "ok": true
+  },
+  {
+   "check": "A16 whole-file write: test 1 passes, test 2 runs (fresh Test Setup page) and fails at L17: actual vs expected",
+   "ok": true
+  },
+  {
+   "check": "A17 fix -> only L17 re-runs",
+   "ok": true
+  },
+  {
+   "check": "A: no process mentions the workspace any more",
+   "ok": true
+  },
+  {
+   "check": "A: SessionEnd < 1.5 s (407 ms) and 0 orphans after it",
+   "ok": true
+  },
+  {
+   "check": "A: no generated files left in the workspace",
+   "ok": true
+  },
+  {
+   "check": "B1 failing plain run -> failure summary + live reproduction stopped at the failing line with a similar control (<= 700 chars)",
+   "ok": true
+  },
+  {
+   "check": "B2 fix the reproduced line -> resumes at L13 in the open page and passes",
+   "ok": true
+  },
+  {
+   "check": "B3 edit inside the never-run second test -> runs it from its setup (setup L4 .. L20)",
+   "ok": true
+  },
+  {
+   "check": "B4 plain run green after repair -> verified",
+   "ok": true
+  },
+  {
+   "check": "B5 Stop allows after the green run",
+   "ok": true
+  },
+  {
+   "check": "B6 edit inside a user keyword -> the first test calling it re-runs from the top",
+   "ok": true
+  },
+  {
+   "check": "B7 failure inside a user keyword -> reported on the calling line with the keyword's file:line",
+   "ok": true
+  },
+  {
+   "check": "B: no process mentions the workspace any more",
+   "ok": true
+  },
+  {
+   "check": "B: SessionEnd < 1.5 s (411 ms) and 0 orphans after it",
+   "ok": true
+  },
+  {
+   "check": "B: no generated files left in the workspace",
+   "ok": true
+  },
+  {
+   "check": "C1 API test: GET passes, wrong expected value fails at L9: actual vs expected",
+   "ok": true
+  },
+  {
+   "check": "C2 fix -> resumes at L9",
+   "ok": true
+  },
+  {
+   "check": "C3 POST with json= body appended -> PASS (returned value shown)",
+   "ok": true
+  },
+  {
+   "check": "C: no process mentions the workspace any more",
+   "ok": true
+  },
+  {
+   "check": "C: SessionEnd < 1.5 s (413 ms) and 0 orphans after it",
+   "ok": true
+  },
+  {
+   "check": "C: no generated files left in the workspace",
+   "ok": true
+  },
+  {
+   "check": "D[codex] SessionStart context (126 ms)",
+   "ok": true
+  },
+  {
+   "check": "D[codex] planted typo in a new file -> v3: allowed with a one-line 'not blocking' warning (L8 KeywordNotFound) delivered to the agent; the live run stops at L8",
+   "ok": true
+  },
+  {
+   "check": "D[codex] corrected write -> allowed, lines run live",
+   "ok": true
+  },
+  {
+   "check": "D[codex] deprecated syntax -> rewritten tool input (rewrite)",
+   "ok": true
+  },
+  {
+   "check": "D[codex]: no process mentions the workspace any more",
+   "ok": true
+  },
+  {
+   "check": "D[codex]: SessionEnd < 1.5 s (406 ms) and 0 orphans after it",
+   "ok": true
+  },
+  {
+   "check": "D[codex]: no generated files left in the workspace",
+   "ok": true
+  },
+  {
+   "check": "D[copilot] SessionStart context (111 ms)",
+   "ok": true
+  },
+  {
+   "check": "D[copilot] planted typo in a new file -> v3: allowed with a one-line 'not blocking' warning (L8 KeywordNotFound) delivered to the agent; the live run stops at L8",
+   "ok": true
+  },
+  {
+   "check": "D[copilot] corrected write -> allowed, lines run live",
+   "ok": true
+  },
+  {
+   "check": "D[copilot] deprecated syntax -> rewritten tool input (rewrite)",
+   "ok": true
+  },
+  {
+   "check": "D[copilot] sessionEnd keeps the session (it fires after every copilot run)",
+   "ok": true
+  },
+  {
+   "check": "D[copilot] agent process gone -> daemons exit by themselves (watch-pid), 0 orphans",
+   "ok": true
+  },
+  {
+   "check": "D[opencode] SessionStart context (118 ms)",
+   "ok": true
+  },
+  {
+   "check": "D[opencode] planted typo in a new file -> v3: allowed with a one-line 'not blocking' warning (L8 KeywordNotFound) delivered to the agent; the live run stops at L8",
+   "ok": true
+  },
+  {
+   "check": "D[opencode] corrected write -> allowed, lines run live",
+   "ok": true
+  },
+  {
+   "check": "D[opencode] deprecated syntax -> rewritten tool input (rewrite)",
+   "ok": true
+  },
+  {
+   "check": "D[opencode]: no process mentions the workspace any more",
+   "ok": true
+  },
+  {
+   "check": "D[opencode]: SessionEnd < 1.5 s (415 ms) and 0 orphans after it",
+   "ok": true
+  },
+  {
+   "check": "D[opencode]: no generated files left in the workspace",
+   "ok": true
+  },
+  {
+   "check": "E1 long step -> hook returns at the budget with 'still running'",
+   "ok": true
+  },
+  {
+   "check": "E2 next hook event delivers the earlier result, then runs the new line",
+   "ok": true
+  },
+  {
+   "check": "E: no process mentions the workspace any more",
+   "ok": true
+  },
+  {
+   "check": "E: SessionEnd < 1.5 s (407 ms) and 0 orphans after it",
+   "ok": true
+  },
+  {
+   "check": "E: no generated files left in the workspace",
+   "ok": true
+  },
+  {
+   "check": "F1 v3: ONE capture after the last step of the edit (not after every page-changing step): latest/{page.txt,controls.txt,aria.yaml,source.html,screenshot.jpg} + 1 history dir; the output names .rf/state/latest/ (first time) without sizes or source",
+   "ok": true
+  },
+  {
+   "check": "F2 the end-of-run capture lands on the page AFTER the timer-triggered navigation (settle at the end only) and page.txt has the visible text",
+   "ok": true
+  },
+  {
+   "check": "F3 a step that does not change the page (Fill Text) -> no new history dir (dedup)",
+   "ok": true
+  },
+  {
+   "check": "F4 bad locator on a stable page: NOT_FOUND after the SHORT timeout -> MISSING without a long re-check (< 6 s), signature inline, the keyword doc only ON DEMAND (no file yet)",
+   "ok": true
+  },
+  {
+   "check": "F4b reading .rf/docs/kw/Browser.Click.md -> PreToolUse writes it on demand before the read",
+   "ok": true
+  },
+  {
+   "check": "F5 failure output: no source inlined, <= 3 similar controls, page line",
+   "ok": true
+  },
+  {
+   "check": "F6 genuinely late element (absent, appears 4 s after the navigation, timer scheduled at load): NOT an instant MISSING -> re-check -> SLOW, the line PASSES on the re-check, no wait advice (4 s << 10 s); the page keeps the normal timeout and the origin learns ~1.5 x 4 s",
+   "ok": true
+  },
+  {
+   "check": "F7 imported library -> .rf/docs/<Name>.md + .full.md written and mentioned once",
+   "ok": true
+  },
+  {
+   "check": "F7b probe line inserted before executed lines -> run now in the current page, NO restart",
+   "ok": true
+  },
+  {
+   "check": "F7c changing an executed line restarts the test in a FRESH browser context",
+   "ok": true
+  },
+  {
+   "check": "F7d Wait For Condition keeps the normal timeout for its inner getter (not cut to 2.5 s)",
+   "ok": true
+  },
+  {
+   "check": "F8 the short timeout never leaks: the suite file has no timeout line and the plain run (normal 10 s timeout) passes with the slow element",
+   "ok": true
+  },
+  {
+   "check": "F9 capture latency < 1.5 s (median 119.5 ms, max 329)",
+   "ok": true
+  },
+  {
+   "check": "F: no process mentions the workspace any more",
+   "ok": true
+  },
+  {
+   "check": "F: SessionEnd < 1.5 s (409 ms) and 0 orphans after it",
+   "ok": true
+  },
+  {
+   "check": "F: no generated files left in the workspace",
+   "ok": true
+  },
+  {
+   "check": "G[claude] interactive REPL without piped input -> deny with the format card",
+   "ok": true
+  },
+  {
+   "check": "G[claude] unquoted heredoc whose only `$` are RF ${...} -> delimiter quoted automatically (research rule C04), the variable survives",
+   "ok": true
+  },
+  {
+   "check": "G[claude] unquoted heredoc that also uses shell $VARS -> deny",
+   "ok": true
+  },
+  {
+   "check": "G[claude] REPL command rewritten: --plain --no-history -d .rf/out 2>&1 + .exit + REPL-only short-timeout listener (nothing typed into the session)",
+   "ok": true
+  },
+  {
+   "check": "G[claude] REPL output parsed: FAIL lines, listener recheck verdict, failing keyword docs (Browser.Click), import docs, page-gone note",
+   "ok": true
+  },
+  {
+   "check": "G[claude] .save output has no timeout line",
+   "ok": true
+  },
+  {
+   "check": "G[claude] format card delivered exactly once",
+   "ok": true
+  },
+  {
+   "check": "G[claude] robot-debug: flags added, quotes stripped from .break, nothing appended (EOF = continue), `* exception` parsed with BuiltIn.Should Be Equal docs",
+   "ok": true
+  },
+  {
+   "check": "G[claude] unclosed FOR block in REPL input -> deny (an unclosed block runs nothing)",
+   "ok": true
+  },
+  {
+   "check": "G[claude] body auto-fixes: single space split (known keyword), `...` folded, bare ${x} -> Log To Console",
+   "ok": true
+  },
+  {
+   "check": "G[claude]: no process mentions the workspace any more",
+   "ok": true
+  },
+  {
+   "check": "G[claude]: SessionEnd < 1.5 s (409 ms) and 0 orphans after it",
+   "ok": true
+  },
+  {
+   "check": "G[claude]: no generated files left in the workspace",
+   "ok": true
+  },
+  {
+   "check": "G[codex] interactive REPL (agent can write stdin) -> allowed with a warning",
+   "ok": true
+  },
+  {
+   "check": "G[codex] unquoted heredoc whose only `$` are RF ${...} -> delimiter quoted automatically (research rule C04), the variable survives",
+   "ok": true
+  },
+  {
+   "check": "G[codex] unquoted heredoc that also uses shell $VARS -> deny",
+   "ok": true
+  },
+  {
+   "check": "G[codex] REPL command rewritten: --plain --no-history -d .rf/out 2>&1 + .exit + REPL-only short-timeout listener (nothing typed into the session)",
+   "ok": true
+  },
+  {
+   "check": "G[codex] REPL output parsed: FAIL lines, listener recheck verdict, failing keyword docs (Browser.Click), import docs, page-gone note",
+   "ok": true
+  },
+  {
+   "check": "G[codex] .save output has no timeout line",
+   "ok": true
+  },
+  {
+   "check": "G[codex] format card delivered exactly once",
+   "ok": true
+  },
+  {
+   "check": "G[codex]: no process mentions the workspace any more",
+   "ok": true
+  },
+  {
+   "check": "G[codex]: SessionEnd < 1.5 s (414 ms) and 0 orphans after it",
+   "ok": true
+  },
+  {
+   "check": "G[codex]: no generated files left in the workspace",
+   "ok": true
+  },
+  {
+   "check": "G[copilot] interactive REPL (agent can write stdin) -> allowed with a warning",
+   "ok": true
+  },
+  {
+   "check": "G[copilot] unquoted heredoc whose only `$` are RF ${...} -> delimiter quoted automatically (research rule C04), the variable survives",
+   "ok": true
+  },
+  {
+   "check": "G[copilot] unquoted heredoc that also uses shell $VARS -> deny",
+   "ok": true
+  },
+  {
+   "check": "G[copilot] REPL command rewritten: --plain --no-history -d .rf/out 2>&1 + .exit + REPL-only short-timeout listener (nothing typed into the session)",
+   "ok": true
+  },
+  {
+   "check": "G[copilot] REPL output parsed: FAIL lines, listener recheck verdict, failing keyword docs (Browser.Click), import docs, page-gone note",
+   "ok": true
+  },
+  {
+   "check": "G[copilot] .save output has no timeout line",
+   "ok": true
+  },
+  {
+   "check": "G[copilot] format card delivered exactly once",
+   "ok": true
+  },
+  {
+   "check": "G[copilot]: no process mentions the workspace any more",
+   "ok": true
+  },
+  {
+   "check": "G[copilot]: SessionEnd < 1.5 s (97 ms) and 0 orphans after it",
+   "ok": true
+  },
+  {
+   "check": "G[copilot]: no generated files left in the workspace",
+   "ok": true
+  },
+  {
+   "check": "G[opencode] interactive REPL without piped input -> deny with the format card",
+   "ok": true
+  },
+  {
+   "check": "G[opencode] unquoted heredoc whose only `$` are RF ${...} -> delimiter quoted automatically (research rule C04), the variable survives",
+   "ok": true
+  },
+  {
+   "check": "G[opencode] unquoted heredoc that also uses shell $VARS -> deny",
+   "ok": true
+  },
+  {
+   "check": "G[opencode] REPL command rewritten: --plain --no-history -d .rf/out 2>&1 + .exit + REPL-only short-timeout listener (nothing typed into the session)",
+   "ok": true
+  },
+  {
+   "check": "G[opencode] REPL output parsed: FAIL lines, listener recheck verdict, failing keyword docs (Browser.Click), import docs, page-gone note",
+   "ok": true
+  },
+  {
+   "check": "G[opencode] .save output has no timeout line",
+   "ok": true
+  },
+  {
+   "check": "G[opencode] format card delivered exactly once",
+   "ok": true
+  },
+  {
+   "check": "G[opencode]: no process mentions the workspace any more",
+   "ok": true
+  },
+  {
+   "check": "G[opencode]: SessionEnd < 1.5 s (418 ms) and 0 orphans after it",
+   "ok": true
+  },
+  {
+   "check": "G[opencode]: no generated files left in the workspace",
+   "ok": true
+  },
+  {
+   "check": "H[claude] UserPromptSubmit -> project context (libraries + versions, suites) (152 ms)",
+   "ok": true
+  },
+  {
+   "check": "H[claude] prompt context only once",
+   "ok": true
+  },
+  {
+   "check": "H[claude] pip install -> deny",
+   "ok": true
+  },
+  {
+   "check": "H[claude] third install attempt -> replaced by an echo (no deny loop), nothing installed",
+   "ok": true
+  },
+  {
+   "check": "H[claude] robot -P -> v3: allowed with a one-line warning naming the ${CURDIR} fix",
+   "ok": true
+  },
+  {
+   "check": "H[claude] PYTHONPATH=... robot -> v3: allowed with the warning",
+   "ok": true
+  },
+  {
+   "check": "H[claude] Read of a 300 KB output.xml -> v3: allowed with a one-line warning (robotcode results / Grep)",
+   "ok": true
+  },
+  {
+   "check": "H[claude] deleting a test of the existing suite -> deny",
+   "ok": true
+  },
+  {
+   "check": "H[claude] wrapping an assertion in Run Keyword And Ignore Error -> deny",
+   "ok": true
+  },
+  {
+   "check": "H[claude] removing an assertion (uncertain: regex count) -> v3: allowed at once with a one-line warning",
+   "ok": true
+  },
+  {
+   "check": "H[claude] suite_info counts tests/assertions of the restored suite",
+   "ok": true
+  },
+  {
+   "check": "H[claude] a real repair edit (selector) -> allowed",
+   "ok": true
+  },
+  {
+   "check": "H[claude] a new Sleep in a Browser suite -> v3: allowed with a warning naming the condition wait",
+   "ok": true
+  },
+  {
+   "check": "H[claude] keyword defined without a *** Keywords *** header -> v3: allowed; the warning names that root cause",
+   "ok": true
+  },
+  {
+   "check": "H[claude] the same plain-run failure again and again (the -P / PYTHONPATH runs count too) -> exactly ONE specific LOOP hint (<= 200 chars, selector -> controls.txt), not repeated",
+   "ok": true
+  },
+  {
+   "check": "H[claude]: no process mentions the workspace any more",
+   "ok": true
+  },
+  {
+   "check": "H[claude]: SessionEnd < 1.5 s (408 ms) and 0 orphans after it",
+   "ok": true
+  },
+  {
+   "check": "H[claude]: no generated files left in the workspace",
+   "ok": true
+  },
+  {
+   "check": "H[opencode] UserPromptSubmit -> project context (libraries + versions, suites) (149 ms)",
+   "ok": true
+  },
+  {
+   "check": "H[opencode] prompt context only once",
+   "ok": true
+  },
+  {
+   "check": "H[opencode] pip install -> deny",
+   "ok": true
+  },
+  {
+   "check": "H[opencode] third install attempt -> replaced by an echo (no deny loop), nothing installed",
+   "ok": true
+  },
+  {
+   "check": "H[opencode] robot -P -> v3: allowed with a one-line warning naming the ${CURDIR} fix",
+   "ok": true
+  },
+  {
+   "check": "H[opencode] PYTHONPATH=... robot -> v3: allowed with the warning",
+   "ok": true
+  },
+  {
+   "check": "H[opencode] Read of a 300 KB output.xml -> v3: allowed with a one-line warning (robotcode results / Grep)",
+   "ok": true
+  },
+  {
+   "check": "H[opencode] deleting a test of the existing suite -> deny",
+   "ok": true
+  },
+  {
+   "check": "H[opencode] wrapping an assertion in Run Keyword And Ignore Error -> deny",
+   "ok": true
+  },
+  {
+   "check": "H[opencode] removing an assertion (uncertain: regex count) -> v3: allowed at once with a one-line warning",
+   "ok": true
+  },
+  {
+   "check": "H[opencode] suite_info counts tests/assertions of the restored suite",
+   "ok": true
+  },
+  {
+   "check": "H[opencode] a real repair edit (selector) -> allowed",
+   "ok": true
+  },
+  {
+   "check": "H[opencode] a new Sleep in a Browser suite -> v3: allowed with a warning naming the condition wait",
+   "ok": true
+  },
+  {
+   "check": "H[opencode] keyword defined without a *** Keywords *** header -> v3: allowed; the warning names that root cause",
+   "ok": true
+  },
+  {
+   "check": "H[opencode] reading a screenshot (text-only model) -> v3: allowed with a warning pointing at page.txt / controls.txt",
+   "ok": true
+  },
+  {
+   "check": "H[opencode] the same plain-run failure again and again (the -P / PYTHONPATH runs count too) -> exactly ONE specific LOOP hint (<= 200 chars, selector -> controls.txt), not repeated",
+   "ok": true
+  },
+  {
+   "check": "H[opencode] every PostToolUse output <= 600 chars (max 599)",
+   "ok": true
+  },
+  {
+   "check": "H[opencode]: no process mentions the workspace any more",
+   "ok": true
+  },
+  {
+   "check": "H[opencode]: SessionEnd < 1.5 s (405 ms) and 0 orphans after it",
+   "ok": true
+  },
+  {
+   "check": "H[opencode]: no generated files left in the workspace",
+   "ok": true
+  },
+  {
+   "check": "I0 first write passes: one block line + page line (<= 250 chars), exactly one capture (end of run)",
+   "ok": true
+  },
+  {
+   "check": "I1 click on a radio covered by a styled <span> -> verdict COVERED with the input's label (`label[for=\"gender-female\"]`), NO re-check / SLOW, NEXT names the label",
+   "ok": true
+  },
+  {
+   "check": "I2 fix with the label -> PASS",
+   "ok": true
+  },
+  {
+   "check": "I3 covered checkbox below the fold -> Playwright log classified BEFORE any re-check: COVERED with the verbatim '... intercepts pointer events' fragment + label suggestion, no SLOW / re-check",
+   "ok": true
+  },
+  {
+   "check": "I4 fix with the label -> PASS",
+   "ok": true
+  },
+  {
+   "check": "I5 element absent then present after ~4 s -> SLOW only now (absent -> present), the line PASSES on the re-check; the page keeps the normal timeout, the origin learns ~1.5 x 4 s (logged as an adaptive change)",
+   "ok": true
+  },
+  {
+   "check": "I6 value failure -> inline actual vs expected + 'expected text is NOT on the page', no timing advice",
+   "ok": true
+  },
+  {
+   "check": "I7 page.txt holds the visible page text (<= 4 KB)",
+   "ok": true
+  },
+  {
+   "check": "I8 the same value check failing again and again -> exactly ONE loop hint (<= 200 chars, actual vs expected, no wait advice), not repeated",
+   "ok": true
+  },
+  {
+   "check": "I9 racy step (result set 1.6 s after the click, assertion retries ~1 s): the live run FAILS like the plain run would (no hidden settle/capture between steps; one capture = the failure)",
+   "ok": true
+  },
+  {
+   "check": "I9b the same racy steps fail the plain run too (parity) and the live reproduction reproduces it",
+   "ok": true
+  },
+  {
+   "check": "I9c the condition wait fixes it live",
+   "ok": true
+  },
+  {
+   "check": "I10 missing selector on a quiet page -> MISSING right after the probe (origin short 6.0 s), no re-check wait (hook 6193 ms < probe + 2.5 s; logged as an instant MISSING)",
+   "ok": true
+  },
+  {
+   "check": "I11 no keyword-doc files written by failures (on demand only); the Click signature appeared once",
+   "ok": true
+  },
+  {
+   "check": "I12 Claude budgets: every PostToolUse output within 250 (pass) / 700 (fail) chars (max 484)",
+   "ok": true
+  },
+  {
+   "check": "I13 plain run fails but the live reproduction PASSES -> 'NOT reproduced ... timing race' (not 'stopped at its first failure'); the next failing plain run is not reproduced again",
+   "ok": true
+  },
+  {
+   "check": "I14 unknown keyword (uncertain) -> allowed + one-line warning, the live run reports RF's own error",
+   "ok": true
+  },
+  {
+   "check": "I: no process mentions the workspace any more",
+   "ok": true
+  },
+  {
+   "check": "I: SessionEnd < 1.5 s (406 ms) and 0 orphans after it",
+   "ok": true
+  },
+  {
+   "check": "I: no generated files left in the workspace",
+   "ok": true
+  },
+  {
+   "check": "J[codex] pass output <= 250 (237), failure output <= 700 (450) with verdict + NEXT",
+   "ok": true
+  },
+  {
+   "check": "J[codex]: no process mentions the workspace any more",
+   "ok": true
+  },
+  {
+   "check": "J[codex]: SessionEnd < 1.5 s (413 ms) and 0 orphans after it",
+   "ok": true
+  },
+  {
+   "check": "J[codex]: no generated files left in the workspace",
+   "ok": true
+  },
+  {
+   "check": "J[opencode] pass output <= 250 (237), failure output <= 600 (450) with verdict + NEXT as the FIRST line",
+   "ok": true
+  },
+  {
+   "check": "J[opencode]: no process mentions the workspace any more",
+   "ok": true
+  },
+  {
+   "check": "J[opencode]: SessionEnd < 1.5 s (420 ms) and 0 orphans after it",
+   "ok": true
+  },
+  {
+   "check": "J[opencode]: no generated files left in the workspace",
+   "ok": true
+  },
+  {
+   "check": "K0 model id -> profile: anthropic/claude/GPT/codex -> lean; MiniMax/DeepSeek/Qwen/GLM/Gemini/Kimi/unknown -> rich; no model -> None",
+   "ok": true
+  },
+  {
+   "check": "K0b detection: RFH31_PROFILE wins over the model; agent defaults claude/codex/copilot lean, opencode rich; OpenCode {providerID, modelID} payload; ANTHROPIC_MODEL (OpenRouter routing); Claude transcript model",
+   "ok": true
+  },
+  {
+   "check": "K1 rich success after navigation: block line + page line + a compact controls list (<= 8 controls, `kind \"name\" => selector`, no hrefs), <= 1,200 chars",
+   "ok": true
+  },
+  {
+   "check": "K2 rich failure: failing line, error, verdict MISSING, keyword signature + first doc sentence, failure-type hint, nearest controls (<= 8), NEXT, <= 1,200 chars",
+   "ok": true
+  },
+  {
+   "check": "K3 the same keyword fails again -> signature + first sentence and the hint AGAIN (lean: once per session)",
+   "ok": true
+  },
+  {
+   "check": "K4 navigation to the next page -> a new controls list for that page (form fields first, <= 8)",
+   "ok": true
+  },
+  {
+   "check": "K5 rich plain robot run failure: keyword signature + first sentence and the failure-type hint on EVERY run",
+   "ok": true
+  },
+  {
+   "check": "K5b rich reproduction on a page with more controls: word matches first, then controls the keyword acts on (2..8 nearest controls), <= 1,200 chars",
+   "ok": true
+  },
+  {
+   "check": "K6 hook log: profile=rich from ANTHROPIC_MODEL on every logged event, model id recorded",
+   "ok": true
+  },
+  {
+   "check": "K[rich]: no process mentions the workspace any more",
+   "ok": true
+  },
+  {
+   "check": "K[rich]: SessionEnd < 1.5 s (417 ms) and 0 orphans after it",
+   "ok": true
+  },
+  {
+   "check": "K[rich]: no generated files left in the workspace",
+   "ok": true
+  },
+  {
+   "check": "K7 lean (claude-haiku-5-5 from the transcript): v3 output unchanged -- success <= 250 without a controls list, failure <= 700 without the rich hint; hook log profile=lean src=model:transcript",
+   "ok": true
+  },
+  {
+   "check": "K[lean]: no process mentions the workspace any more",
+   "ok": true
+  },
+  {
+   "check": "K[lean]: SessionEnd < 1.5 s (407 ms) and 0 orphans after it",
+   "ok": true
+  },
+  {
+   "check": "K[lean]: no generated files left in the workspace",
+   "ok": true
+  },
+  {
+   "check": "K8 OpenCode + MiniMax (plugin payload model) -> rich: controls list on success; failure with the guidance FIRST (hint, NEXT), verdict + signature, <= 1,200 chars; log profile=rich src=model:payload",
+   "ok": true
+  },
+  {
+   "check": "K[opencode]: no process mentions the workspace any more",
+   "ok": true
+  },
+  {
+   "check": "K[opencode]: SessionEnd < 1.5 s (418 ms) and 0 orphans after it",
+   "ok": true
+  },
+  {
+   "check": "K[opencode]: no generated files left in the workspace",
+   "ok": true
+  },
+  {
+   "check": "K9 RFH31_PROFILE=lean wins over the MiniMax model: OpenCode lean budgets 250/600, NEXT first; log src=env",
+   "ok": true
+  },
+  {
+   "check": "K[opencode:lean]: no process mentions the workspace any more",
+   "ok": true
+  },
+  {
+   "check": "K[opencode:lean]: SessionEnd < 1.5 s (413 ms) and 0 orphans after it",
+   "ok": true
+  },
+  {
+   "check": "K[opencode:lean]: no generated files left in the workspace",
+   "ok": true
+  },
+  {
+   "check": "K10 Codex without a model id -> agent default lean (log src=default), v3 success budget",
+   "ok": true
+  },
+  {
+   "check": "K[codex]: no process mentions the workspace any more",
+   "ok": true
+  },
+  {
+   "check": "K[codex]: SessionEnd < 1.5 s (403 ms) and 0 orphans after it",
+   "ok": true
+  },
+  {
+   "check": "K[codex]: no generated files left in the workspace",
+   "ok": true
+  }
+ ]
+}

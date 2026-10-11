@@ -1,0 +1,1189 @@
+{
+ "round": "04-hooks-matrix-and-hooks-ab",
+ "asset_format": "tar.zst",
+ "transcript_dirs": [
+  "transcripts_live_hooks"
+ ],
+ "files": 93,
+ "status_counts": {
+  "excluded:aborted": 3,
+  "scored": 90
+ },
+ "scrub_substitutions": {
+  "email": 374,
+  "home_path": 16675,
+  "oauth_field": 1
+ },
+ "scrub_py_sha256": "4e9a9f3c9ba610bdd294ab4d6282da39075e5cc4130e867dc7aa93abe30f8bb6",
+ "entries": [
+  {
+   "file": "transcripts_live_hooks/claude/carconfig_order-hookpkg-rep1-0e0297.jsonl",
+   "transcript": "transcripts_live_hooks/claude/carconfig_order-hookpkg-rep1-0e0297.jsonl.gz",
+   "sha256": "9217786dd3ab7ee98dd68f9a0de6e91e87d6cf0f72f10f53282c562b4d5fbf10",
+   "bytes": 5127939,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|hookpkg|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 24,
+    "home_path": 222
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/carconfig_order-hookpkg-rep2-58e4f3.jsonl",
+   "transcript": "transcripts_live_hooks/claude/carconfig_order-hookpkg-rep2-58e4f3.jsonl.gz",
+   "sha256": "f9c42d4a27161bc5187654256ef5ffc3ffecbfe089388b37a3cd6630560d8136",
+   "bytes": 5436224,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|hookpkg|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 8,
+    "home_path": 223
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/carconfig_order-hookpkg-rep3-9ad495.jsonl",
+   "transcript": "transcripts_live_hooks/claude/carconfig_order-hookpkg-rep3-9ad495.jsonl.gz",
+   "sha256": "14e24267f032a5109f12c7cf6e583a5d38c899f3328c5b56692f6d65ff3f2733",
+   "bytes": 664415,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|hookpkg|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 11,
+    "home_path": 226
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/carconfig_order-skillpkg-rep1-c20717.jsonl",
+   "transcript": "transcripts_live_hooks/claude/carconfig_order-skillpkg-rep1-c20717.jsonl.gz",
+   "sha256": "a8558cd4519e49d52d6b9deba5c2b049aaf26e4e4fea412c2605d72377ecf692",
+   "bytes": 611902,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|skillpkg|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 211
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/carconfig_order-skillpkg-rep2-906f83.jsonl",
+   "transcript": "transcripts_live_hooks/claude/carconfig_order-skillpkg-rep2-906f83.jsonl.gz",
+   "sha256": "876209429687aff45bb834262b48e72dd6be9a181817087f11617364d90a7465",
+   "bytes": 655940,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|skillpkg|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 8,
+    "home_path": 274
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/carconfig_order-skillpkg-rep3-0fb82b.jsonl",
+   "transcript": "transcripts_live_hooks/claude/carconfig_order-skillpkg-rep3-0fb82b.jsonl.gz",
+   "sha256": "357f8b0d80e33485cf031967f63b85918a483b04e06784a05dd3b448b81328ce",
+   "bytes": 582204,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|skillpkg|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 12,
+    "home_path": 285
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/demoshop_debug-hookpkg-rep1-228a92.jsonl",
+   "transcript": "transcripts_live_hooks/claude/demoshop_debug-hookpkg-rep1-228a92.jsonl.gz",
+   "sha256": "bc681c6fcd0223e37f5769ca85f1b7d59f59889d4bbc4102d2ef5ffbe92a11a4",
+   "bytes": 1584365,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|hookpkg|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 99
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/demoshop_debug-hookpkg-rep2-2d0e87.jsonl",
+   "transcript": "transcripts_live_hooks/claude/demoshop_debug-hookpkg-rep2-2d0e87.jsonl.gz",
+   "sha256": "87ff28bb76affe6a3cff1aaf2fca3f6f578b4f1b614a59cfc6485a8b3f862e69",
+   "bytes": 338162,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|hookpkg|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 104
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/demoshop_debug-hookpkg-rep3-8d67c1.jsonl",
+   "transcript": "transcripts_live_hooks/claude/demoshop_debug-hookpkg-rep3-8d67c1.jsonl.gz",
+   "sha256": "e99930dea82a8ef0ed3bb06536d187148b4f29c3ebe68f7dd895667b321d36f4",
+   "bytes": 1627788,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|hookpkg|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "email": 8,
+    "home_path": 106
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/demoshop_debug-skillpkg-rep1-aa0edf.jsonl",
+   "transcript": "transcripts_live_hooks/claude/demoshop_debug-skillpkg-rep1-aa0edf.jsonl.gz",
+   "sha256": "3ab6409828200dbd78d4d55c5566b1e0a187474c0f3faf3d1729cda186c6d843",
+   "bytes": 709341,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|skillpkg|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 366
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/demoshop_debug-skillpkg-rep2-1404ea.jsonl",
+   "transcript": "transcripts_live_hooks/claude/demoshop_debug-skillpkg-rep2-1404ea.jsonl.gz",
+   "sha256": "c191a43adb08eac8e1006f49e28c79b59984cf4b11310f042be6f91e74d494ca",
+   "bytes": 521416,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|skillpkg|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 239
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/demoshop_debug-skillpkg-rep3-3413e6.jsonl",
+   "transcript": "transcripts_live_hooks/claude/demoshop_debug-skillpkg-rep3-3413e6.jsonl.gz",
+   "sha256": "ea8c95df0ae5753206798d45c7687d458e8713f4cc8916e4abca0ea9afbd8530",
+   "bytes": 436525,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|skillpkg|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 189
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/demoshop_order-hookpkg-rep1-616173.jsonl",
+   "transcript": "transcripts_live_hooks/claude/demoshop_order-hookpkg-rep1-616173.jsonl.gz",
+   "sha256": "ebcbed5183f17062c0c1b098a41c7a3ec166fd439efec28d6e51a872ebf86a39",
+   "bytes": 4241317,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|hookpkg|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 14,
+    "home_path": 232
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/demoshop_order-hookpkg-rep2-9c04b6.jsonl",
+   "transcript": "transcripts_live_hooks/claude/demoshop_order-hookpkg-rep2-9c04b6.jsonl.gz",
+   "sha256": "df39254673355510fcf8d88997dfd4491a218dd2721537f77effe606e6c91025",
+   "bytes": 3509443,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|hookpkg|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 191
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/demoshop_order-hookpkg-rep3-dbc63a.jsonl",
+   "transcript": "transcripts_live_hooks/claude/demoshop_order-hookpkg-rep3-dbc63a.jsonl.gz",
+   "sha256": "a3bcfc2c8924b795c74eb60b659675023db57afe36ae5694f576143b2f2813fe",
+   "bytes": 3372268,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|hookpkg|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 12,
+    "home_path": 219
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/demoshop_order-skillpkg-rep1-095fde.jsonl",
+   "transcript": "transcripts_live_hooks/claude/demoshop_order-skillpkg-rep1-095fde.jsonl.gz",
+   "sha256": "4b6d343dd082156f60c3510d356b1eaa1e73f31eab12c4a9019116388e639577",
+   "bytes": 499889,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|skillpkg|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 12,
+    "home_path": 210
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/demoshop_order-skillpkg-rep2-bb46b4.jsonl",
+   "transcript": "transcripts_live_hooks/claude/demoshop_order-skillpkg-rep2-bb46b4.jsonl.gz",
+   "sha256": "a5eb5ab986b7dc4275b625bfd9e9ab4db504c236343d6df7204f74fdd515b709",
+   "bytes": 458842,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|skillpkg|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 186
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/demoshop_order-skillpkg-rep3-ff906e.jsonl",
+   "transcript": "transcripts_live_hooks/claude/demoshop_order-skillpkg-rep3-ff906e.jsonl.gz",
+   "sha256": "3593bb463c7c119b39ffe60ab1dba05a6a40777cef79f4979936ac5535f10bb8",
+   "bytes": 589306,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|skillpkg|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 10,
+    "home_path": 248
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/tricentis_debug-hookpkg-rep1-80f44e.jsonl",
+   "transcript": "transcripts_live_hooks/claude/tricentis_debug-hookpkg-rep1-80f44e.jsonl.gz",
+   "sha256": "bc5c8ae484621459b72f9378a53d08d97170dde1f920f574bb0856d53277f4bf",
+   "bytes": 1733475,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|hookpkg|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 252
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/tricentis_debug-hookpkg-rep2-a052ff.jsonl",
+   "transcript": "transcripts_live_hooks/claude/tricentis_debug-hookpkg-rep2-a052ff.jsonl.gz",
+   "sha256": "b0e891af24cbdf68dd43f8eb37d497c373f9559d27d6ebbccba29fd096f30a71",
+   "bytes": 794334,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|hookpkg|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 121
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/tricentis_debug-hookpkg-rep3-f130d5.jsonl",
+   "transcript": "transcripts_live_hooks/claude/tricentis_debug-hookpkg-rep3-f130d5.jsonl.gz",
+   "sha256": "ab79f88092c940ff00a0833a33e37d8346b20a52f235cb56e39b5c5b7d327a79",
+   "bytes": 407611,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|hookpkg|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 91
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/tricentis_debug-skillpkg-rep1-d2c0b5.jsonl",
+   "transcript": "transcripts_live_hooks/claude/tricentis_debug-skillpkg-rep1-d2c0b5.jsonl.gz",
+   "sha256": "23aa9cfefd28c60d0b0e93746c0527245fa28b0a27c50fcd1f428a9db7a8d5c6",
+   "bytes": 392629,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|skillpkg|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 156
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/tricentis_debug-skillpkg-rep2-5462f3.jsonl",
+   "transcript": "transcripts_live_hooks/claude/tricentis_debug-skillpkg-rep2-5462f3.jsonl.gz",
+   "sha256": "7eb906583dddcd6f40e0d01f56a016c3eb4b32cd7aa35db00f3c9517cb834b8c",
+   "bytes": 603268,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|skillpkg|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 226
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/tricentis_debug-skillpkg-rep3-5733ae.jsonl",
+   "transcript": "transcripts_live_hooks/claude/tricentis_debug-skillpkg-rep3-5733ae.jsonl.gz",
+   "sha256": "f945cd0fd8d0ecde69f45b8dfe2aae2c7a0d2395f662a1de26902267e94cbcd3",
+   "bytes": 734225,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|skillpkg|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 263
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/tricentis_debug-skillpkg-rep3-7873c7.jsonl",
+   "transcript": "transcripts_live_hooks/claude/tricentis_debug-skillpkg-rep3-7873c7.jsonl.gz",
+   "sha256": "009c8ac2c408d4a9ce72aac6e52f1c3695b0a347b39ebf64159ce11cd97a6c1e",
+   "bytes": 61462,
+   "results_file": "excluded/excluded_aborted.jsonl",
+   "key": "claude|skillpkg|tricentis_debug|3",
+   "status": "excluded:aborted",
+   "scrub": {
+    "home_path": 13
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/tricentis_quote-hookpkg-rep1-0f3cc2.jsonl",
+   "transcript": "transcripts_live_hooks/claude/tricentis_quote-hookpkg-rep1-0f3cc2.jsonl.gz",
+   "sha256": "24b8be9befccafed4653f2c534faeeaf29d6df305a05233e059883ac09107806",
+   "bytes": 417223,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|hookpkg|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 150
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/tricentis_quote-hookpkg-rep2-1d7fa8.jsonl",
+   "transcript": "transcripts_live_hooks/claude/tricentis_quote-hookpkg-rep2-1d7fa8.jsonl.gz",
+   "sha256": "4df017a4a75cb2e2e58bce2859fad8c31aacd888a5b29e26131d5f98a7852310",
+   "bytes": 628455,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|hookpkg|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 195
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/tricentis_quote-hookpkg-rep3-05ed61.jsonl",
+   "transcript": "transcripts_live_hooks/claude/tricentis_quote-hookpkg-rep3-05ed61.jsonl.gz",
+   "sha256": "c1ef771e286865c2c4205eaaf492d9fcfa0655881b650f7e7b8e482612a287fa",
+   "bytes": 945816,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|hookpkg|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 354
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/tricentis_quote-skillpkg-rep1-8d6f3d.jsonl",
+   "transcript": "transcripts_live_hooks/claude/tricentis_quote-skillpkg-rep1-8d6f3d.jsonl.gz",
+   "sha256": "7a6925840931689ad0d14472bd3cf12135f9f5652673922ad5d8e49baa204076",
+   "bytes": 413629,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|skillpkg|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 152
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/tricentis_quote-skillpkg-rep2-e04e85.jsonl",
+   "transcript": "transcripts_live_hooks/claude/tricentis_quote-skillpkg-rep2-e04e85.jsonl.gz",
+   "sha256": "b62b126c7036c0c81b05a67d572a0e121dfdd30a86992c914036a1882dd9028f",
+   "bytes": 501327,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|skillpkg|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 200
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/claude/tricentis_quote-skillpkg-rep3-8f7504.jsonl",
+   "transcript": "transcripts_live_hooks/claude/tricentis_quote-skillpkg-rep3-8f7504.jsonl.gz",
+   "sha256": "a5b0b31afff9ce11bd4c2a55a3284cadb9dc442b323eeb4f71abcbb6088b49ea",
+   "bytes": 538199,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "claude|skillpkg|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 232
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/carconfig_order-hookpkg-rep1-9f508a.jsonl",
+   "transcript": "transcripts_live_hooks/codex/carconfig_order-hookpkg-rep1-9f508a.jsonl.gz",
+   "sha256": "3d1b143115ba8cc69e72cd9e4f7130892c64a9c6e94c53bceeacefab9e6a5526",
+   "bytes": 176495,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|hookpkg|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 5,
+    "home_path": 53
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/carconfig_order-hookpkg-rep2-37dbd8.jsonl",
+   "transcript": "transcripts_live_hooks/codex/carconfig_order-hookpkg-rep2-37dbd8.jsonl.gz",
+   "sha256": "631044d3c03a11e9291b5e645909b1b26db74f3e7a91d466d1c9d4a2f72b6c30",
+   "bytes": 169407,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|hookpkg|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 9,
+    "home_path": 40
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/carconfig_order-hookpkg-rep3-08fef4.jsonl",
+   "transcript": "transcripts_live_hooks/codex/carconfig_order-hookpkg-rep3-08fef4.jsonl.gz",
+   "sha256": "8580542c0db0a5e5535483e2b2c21ca0e64ac78a1e94076deab4484659e621a0",
+   "bytes": 147314,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|hookpkg|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 7,
+    "home_path": 62
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/carconfig_order-skillpkg-rep1-3ea342.jsonl",
+   "transcript": "transcripts_live_hooks/codex/carconfig_order-skillpkg-rep1-3ea342.jsonl.gz",
+   "sha256": "6ca157d66f8a203c28bcdee1bdb96651b09867d223d4874dd705d176374d41c9",
+   "bytes": 90737,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|skillpkg|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 108
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/carconfig_order-skillpkg-rep2-e44a5a.jsonl",
+   "transcript": "transcripts_live_hooks/codex/carconfig_order-skillpkg-rep2-e44a5a.jsonl.gz",
+   "sha256": "e773f01a60274e0d77e5d5c1eaedac86a74305844c2129b1a416ea5fe651989b",
+   "bytes": 68519,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|skillpkg|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 3,
+    "home_path": 23
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/carconfig_order-skillpkg-rep3-ff9020.jsonl",
+   "transcript": "transcripts_live_hooks/codex/carconfig_order-skillpkg-rep3-ff9020.jsonl.gz",
+   "sha256": "ba0c4e8b1abfa25bead976d264a95a1db2919b4abe6714947aa80394702e346a",
+   "bytes": 125069,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|skillpkg|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 7,
+    "home_path": 47
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/demoshop_debug-hookpkg-rep1-6aea3c.jsonl",
+   "transcript": "transcripts_live_hooks/codex/demoshop_debug-hookpkg-rep1-6aea3c.jsonl.gz",
+   "sha256": "81745066cd627bec51e44514aceacbbef129559eacb776e51c022b3d2228cfe6",
+   "bytes": 79419,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|hookpkg|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 1,
+    "home_path": 62
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/demoshop_debug-hookpkg-rep2-60b2bf.jsonl",
+   "transcript": "transcripts_live_hooks/codex/demoshop_debug-hookpkg-rep2-60b2bf.jsonl.gz",
+   "sha256": "043cdec2aab1159b422852b5aa4db9109d40a7238d7e6d9cd8c449a4e2d1e43f",
+   "bytes": 230849,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|hookpkg|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "email": 3,
+    "home_path": 94,
+    "oauth_field": 1
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/demoshop_debug-hookpkg-rep3-9e81a7.jsonl",
+   "transcript": "transcripts_live_hooks/codex/demoshop_debug-hookpkg-rep3-9e81a7.jsonl.gz",
+   "sha256": "161b190afa9d48a15adfc982ffd4139502bb269c436ee973493f3bb7b4c6cb9a",
+   "bytes": 102466,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|hookpkg|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 60
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/demoshop_debug-skillpkg-rep1-da905a.jsonl",
+   "transcript": "transcripts_live_hooks/codex/demoshop_debug-skillpkg-rep1-da905a.jsonl.gz",
+   "sha256": "853e1c1b21ab1e55820ff494f10ac62fe389a77276275a809d10029a177d4718",
+   "bytes": 119716,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|skillpkg|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 47
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/demoshop_debug-skillpkg-rep2-8f1bb0.jsonl",
+   "transcript": "transcripts_live_hooks/codex/demoshop_debug-skillpkg-rep2-8f1bb0.jsonl.gz",
+   "sha256": "5503c85c44fb9e20eb1b2e755c03520fa921d6d4d3d1d85ed9aeeddf5bd4aab9",
+   "bytes": 79898,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|skillpkg|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 39
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/demoshop_debug-skillpkg-rep3-4529f9.jsonl",
+   "transcript": "transcripts_live_hooks/codex/demoshop_debug-skillpkg-rep3-4529f9.jsonl.gz",
+   "sha256": "59c375e2a67f3db5923552f67bef6ed51b72b4f5228efde2bfb7220a7d60a610",
+   "bytes": 73317,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|skillpkg|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "email": 3,
+    "home_path": 35
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/demoshop_order-hookpkg-rep1-2d0e51.jsonl",
+   "transcript": "transcripts_live_hooks/codex/demoshop_order-hookpkg-rep1-2d0e51.jsonl.gz",
+   "sha256": "cc2c8986f73e867433598f781fe1b1f4001fda833e04f432534a33cb589eef2f",
+   "bytes": 104745,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|hookpkg|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 8,
+    "home_path": 44
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/demoshop_order-hookpkg-rep2-e1496c.jsonl",
+   "transcript": "transcripts_live_hooks/codex/demoshop_order-hookpkg-rep2-e1496c.jsonl.gz",
+   "sha256": "f7f43c2f45e8f85d35633f66b875b761bcce3616ca7115d0e1d8c269c45ece15",
+   "bytes": 115784,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|hookpkg|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 10,
+    "home_path": 70
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/demoshop_order-hookpkg-rep3-d6c129.jsonl",
+   "transcript": "transcripts_live_hooks/codex/demoshop_order-hookpkg-rep3-d6c129.jsonl.gz",
+   "sha256": "4842701e16f7c2cb1c5589857d4ae280d68bbb9ea62e31a2a4983ede060dc11c",
+   "bytes": 120699,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|hookpkg|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 11,
+    "home_path": 53
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/demoshop_order-skillpkg-rep1-eba473.jsonl",
+   "transcript": "transcripts_live_hooks/codex/demoshop_order-skillpkg-rep1-eba473.jsonl.gz",
+   "sha256": "10a36c4307ac107e1db4b2604df2268e87b2f7eb28c89e6990657f58d2219f8a",
+   "bytes": 87108,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|skillpkg|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 25
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/demoshop_order-skillpkg-rep2-459d9a.jsonl",
+   "transcript": "transcripts_live_hooks/codex/demoshop_order-skillpkg-rep2-459d9a.jsonl.gz",
+   "sha256": "e06e85b0e9f0e4d74c75ffd4216dc8722be2400479120fd2c6c25897bfc0879a",
+   "bytes": 113476,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|skillpkg|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 3,
+    "home_path": 35
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/demoshop_order-skillpkg-rep3-90191f.jsonl",
+   "transcript": "transcripts_live_hooks/codex/demoshop_order-skillpkg-rep3-90191f.jsonl.gz",
+   "sha256": "4e95608eca3823d9c2ed9cca619c0cb59bf3b14af88f0c3a2f52ae494ec1e150",
+   "bytes": 89305,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|skillpkg|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 4,
+    "home_path": 24
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/tricentis_debug-hookpkg-rep1-dc60bf.jsonl",
+   "transcript": "transcripts_live_hooks/codex/tricentis_debug-hookpkg-rep1-dc60bf.jsonl.gz",
+   "sha256": "8780e72df64692eef10963a5a1c60ff78ece39d13073ea92246662b7268d81ee",
+   "bytes": 75928,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|hookpkg|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 73
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/tricentis_debug-hookpkg-rep2-05f9e9.jsonl",
+   "transcript": "transcripts_live_hooks/codex/tricentis_debug-hookpkg-rep2-05f9e9.jsonl.gz",
+   "sha256": "f770dc0736bffda2b8e5fd57764e7667f58697427e822be347b1185bfd3999b2",
+   "bytes": 104056,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|hookpkg|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 63
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/tricentis_debug-hookpkg-rep3-56e13d.jsonl",
+   "transcript": "transcripts_live_hooks/codex/tricentis_debug-hookpkg-rep3-56e13d.jsonl.gz",
+   "sha256": "7804b77d23f7f2922401d9e64d5f43e5937375a28ad1e511b94738906ecf824e",
+   "bytes": 135604,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|hookpkg|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 93
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/tricentis_debug-skillpkg-rep1-809bff.jsonl",
+   "transcript": "transcripts_live_hooks/codex/tricentis_debug-skillpkg-rep1-809bff.jsonl.gz",
+   "sha256": "5d2e5ce44fc6befb46be4be2935f308c633acd6a944ab0734ea6ec41062beb05",
+   "bytes": 266774,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|skillpkg|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 71
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/tricentis_debug-skillpkg-rep2-af9203.jsonl",
+   "transcript": "transcripts_live_hooks/codex/tricentis_debug-skillpkg-rep2-af9203.jsonl.gz",
+   "sha256": "9109564e967f0fc0362a371e3ef2a43d05712e04e0e591de5c45608396d932ec",
+   "bytes": 144935,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|skillpkg|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 56
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/tricentis_debug-skillpkg-rep3-ebfda8.jsonl",
+   "transcript": "transcripts_live_hooks/codex/tricentis_debug-skillpkg-rep3-ebfda8.jsonl.gz",
+   "sha256": "d20771ce573a112df2d67955de9181d1e116c4e2ebaab4fb519940152d872746",
+   "bytes": 142043,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|skillpkg|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 60
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/tricentis_quote-hookpkg-rep1-e221b4.jsonl",
+   "transcript": "transcripts_live_hooks/codex/tricentis_quote-hookpkg-rep1-e221b4.jsonl.gz",
+   "sha256": "a20391b6ec1e0126dd8fa5489b469183dd467b99130367c79bced73987c09fb2",
+   "bytes": 113806,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|hookpkg|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 58
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/tricentis_quote-hookpkg-rep2-85c1dc.jsonl",
+   "transcript": "transcripts_live_hooks/codex/tricentis_quote-hookpkg-rep2-85c1dc.jsonl.gz",
+   "sha256": "377fd93805eddf9be257bf22f69b59f22cc3df366bf4b74448706e1c339919c5",
+   "bytes": 80848,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|hookpkg|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 44
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/tricentis_quote-hookpkg-rep3-8e0837.jsonl",
+   "transcript": "transcripts_live_hooks/codex/tricentis_quote-hookpkg-rep3-8e0837.jsonl.gz",
+   "sha256": "9e46334316c4b46d83aa0dd780b053108c8a08230562c3757c34b0b09bd8dc99",
+   "bytes": 82793,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|hookpkg|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 53
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/tricentis_quote-skillpkg-rep1-5d8207.jsonl",
+   "transcript": "transcripts_live_hooks/codex/tricentis_quote-skillpkg-rep1-5d8207.jsonl.gz",
+   "sha256": "0013a37e866a3fe28c24a278647a4acf21a8e4f6a352d7abc86c575478839540",
+   "bytes": 121853,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|skillpkg|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 34
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/tricentis_quote-skillpkg-rep2-8190a8.jsonl",
+   "transcript": "transcripts_live_hooks/codex/tricentis_quote-skillpkg-rep2-8190a8.jsonl.gz",
+   "sha256": "b357dd209b2f089f9d2ab7c8ecb1b7f18a6ce3cbbbd68c3d06d4ee16c079909c",
+   "bytes": 96162,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|skillpkg|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 24
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/codex/tricentis_quote-skillpkg-rep3-bf2ed7.jsonl",
+   "transcript": "transcripts_live_hooks/codex/tricentis_quote-skillpkg-rep3-bf2ed7.jsonl.gz",
+   "sha256": "e2cbbb78b9e1eb13b4d3bacfbaa5d02e62316e065113bce6ee541f8c0aaa1234",
+   "bytes": 84262,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "codex|skillpkg|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 17
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/carconfig_order-hookpkg-rep1-241b96.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/carconfig_order-hookpkg-rep1-241b96.jsonl.gz",
+   "sha256": "1dfb4545ceaae86d0188392abab77f644becdd9222f28f9310982ac5d14c54d0",
+   "bytes": 3082574,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|hookpkg|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 17,
+    "home_path": 648
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/carconfig_order-hookpkg-rep2-77f6e1.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/carconfig_order-hookpkg-rep2-77f6e1.jsonl.gz",
+   "sha256": "3bfa5e66d2ed39f7923cc50b5600fd993dddeb539faf7ecb40c9cca5cb89b937",
+   "bytes": 650406,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|hookpkg|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 20,
+    "home_path": 730
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/carconfig_order-hookpkg-rep3-aa5462.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/carconfig_order-hookpkg-rep3-aa5462.jsonl.gz",
+   "sha256": "226c1cde91ac031cb300ac60ae599e434dcb800ced0f6c951f55e647c2333115",
+   "bytes": 388214,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|hookpkg|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 12,
+    "home_path": 404
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/carconfig_order-skillpkg-rep1-18eebb.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/carconfig_order-skillpkg-rep1-18eebb.jsonl.gz",
+   "sha256": "417c8b6970d90cda76b6adf10cd8961c2233c36d8a96926f3cfb2e32c0a02917",
+   "bytes": 287131,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|skillpkg|carconfig_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 5,
+    "home_path": 136
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/carconfig_order-skillpkg-rep2-c350c9.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/carconfig_order-skillpkg-rep2-c350c9.jsonl.gz",
+   "sha256": "cf4ce777a43b8b07a09a892c43bd0c1b267883a0911464dde5cf1f7ab1ca1dfa",
+   "bytes": 400501,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|skillpkg|carconfig_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 8,
+    "home_path": 281
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/carconfig_order-skillpkg-rep3-818ab5.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/carconfig_order-skillpkg-rep3-818ab5.jsonl.gz",
+   "sha256": "fccb6876e5b898b8018acea9ef38433935bee36884fa05056d758ef010b9c5a0",
+   "bytes": 287118,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|skillpkg|carconfig_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 148
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/demoshop_debug-hookpkg-rep1-2dd995.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/demoshop_debug-hookpkg-rep1-2dd995.jsonl.gz",
+   "sha256": "ee02a1ee2aef4781db6cfac0bfd87d59231a2b4c1dd5a6266b444ed575504166",
+   "bytes": 149674,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|hookpkg|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 162
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/demoshop_debug-hookpkg-rep2-9c04c9.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/demoshop_debug-hookpkg-rep2-9c04c9.jsonl.gz",
+   "sha256": "edf8d4b2479f4f82251e3fc97e5c4ec9b3c56473f98b0bb9da0e078571cf5c3a",
+   "bytes": 94901,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|hookpkg|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 110
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/demoshop_debug-hookpkg-rep3-3aa5d4.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/demoshop_debug-hookpkg-rep3-3aa5d4.jsonl.gz",
+   "sha256": "c3ab8e9a42c85153fdb8c841fc0d3ea4f8a2cd263ad079b999ced657e683060b",
+   "bytes": 273859,
+   "results_file": "excluded/excluded_aborted.jsonl",
+   "key": "opencode|hookpkg|demoshop_debug|3",
+   "status": "excluded:aborted",
+   "scrub": {
+    "email": 4,
+    "home_path": 265
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/demoshop_debug-hookpkg-rep3-866afc.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/demoshop_debug-hookpkg-rep3-866afc.jsonl.gz",
+   "sha256": "84b7a43087c3d576e7ab66a4cb811f4ba49ff2324c5ef00ba09f5409713a9814",
+   "bytes": 133204,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|hookpkg|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "email": 2,
+    "home_path": 144
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/demoshop_debug-skillpkg-rep1-aa564e.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/demoshop_debug-skillpkg-rep1-aa564e.jsonl.gz",
+   "sha256": "01435f682c459f9a837aab948fcc2e412d67b7e4e38241eec458a5fd7df12ca4",
+   "bytes": 292858,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|skillpkg|demoshop_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 271
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/demoshop_debug-skillpkg-rep2-4c56eb.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/demoshop_debug-skillpkg-rep2-4c56eb.jsonl.gz",
+   "sha256": "32ec8c5eb2b212d1384eddff73c0b34277713d5f2fac6fc8efa0bc1ef25c04d8",
+   "bytes": 1925516,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|skillpkg|demoshop_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 640
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/demoshop_debug-skillpkg-rep3-54f2a6.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/demoshop_debug-skillpkg-rep3-54f2a6.jsonl.gz",
+   "sha256": "80bc1f3222a2bf458d5af7871207dabaaf7724335b4bce9c6b8a9f0b68195050",
+   "bytes": 197560,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|skillpkg|demoshop_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 161
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/demoshop_debug-skillpkg-rep3-c88ae1.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/demoshop_debug-skillpkg-rep3-c88ae1.jsonl.gz",
+   "sha256": "0ef87be12c7d703f186d849ac4ee507aafa7acd9acafb98116ad51e899674d34",
+   "bytes": 304776,
+   "results_file": "excluded/excluded_aborted.jsonl",
+   "key": "opencode|skillpkg|demoshop_debug|3",
+   "status": "excluded:aborted",
+   "scrub": {
+    "email": 2,
+    "home_path": 277
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/demoshop_order-hookpkg-rep1-ad04df.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/demoshop_order-hookpkg-rep1-ad04df.jsonl.gz",
+   "sha256": "8cf22041d5ddedfe392509d17e958f8ce0c3dbd11010a19a2c6c953cc100c1d2",
+   "bytes": 451667,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|hookpkg|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 11,
+    "home_path": 463
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/demoshop_order-hookpkg-rep2-79bdd9.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/demoshop_order-hookpkg-rep2-79bdd9.jsonl.gz",
+   "sha256": "024666753362b4584a9cfdf5449fc5ec248b74b1b9ec3d48e2abe29c0eff508e",
+   "bytes": 338205,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|hookpkg|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 7,
+    "home_path": 342
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/demoshop_order-hookpkg-rep3-56e117.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/demoshop_order-hookpkg-rep3-56e117.jsonl.gz",
+   "sha256": "a9c3c36349f3bca1df094e20c32e93521a8f9c0e0ee9288cc453b66552a3d0fa",
+   "bytes": 294236,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|hookpkg|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 9,
+    "home_path": 319
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/demoshop_order-skillpkg-rep1-7b47bc.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/demoshop_order-skillpkg-rep1-7b47bc.jsonl.gz",
+   "sha256": "00716a3068ce2028f0097d0f841664185c6574026d4491529c68aac5685c9528",
+   "bytes": 1014067,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|skillpkg|demoshop_order|1",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 544
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/demoshop_order-skillpkg-rep2-a07ca7.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/demoshop_order-skillpkg-rep2-a07ca7.jsonl.gz",
+   "sha256": "7d7dbeeeea08e2ac0aea4b8ab576c945f545a09e07a62511b5a7a67a47f0675f",
+   "bytes": 348212,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|skillpkg|demoshop_order|2",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 174
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/demoshop_order-skillpkg-rep3-d45c9b.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/demoshop_order-skillpkg-rep3-d45c9b.jsonl.gz",
+   "sha256": "f618dfcf81e1744d74621c5325a34bb49c65632006c64eb7e036c6a8796874ec",
+   "bytes": 301534,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|skillpkg|demoshop_order|3",
+   "status": "scored",
+   "scrub": {
+    "email": 6,
+    "home_path": 232
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/tricentis_debug-hookpkg-rep1-96a0c7.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/tricentis_debug-hookpkg-rep1-96a0c7.jsonl.gz",
+   "sha256": "5e910c095a71874833ec3389224b83a2905fed4b5d918e3228304d901806583b",
+   "bytes": 257102,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|hookpkg|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 218
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/tricentis_debug-hookpkg-rep2-b3f087.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/tricentis_debug-hookpkg-rep2-b3f087.jsonl.gz",
+   "sha256": "ff53461a507da4e319397a3dfe34deffa420bc19c96afd8c7ab9f8f154987f49",
+   "bytes": 199543,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|hookpkg|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 236
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/tricentis_debug-hookpkg-rep3-5c17fe.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/tricentis_debug-hookpkg-rep3-5c17fe.jsonl.gz",
+   "sha256": "3558600b0737b3079a9d82ed3fb5ac36fe1631ea18ade332cfab214ef94c2b08",
+   "bytes": 140475,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|hookpkg|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 145
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/tricentis_debug-skillpkg-rep1-7aa695.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/tricentis_debug-skillpkg-rep1-7aa695.jsonl.gz",
+   "sha256": "f4bb1efbbb2b1f9bcae53e8bf7ccd7683ed035bbf1bd3dd3d872722a590a0329",
+   "bytes": 189736,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|skillpkg|tricentis_debug|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 289
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/tricentis_debug-skillpkg-rep2-ea5550.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/tricentis_debug-skillpkg-rep2-ea5550.jsonl.gz",
+   "sha256": "776b14de788fa0538e6c16ba668f7e7a5b77f76572abcb89ee65291645c64d41",
+   "bytes": 323801,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|skillpkg|tricentis_debug|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 306
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/tricentis_debug-skillpkg-rep3-fa9414.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/tricentis_debug-skillpkg-rep3-fa9414.jsonl.gz",
+   "sha256": "16f87a7e48ec34c07ca84c9f324b85a475a6c0498c803d245dafbf843f68b261",
+   "bytes": 218248,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|skillpkg|tricentis_debug|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 227
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/tricentis_quote-hookpkg-rep1-9c1566.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/tricentis_quote-hookpkg-rep1-9c1566.jsonl.gz",
+   "sha256": "a68da039ee29267ed9c894d9ed9abf8c97b5ecfb81dad530fce02305841492a6",
+   "bytes": 253935,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|hookpkg|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 261
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/tricentis_quote-hookpkg-rep2-f583dd.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/tricentis_quote-hookpkg-rep2-f583dd.jsonl.gz",
+   "sha256": "01cec2a6bf5c26a91f3c64c089d21b4575c6e2fed9403410a59eda33ccfd4bb3",
+   "bytes": 248210,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|hookpkg|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 285
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/tricentis_quote-hookpkg-rep3-5a6797.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/tricentis_quote-hookpkg-rep3-5a6797.jsonl.gz",
+   "sha256": "1676d2c44e05d9843f114d5919f2c1abd4b10b542dd8725edf69acd84a43dbc7",
+   "bytes": 201215,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|hookpkg|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 152
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/tricentis_quote-skillpkg-rep1-3e3c4a.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/tricentis_quote-skillpkg-rep1-3e3c4a.jsonl.gz",
+   "sha256": "787d703989481683b05919d3b518a0fd1d7c29e977bc20f348be6705e43f84ef",
+   "bytes": 270515,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|skillpkg|tricentis_quote|1",
+   "status": "scored",
+   "scrub": {
+    "home_path": 68
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/tricentis_quote-skillpkg-rep2-da9a55.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/tricentis_quote-skillpkg-rep2-da9a55.jsonl.gz",
+   "sha256": "2502bd7f1b82044b23d3e6dbfb92393f8d2ccb0edf11c210d9d5f9b7ca9e8055",
+   "bytes": 294525,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|skillpkg|tricentis_quote|2",
+   "status": "scored",
+   "scrub": {
+    "home_path": 83
+   }
+  },
+  {
+   "file": "transcripts_live_hooks/opencode/tricentis_quote-skillpkg-rep3-b9ca78.jsonl",
+   "transcript": "transcripts_live_hooks/opencode/tricentis_quote-skillpkg-rep3-b9ca78.jsonl.gz",
+   "sha256": "911f0c1aa17202d84a05f6287783d1d888af0f46c99376ab53df846396f0e847",
+   "bytes": 324134,
+   "results_file": "results/results_live_hooks.jsonl",
+   "key": "opencode|skillpkg|tricentis_quote|3",
+   "status": "scored",
+   "scrub": {
+    "home_path": 152
+   }
+  }
+ ]
+}

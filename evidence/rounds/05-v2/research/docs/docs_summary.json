@@ -1,0 +1,363 @@
+{
+ "_doc": "Round-5 keyword-docs measurements (robotcode 2.7.0 subprocess, n=6 medians; in-process kwcache cold build / warm load / lookup)",
+ "robotcode_libdoc": [
+  {
+   "kind": "show_kw",
+   "lib": "Browser",
+   "kw": "Get Text",
+   "median_ms": 1446,
+   "min_ms": 1338,
+   "bytes": 2382,
+   "lines": 51,
+   "rc": 0,
+   "err": ""
+  },
+  {
+   "kind": "show_kw",
+   "lib": "Browser",
+   "kw": "Click",
+   "median_ms": 1397,
+   "min_ms": 1309,
+   "bytes": 1365,
+   "lines": 41,
+   "rc": 0,
+   "err": ""
+  },
+  {
+   "kind": "show_kw",
+   "lib": "Browser",
+   "kw": "Get Aria Snapshot",
+   "median_ms": 1346,
+   "min_ms": 1305,
+   "bytes": 3040,
+   "lines": 61,
+   "rc": 0,
+   "err": ""
+  },
+  {
+   "kind": "show_kw",
+   "lib": "SeleniumLibrary",
+   "kw": "Click Element",
+   "median_ms": 1234,
+   "min_ms": 1211,
+   "bytes": 1829,
+   "lines": 40,
+   "rc": 0,
+   "err": ""
+  },
+  {
+   "kind": "show_kw",
+   "lib": "SeleniumLibrary",
+   "kw": "Wait Until Element Is Visible",
+   "median_ms": 1255,
+   "min_ms": 1234,
+   "bytes": 512,
+   "lines": 14,
+   "rc": 0,
+   "err": ""
+  },
+  {
+   "kind": "show_kw",
+   "lib": "RequestsLibrary",
+   "kw": "GET On Session",
+   "median_ms": 1137,
+   "min_ms": 1077,
+   "bytes": 850,
+   "lines": 25,
+   "rc": 0,
+   "err": ""
+  },
+  {
+   "kind": "show_kw",
+   "lib": "BuiltIn",
+   "kw": "Should Be Equal",
+   "median_ms": 1163,
+   "min_ms": 1113,
+   "bytes": 3112,
+   "lines": 74,
+   "rc": 0,
+   "err": ""
+  },
+  {
+   "kind": "show_kw",
+   "lib": "Collections",
+   "kw": "Get From Dictionary",
+   "median_ms": 1162,
+   "min_ms": 1107,
+   "bytes": 938,
+   "lines": 38,
+   "rc": 0,
+   "err": ""
+  },
+  {
+   "kind": "show_kw",
+   "lib": "resources/shop.resource",
+   "kw": "Add Product To Cart",
+   "median_ms": 1149,
+   "min_ms": 1067,
+   "bytes": 196,
+   "lines": 12,
+   "rc": 0,
+   "err": ""
+  },
+  {
+   "kind": "show_kw",
+   "lib": "libs/ArgLib.py::advanced",
+   "kw": "Advanced Keyword",
+   "median_ms": 1142,
+   "min_ms": 1094,
+   "bytes": 138,
+   "lines": 11,
+   "rc": 0,
+   "err": ""
+  },
+  {
+   "kind": "show_kw",
+   "lib": "Browser::timeout=5s",
+   "kw": "Get Text",
+   "median_ms": 1322,
+   "min_ms": 1293,
+   "bytes": 2382,
+   "lines": 51,
+   "rc": 0,
+   "err": ""
+  },
+  {
+   "kind": "show_all_md",
+   "lib": "Browser",
+   "median_ms": 1332,
+   "bytes": 282339,
+   "rc": 0
+  },
+  {
+   "kind": "list",
+   "lib": "Browser",
+   "median_ms": 1380,
+   "bytes": 2501,
+   "rc": 0
+  },
+  {
+   "kind": "json_file",
+   "lib": "Browser",
+   "median_ms": 1426,
+   "bytes": 947403,
+   "rc": 0,
+   "err": ""
+  },
+  {
+   "kind": "show_all_md",
+   "lib": "SeleniumLibrary",
+   "median_ms": 1257,
+   "bytes": 132130,
+   "rc": 0
+  },
+  {
+   "kind": "list",
+   "lib": "SeleniumLibrary",
+   "median_ms": 1269,
+   "bytes": 3963,
+   "rc": 0
+  },
+  {
+   "kind": "json_file",
+   "lib": "SeleniumLibrary",
+   "median_ms": 1315,
+   "bytes": 447113,
+   "rc": 0,
+   "err": ""
+  },
+  {
+   "kind": "show_all_md",
+   "lib": "RequestsLibrary",
+   "median_ms": 1153,
+   "bytes": 42473,
+   "rc": 0
+  },
+  {
+   "kind": "list",
+   "lib": "RequestsLibrary",
+   "median_ms": 1138,
+   "bytes": 490,
+   "rc": 0
+  },
+  {
+   "kind": "json_file",
+   "lib": "RequestsLibrary",
+   "median_ms": 1162,
+   "bytes": 97164,
+   "rc": 0,
+   "err": ""
+  },
+  {
+   "kind": "show_all_md",
+   "lib": "BuiltIn",
+   "median_ms": 1236,
+   "bytes": 133004,
+   "rc": 0
+  },
+  {
+   "kind": "list",
+   "lib": "BuiltIn",
+   "median_ms": 1202,
+   "bytes": 2017,
+   "rc": 0
+  },
+  {
+   "kind": "json_file",
+   "lib": "BuiltIn",
+   "median_ms": 1059,
+   "bytes": null,
+   "rc": 252,
+   "err": ""
+  },
+  {
+   "kind": "show_all_md",
+   "lib": "resources/shop.resource",
+   "median_ms": 977,
+   "bytes": 485,
+   "rc": 0
+  },
+  {
+   "kind": "list",
+   "lib": "resources/shop.resource",
+   "median_ms": 999,
+   "bytes": 39,
+   "rc": 0
+  },
+  {
+   "kind": "json_file",
+   "lib": "resources/shop.resource",
+   "median_ms": 1022,
+   "bytes": 3132,
+   "rc": 0,
+   "err": ""
+  },
+  {
+   "kind": "plain_libdoc_show_kw",
+   "lib": "Browser",
+   "median_ms": 592,
+   "bytes": 2382,
+   "rc": 0
+  }
+ ],
+ "kwcache_inprocess": [
+  {
+   "spec": "Browser",
+   "keywords": 152,
+   "cache_bytes": 280699,
+   "cold_build_ms": 429,
+   "warm_load_ms": 3.1,
+   "exact_lookup_ms": 0.007,
+   "fuzzy_lookup_ms": 0.79,
+   "cache_key_ms": 1.55
+  },
+  {
+   "spec": "RequestsLibrary",
+   "keywords": 33,
+   "cache_bytes": 42267,
+   "cold_build_ms": 94,
+   "warm_load_ms": 0.8,
+   "exact_lookup_ms": 0.004,
+   "fuzzy_lookup_ms": 0.35,
+   "cache_key_ms": 0.81
+  },
+  {
+   "spec": "BuiltIn",
+   "keywords": 109,
+   "cache_bytes": 121595,
+   "cold_build_ms": 56,
+   "warm_load_ms": 0.7,
+   "exact_lookup_ms": 0.005,
+   "fuzzy_lookup_ms": 0.53,
+   "cache_key_ms": 0.22
+  },
+  {
+   "spec": "Collections",
+   "keywords": 43,
+   "cache_bytes": 49476,
+   "cold_build_ms": 26,
+   "warm_load_ms": 0.3,
+   "exact_lookup_ms": 0.005,
+   "fuzzy_lookup_ms": 0.58,
+   "cache_key_ms": 0.38
+  },
+  {
+   "spec": "resources/shop.resource",
+   "keywords": 3,
+   "cache_bytes": 1010,
+   "cold_build_ms": 3,
+   "warm_load_ms": 0.1,
+   "exact_lookup_ms": 0.005,
+   "fuzzy_lookup_ms": 0.04,
+   "cache_key_ms": 0.06
+  },
+  {
+   "spec": "libs/ArgLib.py::advanced",
+   "keywords": 2,
+   "cache_bytes": 679,
+   "cold_build_ms": 2,
+   "warm_load_ms": 0.1,
+   "exact_lookup_ms": 0.006,
+   "fuzzy_lookup_ms": 0.08,
+   "cache_key_ms": 0.05
+  },
+  {
+   "spec": "SeleniumLibrary",
+   "keywords": 182,
+   "cache_bytes": 141925,
+   "cold_build_ms": 90,
+   "warm_load_ms": 1.2,
+   "exact_lookup_ms": 0.005,
+   "fuzzy_lookup_ms": 1.26,
+   "cache_key_ms": 0.75
+  }
+ ],
+ "syntax": {
+  "library_args": "robotcode libdoc 'Lib::arg1::name=value' show \"<Kw>\" (verified: ArgLib.py::advanced and ::mode=advanced::timeout=1s expose the mode-dependent keyword)",
+  "resource": "robotcode libdoc path/x.resource show \"<Kw>\" (path relative to cwd)",
+  "wrong_name": "show \"Get Txt\" -> rc 0, EMPTY output (silent); case-insensitive exact names work; globs work (\"Get T*\")",
+  "BuiltIn_json": "--format JSON BuiltIn fails rc 252 ('Markdown format requires markdown module'); add --specdocformat RAW",
+  "repl_kw": ".kw is substring search only: 'Clik', 'click element', 'wait visible' -> 'No keywords found matching'; exact name prints full markdown doc (~2.4 KB for Get Text)"
+ },
+ "compact_lib_md_bytes": {
+  "Browser": 21261,
+  "SeleniumLibrary": 19147,
+  "BuiltIn": 12452,
+  "Collections": 5163,
+  "RequestsLibrary": 3922,
+  "shop.resource": 347
+ },
+ "full_md_bytes": {
+  "Browser": 282339,
+  "SeleniumLibrary": 132130,
+  "RequestsLibrary": 42473,
+  "BuiltIn": 133004,
+  "resources/shop.resource": 485
+ },
+ "json_spec_bytes": {
+  "Browser": 947403,
+  "SeleniumLibrary": 447113,
+  "RequestsLibrary": 97164,
+  "BuiltIn": null,
+  "resources/shop.resource": 3132
+ },
+ "failure_classify": [
+  "{\"rule\": \"unknown_kw\", \"msg\": \"[ FAIL ] No keyword with name 'Clik' found. Did you mean:\", \"doc\": \"did you mean: Browser.Click(selector, button=left)\"}",
+  "{\"rule\": \"unknown_kw\", \"msg\": \"[ FAIL ] No keyword with name 'Click Element' found. Did you try using keyword 'Browser.Click' and forgot to use enough whitespace between keyword and arguments\", \"doc\": \"Browser equivalent of SeleniumLibrary 'Click Element': Click\"}",
+  "{\"rule\": \"arg_count\", \"msg\": \"[ FAIL ] Keyword 'Browser.Click' expected 1 to 2 arguments, got 0.\", \"doc\": \"Browser.Click(selector, button=left)\"}",
+  "{\"rule\": \"arg_count\", \"msg\": \"[ FAIL ] Keyword 'Browser.Click' expected 1 to 2 arguments, got 9.\", \"doc\": \"Browser.Click(selector, button=left)\"}",
+  "{\"rule\": \"bad_named_arg_as_positional\", \"msg\": \"[ FAIL ] 'str' object cannot be interpreted as an integer\"}",
+  "{\"rule\": \"bad_value\", \"msg\": \"[ FAIL ] ValueError: Argument 'state' got value 'visable' that cannot be converted to ElementState: ElementState does not have member 'visable'. Available: 'att\"}",
+  "{\"rule\": \"bad_value\", \"msg\": \"[ FAIL ] ValueError: Argument 'timeout' got value 'abc' that cannot be converted to timedelta or None.\"}",
+  "{\"rule\": \"assertion_text\", \"msg\": \"[ FAIL ] Text '' (str) should be 'x' (str)\"}",
+  "{\"rule\": \"var_not_found\", \"msg\": \"[ FAIL ] Variable '${undefined_var}' not found.\"}",
+  "{\"rule\": \"import_lib_failed\", \"msg\": \"[ FAIL ] Importing library 'NoSuchLibrary' failed: ModuleNotFoundError: No module named 'NoSuchLibrary'\"}",
+  "{\"rule\": \"resource_missing\", \"msg\": \"[ FAIL ] Resource file '~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round5/research/docs/missing.resource' does not exist.\"}",
+  "{\"rule\": \"lib_reimport_ignored\", \"msg\": \"[ WARN ] Error in file '~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round5/research/docs/resources/shop.resource' on line 3: Suite 'Repl \"}",
+  "{\"rule\": \"navigation_error\", \"msg\": \"[ FAIL ] Error: page.goto: net::ERR_FILE_NOT_FOUND at file:///tmp/index.html\"}",
+  "{\"rule\": \"arg_count\", \"msg\": \"[ FAIL ] Keyword 'shop.Add Product To Cart' expected 1 to 2 arguments, got 0.\", \"doc\": \"shop.Add Product To Cart(index, expected_count=1)\"}",
+  "{\"rule\": \"strict_mode\", \"msg\": \"[ FAIL ] Error: locator.evaluate: Error: strict mode violation: locator('label') resolved to 2 elements:\"}",
+  "{\"rule\": \"assertion_text\", \"msg\": \"[ FAIL ] 1 != 2\"}",
+  "classified 16 in 50.6 ms"
+ ]
+}

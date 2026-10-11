@@ -1,0 +1,8 @@
+# proj2: like proj, plus a helper-maintained session variable file
+paths = ["tests"]
+python-path = ["resources"]
+variable-files = [".rf/session_vars.py"]
+
+[variables]
+BASE_URL = "https://www.saucedemo.com"
+API_URL = "https://restful-booker.herokuapp.com"

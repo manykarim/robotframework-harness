@@ -1,0 +1,13 @@
+# repl_only experiment project root
+output-dir = "../out/default"
+console-colors = "off"
+
+[variables]
+HEADLESS = "True"
+
+[profiles.listen]
+listeners = { "rfmcp_listener" = [] }
+python-path = ["."]
+
+[profiles.trace]
+log-level = "TRACE"

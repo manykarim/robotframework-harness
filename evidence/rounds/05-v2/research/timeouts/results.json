@@ -1,0 +1,1340 @@
+{
+ "env": {
+  "browser": "RF 7.5 + Browser 20.5 (robotcode-experiments venv), chromium headless",
+  "selenium": "RF 7.3.2 + SeleniumLibrary 6.8 + selenium 4.39, Chrome 150 headless (worktree venv)",
+  "site": "local http.server ../site (+ /slow?ms=N delayed endpoint, slowserver.py)"
+ },
+ "browser_matrix": {
+  "missing/click/10s": {
+   "n": 3,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 10.093
+  },
+  "missing/gettext/10s": {
+   "n": 3,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 10.107
+  },
+  "missing/wfes_visible/10s": {
+   "n": 3,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 10.101
+  },
+  "missing/fill/10s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 10.095
+  },
+  "missing/count/10s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 0.009
+  },
+  "missing/getelements/10s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 10.009
+  },
+  "missing/textassert/10s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 10.072
+  },
+  "missing/click/2s": {
+   "n": 3,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 2.084
+  },
+  "missing/gettext/2s": {
+   "n": 3,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 2.099
+  },
+  "missing/wfes_visible/2s": {
+   "n": 3,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 2.093
+  },
+  "missing/fill/2s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 2.092
+  },
+  "missing/count/2s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 0.01
+  },
+  "missing/getelements/2s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 2.012
+  },
+  "missing/textassert/2s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 2.109
+  },
+  "missing/click/1s": {
+   "n": 3,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 1.102
+  },
+  "missing/gettext/1s": {
+   "n": 3,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 1.089
+  },
+  "missing/wfes_visible/1s": {
+   "n": 3,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 1.09
+  },
+  "missing/fill/1s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 1.102
+  },
+  "missing/count/1s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 0.009
+  },
+  "missing/getelements/1s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 1.008
+  },
+  "missing/textassert/1s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 1.094
+  },
+  "explicit/wfes_timeout1s_with_bt10s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 1.108
+  },
+  "explicit/wfes_timeout5s_with_bt1s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 5.09
+  },
+  "async/click/a1500/2s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 1.596
+  },
+  "async/click/a4000/2s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 2.067
+  },
+  "async/click/a8000/2s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 2.06
+  },
+  "async/gettext/a1500/2s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 1.618
+  },
+  "async/gettext/a4000/2s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 2.081
+  },
+  "async/gettext/a8000/2s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 2.07
+  },
+  "async/click/a1500/10s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 1.861
+  },
+  "async/click/a4000/10s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 4.372
+  },
+  "async/click/a8000/10s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 8.407
+  },
+  "async/gettext/a1500/10s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 1.889
+  },
+  "async/gettext/a4000/10s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 4.393
+  },
+  "async/gettext/a8000/10s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 8.413
+  },
+  "retry/title/ra1s/bt1s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 1.064
+  },
+  "retry/title/ra1s/bt10s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 1.077
+  },
+  "retry/title/ra3s/bt1s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 1.078
+  },
+  "retry/title/ra3s/bt10s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 2.007
+  },
+  "retry/text_wrong_ra1s_bt10s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 1.183
+  },
+  "retry/text_wrong_ra3s_bt1s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 1.089
+  },
+  "nav/goto_slow5s_bt2s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 4.021
+  },
+  "nav/goto_slow5s_bt2s_explicit10s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 5.029
+  },
+  "nav/newpage_slow5s_bt2s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 2.135
+  },
+  "nav/goto_slow5s_bt10s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 5.03
+  },
+  "nav/newpage_slow5s_bt10s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 5.097
+  },
+  "nav/newpage_slow12s_bt10s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 10.115
+  }
+ },
+ "browser_matrix2": {
+  "import2s/missing/click": {
+   "n": 3,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 2.109
+  },
+  "retrycap/text_never/ra1s/bt10s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 1.184
+  },
+  "retrycap/title_never/ra1s/bt10s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 1.09
+  },
+  "retrycap/count_never/ra1s/bt10s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 1.092
+  },
+  "retrycap/text_never/ra3s/bt10s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 3.104
+  },
+  "retrycap/title_never/ra3s/bt10s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 3.098
+  },
+  "retrycap/count_never/ra3s/bt10s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 3.089
+  },
+  "retrycap/text_never/ra5s/bt2s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 2.108
+  },
+  "retrycap/title_never/ra5s/bt2s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 2.104
+  },
+  "retrycap/count_never/ra5s/bt2s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 2.112
+  },
+  "retrycap/text_never/ra3s/bt1s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 1.092
+  },
+  "retrycap/title_never/ra3s/bt1s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 1.092
+  },
+  "retrycap/count_never/ra3s/bt1s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 1.094
+  },
+  "nav/goto_slow5s_bt2s": {
+   "n": 3,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 4.017
+  },
+  "nav/goto_slow5s_bt2s_domcontent": {
+   "n": 3,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 4.02
+  }
+ },
+ "selenium_matrix": {
+  "missing/click/t10s/iw0s": {
+   "n": 3,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 0.016
+  },
+  "missing/wuev/t10s/iw0s": {
+   "n": 3,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 10.08
+  },
+  "missing/wupce/t10s/iw0s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 10.045
+  },
+  "missing/etsb/t10s/iw0s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 0.018
+  },
+  "missing/gettext/t10s/iw0s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 0.016
+  },
+  "missing/pc\u0435/t10s/iw0s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 0.025
+  },
+  "missing/input/t10s/iw0s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 0.015
+  },
+  "missing/count/t10s/iw0s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 0.011
+  },
+  "missing/pnce/t10s/iw0s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 0.01
+  },
+  "missing/click/t2s/iw0s": {
+   "n": 3,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 0.015
+  },
+  "missing/wuev/t2s/iw0s": {
+   "n": 3,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 2.135
+  },
+  "missing/wupce/t2s/iw0s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 2.151
+  },
+  "missing/etsb/t2s/iw0s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 0.016
+  },
+  "missing/gettext/t2s/iw0s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 0.012
+  },
+  "missing/pc\u0435/t2s/iw0s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 0.018
+  },
+  "missing/input/t2s/iw0s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 0.013
+  },
+  "missing/count/t2s/iw0s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 0.011
+  },
+  "missing/pnce/t2s/iw0s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 0.01
+  },
+  "missing/click/t1s/iw0s": {
+   "n": 3,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 0.013
+  },
+  "missing/wuev/t1s/iw0s": {
+   "n": 3,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 1.068
+  },
+  "missing/wupce/t1s/iw0s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 1.062
+  },
+  "missing/etsb/t1s/iw0s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 0.016
+  },
+  "missing/gettext/t1s/iw0s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 0.014
+  },
+  "missing/pc\u0435/t1s/iw0s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 0.018
+  },
+  "missing/input/t1s/iw0s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 0.018
+  },
+  "missing/count/t1s/iw0s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 0.011
+  },
+  "missing/pnce/t1s/iw0s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 0.013
+  },
+  "missing/click/t5s/iw2s": {
+   "n": 3,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 2.039
+  },
+  "missing/wuev/t5s/iw2s": {
+   "n": 3,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 6.672
+  },
+  "missing/wupce/t5s/iw2s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 6.725
+  },
+  "missing/etsb/t5s/iw2s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 2.033
+  },
+  "missing/gettext/t5s/iw2s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 2.046
+  },
+  "missing/pc\u0435/t5s/iw2s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 2.038
+  },
+  "missing/input/t5s/iw2s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 2.062
+  },
+  "missing/count/t5s/iw2s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 2.022
+  },
+  "missing/pnce/t5s/iw2s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 2.033
+  },
+  "missing/click/t5s/iw10s": {
+   "n": 3,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 10.056
+  },
+  "missing/wuev/t5s/iw10s": {
+   "n": 3,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 10.254
+  },
+  "missing/wupce/t5s/iw10s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 10.275
+  },
+  "missing/etsb/t5s/iw10s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 10.016
+  },
+  "missing/gettext/t5s/iw10s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 10.012
+  },
+  "missing/pc\u0435/t5s/iw10s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 10.066
+  },
+  "missing/input/t5s/iw10s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 10.063
+  },
+  "missing/count/t5s/iw10s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 10.06
+  },
+  "missing/pnce/t5s/iw10s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 10.021
+  },
+  "async/click/a1500/t2s/iw0s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 0.021
+  },
+  "async/wuev/a1500/t2s/iw0s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 1.53
+  },
+  "async/etsb/a1500/t2s/iw0s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 0.02
+  },
+  "async/click/a4000/t2s/iw0s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 0.021
+  },
+  "async/wuev/a4000/t2s/iw0s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 2.128
+  },
+  "async/etsb/a4000/t2s/iw0s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 0.014
+  },
+  "async/click/a8000/t2s/iw0s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 0.018
+  },
+  "async/wuev/a8000/t2s/iw0s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 2.129
+  },
+  "async/etsb/a8000/t2s/iw0s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 0.015
+  },
+  "async/click/a1500/t10s/iw0s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 0.014
+  },
+  "async/wuev/a1500/t10s/iw0s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 1.514
+  },
+  "async/etsb/a1500/t10s/iw0s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 0.014
+  },
+  "async/click/a4000/t10s/iw0s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 0.013
+  },
+  "async/wuev/a4000/t10s/iw0s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 4.075
+  },
+  "async/etsb/a4000/t10s/iw0s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 0.014
+  },
+  "async/click/a8000/t10s/iw0s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 0.018
+  },
+  "async/wuev/a8000/t10s/iw0s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 8.13
+  },
+  "async/etsb/a8000/t10s/iw0s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 0.015
+  },
+  "async/click/a1500/t5s/iw2s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 1.662
+  },
+  "async/wuev/a1500/t5s/iw2s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 1.567
+  },
+  "async/etsb/a1500/t5s/iw2s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 1.523
+  },
+  "async/click/a4000/t5s/iw2s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 2.026
+  },
+  "async/wuev/a4000/t5s/iw2s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 4.016
+  },
+  "async/etsb/a4000/t5s/iw2s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 2.038
+  },
+  "async/click/a8000/t5s/iw2s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 2.036
+  },
+  "async/wuev/a8000/t5s/iw2s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 6.697
+  },
+  "async/etsb/a8000/t5s/iw2s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 2.021
+  },
+  "async/click/a1500/t5s/iw10s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 1.672
+  },
+  "async/wuev/a1500/t5s/iw10s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 1.557
+  },
+  "async/etsb/a1500/t5s/iw10s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 1.55
+  },
+  "async/click/a4000/t5s/iw10s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 4.142
+  },
+  "async/wuev/a4000/t5s/iw10s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 4.053
+  },
+  "async/etsb/a4000/t5s/iw10s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 4.054
+  },
+  "async/click/a8000/t5s/iw10s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 8.092
+  },
+  "async/wuev/a8000/t5s/iw10s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 8.051
+  },
+  "async/etsb/a8000/t5s/iw10s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 8.064
+  },
+  "explicit/wuev_timeout1s_st10s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 1.067
+  },
+  "explicit/wuev_timeout5s_st1s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 5.16
+  },
+  "nav/goto_slow5s_plt2s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 2.036
+  },
+  "nav/goto_slow5s_st2s_plt300s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 5.056
+  }
+ },
+ "goto_run_on_failure": [
+  {
+   "label": "goto/rof=None",
+   "kw": "Go To",
+   "args": [
+    "http://127.0.0.1:8765/slow?ms=5000"
+   ],
+   "status": "FAIL",
+   "elapsed": 2.016,
+   "msg": "TimeoutError: page.goto: Timeout 2000ms exceeded.\nCall log:\n  - navigating to \"http://127.0.0.1:8765/slow?ms=5000\", waiting until \"load\"\n"
+  },
+  {
+   "label": "goto/rof=None",
+   "kw": "Go To",
+   "args": [
+    "http://127.0.0.1:8765/slow?ms=5000"
+   ],
+   "status": "FAIL",
+   "elapsed": 0.01,
+   "msg": "Error: page.goto: net::ERR_ABORTED at http://127.0.0.1:8765/slow?ms=5000\nCall log:\n  - navigating to \"http://127.0.0.1:8765/slow?ms=5000\", waiting until \"load\"\n"
+  },
+  {
+   "label": "click_missing/rof=None",
+   "kw": "Click",
+   "args": [
+    "css=#nope"
+   ],
+   "status": "FAIL",
+   "elapsed": 2.015,
+   "msg": "TimeoutError: locator.click: Timeout 2000ms exceeded.\nCall log:\n  - waiting for locator('#nope')\n    - waiting for \"http://127.0.0.1:8765/slow?ms=5000\" navigation to finish...\n"
+  }
+ ],
+ "nav_under_listener": {
+  "nav_listener/newpage_slow5s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 5.141
+  },
+  "nav_listener/goto_slow5s": {
+   "n": 1,
+   "status": [
+    "PASS"
+   ],
+   "median_s": 5.041
+  },
+  "nav_listener/goto_slow12s": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 12.133
+  },
+  "nav_listener/click_missing_after_nav": {
+   "n": 1,
+   "status": [
+    "FAIL"
+   ],
+   "median_s": 2.094
+  }
+ },
+ "policy_browser_settle10s": [
+  {
+   "owner": "Browser",
+   "keyword": "Click",
+   "selector": "id=a4000",
+   "failed_after": 2.12,
+   "settled_for_at_start": 0.0,
+   "recheck_waited": 2.08,
+   "verdict": "slow",
+   "appeared_after_change": 4.21,
+   "recheck_total": 2.09
+  },
+  {
+   "owner": "Browser",
+   "keyword": "Click",
+   "selector": "css=#nope",
+   "failed_after": 2.12,
+   "settled_for_at_start": 0.0,
+   "recheck_waited": 8.03,
+   "verdict": "missing",
+   "waited_since_change": 10.16,
+   "recheck_total": 8.03
+  },
+  {
+   "owner": "Browser",
+   "keyword": "Click",
+   "selector": "css=#nope",
+   "failed_after": 2.16,
+   "settled_for_at_start": 10.0,
+   "verdict": "missing_settled",
+   "recheck_total": 0.01
+  },
+  {
+   "owner": "Browser",
+   "keyword": "Click",
+   "selector": "id=a8000",
+   "failed_after": 2.09,
+   "settled_for_at_start": 0.0,
+   "recheck_waited": 5.96,
+   "verdict": "slow",
+   "appeared_after_change": 8.07,
+   "recheck_total": 5.97
+  },
+  {
+   "owner": "Browser",
+   "keyword": "Get Text",
+   "selector": "css=#nope",
+   "failed_after": 2.12,
+   "settled_for_at_start": 0.0,
+   "recheck_waited": 8.03,
+   "verdict": "missing",
+   "waited_since_change": 10.16,
+   "recheck_total": 8.04
+  },
+  {
+   "owner": "Browser",
+   "keyword": "Fill Text",
+   "selector": "id=card",
+   "failed_after": 2.09,
+   "settled_for_at_start": 3.01,
+   "recheck_waited": 4.92,
+   "verdict": "missing",
+   "waited_since_change": 10.03,
+   "recheck_total": 4.93
+  }
+ ],
+ "policy_browser_settle5s": [
+  {
+   "owner": "Browser",
+   "keyword": "Click",
+   "selector": "id=a4000",
+   "failed_after": 2.09,
+   "settled_for_at_start": 0.0,
+   "recheck_waited": 2.08,
+   "verdict": "slow",
+   "appeared_after_change": 4.18,
+   "recheck_total": 2.08
+  },
+  {
+   "owner": "Browser",
+   "keyword": "Click",
+   "selector": "css=#nope",
+   "failed_after": 2.1,
+   "settled_for_at_start": 0.0,
+   "recheck_waited": 3.11,
+   "verdict": "missing",
+   "waited_since_change": 5.23,
+   "frame_hint": "",
+   "recheck_total": 3.13
+  },
+  {
+   "owner": "Browser",
+   "keyword": "Click",
+   "selector": "css=#nope",
+   "failed_after": 2.11,
+   "settled_for_at_start": 10.01,
+   "verdict": "missing_settled",
+   "frame_hint": "",
+   "recheck_total": 0.02
+  },
+  {
+   "owner": "Browser",
+   "keyword": "Click",
+   "selector": "id=a8000",
+   "failed_after": 2.1,
+   "settled_for_at_start": 0.0,
+   "recheck_waited": 3.11,
+   "verdict": "missing",
+   "waited_since_change": 5.22,
+   "frame_hint": "",
+   "recheck_total": 3.13
+  },
+  {
+   "owner": "Browser",
+   "keyword": "Get Text",
+   "selector": "css=#nope",
+   "failed_after": 2.11,
+   "settled_for_at_start": 0.0,
+   "recheck_waited": 3.11,
+   "verdict": "missing",
+   "waited_since_change": 5.23,
+   "frame_hint": "",
+   "recheck_total": 3.13
+  },
+  {
+   "owner": "Browser",
+   "keyword": "Fill Text",
+   "selector": "id=card",
+   "failed_after": 2.11,
+   "settled_for_at_start": 3.01,
+   "recheck_waited": 0.0,
+   "verdict": "missing",
+   "waited_since_change": 5.13,
+   "frame_hint": " Found inside iframe #0: use `css=iframe >> nth=0 >>> id=card`.",
+   "recheck_total": 0.07
+  }
+ ],
+ "policy_selenium_settle10s": [
+  {
+   "owner": "SeleniumLibrary",
+   "keyword": "Click Element",
+   "selector": "id:a4000",
+   "failed_after": 0.04,
+   "settled_for_at_start": 0.0,
+   "recheck_waited": 3.97,
+   "verdict": "slow",
+   "appeared_after_change": 4.03,
+   "recheck_total": 3.98
+  },
+  {
+   "owner": "SeleniumLibrary",
+   "keyword": "Click Element",
+   "selector": "css:#nope",
+   "failed_after": 0.02,
+   "settled_for_at_start": 0.0,
+   "recheck_waited": 10.06,
+   "verdict": "missing",
+   "waited_since_change": 10.1,
+   "frame_hint": "",
+   "recheck_total": 10.09
+  },
+  {
+   "owner": "SeleniumLibrary",
+   "keyword": "Click Element",
+   "selector": "css:#nope",
+   "failed_after": 0.03,
+   "settled_for_at_start": 10.01,
+   "verdict": "missing_settled",
+   "frame_hint": "",
+   "recheck_total": 0.04
+  },
+  {
+   "owner": "SeleniumLibrary",
+   "keyword": "Wait Until Element Is Visible",
+   "selector": "id:a4000",
+   "failed_after": 2.18,
+   "settled_for_at_start": 0.0,
+   "recheck_waited": 1.86,
+   "verdict": "slow",
+   "appeared_after_change": 4.08,
+   "recheck_total": 1.9
+  },
+  {
+   "owner": "SeleniumLibrary",
+   "keyword": "Wait Until Element Is Visible",
+   "selector": "css:#nope",
+   "failed_after": 2.17,
+   "settled_for_at_start": 10.01,
+   "verdict": "missing_settled",
+   "frame_hint": "",
+   "recheck_total": 0.03
+  },
+  {
+   "owner": "SeleniumLibrary",
+   "keyword": "Input Text",
+   "selector": "id:card",
+   "failed_after": 0.03,
+   "settled_for_at_start": 10.0,
+   "verdict": "missing_settled",
+   "frame_hint": " The page has 1 iframe(s): try `Select Frame` first.",
+   "recheck_total": 0.03
+  }
+ ],
+ "semantics": {
+  "browser": {
+   "Set Browser Timeout": "returns previous value ('10 seconds'); scope arg Global|Suite(default)|Test; Test scope reverts after the test, Global persists; affects every element wait (Click/Fill/Get Text/Wait For Elements State default) AND navigation (New Page, Go To). Close Browser/Context always get >=20 s.",
+   "Library Browser timeout=": "same effect as Set Browser Timeout at import (2s import -> 2.1 s time-to-fail); .save copies it into *** Settings ***",
+   "retry_assertions_for": "default 1 s; effective assertion retry = min(retry_assertions_for, browser timeout) (ra3s/bt10s 3.1 s, ra5s/bt2s 2.1 s, ra3s/bt1s 1.09 s) -> shortening timeout to 2 s does not change default assertion behaviour",
+   "explicit timeout=": "Wait For Elements State timeout= and Go To timeout= override the browser timeout in both directions",
+   "Get Element Count": "never waits (0.01 s) -> safe existence probe",
+   "Get Elements": "waits the full timeout then PASSES with an empty list (10 s / 2 s / 1 s)",
+   "Go To failure": "costs ~2x timeout with default run_on_failure (fail screenshot waits for the pending navigation): 2s timeout -> 4.02 s; run_on_failure=None -> 2.02 s; New Page failure 2.1 s",
+   "screenshot overhead": "run_on_failure screenshot adds ~70-100 ms to a locator failure"
+  },
+  "selenium": {
+   "Set Selenium Timeout": "returns old value ('5 seconds'); affects ONLY Wait Until* keywords (and explicit timeout= overrides); not Go To, not Click/Get Text",
+   "Set Selenium Implicit Wait": "default 0; applies to EVERY element lookup: Click Element, Get Text, Element Text Should Be, Page Should Contain Element, Input Text, Get Element Count and even Page Should NOT Contain Element (passes only after the full implicit wait); adds to Wait Until* (t5s+iw2s -> 6.7 s; iw10s -> 10.2 s)",
+   "Set Selenium Page Load Timeout": "separate (default 5 min); 2s -> Go To fails at 2.0 s with TimeoutException 'Timed out receiving message from renderer'",
+   "no-wait keywords": "with implicit wait 0, Click Element/Get Text/Element Text Should Be fail in ~15 ms on a slow-but-valid element regardless of the Selenium timeout (a real test bug, not a REPL artefact)"
+  }
+ },
+ "failure_message_regexes": {
+  "browser_locator_timeout": "TimeoutError: locator\\.(\\w+): Timeout (\\d+)ms exceeded\\.\\s*\\n\\s*Call log:\\s*\\n\\s*- waiting for locator\\('(.+?)'\\)( to be (\\w+))?",
+  "browser_navigation_timeout": "TimeoutError: page\\.goto: Timeout (\\d+)ms exceeded\\.[\\s\\S]*?navigating to \\\"([^\\\"]+)\\\", waiting until \\\"(\\w+)\\\"",
+  "browser_navigation_aborted": "Error: page\\.goto: net::ERR_ABORTED at (\\S+)",
+  "browser_waiting_navigation": "waiting for \\\"([^\\\"]+)\\\" navigation to finish",
+  "browser_assertion": "^(Text|Title|Element count for selector `.+?` is|Url|Attribute) '.*' \\(\\w+\\) should (be|contain|not be|start with|end with|match)",
+  "selenium_not_found": "^Element with locator '(.+)' not found\\.$",
+  "selenium_wait_until": "^Element '(.+)' (not visible after|did not appear in) ([\\d.]+ \\w+)\\.$",
+  "selenium_page_contains": "^Page should have contained element '(.+)' but did not\\.$",
+  "selenium_page_load": "TimeoutException: Message: timeout: Timed out receiving message from renderer"
+ },
+ "leak": {
+  "save_copies_agent_lines": "REPL .save keeps `Library    Browser    timeout=2s` in *** Settings *** and `Set Browser Timeout    3s` in the test (out/repl/saved_A.robot)",
+  "listener_injection": "ROBOT_OPTIONS='--listener rfh_repl_timeouts.py:2s:5s' -> REPL shortened, .save output has plain `Library    Browser` (saved_B.robot); listener inactive under `robotcode robot`, `robotcode robot-debug` and plain `robot` (timeout_in_run=10 seconds in all three)"
+ }
+}

@@ -1,0 +1,559 @@
+{
+ "claude/s1_detach": {
+  "model": "claude-haiku-4-5",
+  "rc": 0,
+  "wall_s": 16.7,
+  "daemon_alive_3s_after_session": true,
+  "daemon_alive_10s_after_session": true,
+  "n_tool_calls": 3,
+  "tools": [
+   "Bash",
+   "Bash",
+   "Bash"
+  ],
+  "pings_log": [
+   "08:44:29 via=unix PING from-claude-call2",
+   "08:44:29 via=tcp PING from-claude-call2",
+   "08:44:35 via=unix PING from-claude-call3",
+   "08:44:35 via=tcp PING from-claude-call3"
+  ],
+  "signals": []
+ },
+ "claude/s2_cross_env": {
+  "model": "claude-haiku-4-5",
+  "rc": 0,
+  "wall_s": 20.6,
+  "daemon_alive_3s_after_session": false,
+  "daemon_alive_10s_after_session": false,
+  "n_tool_calls": 6,
+  "tools": [
+   "Bash",
+   "Bash",
+   "Bash",
+   "Bash",
+   "Bash",
+   "Bash"
+  ],
+  "pings_log": [
+   "08:44:29 via=unix PING from-claude-call2",
+   "08:44:29 via=tcp PING from-claude-call2",
+   "08:44:35 via=unix PING from-claude-call3",
+   "08:44:35 via=tcp PING from-claude-call3",
+   "08:45:38 via=unix PING from-claude-newsession",
+   "08:45:38 via=tcp PING from-claude-newsession",
+   "08:45:39 via=unix STOP"
+  ],
+  "signals": []
+ },
+ "claude/s3_naive": {
+  "model": "claude-haiku-4-5",
+  "rc": 0,
+  "wall_s": 9.6,
+  "daemon_alive_3s_after_session": true,
+  "daemon_alive_10s_after_session": true,
+  "n_tool_calls": 2,
+  "tools": [
+   "Bash",
+   "Bash"
+  ],
+  "pings_log": [
+   "08:46:09 via=unix PING from-claude-naive2",
+   "08:46:09 via=tcp PING from-claude-naive2"
+  ],
+  "signals": []
+ },
+ "claude/s4_native": {
+  "model": "claude-haiku-4-5",
+  "rc": 0,
+  "wall_s": 24.0,
+  "daemon_alive_3s_after_session": false,
+  "daemon_alive_10s_after_session": false,
+  "n_tool_calls": 3,
+  "tools": [
+   "Bash",
+   "Bash",
+   "Read"
+  ],
+  "pings_log": [
+   "08:46:36 via=unix PING from-claude-native2",
+   "08:46:36 via=tcp PING from-claude-native2"
+  ],
+  "signals": [
+   "pid=3600780 SIGNAL SIGTERM"
+  ]
+ },
+ "claude/s5_stdin_timeout": {
+  "model": "claude-haiku-4-5",
+  "rc": 0,
+  "wall_s": 86.5,
+  "daemon_alive_3s_after_session": false,
+  "daemon_alive_10s_after_session": false,
+  "n_tool_calls": 2,
+  "tools": [
+   "Bash",
+   "Bash"
+  ],
+  "pings_log": [],
+  "signals": []
+ },
+ "claude/s6_mcp": {
+  "model": "claude-haiku-4-5",
+  "rc": 0,
+  "wall_s": 8.5,
+  "daemon_alive_3s_after_session": false,
+  "daemon_alive_10s_after_session": false,
+  "n_tool_calls": 2,
+  "tools": [
+   "ToolSearch",
+   "mcp__echoprobe__echo"
+  ],
+  "pings_log": [],
+  "signals": []
+ },
+ "claude/s7_setsid": {
+  "model": "claude-haiku-4-5",
+  "rc": 0,
+  "wall_s": 11.4,
+  "daemon_alive_3s_after_session": true,
+  "daemon_alive_10s_after_session": true,
+  "n_tool_calls": 2,
+  "tools": [
+   "Bash",
+   "Bash"
+  ],
+  "pings_log": [
+   "08:50:01 via=unix PING from-claude-setsidf2",
+   "08:50:01 via=tcp PING from-claude-setsidf2"
+  ],
+  "signals": []
+ },
+ "claude/s8_replserver": {
+  "model": "claude-haiku-4-5",
+  "rc": 0,
+  "wall_s": 17.1,
+  "daemon_alive_3s_after_session": false,
+  "daemon_alive_10s_after_session": false,
+  "n_tool_calls": 4,
+  "tools": [
+   "Bash",
+   "Bash",
+   "Bash",
+   "Bash"
+  ],
+  "pings_log": [],
+  "signals": []
+ },
+ "codex/s1_detach": {
+  "model": "gpt-5.6-luna",
+  "rc": 0,
+  "wall_s": 26.2,
+  "daemon_alive_3s_after_session": true,
+  "daemon_alive_10s_after_session": true,
+  "n_tool_calls": 3,
+  "tools": [
+   "command_execution",
+   "command_execution",
+   "command_execution"
+  ],
+  "pings_log": [
+   "08:44:34 via=unix PING from-codex-call2",
+   "08:44:34 via=tcp PING from-codex-call2",
+   "08:44:43 via=unix PING from-codex-call3",
+   "08:44:43 via=tcp PING from-codex-call3"
+  ],
+  "signals": []
+ },
+ "codex/s2_cross_env": {
+  "model": "gpt-5.6-luna",
+  "rc": 0,
+  "wall_s": 33.2,
+  "daemon_alive_3s_after_session": false,
+  "daemon_alive_10s_after_session": false,
+  "n_tool_calls": 6,
+  "tools": [
+   "command_execution",
+   "command_execution",
+   "command_execution",
+   "command_execution",
+   "command_execution",
+   "command_execution"
+  ],
+  "pings_log": [
+   "08:44:34 via=unix PING from-codex-call2",
+   "08:44:34 via=tcp PING from-codex-call2",
+   "08:44:43 via=unix PING from-codex-call3",
+   "08:44:43 via=tcp PING from-codex-call3",
+   "08:45:39 via=unix PING from-codex-newsession",
+   "08:45:39 via=tcp PING from-codex-newsession",
+   "08:45:42 via=unix STOP"
+  ],
+  "signals": []
+ },
+ "codex/s3_naive": {
+  "model": "gpt-5.6-luna",
+  "rc": 0,
+  "wall_s": 15.1,
+  "daemon_alive_3s_after_session": false,
+  "daemon_alive_10s_after_session": false,
+  "n_tool_calls": 2,
+  "tools": [
+   "command_execution",
+   "command_execution"
+  ],
+  "pings_log": [],
+  "signals": []
+ },
+ "codex/s4_native": {
+  "model": "gpt-5.6-luna",
+  "rc": 0,
+  "wall_s": 18.1,
+  "daemon_alive_3s_after_session": false,
+  "daemon_alive_10s_after_session": false,
+  "n_tool_calls": 1,
+  "tools": [
+   "command_execution"
+  ],
+  "pings_log": [
+   "08:46:57 via=unix PING from-codex-native2",
+   "08:46:57 via=tcp PING from-codex-native2"
+  ],
+  "signals": []
+ },
+ "codex/s5_stdin_timeout": {
+  "model": "gpt-5.6-luna",
+  "rc": 0,
+  "wall_s": 78.9,
+  "daemon_alive_3s_after_session": false,
+  "daemon_alive_10s_after_session": false,
+  "n_tool_calls": 1,
+  "tools": [
+   "command_execution"
+  ],
+  "pings_log": [],
+  "signals": []
+ },
+ "codex/s6_mcp": {
+  "model": "gpt-5.6-luna",
+  "rc": 0,
+  "wall_s": 10.9,
+  "daemon_alive_3s_after_session": false,
+  "daemon_alive_10s_after_session": false,
+  "n_tool_calls": 1,
+  "tools": [
+   "mcp_tool_call"
+  ],
+  "pings_log": [],
+  "signals": []
+ },
+ "codex/s7_setsid": {
+  "model": "gpt-5.6-luna",
+  "rc": 0,
+  "wall_s": 16.9,
+  "daemon_alive_3s_after_session": true,
+  "daemon_alive_10s_after_session": true,
+  "n_tool_calls": 2,
+  "tools": [
+   "command_execution",
+   "command_execution"
+  ],
+  "pings_log": [
+   "08:50:01 via=unix PING from-codex-setsidf2",
+   "08:50:01 via=tcp PING from-codex-setsidf2"
+  ],
+  "signals": []
+ },
+ "codex/s8_replserver": {
+  "model": "gpt-5.6-luna",
+  "rc": 0,
+  "wall_s": 36.4,
+  "daemon_alive_3s_after_session": false,
+  "daemon_alive_10s_after_session": false,
+  "n_tool_calls": 4,
+  "tools": [
+   "command_execution",
+   "command_execution",
+   "command_execution",
+   "command_execution"
+  ],
+  "pings_log": [],
+  "signals": []
+ },
+ "copilot/s1_detach": {
+  "model": "gpt-4.1",
+  "rc": 0,
+  "wall_s": 45.2,
+  "daemon_alive_3s_after_session": true,
+  "daemon_alive_10s_after_session": true,
+  "n_tool_calls": 3,
+  "tools": [
+   "bash",
+   "bash",
+   "bash"
+  ],
+  "pings_log": [
+   "08:44:46 via=unix PING from-copilot-call2",
+   "08:44:46 via=tcp PING from-copilot-call2",
+   "08:44:57 via=unix PING from-copilot-call3",
+   "08:44:57 via=tcp PING from-copilot-call3"
+  ],
+  "signals": []
+ },
+ "copilot/s2_cross_env": {
+  "model": "gpt-4.1",
+  "rc": 0,
+  "wall_s": 34.3,
+  "daemon_alive_3s_after_session": false,
+  "daemon_alive_10s_after_session": false,
+  "n_tool_calls": 6,
+  "tools": [
+   "bash",
+   "bash",
+   "bash",
+   "bash",
+   "bash",
+   "bash"
+  ],
+  "pings_log": [
+   "08:44:46 via=unix PING from-copilot-call2",
+   "08:44:46 via=tcp PING from-copilot-call2",
+   "08:44:57 via=unix PING from-copilot-call3",
+   "08:44:57 via=tcp PING from-copilot-call3",
+   "08:45:52 via=unix STOP"
+  ],
+  "signals": []
+ },
+ "copilot/s3_naive": {
+  "model": "gpt-4.1",
+  "rc": 0,
+  "wall_s": 28.9,
+  "daemon_alive_3s_after_session": true,
+  "daemon_alive_10s_after_session": true,
+  "n_tool_calls": 2,
+  "tools": [
+   "bash",
+   "bash"
+  ],
+  "pings_log": [
+   "08:46:37 via=unix PING from-copilot-naive2",
+   "08:46:37 via=tcp PING from-copilot-naive2"
+  ],
+  "signals": [
+   "pid=3600749 SIGNAL SIGHUP"
+  ]
+ },
+ "copilot/s4_native": {
+  "model": "gpt-4.1",
+  "rc": 0,
+  "wall_s": 29.9,
+  "daemon_alive_3s_after_session": true,
+  "daemon_alive_10s_after_session": true,
+  "n_tool_calls": 2,
+  "tools": [
+   "bash",
+   "bash"
+  ],
+  "pings_log": [
+   "08:47:20 via=unix PING from-copilot-native2",
+   "08:47:20 via=tcp PING from-copilot-native2"
+  ],
+  "signals": []
+ },
+ "copilot/s5_stdin_timeout": {
+  "model": "gpt-4.1",
+  "rc": 0,
+  "wall_s": 117.6,
+  "daemon_alive_3s_after_session": false,
+  "daemon_alive_10s_after_session": false,
+  "n_tool_calls": 6,
+  "tools": [
+   "bash",
+   "bash",
+   "write_bash",
+   "write_bash",
+   "read_bash",
+   "read_bash"
+  ],
+  "pings_log": [],
+  "signals": []
+ },
+ "copilot/s6_mcp": {
+  "model": "gpt-4.1",
+  "rc": 0,
+  "wall_s": 26.5,
+  "daemon_alive_3s_after_session": false,
+  "daemon_alive_10s_after_session": false,
+  "n_tool_calls": 2,
+  "tools": [
+   "echoprobe-echo",
+   "echoprobe-echo"
+  ],
+  "pings_log": [],
+  "signals": []
+ },
+ "copilot/s7_setsid": {
+  "model": "gpt-4.1",
+  "rc": 0,
+  "wall_s": 41.5,
+  "daemon_alive_3s_after_session": true,
+  "daemon_alive_10s_after_session": true,
+  "n_tool_calls": 2,
+  "tools": [
+   "bash",
+   "bash"
+  ],
+  "pings_log": [
+   "08:52:46 via=unix PING from-copilot-setsidf2",
+   "08:52:46 via=tcp PING from-copilot-setsidf2"
+  ],
+  "signals": []
+ },
+ "copilot/s8_replserver": {
+  "model": "gpt-4.1",
+  "rc": 0,
+  "wall_s": 74.7,
+  "daemon_alive_3s_after_session": false,
+  "daemon_alive_10s_after_session": false,
+  "n_tool_calls": 4,
+  "tools": [
+   "bash",
+   "bash",
+   "bash",
+   "bash"
+  ],
+  "pings_log": [],
+  "signals": []
+ },
+ "opencode/s1_detach": {
+  "model": "minimax-coding-plan/MiniMax-M2.7",
+  "rc": 0,
+  "wall_s": 25.7,
+  "daemon_alive_3s_after_session": true,
+  "daemon_alive_10s_after_session": true,
+  "n_tool_calls": 3,
+  "tools": [
+   "bash",
+   "bash",
+   "bash"
+  ],
+  "pings_log": [
+   "08:44:36 via=unix PING from-opencode-call2",
+   "08:44:36 via=tcp PING from-opencode-call2",
+   "08:44:44 via=unix PING from-opencode-call3",
+   "08:44:44 via=tcp PING from-opencode-call3"
+  ],
+  "signals": []
+ },
+ "opencode/s2_cross_env": {
+  "model": "minimax-coding-plan/MiniMax-M2.7",
+  "rc": 0,
+  "wall_s": 32.2,
+  "daemon_alive_3s_after_session": false,
+  "daemon_alive_10s_after_session": false,
+  "n_tool_calls": 6,
+  "tools": [
+   "bash",
+   "bash",
+   "bash",
+   "bash",
+   "bash",
+   "bash"
+  ],
+  "pings_log": [
+   "08:44:36 via=unix PING from-opencode-call2",
+   "08:44:36 via=tcp PING from-opencode-call2",
+   "08:44:44 via=unix PING from-opencode-call3",
+   "08:44:44 via=tcp PING from-opencode-call3",
+   "08:45:42 via=unix PING from-opencode-newsession",
+   "08:45:42 via=tcp PING from-opencode-newsession",
+   "08:45:45 via=unix STOP"
+  ],
+  "signals": []
+ },
+ "opencode/s3_naive": {
+  "model": "minimax-coding-plan/MiniMax-M2.7",
+  "rc": 0,
+  "wall_s": 18.8,
+  "daemon_alive_3s_after_session": true,
+  "daemon_alive_10s_after_session": true,
+  "n_tool_calls": 2,
+  "tools": [
+   "bash",
+   "bash"
+  ],
+  "pings_log": [
+   "08:46:30 via=unix PING from-opencode-naive2",
+   "08:46:30 via=tcp PING from-opencode-naive2"
+  ],
+  "signals": []
+ },
+ "opencode/s4_native": {
+  "model": "minimax-coding-plan/MiniMax-M2.7",
+  "rc": 0,
+  "wall_s": 21.7,
+  "daemon_alive_3s_after_session": false,
+  "daemon_alive_10s_after_session": false,
+  "n_tool_calls": 0,
+  "tools": [],
+  "pings_log": [],
+  "signals": []
+ },
+ "opencode/s5_stdin_timeout": {
+  "model": "minimax-coding-plan/MiniMax-M2.7",
+  "rc": 0,
+  "wall_s": 97.9,
+  "daemon_alive_3s_after_session": false,
+  "daemon_alive_10s_after_session": false,
+  "n_tool_calls": 1,
+  "tools": [
+   "bash"
+  ],
+  "pings_log": [],
+  "signals": []
+ },
+ "opencode/s6_mcp": {
+  "model": "minimax-coding-plan/MiniMax-M2.7",
+  "rc": 0,
+  "wall_s": 15.4,
+  "daemon_alive_3s_after_session": false,
+  "daemon_alive_10s_after_session": false,
+  "n_tool_calls": 1,
+  "tools": [
+   "echoprobe_echo"
+  ],
+  "pings_log": [],
+  "signals": []
+ },
+ "opencode/s7_setsid": {
+  "model": "minimax-coding-plan/MiniMax-M2.7",
+  "rc": 0,
+  "wall_s": 19.5,
+  "daemon_alive_3s_after_session": true,
+  "daemon_alive_10s_after_session": true,
+  "n_tool_calls": 2,
+  "tools": [
+   "bash",
+   "bash"
+  ],
+  "pings_log": [
+   "08:50:10 via=unix PING from-opencode-setsidf2",
+   "08:50:10 via=tcp PING from-opencode-setsidf2"
+  ],
+  "signals": []
+ },
+ "opencode/s8_replserver": {
+  "model": "minimax-coding-plan/MiniMax-M2.7",
+  "rc": 0,
+  "wall_s": 29.3,
+  "daemon_alive_3s_after_session": false,
+  "daemon_alive_10s_after_session": false,
+  "n_tool_calls": 4,
+  "tools": [
+   "bash",
+   "bash",
+   "bash",
+   "bash"
+  ],
+  "pings_log": [],
+  "signals": []
+ }
+}

@@ -1,0 +1,63 @@
+{
+ "init_s": 0.7956932410597801,
+ "capabilities": [
+  "codeActionProvider",
+  "codeLensProvider",
+  "completionProvider",
+  "definitionProvider",
+  "documentFormattingProvider",
+  "documentHighlightProvider",
+  "documentRangeFormattingProvider",
+  "executeCommandProvider",
+  "foldingRangeProvider",
+  "hoverProvider",
+  "implementationProvider",
+  "inlayHintProvider",
+  "inlineValueProvider",
+  "referencesProvider",
+  "renameProvider",
+  "selectionRangeProvider",
+  "semanticTokensProvider",
+  "signatureHelpProvider",
+  "textDocumentSync",
+  "workspace"
+ ],
+ "rows": [
+  {
+   "step": "v1 Fill Text missing arg",
+   "diag_s": 2.3157000499777496,
+   "publishes": 4,
+   "diags": [
+    "DataError: Keyword 'Browser.Fill Text' expected 2 to 3 arguments, got 1."
+   ]
+  },
+  {
+   "step": "v2 fixed",
+   "diag_s": null,
+   "publishes": 0,
+   "diags": []
+  },
+  {
+   "step": "v3 typo Clik",
+   "diag_s": null,
+   "publishes": 0,
+   "diags": []
+  },
+  {
+   "step": "v4 add RequestsLibrary + undefined var",
+   "diag_s": null,
+   "publishes": 0,
+   "diags": []
+  },
+  {
+   "step": "v5 selenium kw in browser session",
+   "diag_s": null,
+   "publishes": 0,
+   "diags": []
+  }
+ ],
+ "completion_s": 0.19056170107796788,
+ "completion_items": 300,
+ "hover_s": 0.00460054399445653,
+ "hover_chars": 1448
+}

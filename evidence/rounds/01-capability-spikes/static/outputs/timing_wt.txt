@@ -1,0 +1,33 @@
+# env=wt robotcode, version 2.7.0  2026-10-01T00:44:50+02:00
+startup floor: robotcode --version                           1.40s exit=0
+cold  single cases/v09_browser_ok.robot                      6.28s exit=0
+warm1 single cases/v09_browser_ok.robot                      1.43s exit=0
+warm2 single cases/v09_browser_ok.robot                      1.12s exit=0
+cold  single cases/v10_requests_ok.robot                     6.74s exit=0
+warm1 single cases/v10_requests_ok.robot                     1.36s exit=0
+warm2 single cases/v10_requests_ok.robot                     1.03s exit=0
+cold  single cases/v01_builtin_ok.robot                      2.83s exit=0
+warm1 single cases/v01_builtin_ok.robot                      0.81s exit=0
+warm2 single cases/v01_builtin_ok.robot                      0.88s exit=0
+cold  single cases/v11_selenium_ok.robot                     4.60s exit=0
+warm1 single cases/v11_selenium_ok.robot                     0.93s exit=0
+cold  corpus (all cases/, no ns cache)                      13.91s exit=1
+warm  corpus (all cases/, no ns cache)                       1.91s exit=1
+warm  corpus (all cases/, no ns cache) #2                    1.86s exit=1
+cold  corpus --cache-namespaces                             14.27s exit=1
+warm  corpus --cache-namespaces                              2.16s exit=1
+warm  corpus --cache-namespaces #2                           2.26s exit=1
+warm  single browser --cache-namespaces                      0.83s exit=0
+# cache info after runs
+  Directory:  ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/.robotcode_cache/3.13.11/7.3.2
+  Database:   cache.db  (4.0 KB)
+  Version:    2.7.0
+
+  Section      Entries        Size  Created              Modified           
+  ──────────────────────────────────────────────────────────────────────────
+  library           10      1.2 MB  2026-09-30 22:45:45  2026-09-30 22:45:56
+  variables          0           —  —                    —                  
+  resource          49     54.8 KB  2026-09-30 22:45:43  2026-09-30 22:45:57
+  namespace         47    267.5 KB  2026-09-30 22:45:46  2026-09-30 22:45:58
+  ──────────────────────────────────────────────────────────────────────────
+  Total            106      1.5 MB

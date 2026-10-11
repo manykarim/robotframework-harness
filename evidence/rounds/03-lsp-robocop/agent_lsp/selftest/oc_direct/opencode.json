@@ -1,0 +1,1 @@
+{"$schema":"https://opencode.ai/config.json","lsp":{"robotcode":{"command":["~/workspace/robotcode-experiments/.venv/bin/robotcode","language-server","--stdio"],"extensions":[".robot",".resource"]}}}

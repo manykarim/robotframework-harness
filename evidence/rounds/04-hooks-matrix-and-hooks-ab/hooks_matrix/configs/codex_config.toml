@@ -1,0 +1,49 @@
+model = "gpt-5.6-luna"
+model_reasoning_effort = "low"
+
+[[hooks.SessionStart]]
+[[hooks.SessionStart.hooks]]
+type = "command"
+command = "/usr/bin/python3 ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/bin/hooklog.py --agent codex --event SessionStart --cell ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/runs/codex/main --src plugin"
+
+[[hooks.UserPromptSubmit]]
+[[hooks.UserPromptSubmit.hooks]]
+type = "command"
+command = "/usr/bin/python3 ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/bin/hooklog.py --agent codex --event UserPromptSubmit --cell ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/runs/codex/main --src plugin"
+
+[[hooks.PreToolUse]]
+matcher = "apply_patch|Edit|Write|Bash"
+[[hooks.PreToolUse.hooks]]
+type = "command"
+command = "/usr/bin/python3 ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/bin/hooklog.py --agent codex --event PreToolUse --cell ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/runs/codex/main --src plugin"
+
+[[hooks.PostToolUse]]
+matcher = "apply_patch|Edit|Write|Bash"
+[[hooks.PostToolUse.hooks]]
+type = "command"
+command = "/usr/bin/python3 ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/bin/hooklog.py --agent codex --event PostToolUse --cell ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/runs/codex/main --src plugin"
+
+[[hooks.PermissionRequest]]
+[[hooks.PermissionRequest.hooks]]
+type = "command"
+command = "/usr/bin/python3 ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/bin/hooklog.py --agent codex --event PermissionRequest --cell ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/runs/codex/main --src plugin --passive"
+
+[[hooks.Stop]]
+[[hooks.Stop.hooks]]
+type = "command"
+command = "/usr/bin/python3 ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/bin/hooklog.py --agent codex --event Stop --cell ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/runs/codex/main --src plugin"
+
+[[hooks.SessionEnd]]
+[[hooks.SessionEnd.hooks]]
+type = "command"
+command = "/usr/bin/python3 ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/bin/hooklog.py --agent codex --event SessionEnd --cell ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/runs/codex/main --src plugin"
+
+[[hooks.PreCompact]]
+[[hooks.PreCompact.hooks]]
+type = "command"
+command = "/usr/bin/python3 ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/bin/hooklog.py --agent codex --event PreCompact --cell ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/runs/codex/main --src plugin --passive"
+
+[[hooks.Interrupt]]
+[[hooks.Interrupt.hooks]]
+type = "command"
+command = "/usr/bin/python3 ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/bin/hooklog.py --agent codex --event Interrupt --cell ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round4/hooks_matrix/runs/codex/main --src plugin --passive"

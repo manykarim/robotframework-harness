@@ -1,0 +1,23 @@
+{
+ "round": "1",
+ "folder": "01-capability-spikes",
+ "title": "Capability spikes: robotcode as the execution and analysis backend",
+ "kind": "spike",
+ "dates": [
+  "2026-10-01"
+ ],
+ "tools": {
+  "robotcode": "2.7.0",
+  "robotframework": "7.5 (cross-checked 7.3.2)",
+  "rf-mcp": "0.36.0"
+ },
+ "agents": "none (scripted experiments; research subagents of the coordinating session)",
+ "studies": [
+  "research",
+  "map",
+  "hints",
+  "stepwise",
+  "static",
+  "locators"
+ ]
+}

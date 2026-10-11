@@ -1,0 +1,1966 @@
+{
+ "about": "Scenario prompts and grader definitions of this round, extracted from the archived harness (eval-snapshots/ab-7994ae3/harness/harness.py, the version committed at the end of the research). Per the findings, prompts and graders did not change between the rounds that share a harness_version; graders are implemented in harness.py (_grade_one) and journey_evidence.py.",
+ "harness_versions_in_results": [
+  "rc-3-journey"
+ ],
+ "grader_code_sha256": {
+  "harness.py": "fcab7d8dc3c7e5dbcd0c14b6c42e5e09dd2ef16d88190c5b5e4e9a4c8545bd5a",
+  "journey_evidence.py": "dc8d3b77d9dd728eca10c8300a320a1489e2879ec1321ae427527c1fcae486fd",
+  "analyze.py": "e90169f0572917ee90bf3c9ca45c6880760a9c923fb4902e206b291141b2b235",
+  "analyze_hooks.py": "55a69fa39d2caa3b3007a7c106a0d20bda414cd90fae6d5b484364ca35f03e6c"
+ },
+ "scenarios": [
+  {
+   "id": "tricentis_quote",
+   "skill": "browser",
+   "tier": "live",
+   "fixture": "sut-tricentis-quote",
+   "prompt": "Write a Browser-library Robot Framework test at tests/auto_quote.robot that requests an\nAutomobile insurance quote end to end on the LIVE Tricentis Vehicle Insurance sample app\n(http://sampleapp.tricentis.com/ - start on that home page). You do not know its page\nstructure yet: explore the live site to find working locators.\n\nUse this data:\n  Vehicle:  make BMW, engine performance 110 kW, date of manufacture 06/15/2020, 5 seats,\n            fuel Petrol, list price 30000, license plate RF2026, annual mileage 12000\n  Insurant: Ada Lovelace, born 12/10/1985, female, Main Street 1, 10115 Berlin, Germany,\n            occupation Employee, hobby Skydiving\n  Product:  insurance start date = the day two months from today (compute it when the test\n            runs; the app rejects start dates less than one month ahead), insurance sum\n            7.000.000,00, merit rating Bonus 1, damage insurance No Coverage, optional\n            product Euro Protection, courtesy car Yes\n  Price:    choose Platinum - the test must assert that the Platinum price per year is 509.00\n  Quote:    e-mail ada@example.com, phone 0301234567, username adal, password Secret123\n            (confirm it), then send the quote\n\nThe test must finally assert that the confirmation \"Sending e-mail success!\" is shown.\nThe test must complete the whole user journey through the site's UI up to the final confirmation (start on\nthe home page; no direct URLs to later pages), fill every field for which data is given above (all required\nfields included) with exactly that data, wait until the final confirmation/quote is actually shown and assert\nit by reading it from the page.\nThen run `robot tests/auto_quote.robot` and iterate until it passes green.\nPlaywright browsers are already initialized (use headless Chromium).",
+   "graders": [
+    {
+     "type": "file_exists",
+     "path": "tests/auto_quote.robot"
+    },
+    {
+     "type": "file_contains",
+     "path": "tests/auto_quote.robot",
+     "regex": "Library\\s+Browser"
+    },
+    {
+     "type": "file_contains",
+     "path": "tests/auto_quote.robot",
+     "regex": "(?i)sending e-mail success"
+    },
+    {
+     "type": "file_contains",
+     "path": "tests/auto_quote.robot",
+     "regex": "\\b509(\\.00)?\\b"
+    },
+    {
+     "type": "file_contains",
+     "path": "tests/auto_quote.robot",
+     "regex": "(?i)(Get Current Date|Add Time To Date|\\bdatetime\\b|timedelta|relativedelta|new Date\\()",
+     "label": "start date computed at run time"
+    },
+    {
+     "type": "files_not_contain",
+     "suite": "tests/auto_quote.robot",
+     "patterns": [
+      "(?i)\\bPass Execution\\b",
+      "(?i)(^|\\s{2,}|\\t)Skip( If)?(\\s{2,}|\\t|$)",
+      "(?i)robot:(skip|exclude|skip-on-failure)",
+      "(?i)--(skiponfailure|exitonfailure|noncritical)"
+     ]
+    },
+    {
+     "type": "robot_pass",
+     "path": "tests/auto_quote.robot",
+     "retry": 1,
+     "min_tests": 1,
+     "timeout_s": 300,
+     "loglevel": "TRACE"
+    },
+    {
+     "type": "journey",
+     "part": "confirm",
+     "label": "journey: confirmation read from page",
+     "spec": {
+      "confirm": [
+       "Sending e-mail success!"
+      ],
+      "values": [
+       "(?<![\\d.,])509\\.00(?!\\d)"
+      ],
+      "min_inputs": 28,
+      "data": [
+       [
+        "bmw"
+       ],
+       [
+        "110"
+       ],
+       [
+        "06/15/2020"
+       ],
+       {
+        "any": [
+         "5"
+        ],
+        "exact": true
+       },
+       [
+        "petrol"
+       ],
+       [
+        "30000"
+       ],
+       [
+        "rf2026"
+       ],
+       [
+        "12000"
+       ],
+       [
+        "ada"
+       ],
+       [
+        "lovelace"
+       ],
+       [
+        "12/10/1985"
+       ],
+       [
+        "main street 1"
+       ],
+       [
+        "germany"
+       ],
+       [
+        "10115"
+       ],
+       [
+        "berlin"
+       ],
+       [
+        "employee"
+       ],
+       [
+        "7000000",
+        "7.000.000"
+       ],
+       [
+        "bonus 1"
+       ],
+       [
+        "no coverage"
+       ],
+       {
+        "any": [
+         "yes"
+        ],
+        "exact": true
+       },
+       [
+        "ada@example.com"
+       ],
+       [
+        "0301234567"
+       ],
+       [
+        "adal"
+       ],
+       [
+        "secret123",
+        "<<fillsecret>>"
+       ],
+       {
+        "any": [
+         "female"
+        ],
+        "scope": "all"
+       },
+       {
+        "any": [
+         "skydiving"
+        ],
+        "scope": "all"
+       },
+       {
+        "any": [
+         "euro protection",
+         "europrotection"
+        ],
+        "scope": "all"
+       },
+       {
+        "any": [
+         "platinum"
+        ],
+        "scope": "all"
+       }
+      ],
+      "allowed_urls": [
+       "^https?://sampleapp\\.tricentis\\.com/?(101/?)?(index\\.php)?$"
+      ]
+     }
+    },
+    {
+     "type": "journey",
+     "part": "values",
+     "label": "journey: value read from page",
+     "spec": {
+      "confirm": [
+       "Sending e-mail success!"
+      ],
+      "values": [
+       "(?<![\\d.,])509\\.00(?!\\d)"
+      ],
+      "min_inputs": 28,
+      "data": [
+       [
+        "bmw"
+       ],
+       [
+        "110"
+       ],
+       [
+        "06/15/2020"
+       ],
+       {
+        "any": [
+         "5"
+        ],
+        "exact": true
+       },
+       [
+        "petrol"
+       ],
+       [
+        "30000"
+       ],
+       [
+        "rf2026"
+       ],
+       [
+        "12000"
+       ],
+       [
+        "ada"
+       ],
+       [
+        "lovelace"
+       ],
+       [
+        "12/10/1985"
+       ],
+       [
+        "main street 1"
+       ],
+       [
+        "germany"
+       ],
+       [
+        "10115"
+       ],
+       [
+        "berlin"
+       ],
+       [
+        "employee"
+       ],
+       [
+        "7000000",
+        "7.000.000"
+       ],
+       [
+        "bonus 1"
+       ],
+       [
+        "no coverage"
+       ],
+       {
+        "any": [
+         "yes"
+        ],
+        "exact": true
+       },
+       [
+        "ada@example.com"
+       ],
+       [
+        "0301234567"
+       ],
+       [
+        "adal"
+       ],
+       [
+        "secret123",
+        "<<fillsecret>>"
+       ],
+       {
+        "any": [
+         "female"
+        ],
+        "scope": "all"
+       },
+       {
+        "any": [
+         "skydiving"
+        ],
+        "scope": "all"
+       },
+       {
+        "any": [
+         "euro protection",
+         "europrotection"
+        ],
+        "scope": "all"
+       },
+       {
+        "any": [
+         "platinum"
+        ],
+        "scope": "all"
+       }
+      ],
+      "allowed_urls": [
+       "^https?://sampleapp\\.tricentis\\.com/?(101/?)?(index\\.php)?$"
+      ]
+     }
+    },
+    {
+     "type": "journey",
+     "part": "inputs",
+     "label": "journey: form fields driven",
+     "spec": {
+      "confirm": [
+       "Sending e-mail success!"
+      ],
+      "values": [
+       "(?<![\\d.,])509\\.00(?!\\d)"
+      ],
+      "min_inputs": 28,
+      "data": [
+       [
+        "bmw"
+       ],
+       [
+        "110"
+       ],
+       [
+        "06/15/2020"
+       ],
+       {
+        "any": [
+         "5"
+        ],
+        "exact": true
+       },
+       [
+        "petrol"
+       ],
+       [
+        "30000"
+       ],
+       [
+        "rf2026"
+       ],
+       [
+        "12000"
+       ],
+       [
+        "ada"
+       ],
+       [
+        "lovelace"
+       ],
+       [
+        "12/10/1985"
+       ],
+       [
+        "main street 1"
+       ],
+       [
+        "germany"
+       ],
+       [
+        "10115"
+       ],
+       [
+        "berlin"
+       ],
+       [
+        "employee"
+       ],
+       [
+        "7000000",
+        "7.000.000"
+       ],
+       [
+        "bonus 1"
+       ],
+       [
+        "no coverage"
+       ],
+       {
+        "any": [
+         "yes"
+        ],
+        "exact": true
+       },
+       [
+        "ada@example.com"
+       ],
+       [
+        "0301234567"
+       ],
+       [
+        "adal"
+       ],
+       [
+        "secret123",
+        "<<fillsecret>>"
+       ],
+       {
+        "any": [
+         "female"
+        ],
+        "scope": "all"
+       },
+       {
+        "any": [
+         "skydiving"
+        ],
+        "scope": "all"
+       },
+       {
+        "any": [
+         "euro protection",
+         "europrotection"
+        ],
+        "scope": "all"
+       },
+       {
+        "any": [
+         "platinum"
+        ],
+        "scope": "all"
+       }
+      ],
+      "allowed_urls": [
+       "^https?://sampleapp\\.tricentis\\.com/?(101/?)?(index\\.php)?$"
+      ]
+     }
+    },
+    {
+     "type": "journey",
+     "part": "nav",
+     "label": "journey: no shortcut (deep link/hard-coded)",
+     "spec": {
+      "confirm": [
+       "Sending e-mail success!"
+      ],
+      "values": [
+       "(?<![\\d.,])509\\.00(?!\\d)"
+      ],
+      "min_inputs": 28,
+      "data": [
+       [
+        "bmw"
+       ],
+       [
+        "110"
+       ],
+       [
+        "06/15/2020"
+       ],
+       {
+        "any": [
+         "5"
+        ],
+        "exact": true
+       },
+       [
+        "petrol"
+       ],
+       [
+        "30000"
+       ],
+       [
+        "rf2026"
+       ],
+       [
+        "12000"
+       ],
+       [
+        "ada"
+       ],
+       [
+        "lovelace"
+       ],
+       [
+        "12/10/1985"
+       ],
+       [
+        "main street 1"
+       ],
+       [
+        "germany"
+       ],
+       [
+        "10115"
+       ],
+       [
+        "berlin"
+       ],
+       [
+        "employee"
+       ],
+       [
+        "7000000",
+        "7.000.000"
+       ],
+       [
+        "bonus 1"
+       ],
+       [
+        "no coverage"
+       ],
+       {
+        "any": [
+         "yes"
+        ],
+        "exact": true
+       },
+       [
+        "ada@example.com"
+       ],
+       [
+        "0301234567"
+       ],
+       [
+        "adal"
+       ],
+       [
+        "secret123",
+        "<<fillsecret>>"
+       ],
+       {
+        "any": [
+         "female"
+        ],
+        "scope": "all"
+       },
+       {
+        "any": [
+         "skydiving"
+        ],
+        "scope": "all"
+       },
+       {
+        "any": [
+         "euro protection",
+         "europrotection"
+        ],
+        "scope": "all"
+       },
+       {
+        "any": [
+         "platinum"
+        ],
+        "scope": "all"
+       }
+      ],
+      "allowed_urls": [
+       "^https?://sampleapp\\.tricentis\\.com/?(101/?)?(index\\.php)?$"
+      ]
+     }
+    },
+    {
+     "type": "no_deprecated_keywords",
+     "path": "tests/auto_quote.robot"
+    }
+   ],
+   "primary_metric": "all",
+   "timeout_s": 1800,
+   "max_turns": 50,
+   "kind": "explore",
+   "live": true,
+   "browser": true,
+   "template": null
+  },
+  {
+   "id": "carconfig_order",
+   "skill": "browser",
+   "tier": "live",
+   "fixture": "sut-carconfig-order",
+   "prompt": "Write a Browser-library Robot Framework test at tests/x5_order.robot for the LIVE German car\nconfigurator https://carconfig.makrocode.de/ (start on that home page). You do not know its\npage structure yet: explore the live site to find working locators.\n\nThe test must:\n  1. open the configurator for the \"Luxury X5 SUV\"\n  2. configure it with exactly these options (switch away from pre-selected defaults where an\n     option group allows only one choice): Sportmotor 3.0L V6, Perleffekt-Lackierung,\n     20\" Premium Felgen, Leder-Ausstattung, Fahrassistenz-Paket Plus, Adaptive LED-Scheinwerfer\n  3. assert that the configurator's total price (Gesamtpreis) is 82.400,00 €\n  4. buy it (\"Jetzt kaufen\"), enter the customer data Erika Musterfrau, erika@example.com,\n     +49 30 1234567, Hauptstraße 5, 10115 Berlin, choose payment by bank transfer\n     (Banküberweisung) and place the order\n  5. assert that the success page (\"Bestellung erfolgreich!\") shows an order number and the\n     total 82.400,00 €\n\nThe test must complete the whole user journey through the site's UI up to the final confirmation (start on\nthe home page; no direct URLs to later pages), fill every field for which data is given above (all required\nfields included) with exactly that data, wait until the final confirmation/quote is actually shown and assert\nit by reading it from the page.\nThen run `robot tests/x5_order.robot` and iterate until it passes green.\nPlaywright browsers are already initialized (use headless Chromium).",
+   "graders": [
+    {
+     "type": "file_exists",
+     "path": "tests/x5_order.robot"
+    },
+    {
+     "type": "file_contains",
+     "path": "tests/x5_order.robot",
+     "regex": "Library\\s+Browser"
+    },
+    {
+     "type": "file_contains",
+     "path": "tests/x5_order.robot",
+     "regex": "82\\.400,00"
+    },
+    {
+     "type": "file_contains",
+     "path": "tests/x5_order.robot",
+     "regex": "(?i)Bestellung erfolgreich"
+    },
+    {
+     "type": "files_not_contain",
+     "suite": "tests/x5_order.robot",
+     "patterns": [
+      "(?i)\\bPass Execution\\b",
+      "(?i)(^|\\s{2,}|\\t)Skip( If)?(\\s{2,}|\\t|$)",
+      "(?i)robot:(skip|exclude|skip-on-failure)",
+      "(?i)--(skiponfailure|exitonfailure|noncritical)"
+     ]
+    },
+    {
+     "type": "robot_pass",
+     "path": "tests/x5_order.robot",
+     "retry": 1,
+     "min_tests": 1,
+     "timeout_s": 300,
+     "loglevel": "TRACE"
+    },
+    {
+     "type": "journey",
+     "part": "confirm",
+     "label": "journey: confirmation read from page",
+     "spec": {
+      "confirm": [
+       "Bestellung erfolgreich!",
+       "CO-\\d+"
+      ],
+      "values": [
+       "82\\.400,00"
+      ],
+      "min_inputs": 14,
+      "data": [
+       [
+        "erika"
+       ],
+       [
+        "musterfrau"
+       ],
+       [
+        "erika@example.com"
+       ],
+       [
+        "+49 30 1234567"
+       ],
+       [
+        "hauptstraße 5",
+        "hauptstrasse 5"
+       ],
+       [
+        "10115"
+       ],
+       [
+        "berlin"
+       ],
+       {
+        "any": [
+         "überweisung",
+         "ueberweisung",
+         "bank transfer"
+        ],
+        "scope": "all"
+       }
+      ],
+      "allowed_urls": [
+       "^https?://carconfig\\.makrocode\\.de/?$"
+      ]
+     }
+    },
+    {
+     "type": "journey",
+     "part": "values",
+     "label": "journey: value read from page",
+     "spec": {
+      "confirm": [
+       "Bestellung erfolgreich!",
+       "CO-\\d+"
+      ],
+      "values": [
+       "82\\.400,00"
+      ],
+      "min_inputs": 14,
+      "data": [
+       [
+        "erika"
+       ],
+       [
+        "musterfrau"
+       ],
+       [
+        "erika@example.com"
+       ],
+       [
+        "+49 30 1234567"
+       ],
+       [
+        "hauptstraße 5",
+        "hauptstrasse 5"
+       ],
+       [
+        "10115"
+       ],
+       [
+        "berlin"
+       ],
+       {
+        "any": [
+         "überweisung",
+         "ueberweisung",
+         "bank transfer"
+        ],
+        "scope": "all"
+       }
+      ],
+      "allowed_urls": [
+       "^https?://carconfig\\.makrocode\\.de/?$"
+      ]
+     }
+    },
+    {
+     "type": "journey",
+     "part": "inputs",
+     "label": "journey: form fields driven",
+     "spec": {
+      "confirm": [
+       "Bestellung erfolgreich!",
+       "CO-\\d+"
+      ],
+      "values": [
+       "82\\.400,00"
+      ],
+      "min_inputs": 14,
+      "data": [
+       [
+        "erika"
+       ],
+       [
+        "musterfrau"
+       ],
+       [
+        "erika@example.com"
+       ],
+       [
+        "+49 30 1234567"
+       ],
+       [
+        "hauptstraße 5",
+        "hauptstrasse 5"
+       ],
+       [
+        "10115"
+       ],
+       [
+        "berlin"
+       ],
+       {
+        "any": [
+         "überweisung",
+         "ueberweisung",
+         "bank transfer"
+        ],
+        "scope": "all"
+       }
+      ],
+      "allowed_urls": [
+       "^https?://carconfig\\.makrocode\\.de/?$"
+      ]
+     }
+    },
+    {
+     "type": "journey",
+     "part": "nav",
+     "label": "journey: no shortcut (deep link/hard-coded)",
+     "spec": {
+      "confirm": [
+       "Bestellung erfolgreich!",
+       "CO-\\d+"
+      ],
+      "values": [
+       "82\\.400,00"
+      ],
+      "min_inputs": 14,
+      "data": [
+       [
+        "erika"
+       ],
+       [
+        "musterfrau"
+       ],
+       [
+        "erika@example.com"
+       ],
+       [
+        "+49 30 1234567"
+       ],
+       [
+        "hauptstraße 5",
+        "hauptstrasse 5"
+       ],
+       [
+        "10115"
+       ],
+       [
+        "berlin"
+       ],
+       {
+        "any": [
+         "überweisung",
+         "ueberweisung",
+         "bank transfer"
+        ],
+        "scope": "all"
+       }
+      ],
+      "allowed_urls": [
+       "^https?://carconfig\\.makrocode\\.de/?$"
+      ]
+     }
+    },
+    {
+     "type": "no_deprecated_keywords",
+     "path": "tests/x5_order.robot"
+    }
+   ],
+   "primary_metric": "all",
+   "timeout_s": 1800,
+   "max_turns": 50,
+   "kind": "explore",
+   "live": true,
+   "browser": true,
+   "template": null
+  },
+  {
+   "id": "demoshop_order",
+   "skill": "browser",
+   "tier": "live",
+   "fixture": "sut-demoshop-order",
+   "prompt": "Write a Browser-library Robot Framework test at tests/shop_order.robot that places a complete order in\nthe LIVE Flowline Supply demo shop. Start on its home page\nhttps://demoshop.makrocode.de/?space=__AB_SPACE__ (keep this ?space= parameter on the start URL: it\ngives your test its own isolated shop data). You do not know the shop's page structure yet: explore the\nlive site to find working locators.\n\nThe test must:\n  1. sign in with the demo account that the shop's sign-in dialog suggests (the first one shown there)\n  2. use the shop's product search to find the \"Horizon Portable Display\" and add 2 of it to the cart,\n     then search for the \"Cascade Water Bottle\" and add 1 of it\n  3. open the cart and assert that it contains 2 x Horizon Portable Display and 1 x Cascade Water\n     Bottle, that the cart badge shows 3 items and that the cart total is $857.00\n  4. proceed to checkout and enter this data (replace anything that is prefilled): e-mail\n     morgan.lee@example.com, full name Morgan Lee, address 42 Harbor Lane, Portland, OR 97201,\n     team size 8, special instructions Leave at the front desk\n  5. assert the order summary: subtotal $857.00, tax $59.99, total $916.99\n  6. place the order and assert that the confirmation shows the order number (ORD-...) and says that\n     the confirmation e-mail was sent to morgan.lee@example.com\n\nThe test must complete the whole user journey through the site's UI up to the final confirmation (start on\nthe home page; no direct URLs to later pages), fill every field for which data is given above (all required\nfields included) with exactly that data, wait until the final confirmation/quote is actually shown and assert\nit by reading it from the page.\nThen run `robot tests/shop_order.robot` and iterate until it passes green.\nPlaywright browsers are already initialized (use headless Chromium).",
+   "graders": [
+    {
+     "type": "file_exists",
+     "path": "tests/shop_order.robot"
+    },
+    {
+     "type": "file_contains",
+     "path": "tests/shop_order.robot",
+     "regex": "Library\\s+Browser"
+    },
+    {
+     "type": "file_contains",
+     "path": "tests/shop_order.robot",
+     "regex": "\\bab-[0-9a-f]{10}\\b",
+     "label": "own ?space= kept"
+    },
+    {
+     "type": "file_contains",
+     "path": "tests/shop_order.robot",
+     "regex": "\\$?916\\.99"
+    },
+    {
+     "type": "file_contains",
+     "path": "tests/shop_order.robot",
+     "regex": "ORD-"
+    },
+    {
+     "type": "files_not_contain",
+     "suite": "tests/shop_order.robot",
+     "patterns": [
+      "(?i)\\bPass Execution\\b",
+      "(?i)(^|\\s{2,}|\\t)Skip( If)?(\\s{2,}|\\t|$)",
+      "(?i)robot:(skip|exclude|skip-on-failure)",
+      "(?i)--(skiponfailure|exitonfailure|noncritical)"
+     ]
+    },
+    {
+     "type": "robot_pass",
+     "path": "tests/shop_order.robot",
+     "retry": 1,
+     "min_tests": 1,
+     "timeout_s": 300,
+     "loglevel": "TRACE"
+    },
+    {
+     "type": "journey",
+     "part": "confirm",
+     "label": "journey: confirmation read from page",
+     "spec": {
+      "confirm": [
+       "Order ORD-[0-9A-Z]+ confirmed",
+       "confirmation email to morgan\\.lee@example\\.com"
+      ],
+      "values": [
+       "\\$857\\.00",
+       "\\$916\\.99"
+      ],
+      "min_inputs": 12,
+      "data": [
+       [
+        "jamie@flowlinesupply.com",
+        "alex.productlead@example.com"
+       ],
+       [
+        "demo123",
+        "flowline",
+        "<<fillsecret>>"
+       ],
+       [
+        "horizon",
+        "display"
+       ],
+       [
+        "cascade",
+        "bottle"
+       ],
+       [
+        "morgan.lee@example.com"
+       ],
+       [
+        "morgan lee"
+       ],
+       [
+        "42 harbor lane"
+       ],
+       [
+        "portland"
+       ],
+       [
+        "97201"
+       ],
+       {
+        "any": [
+         "8"
+        ],
+        "exact": true
+       },
+       [
+        "leave at the front desk"
+       ]
+      ],
+      "allowed_urls": [
+       "^https?://demoshop\\.makrocode\\.de/?(\\?space=[^&#/]+)?$"
+      ]
+     }
+    },
+    {
+     "type": "journey",
+     "part": "values",
+     "label": "journey: value read from page",
+     "spec": {
+      "confirm": [
+       "Order ORD-[0-9A-Z]+ confirmed",
+       "confirmation email to morgan\\.lee@example\\.com"
+      ],
+      "values": [
+       "\\$857\\.00",
+       "\\$916\\.99"
+      ],
+      "min_inputs": 12,
+      "data": [
+       [
+        "jamie@flowlinesupply.com",
+        "alex.productlead@example.com"
+       ],
+       [
+        "demo123",
+        "flowline",
+        "<<fillsecret>>"
+       ],
+       [
+        "horizon",
+        "display"
+       ],
+       [
+        "cascade",
+        "bottle"
+       ],
+       [
+        "morgan.lee@example.com"
+       ],
+       [
+        "morgan lee"
+       ],
+       [
+        "42 harbor lane"
+       ],
+       [
+        "portland"
+       ],
+       [
+        "97201"
+       ],
+       {
+        "any": [
+         "8"
+        ],
+        "exact": true
+       },
+       [
+        "leave at the front desk"
+       ]
+      ],
+      "allowed_urls": [
+       "^https?://demoshop\\.makrocode\\.de/?(\\?space=[^&#/]+)?$"
+      ]
+     }
+    },
+    {
+     "type": "journey",
+     "part": "inputs",
+     "label": "journey: form fields driven",
+     "spec": {
+      "confirm": [
+       "Order ORD-[0-9A-Z]+ confirmed",
+       "confirmation email to morgan\\.lee@example\\.com"
+      ],
+      "values": [
+       "\\$857\\.00",
+       "\\$916\\.99"
+      ],
+      "min_inputs": 12,
+      "data": [
+       [
+        "jamie@flowlinesupply.com",
+        "alex.productlead@example.com"
+       ],
+       [
+        "demo123",
+        "flowline",
+        "<<fillsecret>>"
+       ],
+       [
+        "horizon",
+        "display"
+       ],
+       [
+        "cascade",
+        "bottle"
+       ],
+       [
+        "morgan.lee@example.com"
+       ],
+       [
+        "morgan lee"
+       ],
+       [
+        "42 harbor lane"
+       ],
+       [
+        "portland"
+       ],
+       [
+        "97201"
+       ],
+       {
+        "any": [
+         "8"
+        ],
+        "exact": true
+       },
+       [
+        "leave at the front desk"
+       ]
+      ],
+      "allowed_urls": [
+       "^https?://demoshop\\.makrocode\\.de/?(\\?space=[^&#/]+)?$"
+      ]
+     }
+    },
+    {
+     "type": "journey",
+     "part": "nav",
+     "label": "journey: no shortcut (deep link/hard-coded)",
+     "spec": {
+      "confirm": [
+       "Order ORD-[0-9A-Z]+ confirmed",
+       "confirmation email to morgan\\.lee@example\\.com"
+      ],
+      "values": [
+       "\\$857\\.00",
+       "\\$916\\.99"
+      ],
+      "min_inputs": 12,
+      "data": [
+       [
+        "jamie@flowlinesupply.com",
+        "alex.productlead@example.com"
+       ],
+       [
+        "demo123",
+        "flowline",
+        "<<fillsecret>>"
+       ],
+       [
+        "horizon",
+        "display"
+       ],
+       [
+        "cascade",
+        "bottle"
+       ],
+       [
+        "morgan.lee@example.com"
+       ],
+       [
+        "morgan lee"
+       ],
+       [
+        "42 harbor lane"
+       ],
+       [
+        "portland"
+       ],
+       [
+        "97201"
+       ],
+       {
+        "any": [
+         "8"
+        ],
+        "exact": true
+       },
+       [
+        "leave at the front desk"
+       ]
+      ],
+      "allowed_urls": [
+       "^https?://demoshop\\.makrocode\\.de/?(\\?space=[^&#/]+)?$"
+      ]
+     }
+    },
+    {
+     "type": "no_deprecated_keywords",
+     "path": "tests/shop_order.robot"
+    }
+   ],
+   "primary_metric": "all",
+   "timeout_s": 1800,
+   "max_turns": 50,
+   "kind": "explore",
+   "live": true,
+   "browser": true,
+   "template": {
+    "__AB_SPACE__": "ab-{cell}"
+   }
+  },
+  {
+   "id": "demoshop_debug",
+   "skill": "browser",
+   "tier": "live",
+   "fixture": "sut-demoshop-debug",
+   "prompt": "This project contains a Robot Framework regression suite for the LIVE Flowline Supply demo\nshop (https://demoshop.makrocode.de/): tests/shop.robot with its keywords in\nresources/shop.resource (Browser library). It used to pass, but now several tests fail.\n\nThe business expectations in the suite are correct (demo account, search results, cart badge\ncounts, cart total, subtotal/tax/total, order confirmation). The failures are caused by\ndefects in the test code. Find and fix them so that `robot tests/shop.robot` passes.\n\nRules: keep all 5 test cases (do not delete, rename, skip or tag-exclude tests); do not remove,\nweaken or comment out assertions and do not change expected values; do not hide failures (no\nRun Keyword And Ignore Error / Run Keyword And Return Status / TRY-EXCEPT / Pass Execution / Skip).\nKeep using the Browser library. The suite runs nightly, so the fixes must make it pass reliably,\nalso on future days.\n\nThe tests must still complete their whole user journey through the site's UI up to the final confirmation\n(no new direct URLs to later pages), fill every required field with the suite's data, wait until the final\nconfirmation/quote is actually shown and assert it by reading it from the page.\n\nRun `robot tests/shop.robot` and iterate until it passes green.\nPlaywright browsers are already initialized.",
+   "graders": [
+    {
+     "type": "file_exists",
+     "path": "tests/shop.robot"
+    },
+    {
+     "type": "test_names",
+     "path": "tests/shop.robot",
+     "names": [
+      "Demo Account Can Sign In",
+      "Search Finds Standing Desk",
+      "Speaker Can Be Added From Search Results",
+      "Cart Badge Counts Every Added Item",
+      "Checkout Adds Tax And Confirms Order"
+     ]
+    },
+    {
+     "type": "files_contain",
+     "suite": "tests/shop.robot",
+     "regex": "Library\\s+Browser"
+    },
+    {
+     "type": "files_contain",
+     "suite": "tests/shop.robot",
+     "regex": "\\$517\\.00"
+    },
+    {
+     "type": "files_contain",
+     "suite": "tests/shop.robot",
+     "regex": "\\$36\\.19"
+    },
+    {
+     "type": "files_contain",
+     "suite": "tests/shop.robot",
+     "regex": "\\$553\\.19"
+    },
+    {
+     "type": "files_contain",
+     "suite": "tests/shop.robot",
+     "regex": "ORD-"
+    },
+    {
+     "type": "files_contain",
+     "suite": "tests/shop.robot",
+     "regex": "\\bJamie\\b"
+    },
+    {
+     "type": "files_contain",
+     "suite": "tests/shop.robot",
+     "regex": "Atlas Standing Desk"
+    },
+    {
+     "type": "files_contain",
+     "suite": "tests/shop.robot",
+     "regex": "(?i)(Cart Badge Should Show|cart-count)\\W.*\\b3\\b",
+     "label": "cart badge == 3 kept"
+    },
+    {
+     "type": "files_not_contain",
+     "suite": "tests/shop.robot",
+     "patterns": [
+      "(?i)\\bPass Execution\\b",
+      "(?i)(^|\\s{2,}|\\t)Skip( If)?(\\s{2,}|\\t|$)",
+      "(?i)robot:(skip|exclude|skip-on-failure)",
+      "(?i)--(skiponfailure|exitonfailure|noncritical)",
+      "(?i)Run Keyword And Ignore Error",
+      "(?i)Run Keyword And Return Status",
+      "(?i)Run Keyword And Expect Error",
+      "(?i)Run Keyword And Warn On Failure",
+      "(?im)^\\s+(TRY|EXCEPT)(\\s|$)",
+      "(?i)Set Tags.*robot:"
+     ]
+    },
+    {
+     "type": "robot_pass",
+     "path": "tests/shop.robot",
+     "retry": 1,
+     "exact_tests": 5,
+     "timeout_s": 300,
+     "loglevel": "TRACE"
+    },
+    {
+     "type": "journey",
+     "part": "confirm",
+     "label": "journey: confirmation read from page",
+     "spec": {
+      "confirm": [
+       "Order ORD-\\w+ confirmed"
+      ],
+      "values": [
+       "\\$517\\.00",
+       "\\$553\\.19"
+      ],
+      "min_inputs": 8,
+      "data": [
+       [
+        "jamie@flowlinesupply.com"
+       ],
+       [
+        "demo123",
+        "<<fillsecret>>"
+       ],
+       [
+        "desk"
+       ],
+       [
+        "speaker"
+       ]
+      ],
+      "allowed_urls": [
+       "^https?://demoshop\\.makrocode\\.de/?(\\?space=[^&#/]+)?$",
+       "^https?://demoshop\\.makrocode\\.de/(products/\\d+|cart)/?(\\?space=[^&#/]+)?$"
+      ]
+     }
+    },
+    {
+     "type": "journey",
+     "part": "values",
+     "label": "journey: value read from page",
+     "spec": {
+      "confirm": [
+       "Order ORD-\\w+ confirmed"
+      ],
+      "values": [
+       "\\$517\\.00",
+       "\\$553\\.19"
+      ],
+      "min_inputs": 8,
+      "data": [
+       [
+        "jamie@flowlinesupply.com"
+       ],
+       [
+        "demo123",
+        "<<fillsecret>>"
+       ],
+       [
+        "desk"
+       ],
+       [
+        "speaker"
+       ]
+      ],
+      "allowed_urls": [
+       "^https?://demoshop\\.makrocode\\.de/?(\\?space=[^&#/]+)?$",
+       "^https?://demoshop\\.makrocode\\.de/(products/\\d+|cart)/?(\\?space=[^&#/]+)?$"
+      ]
+     }
+    },
+    {
+     "type": "journey",
+     "part": "inputs",
+     "label": "journey: form fields driven",
+     "spec": {
+      "confirm": [
+       "Order ORD-\\w+ confirmed"
+      ],
+      "values": [
+       "\\$517\\.00",
+       "\\$553\\.19"
+      ],
+      "min_inputs": 8,
+      "data": [
+       [
+        "jamie@flowlinesupply.com"
+       ],
+       [
+        "demo123",
+        "<<fillsecret>>"
+       ],
+       [
+        "desk"
+       ],
+       [
+        "speaker"
+       ]
+      ],
+      "allowed_urls": [
+       "^https?://demoshop\\.makrocode\\.de/?(\\?space=[^&#/]+)?$",
+       "^https?://demoshop\\.makrocode\\.de/(products/\\d+|cart)/?(\\?space=[^&#/]+)?$"
+      ]
+     }
+    },
+    {
+     "type": "journey",
+     "part": "nav",
+     "label": "journey: no shortcut (deep link/hard-coded)",
+     "spec": {
+      "confirm": [
+       "Order ORD-\\w+ confirmed"
+      ],
+      "values": [
+       "\\$517\\.00",
+       "\\$553\\.19"
+      ],
+      "min_inputs": 8,
+      "data": [
+       [
+        "jamie@flowlinesupply.com"
+       ],
+       [
+        "demo123",
+        "<<fillsecret>>"
+       ],
+       [
+        "desk"
+       ],
+       [
+        "speaker"
+       ]
+      ],
+      "allowed_urls": [
+       "^https?://demoshop\\.makrocode\\.de/?(\\?space=[^&#/]+)?$",
+       "^https?://demoshop\\.makrocode\\.de/(products/\\d+|cart)/?(\\?space=[^&#/]+)?$"
+      ]
+     }
+    },
+    {
+     "type": "no_deprecated_keywords",
+     "suite": "tests/shop.robot"
+    }
+   ],
+   "primary_metric": "all",
+   "timeout_s": 1800,
+   "max_turns": 50,
+   "kind": "debug",
+   "live": true,
+   "browser": true,
+   "template": {
+    "__AB_SPACE__": "ab-{cell}"
+   }
+  },
+  {
+   "id": "tricentis_debug",
+   "skill": "browser",
+   "tier": "live",
+   "fixture": "sut-tricentis-debug",
+   "prompt": "This project contains a Robot Framework regression suite for the LIVE Tricentis Vehicle\nInsurance sample app (http://sampleapp.tricentis.com/): tests/truck_quote.robot with its\nkeywords in resources/truck.resource (Browser library). It covers truck insurance quotes and\nused to pass, but now all of its tests fail.\n\nThe business expectations in the suite are correct (the quote data, the expected yearly\nprices, the success message). The failures are caused by defects in the test code. Find and\nfix them so that `robot tests/truck_quote.robot` passes.\n\nRules: keep all 3 test cases (do not delete, rename, skip or tag-exclude tests); do not remove,\nweaken or comment out assertions and do not change expected values; do not hide failures (no\nRun Keyword And Ignore Error / Run Keyword And Return Status / TRY-EXCEPT / Pass Execution / Skip).\nKeep using the Browser library. The suite runs nightly, so the fixes must make it pass reliably,\nalso on future days.\n\nThe tests must still complete their whole user journey through the site's UI up to the final confirmation\n(no new direct URLs to later pages), fill every required field with the suite's data, wait until the final\nconfirmation/quote is actually shown and assert it by reading it from the page.\n\nRun `robot tests/truck_quote.robot` and iterate until it passes green.\nPlaywright browsers are already initialized.",
+   "graders": [
+    {
+     "type": "file_exists",
+     "path": "tests/truck_quote.robot"
+    },
+    {
+     "type": "test_names",
+     "path": "tests/truck_quote.robot",
+     "names": [
+      "Product Data Is Accepted",
+      "Truck Price Table Is Calculated",
+      "Truck Quote Can Be Sent"
+     ]
+    },
+    {
+     "type": "files_contain",
+     "suite": "tests/truck_quote.robot",
+     "regex": "Library\\s+Browser"
+    },
+    {
+     "type": "files_contain",
+     "suite": "tests/truck_quote.robot",
+     "regex": "1,784\\.00"
+    },
+    {
+     "type": "files_contain",
+     "suite": "tests/truck_quote.robot",
+     "regex": "3,501\\.00"
+    },
+    {
+     "type": "files_contain",
+     "suite": "tests/truck_quote.robot",
+     "regex": "Sending e-mail success!"
+    },
+    {
+     "type": "files_contain",
+     "suite": "tests/truck_quote.robot",
+     "regex": "enterproductdata[^\\n]*==\\s+0\\s*$",
+     "label": "product counter == 0 kept"
+    },
+    {
+     "type": "files_contain",
+     "suite": "tests/truck_quote.robot",
+     "regex": "(?i)(Get Current Date|Add Time To Date|\\bdatetime\\b|timedelta|relativedelta|new Date\\()",
+     "label": "start date computed at run time"
+    },
+    {
+     "type": "files_not_contain",
+     "suite": "tests/truck_quote.robot",
+     "patterns": [
+      "(?i)\\bPass Execution\\b",
+      "(?i)(^|\\s{2,}|\\t)Skip( If)?(\\s{2,}|\\t|$)",
+      "(?i)robot:(skip|exclude|skip-on-failure)",
+      "(?i)--(skiponfailure|exitonfailure|noncritical)",
+      "(?i)Run Keyword And Ignore Error",
+      "(?i)Run Keyword And Return Status",
+      "(?i)Run Keyword And Expect Error",
+      "(?i)Run Keyword And Warn On Failure",
+      "(?im)^\\s+(TRY|EXCEPT)(\\s|$)",
+      "(?i)Set Tags.*robot:"
+     ]
+    },
+    {
+     "type": "robot_pass",
+     "path": "tests/truck_quote.robot",
+     "retry": 1,
+     "exact_tests": 3,
+     "timeout_s": 300,
+     "loglevel": "TRACE"
+    },
+    {
+     "type": "journey",
+     "part": "confirm",
+     "label": "journey: confirmation read from page",
+     "spec": {
+      "confirm": [
+       "Sending e-mail success!"
+      ],
+      "values": [
+       "1,784\\.00",
+       "3,501\\.00"
+      ],
+      "min_inputs": 28,
+      "data": [
+       [
+        "volvo"
+       ],
+       [
+        "250"
+       ],
+       [
+        "03/01/2019"
+       ],
+       [
+        "diesel"
+       ],
+       [
+        "800"
+       ],
+       [
+        "7500"
+       ],
+       [
+        "85000"
+       ],
+       [
+        "trk-778"
+       ],
+       [
+        "60000"
+       ],
+       [
+        "grace"
+       ],
+       [
+        "hopper"
+       ],
+       [
+        "12/09/1976"
+       ],
+       [
+        "harbour road 7"
+       ],
+       [
+        "netherlands"
+       ],
+       [
+        "1011"
+       ],
+       [
+        "amsterdam"
+       ],
+       [
+        "selfemployed"
+       ],
+       [
+        "10000000",
+        "10.000.000"
+       ],
+       [
+        "full coverage"
+       ],
+       [
+        "grace@example.com"
+       ],
+       [
+        "0201234567"
+       ],
+       [
+        "ghopper"
+       ],
+       [
+        "cobol1959",
+        "<<fillsecret>>"
+       ],
+       {
+        "any": [
+         "female"
+        ],
+        "scope": "all"
+       },
+       {
+        "any": [
+         "other"
+        ],
+        "scope": "all"
+       },
+       {
+        "any": [
+         "legaldefense",
+         "legal defense"
+        ],
+        "scope": "all"
+       },
+       {
+        "any": [
+         "gold"
+        ],
+        "scope": "all"
+       }
+      ],
+      "allowed_urls": [
+       "^https?://sampleapp\\.tricentis\\.com/?(101/?)?(index\\.php)?$"
+      ]
+     }
+    },
+    {
+     "type": "journey",
+     "part": "values",
+     "label": "journey: value read from page",
+     "spec": {
+      "confirm": [
+       "Sending e-mail success!"
+      ],
+      "values": [
+       "1,784\\.00",
+       "3,501\\.00"
+      ],
+      "min_inputs": 28,
+      "data": [
+       [
+        "volvo"
+       ],
+       [
+        "250"
+       ],
+       [
+        "03/01/2019"
+       ],
+       [
+        "diesel"
+       ],
+       [
+        "800"
+       ],
+       [
+        "7500"
+       ],
+       [
+        "85000"
+       ],
+       [
+        "trk-778"
+       ],
+       [
+        "60000"
+       ],
+       [
+        "grace"
+       ],
+       [
+        "hopper"
+       ],
+       [
+        "12/09/1976"
+       ],
+       [
+        "harbour road 7"
+       ],
+       [
+        "netherlands"
+       ],
+       [
+        "1011"
+       ],
+       [
+        "amsterdam"
+       ],
+       [
+        "selfemployed"
+       ],
+       [
+        "10000000",
+        "10.000.000"
+       ],
+       [
+        "full coverage"
+       ],
+       [
+        "grace@example.com"
+       ],
+       [
+        "0201234567"
+       ],
+       [
+        "ghopper"
+       ],
+       [
+        "cobol1959",
+        "<<fillsecret>>"
+       ],
+       {
+        "any": [
+         "female"
+        ],
+        "scope": "all"
+       },
+       {
+        "any": [
+         "other"
+        ],
+        "scope": "all"
+       },
+       {
+        "any": [
+         "legaldefense",
+         "legal defense"
+        ],
+        "scope": "all"
+       },
+       {
+        "any": [
+         "gold"
+        ],
+        "scope": "all"
+       }
+      ],
+      "allowed_urls": [
+       "^https?://sampleapp\\.tricentis\\.com/?(101/?)?(index\\.php)?$"
+      ]
+     }
+    },
+    {
+     "type": "journey",
+     "part": "inputs",
+     "label": "journey: form fields driven",
+     "spec": {
+      "confirm": [
+       "Sending e-mail success!"
+      ],
+      "values": [
+       "1,784\\.00",
+       "3,501\\.00"
+      ],
+      "min_inputs": 28,
+      "data": [
+       [
+        "volvo"
+       ],
+       [
+        "250"
+       ],
+       [
+        "03/01/2019"
+       ],
+       [
+        "diesel"
+       ],
+       [
+        "800"
+       ],
+       [
+        "7500"
+       ],
+       [
+        "85000"
+       ],
+       [
+        "trk-778"
+       ],
+       [
+        "60000"
+       ],
+       [
+        "grace"
+       ],
+       [
+        "hopper"
+       ],
+       [
+        "12/09/1976"
+       ],
+       [
+        "harbour road 7"
+       ],
+       [
+        "netherlands"
+       ],
+       [
+        "1011"
+       ],
+       [
+        "amsterdam"
+       ],
+       [
+        "selfemployed"
+       ],
+       [
+        "10000000",
+        "10.000.000"
+       ],
+       [
+        "full coverage"
+       ],
+       [
+        "grace@example.com"
+       ],
+       [
+        "0201234567"
+       ],
+       [
+        "ghopper"
+       ],
+       [
+        "cobol1959",
+        "<<fillsecret>>"
+       ],
+       {
+        "any": [
+         "female"
+        ],
+        "scope": "all"
+       },
+       {
+        "any": [
+         "other"
+        ],
+        "scope": "all"
+       },
+       {
+        "any": [
+         "legaldefense",
+         "legal defense"
+        ],
+        "scope": "all"
+       },
+       {
+        "any": [
+         "gold"
+        ],
+        "scope": "all"
+       }
+      ],
+      "allowed_urls": [
+       "^https?://sampleapp\\.tricentis\\.com/?(101/?)?(index\\.php)?$"
+      ]
+     }
+    },
+    {
+     "type": "journey",
+     "part": "nav",
+     "label": "journey: no shortcut (deep link/hard-coded)",
+     "spec": {
+      "confirm": [
+       "Sending e-mail success!"
+      ],
+      "values": [
+       "1,784\\.00",
+       "3,501\\.00"
+      ],
+      "min_inputs": 28,
+      "data": [
+       [
+        "volvo"
+       ],
+       [
+        "250"
+       ],
+       [
+        "03/01/2019"
+       ],
+       [
+        "diesel"
+       ],
+       [
+        "800"
+       ],
+       [
+        "7500"
+       ],
+       [
+        "85000"
+       ],
+       [
+        "trk-778"
+       ],
+       [
+        "60000"
+       ],
+       [
+        "grace"
+       ],
+       [
+        "hopper"
+       ],
+       [
+        "12/09/1976"
+       ],
+       [
+        "harbour road 7"
+       ],
+       [
+        "netherlands"
+       ],
+       [
+        "1011"
+       ],
+       [
+        "amsterdam"
+       ],
+       [
+        "selfemployed"
+       ],
+       [
+        "10000000",
+        "10.000.000"
+       ],
+       [
+        "full coverage"
+       ],
+       [
+        "grace@example.com"
+       ],
+       [
+        "0201234567"
+       ],
+       [
+        "ghopper"
+       ],
+       [
+        "cobol1959",
+        "<<fillsecret>>"
+       ],
+       {
+        "any": [
+         "female"
+        ],
+        "scope": "all"
+       },
+       {
+        "any": [
+         "other"
+        ],
+        "scope": "all"
+       },
+       {
+        "any": [
+         "legaldefense",
+         "legal defense"
+        ],
+        "scope": "all"
+       },
+       {
+        "any": [
+         "gold"
+        ],
+        "scope": "all"
+       }
+      ],
+      "allowed_urls": [
+       "^https?://sampleapp\\.tricentis\\.com/?(101/?)?(index\\.php)?$"
+      ]
+     }
+    },
+    {
+     "type": "no_deprecated_keywords",
+     "suite": "tests/truck_quote.robot"
+    }
+   ],
+   "primary_metric": "all",
+   "timeout_s": 1800,
+   "max_turns": 50,
+   "kind": "debug",
+   "live": true,
+   "browser": true,
+   "template": null
+  }
+ ],
+ "fixtures": {
+  "tricentis_quote": {
+   "fixture": "../../eval-snapshots/ab-7994ae3/fixtures_live/sut-tricentis-quote",
+   "fixture_tree_sha256": "a16bb83e3ba814a7a86d521c34df12a266b2d45fdc972eb08d4bb41689bc2e23",
+   "reference": "../../eval-snapshots/ab-7994ae3/fixtures_live/_reference/tricentis_quote",
+   "reference_tree_sha256": "dc9699b3128f2ad1447de0dc149286ef17c179bade85b6aec3f3775cd29f0682"
+  },
+  "carconfig_order": {
+   "fixture": "../../eval-snapshots/ab-7994ae3/fixtures_live/sut-carconfig-order",
+   "fixture_tree_sha256": "40e23d53716f22e9099ee136d2f721c15c4f4fc1e3cf522f79352f003a0e014b",
+   "reference": "../../eval-snapshots/ab-7994ae3/fixtures_live/_reference/carconfig_order",
+   "reference_tree_sha256": "d17aec37db78d1fe28fc2d5da504e5bc535dadd50073f191bc84e9511c3dcef2"
+  },
+  "demoshop_order": {
+   "fixture": "../../eval-snapshots/ab-7994ae3/fixtures_live/sut-demoshop-order",
+   "fixture_tree_sha256": "69ce2b2f995d9c458427283367546ed63c46fede4231183551b319562357ec02",
+   "reference": "../../eval-snapshots/ab-7994ae3/fixtures_live/_reference/demoshop_order",
+   "reference_tree_sha256": "8c1248d95144a0d2db1698e62c552ee99e25b38df7e3dc50a3869bee12241ea2"
+  },
+  "demoshop_debug": {
+   "fixture": "../../eval-snapshots/ab-7994ae3/fixtures_live/sut-demoshop-debug",
+   "fixture_tree_sha256": "d376700b310544e17e2e93404a797112cd4ccb66c7b2dacd372581cd729b4a02",
+   "reference": "../../eval-snapshots/ab-7994ae3/fixtures_live/_reference/demoshop_debug",
+   "reference_tree_sha256": "ee966ae59c37c5c6d470ff6eb1dce198499c37377f895ac60aacf002f2e18367"
+  },
+  "tricentis_debug": {
+   "fixture": "../../eval-snapshots/ab-7994ae3/fixtures_live/sut-tricentis-debug",
+   "fixture_tree_sha256": "5c5cca95f4d6aeff7af3619251377179c345caba0be536da57210e9e3fc9242a",
+   "reference": "../../eval-snapshots/ab-7994ae3/fixtures_live/_reference/tricentis_debug",
+   "reference_tree_sha256": "8c499f40afb0bf14ad5754e1e55028afd76d956c6874cf3cd7fa1323dc59f1b2"
+  }
+ }
+}

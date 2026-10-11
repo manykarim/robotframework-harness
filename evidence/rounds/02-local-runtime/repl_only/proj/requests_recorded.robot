@@ -1,0 +1,17 @@
+*** Settings ***
+Library    RequestsLibrary
+
+*** Test Cases ***
+Booker Recorded
+    Create Session    rb    https://restful-booker.herokuapp.com
+    &{creds}    Create Dictionary    username=admin    password=password123
+    ${resp}    POST On Session    rb    /auth    json=${creds}
+    ${token}    Set Variable    ${resp.json()}[token]
+    &{dates}    Create Dictionary    checkin=2026-10-01    checkout=2026-10-05
+    &{booking}    Create Dictionary    firstname=Rf    lastname=Mcp    totalprice=${123}    depositpaid=${True}    bookingdates=${dates}    additionalneeds=Breakfast
+    ${resp}    POST On Session    rb    /booking    json=${booking}
+    ${id}    Set Variable    ${resp.json()}[bookingid]
+    ${resp}    GET On Session    rb    /booking/${id}
+    Should Be Equal As Strings    ${resp.json()}[firstname]    Rf
+    ${r2}    GET On Session    rb    /booking/999999999    expected_status=anything
+    Status Should Be    404    ${r2}

@@ -1,0 +1,7 @@
+[2026-10-02 17:29:05] waiting for main run pid 858636
+[2026-10-02 17:53:05] main run ended
+kept 79 rows, dropped 25 auth-failure rows
+[2026-10-02 17:53:11] Claude auth OK - resuming harness
+[2026-10-02 20:39:21] rerun finished (exit 0)
+rows=116 remaining_auth_failures=0
+[2026-10-02 20:39:21] done

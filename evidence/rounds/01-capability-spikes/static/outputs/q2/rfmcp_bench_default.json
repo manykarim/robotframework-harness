@@ -1,0 +1,2837 @@
+{
+ "meta": {
+  "import_s": 1.912,
+  "semantic_env": null,
+  "python": "3.13.11 (main, Jan 14 2026, 19:38:04) [Clang 21.1.4 ]"
+ },
+ "rows": [
+  {
+   "tool": "find_keywords",
+   "strategy": "semantic",
+   "query": "click element",
+   "library_name": null,
+   "s": 0.886,
+   "chars": 5505,
+   "top": [],
+   "success": true,
+   "raw": {
+    "success": true,
+    "strategy": "semantic",
+    "query": "click element",
+    "result": {
+     "success": true,
+     "action_description": "click element",
+     "action_type": "click",
+     "matches": [
+      {
+       "keyword_name": "Click Element",
+       "library": "SeleniumLibrary",
+       "confidence": 1.15,
+       "arguments": [
+        "locator",
+        "modifier",
+        "action_chain"
+       ],
+       "argument_types": [
+        "WebElement | str",
+        "bool | str",
+        "bool"
+       ],
+       "documentation": "Click the element identified by ``locator``.\n\nSee the `Locating elements` section for details about the locator\nsyntax.\n\nThe ``modifier`` argument can be used to pass\n[https://seleniumhq.github.io/sel...",
+       "usage_example": "Click Element    id=my-element    arg2    arg3",
+       "tags": [
+        "web",
+        "api",
+        "interaction"
+       ]
+      },
+      {
+       "keyword_name": "Double Click Element",
+       "library": "SeleniumLibrary",
+       "confidence": 0.9878787878787878,
+       "arguments": [
+        "locator"
+       ],
+       "argument_types": [
+        "WebElement | str"
+       ],
+       "documentation": "Double clicks the element identified by ``locator``.\n\nSee the `Locating elements` section for details about the locator\nsyntax.",
+       "usage_example": "Double Click Element    id=my-element",
+       "tags": [
+        "interaction"
+       ]
+      },
+      {
+       "keyword_name": "Click Link",
+       "library": "SeleniumLibrary",
+       "confidence": 0.8956521739130434,
+       "arguments": [
+        "locator",
+        "modifier"
+       ],
+       "argument_types": [
+        "WebElement | str",
+        "bool | str"
+       ],
+       "documentation": "Clicks a link identified by ``locator``.\n\nSee the `Locating elements` section for details about the locator\nsyntax. When using the default locator strategy, links are searched\nusing ``id``, ``name``, ...",
+       "usage_example": "Click Link    id=my-element    arg2",
+       "tags": [
+        "interaction"
+       ]
+      },
+      {
+       "keyword_name": "Scroll To Element",
+       "library": "Browser",
+       "confidence": 0.8666666666666667,
+       "arguments": [
+        "selector"
+       ],
+       "argument_types": [
+        "str"
+       ],
+       "documentation": "This method waits for actionability checks, then tries to scroll element into view,\nunless it is completely visible.\n\n| =Arguments= | =Description= |\n| ``selector`` | Selector of the checkbox. See the...",
+       "usage_example": "Scroll To Element    arg1",
+       "tags": [
+        "PageContent",
+        "Setter"
+       ]
+      },
+      {
+       "keyword_name": "Click Image",
+       "library": "SeleniumLibrary",
+       "confidence": 0.8666666666666667,
+       "arguments": [
+        "locator",
+        "modifier"
+       ],
+       "argument_types": [
+        "WebElement | str",
+        "bool | str"
+       ],
+       "documentation": "Clicks an image identified by ``locator``.\n\nSee the `Locating elements` section for details about the locator\nsyntax. When using the default locator strategy, images are searched\nusing ``id``, ``name`...",
+       "usage_example": "Click Image    id=my-element    arg2",
+       "tags": [
+        "interaction"
+       ]
+      },
+      {
+       "keyword_name": "Highlight Elements",
+       "library": "Browser",
+       "confidence": 0.8451612903225807,
+       "arguments": [
+        "selector",
+        "duration",
+        "width",
+        "style",
+        "color",
+        "",
+        "mode"
+       ],
+       "argument_types": [
+        "str",
+        "timedelta",
+        "str",
+        "str",
+        "str",
+        "str",
+        "HighlightMode"
+       ],
+       "documentation": "Adds a highlight to elements matched by the ``selector``. Provides a style adjustment.\n\nReturns the number of highlighted elements. Keyword does not fail, if `locator` matched zero elements in\nthe pag...",
+       "usage_example": "Highlight Elements    arg1    arg2    arg3    arg4    arg5    arg6    arg7",
+       "tags": [
+        "PageContent",
+        "Setter"
+       ]
+      },
+      {
+       "keyword_name": "Click Element At Coordinates",
+       "library": "SeleniumLibrary",
+       "confidence": 0.8341463414634147,
+       "arguments": [
+        "locator",
+        "xoffset",
+        "yoffset"
+       ],
+       "argument_types": [
+        "WebElement | str",
+        "int",
+        "int"
+       ],
+       "documentation": "Click the element ``locator`` at ``xoffset/yoffset``.\n\nThe Cursor is moved and the center of the element and x/y coordinates are\ncalculated from that point.\n\nSee the `Locating elements` section for de...",
+       "usage_example": "Click Element At Coordinates    id=my-element    arg2    arg3",
+       "tags": [
+        "interaction"
+       ]
+      },
+      {
+       "keyword_name": "Click",
+       "library": "Browser",
+       "confidence": 0.8,
+       "arguments": [
+        "selector",
+        "button"
+       ],
+       "argument_types": [
+        "str",
+        "MouseButton"
+       ],
+       "documentation": "Simulates mouse click on the element found by ``selector``.\n\nThis keyword clicks an element matching ``selector`` by performing the following steps:\n- Find an element matches selector. If there is non...",
+       "usage_example": "Click    arg1    arg2",
+       "tags": [
+        "PageContent",
+        "Setter"
+       ]
+      },
+      {
+       "keyword_name": "Tap",
+       "library": "Browser",
+       "confidence": 0.8,
+       "arguments": [
+        "selector",
+        "modifiers",
+        "force",
+        "noWaitAfter",
+        "position_x",
+        "position_y",
+        "trial"
+       ],
+       "argument_types": [
+        "str",
+        "KeyboardModifier",
+        "bool",
+        "bool",
+        "int | None",
+        "int | None",
+        "bool"
+       ],
+       "documentation": "Simulates tap on the element found by ``selector``.\n\nRequires that the ``hasTouch`` option of the `New Context` be set to true.\nThis method taps the element by performing the following steps:\n- Wait f...",
+       "usage_example": "Tap    arg1    arg2    arg3    arg4    arg5    arg6    arg7",
+       "tags": [
+        "PageContent",
+        "Setter"
+       ]
+      },
+      {
+       "keyword_name": "Click Button",
+       "library": "SeleniumLibrary",
+       "confidence": 0.8,
+       "arguments": [
+        "locator",
+        "modifier"
+       ],
+       "argument_types": [
+        "WebElement | str",
+        "bool | str"
+       ],
+       "documentation": "Clicks the button identified by ``locator``.\n\nSee the `Locating elements` section for details about the locator\nsyntax. When using the default locator strategy, buttons are\nsearched using ``id``, ``na...",
+       "usage_example": "Click Button    id=my-element    arg2",
+       "tags": [
+        "interaction"
+       ]
+      }
+     ],
+     "total_matches": 354,
+     "recommendations": [
+      "Best match: Click Element (confidence: 1.15)",
+      "Required arguments: locator, modifier, action_chain",
+      "Alternative options: Double Click Element, Click Link, Scroll To Element"
+     ]
+    }
+   }
+  },
+  {
+   "tool": "find_keywords",
+   "strategy": "semantic",
+   "query": "click element",
+   "library_name": "Browser",
+   "s": 0.32,
+   "chars": 2862,
+   "top": [],
+   "success": true,
+   "raw": {
+    "success": true,
+    "strategy": "semantic",
+    "query": "click element",
+    "result": {
+     "success": true,
+     "action_description": "click element",
+     "action_type": "click",
+     "matches": [
+      {
+       "library": "Browser",
+       "keyword_name": "Scroll To Element",
+       "confidence": 0.8666666666666667,
+       "arguments": [
+        "selector"
+       ],
+       "argument_types": [
+        "str"
+       ],
+       "documentation": "This method waits for actionability checks, then tries to scroll element into view,\nunless it is completely visible.\n\n| =Arguments= | =Description= |\n| ``selector`` | Selector of the checkbox. See the...",
+       "usage_example": "Scroll To Element    arg1",
+       "tags": [
+        "PageContent",
+        "Setter"
+       ]
+      },
+      {
+       "library": "Browser",
+       "keyword_name": "Highlight Elements",
+       "confidence": 0.8451612903225807,
+       "arguments": [
+        "selector",
+        "duration",
+        "width",
+        "style",
+        "color",
+        "",
+        "mode"
+       ],
+       "argument_types": [
+        "str",
+        "timedelta",
+        "str",
+        "str",
+        "str",
+        "str",
+        "HighlightMode"
+       ],
+       "documentation": "Adds a highlight to elements matched by the ``selector``. Provides a style adjustment.\n\nReturns the number of highlighted elements. Keyword does not fail, if `locator` matched zero elements in\nthe pag...",
+       "usage_example": "Highlight Elements    arg1    arg2    arg3    arg4    arg5    arg6    arg7",
+       "tags": [
+        "PageContent",
+        "Setter"
+       ]
+      },
+      {
+       "library": "Browser",
+       "keyword_name": "Click",
+       "confidence": 0.8,
+       "arguments": [
+        "selector",
+        "button"
+       ],
+       "argument_types": [
+        "str",
+        "MouseButton"
+       ],
+       "documentation": "Simulates mouse click on the element found by ``selector``.\n\nThis keyword clicks an element matching ``selector`` by performing the following steps:\n- Find an element matches selector. If there is non...",
+       "usage_example": "Click    arg1    arg2",
+       "tags": [
+        "PageContent",
+        "Setter"
+       ]
+      },
+      {
+       "library": "Browser",
+       "keyword_name": "Tap",
+       "confidence": 0.8,
+       "arguments": [
+        "selector",
+        "modifiers",
+        "force",
+        "noWaitAfter",
+        "position_x",
+        "position_y",
+        "trial"
+       ],
+       "argument_types": [
+        "str",
+        "KeyboardModifier",
+        "bool",
+        "bool",
+        "int | None",
+        "int | None",
+        "bool"
+       ],
+       "documentation": "Simulates tap on the element found by ``selector``.\n\nRequires that the ``hasTouch`` option of the `New Context` be set to true.\nThis method taps the element by performing the following steps:\n- Wait f...",
+       "usage_example": "Tap    arg1    arg2    arg3    arg4    arg5    arg6    arg7",
+       "tags": [
+        "PageContent",
+        "Setter"
+       ]
+      }
+     ],
+     "total_matches": 354,
+     "recommendations": [
+      "Best match: Scroll To Element (confidence: 0.87)",
+      "Required arguments: selector",
+      "Alternative options: Highlight Elements, Click, Tap"
+     ],
+     "filtered_count": 6
+    },
+    "library_filter": {
+     "applied": "Browser",
+     "source": "library_name",
+     "count": 6,
+     "mode": "compatible",
+     "from_library": "SeleniumLibrary"
+    },
+    "excluded_alternatives": [
+     {
+      "keyword": "Click Element",
+      "alternative": "Click",
+      "example": "Click    css=button#submit"
+     },
+     {
+      "keyword": "Click Button",
+      "alternative": "Click",
+      "example": "Click    css=button#submit"
+     }
+    ]
+   }
+  },
+  {
+   "tool": "find_keywords",
+   "strategy": "semantic",
+   "query": "fill text",
+   "library_name": null,
+   "s": 0.378,
+   "chars": 5333,
+   "top": [],
+   "success": true,
+   "raw": {
+    "success": true,
+    "strategy": "semantic",
+    "query": "fill text",
+    "result": {
+     "success": true,
+     "action_description": "fill text",
+     "action_type": "input",
+     "matches": [
+      {
+       "keyword_name": "Fill Text",
+       "library": "Browser",
+       "confidence": 1.0,
+       "arguments": [
+        "selector",
+        "txt",
+        "force"
+       ],
+       "argument_types": [
+        "str",
+        "str",
+        "bool"
+       ],
+       "documentation": "Clears and fills the given ``txt`` into the text field found by ``selector``.\n\nThis method waits for an element matching the ``selector`` to appear,\nwaits for actionability checks, focuses the element...",
+       "usage_example": "Fill Text    arg1    arg2    arg3",
+       "tags": [
+        "PageContent",
+        "Setter"
+       ]
+      },
+      {
+       "keyword_name": "Fill Secret",
+       "library": "Browser",
+       "confidence": 0.8999999999999999,
+       "arguments": [
+        "selector",
+        "secret",
+        "force"
+       ],
+       "argument_types": [
+        "str",
+        "str",
+        "bool"
+       ],
+       "documentation": "Fills the given secret from ``variable_name`` into the\ntext field found by ``selector``.\n\n\n| =Arguments= | =Description= |\n| ``secret`` | The secret string that should be filled into the text field. |...",
+       "usage_example": "Fill Secret    arg1    arg2    arg3",
+       "tags": [
+        "PageContent",
+        "Setter"
+       ]
+      },
+      {
+       "keyword_name": "Input Text",
+       "library": "SeleniumLibrary",
+       "confidence": 0.831578947368421,
+       "arguments": [
+        "locator",
+        "text",
+        "clear"
+       ],
+       "argument_types": [
+        "WebElement | str",
+        "str",
+        "bool"
+       ],
+       "documentation": "Types the given ``text`` into the text field identified by ``locator``.\n\nWhen ``clear`` is true, the input element is cleared before\nthe text is typed into the element. When false, the previous text\ni...",
+       "usage_example": "Input Text    id=my-element    example text    arg3",
+       "tags": [
+        "api",
+        "verification"
+       ]
+      },
+      {
+       "keyword_name": "Type Text",
+       "library": "Browser",
+       "confidence": 0.8,
+       "arguments": [
+        "selector",
+        "txt",
+        "delay",
+        "clear"
+       ],
+       "argument_types": [
+        "str",
+        "str",
+        "timedelta",
+        "bool"
+       ],
+       "documentation": "Types the given ``txt`` into the text field found by ``selector``.\n\nSends a ``keydown``, ``keypress/input``, and ``keyup`` event for each\ncharacter in the text.\n\n| =Arguments= | =Description= |\n| ``se...",
+       "usage_example": "Type Text    arg1    arg2    arg3    arg4",
+       "tags": [
+        "PageContent",
+        "Setter"
+       ]
+      },
+      {
+       "keyword_name": "Type Secret",
+       "library": "Browser",
+       "confidence": 0.5599999999999999,
+       "arguments": [
+        "selector",
+        "secret",
+        "delay",
+        "clear"
+       ],
+       "argument_types": [
+        "str",
+        "str",
+        "timedelta",
+        "bool"
+       ],
+       "documentation": "Types the given secret from ``variable_name`` into the text field\nfound by ``selector``.\n\nThis keyword does not log secret in Robot Framework logs, if keyword resolves\nthe variable value internally. I...",
+       "usage_example": "Type Secret    arg1    arg2    arg3    arg4",
+       "tags": [
+        "PageContent",
+        "Setter"
+       ]
+      },
+      {
+       "keyword_name": "Input Text Into Alert",
+       "library": "SeleniumLibrary",
+       "confidence": 0.5161290322580645,
+       "arguments": [
+        "text",
+        "action",
+        "timeout"
+       ],
+       "argument_types": [
+        "str",
+        "str",
+        "timedelta | None"
+       ],
+       "documentation": "Types the given ``text`` into an input field in an alert.\n\nThe alert is accepted by default, but that behavior can be controlled\nby using the ``action`` argument same way as with `Handle Alert`.\n\n``ti...",
+       "usage_example": "Input Text Into Alert    example text    arg2    10s",
+       "tags": [
+        "mobile"
+       ]
+      },
+      {
+       "keyword_name": "Clear Text",
+       "library": "Browser",
+       "confidence": 0.4989473684210526,
+       "arguments": [
+        "selector"
+       ],
+       "argument_types": [
+        "str"
+       ],
+       "documentation": "Clears the text field found by ``selector``.\n\n| =Arguments= | =Description= |\n| ``selector`` | Selector of the text field. See the `Finding elements` section for details about the selectors. |\n\nKeywor...",
+       "usage_example": "Clear Text    arg1",
+       "tags": [
+        "PageContent",
+        "Setter"
+       ]
+      },
+      {
+       "keyword_name": "Get Text",
+       "library": "Browser",
+       "confidence": 0.47294117647058825,
+       "arguments": [
+        "selector",
+        "assertion_operator",
+        "assertion_expected",
+        "message"
+       ],
+       "argument_types": [
+        "str",
+        "AssertionOperator | None",
+        "Any | None",
+        "str | None"
+       ],
+       "documentation": "Returns text attribute of the element found by ``selector``.\n\n       Keyword can also return `input` or `textarea` value property text.\nSee the `Finding elements` section for details about the selecto...",
+       "usage_example": "Get Text    arg1    arg2    arg3    arg4",
+       "tags": [
+        "Assertion",
+        "Getter",
+        "PageContent"
+       ]
+      },
+      {
+       "keyword_name": "Get Text",
+       "library": "SeleniumLibrary",
+       "confidence": 0.47294117647058825,
+       "arguments": [
+        "locator"
+       ],
+       "argument_types": [
+        "WebElement | str"
+       ],
+       "documentation": "Returns the text value of the element identified by ``locator``.\n\nSee the `Locating elements` section for details about the locator\nsyntax.",
+       "usage_example": "Get Text    id=my-element",
+       "tags": []
+      },
+      {
+       "keyword_name": "Choose File",
+       "library": "SeleniumLibrary",
+       "confidence": 0.45000000000000007,
+       "arguments": [
+        "locator",
+        "file_path"
+       ],
+       "argument_types": [
+        "WebElement | str",
+        "str"
+       ],
+       "documentation": "Inputs the ``file_path`` into the file input field ``locator``.\n\nThis keyword is most often used to input files into upload forms.\nThe keyword does not check ``file_path`` is the file or folder\navaila...",
+       "usage_example": "Choose File    id=my-element    arg2",
+       "tags": [
+        "web",
+        "api",
+        "verification"
+       ]
+      }
+     ],
+     "total_matches": 332,
+     "recommendations": [
+      "Best match: Fill Text (confidence: 1.00)",
+      "Required arguments: selector, txt, force",
+      "Alternative options: Fill Secret, Input Text, Type Text"
+     ]
+    }
+   }
+  },
+  {
+   "tool": "find_keywords",
+   "strategy": "semantic",
+   "query": "fill text",
+   "library_name": "Browser",
+   "s": 0.383,
+   "chars": 3686,
+   "top": [],
+   "success": true,
+   "raw": {
+    "success": true,
+    "strategy": "semantic",
+    "query": "fill text",
+    "result": {
+     "success": true,
+     "action_description": "fill text",
+     "action_type": "input",
+     "matches": [
+      {
+       "library": "Browser",
+       "keyword_name": "Fill Text",
+       "confidence": 1.0,
+       "arguments": [
+        "selector",
+        "txt",
+        "force"
+       ],
+       "argument_types": [
+        "str",
+        "str",
+        "bool"
+       ],
+       "documentation": "Clears and fills the given ``txt`` into the text field found by ``selector``.\n\nThis method waits for an element matching the ``selector`` to appear,\nwaits for actionability checks, focuses the element...",
+       "usage_example": "Fill Text    arg1    arg2    arg3",
+       "tags": [
+        "PageContent",
+        "Setter"
+       ]
+      },
+      {
+       "library": "Browser",
+       "keyword_name": "Fill Secret",
+       "confidence": 0.8999999999999999,
+       "arguments": [
+        "selector",
+        "secret",
+        "force"
+       ],
+       "argument_types": [
+        "str",
+        "str",
+        "bool"
+       ],
+       "documentation": "Fills the given secret from ``variable_name`` into the\ntext field found by ``selector``.\n\n\n| =Arguments= | =Description= |\n| ``secret`` | The secret string that should be filled into the text field. |...",
+       "usage_example": "Fill Secret    arg1    arg2    arg3",
+       "tags": [
+        "PageContent",
+        "Setter"
+       ]
+      },
+      {
+       "library": "Browser",
+       "keyword_name": "Type Text",
+       "confidence": 0.8,
+       "arguments": [
+        "selector",
+        "txt",
+        "delay",
+        "clear"
+       ],
+       "argument_types": [
+        "str",
+        "str",
+        "timedelta",
+        "bool"
+       ],
+       "documentation": "Types the given ``txt`` into the text field found by ``selector``.\n\nSends a ``keydown``, ``keypress/input``, and ``keyup`` event for each\ncharacter in the text.\n\n| =Arguments= | =Description= |\n| ``se...",
+       "usage_example": "Type Text    arg1    arg2    arg3    arg4",
+       "tags": [
+        "PageContent",
+        "Setter"
+       ]
+      },
+      {
+       "library": "Browser",
+       "keyword_name": "Type Secret",
+       "confidence": 0.5599999999999999,
+       "arguments": [
+        "selector",
+        "secret",
+        "delay",
+        "clear"
+       ],
+       "argument_types": [
+        "str",
+        "str",
+        "timedelta",
+        "bool"
+       ],
+       "documentation": "Types the given secret from ``variable_name`` into the text field\nfound by ``selector``.\n\nThis keyword does not log secret in Robot Framework logs, if keyword resolves\nthe variable value internally. I...",
+       "usage_example": "Type Secret    arg1    arg2    arg3    arg4",
+       "tags": [
+        "PageContent",
+        "Setter"
+       ]
+      },
+      {
+       "library": "Browser",
+       "keyword_name": "Clear Text",
+       "confidence": 0.4989473684210526,
+       "arguments": [
+        "selector"
+       ],
+       "argument_types": [
+        "str"
+       ],
+       "documentation": "Clears the text field found by ``selector``.\n\n| =Arguments= | =Description= |\n| ``selector`` | Selector of the text field. See the `Finding elements` section for details about the selectors. |\n\nKeywor...",
+       "usage_example": "Clear Text    arg1",
+       "tags": [
+        "PageContent",
+        "Setter"
+       ]
+      },
+      {
+       "library": "Browser",
+       "keyword_name": "Get Text",
+       "confidence": 0.47294117647058825,
+       "arguments": [
+        "selector",
+        "assertion_operator",
+        "assertion_expected",
+        "message"
+       ],
+       "argument_types": [
+        "str",
+        "AssertionOperator | None",
+        "Any | None",
+        "str | None"
+       ],
+       "documentation": "Returns text attribute of the element found by ``selector``.\n\n       Keyword can also return `input` or `textarea` value property text.\nSee the `Finding elements` section for details about the selecto...",
+       "usage_example": "Get Text    arg1    arg2    arg3    arg4",
+       "tags": [
+        "Assertion",
+        "Getter",
+        "PageContent"
+       ]
+      }
+     ],
+     "total_matches": 332,
+     "recommendations": [
+      "Best match: Fill Text (confidence: 1.00)",
+      "Required arguments: selector, txt, force",
+      "Alternative options: Fill Secret, Type Text, Type Secret"
+     ],
+     "filtered_count": 4
+    },
+    "library_filter": {
+     "applied": "Browser",
+     "source": "library_name",
+     "count": 4,
+     "mode": "compatible",
+     "from_library": "SeleniumLibrary"
+    },
+    "excluded_alternatives": [
+     {
+      "keyword": "Input Text",
+      "alternative": "Fill Text",
+      "example": "Fill Text    css=input#username    myuser"
+     }
+    ]
+   }
+  },
+  {
+   "tool": "find_keywords",
+   "strategy": "semantic",
+   "query": "post json",
+   "library_name": null,
+   "s": 0.304,
+   "chars": 6662,
+   "top": [],
+   "success": true,
+   "raw": {
+    "success": true,
+    "strategy": "semantic",
+    "query": "post json",
+    "result": {
+     "success": true,
+     "action_description": "post json",
+     "action_type": "unknown",
+     "matches": [
+      {
+       "keyword_name": "POST",
+       "library": "RequestsLibrary",
+       "confidence": 0.9653846153846154,
+       "arguments": [
+        "args",
+        "kwargs"
+       ],
+       "argument_types": [
+        "str",
+        "str"
+       ],
+       "documentation": "Sends a POST request.\n\nThe endpoint used to send the request is the ``url`` parameter, while its body\ncan be passed using ``data`` or ``json`` parameters.\n\n``data`` can be a dictionary, list of tuples...",
+       "usage_example": "POST    arg1    arg2",
+       "tags": [
+        "api",
+        "verification"
+       ]
+      },
+      {
+       "keyword_name": "POST On Session",
+       "library": "RequestsLibrary",
+       "confidence": 0.9333333333333335,
+       "arguments": [
+        "args",
+        "kwargs"
+       ],
+       "argument_types": [
+        "str",
+        "str"
+       ],
+       "documentation": "Sends a POST request on a previously created HTTP Session.\n\nSession will be identified using the ``alias`` name.\nThe endpoint used to send the request is the ``url`` parameter, while its body\ncan be p...",
+       "usage_example": "POST On Session    arg1    arg2",
+       "tags": [
+        "api",
+        "verification"
+       ]
+      },
+      {
+       "keyword_name": "Update Session",
+       "library": "RequestsLibrary",
+       "confidence": 0.8717391304347827,
+       "arguments": [
+        "alias",
+        "headers",
+        "cookies"
+       ],
+       "argument_types": [
+        "str",
+        "str",
+        "str"
+       ],
+       "documentation": "Updates HTTP Session Headers and Cookies.\n\nSession will be identified using the ``alias`` name.\nDictionary of ``headers`` and ``cookies`` to be updated and merged into session data.",
+       "usage_example": "Update Session    arg1    arg2    arg3",
+       "tags": [
+        "api"
+       ]
+      },
+      {
+       "keyword_name": "OPTIONS",
+       "library": "RequestsLibrary",
+       "confidence": 0.85,
+       "arguments": [
+        "args",
+        "kwargs"
+       ],
+       "argument_types": [
+        "str",
+        "str"
+       ],
+       "documentation": "Sends a OPTIONS request.\n\nThe endpoint used to retrieve the resource is the ``url``.\n\nBy default this keyword fails if a status code with error values is returned in the response,\nthis behavior can be...",
+       "usage_example": "OPTIONS    arg1    arg2",
+       "tags": [
+        "api",
+        "verification"
+       ]
+      },
+      {
+       "keyword_name": "Create Session",
+       "library": "RequestsLibrary",
+       "confidence": 0.7847826086956522,
+       "arguments": [
+        "alias",
+        "url",
+        "headers",
+        "cookies",
+        "auth",
+        "timeout",
+        "proxies",
+        "verify",
+        "debug",
+        "max_retries",
+        "backoff_factor",
+        "disable_warnings",
+        "retry_status_list",
+        "retry_method_list"
+       ],
+       "argument_types": [
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str"
+       ],
+       "documentation": "Create Session: create a HTTP session to a server\n\n``alias`` Robot Framework alias to identify the session\n\n``url`` Base url of the server\n\n``headers`` Dictionary of default headers\n\n``cookies`` Dicti...",
+       "usage_example": "Create Session    arg1    https://example.com    arg3    arg4    arg5    10s    arg7    arg8    arg9    arg10    arg11    arg12    arg13    arg14",
+       "tags": [
+        "web",
+        "mobile",
+        "api",
+        "verification"
+       ]
+      },
+      {
+       "keyword_name": "PUT On Session",
+       "library": "RequestsLibrary",
+       "confidence": 0.7847826086956522,
+       "arguments": [
+        "args",
+        "kwargs"
+       ],
+       "argument_types": [
+        "str",
+        "str"
+       ],
+       "documentation": "Sends a PUT request on a previously created HTTP Session.\n\nSession will be identified using the ``alias`` name.\nThe endpoint used to send the request is the ``url`` parameter, while its body\ncan be pa...",
+       "usage_example": "PUT On Session    arg1    arg2",
+       "tags": [
+        "api",
+        "verification"
+       ]
+      },
+      {
+       "keyword_name": "Create Custom Session",
+       "library": "RequestsLibrary",
+       "confidence": 0.7500000000000001,
+       "arguments": [
+        "alias",
+        "url",
+        "auth",
+        "headers",
+        "cookies",
+        "timeout",
+        "proxies",
+        "verify",
+        "debug",
+        "max_retries",
+        "backoff_factor",
+        "disable_warnings",
+        "retry_status_list",
+        "retry_method_list"
+       ],
+       "argument_types": [
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str"
+       ],
+       "documentation": "Create Session: create a HTTP session to a server\n\n``url`` Base url of the server\n\n``alias`` Robot Framework alias to identify the session\n\n``headers`` Dictionary of default headers\n\n``cookies`` Dicti...",
+       "usage_example": "Create Custom Session    arg1    https://example.com    arg3    arg4    arg5    10s    arg7    arg8    arg9    arg10    arg11    arg12    arg13    arg14",
+       "tags": [
+        "web",
+        "mobile",
+        "api",
+        "verification"
+       ]
+      },
+      {
+       "keyword_name": "Create Digest Session",
+       "library": "RequestsLibrary",
+       "confidence": 0.7500000000000001,
+       "arguments": [
+        "alias",
+        "url",
+        "auth",
+        "headers",
+        "cookies",
+        "timeout",
+        "proxies",
+        "verify",
+        "debug",
+        "max_retries",
+        "backoff_factor",
+        "disable_warnings",
+        "retry_status_list",
+        "retry_method_list"
+       ],
+       "argument_types": [
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str"
+       ],
+       "documentation": "Create Session: create a HTTP session to a server\n\n``url`` Base url of the server\n\n``alias`` Robot Framework alias to identify the session\n\n``headers`` Dictionary of default headers\n\n``cookies`` Dicti...",
+       "usage_example": "Create Digest Session    arg1    https://example.com    arg3    arg4    arg5    10s    arg7    arg8    arg9    arg10    arg11    arg12    arg13    arg14",
+       "tags": [
+        "web",
+        "mobile",
+        "api",
+        "verification"
+       ]
+      },
+      {
+       "keyword_name": "PATCH On Session",
+       "library": "RequestsLibrary",
+       "confidence": 0.7500000000000001,
+       "arguments": [
+        "args",
+        "kwargs"
+       ],
+       "argument_types": [
+        "str",
+        "str"
+       ],
+       "documentation": "Sends a PATCH request on a previously created HTTP Session.\n\nSession will be identified using the ``alias`` name.\nThe endpoint used to send the request is the ``url`` parameter, while its body\ncan be ...",
+       "usage_example": "PATCH On Session    arg1    arg2",
+       "tags": [
+        "api",
+        "verification"
+       ]
+      },
+      {
+       "keyword_name": "Create Ntlm Session",
+       "library": "RequestsLibrary",
+       "confidence": 0.7071428571428572,
+       "arguments": [
+        "alias",
+        "url",
+        "auth",
+        "headers",
+        "cookies",
+        "timeout",
+        "proxies",
+        "verify",
+        "debug",
+        "max_retries",
+        "backoff_factor",
+        "disable_warnings",
+        "retry_status_list",
+        "retry_method_list"
+       ],
+       "argument_types": [
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str"
+       ],
+       "documentation": "Create Session: create a HTTP session to a server\n\n``url`` Base url of the server\n\n``alias`` Robot Framework alias to identify the session\n\n``headers`` Dictionary of default headers\n\n``cookies`` Dicti...",
+       "usage_example": "Create Ntlm Session    arg1    https://example.com    arg3    arg4    arg5    10s    arg7    arg8    arg9    arg10    arg11    arg12    arg13    arg14",
+       "tags": [
+        "web",
+        "mobile",
+        "api",
+        "verification"
+       ]
+      }
+     ],
+     "total_matches": 175,
+     "recommendations": [
+      "Best match: POST (confidence: 0.97)",
+      "Required arguments: args, kwargs",
+      "Alternative options: POST On Session, Update Session, OPTIONS"
+     ]
+    }
+   }
+  },
+  {
+   "tool": "find_keywords",
+   "strategy": "semantic",
+   "query": "post json",
+   "library_name": "RequestsLibrary",
+   "s": 0.339,
+   "chars": 6683,
+   "top": [],
+   "success": true,
+   "raw": {
+    "success": true,
+    "strategy": "semantic",
+    "query": "post json",
+    "result": {
+     "success": true,
+     "action_description": "post json",
+     "action_type": "unknown",
+     "matches": [
+      {
+       "library": "RequestsLibrary",
+       "keyword_name": "POST",
+       "confidence": 0.9653846153846154,
+       "arguments": [
+        "args",
+        "kwargs"
+       ],
+       "argument_types": [
+        "str",
+        "str"
+       ],
+       "documentation": "Sends a POST request.\n\nThe endpoint used to send the request is the ``url`` parameter, while its body\ncan be passed using ``data`` or ``json`` parameters.\n\n``data`` can be a dictionary, list of tuples...",
+       "usage_example": "POST    arg1    arg2",
+       "tags": [
+        "api",
+        "verification"
+       ]
+      },
+      {
+       "library": "RequestsLibrary",
+       "keyword_name": "POST On Session",
+       "confidence": 0.9333333333333335,
+       "arguments": [
+        "args",
+        "kwargs"
+       ],
+       "argument_types": [
+        "str",
+        "str"
+       ],
+       "documentation": "Sends a POST request on a previously created HTTP Session.\n\nSession will be identified using the ``alias`` name.\nThe endpoint used to send the request is the ``url`` parameter, while its body\ncan be p...",
+       "usage_example": "POST On Session    arg1    arg2",
+       "tags": [
+        "api",
+        "verification"
+       ]
+      },
+      {
+       "library": "RequestsLibrary",
+       "keyword_name": "Update Session",
+       "confidence": 0.8717391304347827,
+       "arguments": [
+        "alias",
+        "headers",
+        "cookies"
+       ],
+       "argument_types": [
+        "str",
+        "str",
+        "str"
+       ],
+       "documentation": "Updates HTTP Session Headers and Cookies.\n\nSession will be identified using the ``alias`` name.\nDictionary of ``headers`` and ``cookies`` to be updated and merged into session data.",
+       "usage_example": "Update Session    arg1    arg2    arg3",
+       "tags": [
+        "api"
+       ]
+      },
+      {
+       "library": "RequestsLibrary",
+       "keyword_name": "OPTIONS",
+       "confidence": 0.85,
+       "arguments": [
+        "args",
+        "kwargs"
+       ],
+       "argument_types": [
+        "str",
+        "str"
+       ],
+       "documentation": "Sends a OPTIONS request.\n\nThe endpoint used to retrieve the resource is the ``url``.\n\nBy default this keyword fails if a status code with error values is returned in the response,\nthis behavior can be...",
+       "usage_example": "OPTIONS    arg1    arg2",
+       "tags": [
+        "api",
+        "verification"
+       ]
+      },
+      {
+       "library": "RequestsLibrary",
+       "keyword_name": "Create Session",
+       "confidence": 0.7847826086956522,
+       "arguments": [
+        "alias",
+        "url",
+        "headers",
+        "cookies",
+        "auth",
+        "timeout",
+        "proxies",
+        "verify",
+        "debug",
+        "max_retries",
+        "backoff_factor",
+        "disable_warnings",
+        "retry_status_list",
+        "retry_method_list"
+       ],
+       "argument_types": [
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str"
+       ],
+       "documentation": "Create Session: create a HTTP session to a server\n\n``alias`` Robot Framework alias to identify the session\n\n``url`` Base url of the server\n\n``headers`` Dictionary of default headers\n\n``cookies`` Dicti...",
+       "usage_example": "Create Session    arg1    https://example.com    arg3    arg4    arg5    10s    arg7    arg8    arg9    arg10    arg11    arg12    arg13    arg14",
+       "tags": [
+        "web",
+        "mobile",
+        "api",
+        "verification"
+       ]
+      },
+      {
+       "library": "RequestsLibrary",
+       "keyword_name": "PUT On Session",
+       "confidence": 0.7847826086956522,
+       "arguments": [
+        "args",
+        "kwargs"
+       ],
+       "argument_types": [
+        "str",
+        "str"
+       ],
+       "documentation": "Sends a PUT request on a previously created HTTP Session.\n\nSession will be identified using the ``alias`` name.\nThe endpoint used to send the request is the ``url`` parameter, while its body\ncan be pa...",
+       "usage_example": "PUT On Session    arg1    arg2",
+       "tags": [
+        "api",
+        "verification"
+       ]
+      },
+      {
+       "library": "RequestsLibrary",
+       "keyword_name": "Create Custom Session",
+       "confidence": 0.7500000000000001,
+       "arguments": [
+        "alias",
+        "url",
+        "auth",
+        "headers",
+        "cookies",
+        "timeout",
+        "proxies",
+        "verify",
+        "debug",
+        "max_retries",
+        "backoff_factor",
+        "disable_warnings",
+        "retry_status_list",
+        "retry_method_list"
+       ],
+       "argument_types": [
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str"
+       ],
+       "documentation": "Create Session: create a HTTP session to a server\n\n``url`` Base url of the server\n\n``alias`` Robot Framework alias to identify the session\n\n``headers`` Dictionary of default headers\n\n``cookies`` Dicti...",
+       "usage_example": "Create Custom Session    arg1    https://example.com    arg3    arg4    arg5    10s    arg7    arg8    arg9    arg10    arg11    arg12    arg13    arg14",
+       "tags": [
+        "web",
+        "mobile",
+        "api",
+        "verification"
+       ]
+      },
+      {
+       "library": "RequestsLibrary",
+       "keyword_name": "Create Digest Session",
+       "confidence": 0.7500000000000001,
+       "arguments": [
+        "alias",
+        "url",
+        "auth",
+        "headers",
+        "cookies",
+        "timeout",
+        "proxies",
+        "verify",
+        "debug",
+        "max_retries",
+        "backoff_factor",
+        "disable_warnings",
+        "retry_status_list",
+        "retry_method_list"
+       ],
+       "argument_types": [
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str"
+       ],
+       "documentation": "Create Session: create a HTTP session to a server\n\n``url`` Base url of the server\n\n``alias`` Robot Framework alias to identify the session\n\n``headers`` Dictionary of default headers\n\n``cookies`` Dicti...",
+       "usage_example": "Create Digest Session    arg1    https://example.com    arg3    arg4    arg5    10s    arg7    arg8    arg9    arg10    arg11    arg12    arg13    arg14",
+       "tags": [
+        "web",
+        "mobile",
+        "api",
+        "verification"
+       ]
+      },
+      {
+       "library": "RequestsLibrary",
+       "keyword_name": "PATCH On Session",
+       "confidence": 0.7500000000000001,
+       "arguments": [
+        "args",
+        "kwargs"
+       ],
+       "argument_types": [
+        "str",
+        "str"
+       ],
+       "documentation": "Sends a PATCH request on a previously created HTTP Session.\n\nSession will be identified using the ``alias`` name.\nThe endpoint used to send the request is the ``url`` parameter, while its body\ncan be ...",
+       "usage_example": "PATCH On Session    arg1    arg2",
+       "tags": [
+        "api",
+        "verification"
+       ]
+      },
+      {
+       "library": "RequestsLibrary",
+       "keyword_name": "Create Ntlm Session",
+       "confidence": 0.7071428571428572,
+       "arguments": [
+        "alias",
+        "url",
+        "auth",
+        "headers",
+        "cookies",
+        "timeout",
+        "proxies",
+        "verify",
+        "debug",
+        "max_retries",
+        "backoff_factor",
+        "disable_warnings",
+        "retry_status_list",
+        "retry_method_list"
+       ],
+       "argument_types": [
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str",
+        "str"
+       ],
+       "documentation": "Create Session: create a HTTP session to a server\n\n``url`` Base url of the server\n\n``alias`` Robot Framework alias to identify the session\n\n``headers`` Dictionary of default headers\n\n``cookies`` Dicti...",
+       "usage_example": "Create Ntlm Session    arg1    https://example.com    arg3    arg4    arg5    10s    arg7    arg8    arg9    arg10    arg11    arg12    arg13    arg14",
+       "tags": [
+        "web",
+        "mobile",
+        "api",
+        "verification"
+       ]
+      }
+     ],
+     "total_matches": 175,
+     "recommendations": [
+      "Best match: POST (confidence: 0.97)",
+      "Required arguments: args, kwargs",
+      "Alternative options: POST On Session, Update Session, OPTIONS"
+     ],
+     "filtered_count": 0
+    }
+   }
+  },
+  {
+   "tool": "find_keywords",
+   "strategy": "semantic",
+   "query": "wait until visible",
+   "library_name": null,
+   "s": 0.511,
+   "chars": 5900,
+   "top": [],
+   "success": true,
+   "raw": {
+    "success": true,
+    "strategy": "semantic",
+    "query": "wait until visible",
+    "result": {
+     "success": true,
+     "action_description": "wait until visible",
+     "action_type": "wait",
+     "matches": [
+      {
+       "keyword_name": "Wait Until Element Is Visible",
+       "library": "SeleniumLibrary",
+       "confidence": 0.9659574468085106,
+       "arguments": [
+        "locator",
+        "timeout",
+        "error"
+       ],
+       "argument_types": [
+        "WebElement | str",
+        "timedelta | None",
+        "str | None"
+       ],
+       "documentation": "Waits until the element ``locator`` is visible.\n\nFails if ``timeout`` expires before the element is visible. See\nthe `Timeouts` section for more information about using timeouts and\ntheir default valu...",
+       "usage_example": "Wait Until Element Is Visible    id=my-element    10s    arg3",
+       "tags": []
+      },
+      {
+       "keyword_name": "Wait Until Element Is Not Visible",
+       "library": "SeleniumLibrary",
+       "confidence": 0.9058823529411766,
+       "arguments": [
+        "locator",
+        "timeout",
+        "error"
+       ],
+       "argument_types": [
+        "WebElement | str",
+        "timedelta | None",
+        "str | None"
+       ],
+       "documentation": "Waits until the element ``locator`` is not visible.\n\nFails if ``timeout`` expires before the element is not visible. See\nthe `Timeouts` section for more information about using timeouts and\ntheir defa...",
+       "usage_example": "Wait Until Element Is Not Visible    id=my-element    10s    arg3",
+       "tags": []
+      },
+      {
+       "keyword_name": "Wait Until Element Is Enabled",
+       "library": "SeleniumLibrary",
+       "confidence": 0.8808510638297873,
+       "arguments": [
+        "locator",
+        "timeout",
+        "error"
+       ],
+       "argument_types": [
+        "WebElement | str",
+        "timedelta | None",
+        "str | None"
+       ],
+       "documentation": "Waits until the element ``locator`` is enabled.\n\nElement is considered enabled if it is not disabled nor read-only.\n\nFails if ``timeout`` expires before the element is enabled. See\nthe `Timeouts` sect...",
+       "usage_example": "Wait Until Element Is Enabled    id=my-element    10s    arg3",
+       "tags": []
+      },
+      {
+       "keyword_name": "Wait For Condition",
+       "library": "Browser",
+       "confidence": 0.8,
+       "arguments": [
+        "condition",
+        "args",
+        "timeout",
+        "message"
+       ],
+       "argument_types": [
+        "ConditionInputs",
+        "Any",
+        "timedelta | None",
+        "str | None"
+       ],
+       "documentation": "Waits for a condition, defined with Browser getter keywords to become True.\n\nThis Keyword is basically just a wrapper around our assertion keywords, but with a timeout.\nIt can be used to wait for anyt...",
+       "usage_example": "Wait For Condition    arg1    arg2    10s    arg4",
+       "tags": [
+        "PageContent",
+        "Wait"
+       ]
+      },
+      {
+       "keyword_name": "Wait For Elements State",
+       "library": "Browser",
+       "confidence": 0.8,
+       "arguments": [
+        "selector",
+        "state",
+        "timeout",
+        "message"
+       ],
+       "argument_types": [
+        "str",
+        "ElementState",
+        "timedelta | None",
+        "str | None"
+       ],
+       "documentation": "Waits for the element found by ``selector`` to satisfy state option.\n\nNote that Browser library has `Implicit waiting` mechanisms. Depending on\nthe situation you might not need to use `Wait for Elemen...",
+       "usage_example": "Wait For Elements State    arg1    arg2    10s    arg4",
+       "tags": [
+        "PageContent",
+        "Wait"
+       ]
+      },
+      {
+       "keyword_name": "Wait For Condition",
+       "library": "SeleniumLibrary",
+       "confidence": 0.8,
+       "arguments": [
+        "condition",
+        "timeout",
+        "error"
+       ],
+       "argument_types": [
+        "str",
+        "timedelta | None",
+        "str | None"
+       ],
+       "documentation": "Waits until ``condition`` is true or ``timeout`` expires.\n\nThe condition can be arbitrary JavaScript expression but it\nmust return a value to be evaluated. See `Execute JavaScript` for\ninformation abo...",
+       "usage_example": "Wait For Condition    arg1    10s    arg3",
+       "tags": [
+        "database"
+       ]
+      },
+      {
+       "keyword_name": "Sleep",
+       "library": "BuiltIn",
+       "confidence": 0.8,
+       "arguments": [
+        "time_",
+        "reason"
+       ],
+       "argument_types": [
+        "str",
+        "str"
+       ],
+       "documentation": "Pauses the test executed for the given time.\n\n``time`` may be either a number or a time string. Time strings are in\na format such as ``1 day 2 hours 3 minutes 4 seconds 5milliseconds`` or\n``1d 2h 3m 4...",
+       "usage_example": "Sleep    arg1    arg2",
+       "tags": [
+        "mobile"
+       ]
+      },
+      {
+       "keyword_name": "Wait Until Page Contains Element",
+       "library": "SeleniumLibrary",
+       "confidence": 0.8,
+       "arguments": [
+        "locator",
+        "timeout",
+        "error",
+        "limit"
+       ],
+       "argument_types": [
+        "WebElement | str",
+        "timedelta | None",
+        "str | None",
+        "int | None"
+       ],
+       "documentation": "Waits until the element ``locator`` appears on the current page.\n\nFails if ``timeout`` expires before the element appears. See\nthe `Timeouts` section for more information about using timeouts and\nthei...",
+       "usage_example": "Wait Until Page Contains Element    id=my-element    10s    arg3    arg4",
+       "tags": [
+        "mobile",
+        "verification"
+       ]
+      },
+      {
+       "keyword_name": "Wait Until Element Contains",
+       "library": "SeleniumLibrary",
+       "confidence": 0.7777777777777777,
+       "arguments": [
+        "locator",
+        "text",
+        "timeout",
+        "error"
+       ],
+       "argument_types": [
+        "WebElement | str",
+        "str",
+        "timedelta | None",
+        "str | None"
+       ],
+       "documentation": "Waits until the element ``locator`` contains ``text``.\n\nFails if ``timeout`` expires before the text appears. See\nthe `Timeouts` section for more information about using timeouts and\ntheir default val...",
+       "usage_example": "Wait Until Element Contains    id=my-element    example text    10s    arg4",
+       "tags": [
+        "mobile"
+       ]
+      },
+      {
+       "keyword_name": "Wait Until Page Contains",
+       "library": "SeleniumLibrary",
+       "confidence": 0.7714285714285714,
+       "arguments": [
+        "text",
+        "timeout",
+        "error"
+       ],
+       "argument_types": [
+        "str",
+        "timedelta | None",
+        "str | None"
+       ],
+       "documentation": "Waits until ``text`` appears on the current page.\n\nFails if ``timeout`` expires before the text appears. See\nthe `Timeouts` section for more information about using timeouts\nand their default value.\n\n...",
+       "usage_example": "Wait Until Page Contains    example text    10s    arg3",
+       "tags": [
+        "mobile"
+       ]
+      }
+     ],
+     "total_matches": 357,
+     "recommendations": [
+      "Best match: Wait Until Element Is Visible (confidence: 0.97)",
+      "Required arguments: locator, timeout, error",
+      "Alternative options: Wait Until Element Is Not Visible, Wait Until Element Is Enabled, Wait For Condition"
+     ]
+    }
+   }
+  },
+  {
+   "tool": "find_keywords",
+   "strategy": "semantic",
+   "query": "wait until visible",
+   "library_name": "SeleniumLibrary",
+   "s": 0.499,
+   "chars": 5141,
+   "top": [],
+   "success": true,
+   "raw": {
+    "success": true,
+    "strategy": "semantic",
+    "query": "wait until visible",
+    "result": {
+     "success": true,
+     "action_description": "wait until visible",
+     "action_type": "wait",
+     "matches": [
+      {
+       "library": "SeleniumLibrary",
+       "keyword_name": "Wait Until Element Is Visible",
+       "confidence": 0.9659574468085106,
+       "arguments": [
+        "locator",
+        "timeout",
+        "error"
+       ],
+       "argument_types": [
+        "WebElement | str",
+        "timedelta | None",
+        "str | None"
+       ],
+       "documentation": "Waits until the element ``locator`` is visible.\n\nFails if ``timeout`` expires before the element is visible. See\nthe `Timeouts` section for more information about using timeouts and\ntheir default valu...",
+       "usage_example": "Wait Until Element Is Visible    id=my-element    10s    arg3",
+       "tags": []
+      },
+      {
+       "library": "SeleniumLibrary",
+       "keyword_name": "Wait Until Element Is Not Visible",
+       "confidence": 0.9058823529411766,
+       "arguments": [
+        "locator",
+        "timeout",
+        "error"
+       ],
+       "argument_types": [
+        "WebElement | str",
+        "timedelta | None",
+        "str | None"
+       ],
+       "documentation": "Waits until the element ``locator`` is not visible.\n\nFails if ``timeout`` expires before the element is not visible. See\nthe `Timeouts` section for more information about using timeouts and\ntheir defa...",
+       "usage_example": "Wait Until Element Is Not Visible    id=my-element    10s    arg3",
+       "tags": []
+      },
+      {
+       "library": "SeleniumLibrary",
+       "keyword_name": "Wait Until Element Is Enabled",
+       "confidence": 0.8808510638297873,
+       "arguments": [
+        "locator",
+        "timeout",
+        "error"
+       ],
+       "argument_types": [
+        "WebElement | str",
+        "timedelta | None",
+        "str | None"
+       ],
+       "documentation": "Waits until the element ``locator`` is enabled.\n\nElement is considered enabled if it is not disabled nor read-only.\n\nFails if ``timeout`` expires before the element is enabled. See\nthe `Timeouts` sect...",
+       "usage_example": "Wait Until Element Is Enabled    id=my-element    10s    arg3",
+       "tags": []
+      },
+      {
+       "library": "SeleniumLibrary",
+       "keyword_name": "Wait For Condition",
+       "confidence": 0.8,
+       "arguments": [
+        "condition",
+        "timeout",
+        "error"
+       ],
+       "argument_types": [
+        "str",
+        "timedelta | None",
+        "str | None"
+       ],
+       "documentation": "Waits until ``condition`` is true or ``timeout`` expires.\n\nThe condition can be arbitrary JavaScript expression but it\nmust return a value to be evaluated. See `Execute JavaScript` for\ninformation abo...",
+       "usage_example": "Wait For Condition    arg1    10s    arg3",
+       "tags": [
+        "database"
+       ]
+      },
+      {
+       "library": "BuiltIn",
+       "keyword_name": "Sleep",
+       "confidence": 0.8,
+       "arguments": [
+        "time_",
+        "reason"
+       ],
+       "argument_types": [
+        "str",
+        "str"
+       ],
+       "documentation": "Pauses the test executed for the given time.\n\n``time`` may be either a number or a time string. Time strings are in\na format such as ``1 day 2 hours 3 minutes 4 seconds 5milliseconds`` or\n``1d 2h 3m 4...",
+       "usage_example": "Sleep    arg1    arg2",
+       "tags": [
+        "mobile"
+       ]
+      },
+      {
+       "library": "SeleniumLibrary",
+       "keyword_name": "Wait Until Page Contains Element",
+       "confidence": 0.8,
+       "arguments": [
+        "locator",
+        "timeout",
+        "error",
+        "limit"
+       ],
+       "argument_types": [
+        "WebElement | str",
+        "timedelta | None",
+        "str | None",
+        "int | None"
+       ],
+       "documentation": "Waits until the element ``locator`` appears on the current page.\n\nFails if ``timeout`` expires before the element appears. See\nthe `Timeouts` section for more information about using timeouts and\nthei...",
+       "usage_example": "Wait Until Page Contains Element    id=my-element    10s    arg3    arg4",
+       "tags": [
+        "mobile",
+        "verification"
+       ]
+      },
+      {
+       "library": "SeleniumLibrary",
+       "keyword_name": "Wait Until Element Contains",
+       "confidence": 0.7777777777777777,
+       "arguments": [
+        "locator",
+        "text",
+        "timeout",
+        "error"
+       ],
+       "argument_types": [
+        "WebElement | str",
+        "str",
+        "timedelta | None",
+        "str | None"
+       ],
+       "documentation": "Waits until the element ``locator`` contains ``text``.\n\nFails if ``timeout`` expires before the text appears. See\nthe `Timeouts` section for more information about using timeouts and\ntheir default val...",
+       "usage_example": "Wait Until Element Contains    id=my-element    example text    10s    arg4",
+       "tags": [
+        "mobile"
+       ]
+      },
+      {
+       "library": "SeleniumLibrary",
+       "keyword_name": "Wait Until Page Contains",
+       "confidence": 0.7714285714285714,
+       "arguments": [
+        "text",
+        "timeout",
+        "error"
+       ],
+       "argument_types": [
+        "str",
+        "timedelta | None",
+        "str | None"
+       ],
+       "documentation": "Waits until ``text`` appears on the current page.\n\nFails if ``timeout`` expires before the text appears. See\nthe `Timeouts` section for more information about using timeouts\nand their default value.\n\n...",
+       "usage_example": "Wait Until Page Contains    example text    10s    arg3",
+       "tags": [
+        "mobile"
+       ]
+      }
+     ],
+     "total_matches": 357,
+     "recommendations": [
+      "Best match: Wait Until Element Is Visible (confidence: 0.97)",
+      "Required arguments: locator, timeout, error",
+      "Alternative options: Wait Until Element Is Not Visible, Wait Until Element Is Enabled, Wait For Condition"
+     ],
+     "filtered_count": 2
+    },
+    "library_filter": {
+     "applied": "SeleniumLibrary",
+     "source": "library_name",
+     "count": 2,
+     "mode": "compatible",
+     "from_library": "Browser"
+    },
+    "excluded_alternatives": [
+     {
+      "keyword": "Wait For Elements State",
+      "alternative": "Wait Until Element Is Visible",
+      "example": "Wait Until Element Is Visible    id=element    timeout=10s"
+     }
+    ]
+   }
+  },
+  {
+   "tool": "find_keywords",
+   "strategy": "semantic",
+   "query": "get text",
+   "library_name": null,
+   "s": 0.366,
+   "chars": 4601,
+   "top": [],
+   "success": true,
+   "raw": {
+    "success": true,
+    "strategy": "semantic",
+    "query": "get text",
+    "result": {
+     "success": true,
+     "action_description": "get text",
+     "action_type": "verify",
+     "matches": [
+      {
+       "keyword_name": "Get Text",
+       "library": "Browser",
+       "confidence": 1.0,
+       "arguments": [
+        "selector",
+        "assertion_operator",
+        "assertion_expected",
+        "message"
+       ],
+       "argument_types": [
+        "str",
+        "AssertionOperator | None",
+        "Any | None",
+        "str | None"
+       ],
+       "documentation": "Returns text attribute of the element found by ``selector``.\n\n       Keyword can also return `input` or `textarea` value property text.\nSee the `Finding elements` section for details about the selecto...",
+       "usage_example": "Get Text    arg1    arg2    arg3    arg4",
+       "tags": [
+        "Assertion",
+        "Getter",
+        "PageContent"
+       ]
+      },
+      {
+       "keyword_name": "Get Text",
+       "library": "SeleniumLibrary",
+       "confidence": 1.0,
+       "arguments": [
+        "locator"
+       ],
+       "argument_types": [
+        "WebElement | str"
+       ],
+       "documentation": "Returns the text value of the element identified by ``locator``.\n\nSee the `Locating elements` section for details about the locator\nsyntax.",
+       "usage_example": "Get Text    id=my-element",
+       "tags": []
+      },
+      {
+       "keyword_name": "Get Style",
+       "library": "Browser",
+       "confidence": 0.9058823529411766,
+       "arguments": [
+        "selector",
+        "key",
+        "assertion_operator",
+        "assertion_expected",
+        "message",
+        "pseudo_element"
+       ],
+       "argument_types": [
+        "str",
+        "str | None",
+        "AssertionOperator | None",
+        "Any | None",
+        "str | None",
+        "str | None"
+       ],
+       "documentation": "Gets the computed style properties of the element selected by ``selector``.\n\nOptionally matches with any sequence assertion operator.\n\n\n| =Arguments= | =Description= |\n| ``selector`` | Selector from w...",
+       "usage_example": "Get Style    arg1    arg2    arg3    arg4    arg5    id=my-element",
+       "tags": [
+        "Assertion",
+        "Getter",
+        "PageContent"
+       ]
+      },
+      {
+       "keyword_name": "Get Title",
+       "library": "Browser",
+       "confidence": 0.9058823529411766,
+       "arguments": [
+        "assertion_operator",
+        "assertion_expected",
+        "message"
+       ],
+       "argument_types": [
+        "AssertionOperator | None",
+        "Any | None",
+        "str | None"
+       ],
+       "documentation": "Returns the title of the current page.\n\n| =Arguments= | =Description= |\n| ``assertion_operator`` | See `Assertions` for further details. Defaults to None. |\n| ``assertion_expected`` | Expected value f...",
+       "usage_example": "Get Title    arg1    arg2    arg3",
+       "tags": [
+        "Assertion",
+        "Getter",
+        "PageContent"
+       ]
+      },
+      {
+       "keyword_name": "Get Title",
+       "library": "SeleniumLibrary",
+       "confidence": 0.9058823529411766,
+       "arguments": [],
+       "argument_types": [],
+       "documentation": "Returns the title of the current page.",
+       "usage_example": "Get Title",
+       "tags": []
+      },
+      {
+       "keyword_name": "Get Cookie",
+       "library": "SeleniumLibrary",
+       "confidence": 0.9055555555555556,
+       "arguments": [
+        "name"
+       ],
+       "argument_types": [
+        "str"
+       ],
+       "documentation": "Returns information of cookie with ``name`` as an object.\n\nIf no cookie is found with ``name``, keyword fails. The cookie object\ncontains details about the cookie. Attributes available in the object\na...",
+       "usage_example": "Get Cookie    arg1",
+       "tags": [
+        "web",
+        "api",
+        "verification"
+       ]
+      },
+      {
+       "keyword_name": "Get Source",
+       "library": "SeleniumLibrary",
+       "confidence": 0.9055555555555556,
+       "arguments": [],
+       "argument_types": [],
+       "documentation": "Returns the entire HTML source of the current page or frame.",
+       "usage_example": "Get Source",
+       "tags": [
+        "web"
+       ]
+      },
+      {
+       "keyword_name": "Get WebElement",
+       "library": "SeleniumLibrary",
+       "confidence": 0.8954545454545454,
+       "arguments": [
+        "locator"
+       ],
+       "argument_types": [
+        "WebElement | str"
+       ],
+       "documentation": "Returns the first WebElement matching the given ``locator``.\n\nSee the `Locating elements` section for details about the locator\nsyntax.",
+       "usage_example": "Get WebElement    id=my-element",
+       "tags": [
+        "web"
+       ]
+      },
+      {
+       "keyword_name": "Get WebElements",
+       "library": "SeleniumLibrary",
+       "confidence": 0.8717391304347827,
+       "arguments": [
+        "locator"
+       ],
+       "argument_types": [
+        "WebElement | str"
+       ],
+       "documentation": "Returns a list of WebElement objects matching the ``locator``.\n\nSee the `Locating elements` section for details about the locator\nsyntax.\n\nStarting from SeleniumLibrary 3.0, the keyword returns an emp...",
+       "usage_example": "Get WebElements    id=my-element",
+       "tags": [
+        "web"
+       ]
+      },
+      {
+       "keyword_name": "Get Location",
+       "library": "SeleniumLibrary",
+       "confidence": 0.85,
+       "arguments": [],
+       "argument_types": [],
+       "documentation": "Returns the current browser window URL.",
+       "usage_example": "Get Location",
+       "tags": [
+        "web"
+       ]
+      }
+     ],
+     "total_matches": 429,
+     "recommendations": [
+      "Best match: Get Text (confidence: 1.00)",
+      "Required arguments: selector, assertion_operator, assertion_expected, message",
+      "Alternative options: Get Text, Get Style, Get Title"
+     ]
+    }
+   }
+  },
+  {
+   "tool": "find_keywords",
+   "strategy": "pattern",
+   "query": "click element",
+   "library_name": null,
+   "s": 0.816,
+   "chars": 1469,
+   "top": [
+    "SeleniumLibrary.Click Button",
+    "SeleniumLibrary.Click Element",
+    "SeleniumLibrary.Click Element At Coordinates",
+    "SeleniumLibrary.Click Image",
+    "SeleniumLibrary.Click Link",
+    "SeleniumLibrary.Double Click Element"
+   ],
+   "success": true,
+   "raw": {
+    "success": true,
+    "strategy": "pattern",
+    "query": "click element",
+    "match_count": 6,
+    "top_matches": [
+     "Click Button",
+     "Click Element",
+     "Click Element At Coordinates",
+     "Click Image",
+     "Click Link"
+    ],
+    "results": [
+     {
+      "name": "Click Button",
+      "library": "SeleniumLibrary",
+      "args": [
+       "locator: WebElement | str",
+       "modifier: bool | str = False"
+      ],
+      "arg_types": [],
+      "short_doc": "Clicks the button identified by ``locator``."
+     },
+     {
+      "name": "Click Element",
+      "library": "SeleniumLibrary",
+      "args": [
+       "locator: WebElement | str",
+       "modifier: bool | str = False",
+       "action_chain: bool = False"
+      ],
+      "arg_types": [],
+      "short_doc": "Click the element identified by ``locator``."
+     },
+     {
+      "name": "Click Element At Coordinates",
+      "library": "SeleniumLibrary",
+      "args": [
+       "locator: WebElement | str",
+       "xoffset: int",
+       "yoffset: int"
+      ],
+      "arg_types": [],
+      "short_doc": "Click the element ``locator`` at ``xoffset/yoffset``."
+     },
+     {
+      "name": "Click Image",
+      "library": "SeleniumLibrary",
+      "args": [
+       "locator: WebElement | str",
+       "modifier: bool | str = False"
+      ],
+      "arg_types": [],
+      "short_doc": "Clicks an image identified by ``locator``."
+     },
+     {
+      "name": "Click Link",
+      "library": "SeleniumLibrary",
+      "args": [
+       "locator: WebElement | str",
+       "modifier: bool | str = False"
+      ],
+      "arg_types": [],
+      "short_doc": "Clicks a link identified by ``locator``."
+     },
+     {
+      "name": "Double Click Element",
+      "library": "SeleniumLibrary",
+      "args": [
+       "locator: WebElement | str"
+      ],
+      "arg_types": [],
+      "short_doc": "Double clicks the element identified by ``locator``."
+     }
+    ]
+   }
+  },
+  {
+   "tool": "find_keywords",
+   "strategy": "pattern",
+   "query": "click element",
+   "library_name": "Browser",
+   "s": 0.002,
+   "chars": 471,
+   "top": [],
+   "success": true,
+   "raw": {
+    "success": true,
+    "strategy": "pattern",
+    "query": "click element",
+    "match_count": 0,
+    "top_matches": [],
+    "results": [],
+    "library_filter": {
+     "applied": "Browser",
+     "source": "library_name",
+     "count": 6,
+     "mode": "compatible",
+     "from_library": "SeleniumLibrary"
+    },
+    "excluded_alternatives": [
+     {
+      "keyword": "Click Button",
+      "alternative": "Click",
+      "example": "Click    css=button#submit"
+     },
+     {
+      "keyword": "Click Element",
+      "alternative": "Click",
+      "example": "Click    css=button#submit"
+     }
+    ]
+   }
+  },
+  {
+   "tool": "find_keywords",
+   "strategy": "pattern",
+   "query": "fill text",
+   "library_name": null,
+   "s": 0.002,
+   "chars": 839,
+   "top": [
+    "Browser.Fill Secret",
+    "Browser.Fill Text",
+    "Browser.Type Text"
+   ],
+   "success": true,
+   "raw": {
+    "success": true,
+    "strategy": "pattern",
+    "query": "fill text",
+    "match_count": 3,
+    "top_matches": [
+     "Fill Secret",
+     "Fill Text",
+     "Type Text"
+    ],
+    "results": [
+     {
+      "name": "Fill Secret",
+      "library": "Browser",
+      "args": [
+       "selector: str",
+       "secret: str",
+       "force: bool = False"
+      ],
+      "arg_types": [],
+      "short_doc": "Fills the given secret from ``variable_name`` into the text field found by ``selector``."
+     },
+     {
+      "name": "Fill Text",
+      "library": "Browser",
+      "args": [
+       "selector: str",
+       "txt: str",
+       "force: bool = False"
+      ],
+      "arg_types": [],
+      "short_doc": "Clears and fills the given ``txt`` into the text field found by ``selector``."
+     },
+     {
+      "name": "Type Text",
+      "library": "Browser",
+      "args": [
+       "selector: str",
+       "txt: str",
+       "delay: timedelta = 0:00:00",
+       "clear: bool = True"
+      ],
+      "arg_types": [],
+      "short_doc": "Types the given ``txt`` into the text field found by ``selector``."
+     }
+    ]
+   }
+  },
+  {
+   "tool": "find_keywords",
+   "strategy": "pattern",
+   "query": "fill text",
+   "library_name": "Browser",
+   "s": 0.002,
+   "chars": 839,
+   "top": [
+    "Browser.Fill Secret",
+    "Browser.Fill Text",
+    "Browser.Type Text"
+   ],
+   "success": true,
+   "raw": {
+    "success": true,
+    "strategy": "pattern",
+    "query": "fill text",
+    "match_count": 3,
+    "top_matches": [
+     "Fill Secret",
+     "Fill Text",
+     "Type Text"
+    ],
+    "results": [
+     {
+      "name": "Fill Secret",
+      "library": "Browser",
+      "args": [
+       "selector: str",
+       "secret: str",
+       "force: bool = False"
+      ],
+      "arg_types": [],
+      "short_doc": "Fills the given secret from ``variable_name`` into the text field found by ``selector``."
+     },
+     {
+      "name": "Fill Text",
+      "library": "Browser",
+      "args": [
+       "selector: str",
+       "txt: str",
+       "force: bool = False"
+      ],
+      "arg_types": [],
+      "short_doc": "Clears and fills the given ``txt`` into the text field found by ``selector``."
+     },
+     {
+      "name": "Type Text",
+      "library": "Browser",
+      "args": [
+       "selector: str",
+       "txt: str",
+       "delay: timedelta = 0:00:00",
+       "clear: bool = True"
+      ],
+      "arg_types": [],
+      "short_doc": "Types the given ``txt`` into the text field found by ``selector``."
+     }
+    ]
+   }
+  },
+  {
+   "tool": "find_keywords",
+   "strategy": "pattern",
+   "query": "post json",
+   "library_name": null,
+   "s": 0.002,
+   "chars": 114,
+   "top": [],
+   "success": true,
+   "raw": {
+    "success": true,
+    "strategy": "pattern",
+    "query": "post json",
+    "match_count": 0,
+    "top_matches": [],
+    "results": []
+   }
+  },
+  {
+   "tool": "find_keywords",
+   "strategy": "pattern",
+   "query": "post json",
+   "library_name": "RequestsLibrary",
+   "s": 0.001,
+   "chars": 114,
+   "top": [],
+   "success": true,
+   "raw": {
+    "success": true,
+    "strategy": "pattern",
+    "query": "post json",
+    "match_count": 0,
+    "top_matches": [],
+    "results": []
+   }
+  },
+  {
+   "tool": "find_keywords",
+   "strategy": "pattern",
+   "query": "wait until visible",
+   "library_name": null,
+   "s": 0.001,
+   "chars": 123,
+   "top": [],
+   "success": true,
+   "raw": {
+    "success": true,
+    "strategy": "pattern",
+    "query": "wait until visible",
+    "match_count": 0,
+    "top_matches": [],
+    "results": []
+   }
+  },
+  {
+   "tool": "find_keywords",
+   "strategy": "pattern",
+   "query": "wait until visible",
+   "library_name": "SeleniumLibrary",
+   "s": 0.001,
+   "chars": 123,
+   "top": [],
+   "success": true,
+   "raw": {
+    "success": true,
+    "strategy": "pattern",
+    "query": "wait until visible",
+    "match_count": 0,
+    "top_matches": [],
+    "results": []
+   }
+  },
+  {
+   "tool": "find_keywords",
+   "strategy": "pattern",
+   "query": "get text",
+   "library_name": null,
+   "s": 0.001,
+   "chars": 1932,
+   "top": [
+    "Browser.Get Table Cell Element",
+    "Browser.Get Text",
+    "SeleniumLibrary.Get Text",
+    "Browser.Record Selector",
+    "Browser.Save Storage State",
+    "Browser.Set Assertion Formatters",
+    "Browser.Set Strict Mode",
+    "Browser.Wait For Condition"
+   ],
+   "success": true,
+   "raw": {
+    "success": true,
+    "strategy": "pattern",
+    "query": "get text",
+    "match_count": 8,
+    "top_matches": [
+     "Get Table Cell Element",
+     "Get Text",
+     "Get Text",
+     "Record Selector",
+     "Save Storage State"
+    ],
+    "results": [
+     {
+      "name": "Get Table Cell Element",
+      "library": "Browser",
+      "args": [
+       "table: str",
+       "column: str",
+       "row: str"
+      ],
+      "arg_types": [],
+      "short_doc": "Returns the Web Element that has the same column index and same row index as the selected elements."
+     },
+     {
+      "name": "Get Text",
+      "library": "Browser",
+      "args": [
+       "selector: str",
+       "assertion_operator: AssertionOperator | None = None",
+       "assertion_expected: Any | None = None",
+       "message: str | None = None"
+      ],
+      "arg_types": [],
+      "short_doc": "Returns text attribute of the element found by ``selector``."
+     },
+     {
+      "name": "Get Text",
+      "library": "SeleniumLibrary",
+      "args": [
+       "locator: WebElement | str"
+      ],
+      "arg_types": [],
+      "short_doc": "Returns the text value of the element identified by ``locator``."
+     },
+     {
+      "name": "Record Selector",
+      "library": "Browser",
+      "args": [
+       "label: str | None = None"
+      ],
+      "arg_types": [],
+      "short_doc": "Record the selector that is under mouse."
+     },
+     {
+      "name": "Save Storage State",
+      "library": "Browser",
+      "args": [],
+      "arg_types": [],
+      "short_doc": "Saves the current active context storage state to a file."
+     },
+     {
+      "name": "Set Assertion Formatters",
+      "library": "Browser",
+      "args": [
+       "formatters: Dict[FormatterKeywords, list[FormatingRules | LambdaFunction]]",
+       "scope: Scope = Suite"
+      ],
+      "arg_types": [],
+      "short_doc": "Set keywords formatters for assertions."
+     },
+     {
+      "name": "Set Strict Mode",
+      "library": "Browser",
+      "args": [
+       "mode: bool",
+       "scope: Scope = Suite"
+      ],
+      "arg_types": [],
+      "short_doc": "Controls library strict mode."
+     },
+     {
+      "name": "Wait For Condition",
+      "library": "Browser",
+      "args": [
+       "condition: ConditionInputs",
+       "*args: Any",
+       "timeout: timedelta | None = None",
+       "message: str | None = None"
+      ],
+      "arg_types": [],
+      "short_doc": "Waits for a condition, defined with Browser getter keywords to become True."
+     }
+    ]
+   }
+  },
+  {
+   "tool": "get_keyword_info",
+   "keyword": "Click",
+   "library_name": "Browser",
+   "s": 0.0,
+   "chars": 1534,
+   "success": true,
+   "raw": {
+    "success": true,
+    "keyword": {
+     "name": "Click",
+     "library": "Browser",
+     "args": [
+      "selector: str",
+      "button: MouseButton = left"
+     ],
+     "arg_types": [],
+     "doc": "Simulates mouse click on the element found by ``selector``.\n\nThis keyword clicks an element matching ``selector`` by performing the following steps:\n- Find an element matches selector. If there is none, wait until a matching element is attached to the DOM.\n- Wait for actionability checks on the matched element, unless ``force`` option is set.\n  If the element is detached during the checks, the whole action is retried.\n- Scroll the element into view if needed.\n- Use `Mouse Button` to click in the center of the element, or the specified position.\n- Wait for initiated navigation to either succeed or fail.\n\n\n| =Arguments= | =Description= |\n| ``selector`` | Selector element to click. See the `Finding elements` section for details about the selectors. |\n| ``button`` | Defaults to ``left`` if invalid. |\n\nKeyword uses strict mode, see `Finding elements` for more details about strict mode.\n\nExample:\n| `Click`    id=button_location\n| `Click`    id=button_location    left\n| `Click`    id=button_location    right\n\n[https://forum.robotframework.org/t//4238|Comment >>]",
+     "short_doc": "Simulates mouse click on the element found by ``selector``.",
+     "tags": [
+      "PageContent",
+      "Setter"
+     ],
+     "is_deprecated": false,
+     "source": "~/workspace/rf-mcp-robotcode/.venv/lib/python3.13/site-packages/Browser/keywords/interaction.py",
+     "lineno": 305
+    },
+    "mode": "keyword"
+   }
+  },
+  {
+   "tool": "get_keyword_info",
+   "keyword": "Fill Text",
+   "library_name": "Browser",
+   "s": 0.0,
+   "chars": 1519,
+   "success": true,
+   "raw": {
+    "success": true,
+    "keyword": {
+     "name": "Fill Text",
+     "library": "Browser",
+     "args": [
+      "selector: str",
+      "txt: str",
+      "force: bool = False"
+     ],
+     "arg_types": [],
+     "doc": "Clears and fills the given ``txt`` into the text field found by ``selector``.\n\nThis method waits for an element matching the ``selector`` to appear,\nwaits for actionability checks, focuses the element, fills it and\ntriggers an input event after filling.\n\nIf the element matching selector is not an <input>, <textarea> or\n[contenteditable] element, this method throws an error. Note that\nyou can pass an empty string as ``txt`` to clear the input field.\n\n\n| =Arguments= | =Description= |\n| ``selector`` | Selector of the text field. See the `Finding elements` section for details about the selectors. |\n| ``txt`` | Text for the text field. |\n| ``force`` | Set to True to skip Playwright's [https://playwright.dev/docs/actionability | Actionability checks]. |\n\nKeyword uses strict mode, see `Finding elements` for more details about strict mode.\n\nSee `Type Text` for emulating typing text character by character.\n\nExample:\n| `Fill Text`    css=input#username_field    username\n\n[https://forum.robotframework.org/t//4254|Comment >>]",
+     "short_doc": "Clears and fills the given ``txt`` into the text field found by ``selector``.",
+     "tags": [
+      "PageContent",
+      "Setter"
+     ],
+     "is_deprecated": false,
+     "source": "~/workspace/rf-mcp-robotcode/.venv/lib/python3.13/site-packages/Browser/keywords/interaction.py",
+     "lineno": 88
+    },
+    "mode": "keyword"
+   }
+  },
+  {
+   "tool": "get_keyword_info",
+   "keyword": "POST On Session",
+   "library_name": "RequestsLibrary",
+   "s": 0.0,
+   "chars": 1358,
+   "success": true,
+   "raw": {
+    "success": true,
+    "keyword": {
+     "name": "POST On Session",
+     "library": "RequestsLibrary",
+     "args": [
+      "alias",
+      "url",
+      "data=None",
+      "json=None",
+      "expected_status=None",
+      "msg=None",
+      "**kwargs"
+     ],
+     "arg_types": [],
+     "doc": "Sends a POST request on a previously created HTTP Session.\n\nSession will be identified using the ``alias`` name.\nThe endpoint used to send the request is the ``url`` parameter, while its body\ncan be passed using ``data`` or ``json`` parameters.\n\n``data`` can be a dictionary, list of tuples, bytes, or file-like object.\nIf you want to pass a json body pass a dictionary as ``json`` parameter.\n\nBy default this keyword fails if a status code with error values is returned in the response,\nthis behavior can be modified using the ``expected_status`` and ``msg`` parameters,\nread more about it in `Status Should Be` keyword documentation.\nIn order to disable this implicit assert mechanism you can pass as ``expected_status`` the values ``any`` or\n``anything``.\n\nOther optional requests arguments can be passed using ``**kwargs``\nsee the `GET` keyword for the complete list.",
+     "short_doc": "Sends a POST request on a previously created HTTP Session.",
+     "tags": [],
+     "is_deprecated": false,
+     "source": "~/workspace/rf-mcp-robotcode/.venv/lib/python3.13/site-packages/RequestsLibrary/utils.py",
+     "lineno": 149
+    },
+    "mode": "keyword"
+   }
+  },
+  {
+   "tool": "get_keyword_info",
+   "keyword": "Wait Until Element Is Visible",
+   "library_name": "SeleniumLibrary",
+   "s": 0.0,
+   "chars": 832,
+   "success": true,
+   "raw": {
+    "success": true,
+    "keyword": {
+     "name": "Wait Until Element Is Visible",
+     "library": "SeleniumLibrary",
+     "args": [
+      "locator: WebElement | str",
+      "timeout: timedelta | None = None",
+      "error: str | None = None"
+     ],
+     "arg_types": [],
+     "doc": "Waits until the element ``locator`` is visible.\n\nFails if ``timeout`` expires before the element is visible. See\nthe `Timeouts` section for more information about using timeouts and\ntheir default value and the `Locating elements` section for details\nabout the locator syntax.\n\n``error`` can be used to override the default error message.",
+     "short_doc": "Waits until the element ``locator`` is visible.",
+     "tags": [],
+     "is_deprecated": false,
+     "source": "~/workspace/rf-mcp-robotcode/.venv/lib/python3.13/site-packages/SeleniumLibrary/keywords/waiting.py",
+     "lineno": 299
+    },
+    "mode": "keyword"
+   }
+  },
+  {
+   "tool": "get_keyword_info",
+   "keyword": "Get Text",
+   "library_name": null,
+   "s": 0.0,
+   "chars": 2271,
+   "success": true,
+   "raw": {
+    "success": true,
+    "matches": [
+     {
+      "name": "Get Text",
+      "library": "Browser",
+      "args": [
+       "selector: str",
+       "assertion_operator: AssertionOperator | None = None",
+       "assertion_expected: Any | None = None",
+       "message: str | None = None"
+      ],
+      "arg_types": [],
+      "doc": "Returns text attribute of the element found by ``selector``.\n\n       Keyword can also return `input` or `textarea` value property text.\nSee the `Finding elements` section for details about the selectors.\n\n       | =Arguments= | =Description= |\n       | ``assertion_operator`` | See `Assertions` for further details. Defaults to None. |\n       | ``assertion_expected`` | Expected value for the state |\n       | ``message`` | overrides the default error message for assertion. |\n\n       Keyword uses strict mode, see `Finding elements` for more details about strict mode.\n\n       Optionally asserts that the text matches the specified assertion. See `Assertions`\n       for further details for the assertion arguments. By default, assertion is not done.\n\n       Example:\n       | ${text} =    `Get Text`    id=important                            # Returns element text without assertion.\n       | ${text} =    `Get Text`    id=important    ==    Important text    # Returns element text with assertion.\n       | ${text} =    `Get Text`    //input         ==    root              # Returns input element text with assertion.\n\n       [https://forum.robotframework.org/t//4285|Comment >>]",
+      "short_doc": "Returns text attribute of the element found by ``selector``.",
+      "tags": [
+       "Assertion",
+       "Getter",
+       "PageContent"
+      ],
+      "is_deprecated": false,
+      "source": "~/workspace/rf-mcp-robotcode/.venv/lib/python3.13/site-packages/Browser/keywords/getters.py",
+      "lineno": 225
+     },
+     {
+      "name": "Get Text",
+      "library": "SeleniumLibrary",
+      "args": [
+       "locator: WebElement | str"
+      ],
+      "arg_types": [],
+      "doc": "Returns the text value of the element identified by ``locator``.\n\nSee the `Locating elements` section for details about the locator\nsyntax.",
+      "short_doc": "Returns the text value of the element identified by ``locator``.",
+      "tags": [],
+      "is_deprecated": false,
+      "source": "~/workspace/rf-mcp-robotcode/.venv/lib/python3.13/site-packages/SeleniumLibrary/keywords/element.py",
+      "lineno": 552
+     }
+    ],
+    "mode": "keyword"
+   }
+  },
+  {
+   "tool": "check_library_availability",
+   "s": 0.001,
+   "chars": 540,
+   "raw": {
+    "available_libraries": [
+     "Browser",
+     "SeleniumLibrary",
+     "RequestsLibrary",
+     "Collections"
+    ],
+    "missing_libraries": [
+     "NonExistentLib"
+    ],
+    "installation_suggestions": [
+     "Library 'NonExistentLib' not found. Manual installation may be required."
+    ],
+    "initialization_errors": [],
+    "libraries_initialized": false,
+    "total_libraries_discovered": 3,
+    "hint": "Found 4 available, 1 missing. Only install the missing ones.",
+    "recommended_workflow": [
+     "Install missing libraries: NonExistentLib",
+     "Re-run this check after installation to verify"
+    ],
+    "success": true
+   }
+  },
+  {
+   "tool": "recommend_libraries",
+   "s": 0.07,
+   "chars": 2983,
+   "raw": {
+    "success": true,
+    "mode": "direct",
+    "scenario": "Log in to saucedemo.com in a browser, add an item to the cart, then verify the order via the REST API",
+    "context": "web",
+    "recommended_libraries": [
+     "Browser",
+     "RequestsLibrary",
+     "BuiltIn"
+    ],
+    "recommendations": [
+     {
+      "library_name": "Browser",
+      "package_name": "robotframework-browser",
+      "installation_command": "pip install robotframework-browser",
+      "confidence": 0.95,
+      "rationale": "Matches category: web; Modern Playwright-based web testing library (recommended)",
+      "use_cases": [
+       "modern web testing",
+       "playwright automation",
+       "web performance",
+       "mobile web"
+      ],
+      "categories": [
+       "web",
+       "testing"
+      ],
+      "description": "Modern web testing with Playwright backend",
+      "is_builtin": false,
+      "requires_setup": true,
+      "setup_commands": [
+       "rfbrowser init"
+      ],
+      "platform_requirements": [],
+      "dependencies": [
+       "playwright",
+       "node.js"
+      ],
+      "keywords": [
+       "New Browser",
+       "New Page",
+       "Close Browser",
+       "Close Page",
+       "Go To",
+       "Get Url",
+       "Get Title",
+       "Get Text",
+       "Click",
+       "Fill Text",
+       "Check Checkbox",
+       "Select Options By",
+       "Wait For Elements State",
+       "Get Element Count",
+       "Take Screenshot",
+       "Get Page Source",
+       "HTTP",
+       "Wait For Response"
+      ],
+      "keyword_source": "plugin_hints",
+      "keyword_hint": "Call get_keyword_info for keyword arguments and documentation."
+     },
+     {
+      "library_name": "RequestsLibrary",
+      "package_name": "robotframework-requests",
+      "installation_command": "pip install robotframework-requests",
+      "confidence": 0.8,
+      "rationale": "Matches use case: api testing",
+      "use_cases": [
+       "api testing",
+       "http requests",
+       "rest api",
+       "json validation"
+      ],
+      "categories": [
+       "api",
+       "testing",
+       "network"
+      ],
+      "description": "HTTP API testing by wrapping Python Requests Library",
+      "is_builtin": false,
+      "requires_setup": false,
+      "setup_commands": [],
+      "platform_requirements": [],
+      "dependencies": []
+     },
+     {
+      "library_name": "BuiltIn",
+      "package_name": "robotframework",
+      "installation_command": "Built-in with Robot Framework",
+      "confidence": 0.8,
+      "rationale": "Matches use case: logging",
+      "use_cases": [
+       "basic operations",
+       "variables",
+       "control flow",
+       "logging",
+       "keywords"
+      ],
+      "categories": [
+       "core",
+       "utilities"
+      ],
+      "description": "Robot Framework built-in library with generic keywords",
+      "is_builtin": true,
+      "requires_setup": false,
+      "setup_commands": [],
+      "platform_requirements": [],
+      "dependencies": []
+     }
+    ],
+    "availability": {
+     "available_libraries": [
+      "Browser",
+      "RequestsLibrary",
+      "BuiltIn"
+     ],
+     "missing_libraries": [],
+     "installation_suggestions": [],
+     "initialization_errors": [],
+     "libraries_initialized": false,
+     "total_libraries_discovered": 3,
+     "hint": "All requested libraries are available. No installation needed.",
+     "recommended_workflow": [
+      "All libraries ready to use",
+      "Proceed with your Robot Framework automation"
+     ]
+    },
+    "api_guidance_hint": "API testing: call get_locator_guidance(library='requests') for the RequestsLibrary request/response cookbook (session setup, ${resp.json()[\"field\"]} access, Status Should Be, Cookie token header, expected_status= for non-2xx) BEFORE writing Evaluate-based assertions."
+   }
+  }
+ ]
+}

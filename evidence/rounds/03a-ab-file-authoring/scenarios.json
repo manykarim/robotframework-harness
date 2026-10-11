@@ -1,0 +1,209 @@
+{
+ "about": "Scenario prompts and grader definitions of this round, extracted from the archived harness (eval-snapshots/ab-7994ae3/harness/harness.py, the version committed at the end of the research). Per the findings, prompts and graders did not change between the rounds that share a harness_version; graders are implemented in harness.py (_grade_one) and journey_evidence.py.",
+ "harness_versions_in_results": [
+  "rc-1"
+ ],
+ "grader_code_sha256": {
+  "harness.py": "fcab7d8dc3c7e5dbcd0c14b6c42e5e09dd2ef16d88190c5b5e4e9a4c8545bd5a",
+  "journey_evidence.py": "dc8d3b77d9dd728eca10c8300a320a1489e2879ec1321ae427527c1fcae486fd",
+  "analyze.py": "e90169f0572917ee90bf3c9ca45c6880760a9c923fb4902e206b291141b2b235",
+  "analyze_hooks.py": "55a69fa39d2caa3b3007a7c106a0d20bda414cd90fae6d5b484364ca35f03e6c"
+ },
+ "scenarios": [
+  {
+   "id": "iframe",
+   "skill": "browser",
+   "tier": "hard",
+   "fixture": "sut-iframe",
+   "prompt": "This project has a page at pages/app.html. Its login form is rendered\nINSIDE an iframe (id=\"loginframe\"). After a successful login (username\n\"demo\", password \"demo\") the page shows a success message inside a custom\nelement's shadow DOM: <result-box id=\"result\"> whose shadow root contains\n<span id=\"msg\">Welcome, demo</span>.\n\nWrite a Browser-library Robot Framework test at tests/iframe_login.robot that:\n  1. Opens pages/app.html via a file:// URL\n  2. Fills the username and password fields (they live inside the iframe)\n  3. Clicks the submit button (also inside the iframe)\n  4. Waits for and reads the welcome message from the shadow DOM and confirms\n     it contains \"Welcome, demo\"\n\nThen run `robot tests/iframe_login.robot` and iterate until it passes green.\nPlaywright browsers are already initialized.",
+   "graders": [
+    {
+     "type": "file_exists",
+     "path": "tests/iframe_login.robot"
+    },
+    {
+     "type": "file_contains",
+     "path": "tests/iframe_login.robot",
+     "regex": "Library\\s+Browser"
+    },
+    {
+     "type": "file_contains",
+     "path": "tests/iframe_login.robot",
+     "regex": "(?i)welcome,\\s*demo"
+    },
+    {
+     "type": "robot_pass",
+     "path": "tests/iframe_login.robot"
+    },
+    {
+     "type": "no_deprecated_keywords",
+     "path": "tests/iframe_login.robot"
+    }
+   ],
+   "primary_metric": "all",
+   "timeout_s": 1500,
+   "max_turns": 45,
+   "kind": "authoring",
+   "live": false,
+   "browser": false,
+   "template": null
+  },
+  {
+   "id": "apinested",
+   "skill": "requests",
+   "tier": "hard",
+   "fixture": "sut-apinested",
+   "prompt": "This project ships data/orders.json (a list of orders; each has customer,\nstatus, and items[] with price, qty, and an OPTIONAL discount) and a Robot\nlibrary at resources/OrdersServer.py that serves it over HTTP.\n\nWrite a test tests/orders.robot that:\n  1. In Suite Setup, imports the OrdersServer library and calls\n     `Start Orders Server    ${CURDIR}/../data/orders.json` (it returns the\n     base URL; save it). Call `Stop Orders Server` in Suite Teardown.\n  2. Uses RequestsLibrary to GET /orders from that base URL and parses JSON.\n  3. Computes and ASSERTS (Should Be Equal As Numbers):\n     - total revenue of NON-cancelled orders, where a line's revenue is\n       price * qty * (1 - discount) and a missing discount means 0;\n     - total item quantity ordered by customer \"Alice\" (non-cancelled);\n     - the number of orders whose status is \"cancelled\".\n\nThen run `robot tests/orders.robot` and iterate until it passes green with\nthe correct asserted values.",
+   "graders": [
+    {
+     "type": "file_exists",
+     "path": "tests/orders.robot"
+    },
+    {
+     "type": "file_contains",
+     "path": "tests/orders.robot",
+     "regex": "(?i)RequestsLibrary"
+    },
+    {
+     "type": "file_contains",
+     "path": "tests/orders.robot",
+     "regex": "\\b114\\b"
+    },
+    {
+     "type": "robot_pass",
+     "path": "tests/orders.robot"
+    },
+    {
+     "type": "no_deprecated_keywords",
+     "path": "tests/orders.robot"
+    }
+   ],
+   "primary_metric": "all",
+   "timeout_s": 1500,
+   "max_turns": 45,
+   "kind": "authoring",
+   "live": false,
+   "browser": false,
+   "template": null
+  },
+  {
+   "id": "results_complex",
+   "skill": "results",
+   "tier": "hard",
+   "fixture": "sut-results-complex",
+   "prompt": "A Robot Framework run produced data/output.xml. Parse it and write a summary\nto reports/summary.md as a labelled bulleted list containing:\n  - the total number of tests\n  - the number PASSED, the number FAILED, and the number SKIPPED\n  - the names of every suite whose final status is FAIL\n\nThe counts must come straight from the XML — note that a suite's teardown\nfailure affects the status of its tests. Do not guess.\nWrite your findings to reports/summary.md.",
+   "graders": [
+    {
+     "type": "file_exists",
+     "path": "reports/summary.md"
+    },
+    {
+     "type": "file_contains",
+     "path": "reports/summary.md",
+     "regex": "(?i)(total\\D{0,20}\\b8\\b|\\b8\\b\\D{0,20}total)"
+    },
+    {
+     "type": "file_contains",
+     "path": "reports/summary.md",
+     "regex": "(?i)(passed\\D{0,20}\\b4\\b|\\b4\\b\\D{0,20}passed)"
+    },
+    {
+     "type": "file_contains",
+     "path": "reports/summary.md",
+     "regex": "(?i)(failed\\D{0,20}\\b3\\b|\\b3\\b\\D{0,20}failed)"
+    },
+    {
+     "type": "file_contains",
+     "path": "reports/summary.md",
+     "regex": "(?i)(skipped\\D{0,20}\\b1\\b|\\b1\\b\\D{0,20}skipped)"
+    },
+    {
+     "type": "file_contains",
+     "path": "reports/summary.md",
+     "regex": "Checkout"
+    },
+    {
+     "type": "file_contains",
+     "path": "reports/summary.md",
+     "regex": "Regression"
+    }
+   ],
+   "primary_metric": "all",
+   "timeout_s": 1200,
+   "max_turns": 30,
+   "kind": "authoring",
+   "live": false,
+   "browser": false,
+   "template": null
+  },
+  {
+   "id": "browser_dynamic",
+   "skill": "browser",
+   "tier": "hard",
+   "fixture": "sut-dynamic",
+   "prompt": "This project has a page at pages/profile.html. It has a button\n(id=\"load\"). Clicking it asynchronously (after a short delay) injects a\nprofile card: a <div id=\"profile\"> that carries the user id in a\n**data-uid attribute** and contains <span id=\"name\">Ada Lovelace</span>.\n\nWrite a Browser-library Robot Framework test at tests/profile.robot that:\n  1. Opens pages/profile.html via a file:// URL\n  2. Clicks the load button\n  3. Waits for the profile card to appear\n  4. Asserts the name text contains \"Ada Lovelace\"\n  5. Reads the card's data-uid ATTRIBUTE and asserts it equals \"u-42\"\n\nThen run `robot tests/profile.robot` and iterate until it passes green.",
+   "graders": [
+    {
+     "type": "file_exists",
+     "path": "tests/profile.robot"
+    },
+    {
+     "type": "file_contains",
+     "path": "tests/profile.robot",
+     "regex": "Library\\s+Browser"
+    },
+    {
+     "type": "file_contains",
+     "path": "tests/profile.robot",
+     "regex": "(?i)ada\\s+lovelace"
+    },
+    {
+     "type": "file_contains",
+     "path": "tests/profile.robot",
+     "regex": "u-42"
+    },
+    {
+     "type": "robot_pass",
+     "path": "tests/profile.robot"
+    },
+    {
+     "type": "no_deprecated_keywords",
+     "path": "tests/profile.robot"
+    }
+   ],
+   "primary_metric": "all",
+   "timeout_s": 1200,
+   "max_turns": 40,
+   "kind": "authoring",
+   "live": false,
+   "browser": false,
+   "template": null
+  }
+ ],
+ "fixtures": {
+  "iframe": {
+   "fixture": "../../eval-snapshots/ab-7994ae3/fixtures/sut-iframe",
+   "fixture_tree_sha256": "f88b3b9c525c81ceb31e6bf1675d7d309d4a577a10f299a388dc10a967a655af",
+   "reference": "../../eval-snapshots/ab-7994ae3/fixtures/_reference/iframe",
+   "reference_tree_sha256": "2d227af15af46593968e78605139a59da361020769dc63305800b038299ebd00"
+  },
+  "apinested": {
+   "fixture": "../../eval-snapshots/ab-7994ae3/fixtures/sut-apinested",
+   "fixture_tree_sha256": "054e8b49e7a7bfbdc1726e669157706694f40427f7325f50e5f742e3c8a7df56",
+   "reference": "../../eval-snapshots/ab-7994ae3/fixtures/_reference/apinested",
+   "reference_tree_sha256": "2708b7d5f716be7bfb0e7d7113298a558eb8f290d0e7947869b304f614cd143d"
+  },
+  "results_complex": {
+   "fixture": "../../eval-snapshots/ab-7994ae3/fixtures/sut-results-complex",
+   "fixture_tree_sha256": "157b901da4c78f266c18d69a20fb9e2e54fd06421fdc9afb32f3b341a734d60e",
+   "reference": "../../eval-snapshots/ab-7994ae3/fixtures/_reference/results_complex",
+   "reference_tree_sha256": "cd1b2823120ed0b196661230ff5bf51ba5452191417068422109ba8f56c836cb"
+  },
+  "browser_dynamic": {
+   "fixture": "../../eval-snapshots/ab-7994ae3/fixtures/sut-dynamic",
+   "fixture_tree_sha256": "3c2536a3acf196bacf34715d19b0ae64614fcdafa4d3ccc8edb5c46626b3addb",
+   "reference": "../../eval-snapshots/ab-7994ae3/fixtures/_reference/browser_dynamic",
+   "reference_tree_sha256": "d87d1532173064833c1eed96ab91477e90241e3a30cd71bedb2ebf17d975f28d"
+  }
+ }
+}

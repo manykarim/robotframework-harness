@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rfharness2"
+version = "0.1.0"
+description = "Robot Framework agent harness: Agent Skill + hooks, no agent-facing CLI (research prototype)"
+requires-python = ">=3.10"
+dependencies = []          # uses the project venv's robotframework, robotcode, robocop, Browser, ...
+
+[tool.setuptools]
+packages = ["rfharness2"]
+
+[tool.setuptools.package-data]
+rfharness2 = ["data/*", "skill/*.md", "skill/references/*.md"]

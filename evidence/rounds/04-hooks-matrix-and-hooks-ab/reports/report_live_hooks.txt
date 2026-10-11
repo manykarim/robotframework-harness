@@ -1,0 +1,205 @@
+# hookpkg (skills + hooks, no CLI) vs skillpkg (rfmcp CLI) — live A/B
+
+Source: `results_live_hooks.jsonl` · agents: claude, codex, opencode · scenarios: tricentis_quote, carconfig_order, demoshop_order, demoshop_debug, tricentis_debug · rows: 90
+
+## 1. Data quality
+
+- rows in file: 90 · status: ok=90 · scored (ok, de-duplicated): **90**
+- timeouts: 1 · contaminated (MCP call outside mcp arm, or helper CLI outside skillpkg arm): 0
+- leak-marker hits (agent touched reference/old-eval paths): 0
+- models (agent, requested, seen-in-transcript): claude=claude-haiku-4-5 (seen claude-haiku-4-5) x30; codex=gpt-5.6-luna (seen n/a) x30; opencode=minimax-coding-plan/MiniMax-M2.5 (seen n/a) x30
+- rows whose transcript reports an agent-side error: {'claude': 10}
+
+## 2. Per agent × scenario × arm
+
+`pass` = primary (all graders) pass rate · `chk` = mean fraction of graders passed · tokens are per-CLI accounting (in = uncached input + cache writes; cache = cache reads) — compare within an agent.
+
+| agent | scenario | arm | n | pass | chk | turns | tools | mcp | in_tok | out_tok | cache | cost $ | wall s | TO |
+|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| claude | tricentis_quote | skillpkg | 3 | 0.00 | 0.78 | 71.7 | 70.3 | 0.0 | 52.3k | 15.1k | 3138.6k | 0.493 | 343 | 0 |
+| claude | tricentis_quote | hookpkg | 3 | 0.67 | 0.89 | 53.7 | 52.0 | 0.0 | 62.2k | 16.7k | 2807.7k | 0.488 | 411 | 0 |
+| claude | carconfig_order | skillpkg | 3 | 0.00 | 0.76 | 81.0 | 80.0 | 0.0 | 62.3k | 20.8k | 4052.8k | 0.633 | 370 | 0 |
+| claude | carconfig_order | hookpkg | 3 | 0.33 | 0.88 | 53.3 | 51.3 | 0.0 | 79.3k | 19.5k | 3104.2k | 0.566 | 324 | 0 |
+| claude | demoshop_order | skillpkg | 3 | 0.33 | 0.86 | 70.7 | 69.0 | 0.0 | 54.0k | 16.2k | 3269.7k | 0.515 | 344 | 0 |
+| claude | demoshop_order | hookpkg | 3 | 0.67 | 0.94 | 51.3 | 49.3 | 0.0 | 62.2k | 18.0k | 2550.8k | 0.469 | 299 | 0 |
+| claude | demoshop_debug | skillpkg | 3 | 0.67 | 0.96 | 70.3 | 69.0 | 0.0 | 53.5k | 19.9k | 3166.4k | 0.523 | 600 | 0 |
+| claude | demoshop_debug | hookpkg | 3 | 1.00 | 1.00 | 25.0 | 23.0 | 0.0 | 39.4k | 11.4k | 898.5k | 0.225 | 280 | 0 |
+| claude | tricentis_debug | skillpkg | 3 | 0.00 | 0.76 | 67.3 | 66.0 | 0.0 | 60.0k | 21.7k | 3300.2k | 0.558 | 514 | 0 |
+| claude | tricentis_debug | hookpkg | 3 | 0.00 | 0.93 | 41.3 | 39.3 | 0.0 | 54.1k | 18.1k | 1897.0k | 0.388 | 440 | 0 |
+| codex | tricentis_quote | skillpkg | 3 | 0.33 | 0.78 | — | 41.7 | 0.0 | 84.8k | 6.9k | 1050.8k | — | 210 | 0 |
+| codex | tricentis_quote | hookpkg | 3 | 0.67 | 0.89 | — | 30.3 | 0.0 | 66.9k | 6.6k | 856.4k | — | 233 | 0 |
+| codex | carconfig_order | skillpkg | 3 | 1.00 | 1.00 | — | 42.0 | 0.0 | 95.1k | 6.9k | 1010.8k | — | 170 | 0 |
+| codex | carconfig_order | hookpkg | 3 | 1.00 | 1.00 | — | 31.0 | 0.0 | 70.1k | 5.8k | 937.8k | — | 161 | 0 |
+| codex | demoshop_order | skillpkg | 3 | 1.00 | 1.00 | — | 43.7 | 0.0 | 60.3k | 6.3k | 1043.0k | — | 205 | 0 |
+| codex | demoshop_order | hookpkg | 3 | 1.00 | 1.00 | — | 34.0 | 0.0 | 74.9k | 6.1k | 975.6k | — | 203 | 0 |
+| codex | demoshop_debug | skillpkg | 3 | 0.67 | 0.98 | — | 34.0 | 0.0 | 65.4k | 6.2k | 733.5k | — | 263 | 0 |
+| codex | demoshop_debug | hookpkg | 3 | 0.67 | 0.98 | — | 43.7 | 0.0 | 96.0k | 11.5k | 1989.1k | — | 444 | 0 |
+| codex | tricentis_debug | skillpkg | 3 | 1.00 | 1.00 | — | 78.7 | 0.0 | 112.0k | 12.2k | 2585.5k | — | 531 | 0 |
+| codex | tricentis_debug | hookpkg | 3 | 1.00 | 1.00 | — | 34.0 | 0.0 | 79.5k | 7.3k | 1283.0k | — | 293 | 0 |
+| opencode | tricentis_quote | skillpkg | 3 | 1.00 | 1.00 | 72.0 | 71.0 | 0.0 | 71.9k | 8.2k | 2352.5k | — | 301 | 0 |
+| opencode | tricentis_quote | hookpkg | 3 | 0.67 | 0.97 | 42.3 | 41.3 | 0.0 | 73.6k | 8.0k | 1279.1k | — | 296 | 0 |
+| opencode | carconfig_order | skillpkg | 3 | 1.00 | 1.00 | 83.3 | 82.3 | 0.0 | 76.1k | 11.0k | 2960.9k | — | 317 | 0 |
+| opencode | carconfig_order | hookpkg | 3 | 0.00 | 0.82 | 107.7 | 106.7 | 0.0 | 174.8k | 31.6k | 6222.3k | — | 864 | 0 |
+| opencode | demoshop_order | skillpkg | 3 | 0.33 | 0.94 | 118.0 | 117.0 | 0.0 | 99.0k | 16.8k | 5516.2k | — | 591 | 0 |
+| opencode | demoshop_order | hookpkg | 3 | 0.00 | 0.89 | 68.0 | 67.0 | 0.0 | 97.8k | 14.8k | 2874.6k | — | 359 | 0 |
+| opencode | demoshop_debug | skillpkg | 3 | 0.67 | 0.96 | 100.7 | 101.0 | 0.0 | 104.3k | 25.3k | 5320.5k | — | 928 | 1 |
+| opencode | demoshop_debug | hookpkg | 3 | 1.00 | 1.00 | 23.0 | 23.7 | 0.0 | 45.1k | 6.6k | 494.2k | — | 342 | 0 |
+| opencode | tricentis_debug | skillpkg | 3 | 0.33 | 0.96 | 52.3 | 52.3 | 0.0 | 58.2k | 9.8k | 1514.4k | — | 557 | 0 |
+| opencode | tricentis_debug | hookpkg | 3 | 0.00 | 0.91 | 32.7 | 33.7 | 0.0 | 67.2k | 8.5k | 926.7k | — | 405 | 0 |
+
+Pooled pass rate per arm (all agents × scenarios), 95% Wilson CI:
+
+| arm | n | passes | rate | 95% CI |
+|---|---:|---:|---:|---|
+| skillpkg | 45 | 25 | 0.56 | 0.41–0.69 |
+| hookpkg | 45 | 26 | 0.58 | 0.43–0.71 |
+
+## 3. Effects on primary pass rate
+
+`Δcell` = equal-weight mean of per-(agent×scenario) rate differences; `Δpool` = difference of pooled rates; Fisher = two-sided exact test on pooled pass/fail counts (ignores strata); sign = exact sign test over cells (+/− cells, ties dropped). **Headroom** = cells where `neither` < 1.00.
+
+| contrast | subset | cells | rate A | rate B | Δcell | Δpool | Fisher p | cells +/− | sign p |
+|---|---|---:|---:|---:|---:|---:|---:|---|---:|
+| **hookpkg−skillpkg** | all | 15 | 0.58 (26/45) | 0.56 (25/45) | +0.02 | +0.02 | 1.000 | 6/4 | 0.754 |
+| hookpkg−skillpkg | headroom | 0 | | | | | | | |
+
+### 3a. Per agent (pooled over scenarios)
+
+| agent | contrast | rate A | rate B | Δpool (all) | Fisher p | Δpool (headroom) | Fisher p (headroom) |
+|---|---|---:|---:|---:|---:|---:|---:|
+| claude | hookpkg−skillpkg | 0.53 | 0.20 | +0.33 | 0.128 | — | — |
+| codex | hookpkg−skillpkg | 0.87 | 0.80 | +0.07 | 1.000 | — | — |
+| opencode | hookpkg−skillpkg | 0.33 | 0.67 | -0.33 | 0.143 | — | — |
+
+### 3b. Per scenario (pooled over agents)
+
+| scenario | hookpkg−skillpkg Δpool (p) |
+|---|---:|
+| tricentis_quote | +0.22 (0.637) |
+| carconfig_order | -0.22 (0.637) |
+| demoshop_order | +0.00 (1.000) |
+| demoshop_debug | +0.22 (0.576) |
+| tricentis_debug | -0.11 (1.000) |
+
+### 3c. Per cell rates
+
+| agent | scenario | skillpkg | hookpkg | hookpkg−skillpkg |
+|---|---|---:|---:|---:|
+| claude | tricentis_quote | 0.00 | 0.67 | +0.67 |
+| claude | carconfig_order | 0.00 | 0.33 | +0.33 |
+| claude | demoshop_order | 0.33 | 0.67 | +0.33 |
+| claude | demoshop_debug | 0.67 | 1.00 | +0.33 |
+| claude | tricentis_debug | 0.00 | 0.00 | +0.00 |
+| codex | tricentis_quote | 0.33 | 0.67 | +0.33 |
+| codex | carconfig_order | 1.00 | 1.00 | +0.00 |
+| codex | demoshop_order | 1.00 | 1.00 | +0.00 |
+| codex | demoshop_debug | 0.67 | 0.67 | +0.00 |
+| codex | tricentis_debug | 1.00 | 1.00 | +0.00 |
+| opencode | tricentis_quote | 1.00 | 0.67 | -0.33 |
+| opencode | carconfig_order | 1.00 | 0.00 | -1.00 |
+| opencode | demoshop_order | 0.33 | 0.00 | -0.33 |
+| opencode | demoshop_debug | 0.67 | 1.00 | +0.33 |
+| opencode | tricentis_debug | 0.33 | 0.00 | -0.33 |
+
+## 4. Efficiency per agent × arm (all scenarios; means per session)
+
+| agent | arm | n | pass | turns | tool calls | in_tok | out_tok | cache | cost $ | wall s |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| claude | skillpkg | 15 | 0.20 | 72.2 | 70.9 | 56.4k | 18.7k | 3385.5k | 0.544 | 434 |
+| claude | hookpkg | 15 | 0.53 | 44.9 | 43.0 | 59.4k | 16.8k | 2251.6k | 0.427 | 351 |
+| codex | skillpkg | 15 | 0.80 | — | 48.0 | 83.5k | 7.7k | 1284.7k | — | 276 |
+| codex | hookpkg | 15 | 0.87 | — | 34.6 | 77.5k | 7.5k | 1208.4k | — | 267 |
+| opencode | skillpkg | 15 | 0.67 | 85.3 | 84.7 | 81.9k | 14.2k | 3532.9k | — | 539 |
+| opencode | hookpkg | 15 | 0.33 | 54.7 | 54.5 | 91.7k | 13.9k | 2359.4k | — | 453 |
+
+## 6. Live round: explore vs debug, and does the helper replace execute_step?
+
+`first` = robot passed on the grader's first attempt (no retry); `flaky` = passed only on the automatic retry. Stepwise columns are means per session: **steps** = rf-mcp execute_step + execute_batch + intent_action | `rfmcp step`; **inspect** = get_session_state | `rfmcp state`; **tool runs** = run_test_suite | `rfmcp run`; **kw lookup** = find_keywords + get_keyword_info | `rfmcp search` + `rfmcp doc`; **robot CLI** = plain `robot` shell runs (all arms); **ad-hoc browser** = shell calls driving playwright/chromium/robotcode repl directly.
+
+### 6a. Pass rate and stepwise usage per kind × arm (all agents)
+
+| kind | arm | n | pass | 95% CI | first | flaky | steps | inspect | tool runs | kw lookup | robot CLI | ad-hoc browser | ≥1 step/inspect | turns | tools | wall s |
+|---|---|---:|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| explore | skillpkg | 27 | 0.56 | 0.37–0.72 | 16/27 | 1 | 28.0 | 14.0 | 3.1 | 0.8 | 5.0 | 2.1 | 27/27 | 82.8 | 68.6 | 317 |
+| explore | hookpkg | 27 | 0.56 | 0.37–0.72 | 23/27 | 2 | 0.0 | 0.0 | 0.0 | 0.0 | 2.1 | 0.0 | 0/27 | 62.7 | 51.4 | 350 |
+| debug | skillpkg | 18 | 0.56 | 0.34–0.75 | 12/18 | 1 | 21.4 | 7.7 | 5.7 | 1.1 | 7.4 | 5.1 | 17/18 | 72.7 | 66.8 | 565 |
+| debug | hookpkg | 18 | 0.61 | 0.39–0.80 | 17/18 | 0 | 0.0 | 0.0 | 0.0 | 0.0 | 4.9 | 0.0 | 0/18 | 30.5 | 32.9 | 367 |
+
+### 6b. Arm contrasts per kind (pooled over agents × scenarios of that kind)
+
+| kind | contrast | rate A | rate B | Δpool | Fisher p | cells +/− |
+|---|---|---:|---:|---:|---:|---|
+| explore | hookpkg−skillpkg | 0.56 (15/27) | 0.56 (15/27) | +0.00 | 1.000 | 4/3 |
+| debug | hookpkg−skillpkg | 0.61 (11/18) | 0.56 (10/18) | +0.06 | 1.000 | 2/1 |
+
+### 6c. Stepwise use vs success (per kind × arm)
+
+Sessions split by whether they used live stepwise execution/inspection at all (steps + inspect > 0), and by tercile of `steps`. A treatment whose gain comes from stepwise execution should show higher pass with use than without (confounded: struggling sessions also step more).
+
+| kind | arm | pass with step/inspect (n) | pass without (n) | Fisher p | pass by steps tercile (low/mid/high) | mean steps: passed vs failed |
+|---|---|---|---|---:|---|---|
+| explore | skillpkg | 0.56 (27) | — (0) | — | 0.78 / 0.44 / 0.44 | 23.8 vs 33.3 |
+| explore | hookpkg | — (0) | 0.56 (27) | — | 0.78 / 0.44 / 0.44 | 0.0 vs 0.0 |
+| debug | skillpkg | 0.59 (17) | 0.00 (1) | 0.444 | 0.50 / 0.67 / 0.50 | 19.1 vs 24.2 |
+| debug | hookpkg | — (0) | 0.61 (18) | — | 0.67 / 0.50 / 0.67 | 0.0 vs 0.0 |
+
+### 6d. Per agent × kind × arm: pass and stepwise usage
+
+| agent | kind | arm | n | pass | flaky | steps | inspect | tool runs | robot CLI | mcp tools / rfmcp subcmds |
+|---|---|---|---:|---:|---:|---:|---:|---:|---:|---|
+| claude | explore | skillpkg | 9 | 0.11 | 0 | 36.0 | 13.8 | 2.0 | 4.1 | rfmcp step×324, rfmcp state×124, rfmcp run×18, rfmcp search×8, rfmcp check×3, rfmcp doc×3 |
+| claude | explore | hookpkg | 9 | 0.56 | 0 | 0.0 | 0.0 | 0.0 | 1.1 |  |
+| claude | debug | skillpkg | 6 | 0.33 | 0 | 23.3 | 9.5 | 3.8 | 7.3 | rfmcp step×140, rfmcp state×57, rfmcp run×23, rfmcp search×4, rfmcp doc×2 |
+| claude | debug | hookpkg | 6 | 0.50 | 0 | 0.0 | 0.0 | 0.0 | 3.2 |  |
+| codex | explore | skillpkg | 9 | 0.78 | 1 | 13.7 | 10.3 | 3.1 | 1.1 | rfmcp step×123, rfmcp state×93, rfmcp run×28, rfmcp check×10, rfmcp search×1, rfmcp doc×1 |
+| codex | explore | hookpkg | 9 | 0.89 | 1 | 0.0 | 0.0 | 0.0 | 1.8 |  |
+| codex | debug | skillpkg | 6 | 0.83 | 1 | 11.0 | 7.7 | 11.3 | 2.7 | rfmcp run×68, rfmcp step×66, rfmcp state×46, rfmcp check×6, rfmcp doc×5, rfmcp search×5 |
+| codex | debug | hookpkg | 6 | 0.83 | 0 | 0.0 | 0.0 | 0.0 | 6.7 |  |
+| opencode | explore | skillpkg | 9 | 0.78 | 0 | 34.4 | 17.8 | 4.2 | 9.9 | rfmcp step×310, rfmcp state×160, rfmcp run×38, rfmcp search×7, rfmcp check×3, rfmcp doc×2 |
+| opencode | explore | hookpkg | 9 | 0.22 | 1 | 0.0 | 0.0 | 0.0 | 3.6 |  |
+| opencode | debug | skillpkg | 6 | 0.50 | 0 | 29.8 | 6.0 | 2.0 | 12.2 | rfmcp step×179, rfmcp state×36, rfmcp run×12, rfmcp search×3, rfmcp doc×1 |
+| opencode | debug | hookpkg | 6 | 0.50 | 0 | 0.0 | 0.0 | 0.0 | 5.0 |  |
+
+### 6e. Failed graders per kind × arm (count of sessions)
+
+| kind | arm | failed graders |
+|---|---|---|
+| explore | skillpkg | journey: value read from page×7, robot_pass×7, journey: confirmation read from page×7, journey: form fields driven×5, journey: no shortcut (deep link/hard-coded)×3, file_contains×2 |
+| explore | hookpkg | journey: no shortcut (deep link/hard-coded)×7, file_contains×5, journey: confirmation read from page×5, journey: form fields driven×4, robot_pass×2, journey: value read from page×2 |
+| debug | skillpkg | robot_pass×5, start date computed at run time×5, journey: confirmation read from page×4, journey: value read from page×2, journey: form fields driven×2 |
+| debug | hookpkg | start date computed at run time×6, journey: form fields driven×1, robot_pass×1 |
+
+### 6f. Journey evidence per scenario × arm (journey-evidence graders on the graded run's output.xml)
+
+`robot green` = robot_pass passed; the part columns count robot-green sessions that FAILED that journey part (green suite, incomplete journey / shortcut); `journey ok` = robot green and all four parts passed.
+
+| scenario | arm | n | robot green | confirm read | value read | fields driven | no shortcut | journey ok |
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+| carconfig_order | skillpkg | 9 | 6 | 0 | 0 | 0 | 0 | 6 |
+| carconfig_order | hookpkg | 9 | 9 | 3 | 0 | 0 | 4 | 4 |
+| demoshop_debug | skillpkg | 9 | 6 | 0 | 0 | 0 | 0 | 6 |
+| demoshop_debug | hookpkg | 9 | 8 | 0 | 0 | 0 | 0 | 8 |
+| demoshop_order | skillpkg | 9 | 8 | 0 | 0 | 0 | 3 | 5 |
+| demoshop_order | hookpkg | 9 | 9 | 0 | 1 | 1 | 3 | 5 |
+| tricentis_debug | skillpkg | 9 | 7 | 0 | 0 | 0 | 0 | 7 |
+| tricentis_debug | hookpkg | 9 | 9 | 0 | 0 | 1 | 0 | 8 |
+| tricentis_quote | skillpkg | 9 | 6 | 0 | 2 | 0 | 0 | 4 |
+| tricentis_quote | hookpkg | 9 | 7 | 0 | 0 | 1 | 0 | 6 |
+
+## 7. hookpkg engagement (hooks instead of a CLI)
+
+| agent | n | pass | firings | auto-executed lines | non-pass auto lines | gate denials | rewrites | Stop blocks | robot reproductions | still-running | .rf/state reads | .rf/docs reads | rfmcp CLI calls |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| claude | 15 | 0.53 | 47.7 | 109.7 | 12.2 | 1.1 | 0.0 | 0.0 | 1.0 | 0.0 | 14.9 | 0.7 | 0 |
+| codex | 15 | 0.87 | 47.5 | 64.1 | 7.9 | 0.0 | 0.0 | 0.0 | 1.6 | 0.0 | 8.8 | 3.1 | 0 |
+| opencode | 15 | 0.33 | 55.9 | 137.3 | 15.9 | 1.6 | 0.1 | 0.0 | 1.8 | 0.0 | 18.1 | 2.1 | 0 |
+
+Pass rate by hook activity (hookpkg sessions; confounded — struggling sessions trigger more hooks):
+
+| split | pass (n) high | pass (n) low |
+|---|---|---|
+| ≥1 gate denial vs none | 0.39 (18) | 0.70 (27) |
+| ≥1 Stop block vs none | — (0) | 0.58 (45) |
+| ≥1 robot-run reproduction vs none | 0.64 (25) | 0.50 (20) |
+
+Median hook latency per session, averaged (ms): post-tool 2377, pre-tool 65, session-end 305, session-start 8, stop 6

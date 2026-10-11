@@ -1,0 +1,16 @@
+{
+ "round": "static analysis",
+ "folder": "static-analysis",
+ "title": "Static-analysis quality gates: Robocop + robotcode analyze",
+ "kind": "study",
+ "dates": [
+  "2026-10-02"
+ ],
+ "tools": {
+  "robotframework": "7.5 (cross-checked 7.3.2)",
+  "robotcode": "2.7.0",
+  "robocop": "9.1.0",
+  "browser": "20.5.0 (cross-checked 19.12.7)",
+  "requests": "0.9.7"
+ }
+}

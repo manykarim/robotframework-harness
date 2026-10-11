@@ -1,0 +1,7 @@
+[2026-10-09 14:57:36] [pid 1151717] start: tag=v3pilot arms=hookpkg3 reps=1 agents=claude,codex,opencode scenarios=live extra= results=results_live_v3pilot.jsonl
+[2026-10-09 14:57:36] [pid 1151717] start cleanup: dropped 0 aborted/auth-failure rows
+[2026-10-09 14:57:36] [pid 1151717] status: 0/15 cells ok
+[2026-10-09 14:57:44] [pid 1151717] pass 1: starting harness
+[2026-10-09 15:35:58] [pid 1151717] pass 1: harness exited (0)
+[2026-10-09 15:35:58] [pid 1151717] pass 1: dropped 0 aborted/auth-failure rows; 15/15 cells ok
+[2026-10-09 15:35:58] [pid 1151717] done: complete (15/15)

@@ -1,0 +1,6 @@
+{'spec': 'Browser', 'keywords': 152, 'cache_bytes': 280699, 'cold_build_ms': 429, 'warm_load_ms': 3.1, 'exact_lookup_ms': 0.007, 'fuzzy_lookup_ms': 0.79, 'cache_key_ms': 1.55}
+{'spec': 'RequestsLibrary', 'keywords': 33, 'cache_bytes': 42267, 'cold_build_ms': 94, 'warm_load_ms': 0.8, 'exact_lookup_ms': 0.004, 'fuzzy_lookup_ms': 0.35, 'cache_key_ms': 0.81}
+{'spec': 'BuiltIn', 'keywords': 109, 'cache_bytes': 121595, 'cold_build_ms': 56, 'warm_load_ms': 0.7, 'exact_lookup_ms': 0.005, 'fuzzy_lookup_ms': 0.53, 'cache_key_ms': 0.22}
+{'spec': 'Collections', 'keywords': 43, 'cache_bytes': 49476, 'cold_build_ms': 26, 'warm_load_ms': 0.3, 'exact_lookup_ms': 0.005, 'fuzzy_lookup_ms': 0.58, 'cache_key_ms': 0.38}
+{'spec': 'resources/shop.resource', 'keywords': 3, 'cache_bytes': 1010, 'cold_build_ms': 3, 'warm_load_ms': 0.1, 'exact_lookup_ms': 0.005, 'fuzzy_lookup_ms': 0.04, 'cache_key_ms': 0.06}
+{'spec': 'libs/ArgLib.py::advanced', 'keywords': 2, 'cache_bytes': 679, 'cold_build_ms': 2, 'warm_load_ms': 0.1, 'exact_lookup_ms': 0.006, 'fuzzy_lookup_ms': 0.08, 'cache_key_ms': 0.05}

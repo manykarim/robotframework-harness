@@ -1,0 +1,533 @@
+{"t": "ready", "pid": 3590880, "hooked": true, "path": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round2/repl_only/run/browser/steps.jsonl", "ts": 1790836965.057}
+{"t": "idle", "n": 1, "id": null, "ts": 1790836965.086}
+{"t": "begin", "id": "s1", "ts": 1790836965.171}
+{"t": "step", "seq": 1, "id": "s1", "type": "KEYWORD", "name": "Import Library", "owner": "BuiltIn", "args": ["Browser", "timeout=5s"], "assign": [], "status": "PASS", "elapsed_ms": 171.0, "return": null, "ts": 1790836965.344}
+{"t": "idle", "n": 2, "id": "s1", "ts": 1790836965.344}
+{"t": "idle", "n": 3, "id": "s1", "ts": 1790836965.344}
+{"t": "end", "id": "s1", "src": "Import Library    Browser    timeout=5s", "steps": 1, "ts": 1790836965.344}
+{"t": "begin", "id": "s2", "ts": 1790836965.403}
+{"t": "step", "seq": 2, "id": "s2", "type": "KEYWORD", "name": "New Browser", "owner": "Browser", "args": ["chromium", "headless=${HEADLESS}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "{\"browser\": \"chromium\", \"headless\": true, \"chromiumSandbox\": false, \"devtools\": false, \"handleSIGHUP\": true, \"handleSIGINT\": true, \"handleSIGTERM\": true, \"slowMo\": 0.0, \"timeout\": 30000.0, \"tracesDir\": \"~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round2/repl_only/run/browser/out/browser/traces/temp/0f93ba60-d89c-42e3-a142-646213bd2407\"}"}, {"level": "INFO", "html": false, "text": "Starting Browser process ~/workspace/robotcode-experiments/.venv/lib/python3.13/site-packages/Browser/wrapper/index.js using at 127.0.0.1:45195"}, {"level": "INFO", "html": false, "text": "Successfully created browser with options: {\"browser\":\"chromium\",\"headless\":true,\"chromiumSandbox\":false,\"devtools\":false,\"handleSIGHUP\":true,\"handleSIGINT\":true,\"handleSIGTERM\":true,\"slowMo\":0,\"timeout\":30000,\"tracesDir\":\"~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round2/repl_only/run/browser/out/browser/traces/temp/0f93ba60-d89c-42e3-a142-646213bd2407\"}"}], "status": "PASS", "elapsed_ms": 803.4, "return": "browser=27e5f345-4fcd-42d5-8657-753068512bcd", "ts": 1790836966.208}
+{"t": "idle", "n": 4, "id": "s2", "ts": 1790836966.208}
+{"t": "idle", "n": 5, "id": "s2", "ts": 1790836966.208}
+{"t": "end", "id": "s2", "src": "New Browser    chromium    headless=${HEADLESS}", "steps": 2, "ts": 1790836966.208}
+{"t": "begin", "id": "s3", "ts": 1790836966.264}
+{"t": "step", "seq": 3, "id": "s3", "type": "KEYWORD", "name": "New Page", "owner": "Browser", "args": ["https://www.saucedemo.com"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Successfully initialized new page object and opened url: https://www.saucedemo.com"}, {"level": "INFO", "html": false, "text": "No context was open. New context was automatically opened when this page is created."}], "status": "PASS", "elapsed_ms": 398.6, "return": "{'page_id': 'page=1e6087f9-6ffb-4dff-95e9-65ea6483b7e9', 'video_path': ''}", "ts": 1790836966.665}
+{"t": "idle", "n": 6, "id": "s3", "ts": 1790836966.665}
+{"t": "idle", "n": 7, "id": "s3", "ts": 1790836966.665}
+{"t": "end", "id": "s3", "src": "New Page    https://www.saucedemo.com", "steps": 3, "ts": 1790836966.665}
+{"t": "begin", "id": "s4", "ts": 1790836966.739}
+{"t": "step", "seq": 4, "id": "s4", "type": "KEYWORD", "name": "Fill Text", "owner": "Browser", "args": ["id=user-name", "standard_user"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Fills the text 'standard_user' in the given field."}], "status": "PASS", "elapsed_ms": 80.8, "return": null, "ts": 1790836966.821}
+{"t": "idle", "n": 8, "id": "s4", "ts": 1790836966.821}
+{"t": "idle", "n": 9, "id": "s4", "ts": 1790836966.821}
+{"t": "end", "id": "s4", "src": "Fill Text    id=user-name    standard_user", "steps": 4, "ts": 1790836966.821}
+{"t": "begin", "id": "s5", "ts": 1790836966.881}
+{"t": "step", "seq": 5, "id": "s5", "type": "KEYWORD", "name": "Fill Text", "owner": "Browser", "args": ["id=password", "secret_sauce"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Fills the text 'secret_sauce' in the given field."}], "status": "PASS", "elapsed_ms": 21.3, "return": null, "ts": 1790836966.904}
+{"t": "idle", "n": 10, "id": "s5", "ts": 1790836966.904}
+{"t": "idle", "n": 11, "id": "s5", "ts": 1790836966.904}
+{"t": "end", "id": "s5", "src": "Fill Text    id=password    secret_sauce", "steps": 5, "ts": 1790836966.904}
+{"t": "begin", "id": "s6", "ts": 1790836966.958}
+{"t": "step", "seq": 6, "id": "s6", "type": "KEYWORD", "name": "Click", "owner": "Browser", "args": ["id=login-button"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Clicks the element 'id=login-button'."}], "status": "PASS", "elapsed_ms": 81.1, "return": null, "ts": 1790836967.041}
+{"t": "idle", "n": 12, "id": "s6", "ts": 1790836967.041}
+{"t": "idle", "n": 13, "id": "s6", "ts": 1790836967.041}
+{"t": "end", "id": "s6", "src": "Click    id=login-button", "steps": 6, "ts": 1790836967.041}
+{"t": "begin", "id": "s7", "ts": 1790836967.115}
+{"t": "step", "seq": 7, "id": "s7", "type": "KEYWORD", "name": "Get Url", "owner": "Browser", "args": ["*=", "inventory"], "assign": [], "status": "PASS", "elapsed_ms": 5.4, "return": "https://www.saucedemo.com/inventory.html", "ts": 1790836967.122}
+{"t": "idle", "n": 14, "id": "s7", "ts": 1790836967.122}
+{"t": "idle", "n": 15, "id": "s7", "ts": 1790836967.122}
+{"t": "end", "id": "s7", "src": "Get Url    *=    inventory", "steps": 7, "ts": 1790836967.122}
+{"t": "begin", "id": "s8", "ts": 1790836967.171}
+{"t": "step", "seq": 8, "id": "s8", "type": "KEYWORD", "name": "Click", "owner": "Browser", "args": ["id=add-to-cart-sauce-labs-backpack"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Clicks the element 'id=add-to-cart-sauce-labs-backpack'."}], "status": "PASS", "elapsed_ms": 54.9, "return": null, "ts": 1790836967.228}
+{"t": "idle", "n": 16, "id": "s8", "ts": 1790836967.228}
+{"t": "idle", "n": 17, "id": "s8", "ts": 1790836967.228}
+{"t": "end", "id": "s8", "src": "Click    id=add-to-cart-sauce-labs-backpack", "steps": 8, "ts": 1790836967.228}
+{"t": "begin", "id": "s9", "ts": 1790836967.297}
+{"t": "step", "seq": 9, "id": "s9", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "1"], "assign": ["${badge}"], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['1']"}, {"level": "INFO", "html": false, "text": "${badge} = 1"}], "status": "PASS", "elapsed_ms": 81.1, "values": {"${badge}": "1"}, "return": "1", "ts": 1790836967.38}
+{"t": "idle", "n": 18, "id": "s9", "ts": 1790836967.38}
+{"t": "idle", "n": 19, "id": "s9", "ts": 1790836967.38}
+{"t": "end", "id": "s9", "src": "${badge}    Get Text    css=.shopping_cart_badge    ==    1", "steps": 9, "ts": 1790836967.38}
+{"t": "begin", "id": "s10", "ts": 1790836967.431}
+{"t": "step", "seq": 10, "id": "s10", "type": "TRY/EXCEPT ROOT", "name": "", "owner": null, "args": [], "assign": [], "items": [{"type": "TRY_BRANCH", "name": "", "owner": null, "args": [], "assign": [], "items": [{"type": "KEYWORD", "name": "Click", "owner": "Browser", "args": ["id=does-not-exist"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Clicks the element 'id=does-not-exist'."}, {"level": "INFO", "html": true, "text": "</td></tr><tr><td colspan=\"3\"><a href=\"browser/screenshot/fail-screenshot-1.png\" target=\"_blank\"><img src=\"browser/screenshot/fail-screenshot-1.png\" style=\"max-width:800px;max-height:800px;\"/></a>"}, {"level": "INFO", "html": false, "text": "See also file://~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round2/repl_only/run/browser/out/playwright-log.txt for additional details."}, {"level": "FAIL", "html": false, "text": "TimeoutError: locator.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('id=does-not-exist')\n"}], "status": "FAIL", "message": "TimeoutError: locator.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('id=does-not-exist')\n", "elapsed_ms": 5134.9}], "branch": "TRY", "status": "FAIL", "message": "TimeoutError: locator.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('id=does-not-exist')\n", "elapsed_ms": 5135.8}, {"type": "TRY_BRANCH", "name": "", "owner": null, "args": [], "assign": [], "items": [{"type": "KEYWORD", "name": "Log", "owner": "BuiltIn", "args": ["caught: ${err}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "caught: TimeoutError: locator.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('id=does-not-exist')\n"}], "status": "PASS", "elapsed_ms": 1.3}], "branch": "EXCEPT", "patterns": ["*"], "status": "PASS", "elapsed_ms": 2.2}], "status": "PASS", "elapsed_ms": 5139.0, "ts": 1790836972.578}
+{"t": "idle", "n": 20, "id": "s10", "ts": 1790836972.578}
+{"t": "idle", "n": 21, "id": "s10", "ts": 1790836972.579}
+{"t": "end", "id": "s10", "src": "TRY\n    Click    id=does-not-exist    \nEXCEPT    *    type=glob    AS    ${err}\n    Log    caught: ${err}\nEND", "steps": 10, "ts": 1790836972.579}
+{"t": "begin", "id": "s11", "ts": 1790836972.64}
+{"t": "step", "seq": 11, "id": "s11", "type": "KEYWORD", "name": "Run Keyword And Ignore Error", "owner": "BuiltIn", "args": ["Get Text", "css=.shopping_cart_badge", "==", "5"], "assign": ["${st}", "${msg}"], "items": [{"type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "5"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['1']"}, {"level": "INFO", "html": true, "text": "</td></tr><tr><td colspan=\"3\"><a href=\"browser/screenshot/fail-screenshot-2.png\" target=\"_blank\"><img src=\"browser/screenshot/fail-screenshot-2.png\" style=\"max-width:800px;max-height:800px;\"/></a>"}, {"level": "INFO", "html": false, "text": "See also file://~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round2/repl_only/run/browser/out/playwright-log.txt for additional details."}, {"level": "FAIL", "html": false, "text": "Text '1' (str) should be '5' (str)"}], "status": "FAIL", "message": "Text '1' (str) should be '5' (str)", "elapsed_ms": 1174.8}], "msgs": [{"level": "INFO", "html": false, "text": "${st} = FAIL"}, {"level": "INFO", "html": false, "text": "${msg} = Text '1' (str) should be '5' (str)"}], "status": "PASS", "elapsed_ms": 1177.0, "values": {"${st}": "FAIL", "${msg}": "Text '1' (str) should be '5' (str)"}, "return": "('FAIL', \"Text '1' (str) should be '5' (str)\")", "ts": 1790836973.819}
+{"t": "idle", "n": 22, "id": "s11", "ts": 1790836973.819}
+{"t": "idle", "n": 23, "id": "s11", "ts": 1790836973.819}
+{"t": "end", "id": "s11", "src": "${st}    ${msg}    Run Keyword And Ignore Error    Get Text    css=.shopping_cart_badge    ==    5", "steps": 11, "ts": 1790836973.819}
+{"t": "begin", "id": "s12", "ts": 1790836973.875}
+{"t": "step", "seq": 12, "id": "s12", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "5"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['1']"}, {"level": "INFO", "html": true, "text": "</td></tr><tr><td colspan=\"3\"><a href=\"browser/screenshot/fail-screenshot-3.png\" target=\"_blank\"><img src=\"browser/screenshot/fail-screenshot-3.png\" style=\"max-width:800px;max-height:800px;\"/></a>"}, {"level": "INFO", "html": false, "text": "See also file://~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round2/repl_only/run/browser/out/playwright-log.txt for additional details."}, {"level": "FAIL", "html": false, "text": "Text '1' (str) should be '5' (str)"}], "status": "FAIL", "message": "Text '1' (str) should be '5' (str)", "elapsed_ms": 1157.8, "ts": 1790836975.034}
+{"t": "idle", "n": 24, "id": "s12", "ts": 1790836975.034}
+{"t": "end", "id": "s12", "src": "Get Text    css=.shopping_cart_badge    ==    5", "steps": 12, "skipped_src": "", "ts": 1790836975.034}
+{"t": "begin", "id": "s13", "ts": 1790836975.104}
+{"t": "step", "seq": 13, "id": "s13", "type": "FOR", "name": "", "owner": null, "args": [], "assign": ["${item}"], "items": [{"type": "ITERATION", "name": "${item}=bike-light", "owner": null, "args": [], "assign": [], "items": [{"type": "KEYWORD", "name": "Click", "owner": "Browser", "args": ["id=add-to-cart-sauce-labs-${item}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Clicks the element 'id=add-to-cart-sauce-labs-bike-light'."}], "status": "PASS", "elapsed_ms": 30.1}], "status": "PASS", "elapsed_ms": 30.6}, {"type": "ITERATION", "name": "${item}=bolt-t-shirt", "owner": null, "args": [], "assign": [], "items": [{"type": "KEYWORD", "name": "Click", "owner": "Browser", "args": ["id=add-to-cart-sauce-labs-${item}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Clicks the element 'id=add-to-cart-sauce-labs-bolt-t-shirt'."}], "status": "PASS", "elapsed_ms": 48.9}], "status": "PASS", "elapsed_ms": 49.7}], "flavor": "IN", "for_values": ["bike-light", "bolt-t-shirt"], "status": "PASS", "elapsed_ms": 81.2, "ts": 1790836975.187}
+{"t": "idle", "n": 25, "id": "s13", "ts": 1790836975.187}
+{"t": "idle", "n": 26, "id": "s13", "ts": 1790836975.187}
+{"t": "end", "id": "s13", "src": "FOR    ${item}    IN    bike-light    bolt-t-shirt\n    Click    id=add-to-cart-sauce-labs-${item}\nEND", "steps": 13, "ts": 1790836975.187}
+{"t": "begin", "id": "s14", "ts": 1790836975.243}
+{"t": "step", "seq": 14, "id": "s14", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 18.8, "return": "3", "ts": 1790836975.263}
+{"t": "idle", "n": 27, "id": "s14", "ts": 1790836975.264}
+{"t": "idle", "n": 28, "id": "s14", "ts": 1790836975.264}
+{"t": "end", "id": "s14", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 14, "ts": 1790836975.264}
+{"t": "begin", "id": "s15", "ts": 1790836975.319}
+{"t": "step", "seq": 15, "id": "s15", "type": "KEYWORD", "name": "Get Element Count", "owner": "Browser", "args": ["css=.inventory_item", "==", "6"], "assign": [], "status": "PASS", "elapsed_ms": 10.6, "return": "6", "ts": 1790836975.332}
+{"t": "idle", "n": 29, "id": "s15", "ts": 1790836975.332}
+{"t": "idle", "n": 30, "id": "s15", "ts": 1790836975.332}
+{"t": "end", "id": "s15", "src": "Get Element Count    css=.inventory_item    ==    6", "steps": 15, "ts": 1790836975.332}
+{"t": "begin", "id": "s16", "ts": 1790836975.391}
+{"t": "step", "seq": 16, "id": "s16", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 6.8, "return": "Swag Labs", "ts": 1790836975.399}
+{"t": "idle", "n": 31, "id": "s16", "ts": 1790836975.399}
+{"t": "idle", "n": 32, "id": "s16", "ts": 1790836975.399}
+{"t": "end", "id": "s16", "src": "Get Title", "steps": 16, "ts": 1790836975.399}
+{"t": "begin", "id": "s17", "ts": 1790836975.472}
+{"t": "step", "seq": 17, "id": "s17", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 7.2, "return": "Swag Labs", "ts": 1790836975.481}
+{"t": "idle", "n": 33, "id": "s17", "ts": 1790836975.481}
+{"t": "idle", "n": 34, "id": "s17", "ts": 1790836975.481}
+{"t": "end", "id": "s17", "src": "Get Title", "steps": 17, "ts": 1790836975.481}
+{"t": "begin", "id": "s18", "ts": 1790836975.539}
+{"t": "step", "seq": 18, "id": "s18", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 7.3, "return": "Swag Labs", "ts": 1790836975.548}
+{"t": "idle", "n": 35, "id": "s18", "ts": 1790836975.548}
+{"t": "idle", "n": 36, "id": "s18", "ts": 1790836975.548}
+{"t": "end", "id": "s18", "src": "Get Title", "steps": 18, "ts": 1790836975.548}
+{"t": "begin", "id": "s19", "ts": 1790836975.62}
+{"t": "step", "seq": 19, "id": "s19", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 7.5, "return": "Swag Labs", "ts": 1790836975.629}
+{"t": "idle", "n": 37, "id": "s19", "ts": 1790836975.629}
+{"t": "idle", "n": 38, "id": "s19", "ts": 1790836975.63}
+{"t": "end", "id": "s19", "src": "Get Title", "steps": 19, "ts": 1790836975.63}
+{"t": "begin", "id": "s20", "ts": 1790836975.704}
+{"t": "step", "seq": 20, "id": "s20", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 7.9, "return": "Swag Labs", "ts": 1790836975.714}
+{"t": "idle", "n": 39, "id": "s20", "ts": 1790836975.714}
+{"t": "idle", "n": 40, "id": "s20", "ts": 1790836975.714}
+{"t": "end", "id": "s20", "src": "Get Title", "steps": 20, "ts": 1790836975.714}
+{"t": "begin", "id": "s21", "ts": 1790836975.787}
+{"t": "step", "seq": 21, "id": "s21", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 6.6, "return": "Swag Labs", "ts": 1790836975.796}
+{"t": "idle", "n": 41, "id": "s21", "ts": 1790836975.796}
+{"t": "idle", "n": 42, "id": "s21", "ts": 1790836975.796}
+{"t": "end", "id": "s21", "src": "Get Title", "steps": 21, "ts": 1790836975.796}
+{"t": "begin", "id": "s22", "ts": 1790836975.876}
+{"t": "step", "seq": 22, "id": "s22", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 9.4, "return": "Swag Labs", "ts": 1790836975.887}
+{"t": "idle", "n": 43, "id": "s22", "ts": 1790836975.887}
+{"t": "idle", "n": 44, "id": "s22", "ts": 1790836975.887}
+{"t": "end", "id": "s22", "src": "Get Title", "steps": 22, "ts": 1790836975.888}
+{"t": "begin", "id": "s23", "ts": 1790836975.954}
+{"t": "step", "seq": 23, "id": "s23", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 7.5, "return": "Swag Labs", "ts": 1790836975.963}
+{"t": "idle", "n": 45, "id": "s23", "ts": 1790836975.963}
+{"t": "idle", "n": 46, "id": "s23", "ts": 1790836975.963}
+{"t": "end", "id": "s23", "src": "Get Title", "steps": 23, "ts": 1790836975.963}
+{"t": "begin", "id": "s24", "ts": 1790836976.024}
+{"t": "step", "seq": 24, "id": "s24", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 7.3, "return": "Swag Labs", "ts": 1790836976.033}
+{"t": "idle", "n": 47, "id": "s24", "ts": 1790836976.033}
+{"t": "idle", "n": 48, "id": "s24", "ts": 1790836976.033}
+{"t": "end", "id": "s24", "src": "Get Title", "steps": 24, "ts": 1790836976.033}
+{"t": "begin", "id": "s25", "ts": 1790836976.098}
+{"t": "step", "seq": 25, "id": "s25", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 7.1, "return": "Swag Labs", "ts": 1790836976.107}
+{"t": "idle", "n": 49, "id": "s25", "ts": 1790836976.107}
+{"t": "idle", "n": 50, "id": "s25", "ts": 1790836976.107}
+{"t": "end", "id": "s25", "src": "Get Title", "steps": 25, "ts": 1790836976.107}
+{"t": "begin", "id": "s26", "ts": 1790836976.176}
+{"t": "step", "seq": 26, "id": "s26", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 7.4, "return": "Swag Labs", "ts": 1790836976.185}
+{"t": "idle", "n": 51, "id": "s26", "ts": 1790836976.185}
+{"t": "idle", "n": 52, "id": "s26", "ts": 1790836976.185}
+{"t": "end", "id": "s26", "src": "Get Title", "steps": 26, "ts": 1790836976.185}
+{"t": "begin", "id": "s27", "ts": 1790836976.248}
+{"t": "step", "seq": 27, "id": "s27", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 6.8, "return": "Swag Labs", "ts": 1790836976.257}
+{"t": "idle", "n": 53, "id": "s27", "ts": 1790836976.257}
+{"t": "idle", "n": 54, "id": "s27", "ts": 1790836976.257}
+{"t": "end", "id": "s27", "src": "Get Title", "steps": 27, "ts": 1790836976.257}
+{"t": "begin", "id": "s28", "ts": 1790836976.326}
+{"t": "step", "seq": 28, "id": "s28", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 7.7, "return": "Swag Labs", "ts": 1790836976.335}
+{"t": "idle", "n": 55, "id": "s28", "ts": 1790836976.335}
+{"t": "idle", "n": 56, "id": "s28", "ts": 1790836976.336}
+{"t": "end", "id": "s28", "src": "Get Title", "steps": 28, "ts": 1790836976.336}
+{"t": "begin", "id": "s29", "ts": 1790836976.397}
+{"t": "step", "seq": 29, "id": "s29", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 7.0, "return": "Swag Labs", "ts": 1790836976.406}
+{"t": "idle", "n": 57, "id": "s29", "ts": 1790836976.406}
+{"t": "idle", "n": 58, "id": "s29", "ts": 1790836976.406}
+{"t": "end", "id": "s29", "src": "Get Title", "steps": 29, "ts": 1790836976.406}
+{"t": "begin", "id": "s30", "ts": 1790836976.47}
+{"t": "step", "seq": 30, "id": "s30", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 7.7, "return": "Swag Labs", "ts": 1790836976.479}
+{"t": "idle", "n": 59, "id": "s30", "ts": 1790836976.479}
+{"t": "idle", "n": 60, "id": "s30", "ts": 1790836976.479}
+{"t": "end", "id": "s30", "src": "Get Title", "steps": 30, "ts": 1790836976.479}
+{"t": "begin", "id": "s31", "ts": 1790836976.549}
+{"t": "step", "seq": 31, "id": "s31", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 7.0, "return": "Swag Labs", "ts": 1790836976.558}
+{"t": "idle", "n": 61, "id": "s31", "ts": 1790836976.558}
+{"t": "idle", "n": 62, "id": "s31", "ts": 1790836976.558}
+{"t": "end", "id": "s31", "src": "Get Title", "steps": 31, "ts": 1790836976.558}
+{"t": "begin", "id": "s32", "ts": 1790836976.626}
+{"t": "step", "seq": 32, "id": "s32", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 6.9, "return": "Swag Labs", "ts": 1790836976.634}
+{"t": "idle", "n": 63, "id": "s32", "ts": 1790836976.634}
+{"t": "idle", "n": 64, "id": "s32", "ts": 1790836976.634}
+{"t": "end", "id": "s32", "src": "Get Title", "steps": 32, "ts": 1790836976.634}
+{"t": "begin", "id": "s33", "ts": 1790836976.711}
+{"t": "step", "seq": 33, "id": "s33", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 6.9, "return": "Swag Labs", "ts": 1790836976.719}
+{"t": "idle", "n": 65, "id": "s33", "ts": 1790836976.719}
+{"t": "idle", "n": 66, "id": "s33", "ts": 1790836976.719}
+{"t": "end", "id": "s33", "src": "Get Title", "steps": 33, "ts": 1790836976.719}
+{"t": "begin", "id": "s34", "ts": 1790836976.783}
+{"t": "step", "seq": 34, "id": "s34", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 7.1, "return": "Swag Labs", "ts": 1790836976.792}
+{"t": "idle", "n": 67, "id": "s34", "ts": 1790836976.792}
+{"t": "idle", "n": 68, "id": "s34", "ts": 1790836976.792}
+{"t": "end", "id": "s34", "src": "Get Title", "steps": 34, "ts": 1790836976.792}
+{"t": "begin", "id": "s35", "ts": 1790836976.859}
+{"t": "step", "seq": 35, "id": "s35", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 7.5, "return": "Swag Labs", "ts": 1790836976.868}
+{"t": "idle", "n": 69, "id": "s35", "ts": 1790836976.868}
+{"t": "idle", "n": 70, "id": "s35", "ts": 1790836976.868}
+{"t": "end", "id": "s35", "src": "Get Title", "steps": 35, "ts": 1790836976.868}
+{"t": "begin", "id": "s36", "ts": 1790836976.924}
+{"t": "step", "seq": 36, "id": "s36", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 6.7, "return": "Swag Labs", "ts": 1790836976.933}
+{"t": "idle", "n": 71, "id": "s36", "ts": 1790836976.933}
+{"t": "idle", "n": 72, "id": "s36", "ts": 1790836976.933}
+{"t": "end", "id": "s36", "src": "Get Title", "steps": 36, "ts": 1790836976.933}
+{"t": "begin", "id": "s37", "ts": 1790836977.006}
+{"t": "step", "seq": 37, "id": "s37", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 7.1, "return": "Swag Labs", "ts": 1790836977.015}
+{"t": "idle", "n": 73, "id": "s37", "ts": 1790836977.015}
+{"t": "idle", "n": 74, "id": "s37", "ts": 1790836977.015}
+{"t": "end", "id": "s37", "src": "Get Title", "steps": 37, "ts": 1790836977.015}
+{"t": "begin", "id": "s38", "ts": 1790836977.087}
+{"t": "step", "seq": 38, "id": "s38", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 7.0, "return": "Swag Labs", "ts": 1790836977.095}
+{"t": "idle", "n": 75, "id": "s38", "ts": 1790836977.095}
+{"t": "idle", "n": 76, "id": "s38", "ts": 1790836977.095}
+{"t": "end", "id": "s38", "src": "Get Title", "steps": 38, "ts": 1790836977.096}
+{"t": "begin", "id": "s39", "ts": 1790836977.161}
+{"t": "step", "seq": 39, "id": "s39", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 5.5, "return": "Swag Labs", "ts": 1790836977.167}
+{"t": "idle", "n": 77, "id": "s39", "ts": 1790836977.167}
+{"t": "idle", "n": 78, "id": "s39", "ts": 1790836977.167}
+{"t": "end", "id": "s39", "src": "Get Title", "steps": 39, "ts": 1790836977.167}
+{"t": "begin", "id": "s40", "ts": 1790836977.238}
+{"t": "step", "seq": 40, "id": "s40", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 7.1, "return": "Swag Labs", "ts": 1790836977.247}
+{"t": "idle", "n": 79, "id": "s40", "ts": 1790836977.247}
+{"t": "idle", "n": 80, "id": "s40", "ts": 1790836977.247}
+{"t": "end", "id": "s40", "src": "Get Title", "steps": 40, "ts": 1790836977.247}
+{"t": "begin", "id": "s41", "ts": 1790836977.307}
+{"t": "step", "seq": 41, "id": "s41", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 7.3, "return": "Swag Labs", "ts": 1790836977.316}
+{"t": "idle", "n": 81, "id": "s41", "ts": 1790836977.316}
+{"t": "idle", "n": 82, "id": "s41", "ts": 1790836977.316}
+{"t": "end", "id": "s41", "src": "Get Title", "steps": 41, "ts": 1790836977.316}
+{"t": "begin", "id": "s42", "ts": 1790836977.386}
+{"t": "step", "seq": 42, "id": "s42", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 6.4, "return": "Swag Labs", "ts": 1790836977.394}
+{"t": "idle", "n": 83, "id": "s42", "ts": 1790836977.394}
+{"t": "idle", "n": 84, "id": "s42", "ts": 1790836977.394}
+{"t": "end", "id": "s42", "src": "Get Title", "steps": 42, "ts": 1790836977.394}
+{"t": "begin", "id": "s43", "ts": 1790836977.464}
+{"t": "step", "seq": 43, "id": "s43", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 7.1, "return": "Swag Labs", "ts": 1790836977.473}
+{"t": "idle", "n": 85, "id": "s43", "ts": 1790836977.473}
+{"t": "idle", "n": 86, "id": "s43", "ts": 1790836977.473}
+{"t": "end", "id": "s43", "src": "Get Title", "steps": 43, "ts": 1790836977.473}
+{"t": "begin", "id": "s44", "ts": 1790836977.548}
+{"t": "step", "seq": 44, "id": "s44", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 7.8, "return": "Swag Labs", "ts": 1790836977.557}
+{"t": "idle", "n": 87, "id": "s44", "ts": 1790836977.557}
+{"t": "idle", "n": 88, "id": "s44", "ts": 1790836977.557}
+{"t": "end", "id": "s44", "src": "Get Title", "steps": 44, "ts": 1790836977.557}
+{"t": "begin", "id": "s45", "ts": 1790836977.633}
+{"t": "step", "seq": 45, "id": "s45", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 7.1, "return": "Swag Labs", "ts": 1790836977.641}
+{"t": "idle", "n": 89, "id": "s45", "ts": 1790836977.641}
+{"t": "idle", "n": 90, "id": "s45", "ts": 1790836977.642}
+{"t": "end", "id": "s45", "src": "Get Title", "steps": 45, "ts": 1790836977.642}
+{"t": "begin", "id": "b46", "ts": 1790836977.767}
+{"t": "step", "seq": 46, "id": "b46", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 6.8, "return": "Swag Labs", "ts": 1790836977.775}
+{"t": "idle", "n": 91, "id": "b46", "ts": 1790836977.775}
+{"t": "idle", "n": 92, "id": "b46", "ts": 1790836977.775}
+{"t": "end", "id": "b46", "src": "Get Title", "steps": 46, "ts": 1790836977.775}
+{"t": "begin", "id": "b47", "ts": 1790836977.811}
+{"t": "step", "seq": 47, "id": "b47", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 6.5, "return": "Swag Labs", "ts": 1790836977.819}
+{"t": "idle", "n": 93, "id": "b47", "ts": 1790836977.819}
+{"t": "idle", "n": 94, "id": "b47", "ts": 1790836977.819}
+{"t": "end", "id": "b47", "src": "Get Title", "steps": 47, "ts": 1790836977.819}
+{"t": "begin", "id": "b48", "ts": 1790836977.858}
+{"t": "step", "seq": 48, "id": "b48", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 6.5, "return": "Swag Labs", "ts": 1790836977.866}
+{"t": "idle", "n": 95, "id": "b48", "ts": 1790836977.866}
+{"t": "idle", "n": 96, "id": "b48", "ts": 1790836977.866}
+{"t": "end", "id": "b48", "src": "Get Title", "steps": 48, "ts": 1790836977.866}
+{"t": "begin", "id": "b49", "ts": 1790836977.917}
+{"t": "step", "seq": 49, "id": "b49", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 8.9, "return": "Swag Labs", "ts": 1790836977.928}
+{"t": "idle", "n": 97, "id": "b49", "ts": 1790836977.928}
+{"t": "idle", "n": 98, "id": "b49", "ts": 1790836977.928}
+{"t": "end", "id": "b49", "src": "Get Title", "steps": 49, "ts": 1790836977.928}
+{"t": "begin", "id": "b50", "ts": 1790836977.962}
+{"t": "step", "seq": 50, "id": "b50", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 5.4, "return": "Swag Labs", "ts": 1790836977.969}
+{"t": "idle", "n": 99, "id": "b50", "ts": 1790836977.969}
+{"t": "idle", "n": 100, "id": "b50", "ts": 1790836977.969}
+{"t": "end", "id": "b50", "src": "Get Title", "steps": 50, "ts": 1790836977.969}
+{"t": "begin", "id": "b51", "ts": 1790836977.999}
+{"t": "step", "seq": 51, "id": "b51", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 7.1, "return": "Swag Labs", "ts": 1790836978.008}
+{"t": "idle", "n": 101, "id": "b51", "ts": 1790836978.008}
+{"t": "idle", "n": 102, "id": "b51", "ts": 1790836978.008}
+{"t": "end", "id": "b51", "src": "Get Title", "steps": 51, "ts": 1790836978.008}
+{"t": "begin", "id": "b52", "ts": 1790836978.041}
+{"t": "step", "seq": 52, "id": "b52", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 7.2, "return": "Swag Labs", "ts": 1790836978.05}
+{"t": "idle", "n": 103, "id": "b52", "ts": 1790836978.05}
+{"t": "idle", "n": 104, "id": "b52", "ts": 1790836978.05}
+{"t": "end", "id": "b52", "src": "Get Title", "steps": 52, "ts": 1790836978.05}
+{"t": "begin", "id": "b53", "ts": 1790836978.096}
+{"t": "step", "seq": 53, "id": "b53", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 6.5, "return": "Swag Labs", "ts": 1790836978.104}
+{"t": "idle", "n": 105, "id": "b53", "ts": 1790836978.104}
+{"t": "idle", "n": 106, "id": "b53", "ts": 1790836978.104}
+{"t": "end", "id": "b53", "src": "Get Title", "steps": 53, "ts": 1790836978.104}
+{"t": "begin", "id": "b54", "ts": 1790836978.146}
+{"t": "step", "seq": 54, "id": "b54", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 5.4, "return": "Swag Labs", "ts": 1790836978.152}
+{"t": "idle", "n": 107, "id": "b54", "ts": 1790836978.152}
+{"t": "idle", "n": 108, "id": "b54", "ts": 1790836978.152}
+{"t": "end", "id": "b54", "src": "Get Title", "steps": 54, "ts": 1790836978.152}
+{"t": "begin", "id": "b55", "ts": 1790836978.188}
+{"t": "step", "seq": 55, "id": "b55", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 6.6, "return": "Swag Labs", "ts": 1790836978.196}
+{"t": "idle", "n": 109, "id": "b55", "ts": 1790836978.196}
+{"t": "idle", "n": 110, "id": "b55", "ts": 1790836978.196}
+{"t": "end", "id": "b55", "src": "Get Title", "steps": 55, "ts": 1790836978.196}
+{"t": "begin", "id": "b56", "ts": 1790836978.228}
+{"t": "step", "seq": 56, "id": "b56", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 5.9, "return": "Swag Labs", "ts": 1790836978.235}
+{"t": "idle", "n": 111, "id": "b56", "ts": 1790836978.235}
+{"t": "idle", "n": 112, "id": "b56", "ts": 1790836978.235}
+{"t": "end", "id": "b56", "src": "Get Title", "steps": 56, "ts": 1790836978.235}
+{"t": "begin", "id": "b57", "ts": 1790836978.262}
+{"t": "step", "seq": 57, "id": "b57", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 5.4, "return": "Swag Labs", "ts": 1790836978.269}
+{"t": "idle", "n": 113, "id": "b57", "ts": 1790836978.269}
+{"t": "idle", "n": 114, "id": "b57", "ts": 1790836978.269}
+{"t": "end", "id": "b57", "src": "Get Title", "steps": 57, "ts": 1790836978.269}
+{"t": "begin", "id": "b58", "ts": 1790836978.3}
+{"t": "step", "seq": 58, "id": "b58", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 7.4, "return": "Swag Labs", "ts": 1790836978.309}
+{"t": "idle", "n": 115, "id": "b58", "ts": 1790836978.309}
+{"t": "idle", "n": 116, "id": "b58", "ts": 1790836978.309}
+{"t": "end", "id": "b58", "src": "Get Title", "steps": 58, "ts": 1790836978.309}
+{"t": "begin", "id": "b59", "ts": 1790836978.347}
+{"t": "step", "seq": 59, "id": "b59", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 5.8, "return": "Swag Labs", "ts": 1790836978.355}
+{"t": "idle", "n": 117, "id": "b59", "ts": 1790836978.355}
+{"t": "idle", "n": 118, "id": "b59", "ts": 1790836978.355}
+{"t": "end", "id": "b59", "src": "Get Title", "steps": 59, "ts": 1790836978.355}
+{"t": "begin", "id": "b60", "ts": 1790836978.386}
+{"t": "step", "seq": 60, "id": "b60", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 7.3, "return": "Swag Labs", "ts": 1790836978.395}
+{"t": "idle", "n": 119, "id": "b60", "ts": 1790836978.395}
+{"t": "idle", "n": 120, "id": "b60", "ts": 1790836978.395}
+{"t": "end", "id": "b60", "src": "Get Title", "steps": 60, "ts": 1790836978.395}
+{"t": "begin", "id": "b61", "ts": 1790836978.434}
+{"t": "step", "seq": 61, "id": "b61", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 6.5, "return": "Swag Labs", "ts": 1790836978.442}
+{"t": "idle", "n": 121, "id": "b61", "ts": 1790836978.442}
+{"t": "idle", "n": 122, "id": "b61", "ts": 1790836978.442}
+{"t": "end", "id": "b61", "src": "Get Title", "steps": 61, "ts": 1790836978.442}
+{"t": "begin", "id": "b62", "ts": 1790836978.481}
+{"t": "step", "seq": 62, "id": "b62", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 8.2, "return": "Swag Labs", "ts": 1790836978.491}
+{"t": "idle", "n": 123, "id": "b62", "ts": 1790836978.491}
+{"t": "idle", "n": 124, "id": "b62", "ts": 1790836978.491}
+{"t": "end", "id": "b62", "src": "Get Title", "steps": 62, "ts": 1790836978.491}
+{"t": "begin", "id": "b63", "ts": 1790836978.52}
+{"t": "step", "seq": 63, "id": "b63", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 5.4, "return": "Swag Labs", "ts": 1790836978.527}
+{"t": "idle", "n": 125, "id": "b63", "ts": 1790836978.527}
+{"t": "idle", "n": 126, "id": "b63", "ts": 1790836978.527}
+{"t": "end", "id": "b63", "src": "Get Title", "steps": 63, "ts": 1790836978.527}
+{"t": "begin", "id": "b64", "ts": 1790836978.571}
+{"t": "step", "seq": 64, "id": "b64", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 6.9, "return": "Swag Labs", "ts": 1790836978.579}
+{"t": "idle", "n": 127, "id": "b64", "ts": 1790836978.579}
+{"t": "idle", "n": 128, "id": "b64", "ts": 1790836978.579}
+{"t": "end", "id": "b64", "src": "Get Title", "steps": 64, "ts": 1790836978.579}
+{"t": "begin", "id": "b65", "ts": 1790836978.618}
+{"t": "step", "seq": 65, "id": "b65", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 6.3, "return": "Swag Labs", "ts": 1790836978.626}
+{"t": "idle", "n": 129, "id": "b65", "ts": 1790836978.626}
+{"t": "idle", "n": 130, "id": "b65", "ts": 1790836978.626}
+{"t": "end", "id": "b65", "src": "Get Title", "steps": 65, "ts": 1790836978.626}
+{"t": "begin", "id": "b66", "ts": 1790836978.664}
+{"t": "step", "seq": 66, "id": "b66", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 7.1, "return": "Swag Labs", "ts": 1790836978.673}
+{"t": "idle", "n": 131, "id": "b66", "ts": 1790836978.673}
+{"t": "idle", "n": 132, "id": "b66", "ts": 1790836978.673}
+{"t": "end", "id": "b66", "src": "Get Title", "steps": 66, "ts": 1790836978.673}
+{"t": "begin", "id": "b67", "ts": 1790836978.723}
+{"t": "step", "seq": 67, "id": "b67", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 7.2, "return": "Swag Labs", "ts": 1790836978.732}
+{"t": "idle", "n": 133, "id": "b67", "ts": 1790836978.732}
+{"t": "idle", "n": 134, "id": "b67", "ts": 1790836978.732}
+{"t": "end", "id": "b67", "src": "Get Title", "steps": 67, "ts": 1790836978.732}
+{"t": "begin", "id": "b68", "ts": 1790836978.774}
+{"t": "step", "seq": 68, "id": "b68", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 6.0, "return": "Swag Labs", "ts": 1790836978.781}
+{"t": "idle", "n": 135, "id": "b68", "ts": 1790836978.781}
+{"t": "idle", "n": 136, "id": "b68", "ts": 1790836978.781}
+{"t": "end", "id": "b68", "src": "Get Title", "steps": 68, "ts": 1790836978.781}
+{"t": "begin", "id": "b69", "ts": 1790836978.814}
+{"t": "step", "seq": 69, "id": "b69", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 5.8, "return": "Swag Labs", "ts": 1790836978.821}
+{"t": "idle", "n": 137, "id": "b69", "ts": 1790836978.821}
+{"t": "idle", "n": 138, "id": "b69", "ts": 1790836978.821}
+{"t": "end", "id": "b69", "src": "Get Title", "steps": 69, "ts": 1790836978.821}
+{"t": "begin", "id": "b70", "ts": 1790836978.865}
+{"t": "step", "seq": 70, "id": "b70", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 8.2, "return": "Swag Labs", "ts": 1790836978.875}
+{"t": "idle", "n": 139, "id": "b70", "ts": 1790836978.875}
+{"t": "idle", "n": 140, "id": "b70", "ts": 1790836978.875}
+{"t": "end", "id": "b70", "src": "Get Title", "steps": 70, "ts": 1790836978.875}
+{"t": "begin", "id": "b71", "ts": 1790836978.912}
+{"t": "step", "seq": 71, "id": "b71", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 6.0, "return": "Swag Labs", "ts": 1790836978.92}
+{"t": "idle", "n": 141, "id": "b71", "ts": 1790836978.92}
+{"t": "idle", "n": 142, "id": "b71", "ts": 1790836978.92}
+{"t": "end", "id": "b71", "src": "Get Title", "steps": 71, "ts": 1790836978.92}
+{"t": "begin", "id": "b72", "ts": 1790836978.961}
+{"t": "step", "seq": 72, "id": "b72", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 8.6, "return": "Swag Labs", "ts": 1790836978.972}
+{"t": "idle", "n": 143, "id": "b72", "ts": 1790836978.972}
+{"t": "idle", "n": 144, "id": "b72", "ts": 1790836978.972}
+{"t": "end", "id": "b72", "src": "Get Title", "steps": 72, "ts": 1790836978.972}
+{"t": "begin", "id": "b73", "ts": 1790836979.023}
+{"t": "step", "seq": 73, "id": "b73", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 8.4, "return": "Swag Labs", "ts": 1790836979.033}
+{"t": "idle", "n": 145, "id": "b73", "ts": 1790836979.033}
+{"t": "idle", "n": 146, "id": "b73", "ts": 1790836979.033}
+{"t": "end", "id": "b73", "src": "Get Title", "steps": 73, "ts": 1790836979.033}
+{"t": "begin", "id": "b74", "ts": 1790836979.077}
+{"t": "step", "seq": 74, "id": "b74", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 8.4, "return": "Swag Labs", "ts": 1790836979.087}
+{"t": "idle", "n": 147, "id": "b74", "ts": 1790836979.087}
+{"t": "idle", "n": 148, "id": "b74", "ts": 1790836979.087}
+{"t": "end", "id": "b74", "src": "Get Title", "steps": 74, "ts": 1790836979.087}
+{"t": "begin", "id": "b75", "ts": 1790836979.119}
+{"t": "step", "seq": 75, "id": "b75", "type": "KEYWORD", "name": "Get Title", "owner": "Browser", "args": [], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Title: 'Swag Labs'"}], "status": "PASS", "elapsed_ms": 7.2, "return": "Swag Labs", "ts": 1790836979.128}
+{"t": "idle", "n": 149, "id": "b75", "ts": 1790836979.128}
+{"t": "idle", "n": 150, "id": "b75", "ts": 1790836979.129}
+{"t": "end", "id": "b75", "src": "Get Title", "steps": 75, "ts": 1790836979.129}
+{"t": "begin", "id": "s76", "ts": 1790836979.242}
+{"t": "step", "seq": 76, "id": "s76", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 20.8, "return": "3", "ts": 1790836979.265}
+{"t": "idle", "n": 151, "id": "s76", "ts": 1790836979.265}
+{"t": "idle", "n": 152, "id": "s76", "ts": 1790836979.265}
+{"t": "end", "id": "s76", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 76, "ts": 1790836979.265}
+{"t": "begin", "id": "s77", "ts": 1790836979.334}
+{"t": "step", "seq": 77, "id": "s77", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 15.7, "return": "3", "ts": 1790836979.352}
+{"t": "idle", "n": 153, "id": "s77", "ts": 1790836979.352}
+{"t": "idle", "n": 154, "id": "s77", "ts": 1790836979.352}
+{"t": "end", "id": "s77", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 77, "ts": 1790836979.352}
+{"t": "begin", "id": "s78", "ts": 1790836979.416}
+{"t": "step", "seq": 78, "id": "s78", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 20.2, "return": "3", "ts": 1790836979.438}
+{"t": "idle", "n": 155, "id": "s78", "ts": 1790836979.438}
+{"t": "idle", "n": 156, "id": "s78", "ts": 1790836979.438}
+{"t": "end", "id": "s78", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 78, "ts": 1790836979.438}
+{"t": "begin", "id": "s79", "ts": 1790836979.515}
+{"t": "step", "seq": 79, "id": "s79", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 16.3, "return": "3", "ts": 1790836979.533}
+{"t": "idle", "n": 157, "id": "s79", "ts": 1790836979.533}
+{"t": "idle", "n": 158, "id": "s79", "ts": 1790836979.533}
+{"t": "end", "id": "s79", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 79, "ts": 1790836979.533}
+{"t": "begin", "id": "s80", "ts": 1790836979.607}
+{"t": "step", "seq": 80, "id": "s80", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 16.3, "return": "3", "ts": 1790836979.625}
+{"t": "idle", "n": 159, "id": "s80", "ts": 1790836979.625}
+{"t": "idle", "n": 160, "id": "s80", "ts": 1790836979.625}
+{"t": "end", "id": "s80", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 80, "ts": 1790836979.625}
+{"t": "begin", "id": "s81", "ts": 1790836979.692}
+{"t": "step", "seq": 81, "id": "s81", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 19.4, "return": "3", "ts": 1790836979.713}
+{"t": "idle", "n": 161, "id": "s81", "ts": 1790836979.713}
+{"t": "idle", "n": 162, "id": "s81", "ts": 1790836979.713}
+{"t": "end", "id": "s81", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 81, "ts": 1790836979.713}
+{"t": "begin", "id": "s82", "ts": 1790836979.774}
+{"t": "step", "seq": 82, "id": "s82", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 14.6, "return": "3", "ts": 1790836979.791}
+{"t": "idle", "n": 163, "id": "s82", "ts": 1790836979.791}
+{"t": "idle", "n": 164, "id": "s82", "ts": 1790836979.791}
+{"t": "end", "id": "s82", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 82, "ts": 1790836979.791}
+{"t": "begin", "id": "s83", "ts": 1790836979.854}
+{"t": "step", "seq": 83, "id": "s83", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 21.2, "return": "3", "ts": 1790836979.877}
+{"t": "idle", "n": 165, "id": "s83", "ts": 1790836979.877}
+{"t": "idle", "n": 166, "id": "s83", "ts": 1790836979.877}
+{"t": "end", "id": "s83", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 83, "ts": 1790836979.877}
+{"t": "begin", "id": "s84", "ts": 1790836979.945}
+{"t": "step", "seq": 84, "id": "s84", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 19.5, "return": "3", "ts": 1790836979.966}
+{"t": "idle", "n": 167, "id": "s84", "ts": 1790836979.966}
+{"t": "idle", "n": 168, "id": "s84", "ts": 1790836979.966}
+{"t": "end", "id": "s84", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 84, "ts": 1790836979.966}
+{"t": "begin", "id": "s85", "ts": 1790836980.035}
+{"t": "step", "seq": 85, "id": "s85", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 21.8, "return": "3", "ts": 1790836980.059}
+{"t": "idle", "n": 169, "id": "s85", "ts": 1790836980.059}
+{"t": "idle", "n": 170, "id": "s85", "ts": 1790836980.059}
+{"t": "end", "id": "s85", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 85, "ts": 1790836980.059}
+{"t": "begin", "id": "s86", "ts": 1790836980.129}
+{"t": "step", "seq": 86, "id": "s86", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 22.4, "return": "3", "ts": 1790836980.153}
+{"t": "idle", "n": 171, "id": "s86", "ts": 1790836980.153}
+{"t": "idle", "n": 172, "id": "s86", "ts": 1790836980.153}
+{"t": "end", "id": "s86", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 86, "ts": 1790836980.153}
+{"t": "begin", "id": "s87", "ts": 1790836980.224}
+{"t": "step", "seq": 87, "id": "s87", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 19.8, "return": "3", "ts": 1790836980.246}
+{"t": "idle", "n": 173, "id": "s87", "ts": 1790836980.246}
+{"t": "idle", "n": 174, "id": "s87", "ts": 1790836980.246}
+{"t": "end", "id": "s87", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 87, "ts": 1790836980.246}
+{"t": "begin", "id": "s88", "ts": 1790836980.32}
+{"t": "step", "seq": 88, "id": "s88", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 22.8, "return": "3", "ts": 1790836980.345}
+{"t": "idle", "n": 175, "id": "s88", "ts": 1790836980.345}
+{"t": "idle", "n": 176, "id": "s88", "ts": 1790836980.345}
+{"t": "end", "id": "s88", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 88, "ts": 1790836980.345}
+{"t": "begin", "id": "s89", "ts": 1790836980.406}
+{"t": "step", "seq": 89, "id": "s89", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 20.7, "return": "3", "ts": 1790836980.428}
+{"t": "idle", "n": 177, "id": "s89", "ts": 1790836980.428}
+{"t": "idle", "n": 178, "id": "s89", "ts": 1790836980.428}
+{"t": "end", "id": "s89", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 89, "ts": 1790836980.428}
+{"t": "begin", "id": "s90", "ts": 1790836980.491}
+{"t": "step", "seq": 90, "id": "s90", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 20.5, "return": "3", "ts": 1790836980.514}
+{"t": "idle", "n": 179, "id": "s90", "ts": 1790836980.514}
+{"t": "idle", "n": 180, "id": "s90", "ts": 1790836980.514}
+{"t": "end", "id": "s90", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 90, "ts": 1790836980.514}
+{"t": "begin", "id": "s91", "ts": 1790836980.574}
+{"t": "step", "seq": 91, "id": "s91", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 21.1, "return": "3", "ts": 1790836980.597}
+{"t": "idle", "n": 181, "id": "s91", "ts": 1790836980.597}
+{"t": "idle", "n": 182, "id": "s91", "ts": 1790836980.597}
+{"t": "end", "id": "s91", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 91, "ts": 1790836980.597}
+{"t": "begin", "id": "s92", "ts": 1790836980.669}
+{"t": "step", "seq": 92, "id": "s92", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 21.4, "return": "3", "ts": 1790836980.692}
+{"t": "idle", "n": 183, "id": "s92", "ts": 1790836980.693}
+{"t": "idle", "n": 184, "id": "s92", "ts": 1790836980.693}
+{"t": "end", "id": "s92", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 92, "ts": 1790836980.693}
+{"t": "begin", "id": "s93", "ts": 1790836980.768}
+{"t": "step", "seq": 93, "id": "s93", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 22.3, "return": "3", "ts": 1790836980.792}
+{"t": "idle", "n": 185, "id": "s93", "ts": 1790836980.792}
+{"t": "idle", "n": 186, "id": "s93", "ts": 1790836980.792}
+{"t": "end", "id": "s93", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 93, "ts": 1790836980.792}
+{"t": "begin", "id": "s94", "ts": 1790836980.851}
+{"t": "step", "seq": 94, "id": "s94", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 20.9, "return": "3", "ts": 1790836980.873}
+{"t": "idle", "n": 187, "id": "s94", "ts": 1790836980.873}
+{"t": "idle", "n": 188, "id": "s94", "ts": 1790836980.873}
+{"t": "end", "id": "s94", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 94, "ts": 1790836980.873}
+{"t": "begin", "id": "s95", "ts": 1790836980.946}
+{"t": "step", "seq": 95, "id": "s95", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 21.1, "return": "3", "ts": 1790836980.969}
+{"t": "idle", "n": 189, "id": "s95", "ts": 1790836980.969}
+{"t": "idle", "n": 190, "id": "s95", "ts": 1790836980.969}
+{"t": "end", "id": "s95", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 95, "ts": 1790836980.969}
+{"t": "begin", "id": "s96", "ts": 1790836981.037}
+{"t": "step", "seq": 96, "id": "s96", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 21.8, "return": "3", "ts": 1790836981.061}
+{"t": "idle", "n": 191, "id": "s96", "ts": 1790836981.062}
+{"t": "idle", "n": 192, "id": "s96", "ts": 1790836981.062}
+{"t": "end", "id": "s96", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 96, "ts": 1790836981.062}
+{"t": "begin", "id": "s97", "ts": 1790836981.124}
+{"t": "step", "seq": 97, "id": "s97", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 22.7, "return": "3", "ts": 1790836981.148}
+{"t": "idle", "n": 193, "id": "s97", "ts": 1790836981.148}
+{"t": "idle", "n": 194, "id": "s97", "ts": 1790836981.148}
+{"t": "end", "id": "s97", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 97, "ts": 1790836981.148}
+{"t": "begin", "id": "s98", "ts": 1790836981.221}
+{"t": "step", "seq": 98, "id": "s98", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 21.0, "return": "3", "ts": 1790836981.244}
+{"t": "idle", "n": 195, "id": "s98", "ts": 1790836981.244}
+{"t": "idle", "n": 196, "id": "s98", "ts": 1790836981.244}
+{"t": "end", "id": "s98", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 98, "ts": 1790836981.244}
+{"t": "begin", "id": "s99", "ts": 1790836981.313}
+{"t": "step", "seq": 99, "id": "s99", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 21.5, "return": "3", "ts": 1790836981.337}
+{"t": "idle", "n": 197, "id": "s99", "ts": 1790836981.337}
+{"t": "idle", "n": 198, "id": "s99", "ts": 1790836981.337}
+{"t": "end", "id": "s99", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 99, "ts": 1790836981.337}
+{"t": "begin", "id": "s100", "ts": 1790836981.415}
+{"t": "step", "seq": 100, "id": "s100", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 21.6, "return": "3", "ts": 1790836981.438}
+{"t": "idle", "n": 199, "id": "s100", "ts": 1790836981.438}
+{"t": "idle", "n": 200, "id": "s100", "ts": 1790836981.439}
+{"t": "end", "id": "s100", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 100, "ts": 1790836981.439}
+{"t": "begin", "id": "s101", "ts": 1790836981.501}
+{"t": "step", "seq": 101, "id": "s101", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 19.0, "return": "3", "ts": 1790836981.522}
+{"t": "idle", "n": 201, "id": "s101", "ts": 1790836981.522}
+{"t": "idle", "n": 202, "id": "s101", "ts": 1790836981.522}
+{"t": "end", "id": "s101", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 101, "ts": 1790836981.522}
+{"t": "begin", "id": "s102", "ts": 1790836981.589}
+{"t": "step", "seq": 102, "id": "s102", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 17.8, "return": "3", "ts": 1790836981.609}
+{"t": "idle", "n": 203, "id": "s102", "ts": 1790836981.609}
+{"t": "idle", "n": 204, "id": "s102", "ts": 1790836981.609}
+{"t": "end", "id": "s102", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 102, "ts": 1790836981.609}
+{"t": "begin", "id": "s103", "ts": 1790836981.676}
+{"t": "step", "seq": 103, "id": "s103", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 17.4, "return": "3", "ts": 1790836981.695}
+{"t": "idle", "n": 205, "id": "s103", "ts": 1790836981.695}
+{"t": "idle", "n": 206, "id": "s103", "ts": 1790836981.695}
+{"t": "end", "id": "s103", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 103, "ts": 1790836981.695}
+{"t": "begin", "id": "s104", "ts": 1790836981.774}
+{"t": "step", "seq": 104, "id": "s104", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 20.0, "return": "3", "ts": 1790836981.796}
+{"t": "idle", "n": 207, "id": "s104", "ts": 1790836981.796}
+{"t": "idle", "n": 208, "id": "s104", "ts": 1790836981.796}
+{"t": "end", "id": "s104", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 104, "ts": 1790836981.796}
+{"t": "begin", "id": "s105", "ts": 1790836981.861}
+{"t": "step", "seq": 105, "id": "s105", "type": "KEYWORD", "name": "Get Text", "owner": "Browser", "args": ["css=.shopping_cart_badge", "==", "3"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Text: ['3']"}], "status": "PASS", "elapsed_ms": 19.0, "return": "3", "ts": 1790836981.882}
+{"t": "idle", "n": 209, "id": "s105", "ts": 1790836981.882}
+{"t": "idle", "n": 210, "id": "s105", "ts": 1790836981.882}
+{"t": "end", "id": "s105", "src": "Get Text    css=.shopping_cart_badge    ==    3", "steps": 105, "ts": 1790836981.882}
+{"t": "begin", "id": "s106", "ts": 1790836994.165}
+{"t": "idle", "n": 211, "id": "s106", "ts": 1790836994.168}
+{"t": "idle", "n": 212, "id": "s106", "ts": 1790836994.168}
+{"t": "end", "id": "s106", "src": ".save -t Saved_By_REPL ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round2/repl_only/out/browser_dotsave.robot", "steps": 105, "ts": 1790836994.168}
+{"t": "idle", "n": 213, "id": "s106", "ts": 1790837012.943}
+{"t": "step", "seq": 106, "id": "s106", "type": "KEYWORD", "name": "Repl", "owner": "robotcode.repl.Repl", "args": [], "assign": [], "status": "PASS", "elapsed_ms": 47858.3, "ts": 1790837012.954}
+{"t": "closed", "ts": 1790837012.954}

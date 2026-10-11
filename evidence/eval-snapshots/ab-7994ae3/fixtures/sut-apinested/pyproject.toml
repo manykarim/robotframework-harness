@@ -1,0 +1,5 @@
+[project]
+name = "sut-apinested"
+version = "0.0.1"
+requires-python = ">=3.10"
+dependencies = ["robotframework>=7.0"]

@@ -1,0 +1,85 @@
+{
+ "round": "5",
+ "folder": "05-v2",
+ "title": "REPL/debugger hook research + A/B hookpkg v1 vs hookpkg2 (v2)",
+ "kind": "ab",
+ "findings": [
+  "research/findings.md",
+  "findings_v2.md",
+  "hookpkg2_build_findings.md"
+ ],
+ "main_results": "results/results_live_v2.jsonl",
+ "runs": [
+  {
+   "results_file": "results/results_live_v2.jsonl",
+   "rows": 90,
+   "rows_ok": 90,
+   "agents": [
+    "claude",
+    "codex",
+    "opencode"
+   ],
+   "models": {
+    "claude": [
+     "claude-haiku-4-5"
+    ],
+    "codex": [
+     "gpt-5.6-luna@medium"
+    ],
+    "opencode": [
+     "minimax-coding-plan/MiniMax-M2.5"
+    ]
+   },
+   "arms": [
+    "hookpkg",
+    "hookpkg2"
+   ],
+   "scenarios": [
+    "carconfig_order",
+    "demoshop_debug",
+    "demoshop_order",
+    "tricentis_debug",
+    "tricentis_quote"
+   ],
+   "reps": [
+    1,
+    2,
+    3
+   ],
+   "harness_version": [
+    "rc-3-journey"
+   ],
+   "max_turns": [
+    80
+   ],
+   "timeout_s": [
+    1800
+   ],
+   "started_utc": "2026-10-08T21:07:47.828976+00:00",
+   "finished_utc": "2026-10-09T08:01:50.051672+00:00"
+  }
+ ],
+ "dates_utc": [
+  "2026-10-08",
+  "2026-10-09"
+ ],
+ "harness_snapshot": "../../eval-snapshots/ab-7994ae3/harness/",
+ "scenario_definitions": "scenarios.json",
+ "transcript_dirs": [
+  "transcripts_live_v2"
+ ],
+ "agent_versions_recorded": {
+  "claude_code": [
+   "2.1.295"
+  ],
+  "codex": "not recorded in results or transcripts",
+  "opencode": "not recorded in results or transcripts"
+ },
+ "excluded_rows": {
+  "counts": {
+   "aborted": 2
+  },
+  "files": "excluded/excluded_<reason>.jsonl",
+  "note": "rows with in_results_file=true are still in the results file (contaminated / not ok); the others were removed from it and are kept here with their reason and the backup they came from"
+ }
+}

@@ -1,0 +1,9 @@
+{"t": "ready", "pid": 3587198, "hooked": true, "path": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round2/repl_only/run/load_import/steps.jsonl", "ts": 1790836880.753}
+{"t": "idle", "n": 1, "id": null, "ts": 1790836880.757}
+{"t": "begin", "id": "s1", "ts": 1790836880.831}
+{"t": "step", "seq": 1, "id": "s1", "type": "KEYWORD", "name": "Evaluate", "owner": "BuiltIn", "args": ["{\"a\": [1,2]}"], "assign": ["${v}"], "msgs": [{"level": "INFO", "html": false, "text": "${v} = {'a': [1, 2]}"}], "status": "PASS", "elapsed_ms": 1.2, "values": {"${v}": {"a": [1, 2]}}, "return": "{'a': [1, 2]}", "ts": 1790836880.834}
+{"t": "idle", "n": 2, "id": "s1", "ts": 1790836880.834}
+{"t": "idle", "n": 3, "id": "s1", "ts": 1790836880.834}
+{"t": "end", "id": "s1", "src": "${v}    Evaluate    {\"a\": [1,2]}", "steps": 1, "ts": 1790836880.834}
+{"t": "idle", "n": 4, "id": "s1", "ts": 1790836880.893}
+{"t": "closed", "ts": 1790836880.895}

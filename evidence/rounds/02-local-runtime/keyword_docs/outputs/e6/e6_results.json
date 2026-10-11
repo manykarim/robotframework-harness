@@ -1,0 +1,261 @@
+{
+ "all": {
+  "n": 544,
+  "C0": {
+   "mean": 96,
+   "median": 72,
+   "p90": 162,
+   "sum_top5_mean": 481
+  },
+  "C1": {
+   "mean": 161,
+   "median": 134,
+   "p90": 251,
+   "sum_top5_mean": 805
+  },
+  "C2": {
+   "mean": 270,
+   "median": 168,
+   "p90": 600,
+   "sum_top5_mean": 1350
+  },
+  "FULL": {
+   "mean": 879,
+   "median": 616,
+   "p90": 1811,
+   "sum_top5_mean": 4397
+  }
+ },
+ "gold": {
+  "n": 75,
+  "C0": {
+   "mean": 109,
+   "median": 85,
+   "p90": 157,
+   "sum_top5_mean": 545
+  },
+  "C1": {
+   "mean": 175,
+   "median": 146,
+   "p90": 248,
+   "sum_top5_mean": 873
+  },
+  "C2": {
+   "mean": 348,
+   "median": 199,
+   "p90": 623,
+   "sum_top5_mean": 1741
+  },
+  "FULL": {
+   "mean": 1346,
+   "median": 1051,
+   "p90": 2691,
+   "sum_top5_mean": 6729
+  }
+ },
+ "recovered_signatures": [
+  {
+   "kw": "RequestsLibrary.DELETE",
+   "libdoc_args": [
+    "*args",
+    "**kwargs"
+   ],
+   "recovered": [
+    "url",
+    "expected_status=None",
+    "msg=None",
+    "**kwargs"
+   ]
+  },
+  {
+   "kw": "RequestsLibrary.DELETE On Session",
+   "libdoc_args": [
+    "*args",
+    "**kwargs"
+   ],
+   "recovered": [
+    "alias",
+    "url",
+    "expected_status=None",
+    "msg=None",
+    "**kwargs"
+   ]
+  },
+  {
+   "kw": "RequestsLibrary.GET",
+   "libdoc_args": [
+    "*args",
+    "**kwargs"
+   ],
+   "recovered": [
+    "url",
+    "params=None",
+    "expected_status=None",
+    "msg=None",
+    "**kwargs"
+   ]
+  },
+  {
+   "kw": "RequestsLibrary.GET On Session",
+   "libdoc_args": [
+    "*args",
+    "**kwargs"
+   ],
+   "recovered": [
+    "alias",
+    "url",
+    "params=None",
+    "expected_status=None",
+    "msg=None",
+    "**kwargs"
+   ]
+  },
+  {
+   "kw": "RequestsLibrary.HEAD",
+   "libdoc_args": [
+    "*args",
+    "**kwargs"
+   ],
+   "recovered": [
+    "url",
+    "expected_status=None",
+    "msg=None",
+    "**kwargs"
+   ]
+  },
+  {
+   "kw": "RequestsLibrary.HEAD On Session",
+   "libdoc_args": [
+    "*args",
+    "**kwargs"
+   ],
+   "recovered": [
+    "alias",
+    "url",
+    "expected_status=None",
+    "msg=None",
+    "**kwargs"
+   ]
+  },
+  {
+   "kw": "RequestsLibrary.OPTIONS",
+   "libdoc_args": [
+    "*args",
+    "**kwargs"
+   ],
+   "recovered": [
+    "url",
+    "expected_status=None",
+    "msg=None",
+    "**kwargs"
+   ]
+  },
+  {
+   "kw": "RequestsLibrary.OPTIONS On Session",
+   "libdoc_args": [
+    "*args",
+    "**kwargs"
+   ],
+   "recovered": [
+    "alias",
+    "url",
+    "expected_status=None",
+    "msg=None",
+    "**kwargs"
+   ]
+  },
+  {
+   "kw": "RequestsLibrary.PATCH",
+   "libdoc_args": [
+    "*args",
+    "**kwargs"
+   ],
+   "recovered": [
+    "url",
+    "data=None",
+    "json=None",
+    "expected_status=None",
+    "msg=None",
+    "**kwargs"
+   ]
+  },
+  {
+   "kw": "RequestsLibrary.PATCH On Session",
+   "libdoc_args": [
+    "*args",
+    "**kwargs"
+   ],
+   "recovered": [
+    "alias",
+    "url",
+    "data=None",
+    "json=None",
+    "expected_status=None",
+    "msg=None",
+    "**kwargs"
+   ]
+  },
+  {
+   "kw": "RequestsLibrary.POST",
+   "libdoc_args": [
+    "*args",
+    "**kwargs"
+   ],
+   "recovered": [
+    "url",
+    "data=None",
+    "json=None",
+    "expected_status=None",
+    "msg=None",
+    "**kwargs"
+   ]
+  },
+  {
+   "kw": "RequestsLibrary.POST On Session",
+   "libdoc_args": [
+    "*args",
+    "**kwargs"
+   ],
+   "recovered": [
+    "alias",
+    "url",
+    "data=None",
+    "json=None",
+    "expected_status=None",
+    "msg=None",
+    "**kwargs"
+   ]
+  },
+  {
+   "kw": "RequestsLibrary.PUT",
+   "libdoc_args": [
+    "*args",
+    "**kwargs"
+   ],
+   "recovered": [
+    "url",
+    "data=None",
+    "json=None",
+    "expected_status=None",
+    "msg=None",
+    "**kwargs"
+   ]
+  },
+  {
+   "kw": "RequestsLibrary.PUT On Session",
+   "libdoc_args": [
+    "*args",
+    "**kwargs"
+   ],
+   "recovered": [
+    "alias",
+    "url",
+    "data=None",
+    "json=None",
+    "expected_status=None",
+    "msg=None",
+    "**kwargs"
+   ]
+  }
+ ]
+}

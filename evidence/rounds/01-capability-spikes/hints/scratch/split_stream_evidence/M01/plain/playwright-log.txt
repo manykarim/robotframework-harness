@@ -1,0 +1,22 @@
+{"level":"info","time":"2026-09-30T22:43:16.234Z","seq":1,"component":"browser-library","msg":"Listening on 127.0.0.1:33987"}
+{"level":"info","time":"2026-09-30T22:43:16.298Z","seq":2,"component":"browser-library","event_kind":"grpc","action":"newBrowser","status":"started"}
+{"level":"info","time":"2026-09-30T22:43:16.450Z","seq":3,"component":"browser-library","msg":"Adding browser to stack: chromium, version: 153.0.8010.12"}
+{"level":"info","time":"2026-09-30T22:43:16.451Z","seq":4,"component":"browser-library","msg":"Adding 0 contexts to browser"}
+{"level":"info","time":"2026-09-30T22:43:16.451Z","seq":5,"component":"browser-library","event_kind":"grpc","action":"newBrowser","status":"succeeded"}
+{"level":"info","time":"2026-09-30T22:43:16.464Z","seq":6,"component":"browser-library","event_kind":"grpc","action":"newPage","status":"started"}
+{"level":"info","time":"2026-09-30T22:43:16.465Z","seq":7,"component":"browser-library","msg":"currentBrowser: {\"_contextStack\":[],\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@6227172588559fdf704579bd20b0fd9c\"},\"name\":\"chromium\",\"id\":\"browser=914893e9-410f-4ba6-beac-55c386ac13d8\",\"headless\":true}"}
+{"level":"info","time":"2026-09-30T22:43:16.484Z","seq":8,"component":"browser-library","msg":"Setting default timeout for context context=8d102858-4a45-42b9-9af6-1c08ffa6030b to 5000"}
+{"level":"info","time":"2026-09-30T22:43:16.484Z","seq":9,"component":"browser-library","msg":"Changed active context: context=8d102858-4a45-42b9-9af6-1c08ffa6030b"}
+{"level":"info","time":"2026-09-30T22:43:16.599Z","seq":10,"component":"browser-library","msg":"Video path: undefined"}
+{"level":"info","time":"2026-09-30T22:43:16.599Z","seq":11,"component":"browser-library","msg":"Changed active page"}
+{"level":"info","time":"2026-09-30T22:43:16.934Z","seq":12,"component":"browser-library","event_kind":"grpc","action":"newPage","status":"succeeded"}
+{"level":"info","time":"2026-09-30T22:43:16.941Z","seq":13,"component":"browser-library","event_kind":"grpc","action":"click","status":"started"}
+{"level":"info","time":"2026-09-30T22:43:16.942Z","seq":14,"component":"browser-library","msg":"Strict mode is enabled, find Locator with [data-test=\"login-btn\"] in page."}
+{"level":"info","time":"2026-09-30T22:43:21.945Z","seq":15,"component":"browser-library","event_kind":"grpc","action":"click","status":"failed"}
+{"level":"error","time":"2026-09-30T22:43:21.945Z","seq":16,"component":"browser-library","event_kind":"grpc_error","status":"failed","error_type":"TimeoutError2","msg":"locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-test=\"login-btn\"]')\u001b[22m\n\n    at internalClick (~/workspace/robotcode-experiments/.venv/lib/python3.13/site-packages/Browser/wrapper/index.js:13587:19)\n    at async click (~/workspace/robotcode-experiments/.venv/lib/python3.13/site-packages/Browser/wrapper/index.js:13568:18)\n    at async PlaywrightServer.click (~/workspace/robotcode-experiments/.venv/lib/python3.13/site-packages/Browser/wrapper/index.js:15078:26)"}
+{"level":"info","time":"2026-09-30T22:43:21.951Z","seq":17,"component":"browser-library","event_kind":"grpc","action":"takeScreenshot","status":"started"}
+{"level":"info","time":"2026-09-30T22:43:21.952Z","seq":18,"component":"browser-library","Take screenshot with options: ":{"path":"~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/hints/runs/M01/plain/browser/screenshot/fail-screenshot-1.png","fileType":"png","fullPage":false,"timeout":5000,"omitBackground":false}}
+{"level":"info","time":"2026-09-30T22:43:22.024Z","seq":19,"component":"browser-library","event_kind":"grpc","action":"takeScreenshot","status":"succeeded"}
+{"level":"info","time":"2026-09-30T22:43:22.054Z","seq":20,"component":"browser-library","event_kind":"grpc","action":"closeAllBrowsers","status":"started"}
+{"level":"info","time":"2026-09-30T22:43:22.062Z","seq":21,"component":"browser-library","msg":"Removed page=fdafc171-43d2-4c24-b7f5-5891046aee40 from context=8d102858-4a45-42b9-9af6-1c08ffa6030b page stack"}
+{"level":"info","time":"2026-09-30T22:43:22.109Z","seq":22,"component":"browser-library","event_kind":"grpc","action":"closeAllBrowsers","status":"succeeded"}

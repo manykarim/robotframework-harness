@@ -1,0 +1,386 @@
+[
+ {
+  "id": "b01_typo_keyword",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "keyword-typo",
+  "file": "cases/b01_typo_keyword.robot"
+ },
+ {
+  "id": "b02_too_few_args",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "arg-count",
+  "file": "cases/b02_too_few_args.robot"
+ },
+ {
+  "id": "b03_too_many_args",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "arg-count",
+  "file": "cases/b03_too_many_args.robot"
+ },
+ {
+  "id": "b04_unknown_named_arg",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "named-arg",
+  "file": "cases/b04_unknown_named_arg.robot"
+ },
+ {
+  "id": "b05_undefined_variable",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "variable",
+  "file": "cases/b05_undefined_variable.robot"
+ },
+ {
+  "id": "b06_missing_library_import",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "import",
+  "file": "cases/b06_missing_library_import.robot"
+ },
+ {
+  "id": "b07_browser_kw_with_selenium_only",
+  "kind": "step",
+  "env": "wt",
+  "expect": "error",
+  "cls": "wrong-library",
+  "file": "cases/b07_browser_kw_with_selenium_only.robot"
+ },
+ {
+  "id": "b08_ambiguous_two_custom_libs",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "ambiguous",
+  "file": "cases/b08_ambiguous_two_custom_libs.robot"
+ },
+ {
+  "id": "b09_ambiguous_browser_selenium",
+  "kind": "step",
+  "env": "wt",
+  "expect": "error",
+  "cls": "ambiguous",
+  "file": "cases/b09_ambiguous_browser_selenium.robot"
+ },
+ {
+  "id": "b10_bad_embedded_call",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "embedded",
+  "file": "cases/b10_bad_embedded_call.robot"
+ },
+ {
+  "id": "b11_invalid_for",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "syntax-for",
+  "file": "cases/b11_invalid_for.robot"
+ },
+ {
+  "id": "b12_for_missing_end",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "syntax-for",
+  "file": "cases/b12_for_missing_end.robot"
+ },
+ {
+  "id": "b13_invalid_if",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "syntax-if",
+  "file": "cases/b13_invalid_if.robot"
+ },
+ {
+  "id": "b14_wrong_setting_name",
+  "kind": "suite",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "setting",
+  "file": "cases/b14_wrong_setting_name.robot"
+ },
+ {
+  "id": "b15_resource_path_wrong",
+  "kind": "suite",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "import",
+  "file": "cases/b15_resource_path_wrong.robot"
+ },
+ {
+  "id": "b16_browser_missing_arg",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "arg-count",
+  "file": "cases/b16_browser_missing_arg.robot"
+ },
+ {
+  "id": "b17_browser_positional_after_named",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "named-arg",
+  "file": "cases/b17_browser_positional_after_named.robot"
+ },
+ {
+  "id": "b18_requests_missing_url",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "arg-count",
+  "file": "cases/b18_requests_missing_url.robot"
+ },
+ {
+  "id": "b19_requests_on_session_missing_url",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "arg-count(kwargs-sig)",
+  "file": "cases/b19_requests_on_session_missing_url.robot"
+ },
+ {
+  "id": "b20_single_space_separator",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "keyword-typo",
+  "file": "cases/b20_single_space_separator.robot"
+ },
+ {
+  "id": "b21_library_not_installed",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "import",
+  "file": "cases/b21_library_not_installed.robot"
+ },
+ {
+  "id": "b22_library_init_args",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "import-args",
+  "file": "cases/b22_library_init_args.robot"
+ },
+ {
+  "id": "b23_wrong_library_prefix",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "keyword-typo",
+  "file": "cases/b23_wrong_library_prefix.robot"
+ },
+ {
+  "id": "b24_unclosed_variable",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "variable-syntax",
+  "file": "cases/b24_unclosed_variable.robot"
+ },
+ {
+  "id": "b25_return_in_test",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "syntax",
+  "file": "cases/b25_return_in_test.robot"
+ },
+ {
+  "id": "b26_unknown_section",
+  "kind": "suite",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "syntax",
+  "file": "cases/b26_unknown_section.robot"
+ },
+ {
+  "id": "b27_assertion_operator_typo",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "type-conversion",
+  "file": "cases/b27_assertion_operator_typo.robot"
+ },
+ {
+  "id": "b28_int_conversion",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "type-conversion",
+  "file": "cases/b28_int_conversion.robot"
+ },
+ {
+  "id": "b29_user_kw_too_many_args",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "arg-count",
+  "file": "cases/b29_user_kw_too_many_args.robot"
+ },
+ {
+  "id": "b30_selenium_kw_in_browser_session",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "wrong-library",
+  "file": "cases/b30_selenium_kw_in_browser_session.robot"
+ },
+ {
+  "id": "b31_empty_test",
+  "kind": "suite",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "syntax",
+  "file": "cases/b31_empty_test.robot"
+ },
+ {
+  "id": "b32_duplicate_test",
+  "kind": "suite",
+  "env": "rcexp",
+  "expect": "warn",
+  "cls": "duplicate",
+  "file": "cases/b32_duplicate_test.robot"
+ },
+ {
+  "id": "b33_keyword_only_missing",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "error",
+  "cls": "named-arg",
+  "file": "cases/b33_keyword_only_missing.robot"
+ },
+ {
+  "id": "v01_builtin_ok",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "ok",
+  "cls": "control",
+  "file": "cases/v01_builtin_ok.robot"
+ },
+ {
+  "id": "v02_bdd_user_keyword",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "ok",
+  "cls": "control-bdd",
+  "file": "cases/v02_bdd_user_keyword.robot"
+ },
+ {
+  "id": "v03_bdd_on_library_kw",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "ok",
+  "cls": "control-bdd",
+  "file": "cases/v03_bdd_on_library_kw.robot"
+ },
+ {
+  "id": "v04_assign_then_use",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "ok",
+  "cls": "control-variable",
+  "file": "cases/v04_assign_then_use.robot"
+ },
+ {
+  "id": "v05_dynamic_set_test_variable",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "ok",
+  "cls": "control-variable(dynamic)",
+  "file": "cases/v05_dynamic_set_test_variable.robot"
+ },
+ {
+  "id": "v06_cli_variable",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "ok",
+  "cls": "control-variable(cli -v)",
+  "file": "cases/v06_cli_variable.robot"
+ },
+ {
+  "id": "v07_search_order_resolves_ambiguity",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "ok",
+  "cls": "control-ambiguous",
+  "file": "cases/v07_search_order_resolves_ambiguity.robot"
+ },
+ {
+  "id": "v08_qualified_name",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "ok",
+  "cls": "control-ambiguous",
+  "file": "cases/v08_qualified_name.robot"
+ },
+ {
+  "id": "v09_browser_ok",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "ok",
+  "cls": "control-browser",
+  "file": "cases/v09_browser_ok.robot"
+ },
+ {
+  "id": "v10_requests_ok",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "ok",
+  "cls": "control-requests",
+  "file": "cases/v10_requests_ok.robot"
+ },
+ {
+  "id": "v11_selenium_ok",
+  "kind": "step",
+  "env": "wt",
+  "expect": "ok",
+  "cls": "control-selenium",
+  "file": "cases/v11_selenium_ok.robot"
+ },
+ {
+  "id": "v12_robot_toml_variable",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "ok",
+  "cls": "control-variable(robot.toml)",
+  "file": "cases/v12_robot_toml_variable.robot"
+ },
+ {
+  "id": "v13_suite_variable_env_var",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "ok",
+  "cls": "control-variable(env)",
+  "file": "cases/v13_suite_variable_env_var.robot"
+ },
+ {
+  "id": "v14_var_syntax_rf7",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "ok",
+  "cls": "control-syntax",
+  "file": "cases/v14_var_syntax_rf7.robot"
+ },
+ {
+  "id": "v15_timeout_named_kw_only",
+  "kind": "step",
+  "env": "rcexp",
+  "expect": "ok",
+  "cls": "control-named",
+  "file": "cases/v15_timeout_named_kw_only.robot"
+ }
+]

@@ -1,0 +1,1 @@
+{'spec': 'SeleniumLibrary', 'keywords': 182, 'cache_bytes': 141925, 'cold_build_ms': 90, 'warm_load_ms': 1.2, 'exact_lookup_ms': 0.005, 'fuzzy_lookup_ms': 1.26, 'cache_key_ms': 0.75}

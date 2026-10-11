@@ -1,0 +1,8 @@
+# Project root for the static-analysis corpus (robotcode detects this file as the root)
+paths = ["cases"]
+python-path = ["libs", "resources"]
+output-dir = "../outputs/run"
+console-colors = "off"
+
+[variables]
+BASE_URL = "https://www.saucedemo.com"

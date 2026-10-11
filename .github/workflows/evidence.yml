@@ -1,0 +1,69 @@
+name: evidence
+# Scrub check, checksums and claims recomputation for the evidence archive (task 6.1-6.3, spec experiment-evidence).
+# A scrub finding, a checksum mismatch or a claim that no longer reproduces fails the build.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "evidence/**"
+      - "README.md"
+      - "tests/evidence/**"
+      - ".github/workflows/evidence.yml"
+  pull_request:
+    paths:
+      - "evidence/**"
+      - "README.md"
+      - "tests/evidence/**"
+      - ".github/workflows/evidence.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    env:
+      # no secrets in this job: the scrub checks patterns and finds no literal env values to compare with
+      RFH_SCRUB_DOTENV: /dev/null/none
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: scrub check (keys, tokens, OAuth fields, e-mails, home paths, agent homes)
+        run: python3 evidence/scrub.py --check evidence --exclude _release_assets --report scrub-check.json
+      - name: checksums
+        run: python3 evidence/checksums.py --verify
+      - name: checksums (sha256sum)
+        run: cd evidence && sha256sum --check --quiet checksums.sha256
+      - name: claims (recompute every indexed number, quoted sources present)
+        run: python3 evidence/check_claims.py --check-sources
+      - name: reports (archived analyzer regenerates the archived reports)
+        run: python3 evidence/check_claims.py --reports
+      - name: transcript manifests map to result rows
+        run: |
+          python3 - <<'EOF'
+          import json, sys
+          from pathlib import Path
+          sys.path.insert(0, "evidence")
+          import verify_assets
+          root = Path("evidence")
+          index = json.loads((root / "transcripts" / "assets.json").read_text(encoding="utf-8"))
+          bad = 0
+          for a in index["assets"]:
+              entries = json.loads((root / a["manifest"]).read_text(encoding="utf-8"))["entries"]
+              problems, unref = verify_assets.check_mapping(root / "rounds" / a["round"], entries)
+              print(f"{a['round']}: {len(entries)} transcripts, {len(problems)} unmapped, {unref} unreferenced")
+              bad += len(problems)
+          sys.exit(1 if bad else 0)
+          EOF
+      - name: evidence tests
+        run: |
+          python3 -m pip install --quiet "pytest>=8"
+          python3 -m pytest tests/evidence -q
+      - name: upload scrub report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scrub-check
+          path: scrub-check.json
+          if-no-files-found: ignore

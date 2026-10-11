@@ -1,0 +1,167 @@
+{
+ "round": "A/B 1",
+ "folder": "03a-ab-file-authoring",
+ "title": "A/B file authoring: rf-mcp vs Agent Skill + local package (hard scenarios)",
+ "kind": "ab",
+ "findings": [
+  "findings.md"
+ ],
+ "main_results": "results/results_rc.jsonl",
+ "runs": [
+  {
+   "results_file": "results/results_rc.jsonl",
+   "rows": 180,
+   "rows_ok": 180,
+   "agents": [
+    "claude",
+    "codex",
+    "opencode"
+   ],
+   "models": {
+    "claude": [
+     "claude-haiku-4-5"
+    ],
+    "codex": [
+     "gpt-5.6-luna@medium"
+    ],
+    "opencode": [
+     "minimax-coding-plan/MiniMax-M2.5"
+    ]
+   },
+   "arms": [
+    "mcp",
+    "neither",
+    "skillpkg"
+   ],
+   "scenarios": [
+    "apinested",
+    "browser_dynamic",
+    "iframe",
+    "results_complex"
+   ],
+   "reps": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "harness_version": [
+    "rc-1"
+   ],
+   "max_turns": [],
+   "timeout_s": [],
+   "started_utc": "2026-10-01T20:15:02.205847+00:00",
+   "finished_utc": "2026-10-01T21:35:53.980342+00:00"
+  },
+  {
+   "results_file": "results/results_rc_pilot.jsonl",
+   "rows": 36,
+   "rows_ok": 36,
+   "agents": [
+    "claude",
+    "codex",
+    "opencode"
+   ],
+   "models": {
+    "claude": [
+     "claude-haiku-4-5"
+    ],
+    "codex": [
+     "gpt-5.6-luna@medium"
+    ],
+    "opencode": [
+     "minimax-coding-plan/MiniMax-M2.5"
+    ]
+   },
+   "arms": [
+    "mcp",
+    "neither",
+    "skillpkg"
+   ],
+   "scenarios": [
+    "apinested",
+    "browser_dynamic",
+    "iframe",
+    "results_complex"
+   ],
+   "reps": [
+    1
+   ],
+   "harness_version": [
+    "rc-1"
+   ],
+   "max_turns": [],
+   "timeout_s": [],
+   "started_utc": "2026-10-01T19:57:20.938650+00:00",
+   "finished_utc": "2026-10-01T20:13:50.461309+00:00"
+  },
+  {
+   "results_file": "results/results_rc_smoke.jsonl",
+   "rows": 9,
+   "rows_ok": 9,
+   "agents": [
+    "claude",
+    "codex",
+    "copilot",
+    "opencode"
+   ],
+   "models": {
+    "claude": [
+     "claude-haiku-4-5"
+    ],
+    "codex": [
+     "gpt-5.6-luna@medium"
+    ],
+    "copilot": [
+     "gpt-4.1"
+    ],
+    "opencode": [
+     "minimax-coding-plan/MiniMax-M2.5"
+    ]
+   },
+   "arms": [
+    "mcp",
+    "neither",
+    "skillpkg"
+   ],
+   "scenarios": [
+    "apinested",
+    "browser_dynamic",
+    "results_complex"
+   ],
+   "reps": [
+    1
+   ],
+   "harness_version": [
+    "rc-1"
+   ],
+   "max_turns": [],
+   "timeout_s": [],
+   "started_utc": "2026-10-01T19:26:33.684453+00:00",
+   "finished_utc": "2026-10-01T19:32:58.879138+00:00"
+  }
+ ],
+ "dates_utc": [
+  "2026-10-01"
+ ],
+ "harness_snapshot": "../../eval-snapshots/ab-7994ae3/harness/",
+ "scenario_definitions": "scenarios.json",
+ "transcript_dirs": [
+  "transcripts_rc",
+  "transcripts_rc_pilot",
+  "transcripts_rc_smoke"
+ ],
+ "agent_versions_recorded": {
+  "claude_code": [
+   "2.1.286"
+  ],
+  "codex": "not recorded in results or transcripts",
+  "opencode": "not recorded in results or transcripts"
+ },
+ "excluded_rows": {
+  "counts": {},
+  "files": "excluded/excluded_<reason>.jsonl",
+  "note": "rows with in_results_file=true are still in the results file (contaminated / not ok); the others were removed from it and are kept here with their reason and the backup they came from"
+ }
+}

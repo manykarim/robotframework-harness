@@ -1,0 +1,198 @@
+[
+ {
+  "id": "d01_run_keyword_if",
+  "kind": "deprecated",
+  "cls": "Run Keyword If",
+  "runnable": true,
+  "file": "cases/d01_run_keyword_if.robot"
+ },
+ {
+  "id": "d02_return_setting",
+  "kind": "deprecated",
+  "cls": "[Return] setting",
+  "runnable": true,
+  "file": "cases/d02_return_setting.robot"
+ },
+ {
+  "id": "d03_old_for_syntax",
+  "kind": "error",
+  "cls": ":FOR loop (RF<=3.1)",
+  "runnable": true,
+  "file": "cases/d03_old_for_syntax.robot"
+ },
+ {
+  "id": "d04_exit_for_loop",
+  "kind": "deprecated",
+  "cls": "Exit For Loop / Continue For Loop",
+  "runnable": true,
+  "file": "cases/d04_exit_for_loop.robot"
+ },
+ {
+  "id": "d05_with_name",
+  "kind": "deprecated",
+  "cls": "WITH NAME alias",
+  "runnable": true,
+  "file": "cases/d05_with_name.robot"
+ },
+ {
+  "id": "d06_force_default_tags",
+  "kind": "deprecated",
+  "cls": "Force Tags / Default Tags",
+  "runnable": true,
+  "file": "cases/d06_force_default_tags.robot"
+ },
+ {
+  "id": "d07_single_space_args",
+  "kind": "error",
+  "cls": "single space between keyword and args",
+  "runnable": true,
+  "file": "cases/d07_single_space_args.robot"
+ },
+ {
+  "id": "d08_bad_continuation",
+  "kind": "error",
+  "cls": "continuation marker without separator",
+  "runnable": true,
+  "file": "cases/d08_bad_continuation.robot"
+ },
+ {
+  "id": "d09_misaligned_continuation",
+  "kind": "style",
+  "cls": "misaligned ... continuation (valid)",
+  "runnable": true,
+  "file": "cases/d09_misaligned_continuation.robot"
+ },
+ {
+  "id": "d10_set_variable_vs_var",
+  "kind": "deprecated",
+  "cls": "Set Variable/Create List instead of VAR",
+  "runnable": true,
+  "file": "cases/d10_set_variable_vs_var.robot"
+ },
+ {
+  "id": "d11_assign_without_equals",
+  "kind": "style",
+  "cls": "${var} assignment without = (valid)",
+  "runnable": true,
+  "file": "cases/d11_assign_without_equals.robot"
+ },
+ {
+  "id": "d12_tabs",
+  "kind": "style",
+  "cls": "tab separators (valid)",
+  "runnable": true,
+  "file": "cases/d12_tabs.robot"
+ },
+ {
+  "id": "d13_if_missing_end",
+  "kind": "error",
+  "cls": "IF without END",
+  "runnable": true,
+  "file": "cases/d13_if_missing_end.robot"
+ },
+ {
+  "id": "d14_singular_headers",
+  "kind": "deprecated",
+  "cls": "singular section headers",
+  "runnable": true,
+  "file": "cases/d14_singular_headers.robot"
+ },
+ {
+  "id": "d15_invalid_header",
+  "kind": "error",
+  "cls": "invalid section header",
+  "runnable": true,
+  "file": "cases/d15_invalid_header.robot"
+ },
+ {
+  "id": "d16_selenium_kw_browser_suite",
+  "kind": "error",
+  "cls": "Selenium keyword in Browser suite",
+  "runnable": false,
+  "file": "cases/d16_selenium_kw_browser_suite.robot"
+ },
+ {
+  "id": "d17_return_from_keyword",
+  "kind": "deprecated",
+  "cls": "Return From Keyword",
+  "runnable": true,
+  "file": "cases/d17_return_from_keyword.robot"
+ },
+ {
+  "id": "d18_lowercase_else",
+  "kind": "error",
+  "cls": "lowercase else / else if",
+  "runnable": true,
+  "file": "cases/d18_lowercase_else.robot"
+ },
+ {
+  "id": "d19_unindented_for_body",
+  "kind": "error",
+  "cls": "FOR body not indented",
+  "runnable": true,
+  "file": "cases/d19_unindented_for_body.robot"
+ },
+ {
+  "id": "d20_tags_in_settings",
+  "kind": "error",
+  "cls": "test-level setting in Settings section",
+  "runnable": true,
+  "file": "cases/d20_tags_in_settings.robot"
+ },
+ {
+  "id": "d21_return_setting_in_test",
+  "kind": "error",
+  "cls": "[Return] in test case",
+  "runnable": true,
+  "file": "cases/d21_return_setting_in_test.robot"
+ },
+ {
+  "id": "d22_unquoted_if_string",
+  "kind": "runtime",
+  "cls": "IF compares unquoted string",
+  "runnable": true,
+  "file": "cases/d22_unquoted_if_string.robot"
+ },
+ {
+  "id": "d23_setting_no_separator",
+  "kind": "error",
+  "cls": "[Documentation] glued to value",
+  "runnable": true,
+  "file": "cases/d23_setting_no_separator.robot"
+ },
+ {
+  "id": "d24_old_set_variable_if",
+  "kind": "deprecated",
+  "cls": "Set Variable If",
+  "runnable": true,
+  "file": "cases/d24_old_set_variable_if.robot"
+ },
+ {
+  "id": "d25_browser_kw_args_wrong",
+  "kind": "error",
+  "cls": "Browser Click with Selenium-style args",
+  "runnable": false,
+  "file": "cases/d25_browser_kw_args_wrong.robot"
+ },
+ {
+  "id": "d26_try_without_except",
+  "kind": "error",
+  "cls": "TRY without EXCEPT/FINALLY",
+  "runnable": true,
+  "file": "cases/d26_try_without_except.robot"
+ },
+ {
+  "id": "d27_var_glued_value",
+  "kind": "error",
+  "cls": "VAR with value glued to name",
+  "runnable": true,
+  "file": "cases/d27_var_glued_value.robot"
+ },
+ {
+  "id": "d28_sleep",
+  "kind": "style",
+  "cls": "Sleep instead of wait (valid)",
+  "runnable": true,
+  "file": "cases/d28_sleep.robot"
+ }
+]

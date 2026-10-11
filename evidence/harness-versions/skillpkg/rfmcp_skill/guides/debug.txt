@@ -1,0 +1,42 @@
+DEBUGGING AN EXISTING FAILING SUITE   [rfmcp guide debug]
+
+RULES: fix the TEST code (locators, waits, imports, keyword usage, test data handling). Keep every test and the
+intent of every assertion: never delete or skip tests, never loosen/remove assertions (== -> contains, Run Keyword
+And Ignore Error, deleting a check). Change an expected literal only if the app clearly renamed it, and say so.
+
+1. Run it as is and read the failures (no helper needed for this):
+     robot -d results path/suite.robot
+     robotcode results show --failed -o results/output.xml          # test, file:line, message
+     robotcode results log "*Test Name*" -o results/output.xml      # keyword tree: failing step + args
+   Classify by message: timeout / "waiting for locator" on a selector -> locator (or element hidden/covered);
+   "should be/contain" with an intermediate value ("Loading...", 0, empty) -> missing wait; "No keyword with name" ->
+   import/typo; ModuleNotFoundError / "does not exist" on an import -> import path (PORTABLE below).
+2. Static problems: rfmcp check path/suite.robot   (works without the helper)
+3. Reproduce live; the helper stops AT the failing line and keeps the page open (teardowns are not run):
+     rfmcp run path/suite.robot --test "Test Name"        # Suite Setup + setup + body until the first failure
+   A failure inside a user keyword is reported on the calling test line (`failed_in` = the inner keyword).
+   NOT RUN + guard NOT_FOUND / NOT_VISIBLE / COVERED = the selector matches nothing / a hidden element / an
+   element under an overlay -> `fix` says what to do.
+4. Look at the page in that state: rfmcp state controls (fields/buttons, ids, data-test, hidden inputs),
+   rfmcp state aria (texts, roles, iframes), rfmcp state url, rfmcp state screenshot.
+5. Try the candidate fix right there: rfmcp step 'Click    data-test=submit'  /  rfmcp step 'Wait For Condition ...'
+6. Edit the file (or the .resource with the keyword; it is re-imported automatically), then continue:
+     rfmcp run path/suite.robot --test "Test Name"        # resumes at the fixed line
+     Changed a line that already ran? --lines A-B re-runs those lines, --rebase accepts them, or rfmcp stop + run.
+   A live re-run of a WAIT fix is weak evidence (the page has finished loading meanwhile): the final run decides.
+7. Fix every failing test, then the proof: robot -d results path/suite.robot  (fresh browser, all tests).
+   rfmcp stop.
+
+Typical fixes (Browser library):
+- stale locator -> pick a stable one from rfmcp state controls: data-test=..., id=..., role=button[name="Save"],
+  text="Save"; avoid long CSS chains / nth-child / generated ids.
+- missing wait -> a getter without operator does not wait, with operator it retries only 1 s:
+      Wait For Condition    Text    id=status    contains    Saved    timeout=15s
+      Wait For Elements State    id=spinner    hidden    timeout=15s       (never Sleep; see rfmcp guide waits)
+- element covered (cookie banner, modal): close it first; force=True would click the overlay instead.
+- hidden styled radio/checkbox, custom dropdown, dialogs, new tabs, dates: rfmcp guide explore
+- element inside an iframe: `id=frame >>> id=field` (rfmcp guide browser)
+- PORTABLE: the suite must pass with plain `robot <file>`: Library    ${CURDIR}/../lib/MyLib.py (by path, never
+  -P / PYTHONPATH / robot.toml); `rfmcp check` flags imports that only the helper/robotcode resolve.
+API suites: rfmcp run ... stops at the failing request; inspect with rfmcp vars resp or
+  rfmcp step 'Log    ${resp.json()}    console=True' (rfmcp guide requests).

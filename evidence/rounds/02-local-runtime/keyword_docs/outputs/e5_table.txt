@@ -1,0 +1,26 @@
+
+== scope=all6 cases=30
+strategy  hit@5  rec@5    MRR     ms/q
+a1        0.167  0.084  0.167     1.19
+a2        0.433  0.283  0.310     0.37
+a3        0.933  0.681  0.757     1.65
+b         0.733  0.591  0.633    36.84
+c         0.933  0.819  0.860     0.60
+d1        0.633  0.517  0.562   419.43
+d2        0.733  0.584  0.641   428.46
+d3        0.967  0.783  0.889     1.01
+e         0.967  0.812  0.900     1.64
+
+== scope=session cases=46
+strategy  hit@5  rec@5    MRR     ms/q
+a1        0.130  0.105  0.130     0.70
+a2        0.543  0.476  0.368     0.25
+a3        0.870  0.768  0.745     1.11
+b         0.674  0.607  0.587    25.01
+c         0.957  0.917  0.845     0.41
+d1        0.717  0.639  0.609   276.98
+d2        0.826  0.726  0.671   284.87
+d3        0.913  0.844  0.807     0.64
+e         0.978  0.909  0.844     1.08
+
+corpus 0.638 s; model2vec {'import_s': 0.109, 'load_s': 0.4, 'embed_corpus_s': 0.022, 'n': 544} ; bm25 build {'all6:all6': 0.043, 'session:browser': 0.041, 'session:selenium': 0.024, 'session:requests': 0.02} ; matcher build {'all6:all6:d1': 0.265, 'all6:all6:d2': 0.521, 'session:browser:d1': 0.192, 'session:browser:d2': 0.431, 'session:selenium:d1': 0.153, 'session:selenium:d2': 0.342, 'session:requests:d1': 0.106, 'session:requests:d2': 0.302}

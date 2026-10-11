@@ -1,0 +1,202 @@
+[
+ {
+  "case": "help_root",
+  "wall_s": 0.96,
+  "rc": 0,
+  "stdout_chars": 5639,
+  "tok": 1409,
+  "stderr": ""
+ },
+ {
+  "case": "kw1_text",
+  "wall_s": 1.53,
+  "rc": 0,
+  "stdout_chars": 1989,
+  "tok": 497,
+  "stderr": ""
+ },
+ {
+  "case": "kw1_json",
+  "wall_s": 1.41,
+  "rc": 0,
+  "stdout_chars": 1708,
+  "tok": 427,
+  "stderr": ""
+ },
+ {
+  "case": "kw5_text",
+  "wall_s": 1.22,
+  "rc": 0,
+  "stdout_chars": 17310,
+  "tok": 4327,
+  "stderr": ""
+ },
+ {
+  "case": "kw5_json",
+  "wall_s": 1.56,
+  "rc": 0,
+  "stdout_chars": 9544,
+  "tok": 2386,
+  "stderr": ""
+ },
+ {
+  "case": "kw_glob_json",
+  "wall_s": 1.22,
+  "rc": 0,
+  "stdout_chars": 8657,
+  "tok": 2164,
+  "stderr": ""
+ },
+ {
+  "case": "kw_missing_suggest",
+  "wall_s": 1.21,
+  "rc": 1,
+  "stdout_chars": 0,
+  "tok": 0,
+  "stderr": "[ ERROR ] No keyword matches 'Click Element'.\n"
+ },
+ {
+  "case": "kw_requests_post",
+  "wall_s": 1.14,
+  "rc": 0,
+  "stdout_chars": 995,
+  "tok": 248,
+  "stderr": ""
+ },
+ {
+  "case": "kws_browser_all_text",
+  "wall_s": 1.21,
+  "rc": 0,
+  "stdout_chars": 32369,
+  "tok": 8092,
+  "stderr": ""
+ },
+ {
+  "case": "kws_browser_all_json",
+  "wall_s": 2.29,
+  "rc": 0,
+  "stdout_chars": 257578,
+  "tok": 64394,
+  "stderr": ""
+ },
+ {
+  "case": "kws_browser_wait_text",
+  "wall_s": 1.82,
+  "rc": 0,
+  "stdout_chars": 2272,
+  "tok": 568,
+  "stderr": ""
+ },
+ {
+  "case": "kws_requests_json_pat",
+  "wall_s": 1.5,
+  "rc": 0,
+  "stdout_chars": 204,
+  "tok": 51,
+  "stderr": ""
+ },
+ {
+  "case": "kws_requests_post_text",
+  "wall_s": 1.35,
+  "rc": 0,
+  "stdout_chars": 408,
+  "tok": 102,
+  "stderr": ""
+ },
+ {
+  "case": "kws_tag_filter",
+  "wall_s": 1.53,
+  "rc": 0,
+  "stdout_chars": 15562,
+  "tok": 3890,
+  "stderr": ""
+ },
+ {
+  "case": "kws_selenium_all_text",
+  "wall_s": 1.89,
+  "rc": 0,
+  "stdout_chars": 30416,
+  "tok": 7604,
+  "stderr": ""
+ },
+ {
+  "case": "kws_builtin_all_text",
+  "wall_s": 1.48,
+  "rc": 0,
+  "stdout_chars": 17699,
+  "tok": 4424,
+  "stderr": ""
+ },
+ {
+  "case": "lib_browser_text",
+  "wall_s": 1.81,
+  "rc": 0,
+  "stdout_chars": 353013,
+  "tok": 88253,
+  "stderr": ""
+ },
+ {
+  "case": "lib_browser_json",
+  "wall_s": 1.94,
+  "rc": 0,
+  "stdout_chars": 627016,
+  "tok": 156754,
+  "stderr": ""
+ },
+ {
+  "case": "lib_requests_text",
+  "wall_s": 1.2,
+  "rc": 0,
+  "stdout_chars": 45730,
+  "tok": 11432,
+  "stderr": ""
+ },
+ {
+  "case": "lib_resource",
+  "wall_s": 0.9,
+  "rc": 0,
+  "stdout_chars": 814,
+  "tok": 203,
+  "stderr": ""
+ },
+ {
+  "case": "lib_pylib_noargs",
+  "wall_s": 0.94,
+  "rc": 1,
+  "stdout_chars": 0,
+  "tok": 0,
+  "stderr": "[ ERROR ] Library 'ShopApi' expected 1 to 2 arguments, got 0.\n"
+ },
+ {
+  "case": "lib_pylib_args",
+  "wall_s": 0.97,
+  "rc": 0,
+  "stdout_chars": 3059,
+  "tok": 764,
+  "stderr": ""
+ },
+ {
+  "case": "kws_suite_file",
+  "wall_s": 0.97,
+  "rc": 0,
+  "stdout_chars": 39,
+  "tok": 9,
+  "stderr": ""
+ },
+ {
+  "case": "browse_piped",
+  "wall_s": 1.04,
+  "rc": 0,
+  "stdout_chars": 814,
+  "tok": 203,
+  "stderr": ""
+ },
+ {
+  "case": "kw_text_search_attempt",
+  "wall_s": 1.25,
+  "rc": 0,
+  "stdout_chars": 44,
+  "tok": 11,
+  "stderr": ""
+ }
+]

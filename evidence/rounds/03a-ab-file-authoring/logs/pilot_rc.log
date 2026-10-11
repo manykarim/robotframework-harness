@@ -1,0 +1,45 @@
+[21:57:20] [config] models={'claude': 'claude-haiku-4-5', 'codex': 'gpt-5.6-luna', 'opencode': 'minimax-coding-plan/MiniMax-M2.5', 'copilot': 'gpt-4.1'} codex_effort='medium' opencode_variant='' results=~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/ab/harness/results_rc_pilot.jsonl work=~/.cache/ab-eval/work_rc_pilot prune=True
+[21:57:20] disk before:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  234G  217G  4,5G  98% /
+[21:57:20] [batch] 36 cells to run (skipping 0 done), concurrency=3, browser<=2, per-agent<=2, prune=True
+[21:58:35] [1/36] claude|mcp|iframe|1 -> status=ok primary=True pass=5/5 mcp_calls=6 tools=20 75.0s
+[21:59:52] [2/36] codex|neither|iframe|1 -> status=ok primary=True pass=5/5 mcp_calls=0 tools=10 76.6s
+[22:00:38] [3/36] claude|neither|iframe|1 -> status=ok primary=False pass=4/5 mcp_calls=0 tools=45 197.8s
+[22:01:00] [4/36] codex|mcp|iframe|1 -> status=ok primary=True pass=5/5 mcp_calls=0 tools=7 68.3s
+[22:02:50] [5/36] codex|skillpkg|iframe|1 -> status=ok primary=True pass=5/5 mcp_calls=0 tools=18 131.6s
+[22:02:56] [6/36] opencode|neither|iframe|1 -> status=ok primary=True pass=5/5 mcp_calls=0 tools=36 115.6s
+[22:04:02] [7/36] opencode|skillpkg|iframe|1 -> status=ok primary=True pass=5/5 mcp_calls=0 tools=15 66.5s
+[22:05:07] [8/36] claude|skillpkg|iframe|1 -> status=ok primary=True pass=5/5 mcp_calls=0 tools=17 64.4s
+[22:05:20] [9/36] claude|neither|apinested|1 -> status=ok primary=False pass=4/5 mcp_calls=0 tools=13 77.3s
+[22:06:28] [10/36] claude|mcp|apinested|1 -> status=ok primary=False pass=4/5 mcp_calls=1 tools=14 81.6s
+[22:06:32] [11/36] opencode|mcp|iframe|1 -> status=ok primary=True pass=5/5 mcp_calls=7 tools=50 222.5s
+[22:06:46] [12/36] claude|skillpkg|apinested|1 -> status=ok primary=False pass=4/5 mcp_calls=0 tools=21 85.8s
+[22:07:23] [13/36] codex|neither|apinested|1 -> status=ok primary=True pass=5/5 mcp_calls=0 tools=5 54.4s
+[22:07:43] [14/36] codex|mcp|apinested|1 -> status=ok primary=True pass=5/5 mcp_calls=0 tools=9 70.2s
+[22:08:05] [15/36] opencode|neither|apinested|1 -> status=ok primary=True pass=5/5 mcp_calls=0 tools=12 42.1s
+[22:08:17] [16/36] opencode|mcp|apinested|1 -> status=ok primary=True pass=5/5 mcp_calls=0 tools=9 34.8s
+[22:08:32] [17/36] claude|neither|results_complex|1 -> status=ok primary=True pass=7/7 mcp_calls=0 tools=2 14.4s
+[22:08:48] [18/36] claude|mcp|results_complex|1 -> status=ok primary=True pass=7/7 mcp_calls=0 tools=2 16.4s
+[22:08:48] [19/36] codex|skillpkg|apinested|1 -> status=ok primary=True pass=5/5 mcp_calls=0 tools=15 85.3s
+[22:09:08] [20/36] claude|skillpkg|results_complex|1 -> status=ok primary=True pass=7/7 mcp_calls=0 tools=2 19.8s
+[22:09:15] [21/36] opencode|skillpkg|apinested|1 -> status=ok primary=True pass=5/5 mcp_calls=0 tools=17 70.1s
+[22:09:34] [22/36] codex|neither|results_complex|1 -> status=ok primary=True pass=7/7 mcp_calls=0 tools=7 46.1s
+[22:09:46] [23/36] codex|mcp|results_complex|1 -> status=ok primary=True pass=7/7 mcp_calls=0 tools=5 37.7s
+[22:10:03] [24/36] opencode|neither|results_complex|1 -> status=ok primary=False pass=5/7 mcp_calls=0 tools=5 28.4s
+[22:10:16] [25/36] opencode|mcp|results_complex|1 -> status=ok primary=False pass=5/7 mcp_calls=0 tools=5 30.5s
+[22:10:18] [26/36] codex|skillpkg|results_complex|1 -> status=ok primary=True pass=7/7 mcp_calls=0 tools=9 43.4s
+[22:10:25] [27/36] opencode|skillpkg|results_complex|1 -> status=ok primary=True pass=7/7 mcp_calls=0 tools=5 22.8s
+[22:10:57] [28/36] claude|neither|browser_dynamic|1 -> status=ok primary=True pass=6/6 mcp_calls=0 tools=9 40.7s
+[22:11:18] [29/36] claude|mcp|browser_dynamic|1 -> status=ok primary=True pass=6/6 mcp_calls=14 tools=16 59.8s
+[22:11:43] [30/36] codex|neither|browser_dynamic|1 -> status=ok primary=True pass=6/6 mcp_calls=0 tools=6 45.8s
+[22:12:06] [31/36] codex|mcp|browser_dynamic|1 -> status=ok primary=True pass=6/6 mcp_calls=0 tools=5 48.2s
+[22:12:29] [32/36] opencode|neither|browser_dynamic|1 -> status=ok primary=False pass=5/6 mcp_calls=0 tools=5 23.3s
+[22:12:44] [33/36] codex|skillpkg|browser_dynamic|1 -> status=ok primary=True pass=6/6 mcp_calls=0 tools=9 61.5s
+[22:12:54] [34/36] opencode|mcp|browser_dynamic|1 -> status=ok primary=True pass=6/6 mcp_calls=0 tools=6 24.7s
+[22:13:20] [35/36] opencode|skillpkg|browser_dynamic|1 -> status=ok primary=True pass=6/6 mcp_calls=0 tools=7 35.6s
+[22:13:50] [36/36] claude|skillpkg|browser_dynamic|1 -> status=ok primary=True pass=6/6 mcp_calls=0 tools=11 56.2s
+[22:13:51] [batch] done: ran=36 skipped=0 reaper_kills_total=2 (final sweep 0)
+[22:13:51] disk after:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  234G  217G  4,4G  99% /

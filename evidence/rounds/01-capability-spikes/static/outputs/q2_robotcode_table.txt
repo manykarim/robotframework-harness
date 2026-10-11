@@ -1,0 +1,43 @@
+## environment/version checks
+discover_info_text                             1.05s exit=0        313 chars
+discover_info_json                             1.09s exit=0        339 chars
+libdoc_browser_version                         1.36s exit=0          7 chars
+libdoc_selenium_version                        1.12s exit=0          6 chars
+pip_list_json_uv                               0.03s exit=0       2327 chars
+importlib_versions                             0.16s exit=0        218 chars
+## libdoc list/show
+libdoc_browser_list                            1.40s exit=0       2501 chars
+libdoc_browser_list_glob                       1.31s exit=0        120 chars
+libdoc_browser_show_filltext                   1.29s exit=0       1212 chars
+libdoc_browser_show_click                      1.19s exit=0       1365 chars
+libdoc_browser_show_gettext                    1.22s exit=0       2382 chars
+libdoc_requests_show_post                      1.14s exit=0        954 chars
+libdoc_selenium_show_wait                      1.11s exit=0        512 chars
+libdoc_selenium_show_click                     1.13s exit=0       1829 chars
+## libdoc JSON specs (default HTML docs vs RAW)
+spec_Browser_json_html                         1.22s exit=0        109 chars
+spec_Browser_json_raw                          1.20s exit=0        108 chars
+spec_RequestsLibrary_json_html                 1.05s exit=0        117 chars
+spec_RequestsLibrary_json_raw                  1.04s exit=0        116 chars
+spec_BuiltIn_json_html                         1.01s exit=252       95 chars
+spec_BuiltIn_json_raw                          0.99s exit=0        108 chars
+spec_Collections_json_html                     0.98s exit=252       95 chars
+spec_Collections_json_raw                      0.99s exit=0        112 chars
+spec_String_json_html                          1.01s exit=252       95 chars
+spec_String_json_raw                           1.11s exit=0        107 chars
+spec_SeleniumLibrary_json_html                 1.41s exit=0        117 chars
+spec_SeleniumLibrary_json_raw                  1.26s exit=0        116 chars
+spec_common_resource_raw                       1.13s exit=252       93 chars
+## REPL .kw search (piped, plain)
+repl_kw_search                                 1.79s     6423 chars
+repl_doc_filltext                              1.35s       69 chars
+## spec file sizes (bytes)
+Browser.html.json                           947403
+Browser.raw.json                            818302
+BuiltIn.raw.json                            370464
+Collections.raw.json                        166386
+RequestsLibrary.html.json                    97164
+RequestsLibrary.raw.json                     88142
+SeleniumLibrary.html.json                   447113
+SeleniumLibrary.raw.json                    402287
+String.raw.json                             128649

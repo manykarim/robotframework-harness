@@ -1,0 +1,328 @@
+# hookpkg31 vs hookpkg3 vs mcp — A/B
+
+Source: `results_live_v31or.jsonl` · agents: cc-or:deepseek-v4.1-flash, cc-or:glm-5.3-flash, cc-or:qwen3.8-flash · scenarios: tricentis_quote, carconfig_order, demoshop_order, demoshop_debug, tricentis_debug · rows: 71
+
+## 1. Data quality
+
+- rows in file: 71 · status: ok=71 · scored (ok, de-duplicated): **71**
+- timeouts: 2 · contaminated (MCP call outside mcp arm, or helper CLI outside skillpkg arm): 0
+- leak-marker hits (agent touched reference/old-eval paths): 0
+- models (agent, requested, seen-in-transcript): cc-or:deepseek-v4.1-flash=deepseek/deepseek-v4.1-flash (seen deepseek/deepseek-v4.1-flash) x24; cc-or:glm-5.3-flash=z-ai/glm-5.3-flash (seen z-ai/glm-5.3-flash) x23; cc-or:qwen3.8-flash=qwen/qwen3.8-flash (seen qwen/qwen3.8-flash) x24
+- rows that hit the turn cap (--max-turns; Claude result error_max_turns, not an agent error): {'cc-or:deepseek-v4.1-flash/mcp': 1, 'cc-or:glm-5.3-flash/hookpkg3': 1, 'cc-or:glm-5.3-flash/mcp': 2, 'cc-or:qwen3.8-flash/mcp': 2}
+
+## 2. Per agent × scenario × arm
+
+`pass` = primary (all graders) pass rate · `chk` = mean fraction of graders passed · tokens are per-CLI accounting (in = uncached input + cache writes; cache = cache reads) — compare within an agent.
+
+| agent | scenario | arm | n | pass | chk | turns | tools | mcp | in_tok | out_tok | cache | cost $ | wall s | TO |
+|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| cc-or:deepseek-v4.1-flash | tricentis_quote | mcp | 2 | 1.00 | 1.00 | 68.5 | 69.5 | 31.5 | 108.2k | 30.3k | 4115.6k | 0.093 | 397 | 0 |
+| cc-or:deepseek-v4.1-flash | tricentis_quote | hookpkg3 | 2 | 1.00 | 1.00 | 45.5 | 43.5 | 0.0 | 53.2k | 23.0k | 2157.2k | 0.056 | 589 | 0 |
+| cc-or:deepseek-v4.1-flash | tricentis_quote | hookpkg31 | 2 | 1.00 | 1.00 | 44.0 | 42.0 | 0.0 | 72.7k | 23.3k | 1475.0k | 0.059 | 601 | 0 |
+| cc-or:deepseek-v4.1-flash | carconfig_order | mcp | 2 | 1.00 | 1.00 | 49.0 | 48.0 | 30.0 | 57.1k | 22.0k | 2236.9k | 0.057 | 213 | 0 |
+| cc-or:deepseek-v4.1-flash | carconfig_order | hookpkg3 | 2 | 1.00 | 1.00 | 47.0 | 45.0 | 0.0 | 82.3k | 22.1k | 2290.0k | 0.065 | 284 | 0 |
+| cc-or:deepseek-v4.1-flash | carconfig_order | hookpkg31 | 2 | 1.00 | 1.00 | 41.5 | 39.5 | 0.0 | 67.5k | 26.8k | 1968.5k | 0.064 | 302 | 0 |
+| cc-or:deepseek-v4.1-flash | demoshop_order | mcp | 2 | 1.00 | 1.00 | 70.5 | 69.5 | 31.5 | 1904.1k | 25.3k | 1931.3k | 0.613 | 370 | 0 |
+| cc-or:deepseek-v4.1-flash | demoshop_order | hookpkg3 | 1 | 1.00 | 1.00 | 51.0 | 49.0 | 0.0 | 41.0k | 16.7k | 1710.0k | 0.043 | 271 | 0 |
+| cc-or:deepseek-v4.1-flash | demoshop_order | hookpkg31 | 2 | 1.00 | 1.00 | 41.0 | 39.0 | 0.0 | 69.4k | 12.2k | 1141.9k | 0.042 | 171 | 0 |
+| cc-or:deepseek-v4.1-flash | demoshop_debug | mcp | 1 | 1.00 | 1.00 | 64.0 | 63.0 | 0.0 | 57.9k | 23.4k | 3052.2k | 0.064 | 494 | 0 |
+| cc-or:deepseek-v4.1-flash | demoshop_debug | hookpkg3 | 1 | 1.00 | 1.00 | 18.0 | 16.0 | 0.0 | 51.3k | 4.7k | 288.5k | 0.023 | 164 | 0 |
+| cc-or:deepseek-v4.1-flash | demoshop_debug | hookpkg31 | 2 | 1.00 | 1.00 | 31.0 | 29.0 | 0.0 | 89.8k | 13.4k | 856.8k | 0.048 | 448 | 0 |
+| cc-or:deepseek-v4.1-flash | tricentis_debug | mcp | 1 | 1.00 | 1.00 | 70.0 | 69.0 | 25.0 | 58.8k | 38.9k | 3777.7k | 0.087 | 476 | 0 |
+| cc-or:deepseek-v4.1-flash | tricentis_debug | hookpkg3 | 1 | 1.00 | 1.00 | 66.0 | 64.0 | 0.0 | 44.7k | 22.3k | 2319.0k | 0.054 | 469 | 0 |
+| cc-or:deepseek-v4.1-flash | tricentis_debug | hookpkg31 | 1 | 1.00 | 1.00 | 39.0 | 37.0 | 0.0 | 36.6k | 19.5k | 1238.8k | 0.042 | 399 | 0 |
+| cc-or:glm-5.3-flash | tricentis_quote | mcp | 2 | 0.00 | 0.67 | 81.0 | 80.0 | 30.0 | 1084.3k | 29.6k | 3503.2k | 0.283 | 888 | 0 |
+| cc-or:glm-5.3-flash | tricentis_quote | hookpkg3 | 2 | 0.50 | 0.83 | 72.0 | 70.5 | 0.0 | 131.3k | 24.5k | 2663.9k | 0.112 | 479 | 0 |
+| cc-or:glm-5.3-flash | tricentis_quote | hookpkg31 | 2 | 0.50 | 0.96 | 32.5 | 30.5 | 0.0 | 78.9k | 9.8k | 790.9k | 0.040 | 189 | 0 |
+| cc-or:glm-5.3-flash | carconfig_order | mcp | 2 | 1.00 | 1.00 | 50.5 | 49.5 | 25.0 | 115.4k | 10.9k | 2054.3k | 0.084 | 205 | 0 |
+| cc-or:glm-5.3-flash | carconfig_order | hookpkg3 | 2 | 0.50 | 0.95 | 36.0 | 34.0 | 0.0 | 194.5k | 18.2k | 1278.3k | 0.077 | 331 | 0 |
+| cc-or:glm-5.3-flash | carconfig_order | hookpkg31 | 2 | 1.00 | 1.00 | 34.5 | 32.5 | 0.0 | 506.7k | 14.3k | 524.9k | 0.099 | 230 | 0 |
+| cc-or:glm-5.3-flash | demoshop_order | mcp | 1 | 1.00 | 1.00 | 53.0 | 52.0 | 35.0 | 480.1k | 10.4k | 1802.8k | 0.131 | 188 | 0 |
+| cc-or:glm-5.3-flash | demoshop_order | hookpkg3 | 2 | 1.00 | 1.00 | 52.0 | 50.0 | 0.0 | 69.3k | 15.6k | 1574.9k | 0.065 | 301 | 0 |
+| cc-or:glm-5.3-flash | demoshop_order | hookpkg31 | 2 | 1.00 | 1.00 | 41.0 | 39.0 | 0.0 | 66.7k | 13.0k | 1119.3k | 0.050 | 228 | 0 |
+| cc-or:glm-5.3-flash | demoshop_debug | mcp | 1 | 1.00 | 1.00 | 69.0 | 68.0 | 0.0 | 156.1k | 23.2k | 3283.8k | 0.134 | 521 | 0 |
+| cc-or:glm-5.3-flash | demoshop_debug | hookpkg3 | 1 | 1.00 | 1.00 | 50.0 | 48.0 | 0.0 | 119.9k | 9.8k | 1615.7k | 0.071 | 427 | 0 |
+| cc-or:glm-5.3-flash | demoshop_debug | hookpkg31 | 1 | 1.00 | 1.00 | 38.0 | 37.0 | 0.0 | 45.0k | 13.1k | 985.3k | 0.043 | 451 | 0 |
+| cc-or:glm-5.3-flash | tricentis_debug | mcp | 1 | 1.00 | 1.00 | 55.0 | 54.0 | 0.0 | 57.8k | 15.1k | 1908.9k | 0.073 | 291 | 0 |
+| cc-or:glm-5.3-flash | tricentis_debug | hookpkg3 | 1 | 1.00 | 1.00 | 54.0 | 52.0 | 0.0 | 428.3k | 14.2k | 1281.0k | 0.110 | 1062 | 0 |
+| cc-or:glm-5.3-flash | tricentis_debug | hookpkg31 | 1 | 1.00 | 1.00 | 45.0 | 43.0 | 0.0 | 745.3k | 13.8k | 540.7k | 0.135 | 544 | 0 |
+| cc-or:qwen3.8-flash | tricentis_quote | mcp | 2 | 0.50 | 0.54 | 57.0 | 35.0 | 11.0 | 100.3k | 35.6k | 3564.6k | 0.044 | 1280 | 1 |
+| cc-or:qwen3.8-flash | tricentis_quote | hookpkg3 | 2 | 0.00 | 0.67 | 51.5 | 49.5 | 0.0 | 55.3k | 19.3k | 1818.7k | 0.046 | 567 | 0 |
+| cc-or:qwen3.8-flash | tricentis_quote | hookpkg31 | 2 | 0.50 | 0.96 | 67.5 | 65.5 | 0.0 | 78.3k | 32.5k | 3197.0k | 0.078 | 883 | 0 |
+| cc-or:qwen3.8-flash | carconfig_order | mcp | 2 | 0.00 | 0.50 | 56.0 | 41.0 | 23.5 | 81.8k | 32.9k | 2948.4k | 0.037 | 1255 | 1 |
+| cc-or:qwen3.8-flash | carconfig_order | hookpkg3 | 2 | 1.00 | 1.00 | 51.5 | 49.5 | 0.0 | 60.0k | 24.6k | 1844.1k | 0.050 | 553 | 0 |
+| cc-or:qwen3.8-flash | carconfig_order | hookpkg31 | 2 | 1.00 | 1.00 | 47.0 | 45.0 | 0.0 | 66.9k | 26.9k | 1842.0k | 0.052 | 630 | 0 |
+| cc-or:qwen3.8-flash | demoshop_order | mcp | 2 | 0.00 | 0.33 | 81.0 | 84.5 | 58.5 | 97.2k | 38.0k | 4660.5k | 0.107 | 795 | 0 |
+| cc-or:qwen3.8-flash | demoshop_order | hookpkg3 | 2 | 1.00 | 1.00 | 45.0 | 43.0 | 0.0 | 53.0k | 18.7k | 1534.9k | 0.041 | 486 | 0 |
+| cc-or:qwen3.8-flash | demoshop_order | hookpkg31 | 2 | 1.00 | 1.00 | 43.0 | 41.0 | 0.0 | 46.7k | 13.1k | 1297.9k | 0.034 | 383 | 0 |
+| cc-or:qwen3.8-flash | demoshop_debug | mcp | 1 | 1.00 | 1.00 | 66.0 | 65.0 | 30.0 | 75.5k | 29.4k | 2767.2k | 0.069 | 788 | 0 |
+| cc-or:qwen3.8-flash | demoshop_debug | hookpkg3 | 1 | 1.00 | 1.00 | 35.0 | 33.0 | 0.0 | 51.9k | 23.5k | 1036.5k | 0.035 | 737 | 0 |
+| cc-or:qwen3.8-flash | demoshop_debug | hookpkg31 | 1 | 1.00 | 1.00 | 49.0 | 47.0 | 0.0 | 72.1k | 32.0k | 1846.2k | 0.055 | 918 | 0 |
+| cc-or:qwen3.8-flash | tricentis_debug | mcp | 1 | 1.00 | 1.00 | 63.0 | 62.0 | 32.0 | 309.8k | 59.1k | 4888.6k | 0.152 | 1715 | 0 |
+| cc-or:qwen3.8-flash | tricentis_debug | hookpkg3 | 1 | 1.00 | 1.00 | 58.0 | 56.0 | 0.0 | 61.4k | 26.4k | 2039.9k | 0.054 | 1205 | 0 |
+| cc-or:qwen3.8-flash | tricentis_debug | hookpkg31 | 1 | 1.00 | 1.00 | 52.0 | 50.0 | 0.0 | 55.5k | 20.4k | 1750.9k | 0.046 | 701 | 0 |
+
+Pooled pass rate per arm (all agents × scenarios), 95% Wilson CI:
+
+| arm | n | passes | rate | 95% CI |
+|---|---:|---:|---:|---|
+| mcp | 23 | 16 | 0.70 | 0.49–0.84 |
+| hookpkg3 | 23 | 19 | 0.83 | 0.63–0.93 |
+| hookpkg31 | 25 | 23 | 0.92 | 0.75–0.98 |
+
+## 3. Effects on primary pass rate
+
+`Δcell` = equal-weight mean of per-(agent×scenario) rate differences; `Δpool` = difference of pooled rates; Fisher = two-sided exact test on pooled pass/fail counts (ignores strata); sign = exact sign test over cells (+/− cells, ties dropped). **Headroom** = cells where `neither` < 1.00.
+
+| contrast | subset | cells | rate A | rate B | Δcell | Δpool | Fisher p | cells +/− | sign p |
+|---|---|---:|---:|---:|---:|---:|---:|---|---:|
+| **hookpkg3−mcp** | all | 15 | 0.83 (19/23) | 0.70 (16/23) | +0.10 | +0.13 | 0.491 | 3/2 | 1.000 |
+| hookpkg3−mcp | headroom | 0 | | | | | | | |
+| **hookpkg31−mcp** | all | 15 | 0.92 (23/25) | 0.70 (16/23) | +0.17 | +0.22 | 0.068 | 3/0 | 0.250 |
+| hookpkg31−mcp | headroom | 0 | | | | | | | |
+
+### 3a. Per agent (pooled over scenarios)
+
+| agent | contrast | rate A | rate B | Δpool (all) | Fisher p | Δpool (headroom) | Fisher p (headroom) |
+|---|---|---:|---:|---:|---:|---:|---:|
+| cc-or:deepseek-v4.1-flash | hookpkg3−mcp | 1.00 | 1.00 | +0.00 | 1.000 | — | — |
+| cc-or:deepseek-v4.1-flash | hookpkg31−mcp | 1.00 | 1.00 | +0.00 | 1.000 | — | — |
+| cc-or:glm-5.3-flash | hookpkg3−mcp | 0.75 | 0.71 | +0.04 | 1.000 | — | — |
+| cc-or:glm-5.3-flash | hookpkg31−mcp | 0.88 | 0.71 | +0.16 | 0.569 | — | — |
+| cc-or:qwen3.8-flash | hookpkg3−mcp | 0.75 | 0.38 | +0.38 | 0.315 | — | — |
+| cc-or:qwen3.8-flash | hookpkg31−mcp | 0.88 | 0.38 | +0.50 | 0.119 | — | — |
+
+### 3b. Per scenario (pooled over agents)
+
+| scenario | hookpkg3−mcp Δpool (p) | hookpkg31−mcp Δpool (p) |
+|---|---:|---:|
+| tricentis_quote | +0.00 (1.000) | +0.17 (1.000) |
+| carconfig_order | +0.17 (1.000) | +0.33 (0.455) |
+| demoshop_order | +0.40 (0.444) | +0.40 (0.182) |
+| demoshop_debug | +0.00 (1.000) | +0.00 (1.000) |
+| tricentis_debug | +0.00 (1.000) | +0.00 (1.000) |
+
+### 3c. Per cell rates
+
+| agent | scenario | mcp | hookpkg3 | hookpkg31 | hookpkg3−mcp | hookpkg31−mcp |
+|---|---|---:|---:|---:|---:|---:|
+| cc-or:deepseek-v4.1-flash | tricentis_quote | 1.00 | 1.00 | 1.00 | +0.00 | +0.00 |
+| cc-or:deepseek-v4.1-flash | carconfig_order | 1.00 | 1.00 | 1.00 | +0.00 | +0.00 |
+| cc-or:deepseek-v4.1-flash | demoshop_order | 1.00 | 1.00 | 1.00 | +0.00 | +0.00 |
+| cc-or:deepseek-v4.1-flash | demoshop_debug | 1.00 | 1.00 | 1.00 | +0.00 | +0.00 |
+| cc-or:deepseek-v4.1-flash | tricentis_debug | 1.00 | 1.00 | 1.00 | +0.00 | +0.00 |
+| cc-or:glm-5.3-flash | tricentis_quote | 0.00 | 0.50 | 0.50 | +0.50 | +0.50 |
+| cc-or:glm-5.3-flash | carconfig_order | 1.00 | 0.50 | 1.00 | -0.50 | +0.00 |
+| cc-or:glm-5.3-flash | demoshop_order | 1.00 | 1.00 | 1.00 | +0.00 | +0.00 |
+| cc-or:glm-5.3-flash | demoshop_debug | 1.00 | 1.00 | 1.00 | +0.00 | +0.00 |
+| cc-or:glm-5.3-flash | tricentis_debug | 1.00 | 1.00 | 1.00 | +0.00 | +0.00 |
+| cc-or:qwen3.8-flash | tricentis_quote | 0.50 | 0.00 | 0.50 | -0.50 | +0.00 |
+| cc-or:qwen3.8-flash | carconfig_order | 0.00 | 1.00 | 1.00 | +1.00 | +1.00 |
+| cc-or:qwen3.8-flash | demoshop_order | 0.00 | 1.00 | 1.00 | +1.00 | +1.00 |
+| cc-or:qwen3.8-flash | demoshop_debug | 1.00 | 1.00 | 1.00 | +0.00 | +0.00 |
+| cc-or:qwen3.8-flash | tricentis_debug | 1.00 | 1.00 | 1.00 | +0.00 | +0.00 |
+
+## 4. Efficiency per agent × arm (all scenarios; means per session)
+
+| agent | arm | n | pass | turns | tool calls | in_tok | out_tok | cache | cost $ | wall s |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| cc-or:deepseek-v4.1-flash | mcp | 8 | 1.00 | 63.8 | 63.2 | 531.9k | 27.2k | 2924.7k | 0.210 | 367 |
+| cc-or:deepseek-v4.1-flash | hookpkg3 | 7 | 1.00 | 45.7 | 43.7 | 58.3k | 19.1k | 1887.4k | 0.052 | 379 |
+| cc-or:deepseek-v4.1-flash | hookpkg31 | 9 | 1.00 | 39.3 | 37.3 | 70.6k | 19.0k | 1347.0k | 0.052 | 383 |
+| cc-or:glm-5.3-flash | mcp | 7 | 0.71 | 62.9 | 61.9 | 441.9k | 18.5k | 2587.2k | 0.153 | 455 |
+| cc-or:glm-5.3-flash | hookpkg3 | 8 | 0.75 | 53.0 | 51.1 | 167.3k | 17.6k | 1741.4k | 0.086 | 464 |
+| cc-or:glm-5.3-flash | hookpkg31 | 8 | 0.88 | 37.4 | 35.5 | 261.9k | 12.6k | 799.5k | 0.070 | 286 |
+| cc-or:qwen3.8-flash | mcp | 8 | 0.38 | 67.3 | 56.0 | 127.0k | 38.8k | 3915.0k | 0.075 | 1146 |
+| cc-or:qwen3.8-flash | hookpkg3 | 8 | 0.75 | 48.6 | 46.6 | 56.2k | 21.9k | 1684.0k | 0.046 | 644 |
+| cc-or:qwen3.8-flash | hookpkg31 | 8 | 0.88 | 52.0 | 50.0 | 63.9k | 24.7k | 2033.9k | 0.054 | 676 |
+
+## 6. Live round: explore vs debug, and does the helper replace execute_step?
+
+`first` = robot passed on the grader's first attempt (no retry); `flaky` = passed only on the automatic retry. Stepwise columns are means per session: **steps** = rf-mcp execute_step + execute_batch + intent_action | `rfmcp step`; **inspect** = get_session_state | `rfmcp state`; **tool runs** = run_test_suite | `rfmcp run`; **kw lookup** = find_keywords + get_keyword_info | `rfmcp search` + `rfmcp doc`; **robot CLI** = plain `robot` shell runs (all arms); **ad-hoc browser** = shell calls driving playwright/chromium/robotcode repl directly.
+
+### 6a. Pass rate and stepwise usage per kind × arm (all agents)
+
+| kind | arm | n | pass | 95% CI | first | flaky | steps | inspect | tool runs | kw lookup | robot CLI | ad-hoc browser | ≥1 step/inspect | turns | tools | wall s |
+|---|---|---:|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| explore | mcp | 17 | 0.59 | 0.36–0.78 | 11/17 | 0 | 23.1 | 3.9 | 0.0 | 1.5 | 5.1 | 0.5 | 17/17 | 64.5 | 59.2 | 647 |
+| explore | hookpkg3 | 17 | 0.76 | 0.53–0.90 | 13/17 | 1 | 0.0 | 0.0 | 0.0 | 0.0 | 3.3 | 4.6 | 0/17 | 50.1 | 48.2 | 438 |
+| explore | hookpkg31 | 18 | 0.89 | 0.67–0.97 | 18/18 | 0 | 0.0 | 0.0 | 0.0 | 0.0 | 3.4 | 3.5 | 0/18 | 43.6 | 41.6 | 402 |
+| debug | mcp | 6 | 1.00 | 0.61–1.00 | 6/6 | 0 | 11.0 | 1.5 | 0.0 | 1.2 | 8.2 | 1.8 | 3/6 | 64.5 | 63.5 | 714 |
+| debug | hookpkg3 | 6 | 1.00 | 0.61–1.00 | 5/6 | 1 | 0.0 | 0.0 | 0.0 | 0.0 | 5.0 | 4.0 | 0/6 | 46.8 | 44.8 | 678 |
+| debug | hookpkg31 | 7 | 1.00 | 0.65–1.00 | 5/7 | 2 | 0.0 | 0.0 | 0.0 | 0.0 | 5.3 | 5.1 | 0/7 | 40.7 | 38.9 | 559 |
+
+### 6b. Arm contrasts per kind (pooled over agents × scenarios of that kind)
+
+| kind | contrast | rate A | rate B | Δpool | Fisher p | cells +/− |
+|---|---|---:|---:|---:|---:|---|
+| explore | hookpkg3−mcp | 0.76 (13/17) | 0.59 (10/17) | +0.18 | 0.465 | 3/2 |
+| explore | hookpkg31−mcp | 0.89 (16/18) | 0.59 (10/17) | +0.30 | 0.060 | 3/0 |
+| debug | hookpkg3−mcp | 1.00 (6/6) | 1.00 (6/6) | +0.00 | 1.000 | 0/0 |
+| debug | hookpkg31−mcp | 1.00 (7/7) | 1.00 (6/6) | +0.00 | 1.000 | 0/0 |
+
+### 6c. Stepwise use vs success (per kind × arm)
+
+Sessions split by whether they used live stepwise execution/inspection at all (steps + inspect > 0), and by tercile of `steps`. A treatment whose gain comes from stepwise execution should show higher pass with use than without (confounded: struggling sessions also step more).
+
+| kind | arm | pass with step/inspect (n) | pass without (n) | Fisher p | pass by steps tercile (low/mid/high) | mean steps: passed vs failed |
+|---|---|---|---|---:|---|---|
+| explore | mcp | 0.59 (17) | — (0) | — | 0.60 / 0.67 / 0.50 | 20.9 vs 26.3 |
+| explore | hookpkg3 | — (0) | 0.76 (17) | — | 0.60 / 0.83 / 0.83 | 0.0 vs 0.0 |
+| explore | hookpkg31 | — (0) | 0.89 (18) | — | 0.83 / 0.83 / 1.00 | 0.0 vs 0.0 |
+| debug | mcp | 1.00 (3) | 1.00 (3) | 1.000 | 1.00 / 1.00 / 1.00 | 11.0 vs — |
+| debug | hookpkg3 | — (0) | 1.00 (6) | — | 1.00 / 1.00 / 1.00 | 0.0 vs — |
+| debug | hookpkg31 | — (0) | 1.00 (7) | — | 1.00 / 1.00 / 1.00 | 0.0 vs — |
+
+### 6d. Per agent × kind × arm: pass and stepwise usage
+
+| agent | kind | arm | n | pass | flaky | steps | inspect | tool runs | robot CLI | mcp tools / rfmcp subcmds |
+|---|---|---|---:|---:|---:|---:|---:|---:|---:|---|
+| cc-or:deepseek-v4.1-flash | explore | mcp | 6 | 1.00 | 0 | 22.5 | 5.0 | 0.0 | 4.5 | execute_step×111, get_session_state×30, execute_batch×24, find_keywords×5 |
+| cc-or:deepseek-v4.1-flash | explore | hookpkg3 | 5 | 1.00 | 1 | 0.0 | 0.0 | 0.0 | 4.0 |  |
+| cc-or:deepseek-v4.1-flash | explore | hookpkg31 | 6 | 1.00 | 0 | 0.0 | 0.0 | 0.0 | 3.5 |  |
+| cc-or:deepseek-v4.1-flash | debug | mcp | 2 | 1.00 | 0 | 11.5 | 0.0 | 0.0 | 8.5 | execute_step×15, execute_batch×8 |
+| cc-or:deepseek-v4.1-flash | debug | hookpkg3 | 2 | 1.00 | 0 | 0.0 | 0.0 | 0.0 | 4.0 |  |
+| cc-or:deepseek-v4.1-flash | debug | hookpkg31 | 3 | 1.00 | 1 | 0.0 | 0.0 | 0.0 | 4.7 |  |
+| cc-or:glm-5.3-flash | explore | mcp | 5 | 0.60 | 0 | 22.8 | 4.4 | 0.0 | 6.4 | execute_step×91, execute_batch×23, get_session_state×22, find_keywords×2 |
+| cc-or:glm-5.3-flash | explore | hookpkg3 | 6 | 0.67 | 0 | 0.0 | 0.0 | 0.0 | 2.7 |  |
+| cc-or:glm-5.3-flash | explore | hookpkg31 | 6 | 0.83 | 0 | 0.0 | 0.0 | 0.0 | 2.0 |  |
+| cc-or:glm-5.3-flash | debug | mcp | 2 | 1.00 | 0 | 0.0 | 0.0 | 0.0 | 7.5 |  |
+| cc-or:glm-5.3-flash | debug | hookpkg3 | 2 | 1.00 | 0 | 0.0 | 0.0 | 0.0 | 5.5 |  |
+| cc-or:glm-5.3-flash | debug | hookpkg31 | 2 | 1.00 | 0 | 0.0 | 0.0 | 0.0 | 6.5 |  |
+| cc-or:qwen3.8-flash | explore | mcp | 6 | 0.17 | 0 | 24.0 | 2.3 | 0.0 | 4.5 | execute_step×124, execute_batch×19, get_session_state×14, find_keywords×7, intent_action×1 |
+| cc-or:qwen3.8-flash | explore | hookpkg3 | 6 | 0.67 | 0 | 0.0 | 0.0 | 0.0 | 3.3 |  |
+| cc-or:qwen3.8-flash | explore | hookpkg31 | 6 | 0.83 | 0 | 0.0 | 0.0 | 0.0 | 4.7 |  |
+| cc-or:qwen3.8-flash | debug | mcp | 2 | 1.00 | 0 | 21.5 | 4.5 | 0.0 | 8.5 | execute_batch×27, execute_step×16, get_session_state×9, find_keywords×3 |
+| cc-or:qwen3.8-flash | debug | hookpkg3 | 2 | 1.00 | 1 | 0.0 | 0.0 | 0.0 | 5.5 |  |
+| cc-or:qwen3.8-flash | debug | hookpkg31 | 2 | 1.00 | 1 | 0.0 | 0.0 | 0.0 | 5.0 |  |
+
+### 6e. Failed graders per kind × arm (count of sessions)
+
+| kind | arm | failed graders |
+|---|---|---|
+| explore | mcp | file_contains×9, robot_pass×6, journey: confirmation read from page×6, journey: value read from page×6, journey: form fields driven×6, journey: no shortcut (deep link/hard-coded)×4, no_deprecated_keywords×4, file_exists×3, start date computed at run time×1, own ?space= kept×1 |
+| explore | hookpkg3 | journey: confirmation read from page×4, robot_pass×3, journey: value read from page×3, journey: form fields driven×3 |
+| explore | hookpkg31 | journey: form fields driven×2 |
+| debug | mcp | — |
+| debug | hookpkg3 | — |
+| debug | hookpkg31 | — |
+
+### 6f. Journey evidence per scenario × arm (journey-evidence graders on the graded run's output.xml)
+
+`robot green` = robot_pass passed; the part columns count robot-green sessions that FAILED that journey part (green suite, incomplete journey / shortcut); `journey ok` = robot green and all four parts passed.
+
+| scenario | arm | n | robot green | confirm read | value read | fields driven | no shortcut | journey ok |
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+| carconfig_order | mcp | 6 | 5 | 0 | 0 | 0 | 0 | 5 |
+| carconfig_order | hookpkg3 | 6 | 6 | 1 | 0 | 0 | 0 | 5 |
+| carconfig_order | hookpkg31 | 6 | 6 | 0 | 0 | 0 | 0 | 6 |
+| demoshop_debug | mcp | 3 | 3 | 0 | 0 | 0 | 0 | 3 |
+| demoshop_debug | hookpkg3 | 3 | 3 | 0 | 0 | 0 | 0 | 3 |
+| demoshop_debug | hookpkg31 | 4 | 4 | 0 | 0 | 0 | 0 | 4 |
+| demoshop_order | mcp | 5 | 3 | 0 | 0 | 0 | 0 | 3 |
+| demoshop_order | hookpkg3 | 5 | 5 | 0 | 0 | 0 | 0 | 5 |
+| demoshop_order | hookpkg31 | 6 | 6 | 0 | 0 | 0 | 0 | 6 |
+| tricentis_debug | mcp | 3 | 3 | 0 | 0 | 0 | 0 | 3 |
+| tricentis_debug | hookpkg3 | 3 | 3 | 0 | 0 | 0 | 0 | 3 |
+| tricentis_debug | hookpkg31 | 3 | 3 | 0 | 0 | 0 | 0 | 3 |
+| tricentis_quote | mcp | 6 | 3 | 0 | 0 | 0 | 0 | 3 |
+| tricentis_quote | hookpkg3 | 6 | 3 | 0 | 0 | 0 | 0 | 3 |
+| tricentis_quote | hookpkg31 | 6 | 6 | 0 | 0 | 2 | 0 | 4 |
+
+## 7. hookpkg3 engagement (hooks instead of a CLI)
+
+| agent | n | pass | firings | auto-executed lines | non-pass auto lines | gate denials | rewrites | Stop blocks | robot reproductions | still-running | .rf/state reads | .rf/docs reads | rfmcp CLI calls |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| cc-or:deepseek-v4.1-flash | 7 | 1.00 | 86.4 | 50.6 | 5.1 | 0.0 | 8.6 | 0.0 | 1.0 | 0.0 | 9.7 | 1.7 | 0 |
+| cc-or:glm-5.3-flash | 8 | 0.75 | 93.9 | 117.5 | 9.0 | 0.1 | 5.1 | 0.0 | 0.9 | 0.0 | 17.0 | 2.2 | 0 |
+| cc-or:qwen3.8-flash | 8 | 0.75 | 91.2 | 117.9 | 7.5 | 0.2 | 0.2 | 0.0 | 0.8 | 0.0 | 15.9 | 2.4 | 0 |
+
+Pass rate by hook activity (hookpkg3 sessions; confounded — struggling sessions trigger more hooks):
+
+| split | pass (n) high | pass (n) low |
+|---|---|---|
+| ≥1 gate denial vs none | 0.67 (3) | 0.85 (20) |
+| ≥1 Stop block vs none | — (0) | 0.83 (23) |
+| ≥1 robot-run reproduction vs none | 0.91 (11) | 0.75 (12) |
+
+Median hook latency per session, averaged (ms): post-tool 68, pre-tool 6, prompt 24, session-end 304, session-start 13, stop 13
+
+## 8. hookpkg3: v2 hooks per session (means)
+
+| agent | n | docs files | kw docs | captures | rechecks | REPL rewrites | REPL denials | REPL cmds | loop hints | guard denials | suite | install | -P | big read | valve | .rf/docs/kw reads | .rf/state/latest reads | slow/missing | capture ms (median) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| cc-or:deepseek-v4.1-flash | 7 | 1.7 | 0.0 | 7.9 | 1.4 | 8.4 | 0.0 | 8.4 | 0.6 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.1 | 9.4 | 0/10 | 170 |
+| cc-or:glm-5.3-flash | 8 | 1.4 | 0.0 | 12.0 | 2.4 | 5.1 | 0.0 | 5.1 | 0.4 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 16.6 | 0/19 | 170 |
+| cc-or:qwen3.8-flash | 8 | 2.1 | 0.1 | 11.0 | 1.0 | 0.2 | 0.0 | 0.2 | 0.5 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.2 | 15.8 | 0/8 | 155 |
+
+v1/v2/v3/v3.1 cross-contamination rows: 0
+
+## 9. hookpkg3: v3 metrics per session (means)
+
+| agent | n | ctx chars/edit | ok edit | fail edit | robot run | ctx total | captures | capture skipped | rechecks | instant MISSING | recheck s | tmo changes | denials | warnings | race repro | kw docs on demand | verdicts slow/missing | fail classes |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| cc-or:deepseek-v4.1-flash | 7 | 334.9 | 170.5 | 536.0 | 231.5 | 4057.7 | 7.9 | 0.0 | 1.4 | 0.6 | 1.8 | 0.0 | 0.0 | 0.3 | 0.1 | 0.0 | 0/10 | value 11, absent 10, other 6, covered 5, ambiguous 3 |
+| cc-or:glm-5.3-flash | 8 | 384.1 | 170.3 | 518.5 | 197.8 | 6119.9 | 12.0 | 0.0 | 2.4 | 1.0 | 1.1 | 0.0 | 0.1 | 0.6 | 0.2 | 0.0 | 0/19 | absent 19, covered 15, other 14, value 11, ambiguous 8 |
+| cc-or:qwen3.8-flash | 8 | 325.3 | 187.7 | 482.5 | 178.7 | 5602.0 | 11.0 | 0.0 | 1.0 | 0.4 | 1.1 | 0.0 | 0.2 | 2.1 | 0.2 | 0.1 | 0/8 | other 23, covered 14, value 10, absent 8, ambiguous 5 |
+
+## 10. hookpkg31 engagement (hooks instead of a CLI)
+
+| agent | n | pass | firings | auto-executed lines | non-pass auto lines | gate denials | rewrites | Stop blocks | robot reproductions | still-running | .rf/state reads | .rf/docs reads | rfmcp CLI calls |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| cc-or:deepseek-v4.1-flash | 9 | 1.00 | 74.2 | 72.4 | 4.1 | 0.1 | 6.8 | 0.0 | 0.8 | 0.0 | 6.9 | 1.1 | 0 |
+| cc-or:glm-5.3-flash | 8 | 0.88 | 68.0 | 71.1 | 7.2 | 0.0 | 2.0 | 0.0 | 1.2 | 0.0 | 12.5 | 0.5 | 0 |
+| cc-or:qwen3.8-flash | 8 | 0.88 | 99.0 | 89.4 | 8.5 | 0.5 | 2.0 | 0.0 | 0.6 | 0.0 | 18.6 | 3.8 | 0 |
+
+Pass rate by hook activity (hookpkg31 sessions; confounded — struggling sessions trigger more hooks):
+
+| split | pass (n) high | pass (n) low |
+|---|---|---|
+| ≥1 gate denial vs none | 1.00 (4) | 0.90 (21) |
+| ≥1 Stop block vs none | — (0) | 0.92 (25) |
+| ≥1 robot-run reproduction vs none | 1.00 (11) | 0.86 (14) |
+
+Median hook latency per session, averaged (ms): post-tool 151, pre-tool 5, prompt 11, session-end 304, session-start 40, stop 6
+
+## 11. hookpkg31: v2 hooks per session (means)
+
+| agent | n | docs files | kw docs | captures | rechecks | REPL rewrites | REPL denials | REPL cmds | loop hints | guard denials | suite | install | -P | big read | valve | .rf/docs/kw reads | .rf/state/latest reads | slow/missing | capture ms (median) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| cc-or:deepseek-v4.1-flash | 9 | 1.6 | 0.0 | 7.3 | 0.8 | 6.8 | 0.1 | 6.9 | 0.3 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 6.6 | 0/7 | 177 |
+| cc-or:glm-5.3-flash | 8 | 1.1 | 0.0 | 10.1 | 1.5 | 2.0 | 0.0 | 2.0 | 0.5 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 12.5 | 0/12 | 160 |
+| cc-or:qwen3.8-flash | 8 | 1.9 | 0.2 | 10.5 | 2.0 | 2.0 | 0.2 | 2.2 | 0.6 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.5 | 18.0 | 0/16 | 167 |
+
+v1/v2/v3/v3.1 cross-contamination rows: 0
+
+## 12. hookpkg31: v3 metrics per session (means)
+
+| agent | n | ctx chars/edit | ok edit | fail edit | robot run | ctx total | captures | capture skipped | rechecks | instant MISSING | recheck s | tmo changes | denials | warnings | race repro | kw docs on demand | verdicts slow/missing | fail classes |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| cc-or:deepseek-v4.1-flash | 9 | 732.5 | 579.1 | 1030.2 | 240.5 | 6707.0 | 7.3 | 0.0 | 0.8 | 0.1 | 1.6 | 0.0 | 0.1 | 0.2 | 0.1 | 0.0 | 0/7 | covered 15, absent 7, value 7, other 4, ambiguous 2 |
+| cc-or:glm-5.3-flash | 8 | 731.0 | 486.7 | 952.7 | 367.2 | 9982.6 | 10.1 | 0.0 | 1.5 | 0.2 | 1.4 | 0.0 | 0.0 | 0.4 | 0.1 | 0.0 | 0/12 | covered 18, value 14, absent 12, other 7, ambiguous 4 |
+| cc-or:qwen3.8-flash | 8 | 706.5 | 511.7 | 883.0 | 248.5 | 11356.9 | 10.5 | 0.0 | 2.0 | 0.6 | 1.0 | 0.0 | 0.5 | 1.4 | 0.0 | 0.2 | 0/16 | other 18, value 18, absent 16, covered 11, ambiguous 4 |
+
+## 13. hookpkg31: output profile per agent (lean = v3 output, rich = v2-like guidance)
+
+| agent | n | pass | profile (sessions) | decided from | model (hook) | ctx chars/edit | ok edit | fail edit |
+|---|---:|---:|---|---|---|---:|---:|---:|
+| cc-or:deepseek-v4.1-flash | 9 | 1.00 | rich 9 | model:ANTHROPIC_MODEL 9 | deepseek/deepseek-v4.1-flash 9 | 732 | 579 | 1030 |
+| cc-or:glm-5.3-flash | 8 | 0.88 | rich 8 | model:ANTHROPIC_MODEL 8 | z-ai/glm-5.3-flash 8 | 731 | 487 | 953 |
+| cc-or:qwen3.8-flash | 8 | 0.88 | rich 8 | model:ANTHROPIC_MODEL 8 | qwen/qwen3.8-flash 8 | 707 | 512 | 883 |
+
+## 14. OpenRouter agents: cost per session
+
+`est $` = tokens × the model's OpenRouter prices (or_prices.json); `usage Δ $` = account usage delta (/api/v1/key) before/after the cell — shared with concurrent OpenRouter cells (see `conc`) and booked with a short delay, so per-cell deltas are a cross-check, totals are reliable.
+
+| agent | arm | n | pass | model | est $/session | usage Δ $/session | est $ total | in (uncached) | out | cache read | cache write | conc (max) | via OpenRouter |
+|---|---|---:|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| cc-or:deepseek-v4.1-flash | hookpkg3 | 7 | 1.00 | deepseek/deepseek-v4.1-flash | 0.0517 | 0.4442 | 0.362 | 58.3k | 19.1k | 1887.4k | 0 | 2 | 7/7 |
+| cc-or:deepseek-v4.1-flash | hookpkg31 | 9 | 1.00 | deepseek/deepseek-v4.1-flash | 0.0520 | 0.4517 | 0.468 | 70.6k | 19.0k | 1347.0k | 0 | 2 | 9/9 |
+| cc-or:deepseek-v4.1-flash | mcp | 8 | 1.00 | deepseek/deepseek-v4.1-flash | 0.2097 | 0.7870 | 1.678 | 531.9k | 27.2k | 2924.7k | 0 | 2 | 8/8 |
+| cc-or:glm-5.3-flash | hookpkg3 | 8 | 0.75 | z-ai/glm-5.3-flash | 0.0861 | 0.5372 | 0.689 | 167.3k | 17.6k | 1741.4k | 0 | 2 | 8/8 |
+| cc-or:glm-5.3-flash | hookpkg31 | 8 | 0.88 | z-ai/glm-5.3-flash | 0.0696 | 0.4489 | 0.557 | 261.9k | 12.6k | 799.5k | 0 | 2 | 8/8 |
+| cc-or:glm-5.3-flash | mcp | 7 | 0.71 | z-ai/glm-5.3-flash | 0.1532 | 1.0608 | 1.072 | 441.9k | 18.5k | 2587.2k | 0 | 2 | 7/7 |
+| cc-or:qwen3.8-flash | hookpkg3 | 8 | 0.75 | qwen/qwen3.8-flash | 0.0457 | 0.9499 | 0.365 | 510 | 21.9k | 1684.0k | 55.7k | 2 | 8/8 |
+| cc-or:qwen3.8-flash | hookpkg31 | 8 | 0.88 | qwen/qwen3.8-flash | 0.0537 | 0.6361 | 0.430 | 4.7k | 24.7k | 2033.9k | 59.2k | 2 | 8/8 |
+| cc-or:qwen3.8-flash | mcp | 8 | 0.38 | qwen/qwen3.8-flash | 0.0750 | 2.3634 | 0.600 | 20.5k | 29.1k | 2936.2k | 74.7k | 2 | 8/8 |
+
+Total OpenRouter estimate: $6.221 over 71 sessions.

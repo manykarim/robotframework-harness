@@ -1,0 +1,3 @@
+# robotcode project root for the LSP experiment
+paths = ["tests"]
+output-dir = "results"

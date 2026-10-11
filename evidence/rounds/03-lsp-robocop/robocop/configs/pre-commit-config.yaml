@@ -1,0 +1,12 @@
+# Use a LOCAL/system hook so robocop runs in the project venv (project rules import Browser/Requests/...).
+# The upstream hook (repo: MarketSquare/robotframework-robocop, id: robocop, language: python) installs robocop
+# into an isolated env -> libraries are missing -> IMP09 noise and KW05/ARG08 silently skipped.
+repos:
+  - repo: local
+    hooks:
+      - id: robocop-agent
+        name: robocop (agent profile)
+        entry: .venv/bin/robocop check --config robocop-agent.toml --skip-gitignore
+        language: system
+        types_or: [robot]
+        files: \.(robot|resource)$

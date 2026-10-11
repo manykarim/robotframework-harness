@@ -1,0 +1,23 @@
+=== suites/s01_booker_rfmcp_generated_valid.robot
+Files: 1, Errors: 0, Warnings: 0, Infos: 0, Hints: 0 (in 4.75s)
+exit=0 5.593627855s
+=== suites/s02_saucedemo_bdd_valid.robot
+Files: 1, Errors: 0, Warnings: 0, Infos: 0, Hints: 0 (in 1.54s)
+exit=0 2.448326849s
+=== suites/s03_saucedemo_bdd_broken.robot
+suites/s03_saucedemo_bdd_broken.robot:17:5: [ERROR] KeywordNotFound: No keyword with name 'When the user adds sauce-labs-backpack to the cart' found.
+suites/s03_saucedemo_bdd_broken.robot:21:5: [ERROR] TokenError: Non-existing setting 'Tag'. Did you mean:
+    Tags
+suites/s03_saucedemo_bdd_broken.robot:28:46: [ERROR] VariableNotFound: Variable '${usrname}' not found.
+suites/s03_saucedemo_bdd_broken.robot:30:5: [ERROR] KeywordNotFound: No keyword with name 'Input Text' found.
+suites/s03_saucedemo_bdd_broken.robot:35:5: [ERROR] KeywordNotFound: No keyword with name 'Clik' found.
+suites/s03_saucedemo_bdd_broken.robot:44:5: [ERROR] ModelError: ELSE IF must have a condition.
+Files: 1, Errors: 6, Warnings: 0, Infos: 0, Hints: 0 (in 0.08s)
+exit=1 1.005434270s
+=== suites/s04_booker_broken.robot
+suites/s04_booker_broken.robot:12:5: [ERROR] KeywordNotFound: No keyword with name 'Dictionary Should Contain Key' found.
+suites/s04_booker_broken.robot:13:29: [ERROR] VariableNotFound: Variable '${TOKEN}' not found.
+suites/s04_booker_broken.robot:16:64: [ERROR] VariableNotFound: Variable '${TOKEN}' not found.
+suites/s04_booker_broken.robot:20:5: [ERROR] DataError: Keyword 'RequestsLibrary.Status Should Be' expected 1 to 3 arguments, got 4.
+Files: 1, Errors: 4, Warnings: 0, Infos: 0, Hints: 0 (in 0.05s)
+exit=1 .955732671s

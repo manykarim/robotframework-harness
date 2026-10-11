@@ -1,0 +1,24 @@
+{
+ "ok": true,
+ "passed": 43,
+ "total": 43,
+ "timings": {
+  "stop_noop_ms": 79,
+  "check_static_ms": 7904,
+  "skill_md_bytes": 5335,
+  "debug_first_robot_ms": 13379,
+  "debug_reproduce_ms": 8160,
+  "debug_final_robot_ms": 8255,
+  "guard_covered_ms": 1607,
+  "state_controls_ms": 160,
+  "guard_not_visible_ms": 1667,
+  "no_guard_async_click_ms": 2906,
+  "hook_portable_ms": 3039
+ },
+ "python": "~/workspace/robotcode-experiments/.venv/bin/python",
+ "failed": [],
+ "versions": {
+  "robotframework": "7.5",
+  "robotframework-browser": "20.5.0"
+ }
+}

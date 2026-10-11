@@ -1,0 +1,104 @@
+[11:42:50] [config] models={'claude': 'claude-haiku-4-5', 'codex': 'gpt-5.6-luna', 'opencode': 'minimax-coding-plan/MiniMax-M2.5', 'copilot': 'gpt-4.1'} codex_effort='medium' opencode_variant='' results=~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/ab/harness/results_live.jsonl work=~/.cache/ab-eval/work_live prune=True browser_concurrency=2
+OK  tricentis_quote  reference primary=True (12/12) first_pass=True flaky=False robot_s=[18.3] 18.6s
+OK  tricentis_quote  reference primary=True (12/12) first_pass=True flaky=False robot_s=[18.5] 18.9s
+OK  tricentis_quote  reference primary=True (12/12) first_pass=True flaky=False robot_s=[17.1] 17.5s
+OK  tricentis_quote  pristine  primary=False (1/12) first_pass=False flaky=False robot_s=None 0.1s
+      - file_exists             ~/.cache/ab-eval/work_live/_verify/tricentis_quote-pristine-3979/workspace/tests/auto_quote.robot
+      - file_contains           missing ~/.cache/ab-eval/work_live/_verify/tricentis_quote-pristine-3979/workspace/tests/auto_quote.robot
+      - file_contains           missing ~/.cache/ab-eval/work_live/_verify/tricentis_quote-pristine-3979/workspace/tests/auto_quote.robot
+      - file_contains           missing ~/.cache/ab-eval/work_live/_verify/tricentis_quote-pristine-3979/workspace/tests/auto_quote.robot
+      - file_contains          start date computed at run tim missing ~/.cache/ab-eval/work_live/_verify/tricentis_quote-pristine-3979/workspace/tests/auto_quote.robot
+      - robot_pass              robot file missing: ~/.cache/ab-eval/work_live/_verify/tricentis_quote-pristine-3979/workspace/tests/auto_quote.robot
+      - journey                journey: confirmation read fro no output.xml from the robot_pass run
+      - journey                journey: value read from page no output.xml from the robot_pass run
+      - journey                journey: form fields driven no output.xml from the robot_pass run
+      - journey                journey: no shortcut (deep lin no output.xml from the robot_pass run
+      - no_deprecated_keywords  missing ~/.cache/ab-eval/work_live/_verify/tricentis_quote-pristine-3979/workspace/tests/auto_quote.robot
+OK  tricentis_quote  neg:hardcoded_assert primary=False (9/12) first_pass=True flaky=False robot_s=[20.8] 21.1s
+      + robot_pass              #1 exit=0 stats={'pass': 1, 'fail': 0, 'skip': 0} 1 test, 1 passed, 0 failed
+      - journey                journey: confirmation read fro missing=['Sending e-mail success!'] hits={}
+      - journey                journey: value read from page missing=['(?<![\\d.,])509\\.00(?!\\d)'] hits={}
+      + journey                journey: form fields driven distinct=36/28 missing_data=[]
+      - journey                journey: no shortcut (deep lin bad_urls=[] js_nav=[] hardcoded=['Should Be Equal: (?<![\\d.,])509\\.00(?!\\d)', 'Should Be Equal: Sending e-mail success!'] urls=['http://sampleapp.tricentis.com/']
+OK  tricentis_quote  neg:skip_fields primary=False (11/12) first_pass=True flaky=False robot_s=[17.6] 18.0s
+      + robot_pass              #1 exit=0 stats={'pass': 1, 'fail': 0, 'skip': 0} 1 test, 1 passed, 0 failed
+      + journey                journey: confirmation read fro read hits={'Sending e-mail success!': ['get text:args', 'get text:return']}
+      + journey                journey: value read from page read hits={'(?<![\\d.,])509\\.00(?!\\d)': ['get text:args', 'get text:return']}
+      - journey                journey: form fields driven distinct=31/28 missing_data=['rf2026', 'main street 1', 'berlin', '0301234567', 'female']
+      + journey                journey: no shortcut (deep lin bad_urls=[] js_nav=[] hardcoded=[] urls=['http://sampleapp.tricentis.com/']
+   == tricentis_quote: reference first-attempt pass 3/3, with retry 3/3, robot s [18.3, 18.5, 17.1]
+OK  carconfig_order  reference primary=True (11/11) first_pass=True flaky=False robot_s=[7.0] 7.4s
+OK  carconfig_order  reference primary=True (11/11) first_pass=True flaky=False robot_s=[7.4] 7.8s
+OK  carconfig_order  reference primary=True (11/11) first_pass=True flaky=False robot_s=[6.9] 7.2s
+OK  carconfig_order  pristine  primary=False (1/11) first_pass=False flaky=False robot_s=None 0.1s
+      - file_exists             ~/.cache/ab-eval/work_live/_verify/carconfig_order-pristine-ecfa/workspace/tests/x5_order.robot
+      - file_contains           missing ~/.cache/ab-eval/work_live/_verify/carconfig_order-pristine-ecfa/workspace/tests/x5_order.robot
+      - file_contains           missing ~/.cache/ab-eval/work_live/_verify/carconfig_order-pristine-ecfa/workspace/tests/x5_order.robot
+      - file_contains           missing ~/.cache/ab-eval/work_live/_verify/carconfig_order-pristine-ecfa/workspace/tests/x5_order.robot
+      - robot_pass              robot file missing: ~/.cache/ab-eval/work_live/_verify/carconfig_order-pristine-ecfa/workspace/tests/x5_order.robot
+      - journey                journey: confirmation read fro no output.xml from the robot_pass run
+      - journey                journey: value read from page no output.xml from the robot_pass run
+      - journey                journey: form fields driven no output.xml from the robot_pass run
+      - journey                journey: no shortcut (deep lin no output.xml from the robot_pass run
+      - no_deprecated_keywords  missing ~/.cache/ab-eval/work_live/_verify/carconfig_order-pristine-ecfa/workspace/tests/x5_order.robot
+OK  carconfig_order  neg:deeplink_checkout primary=False (9/11) first_pass=True flaky=False robot_s=[6.0] 6.4s
+      + robot_pass              #1 exit=0 stats={'pass': 1, 'fail': 0, 'skip': 0} 1 test, 1 passed, 0 failed
+      + journey                journey: confirmation read fro read hits={'Bestellung erfolgreich!': ['get text:return', 'wait for elements state:args'], 'CO-\\d+': ['get text:return']}
+      + journey                journey: value read from page read hits={'82\\.400,00': ['get text:args', 'get text:return']}
+      - journey                journey: form fields driven distinct=9/14 missing_data=[]
+      - journey                journey: no shortcut (deep lin bad_urls=['https://carconfig.makrocode.de/checkout?sessionId=checkout_1790933313993_85wwufswz'] js_nav=[] hardcoded=[] urls=['https://carconfig.makrocode.de/checkout?sessionId=checkout_1790933313993_85wwufswz']
+   == carconfig_order: reference first-attempt pass 3/3, with retry 3/3, robot s [7.0, 7.4, 6.9]
+OK  demoshop_order   reference primary=True (12/12) first_pass=True flaky=False robot_s=[9.5] 9.9s
+OK  demoshop_order   reference primary=True (12/12) first_pass=True flaky=False robot_s=[9.4] 9.8s
+OK  demoshop_order   reference primary=True (12/12) first_pass=True flaky=False robot_s=[8.7] 9.1s
+OK  demoshop_order   pristine  primary=False (1/12) first_pass=False flaky=False robot_s=None 0.1s
+      - file_exists             ~/.cache/ab-eval/work_live/_verify/demoshop_order-pristine-28d1/workspace/tests/shop_order.robot
+      - file_contains           missing ~/.cache/ab-eval/work_live/_verify/demoshop_order-pristine-28d1/workspace/tests/shop_order.robot
+      - file_contains          own ?space= kept missing ~/.cache/ab-eval/work_live/_verify/demoshop_order-pristine-28d1/workspace/tests/shop_order.robot
+      - file_contains           missing ~/.cache/ab-eval/work_live/_verify/demoshop_order-pristine-28d1/workspace/tests/shop_order.robot
+      - file_contains           missing ~/.cache/ab-eval/work_live/_verify/demoshop_order-pristine-28d1/workspace/tests/shop_order.robot
+      - robot_pass              robot file missing: ~/.cache/ab-eval/work_live/_verify/demoshop_order-pristine-28d1/workspace/tests/shop_order.robot
+      - journey                journey: confirmation read fro no output.xml from the robot_pass run
+      - journey                journey: value read from page no output.xml from the robot_pass run
+      - journey                journey: form fields driven no output.xml from the robot_pass run
+      - journey                journey: no shortcut (deep lin no output.xml from the robot_pass run
+      - no_deprecated_keywords  missing ~/.cache/ab-eval/work_live/_verify/demoshop_order-pristine-28d1/workspace/tests/shop_order.robot
+OK  demoshop_order   neg:deeplink_checkout primary=False (11/12) first_pass=True flaky=False robot_s=[7.7] 8.1s
+      + robot_pass              #1 exit=0 stats={'pass': 1, 'fail': 0, 'skip': 0} 1 test, 1 passed, 0 failed
+      + journey                journey: confirmation read fro read hits={'Order ORD-[0-9A-Z]+ confirmed': ['get text:return'], 'confirmation email to morgan\\.lee@example\\.com': ['get text:args', 'get text:return']}
+      + journey                journey: value read from page read hits={'\\$857\\.00': ['get text:args', 'get text:return'], '\\$916\\.99': ['get text:args', 'get text:return']}
+      + journey                journey: form fields driven distinct=14/12 missing_data=[]
+      - journey                journey: no shortcut (deep lin bad_urls=['https://demoshop.makrocode.de/checkout'] js_nav=[] hardcoded=[] urls=['https://demoshop.makrocode.de/?space=ab-e44f022e33', 'https://demoshop.makrocode.de/checkout']
+OK  demoshop_order   neg:skip_fields primary=False (10/12) first_pass=True flaky=False robot_s=[8.5] 8.8s
+      + robot_pass              #1 exit=0 stats={'pass': 1, 'fail': 0, 'skip': 0} 1 test, 1 passed, 0 failed
+      - journey                journey: confirmation read fro missing=['confirmation email to morgan\\.lee@example\\.com'] hits={'Order ORD-[0-9A-Z]+ confirmed': ['get text:return']}
+      + journey                journey: value read from page read hits={'\\$857\\.00': ['get text:args', 'get text:return'], '\\$916\\.99': ['get text:args', 'get text:return']}
+      - journey                journey: form fields driven distinct=11/12 missing_data=['morgan.lee@example.com', 'morgan lee', '42 harbor lane', 'portland', '97201', '8', 'leave at the front desk']
+      + journey                journey: no shortcut (deep lin bad_urls=[] js_nav=[] hardcoded=[] urls=['https://demoshop.makrocode.de/?space=ab-b96078bb0a']
+   == demoshop_order: reference first-attempt pass 3/3, with retry 3/3, robot s [9.5, 9.4, 8.7]
+OK  demoshop_debug   reference primary=True (17/17) first_pass=True flaky=False robot_s=[22.0] 22.4s
+OK  demoshop_debug   reference primary=True (17/17) first_pass=True flaky=False robot_s=[21.0] 21.3s
+OK  demoshop_debug   reference primary=True (17/17) first_pass=True flaky=False robot_s=[23.1] 23.5s
+OK  demoshop_debug   pristine  primary=False (13/17) first_pass=False flaky=False robot_s=[41.0, 46.7] 88.1s
+      - robot_pass              or.click: Timeout 10000ms exceeded. | Shop :: Flowline Supply shop regression suite.                        | FAIL | | 5 tests, 2 passed, 3 failed || #2 exit=3 stats={'pass': 2, 'fail': 3, 'skip': 0}                     
+      - journey                journey: confirmation read fro missing=['Order ORD-\\w+ confirmed'] hits={}
+      - journey                journey: value read from page missing=['\\$553\\.19'] hits={'\\$517\\.00': ['get text:args', 'get text:return']}
+      - journey                journey: form fields driven distinct=3/8 missing_data=['jamie@flowlinesupply.com', 'demo123']
+OK  demoshop_debug   neg:deeplink_checkout primary=False (16/17) first_pass=True flaky=False robot_s=[22.4] 22.8s
+      + robot_pass              #1 exit=0 stats={'pass': 5, 'fail': 0, 'skip': 0} 5 tests, 5 passed, 0 failed
+      + journey                journey: confirmation read fro read hits={'Order ORD-\\w+ confirmed': ['get text:return']}
+      + journey                journey: value read from page read hits={'\\$517\\.00': ['get text:args', 'get text:return'], '\\$553\\.19': ['get text:args', 'get text:return']}
+      + journey                journey: form fields driven distinct=9/8 missing_data=[]
+      - journey                journey: no shortcut (deep lin bad_urls=['https://demoshop.makrocode.de/checkout'] js_nav=[] hardcoded=[] urls=['https://demoshop.makrocode.de/?space=ab-9835d76fde', 'https://demoshop.makrocode.de/cart', 'https://demoshop.makrocode.de/checkout', 'http
+   == demoshop_debug: reference first-attempt pass 3/3, with retry 3/3, robot s [22.0, 21.0, 23.1]
+OK  tricentis_debug  reference primary=True (15/15) first_pass=True flaky=False robot_s=[28.7] 29.1s
+OK  tricentis_debug  reference primary=True (15/15) first_pass=True flaky=False robot_s=[27.3] 27.7s
+OK  tricentis_debug  reference primary=True (15/15) first_pass=True flaky=False robot_s=[28.9] 29.3s
+OK  tricentis_debug  pristine  primary=False (10/15) first_pass=False flaky=False robot_s=[15.4, 14.9] 30.7s
+      - files_contain          start date computed at run tim start date computed at run time -> not found
+      - robot_pass                                         | FAIL | | Truck Quote :: Truck insurance quote regression suite (Tricentis V... | FAIL | | 3 tests, 0 passed, 3 failed || #2 exit=3 stats={'pass': 0, 'fail': 3, 'skip': 0} | FAIL | | Truck Quo
+      - journey                journey: confirmation read fro missing=['Sending e-mail success!'] hits={}
+      - journey                journey: value read from page missing=['1,784\\.00', '3,501\\.00'] hits={}
+      - journey                journey: form fields driven distinct=1/28 missing_data=['volvo', '250', '03/01/2019', 'diesel', '800', '7500', '85000', 'trk-778', '60000', 'grace', 'hopper', '12/09/1976', 'harbour road 7', 'netherlands', '1011', 'amsterdam', 'selfemployed', '1000
+   == tricentis_debug: reference first-attempt pass 3/3, with retry 3/3, robot s [28.7, 27.3, 28.9]
+EXIT=0

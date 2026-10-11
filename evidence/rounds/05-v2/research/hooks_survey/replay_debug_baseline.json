@@ -1,0 +1,520 @@
+{
+ "summary": {
+  "claude": {
+   "n_debug": 24,
+   "baselined": 24,
+   "sessions_with_changed_files": 24,
+   "pass_expected_value_changed": 0.0,
+   "pass_no_expected_value_change": 0.38,
+   "rule_[sessions,passing]": {
+    "timeout-raised": [
+     7,
+     0
+    ]
+   },
+   "block_rule_sessions": 0,
+   "pass_with_block_rule": null,
+   "pass_without": 0.38
+  },
+  "opencode": {
+   "n_debug": 24,
+   "baselined": 24,
+   "sessions_with_changed_files": 24,
+   "pass_expected_value_changed": 1.0,
+   "pass_no_expected_value_change": 0.3,
+   "rule_[sessions,passing]": {
+    "expected-value-changed": [
+     1,
+     1
+    ],
+    "timeout-raised": [
+     12,
+     1
+    ],
+    "failure-swallowed": [
+     1,
+     0
+    ]
+   },
+   "block_rule_sessions": 1,
+   "pass_with_block_rule": 0.0,
+   "pass_without": 0.35
+  }
+ },
+ "rows": [
+  {
+   "agent": "claude",
+   "arm": "neither",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "files_baselined": 2,
+   "files_changed": 2,
+   "findings": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "mcp",
+   "scenario": "demoshop_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 2,
+   "findings": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "neither",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "files_baselined": 2,
+   "files_changed": 2,
+   "findings": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "mcp",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "files_baselined": 2,
+   "files_changed": 2,
+   "findings": {
+    "expected-value-changed": 1
+   }
+  },
+  {
+   "agent": "opencode",
+   "arm": "skillpkg",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "files_baselined": 2,
+   "files_changed": 2,
+   "findings": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "mcp",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 1,
+   "findings": {
+    "timeout-raised": 1
+   }
+  },
+  {
+   "agent": "opencode",
+   "arm": "neither",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 2,
+   "findings": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "skillpkg",
+   "scenario": "tricentis_debug",
+   "pass": true,
+   "files_baselined": 2,
+   "files_changed": 2,
+   "findings": {
+    "timeout-raised": 1
+   }
+  },
+  {
+   "agent": "opencode",
+   "arm": "neither",
+   "scenario": "demoshop_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 2,
+   "findings": {
+    "failure-swallowed": 2
+   }
+  },
+  {
+   "agent": "opencode",
+   "arm": "skillpkg",
+   "scenario": "demoshop_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 2,
+   "findings": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "mcp",
+   "scenario": "demoshop_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 2,
+   "findings": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "mcp",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 1,
+   "findings": {
+    "timeout-raised": 1
+   }
+  },
+  {
+   "agent": "opencode",
+   "arm": "neither",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 1,
+   "findings": {
+    "timeout-raised": 1
+   }
+  },
+  {
+   "agent": "opencode",
+   "arm": "skillpkg",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 1,
+   "findings": {
+    "timeout-raised": 1
+   }
+  },
+  {
+   "agent": "claude",
+   "arm": "skillpkg",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "files_baselined": 2,
+   "files_changed": 2,
+   "findings": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "neither",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 1,
+   "findings": {
+    "timeout-raised": 1
+   }
+  },
+  {
+   "agent": "claude",
+   "arm": "skillpkg",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 1,
+   "findings": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "mcp",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "files_baselined": 2,
+   "files_changed": 2,
+   "findings": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "skillpkg",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "files_baselined": 2,
+   "files_changed": 2,
+   "findings": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "neither",
+   "scenario": "demoshop_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 2,
+   "findings": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "neither",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 1,
+   "findings": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "mcp",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 1,
+   "findings": {
+    "timeout-raised": 1
+   }
+  },
+  {
+   "agent": "claude",
+   "arm": "skillpkg",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 1,
+   "findings": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "mcp",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 2,
+   "findings": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "mcp",
+   "scenario": "demoshop_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 2,
+   "findings": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "neither",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "files_baselined": 2,
+   "files_changed": 2,
+   "findings": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "skillpkg",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "files_baselined": 2,
+   "files_changed": 2,
+   "findings": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "neither",
+   "scenario": "demoshop_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 2,
+   "findings": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "mcp",
+   "scenario": "demoshop_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 2,
+   "findings": {
+    "timeout-raised": 1
+   }
+  },
+  {
+   "agent": "opencode",
+   "arm": "skillpkg",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "files_baselined": 2,
+   "files_changed": 2,
+   "findings": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "neither",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 1,
+   "findings": {
+    "timeout-raised": 1
+   }
+  },
+  {
+   "agent": "claude",
+   "arm": "skillpkg",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 2,
+   "findings": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "mcp",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 1,
+   "findings": {
+    "timeout-raised": 1
+   }
+  },
+  {
+   "agent": "opencode",
+   "arm": "neither",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 1,
+   "findings": {
+    "timeout-raised": 1
+   }
+  },
+  {
+   "agent": "opencode",
+   "arm": "mcp",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 1,
+   "findings": {
+    "timeout-raised": 1
+   }
+  },
+  {
+   "agent": "opencode",
+   "arm": "skillpkg",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 1,
+   "findings": {
+    "timeout-raised": 1
+   }
+  },
+  {
+   "agent": "claude",
+   "arm": "hookpkg",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "files_baselined": 2,
+   "files_changed": 2,
+   "findings": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "hookpkg",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "files_baselined": 2,
+   "files_changed": 2,
+   "findings": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "hookpkg",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 1,
+   "findings": {
+    "timeout-raised": 1
+   }
+  },
+  {
+   "agent": "opencode",
+   "arm": "hookpkg",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 1,
+   "findings": {
+    "timeout-raised": 1
+   }
+  },
+  {
+   "agent": "claude",
+   "arm": "hookpkg",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "files_baselined": 2,
+   "files_changed": 2,
+   "findings": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "hookpkg",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "files_baselined": 2,
+   "files_changed": 2,
+   "findings": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "hookpkg",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 1,
+   "findings": {
+    "timeout-raised": 1
+   }
+  },
+  {
+   "agent": "opencode",
+   "arm": "hookpkg",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 1,
+   "findings": {
+    "timeout-raised": 1
+   }
+  },
+  {
+   "agent": "claude",
+   "arm": "hookpkg",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "files_baselined": 2,
+   "files_changed": 2,
+   "findings": {}
+  },
+  {
+   "agent": "claude",
+   "arm": "hookpkg",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 1,
+   "findings": {
+    "timeout-raised": 1
+   }
+  },
+  {
+   "agent": "opencode",
+   "arm": "hookpkg",
+   "scenario": "demoshop_debug",
+   "pass": true,
+   "files_baselined": 2,
+   "files_changed": 2,
+   "findings": {}
+  },
+  {
+   "agent": "opencode",
+   "arm": "hookpkg",
+   "scenario": "tricentis_debug",
+   "pass": false,
+   "files_baselined": 2,
+   "files_changed": 1,
+   "findings": {
+    "timeout-raised": 1
+   }
+  }
+ ]
+}

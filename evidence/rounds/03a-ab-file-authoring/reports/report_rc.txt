@@ -1,0 +1,147 @@
+# neither vs rf-mcp vs skillpkg — cross-agent A/B
+
+Source: `results_rc.jsonl` · agents: claude, codex, opencode · scenarios: iframe, apinested, results_complex, browser_dynamic · arms: neither, mcp, skillpkg · max rep: 5
+
+## 1. Data quality
+
+- rows in file: 180 · status: ok=180 · scored (ok, de-duplicated): **180**
+- timeouts: 0 · contaminated (MCP call outside mcp arm, or helper CLI outside skillpkg arm): 0
+- leak-marker hits (agent touched reference/old-eval paths): 0
+- models (agent, requested, seen-in-transcript): claude=claude-haiku-4-5 (seen claude-haiku-4-5) x60; codex=gpt-5.6-luna (seen n/a) x60; opencode=minimax-coding-plan/MiniMax-M2.5 (seen n/a) x60
+- rows whose transcript reports an agent-side error: {'claude': 1}
+
+## 2. Per agent × scenario × arm
+
+`pass` = primary (all graders) pass rate · `chk` = mean fraction of graders passed · tokens are per-CLI accounting (in = uncached input + cache writes; cache = cache reads) — compare within an agent.
+
+| agent | scenario | arm | n | pass | chk | turns | tools | mcp | in_tok | out_tok | cache | cost $ | wall s | TO |
+|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| claude | iframe | neither | 5 | 0.80 | 0.96 | 29.4 | 28.4 | 0.0 | 23.5k | 9.2k | 874.1k | 0.180 | 134 | 0 |
+| claude | iframe | mcp | 5 | 1.00 | 1.00 | 31.0 | 27.6 | 18.2 | 27.8k | 7.7k | 945.0k | 0.188 | 113 | 0 |
+| claude | iframe | skillpkg | 5 | 1.00 | 1.00 | 20.0 | 18.0 | 0.0 | 17.3k | 3.8k | 488.9k | 0.102 | 58 | 0 |
+| claude | apinested | neither | 5 | 0.60 | 0.88 | 13.8 | 12.8 | 0.0 | 17.5k | 5.2k | 343.0k | 0.095 | 58 | 0 |
+| claude | apinested | mcp | 5 | 0.60 | 0.92 | 16.0 | 14.6 | 0.4 | 21.7k | 6.5k | 444.3k | 0.120 | 71 | 0 |
+| claude | apinested | skillpkg | 5 | 0.20 | 0.84 | 15.2 | 13.2 | 0.0 | 20.5k | 5.2k | 357.1k | 0.103 | 68 | 0 |
+| claude | results_complex | neither | 5 | 1.00 | 1.00 | 3.0 | 2.0 | 0.0 | 11.8k | 1.3k | 60.3k | 0.036 | 15 | 0 |
+| claude | results_complex | mcp | 5 | 1.00 | 1.00 | 3.0 | 2.0 | 0.0 | 12.3k | 1.2k | 61.4k | 0.037 | 17 | 0 |
+| claude | results_complex | skillpkg | 5 | 1.00 | 1.00 | 3.0 | 2.0 | 0.0 | 12.0k | 1.1k | 60.8k | 0.036 | 14 | 0 |
+| claude | browser_dynamic | neither | 5 | 0.80 | 0.97 | 13.6 | 12.6 | 0.0 | 13.7k | 3.2k | 317.7k | 0.075 | 94 | 0 |
+| claude | browser_dynamic | mcp | 5 | 1.00 | 1.00 | 19.6 | 16.6 | 9.8 | 20.7k | 4.3k | 534.5k | 0.116 | 62 | 0 |
+| claude | browser_dynamic | skillpkg | 5 | 1.00 | 1.00 | 14.2 | 12.2 | 0.0 | 14.9k | 2.8k | 320.4k | 0.076 | 47 | 0 |
+| codex | iframe | neither | 5 | 1.00 | 1.00 | — | 10.2 | 0.0 | 26.0k | 2.5k | 168.6k | — | 77 | 0 |
+| codex | iframe | mcp | 5 | 1.00 | 1.00 | — | 9.8 | 0.0 | 19.3k | 2.4k | 132.2k | — | 77 | 0 |
+| codex | iframe | skillpkg | 5 | 1.00 | 1.00 | — | 19.2 | 0.0 | 30.6k | 2.9k | 292.3k | — | 98 | 0 |
+| codex | apinested | neither | 5 | 1.00 | 1.00 | — | 9.2 | 0.0 | 26.3k | 2.8k | 142.4k | — | 76 | 0 |
+| codex | apinested | mcp | 5 | 1.00 | 1.00 | — | 7.4 | 0.0 | 17.0k | 2.3k | 108.6k | — | 60 | 0 |
+| codex | apinested | skillpkg | 5 | 1.00 | 1.00 | — | 10.6 | 0.0 | 20.9k | 2.6k | 141.1k | — | 72 | 0 |
+| codex | results_complex | neither | 5 | 0.80 | 0.97 | — | 5.8 | 0.0 | 14.2k | 1.2k | 87.5k | — | 38 | 0 |
+| codex | results_complex | mcp | 5 | 1.00 | 1.00 | — | 5.4 | 0.0 | 12.8k | 1.2k | 80.3k | — | 37 | 0 |
+| codex | results_complex | skillpkg | 5 | 1.00 | 1.00 | — | 12.6 | 0.0 | 22.3k | 2.1k | 161.3k | — | 62 | 0 |
+| codex | browser_dynamic | neither | 5 | 1.00 | 1.00 | — | 4.4 | 0.0 | 11.4k | 1.1k | 66.3k | — | 37 | 0 |
+| codex | browser_dynamic | mcp | 5 | 1.00 | 1.00 | — | 5.4 | 0.0 | 14.2k | 1.4k | 79.6k | — | 46 | 0 |
+| codex | browser_dynamic | skillpkg | 5 | 1.00 | 1.00 | — | 11.6 | 0.0 | 23.1k | 1.9k | 137.7k | — | 66 | 0 |
+| opencode | iframe | neither | 5 | 0.80 | 0.80 | 22.4 | 21.8 | 0.0 | 20.9k | 3.8k | 336.2k | — | 76 | 0 |
+| opencode | iframe | mcp | 5 | 1.00 | 1.00 | 43.8 | 43.2 | 6.8 | 45.9k | 8.6k | 1377.9k | — | 201 | 0 |
+| opencode | iframe | skillpkg | 5 | 1.00 | 1.00 | 11.2 | 10.2 | 0.0 | 16.8k | 1.7k | 137.4k | — | 52 | 0 |
+| opencode | apinested | neither | 5 | 1.00 | 1.00 | 13.0 | 13.8 | 0.0 | 15.0k | 2.5k | 163.6k | — | 38 | 0 |
+| opencode | apinested | mcp | 5 | 1.00 | 1.00 | 10.8 | 11.2 | 0.0 | 14.2k | 2.2k | 248.5k | — | 36 | 0 |
+| opencode | apinested | skillpkg | 5 | 1.00 | 1.00 | 10.2 | 10.6 | 0.0 | 23.4k | 2.7k | 147.2k | — | 52 | 0 |
+| opencode | results_complex | neither | 5 | 1.00 | 1.00 | 6.2 | 5.2 | 0.0 | 11.9k | 1.6k | 61.2k | — | 27 | 0 |
+| opencode | results_complex | mcp | 5 | 1.00 | 1.00 | 7.0 | 6.0 | 0.0 | 12.4k | 1.6k | 141.4k | — | 31 | 0 |
+| opencode | results_complex | skillpkg | 5 | 0.80 | 0.94 | 6.0 | 5.0 | 0.0 | 11.7k | 1.3k | 57.3k | — | 27 | 0 |
+| opencode | browser_dynamic | neither | 5 | 0.20 | 0.87 | 9.6 | 8.6 | 0.0 | 7.6k | 987 | 102.0k | — | 26 | 0 |
+| opencode | browser_dynamic | mcp | 5 | 1.00 | 1.00 | 11.2 | 10.6 | 0.6 | 10.8k | 1.5k | 259.4k | — | 49 | 0 |
+| opencode | browser_dynamic | skillpkg | 5 | 1.00 | 1.00 | 9.6 | 9.2 | 0.0 | 10.1k | 972 | 109.7k | — | 55 | 0 |
+
+Pooled pass rate per arm (all agents × scenarios), 95% Wilson CI:
+
+| arm | n | passes | rate | 95% CI |
+|---|---:|---:|---:|---|
+| neither | 60 | 50 | 0.83 | 0.72–0.91 |
+| mcp | 60 | 58 | 0.97 | 0.89–0.99 |
+| skillpkg | 60 | 55 | 0.92 | 0.82–0.96 |
+
+## 3. Effects on primary pass rate
+
+`Δcell` = equal-weight mean of per-(agent×scenario) rate differences; `Δpool` = difference of pooled rates; Fisher = two-sided exact test on pooled pass/fail counts (ignores strata); sign = exact sign test over cells (+/− cells, ties dropped). **Headroom** = cells where `neither` < 1.00.
+
+| contrast | subset | cells | rate A | rate B | Δcell | Δpool | Fisher p | cells +/− | sign p |
+|---|---|---:|---:|---:|---:|---:|---:|---|---:|
+| **mcp−neither** | all | 12 | 0.97 (58/60) | 0.83 (50/60) | +0.13 | +0.13 | 0.029 | 5/0 | 0.062 |
+| **mcp−neither** | headroom | 6 | 0.93 (28/30) | 0.67 (20/30) | +0.27 | +0.27 | 0.021 | 5/0 | 0.062 |
+| **skillpkg−neither** | all | 12 | 0.92 (55/60) | 0.83 (50/60) | +0.08 | +0.08 | 0.269 | 5/2 | 0.453 |
+| **skillpkg−neither** | headroom | 6 | 0.87 (26/30) | 0.67 (20/30) | +0.20 | +0.20 | 0.125 | 5/1 | 0.219 |
+| **skillpkg−mcp** | all | 12 | 0.92 (55/60) | 0.97 (58/60) | -0.05 | -0.05 | 0.439 | 0/2 | 0.500 |
+| **skillpkg−mcp** | headroom | 6 | 0.87 (26/30) | 0.93 (28/30) | -0.07 | -0.07 | 0.671 | 0/1 | 1.000 |
+
+### 3a. Per agent (pooled over scenarios)
+
+| agent | contrast | rate A | rate B | Δpool (all) | Fisher p | Δpool (headroom) | Fisher p (headroom) |
+|---|---|---:|---:|---:|---:|---:|---:|
+| claude | mcp−neither | 0.90 | 0.80 | +0.10 | 0.661 | +0.13 | 0.651 |
+| claude | skillpkg−neither | 0.80 | 0.80 | +0.00 | 1.000 | +0.00 | 1.000 |
+| claude | skillpkg−mcp | 0.80 | 0.90 | -0.10 | 0.661 | -0.13 | 0.651 |
+| codex | mcp−neither | 1.00 | 0.95 | +0.05 | 1.000 | +0.20 | 1.000 |
+| codex | skillpkg−neither | 1.00 | 0.95 | +0.05 | 1.000 | +0.20 | 1.000 |
+| codex | skillpkg−mcp | 1.00 | 1.00 | +0.00 | 1.000 | +0.00 | 1.000 |
+| opencode | mcp−neither | 1.00 | 0.75 | +0.25 | 0.047 | +0.50 | 0.033 |
+| opencode | skillpkg−neither | 0.95 | 0.75 | +0.20 | 0.182 | +0.50 | 0.033 |
+| opencode | skillpkg−mcp | 0.95 | 1.00 | -0.05 | 1.000 | +0.00 | 1.000 |
+
+### 3b. Per scenario (pooled over agents)
+
+| scenario | mcp−neither Δpool (p) | skillpkg−neither Δpool (p) | skillpkg−mcp Δpool (p) |
+|---|---:|---:|---:|
+| iframe | +0.13 (0.483) | +0.13 (0.483) | +0.00 (1.000) |
+| apinested | +0.00 (1.000) | -0.13 (0.651) | -0.13 (0.651) |
+| results_complex | +0.07 (1.000) | +0.00 (1.000) | -0.07 (1.000) |
+| browser_dynamic | +0.33 (0.042) | +0.33 (0.042) | +0.00 (1.000) |
+
+### 3c. Per cell rates
+
+| agent | scenario | neither | mcp | skillpkg | mcp−neither | skillpkg−neither | skillpkg−mcp |
+|---|---|---:|---:|---:|---:|---:|---:|
+| claude | iframe | 0.80 | 1.00 | 1.00 | +0.20 | +0.20 | +0.00 |
+| claude | apinested | 0.60 | 0.60 | 0.20 | +0.00 | -0.40 | -0.40 |
+| claude | results_complex | 1.00 | 1.00 | 1.00 | +0.00 | +0.00 | +0.00 |
+| claude | browser_dynamic | 0.80 | 1.00 | 1.00 | +0.20 | +0.20 | +0.00 |
+| codex | iframe | 1.00 | 1.00 | 1.00 | +0.00 | +0.00 | +0.00 |
+| codex | apinested | 1.00 | 1.00 | 1.00 | +0.00 | +0.00 | +0.00 |
+| codex | results_complex | 0.80 | 1.00 | 1.00 | +0.20 | +0.20 | +0.00 |
+| codex | browser_dynamic | 1.00 | 1.00 | 1.00 | +0.00 | +0.00 | +0.00 |
+| opencode | iframe | 0.80 | 1.00 | 1.00 | +0.20 | +0.20 | +0.00 |
+| opencode | apinested | 1.00 | 1.00 | 1.00 | +0.00 | +0.00 | +0.00 |
+| opencode | results_complex | 1.00 | 1.00 | 0.80 | +0.00 | -0.20 | -0.20 |
+| opencode | browser_dynamic | 0.20 | 1.00 | 1.00 | +0.80 | +0.80 | +0.00 |
+
+## 4. Efficiency per agent × arm (all scenarios; means per session)
+
+| agent | arm | n | pass | turns | tool calls | in_tok | out_tok | cache | cost $ | wall s |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| claude | neither | 20 | 0.80 | 14.9 | 13.9 | 16.7k | 4.7k | 398.8k | 0.097 | 75 |
+| claude | mcp | 20 | 0.90 | 17.4 | 15.2 | 20.6k | 4.9k | 496.3k | 0.115 | 66 |
+| claude | skillpkg | 20 | 0.80 | 13.1 | 11.3 | 16.2k | 3.2k | 306.8k | 0.079 | 47 |
+| codex | neither | 20 | 0.95 | — | 7.4 | 19.5k | 1.9k | 116.2k | — | 57 |
+| codex | mcp | 20 | 1.00 | — | 7.0 | 15.8k | 1.8k | 100.2k | — | 55 |
+| codex | skillpkg | 20 | 1.00 | — | 13.5 | 24.2k | 2.4k | 183.1k | — | 74 |
+| opencode | neither | 20 | 0.75 | 12.8 | 12.3 | 13.8k | 2.2k | 165.7k | — | 42 |
+| opencode | mcp | 20 | 1.00 | 18.2 | 17.8 | 20.8k | 3.5k | 506.8k | — | 79 |
+| opencode | skillpkg | 20 | 0.95 | 9.2 | 8.8 | 15.5k | 1.7k | 112.9k | — | 47 |
+
+## 5. Engagement
+
+### MCP arm
+
+| agent | n | ≥1 MCP call | mean MCP calls | server connected | top tools |
+|---|---:|---:|---:|---:|---|
+| claude | 20 | 11/20 | 7.1 | 20/20 | find_keywords×68, execute_step×48, analyze_scenario×11, build_test_suite×5, get_keyword_info×5 |
+| codex | 20 | 0/20 | 0.0 | n/a |  |
+| opencode | 20 | 5/20 | 1.9 | n/a | find_keywords×22, get_keyword_info×12, get_locator_guidance×1, analyze_scenario×1, manage_session×1 |
+
+### skillpkg arm
+
+| agent | n | helper used | skill read | mean helper calls | top rfmcp subcmds | hook firings: log / on .robot / transcript | pass if helper used | pass if not |
+|---|---:|---:|---:|---:|---|---|---:|---:|
+| claude | 20 | 14/20 | 15/20 | 5.1 | step×44, run×15, stop×13, state×12 | 1.7 / 1.9 / 1.7 | 0.71 | 1.00 |
+| codex | 20 | 20/20 | 20/20 | 5.6 | step×27, run×27, start×20, stop×20 | 1.8 / 2.0 / 0.0 | 1.00 | — |
+| opencode | 20 | 5/20 | 13/20 | 0.7 | run×6, stop×3, start×2, search×1 | 2.4 / 2.4 / 0.0 | 1.00 | 0.93 |

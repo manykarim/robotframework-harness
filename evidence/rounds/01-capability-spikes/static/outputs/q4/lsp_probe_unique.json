@@ -1,0 +1,88 @@
+[
+ {
+  "rep": 0,
+  "step": "v1 Fill Text missing arg",
+  "last_publish_s": 0.054471062030643225,
+  "publishes": 3,
+  "diags": [
+   "DataError: Keyword 'Browser.Fill Text' expected 2 to 3 arguments, got 1."
+  ]
+ },
+ {
+  "rep": 0,
+  "step": "v2 fixed",
+  "last_publish_s": 0.5046521886251867,
+  "publishes": 3,
+  "diags": []
+ },
+ {
+  "rep": 0,
+  "step": "v3 typo Clik",
+  "last_publish_s": 0.5056959139183164,
+  "publishes": 3,
+  "diags": [
+   "KeywordNotFound: No keyword with name 'Clik' found."
+  ]
+ },
+ {
+  "rep": 0,
+  "step": "v4 add RequestsLibrary + undefined var",
+  "last_publish_s": 0.5130452350713313,
+  "publishes": 3,
+  "diags": [
+   "VariableNotFound: Variable '${body}' not found."
+  ]
+ },
+ {
+  "rep": 0,
+  "step": "v5 selenium kw in browser session",
+  "last_publish_s": 0.5056452988646924,
+  "publishes": 3,
+  "diags": [
+   "KeywordNotFound: No keyword with name 'Input Text' found."
+  ]
+ },
+ {
+  "rep": 1,
+  "step": "v1 Fill Text missing arg",
+  "last_publish_s": 0.5061756167560816,
+  "publishes": 3,
+  "diags": [
+   "DataError: Keyword 'Browser.Fill Text' expected 2 to 3 arguments, got 1."
+  ]
+ },
+ {
+  "rep": 1,
+  "step": "v2 fixed",
+  "last_publish_s": 0.5055368519388139,
+  "publishes": 3,
+  "diags": []
+ },
+ {
+  "rep": 1,
+  "step": "v3 typo Clik",
+  "last_publish_s": 0.5060806511901319,
+  "publishes": 3,
+  "diags": [
+   "KeywordNotFound: No keyword with name 'Clik' found."
+  ]
+ },
+ {
+  "rep": 1,
+  "step": "v4 add RequestsLibrary + undefined var",
+  "last_publish_s": 0.5049394448287785,
+  "publishes": 3,
+  "diags": [
+   "VariableNotFound: Variable '${body}' not found."
+  ]
+ },
+ {
+  "rep": 1,
+  "step": "v5 selenium kw in browser session",
+  "last_publish_s": 0.506266029085964,
+  "publishes": 3,
+  "diags": [
+   "KeywordNotFound: No keyword with name 'Input Text' found."
+  ]
+ }
+]

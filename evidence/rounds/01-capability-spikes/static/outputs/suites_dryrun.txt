@@ -1,0 +1,18 @@
+=== suites/s01_booker_rfmcp_generated_valid.robot
+rc 0 s 0.118
+   PASS Read Booking | 
+   PASS Create New Booking | 
+   PASS Authenticate Admin | 
+   PASS Delete Booking While Authenticated | 
+=== suites/s02_saucedemo_bdd_valid.robot
+rc 0 s 1.046
+   PASS Standard User Adds Backpack To Cart | 
+   PASS Problem User Sorts By Price | 
+=== suites/s03_saucedemo_bdd_broken.robot
+rc 2 s 1.05
+   FAIL Standard User Adds Backpack To Cart | Several failures occurred: /  / 1) No keyword with name 'Input Text' found. /  / 2) No keyword with name 'When the user adds sauce-labs-backpack to the cart' found.
+   FAIL Problem User Sorts By Price | Several failures occurred: /  / 1) Non-existing setting 'Tag'. Did you mean: /     Tags /  / 2) No keyword with name 'Input Text' found. /  / 3) ELSE IF must have a condition.
+=== suites/s04_booker_broken.robot
+rc 2 s 0.104
+   FAIL Authenticate Admin | No keyword with name 'Dictionary Should Contain Key' found.
+   FAIL Delete Booking While Authenticated | Keyword 'RequestsLibrary.Status Should Be' expected 1 to 3 arguments, got 4.

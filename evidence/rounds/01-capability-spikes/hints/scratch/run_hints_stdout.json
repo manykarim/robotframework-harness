@@ -1,0 +1,672 @@
+[
+ {
+  "id": "M01",
+  "native": [
+   "pre_validation_failure",
+   "visibility_hint",
+   "enabled_hint",
+   "pre_validate_timeout_hint"
+  ],
+  "emul": [],
+  "k": [
+   "Element not found \u2014 inspect the page"
+  ],
+  "plain": [
+   "Element not found \u2014 inspect the page"
+  ],
+  "err_only": []
+ },
+ {
+  "id": "M02",
+  "native": [
+   "Selector matches multiple elements",
+   "Element not found \u2014 inspect the page"
+  ],
+  "emul": [
+   "Selector matches multiple elements",
+   "Element not found \u2014 inspect the page"
+  ],
+  "k": [
+   "Selector matches multiple elements",
+   "Element not found \u2014 inspect the page"
+  ],
+  "plain": [
+   "Selector matches multiple elements",
+   "Element not found \u2014 inspect the page"
+  ],
+  "err_only": []
+ },
+ {
+  "id": "M03",
+  "native": [
+   "Click intercepted by overlapping element",
+   "Element not found \u2014 inspect the page"
+  ],
+  "emul": [
+   "Click intercepted by overlapping element",
+   "Element not found \u2014 inspect the page"
+  ],
+  "k": [
+   "Click intercepted by overlapping element",
+   "Element not found \u2014 inspect the page"
+  ],
+  "plain": [
+   "Click intercepted by overlapping element",
+   "Element not found \u2014 inspect the page"
+  ],
+  "err_only": []
+ },
+ {
+  "id": "M04",
+  "native": [
+   "Element is outside the visible viewport",
+   "Element not interactable",
+   "Element not found \u2014 inspect the page"
+  ],
+  "emul": [
+   "Element is outside the visible viewport",
+   "Element not interactable",
+   "Element not found \u2014 inspect the page"
+  ],
+  "k": [
+   "Element is outside the visible viewport",
+   "Element not interactable",
+   "Element not found \u2014 inspect the page"
+  ],
+  "plain": [
+   "Element is outside the visible viewport",
+   "Element not interactable",
+   "Element not found \u2014 inspect the page"
+  ],
+  "err_only": []
+ },
+ {
+  "id": "M05",
+  "native": [
+   "pre_validation_failure",
+   "visibility_hint",
+   "enabled_hint",
+   "pre_validate_timeout_hint"
+  ],
+  "emul": [
+   "Element not found \u2014 inspect the page"
+  ],
+  "k": [
+   "Element not found \u2014 inspect the page"
+  ],
+  "plain": [
+   "Element not found \u2014 inspect the page"
+  ],
+  "err_only": []
+ },
+ {
+  "id": "M06",
+  "native": [
+   "Browser library does not support the `link=` role prefix",
+   "Element not found \u2014 inspect the page"
+  ],
+  "emul": [
+   "Browser library does not support the `link=` role prefix",
+   "Element not found \u2014 inspect the page"
+  ],
+  "k": [
+   "Browser library does not support the `link=` role prefix",
+   "Element not found \u2014 inspect the page"
+  ],
+  "plain": [
+   "Browser library does not support the `link=` role prefix",
+   "Element not found \u2014 inspect the page"
+  ],
+  "err_only": []
+ },
+ {
+  "id": "M07",
+  "native": [
+   "pre_validation_failure",
+   "visibility_hint",
+   "enabled_hint",
+   "pre_validate_timeout_hint",
+   "Browser library does not support the `button=` role prefix"
+  ],
+  "emul": [
+   "Browser library does not support the `button=` role prefix",
+   "Element not found \u2014 inspect the page"
+  ],
+  "k": [
+   "Browser library does not support the `button=` role prefix"
+  ],
+  "plain": [
+   "Browser library does not support the `button=` role prefix"
+  ],
+  "err_only": []
+ },
+ {
+  "id": "M08",
+  "native": [
+   "Evaluate JavaScript: argument-shape mismatch",
+   "Invalid selector syntax"
+  ],
+  "emul": [
+   "Evaluate JavaScript: argument-shape mismatch",
+   "Invalid selector syntax"
+  ],
+  "k": [
+   "Evaluate JavaScript: argument-shape mismatch",
+   "Invalid selector syntax"
+  ],
+  "plain": [
+   "Evaluate JavaScript: argument-shape mismatch",
+   "Invalid selector syntax"
+  ],
+  "err_only": [
+   "Invalid selector syntax"
+  ]
+ },
+ {
+  "id": "M09",
+  "native": [
+   "Keyword Not Found: Use find_keywords to discover"
+  ],
+  "emul": [
+   "Keyword Not Found: Use find_keywords to discover"
+  ],
+  "k": [
+   "Keyword Not Found: Use find_keywords to discover"
+  ],
+  "plain": [
+   "Keyword Not Found: Use find_keywords to discover"
+  ],
+  "err_only": [
+   "Keyword Not Found: Use find_keywords to discover"
+  ]
+ },
+ {
+  "id": "M10",
+  "native": [],
+  "emul": [],
+  "k": [],
+  "plain": [],
+  "err_only": []
+ },
+ {
+  "id": "M11",
+  "native": [],
+  "emul": [],
+  "k": [],
+  "plain": [],
+  "err_only": []
+ },
+ {
+  "id": "M12",
+  "native": [],
+  "emul": [],
+  "k": [],
+  "plain": [],
+  "err_only": []
+ },
+ {
+  "id": "M13",
+  "native": [
+   "pre_validation_failure",
+   "visibility_hint",
+   "enabled_hint",
+   "pre_validate_timeout_hint"
+  ],
+  "emul": [],
+  "k": [],
+  "plain": [],
+  "err_only": []
+ },
+ {
+  "id": "M14",
+  "native": [
+   "Operation timed out"
+  ],
+  "emul": [
+   "Operation timed out"
+  ],
+  "k": [
+   "Operation timed out"
+  ],
+  "plain": [
+   "Operation timed out"
+  ],
+  "err_only": []
+ },
+ {
+  "id": "M15",
+  "native": [],
+  "emul": [],
+  "k": [],
+  "plain": [],
+  "err_only": []
+ },
+ {
+  "id": "M16",
+  "native": [
+   "Keyword Not Found: Use find_keywords to discover"
+  ],
+  "emul": [
+   "Keyword Not Found: Use find_keywords to discover"
+  ],
+  "k": [
+   "Keyword Not Found: Use find_keywords to discover"
+  ],
+  "plain": [
+   "Keyword Not Found: Use find_keywords to discover"
+  ],
+  "err_only": [
+   "Keyword Not Found: Use find_keywords to discover"
+  ]
+ },
+ {
+  "id": "M17",
+  "native": [
+   "pre_validation_failure",
+   "visibility_hint",
+   "enabled_hint",
+   "pre_validate_timeout_hint"
+  ],
+  "emul": [
+   "Invalid selector syntax"
+  ],
+  "k": [
+   "Invalid selector syntax"
+  ],
+  "plain": [
+   "Invalid selector syntax"
+  ],
+  "err_only": [
+   "Invalid selector syntax"
+  ]
+ },
+ {
+  "id": "M18",
+  "native": [],
+  "emul": null,
+  "k": null,
+  "plain": null,
+  "err_only": null
+ },
+ {
+  "id": "M18b",
+  "native": [],
+  "emul": null,
+  "k": [
+   "Keyword Ambiguity: Specify full library.keyword name"
+  ],
+  "plain": [
+   "Keyword Ambiguity: Specify full library.keyword name"
+  ],
+  "err_only": [
+   "Keyword Ambiguity: Specify full library.keyword name"
+  ]
+ },
+ {
+  "id": "M19",
+  "native": [
+   "Element not found \u2014 inspect the page"
+  ],
+  "emul": [
+   "Element not found \u2014 inspect the page"
+  ],
+  "k": [
+   "Element not found \u2014 inspect the page"
+  ],
+  "plain": [
+   "Element not found \u2014 inspect the page"
+  ],
+  "err_only": []
+ },
+ {
+  "id": "M20",
+  "native": [
+   "Selector matches multiple elements",
+   "Element not found \u2014 inspect the page"
+  ],
+  "emul": [
+   "Selector matches multiple elements",
+   "Element not found \u2014 inspect the page"
+  ],
+  "k": [
+   "Selector matches multiple elements",
+   "Element not found \u2014 inspect the page"
+  ],
+  "plain": [
+   "Selector matches multiple elements",
+   "Element not found \u2014 inspect the page"
+  ],
+  "err_only": []
+ },
+ {
+  "id": "M21",
+  "native": [
+   "pre_validation_failure",
+   "visibility_hint",
+   "pre_validate_timeout_hint"
+  ],
+  "emul": [],
+  "k": [
+   "Element not interactable",
+   "Element not found \u2014 inspect the page"
+  ],
+  "plain": [
+   "Element not interactable",
+   "Element not found \u2014 inspect the page"
+  ],
+  "err_only": []
+ },
+ {
+  "id": "M22",
+  "native": [
+   "pre_validation_failure",
+   "visibility_hint",
+   "enabled_hint",
+   "pre_validate_timeout_hint"
+  ],
+  "emul": [
+   "Invalid selector syntax"
+  ],
+  "k": [
+   "Invalid selector syntax"
+  ],
+  "plain": [
+   "Invalid selector syntax"
+  ],
+  "err_only": [
+   "Invalid selector syntax"
+  ]
+ },
+ {
+  "id": "M23",
+  "native": [],
+  "emul": null,
+  "k": [
+   "Keyword Not Found: Use find_keywords to discover"
+  ],
+  "plain": [
+   "Keyword Not Found: Use find_keywords to discover"
+  ],
+  "err_only": [
+   "Keyword Not Found: Use find_keywords to discover"
+  ]
+ },
+ {
+  "id": "M24",
+  "native": [],
+  "emul": null,
+  "k": [],
+  "plain": [],
+  "err_only": []
+ },
+ {
+  "id": "M25",
+  "native": [],
+  "emul": [],
+  "k": [],
+  "plain": [],
+  "err_only": []
+ },
+ {
+  "id": "M26",
+  "native": [
+   "RequestsLibrary: Handle HTTPError responses"
+  ],
+  "emul": [
+   "RequestsLibrary: Handle HTTPError responses"
+  ],
+  "k": [
+   "RequestsLibrary: Handle HTTPError responses"
+  ],
+  "plain": [
+   "RequestsLibrary: Handle HTTPError responses"
+  ],
+  "err_only": []
+ },
+ {
+  "id": "M27",
+  "native": [
+   "RequestsLibrary: Alias first, then relative path"
+  ],
+  "emul": [
+   "RequestsLibrary: Alias first, then relative path"
+  ],
+  "k": [
+   "RequestsLibrary: Alias first, then relative path"
+  ],
+  "plain": [],
+  "err_only": []
+ },
+ {
+  "id": "M28",
+  "native": [
+   "RequestsLibrary: Provide a full URL or use sessions",
+   "RequestsLibrary: Use Create Session + Get On Session"
+  ],
+  "emul": [
+   "RequestsLibrary: Provide a full URL or use sessions",
+   "RequestsLibrary: Use Create Session + Get On Session"
+  ],
+  "k": [
+   "RequestsLibrary: Provide a full URL or use sessions",
+   "RequestsLibrary: Use Create Session + Get On Session"
+  ],
+  "plain": [
+   "RequestsLibrary: Provide a full URL or use sessions",
+   "RequestsLibrary: Use Create Session + Get On Session"
+  ],
+  "err_only": []
+ },
+ {
+  "id": "M29",
+  "native": [
+   "RequestsLibrary: Headers must be a DICTIONARY, not a string",
+   "RequestsLibrary: Pass named args as 'name=value'"
+  ],
+  "emul": [
+   "RequestsLibrary: Headers must be a DICTIONARY, not a string",
+   "RequestsLibrary: Pass named args as 'name=value'"
+  ],
+  "k": [
+   "RequestsLibrary: Headers must be a DICTIONARY, not a string",
+   "RequestsLibrary: Pass named args as 'name=value'"
+  ],
+  "plain": [
+   "RequestsLibrary: Headers must be a DICTIONARY, not a string",
+   "RequestsLibrary: Pass named args as 'name=value'"
+  ],
+  "err_only": [
+   "RequestsLibrary: Headers must be a DICTIONARY, not a string"
+  ]
+ },
+ {
+  "id": "M30",
+  "native": [
+   "RequestsLibrary: Handle HTTPError responses",
+   "RequestsLibrary: POST/PUT payload guidance",
+   "RequestsLibrary: Pass named args as 'name=value'"
+  ],
+  "emul": [
+   "RequestsLibrary: Handle HTTPError responses",
+   "RequestsLibrary: POST/PUT payload guidance",
+   "RequestsLibrary: Pass named args as 'name=value'"
+  ],
+  "k": [
+   "RequestsLibrary: Handle HTTPError responses",
+   "RequestsLibrary: POST/PUT payload guidance",
+   "RequestsLibrary: Pass named args as 'name=value'"
+  ],
+  "plain": [
+   "RequestsLibrary: Handle HTTPError responses",
+   "RequestsLibrary: POST/PUT payload guidance",
+   "RequestsLibrary: Pass named args as 'name=value'"
+  ],
+  "err_only": []
+ },
+ {
+  "id": "M31",
+  "native": [
+   "Dictionary Access: Use bracket notation, not dot notation"
+  ],
+  "emul": [
+   "Dictionary Access: Use bracket notation, not dot notation"
+  ],
+  "k": [
+   "Dictionary Access: Use bracket notation, not dot notation"
+  ],
+  "plain": [
+   "Dictionary Access: Use bracket notation, not dot notation"
+  ],
+  "err_only": [
+   "Dictionary Access: Use bracket notation, not dot notation"
+  ]
+ },
+ {
+  "id": "M32",
+  "native": [
+   "Method Call Syntax: Call methods with parentheses"
+  ],
+  "emul": [
+   "Method Call Syntax: Call methods with parentheses"
+  ],
+  "k": [
+   "Method Call Syntax: Call methods with parentheses"
+  ],
+  "plain": [
+   "Method Call Syntax: Call methods with parentheses"
+  ],
+  "err_only": [
+   "Method Call Syntax: Call methods with parentheses"
+  ]
+ },
+ {
+  "id": "M33",
+  "native": [],
+  "emul": [],
+  "k": [],
+  "plain": [],
+  "err_only": []
+ },
+ {
+  "id": "M34",
+  "native": [],
+  "emul": [],
+  "k": [],
+  "plain": [],
+  "err_only": []
+ },
+ {
+  "id": "M35",
+  "native": [],
+  "emul": [],
+  "k": [],
+  "plain": [],
+  "err_only": []
+ },
+ {
+  "id": "M36",
+  "native": [],
+  "emul": [],
+  "k": [],
+  "plain": [],
+  "err_only": []
+ },
+ {
+  "id": "M37",
+  "native": [
+   "Evaluate: Use Python booleans or json.loads",
+   "Evaluate: Use $var inside expressions"
+  ],
+  "emul": [
+   "Evaluate: Use Python booleans or json.loads",
+   "Evaluate: Use $var inside expressions"
+  ],
+  "k": [
+   "Evaluate: Use Python booleans or json.loads",
+   "Evaluate: Use $var inside expressions"
+  ],
+  "plain": [
+   "Evaluate: Use Python booleans or json.loads",
+   "Evaluate: Use $var inside expressions"
+  ],
+  "err_only": []
+ },
+ {
+  "id": "M38",
+  "native": [
+   "Evaluate: Use $var inside expressions"
+  ],
+  "emul": [
+   "Evaluate: Use $var inside expressions"
+  ],
+  "k": [
+   "Evaluate: Use $var inside expressions"
+  ],
+  "plain": [
+   "Evaluate: Use $var inside expressions"
+  ],
+  "err_only": []
+ },
+ {
+  "id": "M39",
+  "native": [
+   "Keyword Correction: BuiltIn.Create List"
+  ],
+  "emul": [
+   "Keyword Correction: BuiltIn.Create List"
+  ],
+  "k": [
+   "Keyword Correction: BuiltIn.Create List"
+  ],
+  "plain": [
+   "Keyword Correction: BuiltIn.Create List"
+  ],
+  "err_only": [
+   "Keyword Correction: BuiltIn.Create List"
+  ]
+ },
+ {
+  "id": "M40",
+  "native": [
+   "RequestsLibrary: Headers must be a DICTIONARY, not a string"
+  ],
+  "emul": [
+   "RequestsLibrary: Headers must be a DICTIONARY, not a string"
+  ],
+  "k": [],
+  "plain": [],
+  "err_only": []
+ },
+ {
+  "id": "M41",
+  "native": [
+   "Process argument may be parsed as a named argument"
+  ],
+  "emul": [
+   "Process argument may be parsed as a named argument"
+  ],
+  "k": [
+   "Process argument may be parsed as a named argument"
+  ],
+  "plain": [
+   "Process argument may be parsed as a named argument"
+  ],
+  "err_only": []
+ },
+ {
+  "id": "M42",
+  "native": [],
+  "emul": [],
+  "k": [],
+  "plain": [],
+  "err_only": []
+ },
+ {
+  "id": "M43",
+  "native": [],
+  "emul": [],
+  "k": [],
+  "plain": [],
+  "err_only": []
+ }
+]

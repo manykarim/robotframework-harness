@@ -1,0 +1,11 @@
+initialize 0.82s
+rep0 v1 Fill Text missing arg                   last publish 0.054s (3) ["DataError: Keyword 'Browser.Fill Text' expected 2 to 3 arguments, got 1."]
+rep0 v2 fixed                                   last publish 0.505s (3) []
+rep0 v3 typo Clik                               last publish 0.506s (3) ["KeywordNotFound: No keyword with name 'Clik' found."]
+rep0 v4 add RequestsLibrary + undefined var     last publish 0.513s (3) ["VariableNotFound: Variable '${body}' not found."]
+rep0 v5 selenium kw in browser session          last publish 0.506s (3) ["KeywordNotFound: No keyword with name 'Input Text' found."]
+rep1 v1 Fill Text missing arg                   last publish 0.506s (3) ["DataError: Keyword 'Browser.Fill Text' expected 2 to 3 arguments, got 1."]
+rep1 v2 fixed                                   last publish 0.506s (3) []
+rep1 v3 typo Clik                               last publish 0.506s (3) ["KeywordNotFound: No keyword with name 'Clik' found."]
+rep1 v4 add RequestsLibrary + undefined var     last publish 0.505s (3) ["VariableNotFound: Variable '${body}' not found."]
+rep1 v5 selenium kw in browser session          last publish 0.506s (3) ["KeywordNotFound: No keyword with name 'Input Text' found."]

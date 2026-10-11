@@ -1,0 +1,62 @@
+{
+ "init_s": 0.8117146887816489,
+ "capabilities": [
+  "codeActionProvider",
+  "codeLensProvider",
+  "completionProvider",
+  "definitionProvider",
+  "diagnosticProvider",
+  "documentFormattingProvider",
+  "documentHighlightProvider",
+  "documentRangeFormattingProvider",
+  "executeCommandProvider",
+  "foldingRangeProvider",
+  "hoverProvider",
+  "implementationProvider",
+  "inlayHintProvider",
+  "inlineValueProvider",
+  "referencesProvider",
+  "renameProvider",
+  "selectionRangeProvider",
+  "semanticTokensProvider",
+  "signatureHelpProvider",
+  "textDocumentSync",
+  "workspace"
+ ],
+ "rows": [
+  {
+   "step": "v1 Fill Text missing arg",
+   "diag_s": 0.013995657674968243,
+   "publishes": 1,
+   "diags": []
+  },
+  {
+   "step": "v2 fixed",
+   "diag_s": 0.0038700709119439125,
+   "publishes": 1,
+   "diags": []
+  },
+  {
+   "step": "v3 typo Clik",
+   "diag_s": 0.0023142057470977306,
+   "publishes": 1,
+   "diags": []
+  },
+  {
+   "step": "v4 add RequestsLibrary + undefined var",
+   "diag_s": 0.0031326808966696262,
+   "publishes": 1,
+   "diags": []
+  },
+  {
+   "step": "v5 selenium kw in browser session",
+   "diag_s": 0.002515769097954035,
+   "publishes": 1,
+   "diags": []
+  }
+ ],
+ "completion_s": 0.25221559358760715,
+ "completion_items": 300,
+ "hover_s": 0.023510687984526157,
+ "hover_chars": 1448
+}

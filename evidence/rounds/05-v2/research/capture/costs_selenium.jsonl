@@ -1,0 +1,28 @@
+{"label": "index", "op": "get_location", "n": 6, "median_ms": 6.4, "min_ms": 6.0, "max_ms": 8.8, "bytes": 105}
+{"label": "index", "op": "get_title", "n": 6, "median_ms": 6.1, "min_ms": 5.6, "max_ms": 6.8, "bytes": 11}
+{"label": "index", "op": "get_source", "n": 6, "median_ms": 4.2, "min_ms": 3.9, "max_ms": 5.3, "bytes": 3207, "has:Pay now": false, "has:Shadow Button": false, "has:Card number": false}
+{"label": "index", "op": "controls_js", "n": 6, "median_ms": 8.9, "min_ms": 7.5, "max_ms": 14.4, "bytes": 202, "rows": 4, "total": 4, "has:Pay now": false, "has:Shadow Button": false, "has:Card number": false}
+{"label": "index", "op": "screenshot_png", "n": 6, "median_ms": 77.7, "min_ms": 61.4, "max_ms": 98.4, "bytes": 59597}
+{"label": "index", "op": "screenshot_cdp_jpeg60", "n": 6, "median_ms": 56.2, "min_ms": 43.7, "max_ms": 78.5, "bytes": 46161}
+{"label": "index", "op": "cdp_full_ax_tree", "n": 6, "median_ms": 39.5, "min_ms": 31.8, "max_ms": 53.0, "bytes": 87413}
+{"label": "form", "op": "get_location", "n": 6, "median_ms": 6.9, "min_ms": 6.1, "max_ms": 11.5, "bytes": 104}
+{"label": "form", "op": "get_title", "n": 6, "median_ms": 6.8, "min_ms": 5.9, "max_ms": 7.9, "bytes": 7}
+{"label": "form", "op": "get_source", "n": 6, "median_ms": 4.2, "min_ms": 3.8, "max_ms": 5.2, "bytes": 607, "has:Pay now": false, "has:Shadow Button": false, "has:Card number": false}
+{"label": "form", "op": "controls_js", "n": 6, "median_ms": 9.0, "min_ms": 8.8, "max_ms": 10.8, "bytes": 216, "rows": 4, "total": 4, "has:Pay now": false, "has:Shadow Button": false, "has:Card number": false}
+{"label": "form", "op": "screenshot_png", "n": 6, "median_ms": 67.9, "min_ms": 37.6, "max_ms": 83.1, "bytes": 6945}
+{"label": "form", "op": "screenshot_cdp_jpeg60", "n": 6, "median_ms": 59.7, "min_ms": 40.6, "max_ms": 66.7, "bytes": 7446}
+{"label": "form", "op": "cdp_full_ax_tree", "n": 6, "median_ms": 9.3, "min_ms": 8.1, "max_ms": 10.4, "bytes": 12674}
+{"label": "frames", "op": "get_location", "n": 6, "median_ms": 7.1, "min_ms": 6.3, "max_ms": 8.9, "bytes": 106}
+{"label": "frames", "op": "get_title", "n": 6, "median_ms": 6.5, "min_ms": 5.9, "max_ms": 7.0, "bytes": 9}
+{"label": "frames", "op": "get_source", "n": 6, "median_ms": 3.9, "min_ms": 3.5, "max_ms": 4.7, "bytes": 445, "has:Pay now": false, "has:Shadow Button": true, "has:Card number": false}
+{"label": "frames", "op": "controls_js", "n": 6, "median_ms": 9.8, "min_ms": 7.7, "max_ms": 10.4, "bytes": 187, "rows": 3, "total": 3, "has:Pay now": false, "has:Shadow Button": true, "has:Card number": false}
+{"label": "frames", "op": "screenshot_png", "n": 6, "median_ms": 64.9, "min_ms": 48.2, "max_ms": 72.0, "bytes": 12805}
+{"label": "frames", "op": "screenshot_cdp_jpeg60", "n": 6, "median_ms": 50.3, "min_ms": 31.9, "max_ms": 66.2, "bytes": 12322}
+{"label": "frames", "op": "cdp_full_ax_tree", "n": 6, "median_ms": 7.4, "min_ms": 5.4, "max_ms": 7.6, "bytes": 6990}
+{"label": "big", "op": "get_location", "n": 6, "median_ms": 6.8, "min_ms": 6.0, "max_ms": 11.3, "bytes": 106}
+{"label": "big", "op": "get_title", "n": 6, "median_ms": 7.7, "min_ms": 7.3, "max_ms": 8.7, "bytes": 6}
+{"label": "big", "op": "get_source", "n": 6, "median_ms": 33.6, "min_ms": 31.0, "max_ms": 37.0, "bytes": 246881, "has:Pay now": false, "has:Shadow Button": false, "has:Card number": false}
+{"label": "big", "op": "controls_js", "n": 6, "median_ms": 29.6, "min_ms": 28.4, "max_ms": 38.5, "bytes": 7266, "rows": 150, "total": 1204, "has:Pay now": false, "has:Shadow Button": false, "has:Card number": false}
+{"label": "big", "op": "screenshot_png", "n": 6, "median_ms": 69.1, "min_ms": 65.6, "max_ms": 85.7, "bytes": 63164}
+{"label": "big", "op": "screenshot_cdp_jpeg60", "n": 6, "median_ms": 63.4, "min_ms": 55.9, "max_ms": 105.3, "bytes": 136879}
+{"label": "big", "op": "cdp_full_ax_tree", "n": 6, "median_ms": 1212.1, "min_ms": 1155.3, "max_ms": 1275.6, "bytes": 5120479}

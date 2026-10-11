@@ -1,0 +1,1 @@
+{"label": "self", "port": 6849, "ctx": {"pid": 3579458, "ppid": 1898, "sid": 3579457, "pgid": 3579457, "cgroup": "0::/user.slice/user-1000.slice/user@1000.service/app.slice/app-org.gnome.Terminal.slice/vte-spawn-44fc7cd1-0293-4c38-b998-795f96d206e2.scope", "pidns": "pid:[4026531836]", "netns": "net:[4026531840]"}, "unix": "ok", "tcp": "ok", "started": 1790836651.441429}

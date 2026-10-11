@@ -1,0 +1,17 @@
+{"rule": "unknown_kw", "msg": "[ FAIL ] No keyword with name 'Clik' found. Did you mean:", "doc": "did you mean: Browser.Click(selector, button=left)"}
+{"rule": "unknown_kw", "msg": "[ FAIL ] No keyword with name 'Click Element' found. Did you try using keyword 'Browser.Click' and forgot to use enough whitespace between keyword and arguments", "doc": "Browser equivalent of SeleniumLibrary 'Click Element': Click"}
+{"rule": "arg_count", "msg": "[ FAIL ] Keyword 'Browser.Click' expected 1 to 2 arguments, got 0.", "doc": "Browser.Click(selector, button=left)"}
+{"rule": "arg_count", "msg": "[ FAIL ] Keyword 'Browser.Click' expected 1 to 2 arguments, got 9.", "doc": "Browser.Click(selector, button=left)"}
+{"rule": "bad_named_arg_as_positional", "msg": "[ FAIL ] 'str' object cannot be interpreted as an integer"}
+{"rule": "bad_value", "msg": "[ FAIL ] ValueError: Argument 'state' got value 'visable' that cannot be converted to ElementState: ElementState does not have member 'visable'. Available: 'att"}
+{"rule": "bad_value", "msg": "[ FAIL ] ValueError: Argument 'timeout' got value 'abc' that cannot be converted to timedelta or None."}
+{"rule": "assertion_text", "msg": "[ FAIL ] Text '' (str) should be 'x' (str)"}
+{"rule": "var_not_found", "msg": "[ FAIL ] Variable '${undefined_var}' not found."}
+{"rule": "import_lib_failed", "msg": "[ FAIL ] Importing library 'NoSuchLibrary' failed: ModuleNotFoundError: No module named 'NoSuchLibrary'"}
+{"rule": "resource_missing", "msg": "[ FAIL ] Resource file '~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round5/research/docs/missing.resource' does not exist."}
+{"rule": "lib_reimport_ignored", "msg": "[ WARN ] Error in file '~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round5/research/docs/resources/shop.resource' on line 3: Suite 'Repl "}
+{"rule": "navigation_error", "msg": "[ FAIL ] Error: page.goto: net::ERR_FILE_NOT_FOUND at file:///tmp/index.html"}
+{"rule": "arg_count", "msg": "[ FAIL ] Keyword 'shop.Add Product To Cart' expected 1 to 2 arguments, got 0.", "doc": "shop.Add Product To Cart(index, expected_count=1)"}
+{"rule": "strict_mode", "msg": "[ FAIL ] Error: locator.evaluate: Error: strict mode violation: locator('label') resolved to 2 elements:"}
+{"rule": "assertion_text", "msg": "[ FAIL ] 1 != 2"}
+classified 16 in 50.6 ms

@@ -1,0 +1,1078 @@
+[
+ {
+  "id": "b01_typo_keyword",
+  "env": "rcexp",
+  "cls": "keyword-typo",
+  "expect": "error",
+  "analyze_exit": 1,
+  "analyze_s": 0.813,
+  "analyze_chars": 311,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "KeywordNotFound",
+    "sev": 1,
+    "line": 6,
+    "msg": "No keyword with name 'Shuold Be Equal' found."
+   }
+  ],
+  "dryrun_rc": 1,
+  "dryrun_s": 0.304,
+  "dryrun_verdict": "error",
+  "dryrun_msgs": [
+   "Step: No keyword with name 'Shuold Be Equal' found. Did you mean:\n    BuiltIn.Should Be Equal"
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b02_too_few_args",
+  "env": "rcexp",
+  "cls": "arg-count",
+  "expect": "error",
+  "analyze_exit": 1,
+  "analyze_s": 0.842,
+  "analyze_chars": 328,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "DataError",
+    "sev": 1,
+    "line": 6,
+    "msg": "Keyword 'BuiltIn.Should Be Equal' expected 2 to 10 arguments, got 1."
+   }
+  ],
+  "dryrun_rc": 1,
+  "dryrun_s": 0.326,
+  "dryrun_verdict": "error",
+  "dryrun_msgs": [
+   "Step: Keyword 'BuiltIn.Should Be Equal' expected 2 to 10 arguments, got 1."
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b03_too_many_args",
+  "env": "rcexp",
+  "cls": "arg-count",
+  "expect": "error",
+  "analyze_exit": 1,
+  "analyze_s": 0.863,
+  "analyze_chars": 316,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "DataError",
+    "sev": 1,
+    "line": 6,
+    "msg": "Keyword 'BuiltIn.Log' expected 1 to 6 arguments, got 8."
+   }
+  ],
+  "dryrun_rc": 1,
+  "dryrun_s": 0.371,
+  "dryrun_verdict": "error",
+  "dryrun_msgs": [
+   "Step: Keyword 'BuiltIn.Log' expected 1 to 6 arguments, got 8."
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b04_unknown_named_arg",
+  "env": "rcexp",
+  "cls": "named-arg",
+  "expect": "error",
+  "analyze_exit": 1,
+  "analyze_s": 0.795,
+  "analyze_chars": 342,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "DataError",
+    "sev": 1,
+    "line": 6,
+    "msg": "Keyword 'BuiltIn.Should Be Equal' got unexpected named argument 'ignor_case'."
+   }
+  ],
+  "dryrun_rc": 1,
+  "dryrun_s": 0.304,
+  "dryrun_verdict": "error",
+  "dryrun_msgs": [
+   "Step: Keyword 'BuiltIn.Should Be Equal' got unexpected named argument 'ignor_case'."
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b05_undefined_variable",
+  "env": "rcexp",
+  "cls": "variable",
+  "expect": "error",
+  "analyze_exit": 1,
+  "analyze_s": 0.772,
+  "analyze_chars": 312,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "VariableNotFound",
+    "sev": 1,
+    "line": 6,
+    "msg": "Variable '${undefined_var}' not found."
+   }
+  ],
+  "dryrun_rc": 0,
+  "dryrun_s": 0.304,
+  "dryrun_verdict": "ok",
+  "dryrun_msgs": [],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b06_missing_library_import",
+  "env": "rcexp",
+  "cls": "import",
+  "expect": "error",
+  "analyze_exit": 1,
+  "analyze_s": 0.796,
+  "analyze_chars": 327,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "KeywordNotFound",
+    "sev": 1,
+    "line": 6,
+    "msg": "No keyword with name 'Convert To Upper Case' found."
+   }
+  ],
+  "dryrun_rc": 1,
+  "dryrun_s": 0.332,
+  "dryrun_verdict": "error",
+  "dryrun_msgs": [
+   "Step: No keyword with name 'Convert To Upper Case' found."
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b07_browser_kw_with_selenium_only",
+  "env": "wt",
+  "cls": "wrong-library",
+  "expect": "error",
+  "analyze_exit": 1,
+  "analyze_s": 4.456,
+  "analyze_chars": 322,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "KeywordNotFound",
+    "sev": 1,
+    "line": 6,
+    "msg": "No keyword with name 'Fill Text' found."
+   }
+  ],
+  "dryrun_rc": 1,
+  "dryrun_s": 0.457,
+  "dryrun_verdict": "error",
+  "dryrun_msgs": [
+   "Step: No keyword with name 'Fill Text' found."
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b08_ambiguous_two_custom_libs",
+  "env": "rcexp",
+  "cls": "ambiguous",
+  "expect": "error",
+  "analyze_exit": 1,
+  "analyze_s": 2.763,
+  "analyze_chars": 414,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "MultipleKeywords",
+    "sev": 1,
+    "line": 7,
+    "msg": "Multiple keywords with name 'Do Thing' found. Give the full name of the keyword you want to use:"
+   }
+  ],
+  "dryrun_rc": 1,
+  "dryrun_s": 0.349,
+  "dryrun_verdict": "error",
+  "dryrun_msgs": [
+   "Step: Multiple keywords with name 'Do Thing' found. Give the full name of the keyword you want to use:\n    LibA.Do Thing\n    LibB.Do Thing"
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b09_ambiguous_browser_selenium",
+  "env": "wt",
+  "cls": "ambiguous",
+  "expect": "error",
+  "analyze_exit": 1,
+  "analyze_s": 2.397,
+  "analyze_chars": 429,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "MultipleKeywords",
+    "sev": 1,
+    "line": 7,
+    "msg": "Multiple keywords with name 'Get Text' found. Give the full name of the keyword you want to use:"
+   }
+  ],
+  "dryrun_rc": 1,
+  "dryrun_s": 0.629,
+  "dryrun_verdict": "error",
+  "dryrun_msgs": [
+   "Step: Multiple keywords with name 'Get Text' found. Give the full name of the keyword you want to use:\n    Browser.Get Text\n    SeleniumLibrary.Get Text",
+   "ERROR: Calling method '_end_test' of listener 'Browser' failed: ",
+   "ERROR: Calling method '_end_suite' of listener 'Browser' failed: "
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b10_bad_embedded_call",
+  "env": "rcexp",
+  "cls": "embedded",
+  "expect": "error",
+  "analyze_exit": 1,
+  "analyze_s": 1.861,
+  "analyze_chars": 337,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "KeywordNotFound",
+    "sev": 1,
+    "line": 6,
+    "msg": "No keyword with name 'The User Adds many Items To The Cart' found."
+   }
+  ],
+  "dryrun_rc": 1,
+  "dryrun_s": 0.299,
+  "dryrun_verdict": "error",
+  "dryrun_msgs": [
+   "Step: No keyword with name 'The User Adds many Items To The Cart' found."
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b11_invalid_for",
+  "env": "rcexp",
+  "cls": "syntax-for",
+  "expect": "error",
+  "analyze_exit": 1,
+  "analyze_s": 0.8,
+  "analyze_chars": 306,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "ModelError",
+    "sev": 1,
+    "line": 6,
+    "msg": "FOR loop has no 'IN' or other valid separator."
+   }
+  ],
+  "dryrun_rc": 1,
+  "dryrun_s": 0.384,
+  "dryrun_verdict": "error",
+  "dryrun_msgs": [
+   "Step: FOR loop has no 'IN' or other valid separator."
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b12_for_missing_end",
+  "env": "rcexp",
+  "cls": "syntax-for",
+  "expect": "error",
+  "analyze_exit": 1,
+  "analyze_s": 0.822,
+  "analyze_chars": 295,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "ModelError",
+    "sev": 1,
+    "line": 6,
+    "msg": "FOR loop must have closing END."
+   }
+  ],
+  "dryrun_rc": 1,
+  "dryrun_s": 0.294,
+  "dryrun_verdict": "error",
+  "dryrun_msgs": [
+   "Step: FOR loop must have closing END."
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b13_invalid_if",
+  "env": "rcexp",
+  "cls": "syntax-if",
+  "expect": "error",
+  "analyze_exit": 1,
+  "analyze_s": 0.799,
+  "analyze_chars": 457,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "ModelError",
+    "sev": 1,
+    "line": 6,
+    "msg": "ELSE IF not allowed after ELSE."
+   },
+   {
+    "code": "ModelError",
+    "sev": 1,
+    "line": 6,
+    "msg": "IF must have a condition."
+   }
+  ],
+  "dryrun_rc": 1,
+  "dryrun_s": 0.291,
+  "dryrun_verdict": "error",
+  "dryrun_msgs": [
+   "Step: Multiple errors:\n- IF must have a condition.\n- ELSE IF not allowed after ELSE."
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b14_wrong_setting_name",
+  "env": "rcexp",
+  "cls": "setting",
+  "expect": "error",
+  "analyze_exit": 1,
+  "analyze_s": 0.803,
+  "analyze_chars": 526,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "TokenError",
+    "sev": 1,
+    "line": 2,
+    "msg": "Non-existing setting 'Test Setupp'. Did you mean:"
+   },
+   {
+    "code": "TokenError",
+    "sev": 1,
+    "line": 6,
+    "msg": "Non-existing setting 'Tag'. Did you mean:"
+   }
+  ],
+  "dryrun_rc": 1,
+  "dryrun_s": 0.31,
+  "dryrun_verdict": "error",
+  "dryrun_msgs": [
+   "T: Non-existing setting 'Tag'. Did you mean:\n    Tags",
+   "ERROR: Error in file '~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/cases/b14_wrong_setting_name.robot' on line 2: Non-existing setting 'Test Setupp'. Did you mean:"
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b15_resource_path_wrong",
+  "env": "rcexp",
+  "cls": "import",
+  "expect": "error",
+  "analyze_exit": 1,
+  "analyze_s": 0.808,
+  "analyze_chars": 327,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "DataError",
+    "sev": 1,
+    "line": 2,
+    "msg": "Resource file 'resources/nonexist.resource' does not exist."
+   }
+  ],
+  "dryrun_rc": 0,
+  "dryrun_s": 0.307,
+  "dryrun_verdict": "error",
+  "dryrun_msgs": [
+   "ERROR: Error in file '~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/cases/b15_resource_path_wrong.robot' on line 2: Resource file 'resources/nonexist.resource' does not exist."
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b16_browser_missing_arg",
+  "env": "rcexp",
+  "cls": "arg-count",
+  "expect": "error",
+  "analyze_exit": 1,
+  "analyze_s": 0.841,
+  "analyze_chars": 328,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "DataError",
+    "sev": 1,
+    "line": 6,
+    "msg": "Keyword 'Browser.Fill Text' expected 2 to 3 arguments, got 1."
+   }
+  ],
+  "dryrun_rc": 1,
+  "dryrun_s": 1.519,
+  "dryrun_verdict": "error",
+  "dryrun_msgs": [
+   "Step: Keyword 'Browser.Fill Text' expected 2 to 3 arguments, got 1."
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b17_browser_positional_after_named",
+  "env": "rcexp",
+  "cls": "named-arg",
+  "expect": "error",
+  "analyze_exit": 1,
+  "analyze_s": 0.851,
+  "analyze_chars": 347,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "DataError",
+    "sev": 1,
+    "line": 6,
+    "msg": "Keyword 'Browser.New Page' got unexpected named argument 'wait_untl'."
+   }
+  ],
+  "dryrun_rc": 1,
+  "dryrun_s": 1.397,
+  "dryrun_verdict": "error",
+  "dryrun_msgs": [
+   "Step: Keyword 'Browser.New Page' got unexpected named argument 'wait_untl'."
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b18_requests_missing_url",
+  "env": "rcexp",
+  "cls": "arg-count",
+  "expect": "error",
+  "analyze_exit": 1,
+  "analyze_s": 1.958,
+  "analyze_chars": 343,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "DataError",
+    "sev": 1,
+    "line": 6,
+    "msg": "Keyword 'RequestsLibrary.Create Session' expected 2 to 14 arguments, got 1."
+   }
+  ],
+  "dryrun_rc": 1,
+  "dryrun_s": 0.411,
+  "dryrun_verdict": "error",
+  "dryrun_msgs": [
+   "Step: Keyword 'RequestsLibrary.Create Session' expected 2 to 14 arguments, got 1."
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b19_requests_on_session_missing_url",
+  "env": "rcexp",
+  "cls": "arg-count(kwargs-sig)",
+  "expect": "error",
+  "analyze_exit": 0,
+  "analyze_s": 0.775,
+  "analyze_chars": 85,
+  "analyze_verdict": "ok",
+  "diags": [],
+  "dryrun_rc": 0,
+  "dryrun_s": 0.404,
+  "dryrun_verdict": "ok",
+  "dryrun_msgs": [],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b20_single_space_separator",
+  "env": "rcexp",
+  "cls": "keyword-typo",
+  "expect": "error",
+  "analyze_exit": 1,
+  "analyze_s": 0.796,
+  "analyze_chars": 321,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "KeywordNotFound",
+    "sev": 1,
+    "line": 6,
+    "msg": "No keyword with name 'Log hello world' found."
+   }
+  ],
+  "dryrun_rc": 1,
+  "dryrun_s": 0.296,
+  "dryrun_verdict": "error",
+  "dryrun_msgs": [
+   "Step: No keyword with name 'Log hello world' found. Did you try using keyword 'BuiltIn.Log' and forgot to use enough whitespace between keyword and arguments?"
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b21_library_not_installed",
+  "env": "rcexp",
+  "cls": "import",
+  "expect": "error",
+  "analyze_exit": 1,
+  "analyze_s": 1.756,
+  "analyze_chars": 1018,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "DataError",
+    "sev": 1,
+    "line": 2,
+    "msg": "Importing test library 'NonExistentLib' failed: ModuleNotFoundError: No module named 'NonExistentLib'"
+   }
+  ],
+  "dryrun_rc": 0,
+  "dryrun_s": 0.297,
+  "dryrun_verdict": "error",
+  "dryrun_msgs": [
+   "ERROR: Error in file '~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/cases/b21_library_not_installed.robot' on line 2: Importing library 'NonExistentLib' failed: ModuleNotFoundError: No module named 'NonExistentLib'"
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b22_library_init_args",
+  "env": "rcexp",
+  "cls": "import-args",
+  "expect": "error",
+  "analyze_exit": 0,
+  "analyze_s": 0.82,
+  "analyze_chars": 85,
+  "analyze_verdict": "ok",
+  "diags": [],
+  "dryrun_rc": 0,
+  "dryrun_s": 0.291,
+  "dryrun_verdict": "error",
+  "dryrun_msgs": [
+   "ERROR: Error in file '~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/cases/b22_library_init_args.robot' on line 2: Library 'Collections' expected 0 arguments, got 1."
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b23_wrong_library_prefix",
+  "env": "rcexp",
+  "cls": "keyword-typo",
+  "expect": "error",
+  "analyze_exit": 1,
+  "analyze_s": 1.789,
+  "analyze_chars": 331,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "KeywordNotFound",
+    "sev": 1,
+    "line": 6,
+    "msg": "No keyword with name 'Strng.Convert To Upper Case' found."
+   }
+  ],
+  "dryrun_rc": 1,
+  "dryrun_s": 0.325,
+  "dryrun_verdict": "error",
+  "dryrun_msgs": [
+   "Step: No keyword with name 'Strng.Convert To Upper Case' found. Did you mean:\n    String.Convert To Upper Case\n    String.Convert To Lower Case"
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b24_unclosed_variable",
+  "env": "rcexp",
+  "cls": "variable-syntax",
+  "expect": "error",
+  "analyze_exit": 1,
+  "analyze_s": 0.781,
+  "analyze_chars": 313,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "TokenError",
+    "sev": 1,
+    "line": 6,
+    "msg": "Variable '${unclosed' was not closed properly."
+   }
+  ],
+  "dryrun_rc": 0,
+  "dryrun_s": 0.294,
+  "dryrun_verdict": "ok",
+  "dryrun_msgs": [],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b25_return_in_test",
+  "env": "rcexp",
+  "cls": "syntax",
+  "expect": "error",
+  "analyze_exit": 1,
+  "analyze_s": 0.782,
+  "analyze_chars": 301,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "TokenError",
+    "sev": 1,
+    "line": 6,
+    "msg": "RETURN is not allowed in this context."
+   }
+  ],
+  "dryrun_rc": 1,
+  "dryrun_s": 0.298,
+  "dryrun_verdict": "error",
+  "dryrun_msgs": [
+   "Step: RETURN is not allowed in this context."
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b26_unknown_section",
+  "env": "rcexp",
+  "cls": "syntax",
+  "expect": "error",
+  "analyze_exit": 1,
+  "analyze_s": 0.766,
+  "analyze_chars": 405,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "InvalidHeader",
+    "sev": 1,
+    "line": 1,
+    "msg": "Unrecognized section header '*** Varibles ***'. Valid sections: 'Settings', 'Variables', 'Test Cases', 'Tasks', 'Keywords' and 'Comments'."
+   }
+  ],
+  "dryrun_rc": 0,
+  "dryrun_s": 0.321,
+  "dryrun_verdict": "error",
+  "dryrun_msgs": [
+   "ERROR: Error in file '~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/cases/b26_unknown_section.robot' on line 1: Unrecognized section header '*** Varibles ***'. Valid sections: 'Settings', 'Variables', 'Test Cases', 'Tasks', 'Keywords' and 'Comments'."
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b27_assertion_operator_typo",
+  "env": "rcexp",
+  "cls": "type-conversion",
+  "expect": "error",
+  "analyze_exit": 0,
+  "analyze_s": 0.864,
+  "analyze_chars": 85,
+  "analyze_verdict": "ok",
+  "diags": [],
+  "dryrun_rc": 1,
+  "dryrun_s": 1.385,
+  "dryrun_verdict": "error",
+  "dryrun_msgs": [
+   "Step: ValueError: Argument 'assertion_operator' got value '===' that cannot be converted to AssertionOperator or None."
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b28_int_conversion",
+  "env": "rcexp",
+  "cls": "type-conversion",
+  "expect": "error",
+  "analyze_exit": 0,
+  "analyze_s": 0.856,
+  "analyze_chars": 85,
+  "analyze_verdict": "ok",
+  "diags": [],
+  "dryrun_rc": 1,
+  "dryrun_s": 0.324,
+  "dryrun_verdict": "error",
+  "dryrun_msgs": [
+   "Step: ValueError: Argument 'count' got value 'abc' that cannot be converted to integer."
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b29_user_kw_too_many_args",
+  "env": "rcexp",
+  "cls": "arg-count",
+  "expect": "error",
+  "analyze_exit": 1,
+  "analyze_s": 0.93,
+  "analyze_chars": 328,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "DataError",
+    "sev": 1,
+    "line": 6,
+    "msg": "Keyword 'common.Login As' expected 1 to 2 arguments, got 3."
+   }
+  ],
+  "dryrun_rc": 1,
+  "dryrun_s": 0.394,
+  "dryrun_verdict": "error",
+  "dryrun_msgs": [
+   "Step: Keyword 'common.Login As' expected 1 to 2 arguments, got 3."
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b30_selenium_kw_in_browser_session",
+  "env": "rcexp",
+  "cls": "wrong-library",
+  "expect": "error",
+  "analyze_exit": 1,
+  "analyze_s": 0.92,
+  "analyze_chars": 324,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "KeywordNotFound",
+    "sev": 1,
+    "line": 6,
+    "msg": "No keyword with name 'Input Text' found."
+   }
+  ],
+  "dryrun_rc": 1,
+  "dryrun_s": 1.287,
+  "dryrun_verdict": "error",
+  "dryrun_msgs": [
+   "Step: No keyword with name 'Input Text' found."
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b31_empty_test",
+  "env": "rcexp",
+  "cls": "syntax",
+  "expect": "error",
+  "analyze_exit": 1,
+  "analyze_s": 0.774,
+  "analyze_chars": 280,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "ModelError",
+    "sev": 1,
+    "line": 2,
+    "msg": "Test cannot be empty."
+   }
+  ],
+  "dryrun_rc": 1,
+  "dryrun_s": 0.291,
+  "dryrun_verdict": "error",
+  "dryrun_msgs": [
+   "Empty Test: Test cannot be empty."
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b32_duplicate_test",
+  "env": "rcexp",
+  "cls": "duplicate",
+  "expect": "warn",
+  "analyze_exit": 0,
+  "analyze_s": 0.844,
+  "analyze_chars": 85,
+  "analyze_verdict": "ok",
+  "diags": [],
+  "dryrun_rc": 0,
+  "dryrun_s": 0.295,
+  "dryrun_verdict": "warn",
+  "dryrun_msgs": [
+   "WARN: Multiple tests with name 'Same' executed in suite 'B32 Duplicate Test'."
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "b33_keyword_only_missing",
+  "env": "rcexp",
+  "cls": "named-arg",
+  "expect": "error",
+  "analyze_exit": 1,
+  "analyze_s": 1.869,
+  "analyze_chars": 346,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "DataError",
+    "sev": 1,
+    "line": 6,
+    "msg": "Keyword 'Process.Start Process' expected at least 1 non-named argument, got 0."
+   }
+  ],
+  "dryrun_rc": 1,
+  "dryrun_s": 0.343,
+  "dryrun_verdict": "error",
+  "dryrun_msgs": [
+   "Step: Keyword 'Process.Start Process' expected at least 1 non-named argument, got 0."
+  ],
+  "dryrun_raw": null
+ },
+ {
+  "id": "v01_builtin_ok",
+  "env": "rcexp",
+  "cls": "control",
+  "expect": "ok",
+  "analyze_exit": 0,
+  "analyze_s": 0.919,
+  "analyze_chars": 85,
+  "analyze_verdict": "ok",
+  "diags": [],
+  "dryrun_rc": 0,
+  "dryrun_s": 0.301,
+  "dryrun_verdict": "ok",
+  "dryrun_msgs": [],
+  "dryrun_raw": null
+ },
+ {
+  "id": "v02_bdd_user_keyword",
+  "env": "rcexp",
+  "cls": "control-bdd",
+  "expect": "ok",
+  "analyze_exit": 0,
+  "analyze_s": 0.809,
+  "analyze_chars": 85,
+  "analyze_verdict": "ok",
+  "diags": [],
+  "dryrun_rc": 0,
+  "dryrun_s": 0.305,
+  "dryrun_verdict": "ok",
+  "dryrun_msgs": [],
+  "dryrun_raw": null
+ },
+ {
+  "id": "v03_bdd_on_library_kw",
+  "env": "rcexp",
+  "cls": "control-bdd",
+  "expect": "ok",
+  "analyze_exit": 0,
+  "analyze_s": 0.879,
+  "analyze_chars": 85,
+  "analyze_verdict": "ok",
+  "diags": [],
+  "dryrun_rc": 0,
+  "dryrun_s": 1.379,
+  "dryrun_verdict": "ok",
+  "dryrun_msgs": [],
+  "dryrun_raw": null
+ },
+ {
+  "id": "v04_assign_then_use",
+  "env": "rcexp",
+  "cls": "control-variable",
+  "expect": "ok",
+  "analyze_exit": 0,
+  "analyze_s": 0.8,
+  "analyze_chars": 85,
+  "analyze_verdict": "ok",
+  "diags": [],
+  "dryrun_rc": 0,
+  "dryrun_s": 0.328,
+  "dryrun_verdict": "ok",
+  "dryrun_msgs": [],
+  "dryrun_raw": null
+ },
+ {
+  "id": "v05_dynamic_set_test_variable",
+  "env": "rcexp",
+  "cls": "control-variable(dynamic)",
+  "expect": "ok",
+  "analyze_exit": 1,
+  "analyze_s": 0.822,
+  "analyze_chars": 309,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "VariableNotFound",
+    "sev": 1,
+    "line": 7,
+    "msg": "Variable '${dyn}' not found."
+   }
+  ],
+  "dryrun_rc": 0,
+  "dryrun_s": 0.351,
+  "dryrun_verdict": "ok",
+  "dryrun_msgs": [],
+  "dryrun_raw": null
+ },
+ {
+  "id": "v06_cli_variable",
+  "env": "rcexp",
+  "cls": "control-variable(cli -v)",
+  "expect": "ok",
+  "analyze_exit": 1,
+  "analyze_s": 0.861,
+  "analyze_chars": 301,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "VariableNotFound",
+    "sev": 1,
+    "line": 6,
+    "msg": "Variable '${FROM_CLI}' not found."
+   }
+  ],
+  "dryrun_rc": 0,
+  "dryrun_s": 0.35,
+  "dryrun_verdict": "ok",
+  "dryrun_msgs": [],
+  "dryrun_raw": null
+ },
+ {
+  "id": "v06_cli_variable+cli-var",
+  "env": "rcexp",
+  "cls": "control-variable(cli -v)",
+  "expect": "ok",
+  "analyze_exit": 0,
+  "analyze_s": 1.064,
+  "analyze_chars": 85,
+  "analyze_verdict": "ok",
+  "diags": [],
+  "dryrun_rc": 0,
+  "dryrun_s": 0.302,
+  "dryrun_verdict": "ok",
+  "dryrun_msgs": [],
+  "dryrun_raw": null
+ },
+ {
+  "id": "v07_search_order_resolves_ambiguity",
+  "env": "rcexp",
+  "cls": "control-ambiguous",
+  "expect": "ok",
+  "analyze_exit": 1,
+  "analyze_s": 0.761,
+  "analyze_chars": 420,
+  "analyze_verdict": "error",
+  "diags": [
+   {
+    "code": "MultipleKeywords",
+    "sev": 1,
+    "line": 8,
+    "msg": "Multiple keywords with name 'Do Thing' found. Give the full name of the keyword you want to use:"
+   }
+  ],
+  "dryrun_rc": 0,
+  "dryrun_s": 0.331,
+  "dryrun_verdict": "ok",
+  "dryrun_msgs": [],
+  "dryrun_raw": null
+ },
+ {
+  "id": "v08_qualified_name",
+  "env": "rcexp",
+  "cls": "control-ambiguous",
+  "expect": "ok",
+  "analyze_exit": 0,
+  "analyze_s": 0.811,
+  "analyze_chars": 85,
+  "analyze_verdict": "ok",
+  "diags": [],
+  "dryrun_rc": 0,
+  "dryrun_s": 0.293,
+  "dryrun_verdict": "ok",
+  "dryrun_msgs": [],
+  "dryrun_raw": null
+ },
+ {
+  "id": "v09_browser_ok",
+  "env": "rcexp",
+  "cls": "control-browser",
+  "expect": "ok",
+  "analyze_exit": 0,
+  "analyze_s": 0.844,
+  "analyze_chars": 85,
+  "analyze_verdict": "ok",
+  "diags": [],
+  "dryrun_rc": 0,
+  "dryrun_s": 1.383,
+  "dryrun_verdict": "ok",
+  "dryrun_msgs": [],
+  "dryrun_raw": null
+ },
+ {
+  "id": "v10_requests_ok",
+  "env": "rcexp",
+  "cls": "control-requests",
+  "expect": "ok",
+  "analyze_exit": 0,
+  "analyze_s": 0.849,
+  "analyze_chars": 85,
+  "analyze_verdict": "ok",
+  "diags": [],
+  "dryrun_rc": 0,
+  "dryrun_s": 0.387,
+  "dryrun_verdict": "ok",
+  "dryrun_msgs": [],
+  "dryrun_raw": null
+ },
+ {
+  "id": "v11_selenium_ok",
+  "env": "wt",
+  "cls": "control-selenium",
+  "expect": "ok",
+  "analyze_exit": 0,
+  "analyze_s": 0.849,
+  "analyze_chars": 85,
+  "analyze_verdict": "ok",
+  "diags": [],
+  "dryrun_rc": 0,
+  "dryrun_s": 0.428,
+  "dryrun_verdict": "ok",
+  "dryrun_msgs": [],
+  "dryrun_raw": null
+ },
+ {
+  "id": "v12_robot_toml_variable",
+  "env": "rcexp",
+  "cls": "control-variable(robot.toml)",
+  "expect": "ok",
+  "analyze_exit": 0,
+  "analyze_s": 0.824,
+  "analyze_chars": 85,
+  "analyze_verdict": "ok",
+  "diags": [],
+  "dryrun_rc": 0,
+  "dryrun_s": 0.31,
+  "dryrun_verdict": "ok",
+  "dryrun_msgs": [],
+  "dryrun_raw": null
+ },
+ {
+  "id": "v13_suite_variable_env_var",
+  "env": "rcexp",
+  "cls": "control-variable(env)",
+  "expect": "ok",
+  "analyze_exit": 0,
+  "analyze_s": 0.797,
+  "analyze_chars": 85,
+  "analyze_verdict": "ok",
+  "diags": [],
+  "dryrun_rc": 0,
+  "dryrun_s": 0.29,
+  "dryrun_verdict": "ok",
+  "dryrun_msgs": [],
+  "dryrun_raw": null
+ },
+ {
+  "id": "v14_var_syntax_rf7",
+  "env": "rcexp",
+  "cls": "control-syntax",
+  "expect": "ok",
+  "analyze_exit": 0,
+  "analyze_s": 0.81,
+  "analyze_chars": 85,
+  "analyze_verdict": "ok",
+  "diags": [],
+  "dryrun_rc": 0,
+  "dryrun_s": 0.32,
+  "dryrun_verdict": "ok",
+  "dryrun_msgs": [],
+  "dryrun_raw": null
+ },
+ {
+  "id": "v15_timeout_named_kw_only",
+  "env": "rcexp",
+  "cls": "control-named",
+  "expect": "ok",
+  "analyze_exit": 0,
+  "analyze_s": 0.8,
+  "analyze_chars": 85,
+  "analyze_verdict": "ok",
+  "diags": [],
+  "dryrun_rc": 0,
+  "dryrun_s": 0.338,
+  "dryrun_verdict": "ok",
+  "dryrun_msgs": [],
+  "dryrun_raw": null
+ }
+]

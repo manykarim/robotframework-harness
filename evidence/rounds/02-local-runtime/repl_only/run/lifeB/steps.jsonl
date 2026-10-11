@@ -1,0 +1,17 @@
+{"t": "ready", "pid": 3602008, "hooked": true, "path": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round2/repl_only/run/lifeB/steps.jsonl", "ts": 1790837215.036}
+{"t": "idle", "n": 1, "id": null, "ts": 1790837215.065}
+{"t": "begin", "id": "s1", "ts": 1790837215.125}
+{"t": "step", "seq": 1, "id": "s1", "type": "KEYWORD", "name": "Import Library", "owner": "BuiltIn", "args": ["Browser"], "assign": [], "status": "PASS", "elapsed_ms": 191.0, "return": null, "ts": 1790837215.318}
+{"t": "idle", "n": 2, "id": "s1", "ts": 1790837215.318}
+{"t": "idle", "n": 3, "id": "s1", "ts": 1790837215.318}
+{"t": "end", "id": "s1", "src": "Import Library    Browser", "steps": 1, "ts": 1790837215.318}
+{"t": "begin", "id": "s2", "ts": 1790837215.37}
+{"t": "step", "seq": 2, "id": "s2", "type": "KEYWORD", "name": "New Browser", "owner": "Browser", "args": ["chromium", "headless=${HEADLESS}"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "{\"browser\": \"chromium\", \"headless\": true, \"chromiumSandbox\": false, \"devtools\": false, \"handleSIGHUP\": true, \"handleSIGINT\": true, \"handleSIGTERM\": true, \"slowMo\": 0.0, \"timeout\": 30000.0, \"tracesDir\": \"~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round2/repl_only/run/lifeB/out/browser/traces/temp/2a2a9b24-ea8f-4014-9216-ef31e8d078b2\"}"}, {"level": "INFO", "html": false, "text": "Starting Browser process ~/workspace/robotcode-experiments/.venv/lib/python3.13/site-packages/Browser/wrapper/index.js using at 127.0.0.1:59671"}, {"level": "INFO", "html": false, "text": "Successfully created browser with options: {\"browser\":\"chromium\",\"headless\":true,\"chromiumSandbox\":false,\"devtools\":false,\"handleSIGHUP\":true,\"handleSIGINT\":true,\"handleSIGTERM\":true,\"slowMo\":0,\"timeout\":30000,\"tracesDir\":\"~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round2/repl_only/run/lifeB/out/browser/traces/temp/2a2a9b24-ea8f-4014-9216-ef31e8d078b2\"}"}], "status": "PASS", "elapsed_ms": 934.5, "return": "browser=ea24520a-7261-4da8-bfa5-8d96ed5c4bb0", "ts": 1790837216.307}
+{"t": "idle", "n": 4, "id": "s2", "ts": 1790837216.307}
+{"t": "idle", "n": 5, "id": "s2", "ts": 1790837216.307}
+{"t": "end", "id": "s2", "src": "New Browser    chromium    headless=${HEADLESS}", "steps": 2, "ts": 1790837216.307}
+{"t": "begin", "id": "s3", "ts": 1790837216.374}
+{"t": "step", "seq": 3, "id": "s3", "type": "KEYWORD", "name": "New Page", "owner": "Browser", "args": ["https://www.saucedemo.com"], "assign": [], "msgs": [{"level": "INFO", "html": false, "text": "Successfully initialized new page object and opened url: https://www.saucedemo.com"}, {"level": "INFO", "html": false, "text": "No context was open. New context was automatically opened when this page is created."}], "status": "PASS", "elapsed_ms": 403.6, "return": "{'page_id': 'page=d3f32b93-4f1f-4db4-8c76-b49c651c24c5', 'video_path': ''}", "ts": 1790837216.779}
+{"t": "idle", "n": 6, "id": "s3", "ts": 1790837216.78}
+{"t": "idle", "n": 7, "id": "s3", "ts": 1790837216.78}
+{"t": "end", "id": "s3", "src": "New Page    https://www.saucedemo.com", "steps": 3, "ts": 1790837216.78}

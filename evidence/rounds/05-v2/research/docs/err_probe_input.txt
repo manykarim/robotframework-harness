@@ -1,0 +1,21 @@
+Library    Browser    timeout=2s
+New Browser    chromium    headless=True
+New Page    file://~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round5/research/site/form.html
+Clik    id=submit
+Click Element    id=submit
+Click
+Click    id=submit    left    1    extra    args    here    more    x    y
+Fill Text    id=name    Ada    bogus_named=1
+Wait For Elements State    id=name    visable    timeout=1s
+Wait For Elements State    id=name    visible    timeout=abc
+Get Text    id=name    equals    x
+Log    ${undefined_var}
+Import Library    NoSuchLibrary
+Import Resource    ${CURDIR}/missing.resource
+Import Resource    ~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round5/research/docs/resources/shop.resource
+Open Shop    /index.html
+Add Product To Cart
+Run Keyword If    1 == 1    Log    old style
+Get Text    css=label
+Should Be Equal    1    2
+.exit

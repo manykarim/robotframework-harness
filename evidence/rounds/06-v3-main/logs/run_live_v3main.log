@@ -1,0 +1,201 @@
+[15:37:34] [config] models={'claude': 'claude-haiku-4-5', 'codex': 'gpt-5.6-luna', 'opencode': 'minimax-coding-plan/MiniMax-M2.5', 'copilot': 'gpt-4.1'} codex_effort='medium' opencode_variant='' results=~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/ab/harness/results_live_v3main.jsonl work=~/.cache/ab-eval/work_live_v3main prune=True browser_concurrency=3
+[15:37:34] disk before:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  234G  212G  9,7G  96% /
+[15:37:34] [batch] 180 cells to run (skipping 0 done), concurrency=3, browser<=3, per-agent<=2, prune=True
+[15:42:45] [1/180] claude|hookpkg2|tricentis_quote|1 -> status=ok primary=False pass=11/12 mcp_calls=0 tools=35 311.1s
+[15:47:16] [2/180] claude|hookpkg3|tricentis_quote|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=40 271.3s
+[15:47:21] [3/180] claude|mcp|tricentis_quote|1 -> status=ok primary=False pass=10/12 mcp_calls=11 tools=77 587.6s
+[15:48:27] [4/180] codex|mcp|tricentis_quote|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=42 341.8s
+[15:49:44] [5/180] codex|hookpkg2|tricentis_quote|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=21 147.6s
+[15:50:58] [6/180] codex|hookpkg3|tricentis_quote|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=25 151.0s
+[15:58:11] [7/180] opencode|hookpkg2|tricentis_quote|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=61 507.0s
+[16:02:40] [8/180] opencode|mcp|tricentis_quote|1 -> status=ok primary=False pass=7/12 mcp_calls=28 tools=119 853.1s
+[16:03:02] [9/180] claude|mcp|carconfig_order|1 -> status=ok primary=True pass=11/11 mcp_calls=44 tools=78 291.0s
+[16:03:08] [10/180] opencode|hookpkg3|tricentis_quote|1 -> status=ok primary=False pass=10/12 mcp_calls=0 tools=34 296.9s
+[16:06:11] [11/180] claude|hookpkg3|carconfig_order|1 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=36 189.5s
+[16:07:16] [12/180] claude|hookpkg2|carconfig_order|1 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=44 276.3s
+[16:07:58] [13/180] codex|hookpkg2|carconfig_order|1 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=19 106.3s
+[16:09:53] [14/180] codex|hookpkg3|carconfig_order|1 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=26 115.4s
+[16:10:55] [15/180] codex|mcp|carconfig_order|1 -> status=ok primary=True pass=11/11 mcp_calls=31 tools=50 467.6s
+[16:15:03] [16/180] opencode|hookpkg2|carconfig_order|1 -> status=ok primary=False pass=10/11 mcp_calls=0 tools=49 309.8s
+[16:20:17] [17/180] opencode|hookpkg3|carconfig_order|1 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=51 313.9s
+[16:20:26] [18/180] claude|mcp|demoshop_order|1 -> status=ok primary=False pass=8/12 mcp_calls=50 tools=79 323.0s
+[16:25:10] [19/180] claude|hookpkg3|demoshop_order|1 -> status=ok primary=False pass=8/12 mcp_calls=0 tools=50 284.4s
+[16:26:04] [20/180] opencode|mcp|carconfig_order|1 -> status=ok primary=False pass=7/11 mcp_calls=98 tools=145 1086.5s
+[16:26:09] [21/180] claude|hookpkg2|demoshop_order|1 -> status=ok primary=False pass=10/12 mcp_calls=0 tools=49 352.8s
+[16:28:21] [22/180] codex|hookpkg2|demoshop_order|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=15 136.9s
+[16:29:09] [23/180] codex|mcp|demoshop_order|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=21 239.3s
+[16:30:53] [24/180] codex|hookpkg3|demoshop_order|1 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=28 151.9s
+[16:35:44] [25/180] opencode|hookpkg2|demoshop_order|1 -> status=ok primary=False pass=10/12 mcp_calls=0 tools=61 394.4s
+[16:39:27] [26/180] opencode|hookpkg3|demoshop_order|1 -> status=ok primary=False pass=10/12 mcp_calls=0 tools=45 222.6s
+[16:40:34] [27/180] opencode|mcp|demoshop_order|1 -> status=ok primary=False pass=11/12 mcp_calls=51 tools=134 732.7s
+[16:44:21] [28/180] claude|hookpkg2|demoshop_debug|1 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=21 294.1s
+[16:49:17] [29/180] claude|mcp|demoshop_debug|1 -> status=ok primary=False pass=15/17 mcp_calls=37 tools=86 813.3s
+[16:49:30] [30/180] codex|mcp|demoshop_debug|1 -> status=ok primary=False pass=16/17 mcp_calls=0 tools=27 309.2s
+[16:49:50] [31/180] claude|hookpkg3|demoshop_debug|1 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=29 329.9s
+[16:53:28] [32/180] codex|hookpkg3|demoshop_debug|1 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=24 238.3s
+[16:54:55] [33/180] codex|hookpkg2|demoshop_debug|1 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=20 338.1s
+[17:01:15] [34/180] opencode|mcp|demoshop_debug|1 -> status=ok primary=True pass=17/17 mcp_calls=19 tools=67 684.6s
+[17:07:47] [35/180] opencode|hookpkg2|demoshop_debug|1 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=54 858.6s
+[17:09:43] [36/180] opencode|hookpkg3|demoshop_debug|1 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=44 507.8s
+[17:12:11] [37/180] claude|mcp|tricentis_debug|1 -> status=ok primary=False pass=14/15 mcp_calls=0 tools=29 655.7s
+[17:14:22] [38/180] claude|hookpkg2|tricentis_debug|1 -> status=ok primary=False pass=14/15 mcp_calls=0 tools=37 395.6s
+[17:17:59] [39/180] codex|hookpkg2|tricentis_debug|1 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=21 216.9s
+[17:19:17] [40/180] claude|hookpkg3|tricentis_debug|1 -> status=ok primary=False pass=14/15 mcp_calls=0 tools=41 426.3s
+[17:20:11] [41/180] codex|mcp|tricentis_debug|1 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=48 480.2s
+[17:23:11] [42/180] codex|hookpkg3|tricentis_debug|1 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=37 311.5s
+[17:43:24] [43/180] opencode|mcp|tricentis_debug|1 -> status=ok primary=True pass=15/15 mcp_calls=11 tools=104 1447.3s
+[17:50:36] [44/180] claude|mcp|tricentis_quote|2 -> status=ok primary=False pass=11/12 mcp_calls=80 tools=106 431.9s
+[17:51:53] [45/180] opencode|hookpkg2|tricentis_debug|1 -> status=ok primary=False pass=10/15 mcp_calls=0 tools=137 1901.8s
+[17:53:15] [46/180] opencode|hookpkg3|tricentis_debug|1 -> status=ok primary=False pass=14/15 mcp_calls=0 tools=56 590.1s
+[17:55:44] [47/180] claude|hookpkg2|tricentis_quote|2 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=31 307.9s
+[17:57:01] [48/180] claude|hookpkg3|tricentis_quote|2 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=36 308.0s
+[18:00:21] [49/180] codex|hookpkg2|tricentis_quote|2 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=32 276.7s
+[18:04:34] [50/180] codex|hookpkg3|tricentis_quote|2 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=25 252.8s
+[18:05:37] [51/180] codex|mcp|tricentis_quote|2 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=65 742.5s
+[18:20:40] [52/180] opencode|mcp|tricentis_quote|2 -> status=ok primary=True pass=12/12 mcp_calls=148 tools=202 1219.5s
+[18:25:55] [53/180] opencode|hookpkg3|tricentis_quote|2 -> status=ok primary=False pass=11/12 mcp_calls=0 tools=49 314.5s
+[18:30:46] [54/180] claude|hookpkg2|carconfig_order|2 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=45 290.7s
+[18:33:01] [55/180] claude|mcp|carconfig_order|2 -> status=ok primary=False pass=7/11 mcp_calls=0 tools=79 741.0s
+[18:35:24] [56/180] opencode|hookpkg2|tricentis_quote|2 -> status=ok primary=False pass=7/12 mcp_calls=0 tools=125 1850.7s
+[18:35:48] [57/180] claude|hookpkg3|carconfig_order|2 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=46 302.4s
+[18:37:24] [58/180] codex|mcp|carconfig_order|2 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=28 262.3s
+[18:38:08] [59/180] codex|hookpkg2|carconfig_order|2 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=38 163.8s
+[18:38:40] [60/180] codex|hookpkg3|carconfig_order|2 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=20 76.8s
+[18:43:53] [61/180] opencode|hookpkg2|carconfig_order|2 -> status=ok primary=False pass=10/11 mcp_calls=0 tools=52 344.6s
+[18:47:47] [62/180] opencode|hookpkg3|carconfig_order|2 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=44 233.8s
+[18:49:57] [63/180] claude|mcp|demoshop_order|2 -> status=ok primary=False pass=11/12 mcp_calls=40 tools=65 364.1s
+[18:54:06] [64/180] claude|hookpkg2|demoshop_order|2 -> status=ok primary=False pass=10/12 mcp_calls=0 tools=39 379.1s
+[18:54:28] [65/180] claude|hookpkg3|demoshop_order|2 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=38 271.0s
+[18:56:17] [66/180] codex|hookpkg2|demoshop_order|2 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=23 108.7s
+[18:56:44] [67/180] codex|mcp|demoshop_order|2 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=27 158.5s
+[18:59:28] [68/180] codex|hookpkg3|demoshop_order|2 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=31 190.9s
+[19:01:54] [69/180] opencode|mcp|carconfig_order|2 -> status=ok primary=True pass=11/11 mcp_calls=149 tools=216 1470.6s
+[19:03:58] [70/180] opencode|mcp|demoshop_order|2 -> status=ok primary=True pass=12/12 mcp_calls=45 tools=83 433.6s
+[19:05:17] [71/180] opencode|hookpkg3|demoshop_order|2 -> status=ok primary=False pass=8/12 mcp_calls=0 tools=38 202.5s
+[19:07:23] [72/180] opencode|hookpkg2|demoshop_order|2 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=37 205.1s
+[19:13:24] [73/180] claude|hookpkg2|demoshop_debug|2 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=35 487.3s
+[19:15:29] [74/180] claude|mcp|demoshop_debug|2 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=50 691.5s
+[19:19:10] [75/180] claude|hookpkg3|demoshop_debug|2 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=29 346.3s
+[19:19:30] [76/180] codex|mcp|demoshop_debug|2 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=37 366.0s
+[19:22:30] [77/180] codex|hookpkg2|demoshop_debug|2 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=31 420.3s
+[19:25:30] [78/180] codex|hookpkg3|demoshop_debug|2 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=28 359.7s
+[19:44:00] signal 15: aborting - killing running agents, no new cells
+[19:45:01] [79/180] opencode|hookpkg2|demoshop_debug|2 -> status=aborted primary=False pass=16/17 mcp_calls=0 tools=71 1351.0s
+[19:45:17] [80/180] opencode|mcp|demoshop_debug|2 -> status=aborted primary=False pass=14/17 mcp_calls=0 tools=62 1547.3s
+[19:45:18] [batch] done: ran=80 skipped=100 reaper_kills_total=5 (final sweep 0)
+[19:45:18] disk after:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  234G  213G  9,3G  96% /
+[19:46:26] [config] models={'claude': 'claude-haiku-4-5', 'codex': 'gpt-5.6-luna', 'opencode': 'minimax-coding-plan/MiniMax-M2.5', 'copilot': 'gpt-4.1'} codex_effort='medium' opencode_variant='' results=~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/ab/harness/results_live_v3main.jsonl work=~/.cache/ab-eval/work_live_v3main prune=True browser_concurrency=3
+[19:46:26] disk before:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  234G  213G  9,3G  96% /
+[19:46:26] [batch] 102 cells to run (skipping 78 done), concurrency=3, browser<=3, per-agent<=2, prune=True
+[19:53:34] [1/102] opencode|hookpkg2|demoshop_debug|2 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=22 427.3s
+[20:01:31] [2/102] opencode|hookpkg3|demoshop_debug|2 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=42 477.4s
+[20:07:49] [3/102] claude|hookpkg2|tricentis_debug|2 -> status=ok primary=False pass=14/15 mcp_calls=0 tools=39 377.8s
+[20:13:44] [4/102] claude|hookpkg3|tricentis_debug|2 -> status=ok primary=False pass=14/15 mcp_calls=0 tools=33 354.8s
+[20:17:27] [5/102] opencode|mcp|demoshop_debug|2 -> status=ok primary=False pass=12/17 mcp_calls=0 tools=84 1860.9s
+[20:21:25] [6/102] claude|mcp|tricentis_debug|2 -> status=ok primary=False pass=10/15 mcp_calls=0 tools=81 1671.6s
+[20:22:10] [7/102] codex|hookpkg2|tricentis_debug|2 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=27 282.3s
+[20:23:31] [8/102] codex|mcp|tricentis_debug|2 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=43 587.0s
+[20:29:08] [9/102] codex|hookpkg3|tricentis_debug|2 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=37 418.6s
+[20:33:50] [10/102] opencode|hookpkg2|tricentis_debug|2 -> status=ok primary=False pass=14/15 mcp_calls=0 tools=56 619.8s
+[20:34:18] [11/102] opencode|mcp|tricentis_debug|2 -> status=ok primary=False pass=14/15 mcp_calls=3 tools=43 728.5s
+[20:38:54] [12/102] claude|mcp|tricentis_quote|3 -> status=ok primary=False pass=1/12 mcp_calls=63 tools=79 303.3s
+[20:42:33] [13/102] opencode|hookpkg3|tricentis_debug|2 -> status=ok primary=False pass=14/15 mcp_calls=0 tools=50 522.1s
+[20:42:48] [14/102] claude|hookpkg2|tricentis_quote|3 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=39 510.3s
+[20:45:31] [15/102] claude|hookpkg3|tricentis_quote|3 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=44 397.5s
+[20:46:37] [16/102] codex|hookpkg2|tricentis_quote|3 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=38 228.6s
+[20:49:00] [17/102] codex|hookpkg3|tricentis_quote|3 -> status=ok primary=False pass=8/12 mcp_calls=0 tools=23 143.1s
+[20:49:04] [18/102] codex|mcp|tricentis_quote|3 -> status=ok primary=False pass=8/12 mcp_calls=0 tools=35 391.3s
+[21:04:41] [19/102] opencode|hookpkg2|tricentis_quote|3 -> status=ok primary=False pass=11/12 mcp_calls=0 tools=79 941.0s
+[21:09:25] [20/102] opencode|hookpkg3|tricentis_quote|3 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=48 284.1s
+[21:10:41] [21/102] claude|mcp|carconfig_order|3 -> status=ok primary=False pass=1/11 mcp_calls=76 tools=79 360.0s
+[21:13:26] [22/102] claude|hookpkg2|carconfig_order|3 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=45 241.0s
+[21:13:33] [23/102] claude|hookpkg3|carconfig_order|3 -> status=ok primary=False pass=10/11 mcp_calls=0 tools=33 171.8s
+[21:16:01] [24/102] codex|hookpkg2|carconfig_order|3 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=22 148.7s
+[21:17:39] [25/102] opencode|mcp|tricentis_quote|3 -> status=ok primary=False pass=10/12 mcp_calls=18 tools=130 1862.5s
+[21:18:04] [26/102] codex|hookpkg3|carconfig_order|3 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=28 122.3s
+[21:18:36] [27/102] codex|mcp|carconfig_order|3 -> status=ok primary=False pass=10/11 mcp_calls=0 tools=41 309.5s
+[21:22:39] [28/102] opencode|mcp|carconfig_order|3 -> status=ok primary=False pass=10/11 mcp_calls=18 tools=47 300.1s
+[21:26:59] [29/102] opencode|hookpkg2|carconfig_order|3 -> status=ok primary=False pass=10/11 mcp_calls=0 tools=69 535.6s
+[21:27:16] [30/102] opencode|hookpkg3|carconfig_order|3 -> status=ok primary=False pass=10/11 mcp_calls=0 tools=32 276.1s
+[21:30:31] [31/102] claude|hookpkg2|demoshop_order|3 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=34 212.0s
+[21:30:40] [32/102] claude|mcp|demoshop_order|3 -> status=ok primary=False pass=8/12 mcp_calls=43 tools=75 480.3s
+[21:32:36] [33/102] codex|hookpkg2|demoshop_order|3 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=22 115.9s
+[21:34:22] [34/102] codex|hookpkg3|demoshop_order|3 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=23 106.5s
+[21:34:49] [35/102] codex|mcp|demoshop_order|3 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=30 257.6s
+[21:35:30] [36/102] claude|hookpkg3|demoshop_order|3 -> status=ok primary=False pass=11/12 mcp_calls=0 tools=41 298.9s
+[21:38:55] [37/102] opencode|hookpkg2|demoshop_order|3 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=42 245.6s
+[21:40:04] [38/102] opencode|mcp|demoshop_order|3 -> status=ok primary=True pass=12/12 mcp_calls=54 tools=83 342.0s
+[21:44:28] [39/102] opencode|hookpkg3|demoshop_order|3 -> status=ok primary=False pass=11/12 mcp_calls=0 tools=48 333.9s
+[21:45:04] [40/102] claude|hookpkg2|demoshop_debug|3 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=18 299.5s
+[21:49:12] [41/102] codex|mcp|demoshop_debug|3 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=15 248.5s
+[21:50:27] [42/102] claude|hookpkg3|demoshop_debug|3 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=26 322.9s
+[21:54:48] [43/102] codex|hookpkg2|demoshop_debug|3 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=24 335.6s
+[21:54:52] [44/102] claude|mcp|demoshop_debug|3 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=40 957.8s
+[21:57:55] [45/102] codex|hookpkg3|demoshop_debug|3 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=38 448.9s
+[21:59:58] [46/102] opencode|hookpkg2|demoshop_debug|3 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=18 306.0s
+[22:06:05] [47/102] opencode|hookpkg3|demoshop_debug|3 -> status=ok primary=False pass=16/17 mcp_calls=0 tools=28 366.4s
+[22:10:44] [48/102] claude|mcp|tricentis_debug|3 -> status=ok primary=False pass=14/15 mcp_calls=0 tools=29 645.4s
+[22:12:11] [49/102] claude|hookpkg2|tricentis_debug|3 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=37 366.0s
+[22:18:29] [50/102] claude|hookpkg3|tricentis_debug|3 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=52 465.3s
+[22:22:40] [51/102] codex|hookpkg2|tricentis_debug|3 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=22 251.1s
+[22:26:00] [52/102] opencode|mcp|demoshop_debug|3 -> status=ok primary=False pass=13/17 mcp_calls=0 tools=95 1872.6s
+[22:26:36] [53/102] codex|mcp|tricentis_debug|3 -> status=ok primary=False pass=14/15 mcp_calls=0 tools=47 865.0s
+[22:27:00] [54/102] codex|hookpkg3|tricentis_debug|3 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=28 259.7s
+[22:27:24] [55/102] opencode|hookpkg2|tricentis_debug|3 -> status=ok primary=False pass=10/15 mcp_calls=0 tools=0 48.1s
+[22:31:27] [56/102] claude|mcp|tricentis_quote|4 -> status=ok primary=True pass=12/12 mcp_calls=58 tools=69 243.5s
+[22:34:31] [57/102] opencode|hookpkg3|tricentis_debug|3 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=50 426.8s
+[22:39:22] [58/102] opencode|mcp|tricentis_debug|3 -> status=ok primary=False pass=13/15 mcp_calls=3 tools=55 802.1s
+[22:39:32] [59/102] claude|hookpkg3|tricentis_quote|4 -> status=ok primary=False pass=10/12 mcp_calls=0 tools=40 301.6s
+[22:43:28] [60/102] codex|hookpkg2|tricentis_quote|4 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=25 236.0s
+[22:45:10] [61/102] codex|mcp|tricentis_quote|4 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=34 347.4s
+[22:47:30] [62/102] codex|hookpkg3|tricentis_quote|4 -> status=ok primary=False pass=8/12 mcp_calls=0 tools=24 241.7s
+[22:47:55] [63/102] claude|hookpkg2|tricentis_quote|4 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=64 987.7s
+[22:52:05] [64/102] opencode|mcp|tricentis_quote|4 -> status=ok primary=True pass=12/12 mcp_calls=23 tools=76 415.3s
+[22:58:05] [65/102] opencode|hookpkg3|tricentis_quote|4 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=58 359.5s
+[22:59:26] [66/102] claude|mcp|carconfig_order|4 -> status=ok primary=False pass=10/11 mcp_calls=34 tools=79 441.1s
+[23:02:32] [67/102] claude|hookpkg2|carconfig_order|4 -> status=ok primary=False pass=9/11 mcp_calls=0 tools=48 267.1s
+[23:02:38] [68/102] claude|hookpkg3|carconfig_order|4 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=35 191.6s
+[23:04:38] [69/102] codex|mcp|carconfig_order|4 -> status=ok primary=True pass=11/11 mcp_calls=43 tools=59 126.1s
+[23:04:39] [70/102] codex|hookpkg2|carconfig_order|4 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=28 121.1s
+[23:06:32] [71/102] codex|hookpkg3|carconfig_order|4 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=21 113.9s
+[23:09:24] [72/102] opencode|hookpkg2|tricentis_quote|4 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=107 1313.8s
+[23:12:28] [73/102] opencode|hookpkg3|carconfig_order|4 -> status=ok primary=False pass=10/11 mcp_calls=0 tools=28 183.9s
+[23:15:24] [74/102] opencode|mcp|carconfig_order|4 -> status=ok primary=False pass=9/11 mcp_calls=65 tools=101 645.3s
+[23:17:37] [75/102] claude|mcp|demoshop_order|4 -> status=ok primary=True pass=12/12 mcp_calls=68 tools=85 309.2s
+[23:18:46] [76/102] claude|hookpkg2|demoshop_order|4 -> status=ok primary=False pass=11/12 mcp_calls=0 tools=33 201.6s
+[23:18:53] [77/102] opencode|hookpkg2|carconfig_order|4 -> status=ok primary=True pass=11/11 mcp_calls=0 tools=53 385.6s
+[23:20:53] [78/102] codex|hookpkg2|demoshop_order|4 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=22 119.3s
+[23:21:24] [79/102] claude|hookpkg3|demoshop_order|4 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=36 227.1s
+[23:23:03] [80/102] codex|hookpkg3|demoshop_order|4 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=24 130.6s
+[23:24:40] [81/102] codex|mcp|demoshop_order|4 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=48 354.7s
+[23:27:37] [82/102] opencode|mcp|demoshop_order|4 -> status=ok primary=True pass=12/12 mcp_calls=16 tools=53 372.9s
+[23:28:59] [83/102] opencode|hookpkg2|demoshop_order|4 -> status=ok primary=True pass=12/12 mcp_calls=0 tools=45 355.4s
+[23:34:23] [84/102] claude|hookpkg2|demoshop_debug|4 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=23 324.1s
+[23:36:41] [85/102] claude|mcp|demoshop_debug|4 -> status=ok primary=True pass=17/17 mcp_calls=19 tools=44 544.5s
+[23:38:44] [86/102] opencode|hookpkg3|demoshop_order|4 -> status=ok primary=False pass=11/12 mcp_calls=0 tools=71 667.0s
+[23:39:52] [87/102] claude|hookpkg3|demoshop_debug|4 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=37 329.2s
+[23:41:47] [88/102] codex|mcp|demoshop_debug|4 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=25 305.9s
+[23:44:37] [89/102] codex|hookpkg2|demoshop_debug|4 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=22 352.6s
+[23:46:28] [90/102] codex|hookpkg3|demoshop_debug|4 -> status=ok primary=False pass=16/17 mcp_calls=0 tools=22 281.1s
+[23:51:01] [91/102] opencode|hookpkg2|demoshop_debug|4 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=27 384.8s
+[23:55:30] [92/102] opencode|hookpkg3|demoshop_debug|4 -> status=ok primary=True pass=17/17 mcp_calls=0 tools=20 268.8s
+[23:56:15] [93/102] opencode|mcp|demoshop_debug|4 -> status=ok primary=True pass=17/17 mcp_calls=15 tools=57 867.2s
+[00:03:52] [94/102] claude|mcp|tricentis_debug|4 -> status=ok primary=False pass=13/15 mcp_calls=0 tools=38 771.1s
+[00:08:42] [95/102] claude|hookpkg2|tricentis_debug|4 -> status=ok primary=False pass=14/15 mcp_calls=0 tools=80 792.4s
+[00:12:49] [96/102] codex|hookpkg2|tricentis_debug|4 -> status=ok primary=False pass=14/15 mcp_calls=0 tools=34 246.4s
+[00:13:01] [97/102] codex|mcp|tricentis_debug|4 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=50 548.2s
+[00:17:14] [98/102] codex|hookpkg3|tricentis_debug|4 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=23 265.2s
+[00:19:13] [99/102] claude|hookpkg3|tricentis_debug|4 -> status=ok primary=False pass=14/15 mcp_calls=0 tools=63 920.9s
+[00:20:30] [100/102] opencode|mcp|tricentis_debug|4 -> status=ok primary=False pass=14/15 mcp_calls=3 tools=30 449.6s
+[00:29:29] [101/102] opencode|hookpkg2|tricentis_debug|4 -> status=ok primary=True pass=15/15 mcp_calls=0 tools=65 734.9s
+[00:31:07] [102/102] opencode|hookpkg3|tricentis_debug|4 -> status=ok primary=False pass=14/15 mcp_calls=0 tools=70 637.1s
+[00:31:08] [batch] done: ran=102 skipped=0 reaper_kills_total=8 (final sweep 0)
+[00:31:08] disk after:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  234G  213G  8,5G  97% /

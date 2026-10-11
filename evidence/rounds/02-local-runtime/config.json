@@ -1,0 +1,22 @@
+{
+ "round": "2",
+ "folder": "02-local-runtime",
+ "title": "Local runtime: embedded robotcode helper, stock REPL, keyword docs, agent channel",
+ "kind": "spike",
+ "dates": [
+  "2026-10-01"
+ ],
+ "agents": {
+  "claude": "Claude Code 2.1.286 + claude-haiku-4-5",
+  "codex": "Codex 0.153.4 + gpt-5.6-luna@low",
+  "opencode": "OpenCode 1.15.12 + MiniMax-M2.7",
+  "copilot": "Copilot CLI 1.0.54 + gpt-4.1"
+ },
+ "sessions": "34 headless agent sessions (agents study)",
+ "studies": [
+  "agents",
+  "keyword_docs",
+  "python_api",
+  "repl_only"
+ ]
+}

@@ -1,0 +1,8 @@
+<!doctype html><html><head><title>R5 Lab Home</title></head><body>
+<h1>R5 Lab</h1>
+<nav><a id="to-form" href="form.html">Form</a> <a id="to-async" href="async.html">Async</a> <a id="to-frames" href="frames.html">Frames</a></nav>
+<button id="cookie-ok" onclick="this.parentElement.removeChild(document.getElementById('banner'))">Accept cookies</button>
+<div id="banner" style="position:fixed;bottom:0;left:0;right:0;height:60px;background:#eee">Cookie banner</div>
+<ul id="items"></ul>
+<script>for(let i=0;i<40;i++){const li=document.createElement('li');li.textContent='Item '+i+' lorem ipsum dolor sit amet';li.setAttribute('data-test','item-'+i);document.getElementById('items').appendChild(li);}</script>
+</body></html>

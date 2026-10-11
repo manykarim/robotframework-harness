@@ -1,0 +1,19 @@
+{"t": 0.0, "wall": 1790868558.043, "kind": "start", "cmd": ["~/workspace/robotcode-experiments/.venv/bin/robotcode", "language-server", "--stdio"], "cwd": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round3/agent_lsp/selftest/oc_shim", "pid": 3880076, "passthrough": false}
+{"t": 0.001, "wall": 1790868558.044, "kind": "server_pid", "pid": 3880088}
+{"t": 0.001, "wall": 1790868558.044, "kind": "c2s", "method": "initialize", "id": 0, "rootUri": "file://~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round3/agent_lsp/selftest/oc_shim", "workspaceFolders": [{"name": "workspace", "uri": "file://~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/round3/agent_lsp/selftest/oc_shim"}], "clientInfo": null, "initOpts": {}, "td_caps": ["diagnostic", "publishDiagnostics", "synchronization"]}
+{"t": 0.937, "wall": 1790868558.979, "kind": "s2c_resp", "id": 0, "error": null, "result_preview": "{\"capabilities\": {\"textDocumentSync\": {\"openClose\": true, \"change\": 2, \"willSave\": true, \"willSaveWaitUntil\": true, \"save\": {\"includeText\": true}}, \"completionProvider\": {\"triggerCharacters\": [\" \", \"*\", \"\\t\", \".\", \"/\", \"{\", \"=\", \"/\"], \"resolveProvider\": true, \"completionItem\": {\"labelDetailsSupport\""}
+{"t": 0.948, "wall": 1790868558.991, "kind": "c2s", "method": "initialized", "id": null}
+{"t": 0.949, "wall": 1790868558.992, "kind": "c2s", "method": "workspace/didChangeWatchedFiles", "id": null}
+{"t": 0.951, "wall": 1790868558.994, "kind": "s2c", "method": "client/registerCapability", "id": 1}
+{"t": 0.954, "wall": 1790868558.997, "kind": "c2s", "method": "textDocument/didOpen", "id": null, "uri": "de-remote/round3/agent_lsp/selftest/oc_shim/tests/shop.robot", "languageId": "plaintext", "version": 0, "rewrote_languageId": true}
+{"t": 0.954, "wall": 1790868558.997, "kind": "c2s", "method": "textDocument/diagnostic", "id": 1}
+{"t": 0.955, "wall": 1790868558.998, "kind": "s2c", "method": "workspace/configuration", "id": 2}
+{"t": 0.955, "wall": 1790868558.998, "kind": "c2s", "method": null, "id": 1, "result_preview": "null"}
+{"t": 0.967, "wall": 1790868559.01, "kind": "c2s", "method": null, "id": 2, "result_preview": "[null]"}
+{"t": 0.969, "wall": 1790868559.012, "kind": "s2c", "method": "workspace/configuration", "id": 3}
+{"t": 0.97, "wall": 1790868559.012, "kind": "c2s", "method": null, "id": 3, "result_preview": "[null]"}
+{"t": 0.976, "wall": 1790868559.019, "kind": "s2c", "method": "client/registerCapability", "id": 4}
+{"t": 0.976, "wall": 1790868559.019, "kind": "s2c", "method": "workspace/configuration", "id": 5}
+{"t": 0.977, "wall": 1790868559.019, "kind": "s2c_resp", "id": 1, "error": null, "result_preview": "{\"items\": [], \"kind\": \"full\"}"}
+{"t": 0.981, "wall": 1790868559.024, "kind": "c2s", "method": null, "id": 4, "result_preview": "null"}
+{"t": 1.001, "wall": 1790868559.044, "kind": "server_eof"}

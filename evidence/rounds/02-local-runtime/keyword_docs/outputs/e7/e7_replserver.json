@@ -1,0 +1,53 @@
+{
+ "startup_s": 0.86,
+ "rows": [
+  {
+   "cell": "imports",
+   "ms": 299.5,
+   "resp_bytes": 4361,
+   "success": true
+  },
+  {
+   "cell": "dotcmd_kw",
+   "ms": 6.9,
+   "resp_bytes": 734,
+   "success": false
+  },
+  {
+   "cell": "search_post_json",
+   "ms": 51.5,
+   "resp_bytes": 2428,
+   "success": true
+  },
+  {
+   "cell": "search_post_json_again",
+   "ms": 6.2,
+   "resp_bytes": 2428,
+   "success": true
+  },
+  {
+   "cell": "search_wait_visible",
+   "ms": 4.6,
+   "resp_bytes": 3486,
+   "success": true
+  },
+  {
+   "cell": "doc_compact",
+   "ms": 4.0,
+   "resp_bytes": 1299,
+   "success": true
+  },
+  {
+   "cell": "doc_full",
+   "ms": 4.3,
+   "resp_bytes": 3531,
+   "success": true
+  },
+  {
+   "cell": "doc_resource_json",
+   "ms": 4.5,
+   "resp_bytes": 1957,
+   "success": true
+  }
+ ]
+}

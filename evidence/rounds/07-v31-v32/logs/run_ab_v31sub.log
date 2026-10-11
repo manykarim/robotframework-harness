@@ -1,0 +1,7 @@
+[2026-10-10 06:37:22] [pid 1723627] start: tag=v31sub arms=mcp,hookpkg3,hookpkg31 reps=3 agents=claude,codex,opencode scenarios=live extra=--claude-model claude-haiku-5-5 --browser-concurrency 2 results=results_live_v31sub.jsonl
+[2026-10-10 06:37:22] [pid 1723627] start cleanup: dropped 0 aborted/auth-failure rows
+[2026-10-10 06:37:23] [pid 1723627] status: 0/135 cells ok
+[2026-10-10 06:37:29] [pid 1723627] pass 1: starting harness
+[2026-10-10 15:33:19] [pid 1723627] pass 1: harness exited (0)
+[2026-10-10 15:33:20] [pid 1723627] pass 1: dropped 0 aborted/auth-failure rows; 135/135 cells ok
+[2026-10-10 15:33:20] [pid 1723627] done: complete (135/135)

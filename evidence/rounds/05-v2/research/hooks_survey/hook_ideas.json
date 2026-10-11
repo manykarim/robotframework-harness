@@ -1,0 +1,172 @@
+{
+  "meta": {
+    "date": "2026-10-08",
+    "scope": "Ranked guidance-hook ideas for an RF skill+hooks harness (REPL / robot-debug / robot runs) across Claude Code, Codex, Copilot CLI, OpenCode.",
+    "own_evidence": {
+      "transcript_scan": "transcript_scan.json (180 A/B sessions: round-2 live 135 + round-4 hookpkg 45; heuristics on tool inputs; Codex file contents not in transcript)",
+      "replay": "replay_detectors.json (loop/churn/weakening/bash-guard detectors replayed over the same sessions)",
+      "debug_baseline": "replay_debug_baseline.json (48 Claude+OpenCode debug sessions; weakening vs. the session-start file content reconstructed from the agent's first Read)",
+      "prototypes": "detectors.py (26/26 examples pass)"
+    },
+    "caveat": "All pass-rate splits are correlational (n small, confounded by scenario difficulty); they show where struggling sessions can be detected early, not that the hook would fix them.",
+    "event_names": {
+      "pre": {"claude": "PreToolUse", "codex": "PreToolUse", "copilot": "preToolUse", "opencode": "tool.execute.before"},
+      "post": {"claude": "PostToolUse", "codex": "PostToolUse", "copilot": "postToolUse", "opencode": "tool.execute.after"},
+      "post_fail": {"claude": "PostToolUseFailure", "codex": "PostToolUse (no exit code; parse output)", "copilot": "postToolUseFailure", "opencode": "tool.execute.after (metadata.exit)"},
+      "start": {"claude": "SessionStart (source startup|resume|clear|compact)", "codex": "SessionStart", "copilot": "sessionStart", "opencode": "plugin init / event session.created"},
+      "prompt": {"claude": "UserPromptSubmit", "codex": "UserPromptSubmit", "copilot": "userPromptSubmitted (modifiedPrompt SDK-only)", "opencode": "chat.message (edit text)"},
+      "compact": {"claude": "PreCompact + SessionStart(compact)", "codex": "PreCompact/PostCompact", "copilot": "preCompact (notification only)", "opencode": "experimental.session.compacting (inject into compaction prompt), event session.compacted"},
+      "stop": {"claude": "Stop (stop_hook_active, cap 8)", "codex": "Stop", "copilot": "agentStop (cap 8)", "opencode": "no native; noReply prompt workaround"}
+    },
+    "context_caps": {"claude": "10,000 chars per field (excess spilled to file + 2k preview)", "codex": "additionalContextLimit ~2,500 tokens (spills to disk)", "copilot": "postToolUse additionalContext 10 KB", "opencode": "none (appended to tool output)"},
+    "output_replacement": {"claude": "PostToolUse hookSpecificOutput.updatedToolOutput (>= v2.1.121)", "codex": "PostToolUse decision:block replaces tool output with reason", "copilot": "postToolUse modifiedResult", "opencode": "mutate output.output"}
+  },
+  "ideas": [
+    {
+      "rank": 1, "id": "loop-breaker",
+      "title": "Repeated-failure loop breaker",
+      "events": {"claude": "PostToolUse+PostToolUseFailure (Bash robot|robotcode, hook-run steps)", "codex": "PostToolUse", "copilot": "postToolUse+postToolUseFailure", "opencode": "tool.execute.after"},
+      "trigger": "failure_signature(output) (FAIL/Timeout/No keyword lines; numbers, durations, paths masked; sha1[:12]) seen 3x without a green run in between; or same .robot/.resource edited 8x since last green while failures persist",
+      "action": "additionalContext once per signature (no deny): name the repeated failure, prescribe inspect-before-edit (robot-debug pause on failure / REPL Get Element Count / Grep .rf/state/latest), 'change one thing'. Second firing for same signature -> suggest a different approach.",
+      "message": "The same failure has now occurred 3x: '<first line>'. Stop editing blindly: inspect the live state first (robot-debug pauses at the failure; or Grep .rf/state/latest/aria.yaml for the element), then change one thing.",
+      "benefit": "Early detection of struggling sessions; replay fired in 19/60 Claude (pass 0.21 vs 0.46), 36/60 OpenCode (0.25 vs 0.62), 14/60 Codex (0.71 vs 0.87); lower pass when fired in 4/5 scenarios; first firing at median 60%/49%/31% of the session -> time left to redirect.",
+      "risk": "Legit incremental fixing of the same step; mitigated by context-only + once per signature + reset on green.",
+      "cost": "S",
+      "prototype": "detectors.py LoopDetector (+ replay_detectors.py)",
+      "evidence": ["https://startdebugging.net/2026/09/fix-coding-agent-loops-re-running-a-check-it-cannot-satisfy/ (fingerprint failures by output hash; give up on identical failure twice)", "https://claudecodeguides.com/claude-code-infinite-loop-detection-stop-drains-tokens/ (3 repeats / 4 edits thresholds)", "replay_detectors.json"]
+    },
+    {
+      "rank": 2, "id": "wait-strategy-guard",
+      "title": "Timeout inflation / Sleep / force-click hint",
+      "events": {"claude": "PreToolUse Write|Edit|MultiEdit (*.robot,*.resource) + PostToolUseFailure on TimeoutError", "codex": "PreToolUse apply_patch", "copilot": "preToolUse", "opencode": "tool.execute.before"},
+      "trigger": "edit raises an explicit timeout= on an existing wait/assertion, adds Set Browser Timeout / Set Selenium Timeout, adds `Sleep`, or adds force=True / Execute|Evaluate JavaScript click",
+      "action": "allow + additionalContext (deny-once only for new `Sleep` in a Browser test, with a Wait For Elements State rewrite suggestion)",
+      "message": "You raised a timeout (5s -> 15s) / added Sleep. First verify the element exists: in the REPL `Get Element Count  <sel>` (0 = wrong locator/frame/flow, not timing) or Grep .rf/state/latest/aria.yaml. Use an explicit wait (Wait For Elements State <sel> visible timeout=10s) only when the element appears late. force=True/JS click bypasses actionability: check what covers the element (cookie banner/overlay).",
+      "benefit": "tricentis_debug: 18/24 debug sessions raised Wait For Elements State timeouts 5s->10/15/30s, 1 passed. Pooled .robot content: timeout tweaks pass 0.28 vs 0.65 (Claude) / 0.28 vs 0.79 (OpenCode); Sleep 0.19 vs 0.49 / 0.29 vs 0.50; force/JS click 0.21 vs 0.46 / 0.21 vs 0.53.",
+      "risk": "Genuinely slow apps need longer timeouts; context-only except Sleep; allow after 1 denial.",
+      "cost": "S",
+      "prototype": "detectors.py weakening_findings rule timeout-raised (+ replay_debug_baseline.py)",
+      "evidence": ["Browser 20.5 libdoc 'Implicit waiting': Playwright auto-waits; assertions retry for retry_assertions_for; explicit Wait For Elements State", "https://robocop.readthedocs.io/en/5.0.0/community_rules.html (sleep-keyword-used W10001)", "transcript_scan.json", "replay_debug_baseline.json"]
+    },
+    {
+      "rank": 3, "id": "failure-triage-hints",
+      "title": "Failure-class hints on robot/REPL failures (frames, shadow DOM, strict mode, covered, not found)",
+      "events": {"claude": "PostToolUse/PostToolUseFailure Bash (robot|robotcode repl|robot-debug)", "codex": "PostToolUse", "copilot": "postToolUseFailure/postToolUse", "opencode": "tool.execute.after"},
+      "trigger": "regex on output: `TimeoutError.*waiting for locator` + selector present in a captured frame's aria (iframe) -> frame hint; `strict mode violation.*resolved to (\\d+) elements` -> strict hint; `intercepts pointer events|is not visible|outside of the viewport` -> covered/visibility hint; `No keyword with name` -> docs file pointer; `Variable '...' not found`",
+      "action": "additionalContext <= 600 chars + path of captured page/aria files; never repeat the same hint twice per session",
+      "message": "Element is inside an iframe: chain with >>> (e.g. `id=pay >>> id=card`); open shadow roots are pierced automatically by css/text/id (not by xpath or css:light); strict mode: N matches -> make the selector unique or add `>> nth=0`.",
+      "benefit": "Converts the most common Browser failures into a one-step fix; Browser docs: chains don't cross frames, >>> required; skill teaching `>>` instead of `>>>` measurably hurt in earlier evals (project memory).",
+      "risk": "Mis-classification -> wrong hint; keep hints conditional ('if ... then').",
+      "cost": "M",
+      "evidence": ["Browser 20.5 libdoc sections iFrames / Shadow DOM / strict mode", "ab/hookpkg_build_findings.md (guard results NOT_FOUND with frame >>> fix already in file-step engine; extend to Bash runs + REPL)"]
+    },
+    {
+      "rank": 4, "id": "debugger-on-repeat-failure",
+      "title": "Point to robot-debug (or auto-reproduce) when an existing test fails twice",
+      "events": {"claude": "PostToolUseFailure Bash robot", "codex": "PostToolUse (parse '| FAIL |')", "copilot": "postToolUseFailure", "opencode": "tool.execute.after"},
+      "trigger": "same test name FAIL in 2 consecutive robot runs (debug tasks or pre-existing tests)",
+      "action": "additionalContext with a ready-to-run command + robot-debug format card; optionally auto-run reproduction and save page to .rf/state (hookpkg already does this for failing robot runs)",
+      "message": "Reproduce at the failure instead of re-running: printf 'Get Url\\nGet Element Count    <sel>\\n.c\\n' | robotcode robot-debug --plain -t '<test>' <file> 2>&1 — pauses before the failure unwinds with the page open; EOF resumes and finishes.",
+      "benefit": "0/180 A/B sessions used robotcode repl or robot-debug unprompted -> the debugger only gets used if a hook offers it at the right moment; hookpkg sessions with a reproduction passed 0.64 vs 0.50.",
+      "risk": "Agents unfamiliar with (rdb) may waste turns; give exact command; EOF-resume makes it non-hanging.",
+      "cost": "S",
+      "evidence": ["transcript_scan.json (robotcode_repl/robot_debug = 0 sessions)", "ab/findings_hooks.md (reproduction 0.64 vs 0.50)", "robotcode-cli-report.md E6.4/E6.5, 05l EOF resumes"]
+    },
+    {
+      "rank": 5, "id": "env-card-and-compact",
+      "title": "SessionStart / UserPromptSubmit environment card + re-inject after compaction",
+      "events": {"claude": "SessionStart (startup|compact), UserPromptSubmit (first prompt only)", "codex": "SessionStart, PostCompact", "copilot": "sessionStart", "opencode": "chat.message text edit (first message), experimental.session.compacting"},
+      "trigger": "session start; compaction; first user prompt (classify explore vs debug: words fix|failing|debug|repair + existing tests)",
+      "action": "additionalContext <= 1.5 KB: installed RF libs + versions, robot.toml profiles/python-path/output-dir, resource files with keyword names, existing tests (robotcode discover), task kind, pointers to .rf/docs/<Lib>.md and .rf/state/latest/; after compaction: last run per test, open failure signature, current URL, files changed.",
+      "benefit": "Removes discovery turns (OpenCode 55-85 turns); factual context recommended by docs; compaction can drop details.",
+      "risk": "Stale info on resume (docs warn); size caps (Codex ~2,500 tokens).",
+      "cost": "S",
+      "evidence": ["https://code.claude.com/docs/en/hooks-guide#re-inject-context-after-compaction", "https://code.claude.com/docs/en/hooks (use factual statements; stale context on resume)", "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents (lightweight identifiers, structured notes)", "https://opencode.ai/docs/plugins/ (experimental.session.compacting)"]
+    },
+    {
+      "rank": 6, "id": "repl-format-enforcer",
+      "title": "REPL / robot-debug launch: format card + input lint",
+      "events": {"claude": "PreToolUse Bash", "codex": "PreToolUse Bash", "copilot": "preToolUse", "opencode": "tool.execute.before"},
+      "trigger": "`robotcode .* (repl|robot-debug)` in command; lint heredoc body (single-space separators, tabs, unquoted heredoc with ${, missing --plain/--no-history, -d dir missing, no trailing .exit, markdown fences, CRLF)",
+      "action": "auto-fix via updatedInput/modifiedArgs/args mutation when safe (add --plain --no-history, quote heredoc, mkdir -p -d dir, strip fences, CRLF->LF); deny with exact correction otherwise; inject <=1 KB format card on first launch",
+      "benefit": "Missing -d alone cost 48 s + cascade of FileNotFoundError in a live probe; wrong separators silently become one keyword name.",
+      "risk": "Rewrites must not change semantics; only mechanical fixes.",
+      "cost": "S-M",
+      "evidence": ["robotcode-cli-report.md E5.8 (112 s vs 9 s with missing output dir)", "see parent's repl_format_rules.json (item 1)"]
+    },
+    {
+      "rank": 7, "id": "big-artifact-steering",
+      "title": "Steer away from dumping output.xml / log.html / page source",
+      "events": {"claude": "PreToolUse Bash|Read (+ PostToolUse updatedToolOutput)", "codex": "PreToolUse Bash; PostToolUse decision:block replaces output", "copilot": "preToolUse; postToolUse modifiedResult", "opencode": "tool.execute.before/after (mutate output)"},
+      "trigger": "cat/head/less/sed/Read of output.xml|log.html|report.html|*.html page source > 50 KB without offset/limit or grep",
+      "action": "rewrite to `robotcode results show -o <xml>` / `grep -n -m 20`, or truncate the output to a 2 KB digest + file path",
+      "message": "That file is large. Use `robotcode results show -o out/output.xml` for failures, or `grep -n -m 20 '<text>' <file>`.",
+      "benefit": "cat/head of output.xml: Codex sessions pass 0.50 vs 0.88 (n=8); grep of output.xml neutral/positive (0.85, n=13); log.html via shell Claude 0.20 vs 0.40 (n=5). Docs: truncation + steering instructions.",
+      "risk": "Low; agent can still Read with offset.",
+      "cost": "S",
+      "evidence": ["https://www.anthropic.com/engineering/writing-tools-for-agents (truncate + steer; 25k-token tool result limit)", "https://code.claude.com/docs/en/hooks (updatedToolOutput)", "https://learn.chatgpt.com/docs/hooks (Codex PostToolUse block replaces output)", "transcript_scan.json"]
+    },
+    {
+      "rank": 8, "id": "test-tampering-guard",
+      "title": "Assertion-weakening / test-deletion guard (debug tasks)",
+      "events": {"claude": "PreToolUse Write|Edit|MultiEdit", "codex": "PreToolUse apply_patch", "copilot": "preToolUse", "opencode": "tool.execute.before (throw = deny)"},
+      "trigger": "diff vs SessionStart snapshot of the RF file: test deleted/renamed, fewer assertions in a test, new Run Keyword And Ignore Error/Return Status/Warn On Failure, new Skip/Pass Execution/No Operation/robot:skip; warn-only: expected value changed, operator weakened (== -> *=), Should Be Equal -> Should Contain, new TRY/EXCEPT",
+      "action": "deny (block rules) with reason + 'retry with justification if the spec really changed' (allow after 1 denial per file+rule); warn rules -> additionalContext",
+      "benefit": "Insurance against spec-gaming: ImpossibleBench reports frontier agents cheating by modifying/deleting tests (GPT-5 76% on OneOff-SWEBench). In our 48 debug sessions block rules fired once (OpenCode, failed) -> low false-positive cost, low frequency for these models.",
+      "risk": "Legit refactors (moving assertions into a keyword) -> count assertions across test+called keywords; allow after one denial.",
+      "cost": "S",
+      "prototype": "detectors.py weakening_findings (12/12 examples)",
+      "evidence": ["https://arxiv.org/abs/2510.20270 (ImpossibleBench)", "https://hackernoon.com/claude-code-hooks-how-to-stop-ai-agents-from-breaking-your-code", "replay_debug_baseline.json"]
+    },
+    {
+      "rank": 9, "id": "env-mutation-guard",
+      "title": "Block package/browser installs and PYTHONPATH workarounds",
+      "events": {"claude": "PreToolUse Bash", "codex": "PreToolUse Bash", "copilot": "preToolUse (fail-closed)", "opencode": "tool.execute.before (throw)"},
+      "trigger": "(pip|uv pip) install, uv add|sync, rfbrowser init|install, playwright install; robot ... -P|--pythonpath, PYTHONPATH= (command position only, not quoted data)",
+      "action": "deny with safer alternative (check version via `robotcode libdoc <Lib> version`; fix relative Resource path or robot.toml python-path)",
+      "benefit": "Protects shared venv/browsers and suite portability. Rare in A/B (pip 2/180, browser install 2/180, PYTHONPATH 0) -> cheap insurance.",
+      "risk": "Projects that legitimately need a package; message tells the agent to report instead.",
+      "cost": "S",
+      "prototype": "detectors.py bash_guard (11/11 examples)",
+      "evidence": ["https://github.com/Dicklesworthstone/destructive_command_guard (context-aware command regex, data vs execution, safer-alternative message)", "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-hooks-reference (preToolUse fail-closed; timeouts fail-open)"]
+    },
+    {
+      "rank": 10, "id": "stop-gate-v2",
+      "title": "Stop gate with failure memory + hygiene checks",
+      "events": {"claude": "Stop", "codex": "Stop", "copilot": "agentStop", "opencode": "noReply workaround"},
+      "trigger": "changed RF file without a green plain run since; or weakening findings unresolved; or absolute paths / secrets in .robot; identical failure twice -> give up with systemMessage",
+      "action": "decision:block with the failing test + one-line hint; respect stop_hook_active; <=2 blocks",
+      "benefit": "Converts 'I ran the tests' into a gate (hookpkg gate never needed in A/B because agents ran robot; value is in the hygiene checks).",
+      "risk": "Unsatisfiable gates loop -> identical-failure memory and cap.",
+      "cost": "S",
+      "evidence": ["https://code.claude.com/docs/en/hooks-guide (stop_hook_active, cap 8)", "https://startdebugging.net/2026/09/fix-coding-agent-loops-re-running-a-check-it-cannot-satisfy/", "https://blakecrosley.com/blog/claude-code-hooks-explained"]
+    },
+    {
+      "rank": 11, "id": "secret-redaction",
+      "title": "Redact credentials from REPL/robot output shown to the agent",
+      "events": {"claude": "PostToolUse updatedToolOutput", "codex": "PostToolUse block+reason", "copilot": "postToolUse modifiedResult", "opencode": "mutate output.output"},
+      "trigger": "RequestsLibrary INFO logs with password|token|Authorization, &{creds} dumps",
+      "action": "replace values with *** in what the model sees; keep raw in file",
+      "benefit": "RequestsLibrary logs creds/tokens in plain text in REPL output (robotcode-cli-report E5.2).",
+      "risk": "Agent may need the token value; keep variable names.",
+      "cost": "M",
+      "evidence": ["https://github.com/inkdust2021/opencode-vibeguard", "robotcode-cli-report.md E5.2"]
+    }
+  ],
+  "cross_cutting_practices": [
+    {"rule": "Deterministic hooks for must-not-skip rules; skill/CLAUDE.md for advice ('cost when ignored once: annoyance -> doc, incident -> hook')", "url": "https://blakecrosley.com/blog/claude-code-hooks-explained"},
+    {"rule": "Exit 2 blocks / exit 1 does not; emit JSON on exit 0 only; build JSON with an encoder", "url": "https://code.claude.com/docs/en/hooks-guide"},
+    {"rule": "PreToolUse deny holds even in bypassPermissions; hooks tighten, never loosen", "url": "https://code.claude.com/docs/en/hooks-guide"},
+    {"rule": "Only one hook should rewrite a tool's input (parallel hooks, last wins)", "url": "https://code.claude.com/docs/en/hooks-guide"},
+    {"rule": "Factual context, not imperative commands; context on resume may be stale", "url": "https://code.claude.com/docs/en/hooks"},
+    {"rule": "Context caps: Claude 10k chars/field (spills to file), Codex ~2,500 tokens, Copilot postToolUse 10 KB", "url": "https://code.claude.com/docs/en/hooks ; https://learn.chatgpt.com/docs/hooks ; https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-hooks-reference"},
+    {"rule": "Just-in-time context: keep file paths in context, let the agent grep/head the files", "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"},
+    {"rule": "Error messages should be specific and actionable; truncate with steering instructions", "url": "https://www.anthropic.com/engineering/writing-tools-for-agents"},
+    {"rule": "Gates need memory of identical failures and a 'cannot run here' exit distinct from 'failed'", "url": "https://startdebugging.net/2026/09/fix-coding-agent-loops-re-running-a-check-it-cannot-satisfy/"},
+    {"rule": "Copilot preToolUse is fail-closed on crash, fail-open on timeout; keep hooks fast", "url": "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-hooks-reference"}
+  ],
+  "rf_specific_prior_art": [
+    {"name": "manykarim/robotframework-agentskills", "url": "https://github.com/manykarim/robotframework-agentskills", "notes": "12 skills (rf-robotcode, rf-libdoc, rf-results, ...), 4 agents (RF Debug Expert), hooks: post-save Robocop syntax check, deprecated-syntax warnings, optional dry-run; session-start env check"},
+    {"name": "nizos/tdd-guard", "url": "https://github.com/nizos/tdd-guard", "notes": "PreToolUse file-edit interception + test-reporter results + model-based validation; toggle per session"}
+  ]
+}

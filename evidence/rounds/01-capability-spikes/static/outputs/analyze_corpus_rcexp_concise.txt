@@ -1,0 +1,44 @@
+cases/b01_typo_keyword.robot:6:5: [ERROR] KeywordNotFound: No keyword with name 'Shuold Be Equal' found.
+cases/b02_too_few_args.robot:6:5: [ERROR] DataError: Keyword 'BuiltIn.Should Be Equal' expected 2 to 10 arguments, got 1.
+cases/b03_too_many_args.robot:6:5: [ERROR] DataError: Keyword 'BuiltIn.Log' expected 1 to 6 arguments, got 8.
+cases/b04_unknown_named_arg.robot:6:5: [ERROR] DataError: Keyword 'BuiltIn.Should Be Equal' got unexpected named argument 'ignor_case'.
+cases/b05_undefined_variable.robot:6:14: [ERROR] VariableNotFound: Variable '${undefined_var}' not found.
+cases/b06_missing_library_import.robot:6:5: [ERROR] KeywordNotFound: No keyword with name 'Convert To Upper Case' found.
+cases/b07_browser_kw_with_selenium_only.robot:2:12: [ERROR] DataError: Importing test library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+cases/b07_browser_kw_with_selenium_only.robot:6:5: [ERROR] KeywordNotFound: No keyword with name 'Fill Text' found.
+cases/b08_ambiguous_two_custom_libs.robot:7:5: [ERROR] MultipleKeywords: Multiple keywords with name 'Do Thing' found. Give the full name of the keyword you want to use:
+    LibA.Do Thing
+    LibB.Do Thing
+cases/b09_ambiguous_browser_selenium.robot:3:12: [ERROR] DataError: Importing test library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+cases/b10_bad_embedded_call.robot:6:5: [ERROR] KeywordNotFound: No keyword with name 'The User Adds many Items To The Cart' found.
+cases/b11_invalid_for.robot:6:5: [ERROR] ModelError: FOR loop has no 'IN' or other valid separator.
+cases/b12_for_missing_end.robot:6:5: [ERROR] ModelError: FOR loop must have closing END.
+cases/b13_invalid_if.robot:6:5: [ERROR] ModelError: ELSE IF not allowed after ELSE.
+cases/b13_invalid_if.robot:6:5: [ERROR] ModelError: IF must have a condition.
+cases/b14_wrong_setting_name.robot:2:1: [ERROR] TokenError: Non-existing setting 'Test Setupp'. Did you mean:
+    Test Setup
+cases/b14_wrong_setting_name.robot:6:5: [ERROR] TokenError: Non-existing setting 'Tag'. Did you mean:
+    Tags
+cases/b15_resource_path_wrong.robot:2:13: [ERROR] DataError: Resource file 'resources/nonexist.resource' does not exist.
+cases/b16_browser_missing_arg.robot:6:5: [ERROR] DataError: Keyword 'Browser.Fill Text' expected 2 to 3 arguments, got 1.
+cases/b17_browser_positional_after_named.robot:6:5: [ERROR] DataError: Keyword 'Browser.New Page' got unexpected named argument 'wait_untl'.
+cases/b18_requests_missing_url.robot:6:5: [ERROR] DataError: Keyword 'RequestsLibrary.Create Session' expected 2 to 14 arguments, got 1.
+cases/b20_single_space_separator.robot:6:5: [ERROR] KeywordNotFound: No keyword with name 'Log hello world' found.
+cases/b21_library_not_installed.robot:2:12: [ERROR] DataError: Importing test library 'NonExistentLib' failed: ModuleNotFoundError: No module named 'NonExistentLib'
+cases/b23_wrong_library_prefix.robot:6:5: [ERROR] KeywordNotFound: No keyword with name 'Strng.Convert To Upper Case' found.
+cases/b24_unclosed_variable.robot:6:12: [ERROR] TokenError: Variable '${unclosed' was not closed properly.
+cases/b25_return_in_test.robot:6:5: [ERROR] TokenError: RETURN is not allowed in this context.
+cases/b26_unknown_section.robot:1:1: [ERROR] InvalidHeader: Unrecognized section header '*** Varibles ***'. Valid sections: 'Settings', 'Variables', 'Test Cases', 'Tasks', 'Keywords' and 'Comments'.
+cases/b29_user_kw_too_many_args.robot:6:5: [ERROR] DataError: Keyword 'common.Login As' expected 1 to 2 arguments, got 3.
+cases/b30_selenium_kw_in_browser_session.robot:6:5: [ERROR] KeywordNotFound: No keyword with name 'Input Text' found.
+cases/b31_empty_test.robot:2:1: [ERROR] ModelError: Test cannot be empty.
+cases/b33_keyword_only_missing.robot:6:5: [ERROR] DataError: Keyword 'Process.Start Process' expected at least 1 non-named argument, got 0.
+cases/v05_dynamic_set_test_variable.robot:7:14: [ERROR] VariableNotFound: Variable '${dyn}' not found.
+cases/v06_cli_variable.robot:6:14: [ERROR] VariableNotFound: Variable '${FROM_CLI}' not found.
+cases/v07_search_order_resolves_ambiguity.robot:8:5: [ERROR] MultipleKeywords: Multiple keywords with name 'Do Thing' found. Give the full name of the keyword you want to use:
+    LibA.Do Thing
+    LibB.Do Thing
+cases/v11_selenium_ok.robot:2:12: [ERROR] DataError: Importing test library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+cases/v11_selenium_ok.robot:6:5: [ERROR] KeywordNotFound: No keyword with name 'Open Browser' found.
+cases/v11_selenium_ok.robot:7:5: [ERROR] KeywordNotFound: No keyword with name 'Input Text' found.
+Files: 48, Errors: 37, Warnings: 0, Infos: 0, Hints: 0 (in 2.33s)

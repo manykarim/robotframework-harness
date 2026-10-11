@@ -1,0 +1,27 @@
+Instruction warning: Missing recommended keywords: discovery, snapshot, element
+find_keywords semantic 'click element'        lib=None              0.886s   5505ch top=[]
+find_keywords semantic 'click element'        lib=Browser           0.320s   2862ch top=[]
+find_keywords semantic 'fill text'            lib=None              0.378s   5333ch top=[]
+find_keywords semantic 'fill text'            lib=Browser           0.383s   3686ch top=[]
+find_keywords semantic 'post json'            lib=None              0.304s   6662ch top=[]
+find_keywords semantic 'post json'            lib=RequestsLibrary   0.339s   6683ch top=[]
+find_keywords semantic 'wait until visible'   lib=None              0.511s   5900ch top=[]
+find_keywords semantic 'wait until visible'   lib=SeleniumLibrary   0.499s   5141ch top=[]
+find_keywords semantic 'get text'             lib=None              0.366s   4601ch top=[]
+find_keywords pattern  'click element'        lib=None              0.816s   1469ch top=['SeleniumLibrary.Click Button', 'SeleniumLibrary.Click Element', 'SeleniumLibrary.Click Element At Coordinates', 'SeleniumLibrary.Click Image', 'SeleniumLibrary.Click Link']
+find_keywords pattern  'click element'        lib=Browser           0.002s    471ch top=[]
+find_keywords pattern  'fill text'            lib=None              0.002s    839ch top=['Browser.Fill Secret', 'Browser.Fill Text', 'Browser.Type Text']
+find_keywords pattern  'fill text'            lib=Browser           0.002s    839ch top=['Browser.Fill Secret', 'Browser.Fill Text', 'Browser.Type Text']
+find_keywords pattern  'post json'            lib=None              0.002s    114ch top=[]
+find_keywords pattern  'post json'            lib=RequestsLibrary   0.001s    114ch top=[]
+find_keywords pattern  'wait until visible'   lib=None              0.001s    123ch top=[]
+find_keywords pattern  'wait until visible'   lib=SeleniumLibrary   0.001s    123ch top=[]
+find_keywords pattern  'get text'             lib=None              0.001s   1932ch top=['Browser.Get Table Cell Element', 'Browser.Get Text', 'SeleniumLibrary.Get Text', 'Browser.Record Selector', 'Browser.Save Storage State']
+get_keyword_info 'Click'                          lib=Browser           0.000s   1534ch success=True
+get_keyword_info 'Fill Text'                      lib=Browser           0.000s   1519ch success=True
+get_keyword_info 'POST On Session'                lib=RequestsLibrary   0.000s   1358ch success=True
+get_keyword_info 'Wait Until Element Is Visible'  lib=SeleniumLibrary   0.000s    832ch success=True
+get_keyword_info 'Get Text'                       lib=None              0.000s   2271ch success=True
+check_library_availability  0.001s 540ch
+recommend_libraries  0.070s 2983ch
+import_s {'import_s': 1.912, 'semantic_env': None, 'python': '3.13.11 (main, Jan 14 2026, 19:38:04) [Clang 21.1.4 ]'}

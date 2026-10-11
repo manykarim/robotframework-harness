@@ -1,0 +1,34 @@
+Click(selector: str, button: MouseButton = left)  [Browser] tags: PageContent, Setter
+Simulates mouse click on the element found by selector.
+  - selector: Selector element to click. See the Finding elements section for details about the selectors.
+  - button: Defaults to left if invalid.
+  e.g. Click id=button_location
+
+Fill Text(selector: str, txt: str, force: bool = False)  [Browser] tags: PageContent, Setter
+Clears and fills the given txt into the text field found by selector.
+  - selector: Selector of the text field. See the Finding elements section for details about the selectors.
+  - txt: Text for the text field.
+  - force: Set to True to skip Playwright's [https://playwright.dev/docs/actionability | Actionability checks].
+  e.g. Fill Text css=input#username_field username
+
+Wait For Elements State(selector: str, state: ElementState = visible, timeout: timedelta | None = None, message: str | None = None)  [Browser] tags: PageContent, Wait
+Waits for the element found by selector to satisfy state option.
+  - selector: Selector of the corresponding object. See the Finding elements section for details about the selectors.
+  - state: See ElementState for explanation.
+  - timeout: uses default timeout from library if not set.
+  - message: overrides the default error message. The message argument accepts {selector}, {function}, and {timeout} [https://docs.py
+  e.g. Wait For Elements State //h1 visible timeout=2 s
+
+Wait Until Element Is Visible(locator: WebElement | str, timeout: timedelta | None = None, error: str | None = None)  [SeleniumLibrary]
+Waits until the element locator is visible.
+
+POST On Session(alias, url, data=None, json=None, expected_status=None, msg=None, **kwargs)  [RequestsLibrary]
+Sends a POST request on a previously created HTTP Session.
+
+Should Be Equal(first, second, msg=None, values=True, ignore_case=False, formatter=str, strip_spaces=False, collapse_spaces=False, type=None, types=None)  [BuiltIn]
+Fails if the given objects are unequal.
+  e.g. Should Be Equal | ${x} | expected |
+
+Get From Dictionary(dictionary, key, default=)  [Collections]
+Returns a value from the given dictionary based on the given key.
+  e.g. ${value} = | Get From Dictionary | ${D3} | b |

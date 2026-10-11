@@ -1,0 +1,7 @@
+[2026-10-10 06:37:22] [pid 1723633] start: tag=v31or arms=mcp,hookpkg3,hookpkg31 reps=3 agents=cc-or:deepseek-v4.1-flash,cc-or:qwen3.8-flash,cc-or:glm-5.3-flash scenarios=live extra=--or-models deepseek/deepseek-v4.1-flash,qwen/qwen3.8-flash,z-ai/glm-5.3-flash --or-budget-usd 50 --browser-concurrency 2 results=results_live_v31or.jsonl
+[2026-10-10 06:37:22] [pid 1723633] start cleanup: dropped 0 aborted/auth-failure rows
+[2026-10-10 06:37:23] [pid 1723633] status: 0/135 cells ok
+[2026-10-10 06:37:23] [pid 1723633] pass 1: starting harness
+[2026-10-10 13:09:02] [pid 1723633] pass 1: harness exited (0)
+[2026-10-10 13:09:02] [pid 1723633] pass 1: dropped 0 aborted/auth-failure rows; 135/135 cells ok
+[2026-10-10 13:09:02] [pid 1723633] done: complete (135/135)

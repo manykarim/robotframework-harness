@@ -1,0 +1,41 @@
+{
+ "invalid_cells": {
+  "codex/hook_forced2_r1": "harness bug: shared CODEX_HOME config.toml overwritten by parallel 'none' run -> no hook",
+  "codex/hook_forced2_r2": "codex requires hook trust; headless needs --dangerously-bypass-hook-trust (added for r3+)",
+  "opencode/fix_forced_r1": "before shim stripped pull-diagnostics capability (empty pull report taken as final)",
+  "copilot/hook_forced2_r1": "repo .github/hooks/*.json not executed in -p mode (repo hooks are deferred: loadDeferredRepoHooks)",
+  "copilot/plughook_forced2_r1": "plugin hook ran but Claude-format hookSpecificOutput.additionalContext was not forwarded; top-level additionalContext (plughook2) works",
+  "claude/fix_tools_r1": "parallel LSP calls during server start -> 'server is starting'; workspaceSymbol results filtered because project path was git-excluded"
+ },
+ "probe_results": {
+  "push_incremental_change_latency_s": 0.46,
+  "push_full_change": "silently rejected (no publish)",
+  "didSave_with_text": 0.49,
+  "reopen": 0.005,
+  "languageId_plaintext": "ignored (no diagnostics, hover None)",
+  "pull_mode": "textDocument/diagnostic always returns empty report; real diagnostics pushed ~5 s later (cold)",
+  "cold_first_diag_s": [
+   5.15,
+   7.19,
+   7.1,
+   7.49,
+   7.41
+  ],
+  "warm_first_diag_s": [
+   0.204,
+   0.211
+  ],
+  "initialize_s": [
+   0.86,
+   0.92,
+   1.09,
+   1.39
+  ],
+  "rss_mb_cold": 98,
+  "rss_mb_warm": 81,
+  "shim_rss_mb": 14,
+  "analyze_code_cold_s": 5.59,
+  "analyze_code_warm_s": 0.85,
+  "wrong_root": "root=parent of project -> robot.toml python-path ignored -> false 'No keyword with name Normalize Term found'"
+ }
+}

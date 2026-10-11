@@ -1,0 +1,1040 @@
+{
+ "claude:web": {
+  "agent": "claude",
+  "model": "claude-haiku-4-5",
+  "wall_s": 121,
+  "timed_out": false,
+  "exit": 0,
+  "tool_calls": 15,
+  "tool_kinds": {
+   "Skill": 1,
+   "Bash": 3,
+   "Read": 5,
+   "Write": 1,
+   "Edit": 5
+  },
+  "rfmcp_cli_calls": 0,
+  "rfmcp_examples": [],
+  "manual_hook_calls": 0,
+  "skill_read": true,
+  "state_reads": 0,
+  "docs_reads": 0,
+  "robot_runs": 2,
+  "hooks": {
+   "events": {
+    "session-start": 1,
+    "post-tool": 9,
+    "pre-tool": 6,
+    "stop": 1,
+    "session-end": 1
+   },
+   "actions": {
+    "session-start:context": 1,
+    "post-tool:none": 1,
+    "pre-tool:none": 6,
+    "post-tool:context": 8,
+    "stop:allow": 1,
+    "session-end:none": 1
+   },
+   "auto_executed_lines": 33,
+   "non_pass_lines": 3,
+   "stop_blocks": 0,
+   "denials": 0,
+   "rewrites": 0,
+   "tools_seen": {
+    "Bash": 3,
+    "Write": 2,
+    "Edit": 10
+   },
+   "latency_ms": {
+    "session-start": {
+     "median": 6.0,
+     "max": 6.0,
+     "n": 1
+    },
+    "post-tool": {
+     "median": 1018.2,
+     "max": 10520.9,
+     "n": 9
+    },
+    "pre-tool": {
+     "median": 57.9,
+     "max": 97.1,
+     "n": 6
+    },
+    "stop": {
+     "median": 7.6,
+     "max": 7.6,
+     "n": 1
+    },
+    "session-end": {
+     "median": 303.5,
+     "max": 303.5,
+     "n": 1
+    }
+   },
+   "errors": []
+  },
+  "plain_order": {
+   "rc": 0,
+   "line": "1 test, 1 passed, 0 failed"
+  },
+  "plain_checkout": {
+   "rc": 0,
+   "line": "3 tests, 3 passed, 0 failed"
+  },
+  "processes_left_after_exit": 0,
+  "daemons_alive_after_exit": [],
+  "creds_deleted": true,
+  "cell": "~/.cache/rfh-agents/claude-160657",
+  "final_tail": "========================================================================\\n4 tests, 4 passed, 0 failed\\n==============================================================================\\n```\",\"ttft_ms\":2722,\"type\":\"result\",\"duration_ms\":118830,\"uuid\":\"9e35b6b0-a4a4-411d-b53c-3e008df718c6\",\"ttft_stream_ms\":826,\"time_to_request_ms\":118,\"first_content_frame_ms\":827,\"queued_turn_count\":0,\"result_index\":0}"
+ },
+ "codex:web": {
+  "agent": "codex",
+  "model": "gpt-5.6-luna",
+  "wall_s": 88,
+  "timed_out": false,
+  "exit": 0,
+  "tool_calls": 8,
+  "tool_kinds": {
+   "shell": 6,
+   "apply_patch": 2
+  },
+  "rfmcp_cli_calls": 0,
+  "rfmcp_examples": [],
+  "manual_hook_calls": 0,
+  "skill_read": true,
+  "state_reads": 1,
+  "docs_reads": 0,
+  "robot_runs": 3,
+  "hooks": {
+   "events": {
+    "session-start": 1,
+    "post-tool": 7,
+    "pre-tool": 2,
+    "stop": 1,
+    "session-end": 1
+   },
+   "actions": {
+    "session-start:context": 1,
+    "post-tool:none": 3,
+    "pre-tool:none": 2,
+    "post-tool:context": 4,
+    "stop:allow": 1,
+    "session-end:none": 1
+   },
+   "auto_executed_lines": 37,
+   "non_pass_lines": 2,
+   "stop_blocks": 0,
+   "denials": 0,
+   "rewrites": 0,
+   "tools_seen": {
+    "Bash": 5,
+    "apply_patch": 4
+   },
+   "latency_ms": {
+    "session-start": {
+     "median": 5.5,
+     "max": 5.5,
+     "n": 1
+    },
+    "post-tool": {
+     "median": 8.1,
+     "max": 5892.7,
+     "n": 7
+    },
+    "pre-tool": {
+     "median": 154.0,
+     "max": 154.0,
+     "n": 2
+    },
+    "stop": {
+     "median": 7.7,
+     "max": 7.7,
+     "n": 1
+    },
+    "session-end": {
+     "median": 303.7,
+     "max": 303.7,
+     "n": 1
+    }
+   },
+   "errors": []
+  },
+  "plain_order": {
+   "rc": 0,
+   "line": "1 test, 1 passed, 0 failed"
+  },
+  "plain_checkout": {
+   "rc": 0,
+   "line": "3 tests, 3 passed, 0 failed"
+  },
+  "processes_left_after_exit": 0,
+  "daemons_alive_after_exit": [],
+  "creds_deleted": true,
+  "cell": "~/.cache/rfh-agents/codex-160837",
+  "final_tail": "{\"type\":\"item.completed\",\"item\":{\"id\":\"item_13\",\"type\":\"agent_message\",\"text\":\"Implemented `tests/order.robot` and repaired `tests/checkout.robot`.\\n\\nFinal summary: **4 tests, 4 passed, 0 failed**.\"}}"
+ },
+ "opencode:web": {
+  "agent": "opencode",
+  "model": "minimax-coding-plan/MiniMax-M2.7",
+  "wall_s": 125,
+  "timed_out": false,
+  "exit": 0,
+  "tool_calls": 20,
+  "tool_kinds": {
+   "skill": 1,
+   "glob": 1,
+   "read": 6,
+   "todowrite": 4,
+   "edit": 5,
+   "write": 1,
+   "bash": 2
+  },
+  "rfmcp_cli_calls": 0,
+  "rfmcp_examples": [],
+  "manual_hook_calls": 0,
+  "skill_read": false,
+  "state_reads": 0,
+  "docs_reads": 0,
+  "robot_runs": 6,
+  "hooks": {
+   "events": {
+    "session-start": 1,
+    "pre-tool": 6,
+    "post-tool": 8,
+    "stop": 1,
+    "session-end": 1
+   },
+   "actions": {
+    "session-start:context": 1,
+    "pre-tool:none": 6,
+    "post-tool:none": 1,
+    "post-tool:context": 7,
+    "stop:allow": 1,
+    "session-end:none": 1
+   },
+   "auto_executed_lines": 32,
+   "non_pass_lines": 3,
+   "stop_blocks": 0,
+   "denials": 0,
+   "rewrites": 0,
+   "tools_seen": {
+    "edit": 10,
+    "write": 2,
+    "bash": 2
+   },
+   "latency_ms": {
+    "session-start": {
+     "median": 5.8,
+     "max": 5.8,
+     "n": 1
+    },
+    "pre-tool": {
+     "median": 58.6,
+     "max": 104.5,
+     "n": 6
+    },
+    "post-tool": {
+     "median": 2893.9,
+     "max": 7480.8,
+     "n": 8
+    },
+    "stop": {
+     "median": 7.7,
+     "max": 7.7,
+     "n": 1
+    },
+    "session-end": {
+     "median": 303.4,
+     "max": 303.4,
+     "n": 1
+    }
+   },
+   "errors": []
+  },
+  "plain_order": {
+   "rc": 0,
+   "line": "1 test, 1 passed, 0 failed"
+  },
+  "plain_checkout": {
+   "rc": 0,
+   "line": "3 tests, 3 passed, 0 failed"
+  },
+  "processes_left_after_exit": 0,
+  "daemons_alive_after_exit": [],
+  "creds_deleted": true,
+  "cell": "~/.cache/rfh-agents/opencode-160928",
+  "final_tail": "{\"type\":\"text\",\"timestamp\":1791468693557,\"sessionID\":\"ses_ee426dbfefferUmbAohVVZuvJX\",\"part\":{\"id\":\"prt_11bdae827001MjlEt45FKue3bF\",\"messageID\":\"msg_11bdae337001bTYiYvlrAxoOft\",\"sessionID\":\"ses_ee426dbfefferUmbAohVVZuvJX\",\"type\":\"text\",\"text\":\"4 tests, 4 passed, 0 failed\",\"time\":{\"start\":1791468693543,\"end\":1791468693550}}}"
+ },
+ "copilot:web(run1)": {
+  "agent": "copilot",
+  "model": "auto",
+  "wall_s": 98,
+  "timed_out": false,
+  "exit": 0,
+  "tool_calls": 16,
+  "tool_kinds": {
+   "skill": 1,
+   "glob": 2,
+   "view": 8,
+   "bash": 3,
+   "apply_patch": 2
+  },
+  "rfmcp_cli_calls": 0,
+  "rfmcp_examples": [],
+  "manual_hook_calls": 0,
+  "skill_read": true,
+  "state_reads": 1,
+  "docs_reads": 0,
+  "robot_runs": 2,
+  "hooks": {
+   "events": {
+    "session-start": 1,
+    "pre-tool": 16,
+    "post-tool": 16,
+    "stop": 1
+   },
+   "actions": {
+    "session-start:context": 1,
+    "pre-tool:none": 16,
+    "post-tool:none": 12,
+    "post-tool:context": 4,
+    "stop:allow": 1
+   },
+   "auto_executed_lines": 32,
+   "non_pass_lines": 1,
+   "stop_blocks": 0,
+   "denials": 0,
+   "rewrites": 0,
+   "tools_seen": {
+    "skill": 2,
+    "glob": 4,
+    "view": 16,
+    "bash": 6,
+    "apply_patch": 4
+   },
+   "latency_ms": {
+    "session-start": {
+     "median": 5.5,
+     "max": 5.5,
+     "n": 1
+    },
+    "pre-tool": {
+     "median": 0.0,
+     "max": 121.2,
+     "n": 16
+    },
+    "post-tool": {
+     "median": 0.0,
+     "max": 12731.3,
+     "n": 16
+    },
+    "stop": {
+     "median": 1.6,
+     "max": 1.6,
+     "n": 1
+    }
+   },
+   "errors": []
+  },
+  "plain_order": {
+   "rc": 0,
+   "line": "1 test, 1 passed, 0 failed"
+  },
+  "plain_checkout": {
+   "rc": 0,
+   "line": "3 tests, 3 passed, 0 failed"
+  },
+  "processes_left_after_exit": 4,
+  "daemons_alive_after_exit": [
+   "exec",
+   "lint"
+  ],
+  "creds_deleted": true,
+  "cell": "~/.cache/rfh-agents/copilot-161501",
+  "final_tail": ":\"result\",\"timestamp\":\"2026-10-08T14:16:40.000Z\",\"sessionId\":\"85af8c69-bcca-40bf-be80-0a2ccbe3c1ec\",\"exitCode\":0,\"usage\":{\"premiumRequests\":1,\"totalApiDurationMs\":29505,\"sessionDurationMs\":96575,\"codeChanges\":{\"linesAdded\":31,\"linesRemoved\":3,\"filesModified\":[\"~/.cache/rfh-agents/copilot-161501/ws/tests/checkout.robot\",\"~/.cache/rfh-agents/copilot-161501/ws/tests/order.robot\"]}}}"
+ },
+ "claude:api": {
+  "agent": "claude",
+  "model": "claude-haiku-4-5",
+  "wall_s": 24,
+  "timed_out": false,
+  "exit": 0,
+  "tool_calls": 5,
+  "tool_kinds": {
+   "Skill": 1,
+   "Write": 1,
+   "Bash": 2,
+   "Edit": 1
+  },
+  "rfmcp_cli_calls": 0,
+  "rfmcp_examples": [],
+  "manual_hook_calls": 0,
+  "skill_read": true,
+  "state_reads": 0,
+  "docs_reads": 1,
+  "robot_runs": 1,
+  "hooks": {
+   "events": {
+    "session-start": 1,
+    "pre-tool": 2,
+    "post-tool": 4,
+    "stop": 1,
+    "session-end": 1
+   },
+   "actions": {
+    "session-start:context": 1,
+    "pre-tool:none": 2,
+    "post-tool:context": 3,
+    "post-tool:none": 1,
+    "stop:allow": 1,
+    "session-end:none": 1
+   },
+   "auto_executed_lines": 7,
+   "non_pass_lines": 1,
+   "stop_blocks": 0,
+   "denials": 0,
+   "rewrites": 0,
+   "tools_seen": {
+    "Write": 2,
+    "Bash": 2,
+    "Edit": 2
+   },
+   "latency_ms": {
+    "session-start": {
+     "median": 9.5,
+     "max": 9.5,
+     "n": 1
+    },
+    "pre-tool": {
+     "median": 105.3,
+     "max": 105.3,
+     "n": 2
+    },
+    "post-tool": {
+     "median": 19.9,
+     "max": 100.1,
+     "n": 4
+    },
+    "stop": {
+     "median": 7.7,
+     "max": 7.7,
+     "n": 1
+    },
+    "session-end": {
+     "median": 303.6,
+     "max": 303.6,
+     "n": 1
+    }
+   },
+   "errors": []
+  },
+  "task": "api",
+  "plain_api": {
+   "rc": 0,
+   "line": "1 test, 1 passed, 0 failed"
+  },
+  "processes_left_after_exit": 0,
+  "daemons_alive_after_exit": [],
+  "creds_deleted": true,
+  "cell": "~/.cache/rfh-agents/claude-api-162222",
+  "final_tail": "n1. Gets items and verifies the first is named Apple\\n2. Creates a Kiwi item with price 2 (status 201)\\n3. Confirms the response contains Kiwi\\n\\nThe test passes with a plain `robot` run.\",\"ttft_ms\":3663,\"type\":\"result\",\"duration_ms\":21424,\"uuid\":\"69cd08c0-486c-47d5-b6b3-16cd77f21b0c\",\"ttft_stream_ms\":964,\"time_to_request_ms\":119,\"first_content_frame_ms\":966,\"queued_turn_count\":0,\"result_index\":0}"
+ },
+ "codex:api": {
+  "agent": "codex",
+  "model": "gpt-5.6-luna",
+  "wall_s": 24,
+  "timed_out": false,
+  "exit": 0,
+  "tool_calls": 5,
+  "tool_kinds": {
+   "shell": 4,
+   "apply_patch": 1
+  },
+  "rfmcp_cli_calls": 0,
+  "rfmcp_examples": [],
+  "manual_hook_calls": 0,
+  "skill_read": true,
+  "state_reads": 0,
+  "docs_reads": 1,
+  "robot_runs": 1,
+  "hooks": {
+   "events": {
+    "session-start": 1,
+    "post-tool": 5,
+    "pre-tool": 1,
+    "stop": 2,
+    "session-end": 1
+   },
+   "actions": {
+    "session-start:context": 1,
+    "post-tool:none": 3,
+    "pre-tool:none": 1,
+    "post-tool:context": 2,
+    "stop:block": 1,
+    "stop:allow": 1,
+    "session-end:none": 1
+   },
+   "auto_executed_lines": 6,
+   "non_pass_lines": 0,
+   "stop_blocks": 1,
+   "denials": 0,
+   "rewrites": 0,
+   "tools_seen": {
+    "Bash": 4,
+    "apply_patch": 2
+   },
+   "latency_ms": {
+    "session-start": {
+     "median": 5.9,
+     "max": 5.9,
+     "n": 1
+    },
+    "post-tool": {
+     "median": 0.1,
+     "max": 106.9,
+     "n": 5
+    },
+    "pre-tool": {
+     "median": 115.4,
+     "max": 115.4,
+     "n": 1
+    },
+    "stop": {
+     "median": 7.9,
+     "max": 7.9,
+     "n": 2
+    },
+    "session-end": {
+     "median": 304.7,
+     "max": 304.7,
+     "n": 1
+    }
+   },
+   "errors": []
+  },
+  "task": "api",
+  "plain_api": {
+   "rc": 0,
+   "line": "1 test, 1 passed, 0 failed"
+  },
+  "processes_left_after_exit": 0,
+  "daemons_alive_after_exit": [],
+  "creds_deleted": true,
+  "cell": "~/.cache/rfh-agents/codex-api-162224",
+  "final_tail": "{\"type\":\"item.completed\",\"item\":{\"id\":\"item_11\",\"type\":\"agent_message\",\"text\":\"Final proof passed: `Items Api` \u2014 1 test passed, 0 failed.\"}}"
+ },
+ "codex:gate": {
+  "agent": "codex",
+  "model": "gpt-5.6-luna",
+  "wall_s": 21,
+  "timed_out": false,
+  "exit": 0,
+  "tool_calls": 3,
+  "tool_kinds": {
+   "shell": 2,
+   "apply_patch": 1
+  },
+  "rfmcp_cli_calls": 0,
+  "rfmcp_examples": [],
+  "manual_hook_calls": 0,
+  "skill_read": true,
+  "state_reads": 0,
+  "docs_reads": 0,
+  "robot_runs": 1,
+  "hooks": {
+   "events": {
+    "session-start": 1,
+    "post-tool": 3,
+    "pre-tool": 2,
+    "stop": 1,
+    "session-end": 1
+   },
+   "actions": {
+    "session-start:context": 1,
+    "post-tool:none": 1,
+    "pre-tool:deny": 1,
+    "pre-tool:none": 1,
+    "post-tool:context": 2,
+    "stop:allow": 1,
+    "session-end:none": 1
+   },
+   "auto_executed_lines": 4,
+   "non_pass_lines": 0,
+   "stop_blocks": 0,
+   "denials": 1,
+   "rewrites": 0,
+   "tools_seen": {
+    "Bash": 2,
+    "apply_patch": 3
+   },
+   "latency_ms": {
+    "session-start": {
+     "median": 6.4,
+     "max": 6.4,
+     "n": 1
+    },
+    "post-tool": {
+     "median": 7.9,
+     "max": 2620.4,
+     "n": 3
+    },
+    "pre-tool": {
+     "median": 157.2,
+     "max": 157.2,
+     "n": 2
+    },
+    "stop": {
+     "median": 7.6,
+     "max": 7.6,
+     "n": 1
+    },
+    "session-end": {
+     "median": 303.9,
+     "max": 303.9,
+     "n": 1
+    }
+   },
+   "errors": []
+  },
+  "task": "gate",
+  "plain_gate": {
+   "rc": 0,
+   "line": "1 test, 1 passed, 0 failed"
+  },
+  "gate_file": "*** Settings ***\nLibrary    Browser\n\n*** Test Cases ***\nGate Probe\n    New Browser    chromium    headless=True\n    New Page    file://${CURDIR}/../site/login.html\n    IF    True    Log    deprecated form\n    Click    text=Accept all\n",
+  "processes_left_after_exit": 0,
+  "daemons_alive_after_exit": [],
+  "creds_deleted": true,
+  "cell": "~/.cache/rfh-agents/codex-gate-162313",
+  "final_tail": "{\"type\":\"item.completed\",\"item\":{\"id\":\"item_7\",\"type\":\"agent_message\",\"text\":\"Write refused: yes\u2014`Clik` was an unknown keyword (and deprecated syntax was modernized).\\nLine 8 now contains: `    IF    True    Log    deprecated form`\"}}"
+ },
+ "claude:gate": {
+  "agent": "claude",
+  "model": "claude-haiku-4-5",
+  "wall_s": 33,
+  "timed_out": false,
+  "exit": 0,
+  "tool_calls": 7,
+  "tool_kinds": {
+   "Write": 3,
+   "Bash": 3,
+   "Read": 1
+  },
+  "rfmcp_cli_calls": 0,
+  "rfmcp_examples": [],
+  "manual_hook_calls": 0,
+  "skill_read": false,
+  "state_reads": 0,
+  "docs_reads": 2,
+  "robot_runs": 1,
+  "hooks": {
+   "events": {
+    "session-start": 1,
+    "pre-tool": 3,
+    "post-tool": 4,
+    "stop": 2,
+    "session-end": 1
+   },
+   "actions": {
+    "session-start:context": 1,
+    "pre-tool:deny": 2,
+    "post-tool:none": 2,
+    "pre-tool:none": 1,
+    "post-tool:context": 2,
+    "stop:block": 1,
+    "stop:allow": 1,
+    "session-end:none": 1
+   },
+   "auto_executed_lines": 4,
+   "non_pass_lines": 0,
+   "stop_blocks": 1,
+   "denials": 2,
+   "rewrites": 0,
+   "tools_seen": {
+    "Write": 4,
+    "Bash": 3
+   },
+   "latency_ms": {
+    "session-start": {
+     "median": 7.7,
+     "max": 7.7,
+     "n": 1
+    },
+    "pre-tool": {
+     "median": 47.4,
+     "max": 149.9,
+     "n": 3
+    },
+    "post-tool": {
+     "median": 8.0,
+     "max": 2513.2,
+     "n": 4
+    },
+    "stop": {
+     "median": 7.9,
+     "max": 7.9,
+     "n": 2
+    },
+    "session-end": {
+     "median": 303.9,
+     "max": 303.9,
+     "n": 1
+    }
+   },
+   "errors": []
+  },
+  "task": "gate",
+  "plain_gate": {
+   "rc": 0,
+   "line": "1 test, 1 passed, 0 failed"
+  },
+  "gate_file": "*** Settings ***\nLibrary    Browser\n\n*** Test Cases ***\nGate Probe\n    New Browser    chromium    headless=True\n    New Page    file://${CURDIR}/../site/login.html\n    Log    deprecated form\n    Click    text=Accept all\n",
+  "processes_left_after_exit": 0,
+  "daemons_alive_after_exit": [],
+  "creds_deleted": true,
+  "cell": "~/.cache/rfh-agents/claude-gate-162310",
+  "final_tail": "ll,\"result\":\"Test suite verified and passing. The file `tests/gate.robot` is now complete and passes the Robot Framework quality gate with a plain `robot -d results tests/gate.robot` run.\",\"ttft_ms\":2771,\"type\":\"result\",\"duration_ms\":31004,\"uuid\":\"36cd3c05-24d5-4260-812d-a464ae95ba38\",\"ttft_stream_ms\":718,\"time_to_request_ms\":108,\"first_content_frame_ms\":719,\"queued_turn_count\":0,\"result_index\":0}"
+ },
+ "copilot:web": {
+  "agent": "copilot",
+  "model": "auto",
+  "wall_s": 120,
+  "timed_out": false,
+  "exit": 0,
+  "tool_calls": 22,
+  "tool_kinds": {
+   "skill": 1,
+   "glob": 2,
+   "view": 11,
+   "bash": 5,
+   "rg": 1,
+   "apply_patch": 2
+  },
+  "rfmcp_cli_calls": 0,
+  "rfmcp_examples": [],
+  "manual_hook_calls": 0,
+  "skill_read": true,
+  "state_reads": 1,
+  "docs_reads": 5,
+  "robot_runs": 3,
+  "hooks": {
+   "events": {
+    "session-start": 1,
+    "pre-tool": 22,
+    "post-tool": 22,
+    "stop": 1
+   },
+   "actions": {
+    "session-start:context": 1,
+    "pre-tool:none": 22,
+    "post-tool:none": 17,
+    "post-tool:context": 5,
+    "stop:allow": 1
+   },
+   "auto_executed_lines": 35,
+   "non_pass_lines": 2,
+   "stop_blocks": 0,
+   "denials": 0,
+   "rewrites": 0,
+   "tools_seen": {
+    "skill": 2,
+    "glob": 4,
+    "view": 22,
+    "bash": 10,
+    "rg": 2,
+    "apply_patch": 4
+   },
+   "latency_ms": {
+    "session-start": {
+     "median": 6.9,
+     "max": 6.9,
+     "n": 1
+    },
+    "pre-tool": {
+     "median": 0.0,
+     "max": 149.7,
+     "n": 22
+    },
+    "post-tool": {
+     "median": 0.0,
+     "max": 12626.0,
+     "n": 22
+    },
+    "stop": {
+     "median": 7.6,
+     "max": 7.6,
+     "n": 1
+    }
+   },
+   "errors": []
+  },
+  "task": "web",
+  "plain_order": {
+   "rc": 0,
+   "line": "1 test, 1 passed, 0 failed"
+  },
+  "plain_checkout": {
+   "rc": 0,
+   "line": "3 tests, 3 passed, 0 failed"
+  },
+  "processes_left_after_exit": 0,
+  "daemons_alive_after_exit": [],
+  "creds_deleted": true,
+  "cell": "~/.cache/rfh-agents/copilot-web-162232",
+  "final_tail": ",\"timestamp\":\"2026-10-08T14:24:31.476Z\",\"sessionId\":\"f2144e31-1a44-4509-8ef5-9cfa7ef8d64e\",\"exitCode\":0,\"usage\":{\"premiumRequests\":1,\"totalApiDurationMs\":42388,\"sessionDurationMs\":117530,\"codeChanges\":{\"linesAdded\":32,\"linesRemoved\":2,\"filesModified\":[\"~/.cache/rfh-agents/copilot-web-162232/ws/tests/checkout.robot\",\"~/.cache/rfh-agents/copilot-web-162232/ws/tests/order.robot\"]}}}"
+ },
+ "claude:rewrite": {
+  "agent": "claude",
+  "model": "claude-haiku-4-5",
+  "wall_s": 18,
+  "timed_out": false,
+  "exit": 0,
+  "tool_calls": 3,
+  "tool_kinds": {
+   "Write": 1,
+   "Read": 1,
+   "Bash": 1
+  },
+  "rfmcp_cli_calls": 0,
+  "rfmcp_examples": [],
+  "manual_hook_calls": 0,
+  "skill_read": false,
+  "state_reads": 0,
+  "docs_reads": 0,
+  "robot_runs": 1,
+  "hooks": {
+   "events": {
+    "session-start": 1,
+    "pre-tool": 1,
+    "post-tool": 2,
+    "stop": 2,
+    "session-end": 1
+   },
+   "actions": {
+    "session-start:context": 1,
+    "pre-tool:rewrite": 1,
+    "post-tool:context": 2,
+    "stop:block": 1,
+    "stop:allow": 1,
+    "session-end:none": 1
+   },
+   "auto_executed_lines": 3,
+   "non_pass_lines": 0,
+   "stop_blocks": 1,
+   "denials": 0,
+   "rewrites": 1,
+   "tools_seen": {
+    "Write": 2,
+    "Bash": 1
+   },
+   "latency_ms": {
+    "session-start": {
+     "median": 7.4,
+     "max": 7.4,
+     "n": 1
+    },
+    "pre-tool": {
+     "median": 179.8,
+     "max": 179.8,
+     "n": 1
+    },
+    "post-tool": {
+     "median": 2694.3,
+     "max": 2694.3,
+     "n": 2
+    },
+    "stop": {
+     "median": 1.8,
+     "max": 1.8,
+     "n": 2
+    },
+    "session-end": {
+     "median": 303.8,
+     "max": 303.8,
+     "n": 1
+    }
+   },
+   "errors": []
+  },
+  "task": "rewrite",
+  "plain_rewrite": {
+   "rc": 0,
+   "line": "1 test, 1 passed, 0 failed"
+  },
+  "probe_file": "*** Settings ***\nLibrary    Browser\n\n*** Test Cases ***\nLegacy Probe\n    New Browser    chromium    headless=True\n    New Page    file://${CURDIR}/../site/login.html\n    IF    True\n        Click    text=Accept all\n    END\n",
+  "processes_left_after_exit": 0,
+  "daemons_alive_after_exit": [],
+  "creds_deleted": true,
+  "cell": "~/.cache/rfh-agents/claude-rewrite-162644",
+  "final_tail": "ns\":5,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"Test suite passes successfully. `tests/legacy.robot` is complete and verified with a plain robot run (1 test passed, 0 failed).\",\"ttft_ms\":2409,\"type\":\"result\",\"duration_ms\":16306,\"uuid\":\"47a8d365-f1e4-4538-bf54-4b0a3f3155d9\",\"ttft_stream_ms\":743,\"time_to_request_ms\":121,\"first_content_frame_ms\":743,\"queued_turn_count\":0,\"result_index\":0}"
+ },
+ "opencode:api": {
+  "agent": "opencode",
+  "model": "minimax-coding-plan/MiniMax-M2.7",
+  "wall_s": 24,
+  "timed_out": false,
+  "exit": 0,
+  "tool_calls": 2,
+  "tool_kinds": {
+   "write": 1,
+   "bash": 1
+  },
+  "rfmcp_cli_calls": 0,
+  "rfmcp_examples": [],
+  "manual_hook_calls": 0,
+  "skill_read": false,
+  "state_reads": 0,
+  "docs_reads": 0,
+  "robot_runs": 1,
+  "hooks": {
+   "events": {
+    "session-start": 1,
+    "pre-tool": 1,
+    "post-tool": 2,
+    "stop": 1,
+    "session-end": 1
+   },
+   "actions": {
+    "session-start:context": 1,
+    "pre-tool:none": 1,
+    "post-tool:context": 2,
+    "stop:block": 1,
+    "session-end:none": 1
+   },
+   "auto_executed_lines": 5,
+   "non_pass_lines": 0,
+   "stop_blocks": 1,
+   "denials": 0,
+   "rewrites": 0,
+   "tools_seen": {
+    "write": 2,
+    "bash": 1
+   },
+   "latency_ms": {
+    "session-start": {
+     "median": 6.0,
+     "max": 6.0,
+     "n": 1
+    },
+    "pre-tool": {
+     "median": 131.3,
+     "max": 131.3,
+     "n": 1
+    },
+    "post-tool": {
+     "median": 99.2,
+     "max": 99.2,
+     "n": 2
+    },
+    "stop": {
+     "median": 1.1,
+     "max": 1.1,
+     "n": 1
+    },
+    "session-end": {
+     "median": 303.9,
+     "max": 303.9,
+     "n": 1
+    }
+   },
+   "errors": []
+  },
+  "task": "api",
+  "plain_api": {
+   "rc": 0,
+   "line": "1 test, 1 passed, 0 failed"
+  },
+  "processes_left_after_exit": 0,
+  "daemons_alive_after_exit": [],
+  "creds_deleted": true,
+  "cell": "~/.cache/rfh-agents/opencode-api-162650",
+  "final_tail": "{\"type\":\"text\",\"timestamp\":1791469635079,\"sessionID\":\"ses_ee416f96cffeGL9R1OcPIq05Fm\",\"part\":{\"id\":\"prt_11be945f9001TwckVoRjQmcNKK\",\"messageID\":\"msg_11be94250001UcxoP7gG637EXh\",\"sessionID\":\"ses_ee416f96cffeGL9R1OcPIq05Fm\",\"type\":\"text\",\"text\":\"All tests passed.\",\"time\":{\"start\":1791469635065,\"end\":1791469635072}}}"
+ },
+ "opencode:rewrite": {
+  "agent": "opencode",
+  "model": "minimax-coding-plan/MiniMax-M2.7",
+  "wall_s": 29,
+  "timed_out": false,
+  "exit": 0,
+  "tool_calls": 3,
+  "tool_kinds": {
+   "write": 1,
+   "read": 1,
+   "bash": 1
+  },
+  "rfmcp_cli_calls": 0,
+  "rfmcp_examples": [],
+  "manual_hook_calls": 0,
+  "skill_read": false,
+  "state_reads": 0,
+  "docs_reads": 0,
+  "robot_runs": 1,
+  "hooks": {
+   "events": {
+    "session-start": 1,
+    "pre-tool": 1,
+    "post-tool": 2,
+    "stop": 2,
+    "session-end": 1
+   },
+   "actions": {
+    "session-start:context": 1,
+    "pre-tool:rewrite": 1,
+    "post-tool:context": 2,
+    "stop:block": 1,
+    "stop:allow": 1,
+    "session-end:none": 1
+   },
+   "auto_executed_lines": 3,
+   "non_pass_lines": 0,
+   "stop_blocks": 1,
+   "denials": 0,
+   "rewrites": 1,
+   "tools_seen": {
+    "write": 2,
+    "bash": 1
+   },
+   "latency_ms": {
+    "session-start": {
+     "median": 7.2,
+     "max": 7.2,
+     "n": 1
+    },
+    "pre-tool": {
+     "median": 145.8,
+     "max": 145.8,
+     "n": 1
+    },
+    "post-tool": {
+     "median": 2491.4,
+     "max": 2491.4,
+     "n": 2
+    },
+    "stop": {
+     "median": 7.7,
+     "max": 7.7,
+     "n": 2
+    },
+    "session-end": {
+     "median": 303.8,
+     "max": 303.8,
+     "n": 1
+    }
+   },
+   "errors": []
+  },
+  "task": "rewrite",
+  "plain_rewrite": {
+   "rc": 0,
+   "line": "1 test, 1 passed, 0 failed"
+  },
+  "probe_file": "*** Settings ***\nLibrary    Browser\n\n*** Test Cases ***\nLegacy Probe\n    New Browser    chromium    headless=True\n    New Page    file://${CURDIR}/../site/login.html\n    IF    True\n        Click    text=Accept all\n    END\n",
+  "processes_left_after_exit": 0,
+  "daemons_alive_after_exit": [],
+  "creds_deleted": true,
+  "cell": "~/.cache/rfh-agents/opencode-rewrite-162647",
+  "final_tail": "{\"type\":\"text\",\"timestamp\":1791469636451,\"sessionID\":\"ses_ee4170234ffe6iMEl4f7etOpi4\",\"part\":{\"id\":\"prt_11be94b53001Mc1uV7wck3teJK\",\"messageID\":\"msg_11be946b90013XXQU6iL95ABcv\",\"sessionID\":\"ses_ee4170234ffe6iMEl4f7etOpi4\",\"type\":\"text\",\"text\":\"Test passed (1/1).\",\"time\":{\"start\":1791469636435,\"end\":1791469636442}}}"
+ }
+}

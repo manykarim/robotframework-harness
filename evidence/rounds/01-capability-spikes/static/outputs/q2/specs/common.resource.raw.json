@@ -1,0 +1,84 @@
+{
+  "specversion": 4,
+  "name": "common",
+  "doc": "User keywords shared by the corpus cases.",
+  "version": "",
+  "generated": "2026-09-30T22:50:31+00:00",
+  "type": "RESOURCE",
+  "scope": "GLOBAL",
+  "docFormat": "ROBOT",
+  "source": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/resources/common.resource",
+  "lineno": 1,
+  "tags": [],
+  "inits": [],
+  "keywords": [
+    {
+      "name": "Login As",
+      "doc": "Normal keyword with 1 mandatory and 1 optional arg.",
+      "shortdoc": "Normal keyword with 1 mandatory and 1 optional arg.",
+      "args": [
+        {
+          "name": "username",
+          "doc": "",
+          "type": null,
+          "defaultValue": null,
+          "kind": "POSITIONAL_OR_NAMED",
+          "required": true,
+          "repr": "username"
+        },
+        {
+          "name": "password",
+          "doc": "",
+          "type": null,
+          "defaultValue": "secret_sauce",
+          "kind": "POSITIONAL_OR_NAMED",
+          "required": false,
+          "repr": "password=secret_sauce"
+        }
+      ],
+      "returnType": null,
+      "returnDoc": "",
+      "raises": {},
+      "tags": [],
+      "source": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/resources/common.resource",
+      "lineno": 21
+    },
+    {
+      "name": "The Cart Should Contain \"${item}\"",
+      "doc": "Embedded arg with quotes.",
+      "shortdoc": "Embedded arg with quotes.",
+      "args": [],
+      "returnType": null,
+      "returnDoc": "",
+      "raises": {},
+      "tags": [],
+      "source": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/resources/common.resource",
+      "lineno": 17
+    },
+    {
+      "name": "The User Adds ${count:\\d+} Items To The Cart",
+      "doc": "Embedded-argument keyword; count must be digits.",
+      "shortdoc": "Embedded-argument keyword; count must be digits.",
+      "args": [],
+      "returnType": null,
+      "returnDoc": "",
+      "raises": {},
+      "tags": [],
+      "source": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/resources/common.resource",
+      "lineno": 13
+    },
+    {
+      "name": "The User Is Logged In",
+      "doc": "BDD-style user keyword without args.",
+      "shortdoc": "BDD-style user keyword without args.",
+      "args": [],
+      "returnType": null,
+      "returnDoc": "",
+      "raises": {},
+      "tags": [],
+      "source": "~/workspace/rf-mcp-robotcode/experiments/robotcode-remote/static/corpus/resources/common.resource",
+      "lineno": 9
+    }
+  ],
+  "typedocs": []
+}

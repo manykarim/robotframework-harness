@@ -1,0 +1,7 @@
+KEYWORD BuiltIn.Import Library  Collections
+KEYWORD BuiltIn.Set Variable  jim
+  [ INFO ] ${username} = jim
+KEYWORD BuiltIn.Log  ${usernme}
+
+# --- stderr ---
+  [ FAIL ] Variable '${usernme}' not found.
