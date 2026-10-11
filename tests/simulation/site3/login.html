@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Shop - Sign in</title>
+<style>.overlay{position:fixed;inset:0;background:rgba(0,0,0,.45)}.modal{position:fixed;top:30%;left:30%;background:#fff;padding:1em}</style>
+</head><body>
+<div id="consent" class="overlay"><div class="modal" role="dialog" aria-label="Cookies">We use cookies.
+  <button type="button" onclick="document.getElementById('consent').remove()">Accept all</button></div></div>
+<h1>Sign in</h1>
+<form onsubmit="return false">
+  <p><label for="username">Username</label> <input id="username" name="username"></p>
+  <p><label for="password">Password</label> <input id="password" name="password" type="password"></p>
+  <button data-test="signin" onclick="go()">Sign in</button>
+</form>
+<p id="msg" role="status"></p>
+<script>
+function go(){const u=document.getElementById('username').value,p=document.getElementById('password').value;
+ if(!u||!p){document.getElementById('msg').textContent='Username and password are required';return;}
+ setTimeout(()=>{location.href='order.html?user='+encodeURIComponent(u)},300);}
+</script>
+</body></html>

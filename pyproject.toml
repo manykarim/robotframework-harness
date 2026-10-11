@@ -54,6 +54,13 @@ dev = [
     "robotcode[repl,runner,analyze]>=2.7,<2.8",
     "robotframework-robocop>=9.1",
 ]
+# Simulation suite (tests/simulation, pytest marker `browser`): Browser library + RequestsLibrary (scenario C).
+# After `uv sync --group dev --group browser`, run `uv run rfbrowser init --skip-browsers` once; chromium comes from
+# ~/.cache/ms-playwright (the runtime sets PLAYWRIGHT_BROWSERS_PATH when the bundled one is missing).
+browser = [
+    "robotframework-browser==19.12.7",
+    "robotframework-requests>=0.9.7",
+]
 
 [tool.hatch.version]
 path = "src/rf_harness/__init__.py"
@@ -79,6 +86,14 @@ extend-exclude = ["src/rf_harness/_assets", "eval", "evidence"]
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "B", "UP"]
 ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+# Ported from the measured v3.2 prototype (hookpkg32, tasks 2.1/2.2) and kept close to that source for parity review:
+# typing.List/Optional annotations, %-formatting and short loop names (`l`) stay as they were.
+"src/rf_harness/runtime/{analyzer,docs,docsgen,engine,execd,guards,hook,hookcore,kwdoc,kwdocs,leanfmt,lintd,livetmo,pagestate,portable,procs,profiles,proto,pwlog,replfmt,rfh_repl_listener,richfmt,rthooks}.py" = ["UP006", "UP031", "UP035", "UP037", "UP045", "E741"]
+"tests/simulation/{simlib,verify_hooks}.py" = ["UP006", "UP035", "UP037", "UP045", "E741"]
+# Vendored verbatim from rf-mcp 0.36.0 (tests/runtime/test_hints.py pins its output to rf-mcp's engine).
+"src/rf_harness/runtime/hints.py" = ["UP006", "UP035", "UP045", "F841"]
 
 [tool.mypy]
 python_version = "3.10"

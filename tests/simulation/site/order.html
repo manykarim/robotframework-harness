@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Shop - Order</title>
+<style>.seg input[type=radio]{position:absolute;opacity:0;width:0;height:0}.seg label{display:inline-block;padding:4px 10px;border:1px solid #888}
+.seg input:checked+label{background:#246;color:#fff}.check input{display:none}.check .box{display:inline-block;width:14px;height:14px;border:1px solid #333}
+.check input:checked+.box{background:#2a2}</style></head><body>
+<h1 id="greeting"></h1>
+<form id="order" onsubmit="return false">
+ <fieldset class="seg"><legend>Shipping</legend>
+  <input type="radio" name="ship" id="ship-standard" value="standard"><label for="ship-standard">Standard</label>
+  <input type="radio" name="ship" id="ship-express" value="express"><label for="ship-express">Express</label>
+ </fieldset>
+ <p><label for="country">Country</label> <select id="country"><option value="">-- choose --</option>
+   <option value="de">Germany</option><option value="no">Norway</option><option value="it">Italy</option></select></p>
+ <p><label class="check"><input type="checkbox" id="gift"><span class="box"></span> Gift wrap</label></p>
+ <h2>Payment</h2>
+ <iframe id="pay-frame" title="Payment" src="pay.html" width="420" height="120"></iframe>
+ <p><button id="place" data-test="place-order" disabled onclick="placeOrder()">Place order</button></p>
+ <p id="total" role="status"></p>
+</form>
+<script>
+const q=new URLSearchParams(location.search);document.getElementById('greeting').textContent='Hello, '+(q.get('user')||'guest');
+let cardOk=false;window.addEventListener('message',e=>{if(e.data==='card-ok'){cardOk=true;document.getElementById('place').disabled=false;}});
+function price(){const s=document.querySelector('input[name=ship]:checked');let t=40;if(s&&s.value==='express')t+=15;if(document.getElementById('gift').checked)t+=5;return t;}
+document.getElementById('order').addEventListener('change',()=>{document.getElementById('total').textContent='Total: '+price().toFixed(2)+' EUR';});
+function placeOrder(){const s=document.querySelector('input[name=ship]:checked'),c=document.getElementById('country').value;
+ if(!s||!c){document.getElementById('total').textContent='Missing: shipping or country';return;}
+ location.href='done.html?total='+price()+'&ship='+s.value+'&country='+c;}
+</script></body></html>

@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Select Price Option</title>
+<style>
+.choosePrice{position:relative;display:inline-block;width:20px;height:20px}
+.choosePrice input{position:absolute;left:2px;top:2px;width:16px;height:16px;margin:0}
+.choosePrice .ideal-radio{position:absolute;left:0;top:0;width:20px;height:20px;background:#ddd;border-radius:50%}
+</style></head><body>
+<h1>Select Price Option</h1>
+<table><tr><th>Silver</th><th>Gold</th><th>Platinum</th></tr>
+<tr><td><span id="selectsilver_price">300.00</span></td><td><span id="selectgold_price">400.00</span></td>
+<td><span id="selectplatinum_price">509.00</span></td></tr>
+<tr><td><label class="choosePrice"><input type="radio" name="opt" id="selectsilver" value="Silver"><span class="ideal-radio"></span></label></td>
+<td><label class="choosePrice"><input type="radio" name="opt" id="selectgold" value="Gold"><span class="ideal-radio"></span></label></td>
+<td><label class="choosePrice"><input type="radio" name="opt" id="selectplatinum" value="Platinum"><span class="ideal-radio"></span></label></td></tr></table>
+<p><button id="next" type="button">Next</button></p>
+</body></html>

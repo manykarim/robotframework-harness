@@ -1,0 +1,455 @@
+{
+ "meta": {
+  "title": "robotcode repl / robot-debug input-format rules for a PreToolUse Bash hook",
+  "verified_with": "robotcode 2.7.0, Robot Framework 7.5, Browser 20.5, Python 3.13, Linux; stdin = pipe/heredoc (non-TTY) unless noted",
+  "date": "2026-10-08",
+  "evidence_dir": "round5/research/repl_format/logs (case ids below = log file names; jsonl = logs/repl_cases.jsonl)",
+  "hook_contract": "Match only Bash commands whose command position runs `robotcode [global opts] (repl|shell|robot-debug|run-debug)`. scope=command rules inspect the shell command; scope=input rules inspect the heredoc / piped / file body. action: autofix = rewrite tool input (Claude/Codex updatedInput, Copilot modifiedArgs, OpenCode output.args) and mention the fix in context; deny = block with message; warn = allow + additionalContext; info = only in the format card. Prototype: repl_format/repl_lint.py (applies these rules; 34 examples).",
+  "costs_measured": {
+   "repl_start_builtin_only_s": "1.03-1.35 (n=62 cases)",
+   "browser_new_browser_new_page_get_title_total_s": "2.7-2.8",
+   "browser_keyword_with_missing_outputdir_s": "~16 per Browser keyword (B01: 33 s for 3 lines; old report: 112 s vs 9 s)",
+   "repl_exit_code": "always 0 (62/62 repl cases, incl. failures)",
+   "robot_debug_exit_code": "= number of failed tests (1), 253 after .abort, 0 when all pass"
+  },
+  "prototype_selftest": "repl_format/repl_lint.py --selftest: 34/34; repl_format/validate_rewrites.py (logs/validate_rewrites.json): 15/15 rewritten commands ran clean live; 14/15 originals were wrong (11 with FAIL lines, 3 silently: quoted .kw found nothing, quoted .break never stopped, FAIL dropped by pipe)."
+ },
+ "rules": [
+  {
+   "id": "C01_plain_backend",
+   "scope": "command",
+   "severity": "autofix",
+   "detect": {
+    "type": "regex_absent",
+    "pattern": "robotcode\\b[^|;&]*\\b(repl|shell|robot-debug|run-debug)\\b",
+    "absent": "--plain\\b|--backend[ =]plain"
+   },
+   "fix": "insert `--plain` right after the subcommand",
+   "message": "Added --plain: on a real PTY without an agent marker env var the prompt-toolkit backend swallows piped lines and hangs.",
+   "evidence": "S13_pty.log: PTY + no agent env -> 77 escape sequences, statement never executed, killed by timeout after 25 s; with --plain or AI_AGENT/CLAUDECODE/CODEX_*/OPENCODE set -> plain, 4.2 s. Pipes/heredocs are plain automatically (cli.py _resolve_backend)."
+  },
+  {
+   "id": "C02_no_history",
+   "scope": "command",
+   "severity": "autofix",
+   "detect": {
+    "type": "regex_absent",
+    "pattern": "\\b(repl|shell|robot-debug|run-debug)\\b",
+    "absent": "--no-history"
+   },
+   "fix": "insert `--no-history` after the subcommand",
+   "message": "(silent) --no-history keeps agent sessions out of the user's REPL history.",
+   "evidence": "S05_history.log: plain backend wrote no history file anyway; harmless, idempotent."
+  },
+  {
+   "id": "C03_outputdir_must_exist",
+   "scope": "command",
+   "severity": "autofix",
+   "detect": {
+    "type": "path_check",
+    "pattern": "(?:^|\\s)(?:-d|--outputdir)[ =](\\S+)",
+    "note": "resolve a relative dir against the robotcode project root (nearest dir upwards with robot.toml, pyproject.toml or .git; --root/ROBOTCODE_ROOT override), NOT the shell cwd; with no -d use robot.toml output-dir"
+   },
+   "fix": "prefix `mkdir -p <resolved dir> && `",
+   "message": "Created the output dir first: Browser writes playwright-log.txt there and every Browser keyword fails (~16 s each) if it is missing. Relative -d is resolved from the project root, not your cwd.",
+   "evidence": "B_browser_format.log B01: 3 Browser lines, all FAIL FileNotFoundError, 33 s; S06_relative_d.log: -d rel_out from lab/sub -> ${OUTPUT DIR}=lab/rel_out; smoke run from a subdir resolved to the repo root (/home/many/workspace/rf-mcp-robotcode/out)."
+  },
+  {
+   "id": "C04_quote_heredoc",
+   "scope": "command",
+   "severity": "autofix",
+   "detect": {
+    "type": "regex",
+    "pattern": "<<-?\\s*([A-Za-z_][A-Za-z0-9_]*)\\b",
+    "condition": "delimiter unquoted AND body contains [$@&%]\\{"
+   },
+   "fix": "quote the delimiter (<<'RF'); only when every `$` in the body is followed by `{` (RF syntax); otherwise deny",
+   "message": "Quoted the heredoc delimiter (<<'RF'): with an unquoted heredoc the shell expands ${x} to an empty string before Robot sees it.",
+   "evidence": "S01_unquoted_heredoc.log: `${x}=    Set Variable` -> \"No keyword with name '=' found\"; `Log To Console    value=${x}` printed `value=` silently."
+  },
+  {
+   "id": "C05_double_quoted_echo",
+   "scope": "command",
+   "severity": "deny",
+   "detect": {
+    "type": "regex",
+    "pattern": "(?:echo|printf)\\s+(?:-e\\s+)?\"[^\"]*(?<!\\\\)[$@&%]\\{[^\"]*\"\\s*\\|\\s*\\S*robotcode"
+   },
+   "fix": "use single quotes or a quoted heredoc",
+   "message": "Double quotes let the shell expand ${...} before Robot sees it. Use: robotcode repl --plain -d out <<'RF' ... RF",
+   "evidence": "S03_echo.log (escaped variant reached RF; unescaped expands to empty like S01)."
+  },
+  {
+   "id": "C06_merge_stderr",
+   "scope": "command",
+   "severity": "autofix",
+   "detect": {
+    "type": "regex",
+    "pattern": "\\b(repl|robot-debug|run-debug)\\b[^\\n]*?(\\||>\\s*\\S)",
+    "absent": "2>&1|&>|\\|&"
+   },
+   "fix": "insert `2>&1` before the first pipe / stdout redirect of the robotcode command",
+   "message": "Added 2>&1: [ FAIL ] lines go to stderr and were dropped by your pipe/redirect.",
+   "evidence": "R16_fail_stream: stdout='before\\nafter-fail', stderr='[ FAIL ] 1 != 2'; S04_stderr.log: `| tail` without 2>&1 showed nothing. Order is preserved with 2>&1 (combined logs)."
+  },
+  {
+   "id": "C07_exit_code_meaningless",
+   "scope": "command",
+   "severity": "warn",
+   "detect": {
+    "type": "regex",
+    "pattern": "\\brepl\\b[^\\n]*(&&|\\|\\||;\\s*echo\\s+\\$\\?)"
+   },
+   "message": "robotcode repl always exits 0, even after failures; read the [ FAIL ] lines instead. (robot-debug returns the failed-test count.)",
+   "evidence": "repl_cases.jsonl: rc=0 in all 62 repl cases incl. FAIL; D01 rc=1 (1 failed test), D11 rc=253 (.abort)."
+  },
+  {
+   "id": "C08_statement_as_argument",
+   "scope": "command",
+   "severity": "deny",
+   "detect": {
+    "type": "regex",
+    "pattern": "\\brepl\\b(?:\\s+-{1,2}[\\w-]+(?:[ =](?!['\"])\\S+)?)*\\s+(['\"])[^'\"]*\\s{2,}[^'\"]*\\1"
+   },
+   "message": "Positional arguments of `robotcode repl` are FILES, not statements. Feed statements on stdin: robotcode repl --plain -d out <<'RF' ... RF",
+   "evidence": "S14_misc.log S14c: \"Invalid value for '[FILES]...': File 'Log To Console    x' does not exist.\" rc=2."
+  },
+  {
+   "id": "C09_global_option_position",
+   "scope": "command",
+   "severity": "autofix",
+   "detect": {
+    "type": "regex",
+    "pattern": "\\b(repl|shell|robot-debug|run-debug)\\b(.*?)\\s(-p|--profile|-c|--config|-r|--root)\\s+(\\S+)"
+   },
+   "fix": "move -p/--profile, -c/--config, -r/--root before the subcommand (`robotcode -p dev repl ...`)",
+   "message": "Moved the profile/config/root option before the subcommand; `robotcode repl -p x` is a usage error.",
+   "evidence": "S14d: \"Error: No such option '-p'.\""
+  },
+  {
+   "id": "C10_no_stdin",
+   "scope": "command",
+   "severity": "warn",
+   "detect": {
+    "type": "heuristic",
+    "pattern": "robotcode ... repl without heredoc/pipe/< redirect/file argument"
+   },
+   "message": "With no piped input the REPL reads EOF and exits immediately without running anything. Pipe statements via a quoted heredoc.",
+   "evidence": "S14e: < /dev/null -> exits in 1.2 s, no output."
+  },
+  {
+   "id": "C11_file_argument_all_or_nothing",
+   "scope": "command",
+   "severity": "warn",
+   "detect": {
+    "type": "heuristic",
+    "pattern": "repl ... <existing file args>; lint the file with the input rules (I04/I05 especially)"
+   },
+   "message": "A FILE argument is parsed as one block: one syntax error (e.g. unclosed FOR) and NOTHING in the file runs, silently. In files `...` continuation and blank lines are fine. Without -i, stdin is ignored after the files.",
+   "evidence": "S07_file_args.log: S07b (unclosed FOR) printed nothing, rc 0; S07 continuation folded correctly; S07d stdin ignored; S07c -i reads stdin after the file and keeps its variables."
+  },
+  {
+   "id": "C12_fresh_session_per_call",
+   "scope": "command",
+   "severity": "warn",
+   "detect": {
+    "type": "heuristic",
+    "pattern": "body uses page/session keywords (Click, Fill Text, Get Text, Get Element*, Wait For*, GET On Session, ...) but has no Library/New Browser/New Page/Open Browser/Create Session line"
+   },
+   "message": "Each robotcode repl invocation is a new process: browser, sessions and variables from earlier calls are gone. Start the heredoc with Library / New Browser / New Page (and login), or use the persistent session the harness provides.",
+   "evidence": "process model (one interpreter per invocation); round1 stepwise/findings.md approach C (1.3 s per fresh step, state lost without hacks)."
+  },
+  {
+   "id": "C13_long_run_vs_tool_timeout",
+   "scope": "command",
+   "severity": "warn",
+   "detect": {
+    "type": "heuristic",
+    "pattern": "count of Browser/Selenium locator lines x library timeout > ~0.75 x agent tool timeout (Claude Bash 120 s default)"
+   },
+   "message": "Many locator lines x 10 s timeout can exceed the shell timeout; the REPL then dies with the browser and all output. Keep heredocs short or lower the REPL timeout (see timeout policy).",
+   "evidence": "B01: 16 s per failing Browser line; a failure never stops later lines (R16)."
+  },
+  {
+   "id": "I01_single_space_separator",
+   "scope": "input",
+   "severity": "autofix_if_known_keyword",
+   "detect": {
+    "type": "regex+lookup",
+    "pattern": "^\\s*(?:[$@&]\\{[^}]+\\}\\s?=?\\s)?(?!\\.|#|FOR\\b|IF\\b|END\\b)[^\\s].*?(?<!\\s)\\s(?!\\s)\\S",
+    "condition": "line has no tab and no run of 2+ spaces, and the longest prefix of words that is a known keyword (libdoc names of imported libs + BuiltIn, case/space-insensitive) is shorter than the whole line"
+   },
+   "fix": "split after the known keyword name with 4 spaces; split remaining tokens on single spaces only when the keyword's arg count matches (else deny)",
+   "message": "Robot needs 2+ spaces (use 4) between keyword and arguments; with single spaces the whole line is one keyword name.",
+   "evidence": "R03: \"No keyword with name 'Log To Console single-space' found. Did you try using keyword 'BuiltIn.Log' or 'BuiltIn.Log To Console' and forgot to use enough whitespace...\"; R06b `${x} = Set Variable 7` -> keyword not found; S14i same at (rdb)."
+  },
+  {
+   "id": "I02_tabs_ok",
+   "scope": "input",
+   "severity": "info",
+   "message": "A real TAB is a valid separator (R04, S01b printf '\\t'); a literal backslash-t from `echo` without -e is not (S03c).",
+   "evidence": "R04_tab, S03_echo.log"
+  },
+  {
+   "id": "I03_no_continuation_on_stdin",
+   "scope": "input",
+   "severity": "autofix",
+   "detect": {
+    "type": "regex",
+    "pattern": "^\\s*\\.\\.\\.(\\s{2,}|\\t|$)"
+   },
+   "fix": "fold each `...` line into the previous statement line (join with 4 spaces); not needed for FILE arguments",
+   "message": "On stdin each line runs as soon as it parses, so `...` continuation lines run as separate statements. Folded them into one line.",
+   "evidence": "R07: `${d}  Create Dictionary  a=1` ran alone, then \"No keyword with name 'b=2' found\"; R08: `Log To Console` failed with 0 args. File args fold correctly (S07)."
+  },
+  {
+   "id": "I04_blank_line_inside_block",
+   "scope": "input",
+   "severity": "autofix",
+   "detect": {
+    "type": "structural",
+    "pattern": "blank line while FOR/WHILE/IF/TRY/GROUP depth > 0"
+   },
+   "fix": "drop blank lines inside open blocks",
+   "message": "A blank line inside an open FOR/IF/TRY/WHILE/GROUP submits the half block. Removed blank lines inside blocks.",
+   "evidence": "R10: \"FOR loop cannot be empty. / FOR loop must have closing END.\" then Variable '${i}' not found + 'END is not allowed in this context'. (A CRLF blank line '\\r' does not submit: S14a.)"
+  },
+  {
+   "id": "I05_unclosed_block",
+   "scope": "input",
+   "severity": "deny",
+   "detect": {
+    "type": "structural",
+    "pattern": "FOR/WHILE/IF/TRY/GROUP depth > 0 at end of input (inline IF with a keyword on the same line does not open a block)"
+   },
+   "message": "Block without END: the REPL silently runs nothing for it. Close every FOR/IF/WHILE/TRY/GROUP with END.",
+   "evidence": "R15c_unclosed_for_eof: empty stdout and stderr, rc 0."
+  },
+  {
+   "id": "I06_old_for_syntax",
+   "scope": "input",
+   "severity": "deny",
+   "detect": {
+    "type": "regex",
+    "pattern": "^\\s*(:FOR\\b|\\\\\\s{2,})"
+   },
+   "message": "Old `:FOR` / `\\` loop syntax was removed. Use FOR ... END.",
+   "evidence": "R39: \"Support for the old FOR loop syntax has been removed.\""
+  },
+  {
+   "id": "I07_markdown_fences",
+   "scope": "input",
+   "severity": "autofix",
+   "detect": {
+    "type": "regex",
+    "pattern": "^\\s*(```|~~~)"
+   },
+   "fix": "delete fence lines",
+   "message": "Removed markdown fences; they ran as keywords named ```robotframework.",
+   "evidence": "R23: \"No keyword with name '```robotframework' found.\" (rest still ran)."
+  },
+  {
+   "id": "I08_sections_and_definitions",
+   "scope": "input",
+   "severity": "autofix_or_deny",
+   "detect": {
+    "type": "regex",
+    "pattern": "^\\s*\\*{3}\\s*(Settings|Variables|Test Cases|Tasks|Keywords|Comments)\\s*\\*{3}"
+   },
+   "fix": "strip *** Settings ***/*** Test Cases *** headers and unindented test-name lines followed by indented steps; keep `Library/Resource/Variables` lines (aliased); `*** Variables ***` rows -> `VAR` lines; deny for *** Keywords *** (cannot define keywords in the REPL)",
+   "message": "The REPL is a test body: no sections, test names or keyword definitions. Put user keywords in a .resource file and `Import Resource` it; `Library X` lines are fine.",
+   "evidence": "R25: '*** Test Cases ***' and 'My Test' -> 2 FAILs, then the step ran; R25c: '*** Keywords ***' + 'My Kw' FAIL and the keyword body ran immediately as steps (no keyword defined); R35b Resource works."
+  },
+  {
+   "id": "I09_test_settings_ignored",
+   "scope": "input",
+   "severity": "autofix",
+   "detect": {
+    "type": "regex",
+    "pattern": "^\\s*\\[(Tags|Documentation|Setup|Teardown|Timeout|Template|Arguments|Return)\\]"
+   },
+   "fix": "delete the line; for [Setup]/[Teardown] warn that the keyword was NOT run",
+   "message": "[Tags]/[Documentation]/[Setup]/... are silently ignored in the REPL (a [Setup] keyword does not run).",
+   "evidence": "R28: no output, no error for [Tags]/[Documentation]."
+  },
+  {
+   "id": "I10_bare_variable_line",
+   "scope": "input",
+   "severity": "autofix",
+   "detect": {
+    "type": "regex",
+    "pattern": "^\\s*[$@&]\\{[^}]+\\}(\\[[^\\]]*\\])*\\s*$"
+   },
+   "fix": "rewrite to `Log To Console    <var>` (REPL) / `.pp <var>` (robot-debug)",
+   "message": "A bare ${var} line is an empty keyword call. To show a value use `Log To Console    ${var}` (REPL) or `.pp ${var}` at (rdb).",
+   "evidence": "R27, D01: \"Keyword name cannot be empty.\""
+  },
+  {
+   "id": "I11_one_statement_per_line",
+   "scope": "input",
+   "severity": "warn",
+   "detect": {
+    "type": "heuristic",
+    "pattern": "a known keyword name appears again as a later cell of the same line"
+   },
+   "message": "Only one statement per line; extra cells become arguments of the first keyword.",
+   "evidence": "R33 / S14h: \"Argument 'stream' got value 'Log To Console'...\"."
+  },
+  {
+   "id": "I12_crlf",
+   "scope": "input",
+   "severity": "autofix",
+   "detect": {
+    "type": "regex",
+    "pattern": "\\r$"
+   },
+   "fix": "strip \\r (no-op safe)",
+   "message": "(silent)",
+   "evidence": "R24, S14a, D16: CRLF input worked (values without \\r, len('abc')=3)."
+  },
+  {
+   "id": "I13_run_keyword_if",
+   "scope": "input",
+   "severity": "warn",
+   "detect": {
+    "type": "regex",
+    "pattern": "^\\s*(?:[$@&]\\{[^}]+\\}=?\\s{2,})*Run Keyword (If|Unless)\\b"
+   },
+   "message": "Works in the REPL, but write `IF    cond    Kw    args` (inline IF) so the line can go into a suite unchanged.",
+   "evidence": "R22: ran, no warning shown; R11b inline IF works."
+  },
+  {
+   "id": "I14_indentation_ok",
+   "scope": "input",
+   "severity": "info",
+   "message": "Leading indentation (4/8 spaces) is harmless.",
+   "evidence": "R26."
+  },
+  {
+   "id": "I15_exit_words",
+   "scope": "input",
+   "severity": "autofix",
+   "detect": {
+    "type": "regex",
+    "pattern": "^\\s*(quit|\\.q|:q|exit\\(\\)|\\.e)\\s*$"
+   },
+   "fix": "replace with `.exit` (or drop; EOF ends the session the same way)",
+   "message": "End with .exit (or just end the heredoc). `quit`, `.q`, `:q`, `exit()` run as keywords; `.e` is ambiguous.",
+   "evidence": "S08_exit_words.log: `exit`/`.quit`/`.exit` end the session; lines after .exit are ignored (R18); EOF ends it equally fast (B02 2.69 s vs B03 2.84 s)."
+  },
+  {
+   "id": "I16_dot_commands",
+   "scope": "input",
+   "severity": "autofix",
+   "detect": {
+    "type": "regex",
+    "pattern": "^\\s*\\.(kw|doc|break|b|tbreak)\\s+([\"']).*\\2\\s*(,.*)?$"
+   },
+   "fix": "strip quotes around the name",
+   "message": "Dot-commands take bare names: `.kw Get Text`, `.break Process Item`. Quotes become part of the name and never match.",
+   "evidence": "R19e: .kw \"Log To Console\" -> No keywords found; D03: breakpoint at keyword '\"Process Item\"' never hit. `.kw` exact name is case-insensitive and accepts Lib.Kw (R19b/R19d); a non-exact text is a search grouped by library (R19c/R19f). `.doc` takes an IMPORTED library/resource name, not a keyword (R20, R20b, R20c). Dot-commands work only at a fresh prompt, not inside a block (R21f)."
+  },
+  {
+   "id": "I17_values_only_when_assigned",
+   "scope": "input",
+   "severity": "info",
+   "message": "Unassigned return values are not printed in the REPL; assign them (`${t}=    Get Title` -> `[ INFO ] ${t} = ...`, cut at ~200 chars). `Log    ${big}` prints the whole value. At (rdb) every keyword prints `=> value`.",
+   "evidence": "R32 (Get Length -> only library INFO, Set Variable -> nothing); S09 (assignment line 221 chars, `Log` 20,009 chars); B04 Get Page Source assignment truncated with '...'; D10/D14 `=> 'ABC'`."
+  },
+  {
+   "id": "I18_failures_do_not_stop",
+   "scope": "input",
+   "severity": "info",
+   "message": "A failing line does not stop later lines; fix the FIRST [ FAIL ], the rest are often follow-ups.",
+   "evidence": "R16, R10 cascade."
+  },
+  {
+   "id": "I19_import_paths",
+   "scope": "input",
+   "severity": "info",
+   "message": "Relative Import Resource/Library paths and ${EXECDIR} resolve from the project root; `-s path/to/file.robot` makes ${CURDIR} that file's folder. A missing library prints a ~12-line traceback with PYTHONPATH.",
+   "evidence": "R34/R35, S12_source_cwd.log, R16d."
+  },
+  {
+   "id": "I20_big_values_flood_stdout",
+   "scope": "input",
+   "severity": "warn",
+   "detect": {
+    "type": "regex",
+    "pattern": "^\\s*(?:[$@&]\\{[^}]+\\}=?\\s{2,})?(Get Aria Snapshot|Get Page Source|Get Source|Log\\s{2,}\\$\\{(src|source|html|page|aria|body|resp)[^}]*\\})\\b"
+   },
+   "message": "Get Aria Snapshot logs the whole snapshot at INFO even when assigned (thousands of lines), and `Log ${source}` prints everything. Read the hook's .rf/state/latest/{aria.yaml,source.html,controls.tsv} with Grep instead.",
+   "evidence": "capture fork: Get Aria Snapshot ~4,200 stdout lines on a 247 KB page, not suppressed by Set Log Level NONE; S09: Log of 20k value printed 20,009 chars; assignment lines alone are cut at ~200 chars (S09/B04)."
+  },
+  {
+   "id": "I21_reimport_with_different_args",
+   "scope": "input",
+   "severity": "warn",
+   "detect": {
+    "type": "regex",
+    "pattern": "^\\s*(Library|Import Library)(\\s{2,}|\\t)(Browser|SeleniumLibrary)(\\s{2,}|\\t)\\S"
+   },
+   "message": "Within one session the FIRST import's arguments win; a later `Library    Browser    timeout=5s` is ignored ('has already imported library ... with different arguments'). Use Set Browser Timeout / Set Selenium Timeout to change timeouts mid-session.",
+   "evidence": "docs fork failure_rules.json (verbatim REPL message)."
+  },
+  {
+   "id": "D01_debug_pause_and_eof",
+   "scope": "command",
+   "severity": "info",
+   "message": "robot-debug pauses at the first uncaught failure by default (values still in scope). EOF at (rdb) = continue; lines after the run ended are ignored; .abort -> rc 253.",
+   "evidence": "D01, D08, S14j, D11."
+  },
+  {
+   "id": "D02_rdb_single_lines",
+   "scope": "input_rdb",
+   "severity": "deny",
+   "detect": {
+    "type": "regex",
+    "pattern": "^\\s*(FOR|WHILE|TRY|GROUP)\\b|^\\s*IF\\s{2,}\\S+\\s*$"
+   },
+   "message": "At (rdb) each line is evaluated alone: FOR/WHILE/TRY/multi-line IF fail. Use single keyword lines, inline IF, or Evaluate.",
+   "evidence": "D09: \"FOR loop cannot be empty\" / \"END is not allowed in this context\"."
+  },
+  {
+   "id": "D03_rdb_import_alias",
+   "scope": "input_rdb",
+   "severity": "autofix",
+   "detect": {
+    "type": "regex",
+    "pattern": "^\\s*(Library|Resource|Variables)(\\s{2,}|\\t)"
+   },
+   "fix": "rewrite to Import Library / Import Resource / Import Variables",
+   "message": "At (rdb) `Library X` is not aliased; use `Import Library    X`.",
+   "evidence": "D10: \"No keyword with name 'Library' found.\" then Import Library worked."
+  },
+  {
+   "id": "D04_break_condition_scope",
+   "scope": "input_rdb",
+   "severity": "warn",
+   "detect": {
+    "type": "heuristic",
+    "pattern": "`.break <Kw>, <cond>` where <cond> references the keyword's own [Arguments] (resolve via robotcode libdoc / resource parse)"
+   },
+   "message": "Keyword breakpoints stop at the CALL SITE; conditions see the caller's variables. A condition on the keyword's own argument cannot be evaluated and the breakpoint then stops at every call.",
+   "evidence": "D04 `${i} == 2` stopped once; D05 `${item} == 2` stopped 3x; D07 .s steps into the keyword."
+  },
+  {
+   "id": "D05_inspect_with_pp",
+   "scope": "input_rdb",
+   "severity": "info",
+   "message": "Prefer `.pp ${var}` / `.print ${expr}` / `.whatis ${v}` over `.vars` (dumps ~40 lines of all scopes; Local shows '(none)' inside keywords even when args exist). Assignments at (rdb) do not undo the failure you are paused at; `.set` stores strings ('7').",
+   "evidence": "D07/D12 .vars Local (none) while D13 .pp ${item} -> 1; D14 .set -> '7', run still FAIL; D15 .print/.whatis/${{ }} work."
+  },
+  {
+   "id": "D06_break_on_failed_test_broken",
+   "scope": "command",
+   "severity": "warn",
+   "detect": {
+    "type": "regex",
+    "pattern": "--break-on-failed-test"
+   },
+   "message": "--break-on-failed-test stops after the test ended; keywords there fail with IndexError. Use the default break-on-exception instead.",
+   "evidence": "S14l: \"<class 'IndexError'>: list index out of range\"."
+  }
+ ]
+}

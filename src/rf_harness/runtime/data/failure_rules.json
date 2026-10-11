@@ -1,0 +1,77 @@
+[
+ {
+  "id": "unknown_kw",
+  "regex": "No keyword with name '(?P<kw>[^']+)' found\\.(?: Did you mean:\\s*\\n(?P<sugg>(?:\\s{4}\\S.*\\n?)+))?",
+  "action": "fuzzy lookup in imported libs (kwcache) + cross-library alias map; inline best 1-3 signatures"
+ },
+ {
+  "id": "unknown_kw_whitespace",
+  "regex": "No keyword with name '(?P<kw>[^']+)' found\\. Did you try using keyword '(?P<real>[^']+)' and forgot to use enough whitespace",
+  "action": "remind: >=2 spaces (use 4) between keyword and args; if kw is a SeleniumLibrary name while Browser is imported -> alias map (Click Element -> Click)"
+ },
+ {
+  "id": "arg_count",
+  "regex": "Keyword '(?P<kw>[^']+)' expected (?P<exp>.+?) arguments?, got (?P<got>\\d+)\\.",
+  "action": "inline one-line signature of kw (owner-qualified) + pointer to .rf/docs/kw/<Lib>/<Kw>.md"
+ },
+ {
+  "id": "bad_value",
+  "regex": "Argument '(?P<arg>[^']+)' got value '(?P<val>[^']*)' that cannot be converted to (?P<type>[^:.]+)(?:: (?P<detail>.*))?",
+  "action": "inline signature + allowed values (enum members are in the message already)"
+ },
+ {
+  "id": "bad_named_arg_as_positional",
+  "regex": "'str' object cannot be interpreted as an integer|got multiple values for argument '(?P<arg>[^']+)'|got an unexpected keyword argument '(?P<kwarg>[^']+)'|Keyword '(?P<kw>[^']+)' got unexpected named argument",
+  "action": "named arg not accepted -> show signature (names) of last keyword"
+ },
+ {
+  "id": "var_not_found",
+  "regex": "Variable '(?P<var>[$@&%]\\{[^}]+\\})' not found\\.",
+  "action": "list defined user vars via .vars --user hint; check assignment line passed"
+ },
+ {
+  "id": "import_lib_failed",
+  "regex": "Importing library '(?P<lib>[^']+)' failed: (?P<err>.+)",
+  "action": "is it installed in THIS venv? (importlib.util.find_spec); never pip install into shared venv; check name spelling/case"
+ },
+ {
+  "id": "resource_missing",
+  "regex": "Resource file '(?P<path>[^']+)' does not exist\\.",
+  "action": "paths are relative to the project root robotcode detected (or ${CURDIR}); suggest absolute path / glob for *.resource"
+ },
+ {
+  "id": "lib_reimport_ignored",
+  "regex": "has already imported library '(?P<lib>[^']+)' with different arguments\\. This import is ignored\\.",
+  "action": "warn: first import's args (e.g. timeout) win for the whole REPL session"
+ },
+ {
+  "id": "locator_timeout_browser",
+  "regex": "TimeoutError: locator\\.(?P<op>\\w+): Timeout (?P<ms>\\d+)ms exceeded\\.(?:\\s*Call log:\\s*\\n\\s*- waiting for (?P<loc>.+))?",
+  "action": "page capture + near-miss grep in controls.tsv (frame prefix / shadow) + wait hint"
+ },
+ {
+  "id": "strict_mode",
+  "regex": "strict mode violation: (?P<loc>.+?) resolved to (?P<n>\\d+) elements",
+  "action": "show the candidates (already in message) + suggest '>> nth=0' or a more specific selector"
+ },
+ {
+  "id": "locator_not_found_selenium",
+  "regex": "(?P<what>Element|Button|Link|Image|List|Checkbox|Radio button|Text field|Text area|Frame) with locator '(?P<loc>[^']+)' not found",
+  "action": "page capture + near-miss grep; iframe -> Select Frame"
+ },
+ {
+  "id": "not_visible_selenium",
+  "regex": "Element '(?P<loc>[^']+)' not visible after (?P<t>.+)\\.",
+  "action": "wait/visibility hint; covered/hidden check"
+ },
+ {
+  "id": "navigation_error",
+  "regex": "Error: page\\.goto: (?P<err>net::\\S+|Protocol error .*?)(?: at (?P<url>\\S+))?$",
+  "action": "check URL/base variable; file:// paths need absolute path"
+ },
+ {
+  "id": "assertion_text",
+  "regex": "(?:^|\\] )(?P<what>Text|Title|Url|Attribute|Property|Count|Element Count) .* should be .*|(?:^|\\] )(?P<a>[^\\n]+) != (?P<b>[^\\n]+)$",
+  "action": "assertion failure (not a locator problem): read actual value; don't weaken the assertion in debug tasks"
+ }
+]

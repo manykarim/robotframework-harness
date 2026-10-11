@@ -6,9 +6,9 @@
 
 ## 2. Runtime port from v3.2 (harness-live-session, harness-failure-feedback, harness-keyword-knowledge, harness-static-quality)
 
-- [ ] 2.1 Port `rfharness32` into `rf_harness.runtime` (design D5): `RFH32_` → `RFH_` via the `config.py` registry, markers `[rfh]`, state dir `.rf/`, robotcode access only through `robotcode_adapter.py`. Verify that `python -m rf_harness.runtime.hook` handles a session-start payload and that a grep finds no `rfharness3`, `RFH3` or `hook32` strings.
-- [ ] 2.2 Port the 224-check simulation suite to `tests/simulation/` (Browser + chromium, run in CI on Linux). Verify ≥ 221/224 pass, with the scenario-D pre-tool lint timing check marked as a tolerated flake with a retry, and the v3.2 scenario L (covered `label:has(#id)` target, read-streak nudge) green.
-- [ ] 2.3 Add robotcode adapter contract tests (`BaseInterpreter`/`run_repl` embedding, libdoc, analyzer) pinned to `robotcode>=2.7,<2.8`. Verify they pass against robotcode 2.7.x.
+- [x] 2.1 Port `rfharness32` into `rf_harness.runtime` (design D5): `RFH32_` → `RFH_` via the `config.py` registry, markers `[rfh]`, state dir `.rf/`, robotcode access only through `robotcode_adapter.py`. Verify that `python -m rf_harness.runtime.hook` handles a session-start payload and that a grep finds no `rfharness3`, `RFH3` or `hook32` strings.
+- [x] 2.2 Port the 224-check simulation suite to `tests/simulation/` (Browser + chromium, run in CI on Linux). Verify ≥ 221/224 pass, with the scenario-D pre-tool lint timing check marked as a tolerated flake with a retry, and the v3.2 scenario L (covered `label:has(#id)` target, read-streak nudge) green.
+- [x] 2.3 Add robotcode adapter contract tests (`BaseInterpreter`/`run_repl` embedding, libdoc, analyzer) pinned to `robotcode>=2.7,<2.8`. Verify they pass against robotcode 2.7.x.
 - [x] 2.4 Vendor the desktop safety, isolation and focus guards into `rf_harness.runtime.desktop` with attribution, and add parity tests replaying recorded rf-mcp guard decisions. Desktop live steps stay refused unless `RFH_DESKTOP=1`. Verify the parity tests pass and an active-desktop input step is refused by default.
 
 ## 3. Plugin and marketplace (marketplace-distribution)
