@@ -244,7 +244,9 @@ def test_decision_and_context_are_json_serializable():
 
 def test_probe_context_is_side_effect_free():
     before = dict(os.environ)
-    ctx = probe_context({"DISPLAY": ":0", "XDG_SESSION_TYPE": "wayland"}, probe_display=False)
+    # pin the platform: the classification under test is the Linux/X11 one (Windows classifies as "windows")
+    ctx = probe_context({"DISPLAY": ":0", "XDG_SESSION_TYPE": "wayland"}, platform="linux", is_windows=False,
+                        probe_display=False)
     assert dict(os.environ) == before
     assert (ctx.isolation, ctx.isolation_source) == ("unknown", "none")
     assert ctx.was_wayland is True
