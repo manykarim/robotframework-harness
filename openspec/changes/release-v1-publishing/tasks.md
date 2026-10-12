@@ -22,16 +22,16 @@
 
 ## 3. Release workflow
 
-- [ ] 3.1 Write `.github/workflows/release.yml` per design D1: jobs verify / test / build / publish-testpypi /
+- [x] 3.1 Write `.github/workflows/release.yml` per design D1: jobs verify / test / build / publish-testpypi /
   publish-pypi / github-release / move-stable; tag filters for final and rc tags; per-job permissions;
   `concurrency: release`; artifact hand-over from build to publish. Verify that actionlint is clean.
-- [ ] 3.2 Make the build job check the wheel content (`_assets/skills/rf-harness/SKILL.md`, `_assets/bin/rfh-launch`,
+- [x] 3.2 Make the build job check the wheel content (`_assets/skills/rf-harness/SKILL.md`, `_assets/bin/rfh-launch`,
   `_assets/hooks/hooks.json`) and run `uvx twine check dist/*`. Verify locally by running the same commands on
   `uv build` output.
-- [ ] 3.3 Create the environments `pypi` (tags `v*`, required reviewer manykarim) and `testpypi` (tags `v*rc*`), and a
+- [x] 3.3 Create the environments `pypi` (tags `v*`, required reviewer manykarim) and `testpypi` (tags `v*rc*`), and a
   tag ruleset blocking updates and deletions of `refs/tags/v*`. Verify with `gh api` that the environments, branch
   policies, reviewer and ruleset exist.
-- [ ] 3.4 Check that no PyPI token exists in repository secrets or workflow files. Verify that `gh secret list` and a
+- [x] 3.4 Check that no PyPI token exists in repository secrets or workflow files. Verify that `gh secret list` and a
   grep over `.github/` show no `PYPI`/`pypi-` token.
 
 ## 4. Owner steps (outside the repository)

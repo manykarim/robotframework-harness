@@ -1,5 +1,7 @@
 [build-system]
-requires = ["hatchling>=1.24"]
+# hatchling 1.30+ (except 1.31) emits Metadata-Version 2.5, which twine 6.2 rejects (and the PyPI publish action runs
+# twine): stay on 2.4 until the toolchain accepts 2.5. 1.27 is the first release with license-files (PEP 639).
+requires = ["hatchling>=1.27,<1.30"]
 build-backend = "hatchling.build"
 
 [project]

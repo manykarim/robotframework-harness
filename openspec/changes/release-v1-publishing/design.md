@@ -127,6 +127,10 @@ soon after registration.
 - [Someone registers the name first, or PyPI rejects it as too similar to an existing project] → publish soon after
   the pending-publisher registration. If PyPI rejects the name, the fallback `robotframework-agentharness` (free on
   2026-10-11) needs a follow-up change: package name, docs and installer commands.
+- [The build backend emits a metadata version the publish toolchain rejects] → found during implementation: hatchling
+  1.30+ (except 1.31) writes `Metadata-Version: 2.5`, and twine 6.2 (used by the PyPI publish action) rejects it.
+  The build backend is pinned to `hatchling>=1.27,<1.30` (2.4, with PEP 639 license-files), and the build job runs
+  `twine check --strict`.
 - [`uv build` from the sdist loses the assets] → the build job checks the wheel content. The hatch hook already
   handles sdist → wheel.
 - [Root-relative links break on the project Pages path] → `site_url`. The link check already excludes the generated
