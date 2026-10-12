@@ -1,3 +1,6 @@
+> Repository renamed from `robotframework-ai-engineering` to `robotframework-harness` on 2026-10-13 to match the
+> PyPI distribution name.
+
 ## Why
 
 The research on branch `research/robotcode-remote-mcp` of rf-mcp (commit `7994ae3`) produced an agent harness for
@@ -7,13 +10,13 @@ Robot Framework: an Agent Skill, agent hooks and a local helper built on robotco
 - It lifted weaker, cheap models the most (Qwen 3.8 Flash 0.38 → 0.88, OpenCode/MiniMax 0.27 → 0.53).
 
 Today the harness exists only as research prototypes (`hookpkg3`/`hookpkg31`/`hookpkg32`) with hand-run installers.
-Users cannot adopt it. **robotframework-ai-engineering** turns the best version (v3.2) into a product that someone can
+Users cannot adopt it. **robotframework-harness** turns the best version (v3.2) into a product that someone can
 install in minutes, for every major coding agent. It also publishes the documentation and the full experimental
 evidence behind it.
 
 ## What Changes
 
-- **New repository `robotframework-ai-engineering`** (Apache-2.0). It holds one plugin, `rf-harness`, with:
+- **New repository `robotframework-harness`** (Apache-2.0). It holds one plugin, `rf-harness`, with:
   - the Robot Framework Agent Skill and its references;
   - the hook definitions;
   - per-agent variants.
@@ -88,7 +91,7 @@ None. This is a new repository with no existing specs.
 
 ## Impact
 
-- **New public repository** `manykarim/robotframework-ai-engineering`. Creating the GitHub repository and the first
+- **New public repository** `manykarim/robotframework-harness`. Creating the GitHub repository and the first
   publish (PyPI `robotframework-harness`, release tag) need the owner's confirmation at release time. The
   repository is published **private** first; making it public is a separate, later decision.
 - **Dependencies of the runtime:** `robotframework>=7`, `robotcode[repl,runner,analyze]` (pinned `>=2.7,<2.8` behind

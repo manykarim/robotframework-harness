@@ -21,7 +21,7 @@ Expected output, shortened:
 ```text
 Python environment: ./.venv/bin/python (robotframework 7.x)  -> install the runtime there? [Y/n] y
 claude-code  plugin mode, project scope
-  + .claude/settings.json   (marketplace robotframework-ai-engineering, plugin rf-harness enabled)
+  + .claude/settings.json   (marketplace robotframework-harness, plugin rf-harness enabled)
   + .rf/harness.json        (runtime: robotframework-harness[runtime]==<version>)
 done: 1 agent, runtime installed, .rf/ added to .gitignore
 ```
@@ -53,8 +53,8 @@ What you should see:
 
 !!! note "Marketplace commands instead of the installer"
     ```bash
-    claude plugin marketplace add manykarim/robotframework-ai-engineering
-    claude plugin install rf-harness@robotframework-ai-engineering
+    claude plugin marketplace add manykarim/robotframework-harness
+    claude plugin install rf-harness@robotframework-harness
     uvx robotframework-harness install --runtime-only   # the hooks still need the runtime in your project
     ```
 

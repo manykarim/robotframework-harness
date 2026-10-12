@@ -1,4 +1,4 @@
-# robotframework-ai-engineering
+# robotframework-harness
 
 **An agent harness for Robot Framework.** It gives coding agents — Claude Code, OpenAI Codex, GitHub Copilot (CLI and
 VS Code) and OpenCode — what they need to write, debug and repair Robot Framework tests reliably:
@@ -27,8 +27,8 @@ Then ask your agent for a test. Per-agent guides are in [docs/](docs/).
 Plugin marketplace (Claude Code, Copilot CLI, VS Code, Codex):
 
 ```bash
-claude plugin marketplace add manykarim/robotframework-ai-engineering
-claude plugin install rf-harness@robotframework-ai-engineering
+claude plugin marketplace add manykarim/robotframework-harness
+claude plugin install rf-harness@robotframework-harness
 ```
 
 ## Why: evidence

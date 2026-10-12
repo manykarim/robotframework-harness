@@ -17,8 +17,8 @@ uvx robotframework-harness install --agent codex --yes
 ```
 
 With `--yes` the installer:
-- runs `codex plugin marketplace add manykarim/robotframework-ai-engineering` and
-  `codex plugin add rf-harness@robotframework-ai-engineering`;
+- runs `codex plugin marketplace add manykarim/robotframework-harness` and
+  `codex plugin add rf-harness@robotframework-harness`;
 - trusts exactly the installed hooks, by writing their hashes to Codex's `config.toml`;
 - installs the runtime into `.venv`.
 

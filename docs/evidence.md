@@ -1,7 +1,7 @@
 # Evidence
 
 The harness came out of seven experiment rounds (2026-10-01 to 2026-10-10); round 8 (2026-10-11) is the v1 release gate. All data, graders, reports and harness
-versions are in the repository's [`evidence/`](https://github.com/manykarim/robotframework-ai-engineering/tree/main/evidence)
+versions are in the repository's [`evidence/`](https://github.com/manykarim/robotframework-harness/tree/main/evidence)
 folder. `evidence/check_claims.py` recomputes every number on this page from the archived results.
 
 ## Headline results

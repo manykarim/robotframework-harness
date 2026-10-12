@@ -21,8 +21,8 @@ from .. import _assets
 from .. import transforms as _x
 
 PLUGIN_NAME = "rf-harness"
-MARKETPLACE_NAME = "robotframework-ai-engineering"
-MARKETPLACE_REPO = "manykarim/robotframework-ai-engineering"
+MARKETPLACE_NAME = "robotframework-harness"
+MARKETPLACE_REPO = "manykarim/robotframework-harness"
 PLUGIN_ID = f"{PLUGIN_NAME}@{MARKETPLACE_NAME}"
 SKILL_NAME = "rf-harness"
 SUPPORT_DIR_NAME = "rf-harness"

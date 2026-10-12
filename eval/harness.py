@@ -95,7 +95,7 @@ from typing import Any
 # Paths / config
 # --------------------------------------------------------------------------- #
 HERE = Path(__file__).resolve().parent                     # <repo>/eval
-REPO_ROOT = HERE.parent                                    # robotframework-ai-engineering checkout
+REPO_ROOT = HERE.parent                                    # robotframework-harness checkout
 RESEARCH_AB = Path("/home/many/workspace/rf-mcp-robotcode/experiments/robotcode-remote/ab")   # round-7 source
 REPO = Path(os.environ.get("AB_RF_MCP_REPO") or "/home/many/workspace/rf-mcp-robotcode")     # rf-mcp worktree (mcp arm)
 VENV_BIN = Path(os.environ.get("AB_VENV_BIN") or (REPO / ".venv" / "bin"))  # grading venv: robot, Browser, Requests
@@ -2042,7 +2042,7 @@ def summarize_calls(calls: list[dict]) -> dict:
 
 _LEAK_MARKERS = ("_reference", "work_conf", "bundle-agent-skills-eval", "ab/fixtures", "results_rc",
                  "fixtures_live", "results_live", "ab/harness", "eval/fixtures", "eval/runs", "evidence/rounds",
-                 "robotframework-ai-engineering/eval")
+                 "robotframework-harness/eval")
 
 
 def detect_leak(calls: list[dict]) -> list[str]:

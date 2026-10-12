@@ -33,7 +33,7 @@ def flat(hooks: dict) -> dict[str, tuple[str | None, str, int]]:
 
 def test_marketplace_lists_rf_harness_at_package_version():
     data = json.loads((REPO / ".claude-plugin" / "marketplace.json").read_text(encoding="utf-8"))
-    assert data["name"] == "robotframework-ai-engineering"
+    assert data["name"] == "robotframework-harness"
     (plugin,) = data["plugins"]
     assert plugin["name"] == "rf-harness" and plugin["source"] == "./plugins/rf-harness"
     assert plugin["version"] == __version__ == load(".claude-plugin/plugin.json")["version"]

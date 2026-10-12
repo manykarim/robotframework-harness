@@ -2,7 +2,7 @@
 
 - [x] 1.1 Create the layout from design D1 with `LICENSE` (Apache-2.0), `README.md` (pitch, 3-line quick start, evidence headline with link), `pyproject.toml` (dist `robotframework-harness`, console scripts `robotframework-harness` and `rf-harness`, zero dependencies, extra `runtime`), a hatch build hook that bundles `plugins/rf-harness/` into `rf_harness/_assets`, and `.gitignore`. Verify `uv build` produces a wheel that contains `_assets/skills/rf-harness/SKILL.md`.
 - [x] 1.2 Add CI (`.github/workflows/ci.yml`: ruff, mypy, pytest on Linux/macOS/Windows with Python 3.10–3.13) and a version-consistency check (plugin.json == package version). Verify CI passes on an empty test suite and fails when the versions differ.
-- [x] 1.3 Create the **private** GitHub repository `manykarim/robotframework-ai-engineering` and push `main`. Verify `gh repo view` reports visibility PRIVATE.
+- [x] 1.3 Create the **private** GitHub repository `manykarim/robotframework-harness` and push `main`. Verify `gh repo view` reports visibility PRIVATE.
 
 ## 2. Runtime port from v3.2 (harness-live-session, harness-failure-feedback, harness-keyword-knowledge, harness-static-quality)
 
@@ -51,5 +51,5 @@
 ## 8. Release v1.0.0
 
 - [x] 8.1 Run the same-window release gate: rf-harness vs the hookpkg32 prototype on Claude Code, Codex, OpenCode and Qwen 3.8 Flash, 3 reps, live scenarios. Verify the gate report passes non-inferiority and archive it as evidence round 8. _(Done 2026-10-11: gate PASS, rf-harness 37/45 = 0.82 vs prototype-v32 37/45 = 0.82, Claude 15/15 each, no per-agent regression; Qwen not run (OpenRouter account balance exhausted); archived as evidence round 08-release-gate-v1.)_
-- [ ] 8.2 With the owner's explicit go-ahead (repository already private from 1.3): make it public, enable Pages, configure PyPI trusted publishing, tag `v1.0.0`, move `stable`, and publish the wheel, sdist and transcript assets. Verify that `uvx robotframework-harness install` works from PyPI on a clean machine and that `claude plugin marketplace add manykarim/robotframework-ai-engineering` installs v1.0.0.
+- [ ] 8.2 With the owner's explicit go-ahead (repository already private from 1.3): make it public, enable Pages, configure PyPI trusted publishing, tag `v1.0.0`, move `stable`, and publish the wheel, sdist and transcript assets. Verify that `uvx robotframework-harness install` works from PyPI on a clean machine and that `claude plugin marketplace add manykarim/robotframework-harness` installs v1.0.0.
 - [x] 8.3 Add a pointer in rf-mcp's change `robotcode-agent-harness` (design D9 and runtime specs superseded by this repository). Verify `openspec validate` passes in both repositories.

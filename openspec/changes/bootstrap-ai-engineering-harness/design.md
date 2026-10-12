@@ -47,7 +47,7 @@ See proposal.md (Why). Inputs this design builds on:
 ### D1. Repository layout: one plugin, one Python distribution, docs, evidence, eval
 
 ```
-.claude-plugin/marketplace.json          marketplace "robotframework-ai-engineering" -> plugin rf-harness
+.claude-plugin/marketplace.json          marketplace "robotframework-harness" -> plugin rf-harness
 plugins/rf-harness/
   .claude-plugin/plugin.json             version == release version
   skills/rf-harness/SKILL.md (+ references/)
@@ -260,5 +260,7 @@ tests/       unit, simulation, adapter payload replay, installer, docs and evide
 - Publish the GitHub repository as **private** first. Making it public and the first PyPI publish are later,
   separate decisions.
 - PyPI distribution name: `robotframework-harness` (CLI and plugin `rf-harness`).
+- Repository and marketplace renamed to `robotframework-harness` (2026-10-13) to match the PyPI distribution;
+  GitHub redirects the old `manykarim/robotframework-ai-engineering` URLs.
 - Import only the findings summary of `robotcode-experiments`.
 - Cursor, Goose and Gemini CLI stay out of v1 until tested live.

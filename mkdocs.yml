@@ -1,7 +1,7 @@
-site_name: robotframework-ai-engineering
+site_name: robotframework-harness
 site_description: Agent harness for Robot Framework - Agent Skill, agent hooks and a local robotcode live session for Claude Code, Codex, GitHub Copilot, VS Code and OpenCode.
-repo_url: https://github.com/manykarim/robotframework-ai-engineering
-repo_name: manykarim/robotframework-ai-engineering
+repo_url: https://github.com/manykarim/robotframework-harness
+repo_name: manykarim/robotframework-harness
 edit_uri: edit/main/docs/
 docs_dir: docs
 strict: true

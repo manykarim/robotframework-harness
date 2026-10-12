@@ -3,7 +3,7 @@
 This is the ONLY place rf-mcp is imported. Run it with rf-mcp's environment:
 
     cd /home/many/workspace/rf-mcp && uv run --no-sync python \\
-        /home/many/workspace/robotframework-ai-engineering/tests/desktop/make_corpus.py
+        /home/many/workspace/robotframework-harness/tests/desktop/make_corpus.py
 
 ``RFMCP_ROOT`` overrides the rf-mcp checkout. The harness tests
 (``test_desktop_parity.py``) replay the JSON against

@@ -1,5 +1,5 @@
 {
-  "name": "robotframework-ai-engineering",
+  "name": "robotframework-harness",
   "owner": {
     "name": "manykarim",
     "email": "manykarim@users.noreply.github.com"
@@ -17,8 +17,8 @@
       "author": {
         "name": "manykarim"
       },
-      "homepage": "https://github.com/manykarim/robotframework-ai-engineering",
-      "repository": "https://github.com/manykarim/robotframework-ai-engineering",
+      "homepage": "https://github.com/manykarim/robotframework-harness",
+      "repository": "https://github.com/manykarim/robotframework-harness",
       "license": "Apache-2.0",
       "keywords": [
         "robotframework",

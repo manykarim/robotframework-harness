@@ -31,7 +31,7 @@ commands in Claude Code, GitHub Copilot CLI, VS Code (Copilot) and OpenAI Codex.
 
 #### Scenario: Claude Code plugin install
 
-- **WHEN** a user runs `claude plugin marketplace add manykarim/robotframework-ai-engineering` and `claude plugin install rf-harness@robotframework-ai-engineering`
+- **WHEN** a user runs `claude plugin marketplace add manykarim/robotframework-harness` and `claude plugin install rf-harness@robotframework-harness`
 - **THEN** a new Claude Code session in a Robot Framework project receives the harness session context, and editing a test file returns live execution feedback
 
 #### Scenario: Codex requires hook trust once

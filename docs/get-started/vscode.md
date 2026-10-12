@@ -8,7 +8,7 @@ Plugins and hooks are preview features in VS Code. Enable them once in your **us
 {
   "chat.plugins.enabled": true,
   "chat.useHooks": true,
-  "chat.plugins.marketplaces": ["manykarim/robotframework-ai-engineering"]
+  "chat.plugins.marketplaces": ["manykarim/robotframework-harness"]
 }
 ```
 

@@ -37,9 +37,9 @@ runtime = [
 quality = ["robotframework-robocop>=9.1"]
 
 [project.urls]
-Homepage = "https://github.com/manykarim/robotframework-ai-engineering"
-Documentation = "https://github.com/manykarim/robotframework-ai-engineering/tree/main/docs"
-Issues = "https://github.com/manykarim/robotframework-ai-engineering/issues"
+Homepage = "https://github.com/manykarim/robotframework-harness"
+Documentation = "https://github.com/manykarim/robotframework-harness/tree/main/docs"
+Issues = "https://github.com/manykarim/robotframework-harness/issues"
 
 [project.scripts]
 robotframework-harness = "rf_harness.installer.cli:main"

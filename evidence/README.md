@@ -129,7 +129,7 @@ The committed manifest `transcripts/<round>.manifest.json` lists, for every tran
 
 ```bash
 mkdir -p evidence/_release_assets
-gh release download <tag> --repo manykarim/robotframework-ai-engineering --pattern 'evidence-transcripts-*' \
+gh release download <tag> --repo manykarim/robotframework-harness --pattern 'evidence-transcripts-*' \
     --dir evidence/_release_assets            # once the assets are published (task 8.2)
 python3 evidence/verify_assets.py --require    # asset sha256, every member's sha256, every transcript -> one row
 ```

@@ -11,7 +11,7 @@ import posixpath
 import re
 from pathlib import Path
 
-REPO_URL = "https://github.com/manykarim/robotframework-ai-engineering"
+REPO_URL = "https://github.com/manykarim/robotframework-harness"
 ROOT = Path(__file__).resolve().parents[1]  # scripts/ -> repo root
 LINK_RE = re.compile(r"\]\((?P<target>(?:\.\./)+evidence/[^)\s#]*)(?P<frag>#[^)\s]*)?\)")
 
