@@ -2442,6 +2442,124 @@
     }
    ],
    "command": "python3 evidence/check_claims.py --only docs-r8-gate --show"
+  },
+  {
+   "id": "rel100-r7-harness",
+   "claim": "release notes: harness design 0.83 (round 7)",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "arms": [
+      "hookpkg31"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 0.83,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "../docs/releases/1.0.0.md",
+     "text": "the harness design passed **0.83** of sessions versus **0.69**"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only rel100-r7-harness --show"
+  },
+  {
+   "id": "rel100-r7-rfmcp",
+   "claim": "release notes: rf-mcp 0.69 (round 7)",
+   "round": "07-v31-v32",
+   "files": [
+    "rounds/07-v31-v32/results/results_live_v31sub.jsonl",
+    "rounds/07-v31-v32/results/results_live_v31or.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "arms": [
+      "mcp"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 0.69,
+    "tolerance": 0.005
+   },
+   "sources": [
+    {
+     "file": "../docs/releases/1.0.0.md",
+     "text": "the harness design passed **0.83** of sessions versus **0.69**"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only rel100-r7-rfmcp --show"
+  },
+  {
+   "id": "rel100-r8-rfharness",
+   "claim": "release notes: gate rf-harness 37/45",
+   "round": "08-release-gate-v1",
+   "files": [
+    "rounds/08-release-gate-v1/results/results_live_gate1.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "arms": [
+      "rf-harness"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 0.82,
+    "tolerance": 0.005,
+    "passes": 37,
+    "n": 45
+   },
+   "sources": [
+    {
+     "file": "../docs/releases/1.0.0.md",
+     "text": "**37/45 = 0.82 vs 37/45 = 0.82**"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only rel100-r8-rfharness --show"
+  },
+  {
+   "id": "rel100-r8-prototype",
+   "claim": "release notes: gate prototype 37/45",
+   "round": "08-release-gate-v1",
+   "files": [
+    "rounds/08-release-gate-v1/results/results_live_gate1.jsonl"
+   ],
+   "compute": {
+    "metric": "pass_rate",
+    "filter": {
+     "arms": [
+      "prototype-v32"
+     ]
+    },
+    "contaminated": "keep"
+   },
+   "expect": {
+    "value": 0.82,
+    "tolerance": 0.005,
+    "passes": 37,
+    "n": 45
+   },
+   "sources": [
+    {
+     "file": "../docs/releases/1.0.0.md",
+     "text": "**37/45 = 0.82 vs 37/45 = 0.82**"
+    }
+   ],
+   "command": "python3 evidence/check_claims.py --only rel100-r8-prototype --show"
   }
  ],
  "reports": [

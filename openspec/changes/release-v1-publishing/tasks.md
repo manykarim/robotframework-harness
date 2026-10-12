@@ -1,18 +1,18 @@
 ## 1. Version handling and release notes
 
-- [ ] 1.1 Extend `scripts/check_versions.py`:
+- [x] 1.1 Extend `scripts/check_versions.py`:
   - compare the release part (strip `rcN`, `aN`, `bN`, `.devN` from the package version);
   - add `--tag vX`, which also requires the package version to equal the tag exactly.
 
   Verify with tests: a matching final, a matching rc, a mismatched tag, and plugin/marketplace drift each give the
   expected exit code.
-- [ ] 1.2 Write `docs/releases/1.0.0.md` and add it to the docs nav. Content: what it is, install, agents and
+- [x] 1.2 Write `docs/releases/1.0.0.md` and add it to the docs nav. Content: what it is, install, agents and
   versions, evidence headline (rounds 7 and 8), known limits, upgrade notes. Verify that the strict docs build passes
   and that every number on the page has a claim (`check_claims --check-sources`).
 
 ## 2. GitHub Pages
 
-- [ ] 2.1 Add `site_url: https://manykarim.github.io/robotframework-harness/` to `mkdocs.yml`, and a Pages
+- [x] 2.1 Add `site_url: https://manykarim.github.io/robotframework-harness/` to `mkdocs.yml`, and a Pages
   upload + `deploy` job to `docs.yml` (only `main` pushes and manual dispatch; PRs build only). Verify that
   actionlint is clean and that the local strict build passes.
 - [ ] 2.2 Enable Pages with the GitHub Actions source (`gh api -X POST repos/manykarim/robotframework-harness/pages -f
