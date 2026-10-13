@@ -41,10 +41,10 @@
 
 ## 5. Dry run on TestPyPI (owner go-ahead before the tag push)
 
-- [ ] 5.1 Set the package version to `1.0.0rc1` (plugin and marketplace stay `1.0.0`), commit, and push tag
+- [x] 5.1 Set the package version to `1.0.0rc1` (plugin and marketplace stay `1.0.0`), commit, and push tag _(Done: release run published 1.0.0rc1 wheel + sdist to TestPyPI; publish-pypi, github-release and move-stable skipped; no `stable` tag, no GitHub release.)_
   `v1.0.0rc1`. Verify that the release workflow publishes to TestPyPI only, `stable` does not move, and no GitHub
   release is created.
-- [ ] 5.2 Install from TestPyPI in a clean environment:
+- [x] 5.2 Install from TestPyPI in a clean environment: _(Done: clean uvx install from TestPyPI prints `rf-harness 1.0.0rc1` / plugin 1.0.0; `install --dry-run` plans the Claude Code files.)_
   `uvx --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ robotframework-harness==1.0.0rc1 version`,
   plus `install --dry-run` in a temporary project. Verify that it prints `rf-harness 1.0.0rc1` and the planned files.
 
