@@ -36,7 +36,7 @@
 
 ## 4. Owner steps (outside the repository)
 
-- [ ] 4.1 The owner registers the pending trusted publisher on test.pypi.org and pypi.org with the values in design D4.
+- [x] 4.1 The owner registers the pending trusted publisher on test.pypi.org and pypi.org with the values in design D4. _(Done 2026-10-13: owner confirmed the pending publishers on test.pypi.org and pypi.org.)_
   Verify by the owner's confirmation (screenshots are not needed), recorded in this task.
 
 ## 5. Dry run on TestPyPI (owner go-ahead before the tag push)

@@ -69,6 +69,11 @@ docs = [
     "mkdocs-material>=9.5,<10",
 ]
 
+[tool.uv]
+# local-path installs (installer --runtime-source, tests) must rebuild when the version or the shipped files change;
+# by default uv only re-keys its build cache on pyproject.toml
+cache-keys = [{ file = "pyproject.toml" }, { file = "src/rf_harness/**/*.py" }, { file = "plugins/rf-harness/**" }]
+
 [tool.hatch.version]
 path = "src/rf_harness/__init__.py"
 

@@ -1,6 +1,6 @@
 {
   "name": "rf-harness",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "description": "Robot Framework agent harness: an Agent Skill plus hooks that execute your test lines live after every edit (robotcode-based local session), classify failures, capture page state and keyword docs, and require a green plain robot run before finishing.",
   "author": { "name": "manykarim" },
   "homepage": "https://github.com/manykarim/robotframework-harness",

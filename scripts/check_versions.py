@@ -32,6 +32,10 @@ def versions() -> dict[str, str]:
     found = {"package": m.group(1) if m else "<missing>"}
     plugin = ROOT / "plugins" / "rf-harness" / ".claude-plugin" / "plugin.json"
     found["plugin.json"] = json.loads(plugin.read_text(encoding="utf-8")).get("version", "<missing>")
+    launcher = ROOT / "plugins" / "rf-harness" / "bin" / "rfh_launch.py"
+    if launcher.is_file():
+        lm = re.search(r'^LAUNCHER_VERSION = "([^"]+)"', launcher.read_text(encoding="utf-8"), re.M)
+        found["rfh_launch.py LAUNCHER_VERSION"] = lm.group(1) if lm else "<missing>"
     market = ROOT / ".claude-plugin" / "marketplace.json"
     if market.is_file():
         data = json.loads(market.read_text(encoding="utf-8"))

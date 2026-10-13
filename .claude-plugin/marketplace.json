@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "Robot Framework agent harness for Claude Code, Codex, GitHub Copilot and VS Code: an Agent Skill plus hooks that run your test lines live in a local robotcode session after every edit.",
-    "version": "0.9.0"
+    "version": "1.0.0"
   },
   "plugins": [
     {
       "name": "rf-harness",
       "source": "./plugins/rf-harness",
       "description": "Robot Framework agent harness: an Agent Skill plus hooks that execute your test lines live after every edit (robotcode-based local session), classify failures, capture page state and keyword docs, and require a green plain robot run before finishing.",
-      "version": "0.9.0",
+      "version": "1.0.0",
       "author": {
         "name": "manykarim"
       },

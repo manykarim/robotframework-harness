@@ -28,7 +28,7 @@ import os
 import sys
 import time
 
-LAUNCHER_VERSION = "0.9.0"
+LAUNCHER_VERSION = "1.0.0"
 SETUP_COMMAND = "uvx robotframework-harness install --runtime-only"
 RUNTIME_MODULE = "rf_harness.runtime.hook"
 DIST_PREFIX = "robotframework_harness-"

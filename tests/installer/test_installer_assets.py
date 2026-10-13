@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 import shutil
 import subprocess
 
@@ -11,6 +12,9 @@ from installer_helpers import REPO
 
 from rf_harness import __version__
 from rf_harness.installer import _assets
+
+# plugin files carry the plain release version; a release candidate (1.0.0rc1) ships plugin files versioned 1.0.0
+RELEASE = re.sub(r"(?:\.?(?:a|b|rc)\d+)?(?:\.dev\d+)?$", "", __version__)
 
 PLUGIN = REPO / "plugins" / "rf-harness"
 LAUNCH = '"${CLAUDE_PLUGIN_ROOT}/bin/rfh-launch"'
@@ -36,7 +40,7 @@ def test_marketplace_lists_rf_harness_at_package_version():
     assert data["name"] == "robotframework-harness"
     (plugin,) = data["plugins"]
     assert plugin["name"] == "rf-harness" and plugin["source"] == "./plugins/rf-harness"
-    assert plugin["version"] == __version__ == load(".claude-plugin/plugin.json")["version"]
+    assert plugin["version"] == RELEASE == load(".claude-plugin/plugin.json")["version"]
     assert plugin["category"] == "testing" and plugin["license"] == "Apache-2.0"
     assert (REPO / plugin["source"]).is_dir()
 
@@ -97,7 +101,7 @@ def test_launcher_is_shipped():
 
 def test_assets_resolve_to_the_checkout():
     assert _assets.plugin_root() == PLUGIN
-    assert _assets.bundle_version() == __version__
+    assert _assets.bundle_version() == RELEASE
 
 
 @pytest.mark.slow

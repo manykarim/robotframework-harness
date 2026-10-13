@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import sys
 from pathlib import Path
 
@@ -218,7 +219,7 @@ def test_parse_args():
 
 
 def test_launcher_version_matches_package():
-    assert rfh_launch.LAUNCHER_VERSION == __version__
+    assert rfh_launch.LAUNCHER_VERSION == re.sub(r"(?:\.?(?:a|b|rc)\d+)?(?:\.dev\d+)?$", "", __version__)
 
 
 @pytest.mark.parametrize("value", [

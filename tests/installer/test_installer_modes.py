@@ -9,6 +9,7 @@ from pathlib import Path
 import pytest
 from installer_helpers import IS_WINDOWS, Sandbox, fake_agent, run_cli, snapshot
 
+from rf_harness import __version__
 from rf_harness.installer import prompt
 from rf_harness.installer.adapters._base import MARKETPLACE_NAME, MARKETPLACE_REPO, PLUGIN_ID
 
@@ -200,7 +201,7 @@ def test_list_and_version(sandbox: Sandbox, capsys):
     rc, out = run_cli(capsys, "list")
     assert "opencode" in out and "files" in out
     rc, out = run_cli(capsys, "version")
-    assert rc == 0 and "rf-harness 0." in out and "plugin 0." in out
+    assert rc == 0 and f"rf-harness {__version__}" in out and "plugin " in out
 
 
 def test_project_gitignore_and_manifest(sandbox: Sandbox, capsys):
