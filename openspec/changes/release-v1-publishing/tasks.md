@@ -15,7 +15,7 @@
 - [x] 2.1 Add `site_url: https://manykarim.github.io/robotframework-harness/` to `mkdocs.yml`, and a Pages
   upload + `deploy` job to `docs.yml` (only `main` pushes and manual dispatch; PRs build only). Verify that
   actionlint is clean and that the local strict build passes.
-- [ ] 2.2 Enable Pages with the GitHub Actions source (`gh api -X POST repos/manykarim/robotframework-harness/pages -f
+- [x] 2.2 Enable Pages with the GitHub Actions source (`gh api -X POST repos/manykarim/robotframework-harness/pages -f _(Done: Pages enabled (build_type workflow); the docs run deployed; home and concept pages 200, evidence links resolve to the repository.)_
   build_type=workflow`) and run the docs workflow on `main`. Verify that
   `https://manykarim.github.io/robotframework-harness/` returns 200 and shows the home page, and that one evidence link
   resolves to the repository.
@@ -50,14 +50,14 @@
 
 ## 6. Release v1.0.0 (owner go-ahead before the tag push and environment approval)
 
-- [ ] 6.1 Set the package version to `1.0.0`, commit, and push tag `v1.0.0`. The owner approves the `pypi`
+- [x] 6.1 Set the package version to `1.0.0`, commit, and push tag `v1.0.0`. The owner approves the `pypi` _(Done 2026-10-13: owner approved the `pypi` deployment; PyPI has robotframework-harness 1.0.0 (wheel + sdist), GitHub release v1.0.0 with both files, `stable` = `v1.0.0` = 6016141.)_
   environment. Verify that PyPI shows `robotframework-harness 1.0.0` with the wheel and sdist, the GitHub release
   `v1.0.0` has both files and the notes, and `stable` points at the `v1.0.0` commit.
-- [ ] 6.2 Post-release checks:
+- [x] 6.2 Post-release checks: _(Done: PyPI uvx install + dry-run install OK; pinned marketplace install shows rf-harness 1.0.0 enabled; docs pages 200. Recorded in docs/releases/1.0.0.md.)_
   - `uvx robotframework-harness@1.0.0 install --dry-run --agent claude-code` in a clean project;
   - a Claude Code marketplace install pinned to `v1.0.0` with an isolated `CLAUDE_CONFIG_DIR`;
   - the docs URL.
 
   Verify that all three succeed, and record the results in the release notes' verification section.
-- [ ] 6.3 Mark task 8.2 of `bootstrap-ai-engineering-harness` complete, noting that transcript assets are out of scope.
+- [x] 6.3 Mark task 8.2 of `bootstrap-ai-engineering-harness` complete, noting that transcript assets are out of scope. _(Done: bootstrap task 8.2 closed; both changes validate.)_
   Verify that `openspec validate --strict` passes for both changes.
