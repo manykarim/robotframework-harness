@@ -32,16 +32,28 @@
 
 ## 4. Real-Windows CI and docs
 
-- [ ] 4.1 Add a CI job `windows-install` on `windows-2025` (real placeholder, real uv), per design D7: clean PATH,
+- [x] 4.1 Add a CI job `windows-install` on `windows-2025` (real placeholder, real uv), per design D7: clean PATH,
   install with `--yes --runtime-source .` in an empty folder; assert the placeholder message, `.venv\Scripts\python.exe`,
   the runtime import there, and `.rf/harness.json`. Verify that the job passes on GitHub, and that it fails when the
   fix is disabled (run it once on a throwaway branch with the old `find_env`).
-- [ ] 4.2 Update the docs:
+- [x] 4.2 Update the docs:
   - troubleshooting: the Windows section, covering the placeholder, the uv recovery and the alias setting;
   - the quick starts: a Windows note on the files-mode default;
   - the agent matrix: plugin mode on Windows not yet supported;
   - the CLI reference: regenerate for `--venv-python`.
 
   Verify that the strict docs build, `gen_reference --check` and the docs link check pass.
-- [ ] 4.3 Run the full suite on all CI platforms and record the spike evidence link in the release notes for the next
+- [x] 4.3 Run the full suite on all CI platforms and record the spike evidence link in the release notes for the next
   version. Verify that CI is green on ubuntu, macOS and windows.
+
+## Verification record (2026-10-14)
+
+- `windows-install` passed on `windows-2025` (ci run 38525579137, commit 9bcfb7d). Placeholder skipped; uvx's
+  environment excluded as "the installer's own (uvx) environment"; `.venv` created with uv (Python 3.12.10); runtime
+  installed and recorded in `.rf/harness.json`; `doctor` 6/6.
+- Negative check: the same job with the 1.0.0 `find_env` failed (run 38525330720, throwaway branch
+  `negative/windows-install`, deleted). It picked `WindowsApps\python3.EXE` and exited 1, which is the original bug.
+- Full CI green on ubuntu, macOS and Windows × Python 3.10–3.13, plus lint, build, docs and evidence (run 38525579137).
+- Found on the way, out of scope: the hook runtime is POSIX-only (`fcntl`, AF_UNIX). On Windows the launcher fails
+  open, so hooks run without feedback and `doctor`'s probe-event check reports a false PASS. Documented in
+  troubleshooting, the agent matrix and the unreleased notes; the Windows transport needs its own change.
