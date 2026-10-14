@@ -65,8 +65,8 @@ def file_facts(p: Path) -> dict:
     d["access_x"] = os.access(p, os.X_OK)
     try:
         d["readlink"] = os.readlink(p)
-    except OSError as e:
-        d["readlink_error"] = type(e).__name__
+    except (OSError, ValueError) as e:
+        d["readlink_error"] = f"{type(e).__name__}: {e}"
     return d
 
 
@@ -111,6 +111,32 @@ if UVX:
     RESULTS["uv_env_under_uvx"] = run([UVX, "--from", "robotframework-harness@1.0.0", "python", "-c",
                                        "import os,sys; print('UV=', os.environ.get('UV')); print(sys.executable)"],
                                       env=clean_env, cwd=str(proj), timeout=300)
+
+    RESULTS["which_inside_uvx"] = run([UVX, "--from", "robotframework-harness@1.0.0", "python", "-c",
+                                       "import shutil,sys,os; print('python3=', shutil.which('python3')); "
+                                       "print('python=', shutil.which('python')); print('prefix=', sys.prefix); "
+                                       "print('VIRTUAL_ENV=', os.environ.get('VIRTUAL_ENV'))"],
+                                      env=clean_env, cwd=str(proj), timeout=300)
+
+# ---------------------------------------------------------------- Q3c: a synthetic placeholder (exit 9009 + message)
+# Hosted images without App Installer have no real alias: a tiny python3.cmd... is not an .exe, so build a real exe
+# placeholder by copying the venv launcher is not possible either; use a C# one-liner compiled with csc if present.
+stub_dir = Path(tempfile.mkdtemp(prefix="rfh-stub-"))
+csc = next(iter(sorted(Path(sysroot, "Microsoft.NET", "Framework64").glob("v4*/csc.exe"))), None)
+if csc:
+    src = stub_dir / "stub.cs"
+    src.write_text('class P{static int Main(string[] a){System.Console.Error.WriteLine("Python was not found; run '
+                   'without arguments to install from the Microsoft Store, or disable this shortcut from Settings > '
+                   'Apps > Advanced app settings > App execution aliases.");return 9009;}}', encoding="utf-8")
+    RESULTS["stub_build"] = run([str(csc), "/nologo", f"/out:{stub_dir / 'python3.exe'}", str(src)], timeout=120)
+    stub_env = dict(clean_env)
+    stub_env["PATH"] = str(stub_dir) + os.pathsep + clean_path
+    RESULTS["synthetic_stub_probe"] = run([str(stub_dir / "python3.exe"), "-c", "print(1)"], env=stub_env)
+    if UVX:
+        RESULTS["installer_with_synthetic_stub"] = run(
+            [UVX, "robotframework-harness@1.0.0", "install", "--agent", "claude-code", "--mode", "files",
+             "--dry-run", "--no-input"], env=stub_env, cwd=str(Path(tempfile.mkdtemp(prefix="rfh-spike-p2-"))),
+            timeout=300)
 
 # ---------------------------------------------------------------- Q4: uv discovery and uv venv
 if UV:
@@ -179,6 +205,9 @@ for a in aliases:
 lines += [f"- which (clean PATH): {RESULTS['which_clean']}",
           f"- installer repro: {rc('installer_repro')}",
           f"- UV under uvx: {(RESULTS.get('uv_env_under_uvx') or {}).get('stdout', '').strip()!r}",
+          f"- which inside uvx: {(RESULTS.get('which_inside_uvx') or {}).get('stdout', '').strip()!r}",
+          f"- synthetic stub probe: {rc('synthetic_stub_probe')}",
+          f"- installer with synthetic stub on PATH: {rc('installer_with_synthetic_stub')}",
           f"- uv python find (default): {rc('uv_python_find_default')}",
           f"- uv python find (only-system): {rc('uv_python_find_only_system')}",
           f"- uv venv --python 3.12: {rc('uv_venv_312')}; venv python ok: "
