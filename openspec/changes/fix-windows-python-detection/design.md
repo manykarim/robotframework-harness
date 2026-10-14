@@ -56,8 +56,8 @@ Current code:
 
 ### D2. Exclude the installer's own environment
 
-- A candidate is excluded when its resolved path lies under the running installer's `sys.prefix` or
-  `sys.base_prefix`'s **uv cache**, recognized by:
+- A candidate is excluded when its resolved path lies under the running installer's `sys.prefix`, or inside uv's
+  cache or tool directories, recognized by:
   - an `archive-v0` path segment;
   - `UV_CACHE_DIR`, or uv's default cache dir;
   - `UV_TOOL_DIR`.
