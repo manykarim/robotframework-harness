@@ -4,7 +4,7 @@
 |---|---|---|---|---|---|
 | install via marketplace | ✓ | ✓ (+ hook trust once) | ✓ | ✓ (preview settings) | – (files) |
 | install via files | ✓ | ✓ | ✓ | – | ✓ |
-| on Windows | files mode (default); plugin-mode hooks not yet | files mode (default); plugin-mode hooks not yet | files mode (default); plugin-mode hooks not yet | files mode (default, `.claude/` hooks); plugin-mode hooks not yet | ✓ (files) |
+| on Windows | install in files mode (default); live runtime not yet | install in files mode (default); live runtime not yet | install in files mode (default); live runtime not yet | install in files mode (default, `.claude/` hooks); live runtime not yet | install ✓ (files); live runtime not yet |
 | project scope committed file | `.claude/settings.json` | – (each user runs the plugin commands; hooks in `.codex/` for trusted projects) | `.claude/settings.json` or `.github/copilot/settings.json` | `.claude/settings.json` (recommends the plugin) | `.opencode/` |
 | skill | ✓ | ✓ | ✓ | ✓ | ✓ |
 | live feedback after edits | ✓ | ✓ | files mode ✓; plugin mode: decision/reason only | ✓ | ✓ |
@@ -35,7 +35,8 @@ not part of the A/B rounds: only `--model auto` was available.
 
 !!! note "Windows: files mode"
     The marketplace hooks call `python3`, which on Windows is missing or the Microsoft Store placeholder. `install`
-    therefore defaults to files mode on Windows and warns on an explicit `--mode plugin`. See
+    therefore defaults to files mode on Windows and warns on an explicit `--mode plugin`. The hook runtime itself is
+    POSIX-only so far (`fcntl`, Unix sockets), so live feedback does not work on Windows yet. See
     [Troubleshooting: Windows](../troubleshooting.md#windows).
 
 ## Not supported in v1

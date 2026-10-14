@@ -93,7 +93,13 @@ are in the repository, and the CI job `windows-install` repeats the check on eve
 The marketplace hooks call `python3`, which on Windows is missing or the Store placeholder. On Windows, `install`
 therefore uses files mode by default. It writes the absolute interpreter path or `py -3` into the hooks. With an
 explicit `--mode plugin` on Windows, the installer warns that the agents will not run the harness hooks. A plugin-mode
-bootstrap for Windows is planned. Windows has not been through the live release gate yet.
+bootstrap for Windows is planned.
+
+!!! warning "The live runtime is POSIX-only so far"
+    The hook runtime uses `fcntl` and Unix sockets. On Windows, the installer, the skill and the runtime install work,
+    but the runtime stops at import when a hook starts it (`No module named 'fcntl'`). The launcher fails open, so the
+    agent keeps working without harness feedback, and `doctor`'s probe-event check still passes. A Windows transport
+    is planned. Windows has not been through the live release gate yet.
 
 ## Wrong selectors from a model that keeps re-reading files
 

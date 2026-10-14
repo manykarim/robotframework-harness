@@ -26,6 +26,10 @@ which on Windows is the Microsoft Store placeholder (an App Execution Alias), no
 - **The hook launcher** skips App Execution Alias placeholders in its PATH fallback, from file metadata, without
   starting a process.
 
+Known limitation, unchanged: the hook runtime is POSIX-only so far (`fcntl`, Unix sockets). On Windows the install
+and the runtime provisioning work, but the runtime stops at import when a hook starts it; the launcher fails open, so
+agents run without harness feedback. A Windows transport is planned.
+
 Evidence: a spike on GitHub's `windows-2025` and `windows-2022` runners reproduced the bug and measured the placeholder
 (exit 9009, reparse tag `0x8000001b`), uv inside `uvx`, and the hook commands
 ([spike results](https://github.com/manykarim/robotframework-harness/tree/7441981dfe0cdbba0c294fa2528bf85a210b4a6c/openspec/changes/fix-windows-python-detection/spike)).

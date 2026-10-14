@@ -76,7 +76,9 @@ jobs:
           $python = Join-Path $work ".venv\Scripts\python.exe"
           if (-not (Test-Path $python)) { $fail += "$python was not created" }
           else {
-            & $python -c "import robot, robotcode, rf_harness.runtime.hook"
+            # rf_harness.runtime.hook itself is POSIX-only so far (fcntl, AF_UNIX): the Windows transport is a later
+            # hardening step of bootstrap-ai-engineering-harness (design D5), not part of interpreter discovery.
+            & $python -c "import robot, robotcode, rf_harness.runtime"
             if ($LASTEXITCODE -ne 0) { $fail += "the runtime does not import in .venv" }
             $harness = Get-Content (Join-Path $work ".rf\harness.json") -Raw | ConvertFrom-Json
             if ($harness.python -ne $python) { $fail += ".rf\harness.json records $($harness.python)" }
