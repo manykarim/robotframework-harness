@@ -1,0 +1,32 @@
+name: spike-windows-python
+# Research spike for openspec change fix-windows-python-detection: how the Microsoft Store Python placeholder, uv and
+# the hook bootstrap behave on real Windows runners. Runs only on the spike branch (or manually); never on main pushes.
+on:
+  push:
+    branches: [spike/windows-python-detection]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  spike:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-2022, windows-2025]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: run spike
+        env:
+          SPIKE_OUT: spike_out
+          PYTHONUTF8: "1"
+        run: python spikes/windows-python/spike.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: spike-${{ matrix.os }}
+          path: spike_out/
