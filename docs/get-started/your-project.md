@@ -13,6 +13,11 @@ order:
 5. a uv- or poetry-managed environment of the project;
 6. `python3` on `PATH`.
 
+The installer runs each candidate once before choosing it. It skips the Microsoft Store placeholder on Windows, Pythons
+older than 3.10, interpreters that do not start, and its own `uvx` or uv tool environment, and it prints every skipped
+candidate with the reason. When no usable environment is left, it offers to create `<project>/.venv` with
+`uv venv --python 3.12` (`--venv-python` picks another version). See [Troubleshooting: Windows](../troubleshooting.md#windows).
+
 The installer shows which environment it chose and asks before installing into it. `doctor` repeats the choice. If
 `doctor` names the wrong environment, re-run `install --runtime-only --python <path-to-python>`.
 

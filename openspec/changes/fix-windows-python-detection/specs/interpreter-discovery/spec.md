@@ -29,7 +29,13 @@ appear in the installer's output.
 
 Discovery MUST exclude every interpreter that belongs to the installer's own process environment (`sys.prefix` of the
 running installer) or that lives inside uv's cache or tool directories. This holds on every platform, including when
-`uvx` has put that environment first on PATH.
+`uvx` has put that environment first on PATH. An installer that runs from the project's own environment (the active
+environment or `<project>/.venv`) is the exception: that environment is the project environment and stays allowed.
+
+#### Scenario: harness installed into the project environment
+
+- **WHEN** the installer runs from `<project>/.venv`, into which the user installed `robotframework-harness`
+- **THEN** `<project>/.venv` is chosen as the project environment
 
 #### Scenario: uvx tool environment is excluded
 
@@ -47,7 +53,7 @@ SHALL be selectable. The installer SHALL:
 
 After creation it SHALL probe the new interpreter and install the runtime there. When `uv venv` fails or the new
 interpreter is unusable, the installer SHALL show uv's message and suggest `--python <path>`. It MUST NOT fall back to an
-unusable or excluded interpreter.
+unusable or excluded interpreter, and it MUST NOT replace an existing `<project>/.venv`.
 
 #### Scenario: Windows without a project environment
 

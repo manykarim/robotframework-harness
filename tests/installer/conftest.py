@@ -8,6 +8,8 @@ from pathlib import Path
 import pytest
 from installer_helpers import AGENT_ENV, HERE, IS_WINDOWS, Sandbox, write_script
 
+from rf_harness.installer import cli
+
 
 @pytest.fixture
 def sandbox(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Sandbox:
@@ -25,6 +27,8 @@ def sandbox(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Sandbox:
     monkeypatch.setenv("USERPROFILE", str(home))
     monkeypatch.setenv("PATH", str(bin_dir) + (os.pathsep + os.environ.get("SystemRoot", "") if IS_WINDOWS else ""))
     monkeypatch.setenv("RF_HARNESS_CACHE_DIR", str(tmp_path / "cache"))
+    # The plugin/files logic is tested on every OS; the Windows default mode has its own tests (test_installer_modes).
+    monkeypatch.setattr(cli, "_is_windows", lambda: False)
     monkeypatch.chdir(project)
     return Sandbox(tmp_path, home, bin_dir, project)
 

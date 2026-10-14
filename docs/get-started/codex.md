@@ -24,6 +24,11 @@ With `--yes` the installer:
 
 Without `--yes` it prints those commands for you to run.
 
+!!! note "Windows"
+    On Windows, `install` uses files mode by default: plugin-mode hooks are not supported on Windows yet, and the hooks go into `.codex/`. Without a
+    project environment, the installer offers to create `.venv` with uv. See
+    [Troubleshooting: Windows](../troubleshooting.md#windows).
+
 !!! warning "Hook trust"
     Codex runs no plugin hook until it is trusted. If the installer could not pre-trust them, open a Codex session once
     and run `/hooks` to trust the `rf-harness` hooks. `doctor` reports untrusted hooks as a failure, with this fix.

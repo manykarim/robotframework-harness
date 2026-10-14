@@ -170,6 +170,22 @@ def probe(ins: _m.Installation, project: Path) -> Check:
 
 
 # ------------------------------------------------------------------------------------------------ environment
+def _env_detail(choice: envfind.EnvChoice) -> str:
+    """The installer's classification (design D4) on one line."""
+    if choice.source == "--python" or not choice.skipped:
+        return choice.detail
+    parts = [f"{s.label} {s.python} is {s.reason}" if s.status in ("store-placeholder", "excluded")
+             else f"{s.label} {s.python}: {s.reason}" for s in choice.skipped]
+    return f"{choice.detail} ({'; '.join(parts)})"
+
+
+def _env_fix(choice: envfind.EnvChoice) -> str:
+    fix = f"{SETUP_RUNTIME} (offers to create the project environment with uv), or pass --python <path>"
+    if choice.placeholder_skipped:
+        fix += f"; the Microsoft Store placeholder is not Python: install Python, or {envfind.ALIAS_TIP}"
+    return fix
+
+
 def environment_checks(project: Path, explicit_python: str | None) -> tuple[list[Check], Path | None, dict | None]:
     checks: list[Check] = []
     recorded = envfind.harness_json(project).get("python")
@@ -180,13 +196,17 @@ def environment_checks(project: Path, explicit_python: str | None) -> tuple[list
     else:
         choice = envfind.find_env(project)
     if choice.python is None:
-        checks.append(Check("python environment", False, choice.detail, "create a virtual environment (e.g. "
-                            "`uv venv`) and install Robot Framework into it"))
+        checks.append(Check("python environment", False, _env_detail(choice), _env_fix(choice)))
         return checks, None, None
     libs = envfind.scan_libraries(project)
     info = envfind.inspect(choice.python, sorted(set(libs) | {"Browser", "rf_harness.runtime.smoke"}))
     if info is None:
-        checks.append(Check("python environment", False, f"{choice.python} did not start", "check the interpreter"))
+        reason = envfind.explain_failure(choice.python)
+        placeholder = envfind.EnvChoice(None, choice.source, skipped=[envfind.Skipped(
+            choice.source, choice.python, reason, "store-placeholder" if reason == envfind.STORE_PLACEHOLDER else "")])
+        checks.append(Check("python environment", False, f"{choice.python} ({choice.source}) is {reason}"
+                            if reason == envfind.STORE_PLACEHOLDER else f"{choice.python} ({choice.source}): {reason}",
+                            _env_fix(placeholder)))
         return checks, choice.python, None
     versions = info.get("versions", {})
     imports = info.get("imports", {})

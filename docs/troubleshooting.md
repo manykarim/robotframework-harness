@@ -52,9 +52,48 @@ planned.
 
 ## Windows
 
-The marketplace hooks call `python3`, which many Windows machines don't have. Use files mode, which writes the
-absolute interpreter path or `py -3`: `uvx robotframework-harness install --mode files`. Windows has not been through
-the live release gate yet.
+### "Python was not found": the Microsoft Store placeholder
+
+Windows ships `python.exe` and `python3.exe` in `%LOCALAPPDATA%\Microsoft\WindowsApps`. They are App Execution
+Aliases: placeholders for the Microsoft Store, not Python. Run with arguments, they print "Python was not found" and
+exit with code 9009. Up to 1.0.0 the installer then stopped with `error: …\WindowsApps\python3.EXE did not start`.
+
+The installer now runs every candidate interpreter once before using it. It skips the placeholder, Pythons older than
+3.10 and interpreters that do not start. It also never uses its own `uvx` environment, which uv may delete at any time.
+When nothing usable is left, it offers to create the project environment with uv:
+
+```text
+Python environment: none usable in C:\work\demo
+  skipped  python3 on PATH  C:\Users\me\AppData\Local\Microsoft\WindowsApps\python3.exe
+           -> the Microsoft Store placeholder (App Execution Alias), not a Python installation
+  skipped  python on PATH   C:\Users\me\AppData\Local\uv\cache\archive-v0\…\Scripts\python.exe
+           -> the installer's own (uvx) environment
+Create a project environment with uv?  uv venv --python 3.12 C:\work\demo\.venv [Y/n]
+```
+
+- **Accept**, or pass `--yes`: uv creates `.venv` in the project, and the runtime is installed there. Pick another
+  version with `--venv-python 3.13`. With `--no-input` and without `--yes`, the installer prints the command and exits
+  with status 1.
+- **No uv:** install [uv](https://docs.astral.sh/uv/getting-started/installation/) and rerun, or pass
+  `--python <path>` with an interpreter or virtual environment you created.
+- **Turn the placeholder off:** Settings → Apps → Advanced app settings → App execution aliases, then switch off the
+  `python.exe` and `python3.exe` entries. `python3` is then simply not found.
+- **uv cannot create the environment**, for example "untrusted mount point (os error 448)" when AppData is redirected:
+  the installer shows uv's message and installs nothing. Create the environment with a Python from python.org and pass
+  `--python`.
+- **An existing `.venv` that does not work** is never replaced. Repair or remove it, then rerun.
+
+`doctor` reports the same reasons in its "python environment" check. The behaviour was measured on GitHub's
+`windows-2025` and `windows-2022` runners; the
+[spike results](https://github.com/manykarim/robotframework-harness/tree/7441981dfe0cdbba0c294fa2528bf85a210b4a6c/openspec/changes/fix-windows-python-detection/spike)
+are in the repository, and the CI job `windows-install` repeats the check on every change.
+
+### Hooks: files mode is the default
+
+The marketplace hooks call `python3`, which on Windows is missing or the Store placeholder. On Windows, `install`
+therefore uses files mode by default. It writes the absolute interpreter path or `py -3` into the hooks. With an
+explicit `--mode plugin` on Windows, the installer warns that the agents will not run the harness hooks. A plugin-mode
+bootstrap for Windows is planned. Windows has not been through the live release gate yet.
 
 ## Wrong selectors from a model that keeps re-reading files
 

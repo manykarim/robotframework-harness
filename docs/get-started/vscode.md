@@ -33,6 +33,11 @@ The installer:
 
 Then install `rf-harness` from the marketplace in the Extensions view.
 
+!!! note "Windows"
+    On Windows, `install` uses files mode by default: it writes the hooks into `.claude/`, and VS Code runs them once
+    `chat.useHooks` is enabled. Plugin-mode hooks are not supported on Windows yet. See
+    [Troubleshooting: Windows](../troubleshooting.md#windows).
+
 ## 3. Check
 
 ```bash

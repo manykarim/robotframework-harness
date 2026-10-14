@@ -39,3 +39,49 @@ jobs:
       - run: uv build
       - name: wheel bundles the plugin
         run: unzip -l dist/*.whl | grep -q "rf_harness/_assets/skills/rf-harness/SKILL.md"
+  windows-install:
+    # Change fix-windows-python-detection: the original bug report on a real image. windows-2025 ships the Microsoft
+    # Store placeholders (WindowsApps\python.exe, python3.exe). The installer runs through uvx in an empty folder whose
+    # PATH holds only uv, the system folders and WindowsApps; it must skip the placeholder and uvx's own environment,
+    # create .venv with uv and install the runtime there.
+    needs: lint
+    runs-on: windows-2025
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: install with only the Store placeholder on PATH
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Continue"
+          $apps = Join-Path $env:LOCALAPPDATA "Microsoft\WindowsApps"
+          if (-not (Test-Path (Join-Path $apps "python3.exe"))) { throw "this image has no Store placeholder in $apps" }
+          $uvDir = Split-Path (Get-Command uv).Source
+          $repo = $env:GITHUB_WORKSPACE
+          $work = Join-Path $env:RUNNER_TEMP "demo"
+          New-Item -ItemType Directory -Force $work | Out-Null
+          Set-Location $work
+          $env:PATH = "$uvDir;$env:SystemRoot\System32;$env:SystemRoot;$apps"
+          Remove-Item Env:VIRTUAL_ENV, Env:UV_PYTHON -ErrorAction SilentlyContinue
+          $log = & uvx --from $repo rf-harness install --agent claude-code --yes --runtime-source $repo 2>&1 | Out-String
+          $rc = $LASTEXITCODE
+          Write-Output $log
+          $fail = @()
+          if ($rc -ne 0) { $fail += "install exited with $rc" }
+          foreach ($text in "the Microsoft Store placeholder (App Execution Alias), not a Python installation",
+                            "Creating the project environment: ", "Claude Code (files mode, project scope)") {
+            if (-not $log.Contains($text)) { $fail += "the output lacks: $text" }
+          }
+          if ($log -notmatch "installer's own \(uvx\) environment|inside uv's cache") { $fail += "uvx's environment was not reported as skipped" }
+          if ($log.Contains("did not start")) { $fail += "the output still says 'did not start'" }
+          $python = Join-Path $work ".venv\Scripts\python.exe"
+          if (-not (Test-Path $python)) { $fail += "$python was not created" }
+          else {
+            & $python -c "import robot, robotcode, rf_harness.runtime.hook"
+            if ($LASTEXITCODE -ne 0) { $fail += "the runtime does not import in .venv" }
+            $harness = Get-Content (Join-Path $work ".rf\harness.json") -Raw | ConvertFrom-Json
+            if ($harness.python -ne $python) { $fail += ".rf\harness.json records $($harness.python)" }
+            $doctor = & uvx --from $repo rf-harness doctor --no-live 2>&1 | Out-String
+            Write-Output $doctor
+            if (-not $doctor.Contains("PASS  python environment: $python")) { $fail += "doctor does not pass the environment" }
+          }
+          if ($fail) { $fail | ForEach-Object { Write-Output "::error::$_" }; exit 1 }

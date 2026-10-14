@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import argparse
 import concurrent.futures
+import os
 import shutil
 import subprocess
 import sys
@@ -64,11 +65,13 @@ def build_parser() -> argparse.ArgumentParser:
 
     sp = sub.add_parser("install", help="install the harness for one or more agents and the runtime")
     _selection_args(sp)
-    sp.add_argument("--mode", choices=("plugin", "files"), default="plugin",
-                    help="plugin (default): point the agent at the marketplace; files: copy skill, hooks and launcher "
-                    "(OpenCode always uses files)")
+    sp.add_argument("--mode", choices=("plugin", "files"), default=None,
+                    help="plugin (default; files on Windows): point the agent at the marketplace; files: copy skill, "
+                    "hooks and launcher (OpenCode always uses files)")
     _scope_args(sp)
     sp.add_argument("--python", metavar="PATH", help="interpreter (or environment directory) of the project")
+    sp.add_argument("--venv-python", metavar="X.Y", default=envfind.DEFAULT_VENV_PYTHON,
+                    help="Python version of the project environment that uv creates when none is usable")
     runtime = sp.add_mutually_exclusive_group()
     runtime.add_argument("--runtime-only", action="store_true",
                          help="only provision the runtime into the project environment")
@@ -134,6 +137,23 @@ def explicit_selection(args: argparse.Namespace) -> list[str] | None:
         if adapter.name not in resolved:
             resolved.append(adapter.name)
     return resolved
+
+
+WINDOWS_PLUGIN_WARNING = ("warning: plugin mode on Windows: the marketplace hooks cannot start Python on Windows yet "
+                          "(`python3` there is missing or the Microsoft Store placeholder), so the agents will not run "
+                          "the harness hooks. Recommended: --mode files (the default on Windows)")
+
+
+def _is_windows() -> bool:
+    return os.name == "nt"
+
+
+def _resolve_mode(args: argparse.Namespace) -> None:
+    """Design D6 of fix-windows-python-detection: files mode by default on Windows, a warning for explicit plugin."""
+    if args.mode is None:
+        args.mode = "files" if _is_windows() else "plugin"
+    elif args.mode == "plugin" and _is_windows() and not args.runtime_only:
+        print(WINDOWS_PLUGIN_WARNING, file=sys.stderr)
 
 
 def _interactive(args: argparse.Namespace) -> bool:
@@ -332,24 +352,81 @@ def _install_agents(args: argparse.Namespace, project: Path, interactive: bool) 
     return rc
 
 
+def _no_environment(choice: envfind.EnvChoice, project: Path, version: str, lead: str) -> int:
+    sys.stdout.flush()                  # the skip report (stdout) comes before the error, also when piped
+    print(f"error: {lead}. Fixes:", file=sys.stderr)
+    for line in envfind.fix_lines(choice, project, version):
+        print(line, file=sys.stderr)
+    return 1
+
+
+def _create_environment(args: argparse.Namespace, project: Path, interactive: bool,
+                        choice: envfind.EnvChoice) -> envfind.EnvChoice | int:
+    """Design D3: offer ``uv venv --python X.Y <project>/.venv`` when no usable environment was found."""
+    found = "none usable" if choice.skipped else "none found"
+    print(f"Python environment: {found} in {project}")
+    for line in envfind.skipped_lines(choice):
+        print(line)
+    version = args.venv_python
+    uv = envfind.uv_binary()
+    if uv is None:
+        return _no_environment(choice, project, version, "no usable Python environment and uv is not available")
+    venv_dir = project / ".venv"
+    if venv_dir.exists():
+        return _no_environment(choice, project, version, f"{venv_dir} exists but is not usable (see above); repair "
+                               "or remove it")
+    cmd = envfind.display_command(envfind.venv_command(project, version, uv))
+    if args.dry_run:
+        print(f"[dry-run] would run: {cmd}")
+        print(f"[dry-run] would then install the runtime into {venv_dir} and write {project / envfind.HARNESS_JSON}")
+        return 0
+    if not args.yes:
+        if not interactive:
+            return _no_environment(choice, project, version, "no usable Python environment; rerun with --yes to "
+                                   "create it with uv")
+        if not prompt.confirm(f"Create a project environment with uv?  {cmd}", default=True):
+            print(f"Runtime not installed: no project environment. Create one with: {cmd}  (or pass --python <path>)")
+            return 0
+    print(f"Creating the project environment: {cmd}")
+    python, output = envfind.create_venv(project, version, uv)
+    if python is None:
+        sys.stdout.flush()
+        print(f"error: uv could not create a usable environment:\n{output}", file=sys.stderr)
+        print("  - pass --python <path> (an existing interpreter or virtual environment), or --venv-python X.Y for "
+              "another version", file=sys.stderr)
+        return 1
+    return envfind.EnvChoice(python, ".venv", f"project virtual environment, created with uv for Python {version}")
+
+
 def _provision_runtime(args: argparse.Namespace, project: Path, interactive: bool) -> int:
     choice = envfind.find_env(project, args.python)
     if choice.python is None:
-        hint = "" if choice.source == "--python" else "; create a project environment (e.g. `uv venv`) or pass --python"
-        print(f"error: {choice.detail}{hint}", file=sys.stderr)
-        return 1
-    print(f"Python environment: {choice.python} ({choice.detail})")
-    info = envfind.inspect(choice.python)
+        if choice.source == "--python":
+            if choice.skipped:
+                return _no_environment(choice, project, args.venv_python, choice.detail)
+            print(f"error: {choice.detail}", file=sys.stderr)
+            return 1
+        created = _create_environment(args, project, interactive, choice)
+        if isinstance(created, int):
+            return created
+        choice = created
+    else:
+        for line in envfind.skipped_lines(choice):
+            print(line)
+    python = choice.python
+    assert python is not None
+    print(f"Python environment: {python} ({choice.detail})")
+    info = envfind.inspect(python)
     if info is None:
-        print(f"error: {choice.python} did not start", file=sys.stderr)
+        print(f"error: {python}: {envfind.explain_failure(python)}", file=sys.stderr)
         return 1
     ready = envfind.runtime_ready(info) and envfind.runtime_compatible(info)
     if ready and not args.runtime_source:
         if args.dry_run:
-            print(f"[dry-run] runtime {info['versions'].get(envfind.DIST)} is already installed in {choice.python}")
+            print(f"[dry-run] runtime {info['versions'].get(envfind.DIST)} is already installed in {python}")
             return 0
     else:
-        cmd = envfind.install_command(choice.python, __version__, args.runtime_source)
+        cmd = envfind.install_command(python, __version__, args.runtime_source)
         if args.dry_run:
             print(f"[dry-run] would run: {' '.join(cmd)}")
             print(f"[dry-run] would write {project / envfind.HARNESS_JSON} and add .rf/ to .gitignore")
@@ -359,11 +436,11 @@ def _provision_runtime(args: argparse.Namespace, project: Path, interactive: boo
         if not consent:
             print(f"Runtime not installed; run: {' '.join(cmd)}  (or: rf-harness install --runtime-only --yes)")
             return 0
-        ok, tail = envfind.run_install(choice.python, __version__, args.runtime_source)
+        ok, tail = envfind.run_install(python, __version__, args.runtime_source)
         if not ok:
             print(f"error: runtime installation failed:\n{tail}", file=sys.stderr)
             return 1
-        info = envfind.inspect(choice.python) or {}
+        info = envfind.inspect(python) or {}
     imports = info.get("imports", {})
     versions = info.get("versions", {})
     for module in ("robot", "robotcode", "rf_harness.runtime"):
@@ -373,14 +450,14 @@ def _provision_runtime(args: argparse.Namespace, project: Path, interactive: boo
         return 1
     manifest = _m.Manifest.load(_m.manifest_path("project", project))
     envfind.write_harness_json(project, {
-        "python": str(choice.python), "version": versions.get(envfind.DIST), "source": choice.source,
+        "python": str(python), "version": versions.get(envfind.DIST), "source": choice.source,
         "site_packages": info.get("sys_path", []), "installer": __version__,
     })
     print(f"  runtime {versions.get(envfind.DIST)} (Robot Framework {versions.get('robotframework')}, robotcode "
           f"{versions.get('robotcode')}) recorded in {project / envfind.HARNESS_JSON}")
     _gitignore(project, manifest, ".rf/")
     manifest.save()
-    for lib in envfind.library_report(choice.python, envfind.scan_libraries(project)):
+    for lib in envfind.library_report(python, envfind.scan_libraries(project)):
         if lib.importable and not lib.extra:
             print(f"  ok   library {lib.name}")
         else:
@@ -390,6 +467,7 @@ def _provision_runtime(args: argparse.Namespace, project: Path, interactive: boo
 
 
 def cmd_install(args: argparse.Namespace) -> int:
+    _resolve_mode(args)
     if args.ref and args.mode != "plugin":
         raise UsageError("--ref needs --mode plugin")
     project = _project(args)

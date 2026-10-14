@@ -39,7 +39,8 @@ Current code:
 ### D1. One probe function, used everywhere a candidate is accepted
 
 `envfind.probe(python, timeout=15) -> Probe(status, version, executable, detail)`:
-- It runs `[python, "-c", <print version + executable>]`, with stdin closed.
+- It runs `[python, "-c", <print version + executable>]`, with stdin closed. The script contains no `%`, because
+  `.cmd`/`.bat` shims (pyenv-win) pass their arguments through cmd.exe.
 - `usable`: exit 0, version ≥ 3.10.
 - `store-placeholder`:
   - exit 9009 (Windows), exit 49 (MSYS truncation), or output containing "Microsoft Store" or "App execution
@@ -56,13 +57,19 @@ Current code:
 
 ### D2. Exclude the installer's own environment
 
-- A candidate is excluded when its resolved path lies under the running installer's `sys.prefix`, or inside uv's
-  cache or tool directories, recognized by:
+- A candidate is excluded when it lies inside uv's cache or tool directories, recognized by:
   - an `archive-v0` path segment;
   - `UV_CACHE_DIR`, or uv's default cache dir;
-  - `UV_TOOL_DIR`.
+  - `UV_TOOL_DIR`, or uv's default tool dir.
+- A candidate from the PATH fallback is also excluded when it lies under the running installer's `sys.prefix` (uvx,
+  pipx). This rule is limited to the PATH fallback (found during implementation): applied to every source, it would
+  reject a project `.venv` or an activated environment into which the user installed `robotframework-harness`, and
+  then offer `uv venv` over an existing `.venv`.
+- Paths are compared without resolving the interpreter itself, because a venv's `python` is a symlink to its base
+  interpreter. Only the parent directory is resolved.
 - This covers `uvx` (an ephemeral archive env) and `uv tool install` environments, on every platform.
-- The excluded candidate appears in the skip list as "the installer's own environment".
+- The excluded candidate appears in the skip list as "the installer's own (uvx) environment", "the installer's own
+  environment", "inside uv's cache (a throwaway environment)" or "a uv tool environment".
 
 ### D3. Recovery: `uv venv` with consent
 
@@ -74,6 +81,9 @@ Current code:
   - interactive: a prompt (default yes);
   - `--yes`: proceed;
   - `--no-input` without `--yes`: print the command and exit 1.
+- Declining the interactive prompt prints the command and exits 0, like declining the runtime install.
+- An existing `<project>/.venv` that is unusable is never replaced (uv itself refuses an existing directory without
+  `--clear`). The installer reports it and asks to repair or remove it.
 - After creation: probe `<project>/.venv/Scripts/python.exe` (or `bin/python`). On failure, print uv's stderr tail and
   `--python <path>`, then exit 1.
 - Then the usual runtime install into `.venv`, and `.rf/harness.json` is written. No `pyproject.toml` is created or

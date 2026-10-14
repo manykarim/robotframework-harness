@@ -28,10 +28,11 @@ install the harness for one or more agents and the runtime.
 |---|---|---|---|
 | `--agents` | `SEL` |  | all / detected / comma-separated agents: claude-code, codex, copilot-cli, vscode, opencode |
 | `--agent` | `AGENT` |  | a single agent (claude-code, codex, copilot-cli, vscode, opencode) |
-| `--mode` | `plugin` / `files` | `plugin` | plugin (default): point the agent at the marketplace; files: copy skill, hooks and launcher (OpenCode always uses files) |
+| `--mode` | `plugin` / `files` |  | plugin (default; files on Windows): point the agent at the marketplace; files: copy skill, hooks and launcher (OpenCode always uses files) |
 | `--scope` | `project` / `user` | `project` | project: the project directory (default); user: your home directory |
 | `--project` | `DIR` |  | project directory (default: current directory) |
 | `--python` | `PATH` |  | interpreter (or environment directory) of the project |
+| `--venv-python` | `X.Y` | `3.12` | Python version of the project environment that uv creates when none is usable |
 | `--runtime-only` | (flag) |  | only provision the runtime into the project environment |
 | `--no-runtime` | (flag) |  | do not provision the runtime |
 | `--runtime-source` | `PATH` |  | install the runtime from a local source checkout instead of PyPI (testing before a release) |

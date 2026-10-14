@@ -26,6 +26,11 @@ Every quick start has the same three steps:
 | VS Code (Copilot) | [VS Code](vscode.md) | plugin marketplace (preview settings) |
 | OpenCode | [OpenCode](opencode.md) | files (OpenCode has no marketplace) |
 
+!!! note "Windows"
+    On Windows, `install` uses files mode by default: plugin-mode hooks are not supported on Windows yet. Without a
+    project environment, the installer offers to create `.venv` with uv. See
+    [Troubleshooting: Windows](../troubleshooting.md#windows).
+
 !!! tip "Several agents in one project"
     Select several agents in the same `install` run. They share one runtime and one `.rf/` folder.
 

@@ -4,6 +4,7 @@
 |---|---|---|---|---|---|
 | install via marketplace | ✓ | ✓ (+ hook trust once) | ✓ | ✓ (preview settings) | – (files) |
 | install via files | ✓ | ✓ | ✓ | – | ✓ |
+| on Windows | files mode (default); plugin-mode hooks not yet | files mode (default); plugin-mode hooks not yet | files mode (default); plugin-mode hooks not yet | files mode (default, `.claude/` hooks); plugin-mode hooks not yet | ✓ (files) |
 | project scope committed file | `.claude/settings.json` | – (each user runs the plugin commands; hooks in `.codex/` for trusted projects) | `.claude/settings.json` or `.github/copilot/settings.json` | `.claude/settings.json` (recommends the plugin) | `.opencode/` |
 | skill | ✓ | ✓ | ✓ | ✓ | ✓ |
 | live feedback after edits | ✓ | ✓ | files mode ✓; plugin mode: decision/reason only | ✓ | ✓ |
@@ -31,6 +32,11 @@ not part of the A/B rounds: only `--model auto` was available.
     `trusted_folders` of `~/.copilot/config.json`. Accept the folder-trust prompt once, or add the folder there.
     `doctor` checks this. In an untrusted folder the first real session passed the task without any hook firing; after
     trusting the folder the hooks fired on every event.
+
+!!! note "Windows: files mode"
+    The marketplace hooks call `python3`, which on Windows is missing or the Microsoft Store placeholder. `install`
+    therefore defaults to files mode on Windows and warns on an explicit `--mode plugin`. See
+    [Troubleshooting: Windows](../troubleshooting.md#windows).
 
 ## Not supported in v1
 

@@ -131,6 +131,27 @@ def test_order_without_anything_gives_hint(project, clean_env):
     assert rfh_launch.SETUP_COMMAND in output_json(proc)["hookSpecificOutput"]["additionalContext"]
 
 
+class _Stat:
+    def __init__(self, tag: int) -> None:
+        self.st_reparse_tag = tag
+
+
+def test_path_fallback_skips_store_placeholders(monkeypatch):
+    """Change fix-windows-python-detection D5: App Execution Aliases are skipped by reparse tag, never started."""
+    apps = "/Users/me/AppData/Local/Microsoft/WindowsApps"
+    real = "/Python312"
+    monkeypatch.setattr(rfh_launch, "IS_WINDOWS", True)
+    monkeypatch.setattr(rfh_launch.os.path, "isfile", lambda _p: True)
+    monkeypatch.setattr(rfh_launch.os, "access", lambda _p, _m: True)
+    monkeypatch.setattr(rfh_launch.os, "lstat", lambda p: _Stat(rfh_launch.APPEXECLINK if apps in p else 0))
+    assert rfh_launch.path_python({"PATH": os.pathsep.join([apps, real])}) == os.path.join(real, "python.exe")
+    assert rfh_launch.path_python({"PATH": apps}) is None
+    monkeypatch.setattr(rfh_launch.os, "lstat", lambda p: _Stat(0))       # a real file in a WindowsApps folder
+    assert rfh_launch.path_python({"PATH": apps}) == os.path.join(apps, "python.exe")
+    monkeypatch.setattr(rfh_launch, "IS_WINDOWS", False)
+    assert not rfh_launch.is_app_alias(os.path.join(apps, "python.exe"))
+
+
 def test_candidates_order(tmp_path, project):
     rec = make_venv(tmp_path / "rec")
     (project / ".rf").mkdir()

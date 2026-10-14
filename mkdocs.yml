@@ -68,6 +68,7 @@ nav:
   - Comparison: comparison.md
   - Contributing: contributing.md
   - Releases:
+      - Unreleased: releases/unreleased.md
       - "1.0.0": releases/1.0.0.md
 
 hooks:

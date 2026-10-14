@@ -16,9 +16,14 @@ uv run rfbrowser init chromium
 uvx robotframework-harness install --agent copilot-cli
 ```
 
-- **Plugin mode (default):** writes `.claude/settings.json`, and for project scope also `.github/copilot/settings.json`.
+- **Plugin mode (default; files mode on Windows):** writes `.claude/settings.json`, and for project scope also `.github/copilot/settings.json`.
   Copilot CLI loads the plugin from the marketplace in this repository without a separate install step.
 - **Files mode** (`--mode files`): installs the Copilot-format hooks.
+
+!!! note "Windows"
+    On Windows, `install` uses files mode by default: plugin-mode hooks are not supported on Windows yet. Without a
+    project environment, the installer offers to create `.venv` with uv. See
+    [Troubleshooting: Windows](../troubleshooting.md#windows).
 
 !!! info "What Copilot passes to the model"
     In plugin mode, Copilot CLI forwards only a hook's decision and reason to the model. You get refusals and gate

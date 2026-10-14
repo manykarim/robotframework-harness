@@ -10,7 +10,7 @@ import pytest
 from installer_helpers import IS_WINDOWS, Sandbox, fake_agent, run_cli, snapshot
 
 from rf_harness import __version__
-from rf_harness.installer import prompt
+from rf_harness.installer import cli, prompt
 from rf_harness.installer.adapters._base import MARKETPLACE_NAME, MARKETPLACE_REPO, PLUGIN_ID
 
 AGENTS = ["claude-code", "codex", "copilot-cli", "vscode", "opencode"]
@@ -215,3 +215,28 @@ def test_project_gitignore_and_manifest(sandbox: Sandbox, capsys):
     assert ".rf-harness/" in (sandbox.project / ".gitignore").read_text()
     run_cli(capsys, "uninstall", "--agent", "claude-code")
     assert (sandbox.project / ".gitignore").read_text() == "results/\n"
+
+
+# ------------------------------------------------------------------------------------------------ Windows default (D6)
+def test_windows_defaults_to_files_mode(sandbox: Sandbox, capsys, monkeypatch):
+    """Change fix-windows-python-detection D6: marketplace hooks cannot start Python on Windows yet."""
+    monkeypatch.setattr(cli, "_is_windows", lambda: True)
+    rc, out = run_cli(capsys, "install", "--agent", "claude-code", "--no-runtime")
+    assert rc == 0 and "Claude Code (files mode, project scope)" in out
+    assert cli.WINDOWS_PLUGIN_WARNING not in out
+    assert (sandbox.project / ".claude/skills/rf-harness/SKILL.md").is_file()
+    assert "rfh-launch" in (sandbox.project / ".claude/settings.json").read_text()
+
+
+def test_explicit_plugin_mode_on_windows_warns(sandbox: Sandbox, capsys, monkeypatch):
+    monkeypatch.setattr(cli, "_is_windows", lambda: True)
+    rc, out = run_cli(capsys, "install", "--agent", "claude-code", "--mode", "plugin", "--no-runtime")
+    assert rc == 0 and "Claude Code (plugin mode, project scope)" in out
+    assert "warning: plugin mode on Windows: the marketplace hooks cannot start Python on Windows yet" in out
+    assert "Recommended: --mode files" in out
+    assert PLUGIN_ID in json.loads((sandbox.project / ".claude/settings.json").read_text())["enabledPlugins"]
+
+
+def test_other_platforms_default_to_plugin_mode(sandbox: Sandbox, capsys):
+    rc, out = run_cli(capsys, "install", "--agent", "claude-code", "--no-runtime")
+    assert rc == 0 and "Claude Code (plugin mode, project scope)" in out and "warning: plugin mode" not in out

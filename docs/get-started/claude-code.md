@@ -29,6 +29,11 @@ done: 1 agent, runtime installed, .rf/ added to .gitignore
 Plugin mode writes a committed `.claude/settings.json` that enables the plugin from the marketplace, so teammates get
 the harness automatically. `--mode files` copies the skill and hooks into `.claude/` instead.
 
+!!! note "Windows"
+    On Windows, `install` uses files mode by default: plugin-mode hooks are not supported on Windows yet. Without a
+    project environment, the installer offers to create `.venv` with uv. See
+    [Troubleshooting: Windows](../troubleshooting.md#windows).
+
 ## 3. Check it
 
 ```bash

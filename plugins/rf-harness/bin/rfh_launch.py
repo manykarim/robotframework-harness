@@ -348,12 +348,30 @@ def poetry_python(root, environ):
     return None
 
 
+APPEXECLINK = 0x8000001B    # IO_REPARSE_TAG_APPEXECLINK
+
+
+def is_app_alias(path):
+    """A Microsoft Store App Execution Alias in WindowsApps, from file metadata only (no process is started).
+
+    The python.exe/python3.exe placeholders there only print "Python was not found" and exit 9009. Store-installed real
+    Pythons are skipped too; installs record the interpreter in .rf/harness.json, which is checked first.
+    """
+    if not IS_WINDOWS:
+        return False
+    try:
+        tag = getattr(os.lstat(path), "st_reparse_tag", 0)
+    except OSError:
+        return False
+    return tag == APPEXECLINK and os.path.basename(os.path.dirname(path)).lower() == "windowsapps"
+
+
 def path_python(environ):
     names = ("python.exe", "python3.exe") if IS_WINDOWS else ("python3",)
     for directory in (environ.get("PATH") or "").split(os.pathsep):
         for name in names:
             path = os.path.join(directory, name)
-            if os.path.isfile(path) and os.access(path, os.X_OK):
+            if os.path.isfile(path) and os.access(path, os.X_OK) and not is_app_alias(path):
                 return path
     return None
 
