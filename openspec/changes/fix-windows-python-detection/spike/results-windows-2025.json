@@ -1,0 +1,183 @@
+{
+ "python_running_spike": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+ "uv": "C:\\hostedtoolcache\\windows\\uv\\0.13.1\\x86_64\\uv.EXE",
+ "uvx": "C:\\hostedtoolcache\\windows\\uv\\0.13.1\\x86_64\\uvx.EXE",
+ "windowsapps_dir": "C:\\Users\\runneradmin\\AppData\\Local\\Microsoft\\WindowsApps",
+ "windowsapps_exists": true,
+ "windowsapps_python_aliases": [
+  {
+   "path": "C:\\Users\\runneradmin\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe",
+   "lstat_size": 0,
+   "reparse_point": true,
+   "reparse_tag": "0x8000001b",
+   "stat_ok": true,
+   "isfile": true,
+   "access_x": true,
+   "readlink_error": "ValueError: not a symbolic link",
+   "probe": {
+    "cmd": "C:\\Users\\runneradmin\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe -c import sys; print(sys.executable)",
+    "rc": 9009,
+    "stdout": "",
+    "stderr": "Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.\n",
+    "s": 0.28
+   }
+  },
+  {
+   "path": "C:\\Users\\runneradmin\\AppData\\Local\\Microsoft\\WindowsApps\\python3.exe",
+   "lstat_size": 0,
+   "reparse_point": true,
+   "reparse_tag": "0x8000001b",
+   "stat_ok": true,
+   "isfile": true,
+   "access_x": true,
+   "readlink_error": "ValueError: not a symbolic link",
+   "probe": {
+    "cmd": "C:\\Users\\runneradmin\\AppData\\Local\\Microsoft\\WindowsApps\\python3.exe -c import sys; print(sys.executable)",
+    "rc": 9009,
+    "stdout": "",
+    "stderr": "Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.\n",
+    "s": 0.08
+   }
+  }
+ ],
+ "appx_desktopappinstaller": {
+  "cmd": "powershell -NoProfile -Command Get-AppxPackage -Name Microsoft.DesktopAppInstaller | Select-Object -ExpandProperty Version",
+  "rc": 0,
+  "stdout": "1.26.510.0\n",
+  "stderr": "",
+  "s": 3.14
+ },
+ "appx_python": {
+  "cmd": "powershell -NoProfile -Command Get-AppxPackage -Name *Python* | Select-Object -ExpandProperty Name",
+  "rc": 0,
+  "stdout": "",
+  "stderr": "",
+  "s": 0.33
+ },
+ "clean_path": "C:\\Windows\\System32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\Users\\runneradmin\\AppData\\Local\\Microsoft\\WindowsApps;C:\\hostedtoolcache\\windows\\uv\\0.13.1\\x86_64;C:\\Program Files\\Git\\cmd",
+ "which_clean": {
+  "python3": "C:\\Users\\runneradmin\\AppData\\Local\\Microsoft\\WindowsApps\\python3.EXE",
+  "python": "C:\\Users\\runneradmin\\AppData\\Local\\Microsoft\\WindowsApps\\python.EXE",
+  "py": "C:\\Windows\\py.EXE",
+  "uv": "C:\\hostedtoolcache\\windows\\uv\\0.13.1\\x86_64\\uv.EXE",
+  "uvx": "C:\\hostedtoolcache\\windows\\uv\\0.13.1\\x86_64\\uvx.EXE"
+ },
+ "which_full": {
+  "python3": "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python3.EXE",
+  "python": "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.EXE",
+  "py": "C:\\Windows\\py.EXE"
+ },
+ "installer_repro": {
+  "cmd": "C:\\hostedtoolcache\\windows\\uv\\0.13.1\\x86_64\\uvx.EXE robotframework-harness@1.0.0 install --agent claude-code --mode files --dry-run --no-input",
+  "rc": 1,
+  "stdout": "(4175 bytes)\n  write     C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-proj-z4h8d6tw\\.claude\\skills\\rf-harness\\references\\results.md (2067 bytes)\n  write     C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-proj-z4h8d6tw\\.claude\\skills\\rf-harness\\references\\selenium.md (1849 bytes)\n  write     C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-proj-z4h8d6tw\\.claude\\skills\\rf-harness\\references\\waits.md (2267 bytes)\n  write     C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-proj-z4h8d6tw\\.claude\\skills\\rf-harness\\SKILL.md (6118 bytes)\n  write     C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-proj-z4h8d6tw\\.claude\\rf-harness\\bin\\rfh-launch (2110 bytes, +x)\n  write     C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-proj-z4h8d6tw\\.claude\\rf-harness\\bin\\rfh-launch.cmd (495 bytes)\n  write     C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-proj-z4h8d6tw\\.claude\\rf-harness\\bin\\rfh_launch.py (26707 bytes)\n  write     C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-proj-z4h8d6tw\\.claude\\rf-harness\\.claude-plugin\\plugin.json (633 bytes)\n  merge     C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-proj-z4h8d6tw\\.claude\\settings.json: merge rf-harness hooks into C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-proj-z4h8d6tw\\.claude\\settings.json\n  note      Claude Code loads the rf-harness skill and hooks at the next session start.\nPython environment: C:\\Users\\runneradmin\\AppData\\Local\\Microsoft\\WindowsApps\\python3.EXE (python3 on PATH (no project environment found))\n",
+  "stderr": "Installed 1 package in 11ms\nerror: C:\\Users\\runneradmin\\AppData\\Local\\Microsoft\\WindowsApps\\python3.EXE did not start\n",
+  "s": 2.22
+ },
+ "uv_env_under_uvx": {
+  "cmd": "C:\\hostedtoolcache\\windows\\uv\\0.13.1\\x86_64\\uvx.EXE --from robotframework-harness@1.0.0 python -c import os,sys; print('UV=', os.environ.get('UV')); print(sys.executable)",
+  "rc": 0,
+  "stdout": "UV= C:\\hostedtoolcache\\windows\\uv\\0.13.1\\x86_64\\uv.EXE\nD:\\a\\_temp\\setup-uv-cache\\archive-v0\\VZlDPcQUHw39DJVU\\Scripts\\python.exe\n",
+  "stderr": "",
+  "s": 0.17
+ },
+ "which_inside_uvx": {
+  "cmd": "C:\\hostedtoolcache\\windows\\uv\\0.13.1\\x86_64\\uvx.EXE --from robotframework-harness@1.0.0 python -c import shutil,sys,os; print('python3=', shutil.which('python3')); print('python=', shutil.which('python')); print('prefix=', sys.prefix); print('VIRTUAL_ENV=', os.environ.get('VIRTUAL_ENV'))",
+  "rc": 0,
+  "stdout": "python3= C:\\Users\\runneradmin\\AppData\\Local\\Microsoft\\WindowsApps\\python3.EXE\npython= D:\\a\\_temp\\setup-uv-cache\\archive-v0\\VZlDPcQUHw39DJVU\\Scripts\\python.EXE\nprefix= D:\\a\\_temp\\setup-uv-cache\\archive-v0\\VZlDPcQUHw39DJVU\nVIRTUAL_ENV= None\n",
+  "stderr": "",
+  "s": 0.08
+ },
+ "stub_build": {
+  "cmd": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\csc.exe /nologo /out:C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\rfh-stub-p77d1fs2\\python3.exe C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\rfh-stub-p77d1fs2\\stub.cs",
+  "rc": 0,
+  "stdout": "",
+  "stderr": "",
+  "s": 1.31
+ },
+ "synthetic_stub_probe": {
+  "cmd": "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\rfh-stub-p77d1fs2\\python3.exe -c print(1)",
+  "rc": 9009,
+  "stdout": "",
+  "stderr": "Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.\n",
+  "s": 0.03
+ },
+ "installer_with_synthetic_stub": {
+  "cmd": "C:\\hostedtoolcache\\windows\\uv\\0.13.1\\x86_64\\uvx.EXE robotframework-harness@1.0.0 install --agent claude-code --mode files --dry-run --no-input",
+  "rc": 1,
+  "stdout": "eferences\\requests.md (4175 bytes)\n  write     C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-p2-xepoy2jq\\.claude\\skills\\rf-harness\\references\\results.md (2067 bytes)\n  write     C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-p2-xepoy2jq\\.claude\\skills\\rf-harness\\references\\selenium.md (1849 bytes)\n  write     C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-p2-xepoy2jq\\.claude\\skills\\rf-harness\\references\\waits.md (2267 bytes)\n  write     C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-p2-xepoy2jq\\.claude\\skills\\rf-harness\\SKILL.md (6118 bytes)\n  write     C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-p2-xepoy2jq\\.claude\\rf-harness\\bin\\rfh-launch (2110 bytes, +x)\n  write     C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-p2-xepoy2jq\\.claude\\rf-harness\\bin\\rfh-launch.cmd (495 bytes)\n  write     C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-p2-xepoy2jq\\.claude\\rf-harness\\bin\\rfh_launch.py (26707 bytes)\n  write     C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-p2-xepoy2jq\\.claude\\rf-harness\\.claude-plugin\\plugin.json (633 bytes)\n  merge     C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-p2-xepoy2jq\\.claude\\settings.json: merge rf-harness hooks into C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-p2-xepoy2jq\\.claude\\settings.json\n  note      Claude Code loads the rf-harness skill and hooks at the next session start.\nPython environment: C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\rfh-stub-p77d1fs2\\python3.EXE (python3 on PATH (no project environment found))\n",
+  "stderr": "error: C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\rfh-stub-p77d1fs2\\python3.EXE did not start\n",
+  "s": 0.23
+ },
+ "uv_python_find_default": {
+  "cmd": "C:\\hostedtoolcache\\windows\\uv\\0.13.1\\x86_64\\uv.EXE python find",
+  "rc": 0,
+  "stdout": "C:\\hostedtoolcache\\windows\\Python\\3.14.7\\x64\\python.exe\n",
+  "stderr": "",
+  "s": 0.03
+ },
+ "uv_python_find_only_system": {
+  "cmd": "C:\\hostedtoolcache\\windows\\uv\\0.13.1\\x86_64\\uv.EXE python find --python-preference only-system",
+  "rc": 0,
+  "stdout": "C:\\hostedtoolcache\\windows\\Python\\3.14.7\\x64\\python.exe\n",
+  "stderr": "",
+  "s": 0.03
+ },
+ "uv_python_list": {
+  "cmd": "C:\\hostedtoolcache\\windows\\uv\\0.13.1\\x86_64\\uv.EXE python list",
+  "rc": 0,
+  "stdout": "    <download available>\ncpython-3.13.15-windows-x86_64-none                  C:\\hostedtoolcache\\windows\\Python\\3.13.15\\x64\\python.exe\ncpython-3.12.15-windows-x86_64-none                  <download available>\ncpython-3.12.10-windows-x86_64-none                  C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe\ncpython-3.11.17-windows-x86_64-none                  <download available>\ncpython-3.11.9-windows-x86_64-none                   C:\\hostedtoolcache\\windows\\Python\\3.11.9\\x64\\python.exe\ncpython-3.10.22-windows-x86_64-none                  <download available>\ncpython-3.10.11-windows-x86_64-none                  C:\\hostedtoolcache\\windows\\Python\\3.10.11\\x64\\python.exe\ncpython-3.9.25-windows-x86_64-none                   <download available>\ncpython-3.8.20-windows-x86_64-none                   <download available>\npypy-3.12.14-windows-x86_64-none                     <download available>\npypy-3.11.16-windows-x86_64-none                     <download available>\npypy-3.10.16-windows-x86_64-none                     <download available>\npypy-3.9.19-windows-x86_64-none                      <download available>\npypy-3.8.16-windows-x86_64-none                      <download available>\ngraalpy-3.13.0-windows-x86_64-none                   <download available>\ngraalpy-3.12.0-windows-x86_64-none                   <download available>\ngraalpy-3.11.0-windows-x86_64-none                   <download available>\ngraalpy-3.10.0-windows-x86_64-none                   <download available>\n",
+  "stderr": "",
+  "s": 2.42
+ },
+ "uv_venv_312": {
+  "cmd": "C:\\hostedtoolcache\\windows\\uv\\0.13.1\\x86_64\\uv.EXE venv --python 3.12 C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\rfh-spike-proj-z4h8d6tw\\.venv",
+  "rc": 0,
+  "stdout": "",
+  "stderr": "Using CPython 3.12.10 interpreter at: C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe\nCreating virtual environment at: .venv\nActivate with: .venv\\Scripts\\activate\n",
+  "s": 0.05
+ },
+ "venv_python_exists": true,
+ "venv_python_probe": {
+  "cmd": "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\rfh-spike-proj-z4h8d6tw\\.venv\\Scripts\\python.exe -c import sys; print(sys.version, sys.executable)",
+  "rc": 0,
+  "stdout": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)] C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\rfh-spike-proj-z4h8d6tw\\.venv\\Scripts\\python.exe\n",
+  "stderr": "",
+  "s": 0.03
+ },
+ "installer_with_venv": {
+  "cmd": "C:\\hostedtoolcache\\windows\\uv\\0.13.1\\x86_64\\uvx.EXE robotframework-harness@1.0.0 install --agent claude-code --mode files --dry-run --no-input",
+  "rc": 0,
+  "stdout": "oj-z4h8d6tw\\.claude\\skills\\rf-harness\\references\\waits.md (2267 bytes)\n  write     C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-proj-z4h8d6tw\\.claude\\skills\\rf-harness\\SKILL.md (6118 bytes)\n  write     C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-proj-z4h8d6tw\\.claude\\rf-harness\\bin\\rfh-launch (2110 bytes, +x)\n  write     C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-proj-z4h8d6tw\\.claude\\rf-harness\\bin\\rfh-launch.cmd (495 bytes)\n  write     C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-proj-z4h8d6tw\\.claude\\rf-harness\\bin\\rfh_launch.py (26707 bytes)\n  write     C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-proj-z4h8d6tw\\.claude\\rf-harness\\.claude-plugin\\plugin.json (633 bytes)\n  merge     C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-proj-z4h8d6tw\\.claude\\settings.json: merge rf-harness hooks into C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-proj-z4h8d6tw\\.claude\\settings.json\n  note      Claude Code loads the rf-harness skill and hooks at the next session start.\nPython environment: C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-proj-z4h8d6tw\\.venv\\Scripts\\python.exe (project virtual environment)\n[dry-run] would run: C:\\hostedtoolcache\\windows\\uv\\0.13.1\\x86_64\\uv.EXE pip install --python C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-proj-z4h8d6tw\\.venv\\Scripts\\python.exe robotframework-harness[runtime]==1.0.0\n[dry-run] would write C:\\Users\\runneradmin\\AppData\\Local\\Temp\\rfh-spike-proj-z4h8d6tw\\.rf\\harness.json and add .rf/ to .gitignore\n",
+  "stderr": "",
+  "s": 0.38
+ },
+ "hook_cmd_python3": {
+  "cmd": "python3 -S \"D:\\a\\robotframework-harness\\robotframework-harness\\plugins\\rf-harness\\bin\\rfh-launch\" SessionStart --agent claude",
+  "rc": 9009,
+  "stdout": "",
+  "stderr": "Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.\n",
+  "s": 0.09
+ },
+ "hook_cmd_launcher_cmd": {
+  "cmd": "\"D:\\a\\robotframework-harness\\robotframework-harness\\plugins\\rf-harness\\bin\\rfh-launch.cmd\" SessionStart --agent claude",
+  "rc": 0,
+  "stdout": "{\"hookSpecificOutput\": {\"hookEventName\": \"SessionStart\", \"additionalContext\": \"[rfh] The Robot Framework harness runtime is not installed in this project's Python environment (C:\\\\Users\\\\RUNNER~1\\\\AppData\\\\Local\\\\Temp\\\\rfh-spike-proj-z4h8d6tw\\\\.venv\\\\Scripts\\\\python.exe); the harness hooks are inactive until you run: uvx robotframework-harness install --runtime-only\"}}\n",
+  "stderr": "",
+  "s": 0.39
+ },
+ "gitbash_which_python3": {
+  "cmd": "C:\\Program Files\\Git\\bin\\bash.exe -lc command -v python3; command -v python; command -v py; echo PATH=$PATH",
+  "rc": 0,
+  "stdout": "/c/Users/runneradmin/AppData/Local/Microsoft/WindowsApps/python3\n/c/Users/runneradmin/AppData/Local/Microsoft/WindowsApps/python\n/c/Windows/py\nPATH=/c/Users/runneradmin/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Users/runneradmin/bin:/c/Windows/System32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Users/runneradmin/AppData/Local/Microsoft/WindowsApps:/c/hostedtoolcache/windows/uv/0.13.1/x86_64:/cmd:/usr/bin/vendor_perl:/usr/bin/core_perl\n",
+  "stderr": "",
+  "s": 0.47
+ },
+ "hook_gitbash_python3": {
+  "cmd": "C:\\Program Files\\Git\\bin\\bash.exe -c python3 -S \"D:/a/robotframework-harness/robotframework-harness/plugins/rf-harness/bin/rfh-launch\" SessionStart --agent claude",
+  "rc": 49,
+  "stdout": "",
+  "stderr": "Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.\n",
+  "s": 0.11
+ }
+}
